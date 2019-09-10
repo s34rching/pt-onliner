@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ilesak/pt-in-col.git"
@@ -14,5 +13,9 @@
   "bugs": {
     "url": "https://github.com/ilesak/pt-in-col/issues"
   },
-  "homepage": "https://github.com/ilesak/pt-in-col#readme"
+  "homepage": "https://github.com/ilesak/pt-in-col#readme",
+  "devDependencies": {
+    "chance": "^1.1.0",
+    "protractor": "^5.4.2"
+  }
 }
