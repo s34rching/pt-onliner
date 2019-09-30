@@ -25,7 +25,7 @@ module.exports = {
 		],
 		'indent': [ 'error', 'tab' ],
 		'linebreak-style': [ 'error', 'windows'	],
-		'quotes': [	'error', 'single' ],
+		'quotes': [	'error', 'double' ],
 		'semi': [ 'error', 'always'	],
 		'no-console': ['error'],
 		'no-duplicate-imports': ['error'],
@@ -33,7 +33,6 @@ module.exports = {
 		'no-var': ['error'],
 		'no-trailing-spaces': ['error'],
 		'object-curly-spacing': [ "error","always" ],
-		'sort-imports': ['error'],
 		'space-in-parens': [ 'error', 'never' ],
 		'arrow-parens': [ 'error', 'as-needed' ],
 		'eol-last': ['error', 'always']
