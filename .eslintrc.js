@@ -25,7 +25,7 @@ module.exports = {
 		],
 		'indent': [ 'error', 'tab' ],
 		'quotes': [	'error', 'double' ],
-		'semi': [ 'error', 'always'	],
+		'semi': [ 'error', 'never'	],
 		'no-console': ['error'],
 		'no-duplicate-imports': ['error'],
 		'no-multiple-empty-lines': ['error'],
