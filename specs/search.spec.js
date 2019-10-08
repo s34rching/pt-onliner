@@ -1,4 +1,5 @@
 const basePage = require("../page-objects/base-page")
+const homePage = require("../page-objects/homepage")
 
 describe("Onliner.by Products Search", () => {
 
@@ -6,20 +7,25 @@ describe("Onliner.by Products Search", () => {
 		browser.waitForAngularEnabled(false)
 	})
 
-	it("should search product by its full product name", () => {
+	xit("should search product by its full product name", () => {
 		basePage.openPage("/")
 		basePage.performSearch("Samsung")
 	})
 
-	it("should search products by category name", () => {
+	xit("should search products by category name", () => {
 
 	})
 
-	it("should allow to abort search", () => {
+	xit("should allow to abort search", () => {
 
 	})
 
-	it("should NOT find non-existent product", () => {
+	xit("should NOT find non-existent product", () => {
 
+	})
+
+	it("should find product while navigating through the pages", () => {
+		basePage.openPage("/")
+		homePage.openCatalog()
 	})
 })
