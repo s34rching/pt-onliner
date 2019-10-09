@@ -1,7 +1,7 @@
 class BasePage {
 	constructor() {}
 	// searchBar = element(by.css("input.fast-search__input"))
-
+	// asd
 	openPage(path) {
 		browser.get(browser.baseUrl.concat(path))
 	}
