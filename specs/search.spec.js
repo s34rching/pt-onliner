@@ -8,7 +8,7 @@ describe("Onliner.by Products Search", () => {
 	})
 
 	xit("should search product by its full product name", () => {
-		HomePage.openPage("/")
+		HomePage.goTo("/")
 		HomePage.performSearch("Samsung")
 	})
 
@@ -25,7 +25,7 @@ describe("Onliner.by Products Search", () => {
 	})
 
 	it("should find product while navigating through the pages", () => {
-		HomePage.openPage("/")
+		HomePage.goTo("/")
 		HomePage.openCatalog()
 		Catalog.chooseClassifierItem(1)
 	})
