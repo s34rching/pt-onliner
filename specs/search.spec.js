@@ -1,5 +1,5 @@
-const basePage = require("../page-objects/base-page")
-const homePage = require("../page-objects/homepage")
+const HomePage = require("../page-objects/homepage")
+const Catalog = require("../page-objects/catalog")
 
 describe("Onliner.by Products Search", () => {
 
@@ -8,8 +8,8 @@ describe("Onliner.by Products Search", () => {
 	})
 
 	xit("should search product by its full product name", () => {
-		basePage.openPage("/")
-		basePage.performSearch("Samsung")
+		HomePage.openPage("/")
+		HomePage.performSearch("Samsung")
 	})
 
 	xit("should search products by category name", () => {
@@ -25,7 +25,8 @@ describe("Onliner.by Products Search", () => {
 	})
 
 	it("should find product while navigating through the pages", () => {
-		basePage.openPage("/")
-		homePage.openCatalog()
+		HomePage.openPage("/")
+		HomePage.openCatalog()
+		Catalog.chooseClassifierItem(1)
 	})
 })
