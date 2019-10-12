@@ -2,7 +2,7 @@ module.exports = {
 	electronics: {
 		id: 1,
 		ruName: "Электроника",
-		subCategories: {
+		categories: {
 			mobilePhonesAndAccessories: {
 				ruName: "Мобильные телефоны и аксессуары"
 			},
@@ -44,7 +44,7 @@ module.exports = {
 	computers: {
 		id: 2,
 		ruName: "Компьютеры и сети",
-		subCategories: {
+		categories: {
 			laptopsComputersMonitors: {
 				ruName: "Ноутбуки, компьютеры, мониторы"
 			},
@@ -80,7 +80,7 @@ module.exports = {
 	houseAppliances: {
 		id: 3,
 		ruName: "Бытовая техника",
-		subCategories: {
+		categories: {
 			bulkyEquipment: {
 				ruName: "Крупногабаритная техника"
 			},
@@ -119,7 +119,7 @@ module.exports = {
 	constructionAndRepair: {
 		id: 4,
 		ruName: "Стройка и ремонт",
-		subCategories: {
+		categories: {
 			tools: {
 				ruName: "Инструмент"
 			},
@@ -158,7 +158,7 @@ module.exports = {
 	houseAndGarden: {
 		id: 5,
 		ruName: "Дом и сад",
-		subCategories: {
+		categories: {
 			bathroomAndToilet: {
 				ruName: "Ванная комната и туалет"
 			},
@@ -212,7 +212,7 @@ module.exports = {
 	carsAndCycles: {
 		id: 6,
 		ruName: "Авто и мото",
-		subCategories: {
+		categories: {
 			sparePartsAndTechnicalFluids: {
 				ruName: "Запчасти и технические жидкости"
 			},
@@ -233,7 +233,7 @@ module.exports = {
 	beautyAndSport: {
 		id: 7,
 		ruName: "Красота и спорт",
-		subCategories: {
+		categories: {
 			bicycleAndAccessories: {
 				ruName: "Велосипеды и аксессуары"
 			},
@@ -275,7 +275,7 @@ module.exports = {
 	childrenAndMamas: {
 		id: 8,
 		ruName: "Детям и мамам",
-		subCategories: {
+		categories: {
 			walksAndTrips: {
 				ruName: "Прогулки и поездки"
 			},
@@ -308,7 +308,7 @@ module.exports = {
 	workAndOffice: {
 		id: 9,
 		ruName: "Работа и офис",
-		subCategories: {
+		categories: {
 			officeEquipment: {
 				ruName: "Офисная техника и расходные материалы"
 			},
