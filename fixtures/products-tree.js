@@ -37,12 +37,6 @@ module.exports = {
 		id: 3,
 		name: "",
 		subCategories: {
-			// hobs: {},
-			// ovens: {},
-			// rangeHoods: {},
-			// dishwashers: {},
-			// fridges: {},
-			// washingMachines: {},
 			bulkyEquipment: {},
 			builtInAppliances: {},
 			cleaning: {},
@@ -110,21 +104,47 @@ module.exports = {
 		id: 7,
 		name: "",
 		subCategories: {
-
+			bicycleAndAccessories: {},
+			rollerSkatesSkateboards: {},
+			watchBagsAccessories: {},
+			cosmeticPerfumeryAccessories: {},
+			health: {},
+			healthcareEquipment: {},
+			hobby: {},
+			tourismAndCamping: {},
+			fishingAndWaterSport: {},
+			fitnessEquipment: {},
+			gameSports: {},
+			winterSports: {}
 		}
 	},
 	childrenAndMamas: {
 		id: 8,
 		name: "",
 		subCategories: {
-
+			walksAndTrips: {},
+			childrenTransport: {},
+			childrenFurniture: {},
+			babySleep: {},
+			boardAndEducationalGames: {},
+			toysAndGames: {},
+			outdoorGamesAndSport: {},
+			newbornCare: {},
+			goodsForSchool: {}
 		}
 	},
 	workAndOffice: {
 		id: 9,
 		name: "",
 		subCategories: {
-
+			officeEquipment: {},
+			officeFurniture: {},
+			tradeAndFinance: {},
+			publishingAndPrinting: {},
+			hygieneAndNutrition: {},
+			CCTV: {},
+			transportAndTransportation: {},
+			industryAndConstruction: {}
 		}
 	}
 }
