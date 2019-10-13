@@ -529,61 +529,376 @@ module.exports = {
 			laptopsComputersMonitors: {
 				ruName: "Ноутбуки, компьютеры, мониторы",
 				subCategories: {
-
+					onePieceComputers: {
+						ruName: "Ноутбуки",
+						path: "/notebook"
+					},
+					tablets: {
+						ruName: "Планшетные компьютеры",
+						path: "/tabletpc"
+					},
+					monoblockPcs: {
+						ruName: "Моноблоки",
+						path: "/monoblock"
+					},
+					desktopPcs: {
+						ruName: "Компьютеры",
+						path: "/desktoppc"
+					},
+					monitors: {
+						ruName: "Мониторы",
+						path: "/display"
+					}
 				}
 			},
 			components: {
 				ruName: "Комплектующие",
 				subCategories: {
-
+					videoCards: {
+						ruName: "Видеокарты",
+						path: "/videocard"
+					},
+					CPU: {
+						ruName: "Процессоры",
+						path: "/cpu"
+					},
+					motherboards: {
+						ruName: "Материнские платы",
+						path: "/motherboard"
+					},
+					RAM: {
+						ruName: "Оперативная память",
+						path: "/dram"
+					},
+					fans: {
+						ruName: "Кулеры",
+						path: "/fan"
+					},
+					SSD: {
+						ruName: "SSD",
+						path: "/ssd"
+					},
+					HDD: {
+						ruName: "Жесткие диски",
+						path: "/hdd"
+					},
+					computerCases: {
+						ruName: "Корпуса",
+						path: "/chassis"
+					},
+					powerSupplies: {
+						ruName: "Блоки питания",
+						path: "/powersupply"
+					},
+					soundCards: {
+						ruName: "Звуковые карты",
+						path: "/soundcard?type_soundcard%5B0%5D=internal&type_soundcard%5Boperation%5D=union"
+					},
+					networkAdapters: {
+						ruName: "Сетевые адаптеры",
+						path: "/networkadapter"
+					},
+					opticalDrives: {
+						ruName: "Оптические приводы",
+						path: "/optical"
+					},
+					tvTuners: {
+						ruName: "ТВ-тюнеры",
+						path: "/tvtuner?execution_tvtune%5B0%5D=in&execution_tvtune%5Boperation%5D=union"
+					}
 				}
 			},
 			forPrintingAndDesign: {
 				ruName: "Техника для печати и дизайна",
 				subCategories: {
-
+					printers: {
+						ruName: "Принтеры и МФУ",
+						path: "/printers"
+					},
+					scanners: {
+						ruName: "Сканеры",
+						path: "/scanner"
+					},
+					accessoriesForOfficeEquipment: {
+						ruName: "Аксессуары для оргтехники",
+						path: "/officeequip_acs"
+					},
+					graphicTablets: {
+						ruName: "Графические планшеты",
+						path: "/tablets"
+					},
+					cartridges: {
+						ruName: "Картриджи",
+						path: "/cartridges"
+					},
+					photoPaper: {
+						ruName: "Бумага и материалы для печати",
+						path: "/photopaper"
+					},
+					laminators: {
+						ruName: "Ламинаторы",
+						path: "/laminator"
+					},
+					bookletMakers: {
+						ruName: "Брошюровщики",
+						path: "/bindingmachines"
+					},
+					matrixPrinters: {
+						ruName: "Матричные принтеры",
+						path: "/matrixprinter"
+					},
+					printers3d: {
+						ruName: "3D-принтеры",
+						path: "/3dprinter"
+					},
+					pens3d: {
+						ruName: "3D-ручки",
+						path: "/3d_pen"
+					},
+					suppliesFor3dPrinting: {
+						ruName: "Расходные материалы для 3D-печати",
+						path: "/3d_filament"
+					}
 				}
 			},
 			devicesForInputting: {
 				ruName: "Манипуляторы и устройства ввода",
 				subCategories: {
-
+					mouses: {
+						ruName: "Мыши",
+						path: "/mouse"
+					},
+					keyboards: {
+						ruName: "Клавиатуры",
+						path: "/keyboards"
+					},
+					controllers: {
+						ruName: "Игровые контроллеры и аксессуары",
+						path: "/controllers"
+					},
+					graphicTablets: {
+						ruName: "Графические планшеты",
+						path: "/tablets"
+					},
+					peripheralKits: {
+						ruName: "Наборы периферии (клавиатура + мышь)",
+						path: "/peripheralkits"
+					},
+					mousePads: {
+						ruName: "Коврики для мыши",
+						path: "/mousepad"
+					}
 				}
 			},
 			dataStorage: {
 				ruName: "Хранение данных",
 				subCategories: {
+					SSD: {
+						ruName: "SSD",
+						path: "/ssd"
+					},
+					HDD: {
+						ruName: "Жесткие диси",
+						path: "/hdd"
+					},
+					EXTERNALhDD: {
+						ruName: "Внешние накопители (HDD и SSD)",
+						path: "/externalhdd"
+					},
+					USBfLASH: {
+						ruName: "Флешки USB",
+						path: "/usbflash"
+					},
+					memoryCards: {
+						ruName: "Карты памяти",
+						path: "/memcards"
+					},
+					casesForHdd: {
+						ruName: "Боксы для накопителей",
+						path: "/hddbox"
+					},
+					NAS: {
+						ruName: "Сетевые накопители (NAS)",
+						path: "/nas"
+					},
 
+					opticalDrives: {
+						ruName: "Оптические приводы",
+						path: "/optical"
+					},
+					usbHubs: {
+						ruName: "USB-хабы и док-станции",
+						path: "/usbhub"
+					},
+					cardReaders: {
+						ruName: "Карт-ридеры",
+						path: "/cardreaders"
+					}
 				}
 			},
 			multimediaComponents: {
 				ruName: "Мультимедиа периферия",
 				subCategories: {
-
+					pcAcoustics: {
+						ruName: "Компьютерная акустика",
+						path: "/sound"
+					},
+					headphones: {
+						ruName: "Наушники",
+						path: "/headphones"
+					},
+					webCameras: {
+						ruName: "Веб-камеры",
+						path: "/webcams"
+					},
+					ipCameras: {
+						ruName: "IP-камеры",
+						path: "/ipcamera"
+					},
+					audioInterfaces: {
+						ruName: "Аудиоинтерфейсы",
+						path: "/audiointerface"
+					}
 				}
 			},
 			networkHardware: {
 				ruName: "Сетевое оборудование",
 				subCategories: {
-
+					wirelessRouters: {
+						ruName: "Беспроводные маршрутизаторы",
+						path: "/wrouter"
+					},
+					wirelessAdapters: {
+						ruName: "Беспроводные адаптеры",
+						path: "/wirelessadapter"
+					},
+					switches: {
+						ruName: "Коммутаторы",
+						path: "/switch"
+					},
+					dslModemsAndRouters: {
+						ruName: "DSL-модемы и маршрутизаторы",
+						path: "/dslmodem"
+					},
+					ipCameras: {
+						ruName: "IP-камеры",
+						path: "/ipcamera"
+					},
+					NAS: {
+						ruName: "NAS",
+						path: "/nas"
+					},
+					wirelessAccessPoints: {
+						ruName: "Беспроводные точки доступа",
+						path: "/wirelessap"
+					},
+					modemsFor3gAnd4G: {
+						ruName: "4G и 3G-модемы",
+						path: "/wirelessadapter?wa_type%5B0%5D=4g&wa_type%5B1%5D=3g&wa_type%5Boperation%5D=union"
+					},
+					networkCables: {
+						ruName: "Сетевые кабели",
+						path: "/cable?cable_usage%5B0%5D=type4&cable_usage%5Boperation%5D=union"
+					},
+					cableCrimpingTools: {
+						ruName: "Инструмент для обжимки кабелей",
+						path: "/household_tools?ht_type%5B0%5D=crimpingpliers&ht_type%5Boperation%5D=union&order=date:desc"
+					},
+					networkAdapters: {
+						ruName: "Сетевые адаптеры",
+						path: "/networkadapter"
+					},
+					powerlines: {
+						ruName: "Сети по электропроводке (Powerline)",
+						path: "/powerline"
+					},
+					wirelessAntennas: {
+						ruName: "Антенны беспроводной связи",
+						path: "/wantenna"
+					}
 				}
 			},
 			laptopAccessories: {
 				ruName: "Аксессуары к ноутбукам и компьютерам",
 				subCategories: {
-
+					mobilePhones: {
+						laptopBackpacks: "Рюкзаки для ноутбуков",
+						path: "/backpack?bap_internaldep%5B0%5D=laptoptablet&bap_internaldep%5Boperation%5D=union"
+					},
+					laptopBags: {
+						ruName: "Сумки для ноутбуков",
+						path: "/notebookcase"
+					},
+					coolingCoasters: {
+						ruName: "Охлаждающие подставки",
+						path: "/laptopstand"
+					},
+					cablesAdaptersSplitters: {
+						ruName: "Кабели, адаптеры, разветвители",
+						path: "/cable?cable_usage%5B0%5D=pc&cable_usage%5Boperation%5D=union"
+					},
+					mousepads: {
+						ruName: "Коврики для мыши",
+						path: "/mousepad"
+					},
+					accumulatorsAndChargers: {
+						ruName: "Аккумуляторы и зарядные устройства",
+						path: "/nbbatteries?mfr%5B0%5D=for_notebook&mfr%5B1%5D=for_notebook_cha"
+					},
+					universalChargers: {
+						ruName: "Универсальные зарядные устройства",
+						path: "/chargersmobile?mc_devicetype%5B0%5D=type2&mc_devicetype%5Boperation%5D=union"
+					}
 				}
 			},
 			chargers: {
 				ruName: "Электропитание",
 				subCategories: {
-
+					ups: {
+						ruName: "Источники бесперебойного питания",
+						path: "/ups"
+					},
+					stabilizersAndSurgeProtectors: {
+						ruName: "Стабилизаторы и сетевые фильтры",
+						path: "/voltageregulator"
+					},
+					laptopBatteries: {
+						ruName: "Аккумуляторы для ноутбуков",
+						path: "/nbbatteries?mfr%5B0%5D=for_notebook"
+					},
+					chargers: {
+						ruName: "Зарядные устройства",
+						path: "/chargersmobile?mc_devicetype%5B0%5D=type2&mc_devicetype%5Boperation%5D=union"
+					},
+					cables: {
+						ruName: "Кабели питания",
+						path: "/cable?conn1%5B0%5D=c5&conn1%5Boperation%5D=intersect"
+					},
+					upsBatteries: {
+						ruName: "Аккумуляторы для ИБП",
+						path: "/ups_battery"
+					}
 				}
 			},
 			software: {
 				ruName: "Игры и программное обеспечение",
 				subCategories: {
-
+					gamesForPc: {
+						ruName: "Видеоигры для ПК",
+						path: "/pcgames"
+					},
+					gamesForConsole: {
+						ruName: "Видеоигры для консолей",
+						path: "/games"
+					},
+					antiviruses: {
+						ruName: "Антивирусы и безопасность",
+						path: "/antivirus"
+					},
+					paymentCardsAndSubscriptions: {
+						ruName: "Карты оплаты и подписки",
+						path: "/paymentcard"
+					}
 				}
 			}
 		}
