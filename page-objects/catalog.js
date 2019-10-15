@@ -17,6 +17,10 @@ class Catalog extends BasePage {
 	chooseClassifierItem(itemId) {
 		this.sectionItem(itemId).click()
 	}
+
+	hoverCategoryItem() {
+		browser.actions.mouseMove(this.categoryItem).perform()
+	}
 }
 
 module.exports = new Catalog()
