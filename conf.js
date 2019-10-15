@@ -8,4 +8,3 @@ exports.config = {
 		browser.driver.manage().window().maximize()
 	}
 }
-
