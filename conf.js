@@ -6,12 +6,6 @@ exports.config = {
 
 	onPrepare: () => {
 		browser.driver.manage().window().maximize()
-	},
-	jasmineNodeOpts: {
-		showColors: true,
-		displaySpecDuration: true,
-		print: () => {},
-		defaultTimeoutInterval: 50000
 	}
 }
 
