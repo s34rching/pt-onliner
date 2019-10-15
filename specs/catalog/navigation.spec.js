@@ -1,9 +1,9 @@
 const HomePage = require("../../page-objects/homepage")
 const Catalog = require("../../page-objects/catalog")
-const productsTree = require("../../fixtures/products-tree")
+// const productsTree = require("../../fixtures/products-tree")
 const _ = require("lodash")
 
-describe("Onliner.by Products Search", () => {
+describe("Onliner.by - Catalog / Navigation", () => {
 
 	beforeEach(() => {
 		browser.waitForAngularEnabled(false)
@@ -14,6 +14,7 @@ describe("Onliner.by Products Search", () => {
 		HomePage.openCatalog()
 		Catalog.chooseClassifierItem(2)
 		Catalog.waitForCategoriesLeftNav()
-		Catalog.focusCategoryItem()
+		Catalog.focusCategoryItem("Комплектующие")
+		browser.sleep(5000)
 	})
 })
