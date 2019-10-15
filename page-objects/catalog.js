@@ -7,7 +7,7 @@ class Catalog extends BasePage {
 			return element(by.css(`[class="catalog-navigation-classifier__item "][data-id="${itemId}"]`))
 		}
 		this.categoriesLeftNav = element(by.css(".catalog-navigation-list__aside-list"))
-		this.categoryItem = element(by.css("catalog-navigation-list__aside-item"))
+		this.categoryItem = element(by.css(".catalog-navigation-list__aside-item"))
 		this.categoryName = this.categoryItem.element(by.css(".catalog-navigation-list__aside-title"))
 		this.subCategoriesDropDown = element(by.css(".catalog-navigation-list__dropdown-list"))
 		this.subCategoryItem = this.subCategoriesDropDown.element(by.css(".catalog-navigation-list__dropdown-item"))
@@ -18,8 +18,12 @@ class Catalog extends BasePage {
 		this.sectionItem(itemId).click()
 	}
 
-	hoverCategoryItem() {
-		browser.actions.mouseMove(this.categoryItem).perform()
+	waitForCategoriesLeftNav() {
+		return this.isVisible(this.categoriesLeftNav)
+	}
+
+	focusCategoryItem() {
+		browser.actions().mouseMove(this.categoryItem).perform()
 	}
 }
 

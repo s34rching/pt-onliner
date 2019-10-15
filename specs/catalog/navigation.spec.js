@@ -12,7 +12,8 @@ describe("Onliner.by Products Search", () => {
 	it("should find products while navigating through the pages", () => {
 		HomePage.goTo("/")
 		HomePage.openCatalog()
-		Catalog.chooseClassifierItem(1)
-		Catalog.hoverCategoryItem()
+		Catalog.chooseClassifierItem(2)
+		Catalog.waitForCategoriesLeftNav()
+		Catalog.focusCategoryItem()
 	})
 })
