@@ -7,23 +7,6 @@ describe("Onliner.by Products Search", () => {
 		browser.waitForAngularEnabled(false)
 	})
 
-	xit("should search product by its full product name", () => {
-		HomePage.goTo("/")
-		HomePage.performSearch("Samsung")
-	})
-
-	xit("should search products by category name", () => {
-
-	})
-
-	xit("should allow to abort search", () => {
-
-	})
-
-	xit("should NOT find non-existent product", () => {
-
-	})
-
 	it("should find product while navigating through the pages", () => {
 		HomePage.goTo("/")
 		HomePage.openCatalog()
