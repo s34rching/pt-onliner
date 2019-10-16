@@ -2048,102 +2048,844 @@ module.exports = {
 			bathroomAndToilet: {
 				ruName: "Ванная комната и туалет",
 				subCategories: {
-
+					faucets: {
+						ruName: "Смесители",
+						path: "https://catalog.onliner.by/faucet"
+					},
+					bathtubs: {
+						ruName: "Ванны",
+						path: "https://catalog.onliner.by/bathtub"
+					},
+					waterHeaters: {
+						ruName: "Водонагреватели",
+						path: "https://catalog.onliner.by/waterheater"
+					},
+					towelWarmers: {
+						ruName: "Полотенцесушители",
+						path: "https://catalog.onliner.by/towelrail"
+					},
+					showerCabins: {
+						ruName: "Душевые кабины",
+						path: "https://catalog.onliner.by/showerbox"
+					},
+					pans: {
+						ruName: "Унитазы",
+						path: "https://catalog.onliner.by/wcpan"
+					},
+					washbasins: {
+						ruName: "Умывальники",
+						path: "https://catalog.onliner.by/washbasin"
+					},
+					pedestalForWashbasins: {
+						ruName: "Пьедесталы для умывальников",
+						path: "https://catalog.onliner.by/pedestal"
+					},
+					siphons: {
+						ruName: "Сифоны",
+						path: "https://catalog.onliner.by/siphon"
+					},
+					tileForBathrooms: {
+						ruName: "Плитка для ванных комнат",
+						path: "https://catalog.onliner.by/tile?t_appointment[0]=bathroom&t_appointment[operation]=union"
+					},
+					furnitureForBathrooms: {
+						ruName: "Мебель для ванных комнат",
+						path: "https://catalog.onliner.by/bath_furniture"
+					},
+					bidets: {
+						ruName: "Биде",
+						path: "https://catalog.onliner.by/bidet"
+					},
+					installationsForPansSinksBidets: {
+						ruName: "Инсталляции для унитазов, раковин, биде и писсуаров",
+						path: "https://catalog.onliner.by/installations"
+					},
+					flushingSystems: {
+						ruName: "Клавиши и системы смыва",
+						path: "https://catalog.onliner.by/flushing_system"
+					},
+					electronicBidetCovers: {
+						ruName: "Электронные крышки-биде",
+						path: "https://catalog.onliner.by/toilet_shower"
+					},
+					showerPanels: {
+						ruName: "Душевые панели и гарнитуры",
+						path: "https://catalog.onliner.by/shower"
+					},
+					showerTrays: {
+						ruName: "Душевые поддоны",
+						path: "https://catalog.onliner.by/shower_trays"
+					},
+					exhaustFans: {
+						ruName: "Вытяжные вентиляторы",
+						path: "https://catalog.onliner.by/exhaustfan?ef_useage[0]=bathroom&ef_useage[operation]=union"
+					},
+					accessPanels: {
+						ruName: "Сантехнические ревизионные люки",
+						path: "https://catalog.onliner.by/access_panel"
+					},
+					dryClosets: {
+						ruName: "Биотуалеты",
+						path: "https://catalog.onliner.by/biotoilet"
+					},
+					laundryBaskets: {
+						ruName: "Корзины для белья",
+						path: "https://catalog.onliner.by/toystorage?ts_const%5B0%5D=basket&ts_const%5Boperation%5D=union&ts_purpos%5B0%5D=underwear&ts_purpos%5Boperation%5D=union"
+					}
 				}
 			},
 			kitchen: {
 				ruName: "Кухня",
 				subCategories: {
+					kitchenSinks: {
+						ruName: "Мойки",
+						path: "https://catalog.onliner.by/kitchensink"
+					},
+					faucets: {
+						ruName: "Смесители",
+						path: "https://catalog.onliner.by/faucet"
+					},
+					ceramicTile: {
+						ruName: "Керамическая плитка",
+						path: "https://catalog.onliner.by/tile?t_appointment%5B0%5D=kitchen&t_appointment%5Boperation%5D=union"
+					},
+					foodWasteShredders: {
+						ruName: "Измельчители пищевых отходов",
+						path: "https://catalog.onliner.by/disposer"
+					},
 
+					filtersAndWaterTreatmentSystems: {
+						ruName: "Фильтры и системы очистки воды",
+						path: "https://catalog.onliner.by/waterfilter"
+					},
+					exhaustFans: {
+						ruName: "Вытяжные вентиляторы",
+						path: "https://catalog.onliner.by/exhaustfan?ef_useage%5B0%5D=bathroom&ef_useage%5Boperation%5D=union"
+					}
 				}
 			},
 			waterSupplyAndHeating: {
 				ruName: "Водоснабжение, отопление",
 				subCategories: {
-
+					pumps: {
+						ruName: "Насосы",
+						path: "https://catalog.onliner.by/pump"
+					},
+					waterHeaters: {
+						ruName: "Водонагреватели",
+						path: "https://catalog.onliner.by/waterheater"
+					},
+					boilers: {
+						ruName: "отопительные котлы",
+						path: "https://catalog.onliner.by/boiler"
+					},
+					filtersAndWaterTreatmentSystems: {
+						ruName: "Фильтры и системы очистки воды",
+						path: "https://catalog.onliner.by/waterfilter"
+					},
+					radiators: {
+						ruName: "Радиаторы отопления",
+						path: "https://catalog.onliner.by/radiators"
+					},
+					fireplaces: {
+						ruName: "Дровяные камины, печи-камины, порталы",
+						path: "https://catalog.onliner.by/stove"
+					},
+					heaters: {
+						ruName: "Обогреватели",
+						path: "https://catalog.onliner.by/heater"
+					},
+					heatGuns: {
+						ruName: "Тепловые пушки",
+						path: "https://catalog.onliner.by/heat_gun"
+					},
+					electricFireplaces: {
+						ruName: "электрокамины и биокамины",
+						path: "https://catalog.onliner.by/electrofireplace"
+					},
+					waterAccumulators: {
+						ruName: "Гидроаккумуляторы и расширительные баки",
+						path: "https://catalog.onliner.by/hydroaccum"
+					},
+					motorPumps: {
+						ruName: "Мотопомпы",
+						path: "https://catalog.onliner.by/motopump"
+					},
+					pipesAndFittings: {
+						ruName: "Трубы, фитинг",
+						path: "https://catalog.onliner.by/tube_fitting"
+					},
+					waterAndGasPipes: {
+						ruName: "Трубы водогазопроводные",
+						path: "https://catalog.onliner.by/metal_pipes?pipe_type_1%5B0%5D=watergas&pipe_type_1%5Boperation%5D=union"
+					}
 				}
 			},
 			furniture: {
 				ruName: "Мебель для дома",
 				subCategories: {
+					officeArmchairsAndChairs: {
+						ruName: "Офисные кресла и стулья",
+						path: "https://catalog.onliner.by/office_chair?asgmt%5B0%5D=visitor&asgmt%5B1%5D=staff&asgmt%5B2%5D=boss&asgmt%5Boperation%5D=union"
+					},
+					gamingChairs: {
+						ruName: "Геймерские кресла",
+						path: "https://catalog.onliner.by/office_chair?asgmt%5B0%5D=game&asgmt%5Boperation%5D=union"
+					},
+					sofas: {
+						ruName: "Диваны",
+						path: "https://catalog.onliner.by/divan"
+					},
+					tables: {
+						ruName: "Столы",
+						path: "https://catalog.onliner.by/table"
+					},
+					chairsForKitchenAndBar: {
+						ruName: "Стулья для кухни и бара",
+						path: "https://catalog.onliner.by/chair"
+					},
+					armchairs: {
+						ruName: "Кресла",
+						path: "https://catalog.onliner.by/interior_chair"
+					},
+					beds: {
+						ruName: "Кровати",
+						path: "https://catalog.onliner.by/bed"
+					},
+					furnitureForBathrooms: {
+						ruName: "Мебель ля ванных комнат",
+						path: "https://catalog.onliner.by/bath_furniture"
+					},
+					cots: {
+						ruName: "Детские кроватки",
+						path: "https://catalog.onliner.by/babycotbed"
+					},
+					childrenTablesAndSchoolDesks: {
+						ruName: "Детские столы и парты",
+						path: "https://catalog.onliner.by/kidsdesk"
+					},
+					childrenDressers: {
+						ruName: "Детские комоды",
+						path: "https://catalog.onliner.by/babydresser"
+					},
+					boxesBasketsOrganizers: {
+						ruName: "Ящики, корзины, органайзеры",
+						path: "https://catalog.onliner.by/toystorage"
+					},
+					inflatableFurniture: {
+						ruName: "Надувная мебель",
+						path: "https://catalog.onliner.by/airbed"
+					},
 
+					framelessFurniture: {
+						ruName: "Бескаркасная мебель",
+						path: "https://catalog.onliner.by/beanbag"
+					},
+					bedBases: {
+						ruName: "Основания для кроватей",
+						path: "https://catalog.onliner.by/orthobase"
+					},
+					massagersAndMassageChairs: {
+						ruName: "Массажеры и массажные кресла",
+						path: "https://catalog.onliner.by/massagechair"
+					}
 				}
 			},
 			bedroom: {
 				ruName: "Товары для спальни и домашний текстиль",
 				subCategories: {
-
+					mattresses: {
+						ruName: "Матрасы",
+						path: "https://catalog.onliner.by/mattress"
+					},
+					orthopedicPillows: {
+						ruName: "Ортопедические подушки",
+						path: "https://catalog.onliner.by/pillow"
+					},
+					classicPillows: {
+						ruName: "Классические подушки для сна",
+						path: "https://catalog.onliner.by/pillows?pil_type%5B0%5D=sleep&pil_type%5Boperation%5D=union&order=price:asc"
+					},
+					blankets: {
+						ruName: "Одеяла",
+						path: "https://catalog.onliner.by/pillows?pil_type%5B0%5D=blanket&pil_type%5Boperation%5D=union"
+					},
+					plaids: {
+						ruName: "Пледы, покрывала",
+						path: "https://catalog.onliner.by/plaid"
+					},
+					bedlinen: {
+						ruName: "Постельное белье",
+						path: "https://catalog.onliner.by/bedlinen"
+					},
+					mattressPads: {
+						ruName: "Наматрасники",
+						path: "https://catalog.onliner.by/mattresspad"
+					},
+					electricLinen: {
+						ruName: "Электрогрелки, электроодеяла, электропростыни",
+						path: "https://catalog.onliner.by/mobile_heater"
+					},
+					maternityPillows: {
+						ruName: "Подушки для беременных",
+						path: "https://catalog.onliner.by/pillows?pil_type%5B0%5D=forpregnantwom&pil_type%5Boperation%5D=union"
+					},
+					decorativePillows: {
+						ruName: "Декоративные подушки",
+						path: "https://catalog.onliner.by/pillows?pil_type%5B0%5D=decor&pil_type%5Boperation%5D=union"
+					}
 				}
 			},
 			gardenToolsAndMachines: {
 				ruName: "Садовая техника и инструменты",
 				subCategories: {
-
+					miniTractors: {
+						ruName: "Мини-тракторы",
+						path: "https://catalog.onliner.by/minitractor"
+					},
+					motorBlocks: {
+						ruName: "Мотоблоки и мультикультиваторы",
+						path: "https://catalog.onliner.by/motoblock"
+					},
+					attachmentsForGardenEquipment: {
+						ruName: "Навесное оборудование для садовой техники",
+						path: "https://catalog.onliner.by/attachmentgarden"
+					},
+					engines: {
+						ruName: "Двигатели",
+						path: "https://catalog.onliner.by/engine"
+					},
+					trimmers: {
+						ruName: "Триммеры",
+						path: "https://catalog.onliner.by/trimmers"
+					},
+					mowers: {
+						ruName: "Газонокосилки",
+						path: "https://catalog.onliner.by/mowers"
+					},
+					toolsAccumulators: {
+						ruName: "Аккумуляторы и зарядные устройства для инструмента",
+						path: "https://catalog.onliner.by/tools_accum"
+					},
+					aerators: {
+						ruName: "Аэраторы, скарификаторы",
+						path: "https://catalog.onliner.by/mowers?type_mowing%5B0%5D=scarifier&type_mowing%5B1%5D=aerator&type_mowing%5B2%5D=scarifieraera&type_mowing%5Boperation%5D=union"
+					},
+					chainSaws: {
+						ruName: "Цепные пилы",
+						path: "https://catalog.onliner.by/chainsaw"
+					},
+					householdVacuumCleaners: {
+						ruName: "Хозяйственные пылесосы",
+						path: "https://catalog.onliner.by/vacuumcleaner?vc_type%5B0%5D=wetdryvc&vc_type%5Boperation%5D=union"
+					},
+					logSplitters: {
+						ruName: "Дровоколы",
+						path: "https://catalog.onliner.by/logsplitter"
+					},
+					pressureWashers: {
+						ruName: "Мойки высокого давления",
+						path: "https://catalog.onliner.by/washers"
+					},
+					hedgeTrimmers: {
+						ruName: "Кусторезы и высоторезы",
+						path: "https://catalog.onliner.by/hedgetrimmers"
+					},
+					gardenShredders: {
+						ruName: "Садовые измельчители",
+						path: "https://catalog.onliner.by/gardenshredder"
+					},
+					snowBlowers: {
+						ruName: "Снегоуборщики",
+						path: "https://catalog.onliner.by/snowblower"
+					},
+					leafBlowers: {
+						ruName: "Воздуходувки",
+						path: "https://catalog.onliner.by/leafblower"
+					},
+					gardenTools: {
+						ruName: "Садовый инструмент",
+						path: "https://catalog.onliner.by/gardentool"
+					},
+					wateringHoses: {
+						ruName: "Поливочные шланги",
+						path: "https://catalog.onliner.by/garden_hose"
+					},
+					automaticWateringSystems: {
+						ruName: "Системы автоматического полива, распылители",
+						path: "https://catalog.onliner.by/watering_system"
+					},
+					gardenBarrows: {
+						ruName: "Садовые тачки",
+						path: "https://catalog.onliner.by/barrow"
+					},
+					stairsAndLadders: {
+						ruName: "Лестницы и стремянки",
+						path: "https://catalog.onliner.by/stairandladder"
+					}
 				}
 			},
 			dacha: {
 				ruName: "Отдых на даче",
 				subCategories: {
-
+					baths: {
+						ruName: "Бани, купели",
+						path: "https://catalog.onliner.by/bath"
+					},
+					gazeboses: {
+						ruName: "Беседки",
+						path: "https://catalog.onliner.by/garden_house"
+					},
+					pools: {
+						ruName: "Бассейны",
+						path: "https://catalog.onliner.by/pool"
+					},
+					grills: {
+						ruName: "Мангалы, грили, барбекю",
+						path: "https://catalog.onliner.by/grill"
+					},
+					bbqFacilities: {
+						ruName: "Принадлежности для барбекю, грилей, мангалов",
+						path: "https://catalog.onliner.by/bbq_accessories"
+					},
+					bathStoves: {
+						ruName: "Банные печи",
+						path: "https://catalog.onliner.by/bathstove"
+					},
+					childrenStreetComplexesAndHills: {
+						ruName: "Детские уличные комплексы и горки",
+						path: "https://catalog.onliner.by/kidwallbars?kwb_type[0]=outdoor&kwb_type[operation]=union"
+					},
+					gardenSwing: {
+						ruName: "Садовые качели",
+						path: "https://catalog.onliner.by/gardenswing"
+					},
+					trampolines: {
+						ruName: "Батуты",
+						path: "https://catalog.onliner.by/trampoline"
+					},
+					gardenFurniture: {
+						ruName: "Садовая мебель",
+						path: "https://catalog.onliner.by/gardenfurniture"
+					},
+					hammocks: {
+						ruName: "Гамаки",
+						path: "https://catalog.onliner.by/hammock"
+					},
+					tents: {
+						ruName: "Шатры, тенты",
+						path: "https://catalog.onliner.by/canopy_tents"
+					},
+					loungers: {
+						ruName: "Шезлонги",
+						path: "https://catalog.onliner.by/lounger"
+					},
+					streetUmbrellas: {
+						ruName: "Зонты садовые, пляжные",
+						path: "https://catalog.onliner.by/street_umbrella"
+					}
 				}
 			},
 			siteArrangement: {
 				ruName: "Обустройство участка",
 				subCategories: {
-
+					houses: {
+						ruName: "Дома, коттеджи",
+						path: "https://catalog.onliner.by/house"
+					},
+					gazeboses: {
+						ruName: "Беседки",
+						path: "https://catalog.onliner.by/garden_house"
+					},
+					gardenCabins: {
+						ruName: "Дачные бытовки и хозблоки",
+						path: "https://catalog.onliner.by/garden_cabin"
+					},
+					streetLightning: {
+						ruName: "Уличное освещение",
+						path: "https://catalog.onliner.by/luster?lu_arrangement%5B0%5D=street&lu_arrangement%5Boperation%5D=union"
+					},
+					streetClothesDryers: {
+						ruName: "Уличные сушки для белья",
+						path: "https://catalog.onliner.by/linendryer?dr_mounting[0]=ground&dr_mounting[operation]=union"
+					},
+					insectKillers: {
+						ruName: "Уничтожители насекомых",
+						path: "https://catalog.onliner.by/insect_killer"
+					},
+					summerShowers: {
+						ruName: "Летние души",
+						path: "https://catalog.onliner.by/summer_shower"
+					},
+					countryToilets: {
+						ruName: "Дачные туалеты",
+						path: "https://catalog.onliner.by/outdoor_toilet"
+					},
+					dryClosets: {
+						ruName: "Биотуалеты",
+						path: "https://catalog.onliner.by/biotoilet"
+					},
+					meansForDryClosets: {
+						ruName: "Средства для биотуалетов, выгребных ям",
+						path: "https://catalog.onliner.by/wc_liquid"
+					},
+					brickTile: {
+						ruName: "Клинкерная плитка",
+						path: "https://catalog.onliner.by/tile?t_tile%5B0%5D=clinker&t_tile%5Boperation%5D=union"
+					},
+					pavingSlabs: {
+						ruName: "Тротуарная плитка",
+						path: "https://catalog.onliner.by/pavers"
+					},
+					plantersAndPotsForPlants: {
+						ruName: "Кашпо, горшки для растений",
+						path: "https://catalog.onliner.by/flowerpot"
+					},
+					rabitz: {
+						ruName: "Сетка-рабица",
+						path: "https://catalog.onliner.by/rabitz?mfr[0]=setkarabitza"
+					}
 				}
 			},
 			decorAndInterior: {
 				ruName: "Декор и интерьер",
 				subCategories: {
-
+					interiorClocks: {
+						ruName: "Интерьерные часы",
+						path: "https://catalog.onliner.by/interior_clock"
+					},
+					nightLights: {
+						ruName: "Ночники",
+						path: "https://catalog.onliner.by/luster?lu_type%5B0%5D=nightlight&lu_type%5Boperation%5D=union"
+					},
+					floorLamps: {
+						ruName: "Торшеры",
+						path: "https://catalog.onliner.by/luster?lu_type%5B0%5D=floorlamp&lu_type%5Boperation%5D=union"
+					},
+					meteoStations: {
+						ruName: "Метеостанции",
+						path: "https://catalog.onliner.by/meteostations"
+					},
+					electricFireplaces: {
+						ruName: "Электрокамины и биокамины",
+						path: "https://catalog.onliner.by/electrofireplace"
+					},
+					decorativePillows: {
+						ruName: "Декоративные подушки",
+						path: "https://catalog.onliner.by/pillows?pil_type%5B0%5D=decor&pil_type%5Boperation%5D=union"
+					},
+					houseplants: {
+						ruName: "Комнатные растения, флорариумы",
+						path: "https://catalog.onliner.by/houseplant"
+					}
 				}
 			},
 			lightningAndPowerSupply: {
 				ruName: "Освещение и электропитание",
 				subCategories: {
-
+					chandeliersAndLamps: {
+						ruName: "Люстры и светильники",
+						path: "https://catalog.onliner.by/luster"
+					},
+					tableLamps: {
+						ruName: "Настольные лампы",
+						path: "https://catalog.onliner.by/luster?lu_type%5B0%5D=light&lu_type%5Boperation%5D=union&lu_arrangement%5B0%5D=table&lu_arrangement%5Boperation%5D=union"
+					},
+					floorLamps: {
+						ruName: "Торшеры",
+						path: "https://catalog.onliner.by/luster?lu_type%5B0%5D=floorlamp&lu_type%5Boperation%5D=union"
+					},
+					nightLights: {
+						ruName: "Ночники",
+						path: "https://catalog.onliner.by/luster?lu_type%5B0%5D=nightlight&lu_type%5Boperation%5D=union"
+					},
+					streetLightning: {
+						ruName: "Уличное освещение",
+						path: "https://catalog.onliner.by/luster?lu_arrangement%5B0%5D=street&lu_arrangement%5Boperation%5D=union"
+					},
+					bulbs: {
+						ruName: "Лампочки",
+						path: "https://catalog.onliner.by/lightbulb"
+					},
+					socketsAndSwitches: {
+						ruName: "Розетки, выключатели",
+						path: "https://catalog.onliner.by/wall_socket"
+					},
+					stabilizersAndSurgeProtectors: {
+						ruName: "Стабилизаторы напряжения и сетевые фильтры",
+						path: "https://catalog.onliner.by/voltageregulator?voltage_type[0]=stabilizer&voltage_type[operation]=union"
+					},
+					generators: {
+						ruName: "Генераторы",
+						path: "https://catalog.onliner.by/powerstations"
+					}
 				}
 			},
 			smartHouseAndSecurity: {
 				ruName: "Умный дом и безопасность",
 				subCategories: {
-
+					smartHome: {
+						ruName: "Умный дом",
+						path: "https://catalog.onliner.by/smart_home"
+					},
+					smartThermostats: {
+						ruName: "Умные терморегуляторы",
+						path: "https://catalog.onliner.by/thermostat?smarthome=1"
+					},
+					smartBulbs: {
+						ruName: "Умные лампочки",
+						path: "https://catalog.onliner.by/lightbulb?lib_smartlight=1"
+					},
+					smartSockets: {
+						ruName: "Умные розетки",
+						path: "https://catalog.onliner.by/wall_socket?wallsoc_smart=1"
+					},
+					ipCameras: {
+						ruName: "IP-камеры",
+						path: "https://catalog.onliner.by/ipcamera"
+					},
+					videoDoorPhones: {
+						ruName: "Видеодомофоны",
+						path: "https://catalog.onliner.by/videodoorphone"
+					},
+					CCTV: {
+						ruName: "Камеры CCTV",
+						path: "https://catalog.onliner.by/cctvcamera"
+					},
+					DVRs: {
+						ruName: "Видеорегистраторы",
+						path: "https://catalog.onliner.by/dvr"
+					},
+					cameraTraps: {
+						ruName: "Фотоловушки",
+						path: "https://catalog.onliner.by/camera_traps"
+					},
+					metalDoors: {
+						ruName: "Входные двери",
+						path: "https://catalog.onliner.by/steeldoor"
+					},
+					extinguishers: {
+						ruName: "Огнетушители",
+						path: "https://catalog.onliner.by/extinguisher"
+					}
 				}
 			},
 			clothingCare: {
 				ruName: "Уход за одеждой, стирка",
 				subCategories: {
-
+					linenDryers: {
+						ruName: "Сушилки для белья",
+						path: "https://catalog.onliner.by/linendryer"
+					},
+					ironingBoards: {
+						ruName: "Гладильные доски",
+						path: "https://catalog.onliner.by/ironingboard"
+					},
+					laundryAndCareProducts: {
+						ruName: "Средства для стирки и ухода за бельем",
+						path: "https://catalog.onliner.by/washingpowder"
+					},
+					dishwasherTools: {
+						ruName: "Средства для посудомоечных машин",
+						path: "https://catalog.onliner.by/dishwashertablet"
+					}
 				}
 			},
 			dishes: {
 				ruName: "Посуда и продукты питания",
 				subCategories: {
-
+					pans: {
+						ruName: "Сковороды",
+						path: "https://catalog.onliner.by/pan"
+					},
+					stewpans: {
+						ruName: "Сотейники",
+						path: "https://catalog.onliner.by/pan?p_type[0]=saucepan&p_type[operation]=union"
+					},
+					saucepans: {
+						ruName: "Кастрюли",
+						path: "https://catalog.onliner.by/saucepan"
+					},
+					lids: {
+						ruName: "Крышки для посуды",
+						path: "https://catalog.onliner.by/lids"
+					},
+					kettles: {
+						ruName: "Чайники",
+						path: "https://catalog.onliner.by/kettles"
+					},
+					teapots: {
+						ruName: "Заварочные чайники, кофеварки, френч-прессы",
+						path: "https://catalog.onliner.by/teapot"
+					},
+					dishesSets: {
+						ruName: "Сервизы и наборы столовой посуды",
+						path: "https://catalog.onliner.by/dishset"
+					},
+					cutlery: {
+						ruName: "Столовые приборы",
+						path: "https://catalog.onliner.by/cutlery"
+					},
+					kitchenKnifesAndScissors: {
+						ruName: "Кухонные ножи и ножницы",
+						path: "https://catalog.onliner.by/kitchen_knife"
+					},
+					bakingDishesAndBakingSheets: {
+						ruName: "Формы для выпечки, противни",
+						path: "https://catalog.onliner.by/breadpan"
+					},
+					barAccessories: {
+						ruName: "Аксессуары для бара",
+						path: "https://catalog.onliner.by/bar_accessories"
+					},
+					thermosesAndThermomugs: {
+						ruName: "Термосы, термокружки",
+						path: "https://catalog.onliner.by/thermosbottle"
+					},
+					coffee: {
+						ruName: "Кофе",
+						path: "https://catalog.onliner.by/coffeejava"
+					}
 				}
 			},
 			celebrations: {
 				ruName: "Праздники",
 				subCategories: {
-
+					flowersBouquets: {
+						ruName: "Цветы, букеты",
+						path: "https://catalog.onliner.by/flowersbouquets"
+					},
+					stuffedToys: {
+						ruName: "Мягкие игрушки",
+						path: "https://catalog.onliner.by/stuffedtoys"
+					},
+					xmasTrees: {
+						ruName: "Елки",
+						path: "https://catalog.onliner.by/tree"
+					},
+					xmasLights: {
+						ruName: "Электрические гирлянды",
+						path: "https://catalog.onliner.by/xmaslights"
+					},
+					xmaslightsTreesAndFigures: {
+						ruName: "Световые деревья, фигуры",
+						path: "https://catalog.onliner.by/xmaslights?xl_type[0]=2d&xl_type[1]=tree&xl_type[2]=3d&xl_type[operation]=union"
+					},
+					xmasToysAndDecorations: {
+						ruName: "Елочные игрушки, украшения",
+						path: "https://catalog.onliner.by/christmasdecor"
+					}
 				}
 			},
 			petSupplies: {
 				ruName: "Зоотовары",
 				subCategories: {
-
+					dogFood: {
+						ruName: "Корма для собак",
+						path: "https://catalog.onliner.by/foodfordog"
+					},
+					catFood: {
+						ruName: "Корма для кошек",
+						path: "https://catalog.onliner.by/catfood"
+					},
+					animalPlates: {
+						ruName: "Миски, поилки, кормушки для животных",
+						path: "https://catalog.onliner.by/animal_plate"
+					},
+					toiletsFillers: {
+						ruName: "Наполнители для туалетов",
+						path: "https://catalog.onliner.by/catlitter?catlit_typ%5B0%5D=type6&catlit_typ%5Boperation%5D=union"
+					},
+					toiletsForAnimals: {
+						ruName: "Туалеты",
+						path: "https://catalog.onliner.by/catlitter?catlit_typ%5B0%5D=type1&catlit_typ%5B1%5D=type2&catlit_typ%5Boperation%5D=union"
+					},
+					bagsForAnimals: {
+						ruName: "Сумки, переноски для животных",
+						path: "https://catalog.onliner.by/pet_carrier"
+					},
+					loungersForAnimals: {
+						ruName: "Лежанки, домики, когтеточки для кошек и собак",
+						path: "https://catalog.onliner.by/pet_house"
+					}
 				}
 			},
 			plantGrowing: {
 				ruName: "Растениеводство",
 				subCategories: {
-
+					gardenTools: {
+						ruName: "Садовый инструмент",
+						path: "https://catalog.onliner.by/gardentool"
+					},
+					greenhousesAndHotbeds: {
+						ruName: "Теплицы и парники",
+						path: "https://catalog.onliner.by/greenhouse"
+					},
+					polycarbonateForGreenhouses: {
+						ruName: "Поликарбонат для теплиц",
+						path: "https://catalog.onliner.by/polycarbonate"
+					},
+					coveringMaterials: {
+						ruName: "Укрывной материал",
+						path: "https://catalog.onliner.by/coveringmaterial"
+					},
+					wateringHoses: {
+						ruName: "Поливочные шланги",
+						path: "https://catalog.onliner.by/garden_hose"
+					},
+					automaticWateringSystems: {
+						ruName: "Системы автоматического полива, распылители",
+						path: "https://catalog.onliner.by/watering_system"
+					},
+					houseplants: {
+						ruName: "Комнатные растения, флорариумы",
+						path: "https://catalog.onliner.by/houseplant"
+					},
+					plantersAndPotsForPlants: {
+						ruName: "Кашпо, горшки для растений",
+						path: "https://catalog.onliner.by/flowerpot"
+					},
+					grassSeedsAndLawn: {
+						ruName: "Семена трав, газон",
+						path: "https://catalog.onliner.by/lawn"
+					},
+					soilForPlants: {
+						ruName: "Грунты для растений",
+						path: "https://catalog.onliner.by/soilforplants"
+					},
+					fertilizers: {
+						ruName: "Удобрения",
+						path: "https://catalog.onliner.by/fertilizer"
+					},
+					saplingsOfFruitTreesAndBushes: {
+						ruName: "Саженцы плодовых деревьев и кустарников",
+						path: "https://catalog.onliner.by/shrubtree?fs_vid%5B0%5D=plod&fs_vid%5Boperation%5D=union"
+					},
+					saplingsOfDecorativeBushes: {
+						ruName: "Саженцы декоративных кустарников",
+						path: "https://catalog.onliner.by/shrubtree?fs_type%5B0%5D=shrub&fs_type%5Boperation%5D=union&fs_vid%5B0%5D=dekor&fs_vid%5Boperation%5D=union"
+					},
+					saplingsOfConiferousBushes: {
+						ruName: "Саженцы хвойных растений",
+						path: "https://catalog.onliner.by/shrubtree?fs_appearance%5B0%5D=coniferous&fs_appearance%5Boperation%5D=union"
+					},
+					flowerSeeds: {
+						ruName: "Семена цветов",
+						path: "https://catalog.onliner.by/flowersseed?vs_reproduction%5B0%5D=seed&vs_reproduction%5Boperation%5D=union"
+					},
+					flowerBulbs: {
+						ruName: "Луковицы цветов",
+						path: "https://catalog.onliner.by/flowersseed?vs_reproduction%5B0%5D=bulbs&vs_reproduction%5Boperation%5D=union"
+					},
+					seedsOfVegetablesHerbsAndBerries: {
+						ruName: "Семена овощей, зелени и ягод",
+						path: "https://catalog.onliner.by/vegetableseed"
+					}
 				}
 			}
 		}
 	},
-	carsAndCycles: {
+	carsAndMotorcycles: {
 		id: 6,
 		ruName: "Авто и мото",
 		categories: {
