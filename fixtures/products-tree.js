@@ -2892,31 +2892,266 @@ module.exports = {
 			sparePartsAndTechnicalFluids: {
 				ruName: "Запчасти и технические жидкости",
 				subCategories: {
-
+					tires: {
+						ruName: "Шины",
+						path: "/tires"
+					},
+					motorOil: {
+						ruName: "Моторные масла",
+						path: "/motor_oil"
+					},
+					carBatteries: {
+						ruName: "Аккумуляторы",
+						path: "/carbattery"
+					},
+					wheels: {
+						ruName: "Диски",
+						path: "/wheel"
+					},
+					gearOil: {
+						ruName: "Трансмиссионные масла",
+						path: "/gearoil"
+					},
+					carBulbs: {
+						ruName: "Лампы",
+						path: "/autolamps"
+					},
+					coolants: {
+						ruName: "Охлаждающие жидкости",
+						path: "/antifreeze"
+					},
+					additives: {
+						ruName: "Присадки",
+						path: "/additive4fuel"
+					},
+					glassWasherFluids: {
+						ruName: "Стеклоомывающие жидкости",
+						path: "/washerfluid"
+					},
+					brakeFluids: {
+						ruName: "Тормозные жидкости",
+						path: "/brakefluid"
+					},
+					xenon: {
+						ruName: "Ксенон",
+						path: "/xenon"
+					},
+					motorBatteries: {
+						ruName: "Мотоциклетные аккумуляторы",
+						path: "/motobatteries"
+					},
+					enginePreheaters: {
+						ruName: "Предпусковые подогреватели двигателя и топливной системы",
+						path: "/dieselfuelheater"
+					}
 				}
 			},
 			carElectronics: {
 				ruName: "Автоэлектроника",
 				subCategories: {
-
+					DVRs: {
+						ruName: "Видеорегистраторы",
+						path: "/videoregistrator"
+					},
+					radioAndHeadSystems: {
+						ruName: "Магнитолы и головные системы",
+						path: "/caraudio"
+					},
+					carSpeakers: {
+						ruName: "Акустика",
+						path: "/carspeakers"
+					},
+					radarDetectors: {
+						ruName: "Радар-детекторы",
+						path: "/radar"
+					},
+					gpsNavigators: {
+						ruName: "GPS-навигаторы",
+						path: "/gps"
+					},
+					carAlarm: {
+						ruName: "Сигнализация",
+						path: "/caralarm"
+					},
+					carAmplifiers: {
+						ruName: "Усилители",
+						path: "/caramps"
+					},
+					cbRadioStations: {
+						ruName: "Радиостанции CB",
+						path: "/car_radio"
+					},
+					speakerphones: {
+						ruName: "Громкая связь",
+						path: "/carkit"
+					},
+					fmModulators: {
+						ruName: "FM-модуляторы",
+						path: "/fmmodulators"
+					},
+					carInverters: {
+						ruName: "Автомобильные инверторы",
+						path: "/car_inverter"
+					},
+					parkingRadar: {
+						ruName: "Парковочные радары",
+						path: "/parkingradar"
+					},
+					gpsTrackers: {
+						ruName: "GPS-трекеры",
+						path: "/gps_tracker"
+					},
+					carAntennas: {
+						ruName: "Автомобильные антенны",
+						path: "/antenforradio"
+					},
+					carVideoPlayers: {
+						ruName: "Автомобильные видеоплееры и DVD",
+						path: "/portabletvdvd"
+					}
 				}
 			},
 			repairAndWashingEquipment: {
 				ruName: "Оборудование для ремонта и мойки",
 				subCategories: {
-
+					welders: {
+						ruName: "Сварочные аппараты",
+						path: "/weldinginverter"
+					},
+					toolKits: {
+						ruName: "Наборы инструментов",
+						path: "/tool_kits"
+					},
+					torqueWrenchesAndScrewdrivers: {
+						ruName: "Динамометрические ключи и отвертки",
+						path: "/torque_wrenches"
+					},
+					multimeters: {
+						ruName: "Мультиметры, токовые клещи, индикаторные отвертки",
+						path: "/multimeter"
+					},
+					compressors: {
+						ruName: "Компрессоры",
+						path: "/compressor"
+					},
+					pressureWashers: {
+						ruName: "Мойки высокого давления",
+						path: "/washers"
+					},
+					pneumaticSprayGuns: {
+						ruName: "Пневматические краскопульты",
+						path: "/spraygun"
+					},
+					carjacks: {
+						ruName: "Домкраты",
+						path: "/carjack"
+					},
+					weldingMasks: {
+						ruName: "Сварочные маски",
+						path: "/weldingmask"
+					},
+					electricSprayGuns: {
+						ruName: "Электрические краскопульты",
+						path: "/electricspraygun"
+					},
+					pneumaticWrenches: {
+						ruName: "Пневматические гайковерты",
+						path: "/wrench"
+					},
+					grinders: {
+						ruName: "Пневматические шлифмашины",
+						path: "/pneumogrinder"
+					},
+					carLifts: {
+						ruName: "Подъемники",
+						path: "/carlift"
+					}
 				}
 			},
 			carAccessories: {
 				ruName: "Аксессуары",
 				subCategories: {
-
+					toolKits: {
+						ruName: "Наборы инструментов",
+						path: "/tool_kits"
+					},
+					startChargers: {
+						ruName: "Пускозарядные устройства",
+						path: "/start_charge"
+					},
+					carRefrigerators: {
+						ruName: "Автохолодильники, термобоксы, термосумки",
+						path: "/arrefrigerator"
+					},
+					carCompressors: {
+						ruName: "Автомобильные компрессоры",
+						path: "/compressor_auto"
+					},
+					carHolders: {
+						ruName: "Держатели для телефонов",
+						path: "/carholder"
+					},
+					breathalyzers: {
+						ruName: "Алкотестеры",
+						path: "/breathalyzer"
+					},
+					bicycleRacks: {
+						ruName: "Велобагажники",
+						path: "/bicyclerack"
+					},
+					carVacuumCleaners: {
+						ruName: "Автомобильные пылесосы",
+						path: "/car_vacuum_clean"
+					},
+					carRoofRacks: {
+						ruName: "Багажники на крышу",
+						path: "/car_racks"
+					},
+					electricChargingStations: {
+						ruName: "Электрические зарядные станции",
+						path: "/charging_station"
+					}
 				}
 			},
 			autoAndMototechnics: {
 				ruName: "Авто и мототехника",
 				subCategories: {
-
+					cars: {
+						ruName: "Легковые автомобили",
+						path: "/car"
+					},
+					miniTractors: {
+						ruName: "Тракторы",
+						path: "/minitractor"
+					},
+					motorcycles: {
+						ruName: "Мотоциклы",
+						path: "/motorcycle"
+					},
+					electricScooters: {
+						ruName: "Электроскутеры",
+						path: "/electric_scooter?ks_type%5B0%5D=scooter&ks_type%5Boperation%5D=union"
+					},
+					scooters: {
+						ruName: "Скутеры и мопеды",
+						path: "/scooter"
+					},
+					ATVs: {
+						ruName: "Квадроциклы",
+						path: "/quad"
+					},
+					motorHelmets: {
+						ruName: "Мотошлемы",
+						path: "/motohelmet"
+					},
+					motorBatteries: {
+						ruName: "Мотоциклетные аккумуляторы",
+						path: "/motobatteries"
+					},
+					motorcycleTires: {
+						ruName: "Мотоциклетные шины",
+						path: "/moto_tires"
+					}
 				}
 			}
 		}
