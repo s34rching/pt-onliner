@@ -4137,284 +4137,284 @@ module.exports = {
 			officeEquipment: {
 				ruName: "Офисная техника и расходные материалы",
 				subCategories: {
-					name: {
-						ruName: "nameru",
-						path: "path"
+					printers: {
+						ruName: "Принтеры и МФУ",
+						path: "/printers"
 					},
-					name: {
-						ruName: "nameru",
-						path: "path"
+					faxes: {
+						ruName: "Факсы",
+						path: "/fax"
 					},
-					name: {
-						ruName: "nameru",
-						path: "path"
+					scanners: {
+						ruName: "Сканеры",
+						path: "/scanner"
 					},
-					name: {
-						ruName: "nameru",
-						path: "path"
+					cartridges: {
+						ruName: "Картриджи для принтеров",
+						path: "/cartridges"
 					},
-					name: {
-						ruName: "nameru",
-						path: "path"
+					shredders: {
+						ruName: "Уничтожители бумаг (шредеры)",
+						path: "/shredder"
 					},
-					name: {
-						ruName: "nameru",
-						path: "path"
+					photoPaper: {
+						ruName: "Бумага и материалы для печати",
+						path: "/photopaper"
 					},
-					name: {
-						ruName: "nameru",
-						path: "path"
+					paperCutters: {
+						ruName: "Резаки для бумаги",
+						path: "/papercutter"
 					},
-					name: {
-						ruName: "nameru",
-						path: "path"
+					bookletMakers: {
+						ruName: "Брошюровщики",
+						path: "/bindingmachines"
 					},
-					name: {
-						ruName: "nameru",
-						path: "path"
+					printers3d: {
+						ruName: "3D-принтеры",
+						path: "/3dprinter"
 					},
-					name: {
-						ruName: "nameru",
-						path: "path"
+					suppliesFor3dPrinting: {
+						ruName: "Расходные материалы для 3D-печати",
+						path: "/3d_filament"
 					},
-					name: {
-						ruName: "nameru",
-						path: "path"
+					surgeProtectors: {
+						ruName: "Сетевые фильтры-удлинители",
+						path: "/voltageregulator?voltage_type[0]=surge&voltage_type[operation]=union"
 					}
 				}
 			},
 			officeFurniture: {
 				ruName: "Офисная мебель",
 				subCategories: {
-					name: {
-						ruName: "nameru",
-						path: "path"
+					officeChairs: {
+						ruName: "Офисные кресла, стулья",
+						path: "/office_chair"
 					},
-					name: {
-						ruName: "nameru",
-						path: "path"
+					officeTables: {
+						ruName: "Офисные столы",
+						path: "/table?tbl_type%5B0%5D=executive&tbl_type%5B1%5D=conference&tbl_type%5B2%5D=office&tbl_type%5Boperation%5D=union"
 					},
-					name: {
-						ruName: "nameru",
-						path: "path"
+					officeSofas: {
+						ruName: "Офисные диваны",
+						path: "/divan?di_office=1"
 					},
-					name: {
-						ruName: "nameru",
-						path: "path"
+					officeSafes: {
+						ruName: "Сейфы",
+						path: "/furnituresafes"
 					},
-					name: {
-						ruName: "nameru",
-						path: "path"
+					officeBoards: {
+						ruName: "Офисные доски, флипчарты",
+						path: "/officeboard"
 					}
 				}
 			},
 			tradeAndFinance: {
 				ruName: "Торговля и финансы",
 				subCategories: {
-					name: {
-						ruName: "nameru",
-						path: "path"
+					cashRegisters: {
+						ruName: "Кассовые аппараты",
+						path: "/cashregister"
 					},
-					name: {
-						ruName: "nameru",
-						path: "path"
+					banknoteAndCoinCounters: {
+						ruName: "Счетчики банкнот и монет",
+						path: "/counters"
 					},
-					name: {
-						ruName: "nameru",
-						path: "path"
+					barcodeScanners: {
+						ruName: "Сканеры штрих-кодов",
+						path: "/barcode"
 					},
-					name: {
-						ruName: "nameru",
-						path: "path"
+					currencyDetectors: {
+						ruName: "Детекторы валют",
+						path: "/currencydetector"
 					},
-					name: {
-						ruName: "nameru",
-						path: "path"
+					matrixPrinters: {
+						ruName: "Матричные принтеры",
+						path: "/matrixprinter"
 					},
-					name: {
-						ruName: "nameru",
-						path: "path"
+					printersOnLabelsAndReceipts: {
+						ruName: "Принтеры на этикетках и чеках",
+						path: "/thermal"
 					},
-					name: {
-						ruName: "nameru",
-						path: "path"
+					dashboards: {
+						ruName: "Информационные панели",
+						path: "/digitalsignage"
 					},
-					name: {
-						ruName: "nameru",
-						path: "path"
+					commercialRefrigerators: {
+						ruName: "Торговые холодильники",
+						path: "/commfrige"
 					},
-					name: {
-						ruName: "nameru",
-						path: "path"
+					commercialTents: {
+						ruName: "Шатры, тенты для торговли",
+						path: "/canopy_tents?ct_use%5B0%5D=2&ct_use%5Boperation%5D=union"
 					},
-					name: {
-						ruName: "nameru",
-						path: "path"
+					thermalCurtains: {
+						ruName: "Тепловые завесы",
+						path: "/aircurtain"
 					}
 				}
 			},
 			publishingAndPrinting: {
 				ruName: "Издательство и печать",
 				subCategories: {
-					name: {
-						ruName: "nameru",
-						path: "path"
+					printers: {
+						ruName: "Принтеры и МФУ",
+						path: "/printers"
 					},
-					name: {
-						ruName: "nameru",
-						path: "path"
+					laminators: {
+						ruName: "Ламинаторы",
+						path: "/laminator"
 					},
-					name: {
-						ruName: "nameru",
-						path: "path"
+					bookletMakers: {
+						ruName: "Брошюровщики",
+						path: "/bindingmachines"
 					},
-					name: {
-						ruName: "nameru",
-						path: "path"
+					graphicTablets: {
+						ruName: "Графические планшеты",
+						path: "/tablets"
 					},
-					name: {
-						ruName: "nameru",
-						path: "path"
+					officePaper: {
+						ruName: "Офисная бумага",
+						path: "/photopaper?pp_type%5B0%5D=officepap&pp_type%5Boperation%5D=union"
 					},
-					name: {
-						ruName: "nameru",
-						path: "path"
+					selfAdhesivePaper: {
+						ruName: "Самоклеящаяся бумага",
+						path: "/photopaper?pp_type[0]=selfadhesive&pp_type[operation]=union"
 					},
-					name: {
-						ruName: "nameru",
-						path: "path"
+					thermalTransferPaper: {
+						ruName: "Термотрансферная бумага",
+						path: "/photopaper?pp_type[0]=thermaltransfer&pp_type[operation]=union"
 					},
-					name: {
-						ruName: "nameru",
-						path: "path"
+					photoPaper: {
+						ruName: "Фотобумага",
+						path: "/photopaper?pp_type%5B0%5D=paper&pp_type%5Boperation%5D=union"
 					}
 				}
 			},
 			hygieneAndNutrition: {
 				ruName: "Гигиена и питание",
 				subCategories: {
-					name: {
-						ruName: "nameru",
-						path: "path"
+					dispensers: {
+						ruName: "Дозаторы, диспенсеры",
+						path: "/dispenser"
 					},
-					name: {
-						ruName: "nameru",
-						path: "path"
+					handDryers: {
+						ruName: "Сушилки для рук, волос",
+						path: "/handsdryer"
 					},
-					name: {
-						ruName: "nameru",
-						path: "path"
+					waterCoolers: {
+						ruName: "Кулеры для воды",
+						path: "/water_cooler"
 					},
-					name: {
-						ruName: "nameru",
-						path: "path"
+					coffeeMachinesAndCoffeeMakers: {
+						ruName: "Кофемашины и кофеварки",
+						path: "/coffee"
 					},
-					name: {
-						ruName: "nameru",
-						path: "path"
+					coffee: {
+						ruName: "Кофе",
+						path: "/coffeejava"
 					},
-					name: {
-						ruName: "nameru",
-						path: "path"
+					refrigerators: {
+						ruName: "Холодильники",
+						path: "/refrigerator?type_refrigerato[0]=iceroom&type_refrigerato[operation]=union&type_freezer[0]=none&type_freezer[operation]=union&ref_usefulcap[to]=124"
 					},
-					name: {
-						ruName: "nameru",
-						path: "path"
+					microwaves: {
+						ruName: "Микроволновые печи",
+						path: "/microvawe"
 					}
 				}
 			},
 			CCTV: {
 				ruName: "Видеонаблюдение",
 				subCategories: {
-					name: {
-						ruName: "nameru",
-						path: "path"
+					ipCameras: {
+						ruName: "IP-камеры",
+						path: "/ipcamera"
 					},
-					name: {
-						ruName: "nameru",
-						path: "path"
+					CCTV: {
+						ruName: "Камеры CCTV",
+						path: "/cctvcamera"
 					},
-					name: {
-						ruName: "nameru",
-						path: "path"
+					DVRs: {
+						ruName: "Видеорегистраторы",
+						path: "/dvr"
 					},
-					name: {
-						ruName: "nameru",
-						path: "path"
+					videoDoorPhones: {
+						ruName: "Видеодомофоны",
+						path: "/videodoorphone"
 					}
 				}
 			},
 			transportAndTransportation: {
 				ruName: "Транспорт и перевозки",
 				subCategories: {
-					name: {
-						ruName: "nameru",
-						path: "path"
+					gpsTrackers: {
+						ruName: "GPS-трекеры",
+						path: "/gps_tracker"
 					},
-					name: {
-						ruName: "nameru",
-						path: "path"
+					DVRs: {
+						ruName: "Видеорегистраторы",
+						path: "/videoregistrator"
 					},
-					name: {
-						ruName: "nameru",
-						path: "path"
+					gpsNavigators: {
+						ruName: "GPS-навигаторы",
+						path: "/gps"
 					},
-					name: {
-						ruName: "nameru",
-						path: "path"
+					breathAnalyzers: {
+						ruName: "Алкотестеры",
+						path: "/breathalyzer"
 					}
 				}
 			},
 			industryAndConstruction: {
 				ruName: "Промышленность и строительство",
 				subCategories: {
-					name: {
-						ruName: "nameru",
-						path: "path"
+					woodworkingMachinery: {
+						ruName: "Деревообрабатывающие станки",
+						path: "/woodworking"
 					},
-					name: {
-						ruName: "nameru",
-						path: "path"
+					metalworkingMachinery: {
+						ruName: "Металлообрабатывающие станки",
+						path: "/metalworking"
 					},
-					name: {
-						ruName: "nameru",
-						path: "path"
+					electricMetalCutters: {
+						ruName: "Электрические ножницы по металлу",
+						path: "/metal_cutter"
 					},
-					name: {
-						ruName: "nameru",
-						path: "path"
+					sharpeningMachines: {
+						ruName: "Заточные станки (точила)",
+						path: "/benchgrinder"
 					},
-					name: {
-						ruName: "nameru",
-						path: "path"
+					electricAndGasCutters: {
+						ruName: "Электро- и бензорезы",
+						path: "/powercutter"
 					},
-					name: {
-						ruName: "nameru",
-						path: "path"
+					pipeMetalRolling: {
+						ruName: "Трубный металлопрокат",
+						path: "/metal_pipes"
 					},
-					name: {
-						ruName: "nameru",
-						path: "path"
+					sheetMetalRolling: {
+						ruName: "Листовой металлопрокат",
+						path: "/sheetmetal"
 					},
-					name: {
-						ruName: "nameru",
-						path: "path"
+					fittings: {
+						ruName: "Арматура",
+						path: "/armatura"
 					},
-					name: {
-						ruName: "nameru",
-						path: "path"
+					rabitz: {
+						ruName: "Строительные сетки",
+						path: "/rabitz"
 					},
-					name: {
-						ruName: "nameru",
-						path: "path"
+					buildingMaterials: {
+						ruName: "Общестроительные материалы",
+						path: "/buildingmaterial"
 					},
-					name: {
-						ruName: "nameru",
-						path: "path"
+					bricks: {
+						ruName: "Кирпич",
+						path: "/bricks"
 					},
-					name: {
-						ruName: "nameru",
-						path: "path"
+					pavingSlabs: {
+						ruName: "Тротуарная плитка",
+						path: "/pavers"
 					}
 				}
 			}
