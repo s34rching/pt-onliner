@@ -3788,23 +3788,23 @@ module.exports = {
 				subCategories: {
 					babyStrollers: {
 						ruName: "Коляски",
-						path: "https://catalog.onliner.by/pram"
+						path: "/pram"
 					},
 					childCarSeats: {
 						ruName: "Автокресла",
-						path: "https://catalog.onliner.by/childcarseat"
+						path: "/childcarseat"
 					},
 					babyCarryingBackpacks: {
 						ruName: "Рюкзаки-переноски (кенгуру)",
-						path: "https://catalog.onliner.by/babycarrier"
+						path: "/babycarrier"
 					},
 					babyBikeSeats: {
 						ruName: "Велокресла",
-						path: "https://catalog.onliner.by/bikeseat"
+						path: "/bikeseat"
 					},
 					childrenTrailers: {
 						ruName: "Детские велоприцепы",
-						path: "https://catalog.onliner.by/pram?pramconstruct%5B0%5D=trailer&pramconstruct%5Boperation%5D=union"
+						path: "/pram?pramconstruct%5B0%5D=trailer&pramconstruct%5Boperation%5D=union"
 					}
 				}
 			},
@@ -3813,35 +3813,35 @@ module.exports = {
 				subCategories: {
 					childrenKickScooters: {
 						ruName: "Самокаты",
-						path: "https://catalog.onliner.by/kickscooter"
+						path: "/kickscooter"
 					},
 					childrenPushBicycles: {
 						ruName: "Детские велосипеды-каталки",
-						path: "https://catalog.onliner.by/kidsbike?kb_seat[0]=withbackrest&kb_seat[1]=withadjbackrest&kb_seat[operation]=union"
+						path: "/kidsbike?kb_seat[0]=withbackrest&kb_seat[1]=withadjbackrest&kb_seat[operation]=union"
 					},
 					tricycles: {
 						ruName: "Трехколесные велосипеды",
-						path: "https://catalog.onliner.by/kidsbike?num_wheels[0]=3&num_wheels[operation]=union&kb_seat[0]=simple&kb_seat[operation]=union"
+						path: "/kidsbike?num_wheels[0]=3&num_wheels[operation]=union&kb_seat[0]=simple&kb_seat[operation]=union"
 					},
 					sled: {
 						ruName: "Санки",
-						path: "https://catalog.onliner.by/sled"
+						path: "/sled"
 					},
 					balanceBikes: {
 						ruName: "Беговелы",
-						path: "https://catalog.onliner.by/balancebike"
+						path: "/balancebike"
 					},
 					babyWalkers: {
 						ruName: "Ходунки, прыгунки",
-						path: "https://catalog.onliner.by/babywalker"
+						path: "/babywalker"
 					},
 					childrenElectricCars: {
 						ruName: "Электромобили",
-						path: "https://catalog.onliner.by/electricrideon"
+						path: "/electricrideon"
 					},
 					pedalCars: {
 						ruName: "Каталки, педальные машинки",
-						path: "https://catalog.onliner.by/rideon"
+						path: "/rideon"
 					}
 				}
 			},
@@ -3850,39 +3850,39 @@ module.exports = {
 				subCategories: {
 					babyCotBeds: {
 						ruName: "Кроватки",
-						path: "https://catalog.onliner.by/babycotbed"
+						path: "/babycotbed"
 					},
 					highChairs: {
 						ruName: "Стульчики для кормления",
-						path: "https://catalog.onliner.by/highchair"
+						path: "/highchair"
 					},
 					playpens: {
 						ruName: "Манежи",
-						path: "https://catalog.onliner.by/playpen"
+						path: "/playpen"
 					},
 					cots: {
 						ruName: "Детские кровати",
-						path: "https://catalog.onliner.by/bed?b_child=1"
+						path: "/bed?b_child=1"
 					},
 					childrenTablesAndSchoolDesks: {
 						ruName: "Столы и парты",
-						path: "https://catalog.onliner.by/kidsdesk"
+						path: "/kidsdesk"
 					},
 					babyDressers: {
 						ruName: "Детские комоды",
-						path: "https://catalog.onliner.by/babydresser"
+						path: "/babydresser"
 					},
 					dressersForToys: {
 						ruName: "Комоды для игрушек",
-						path: "https://catalog.onliner.by/toystorage?ts_const%5B0%5D=chest&ts_const%5Boperation%5D=union&ts_purpos%5B0%5D=chlroom&ts_purpos%5Boperation%5D=union"
+						path: "/toystorage?ts_const%5B0%5D=chest&ts_const%5Boperation%5D=union&ts_purpos%5B0%5D=chlroom&ts_purpos%5Boperation%5D=union"
 					},
 					childrenChaiseLoungesAndRockingChairs: {
 						ruName: "Детские шезлонги и качалки",
-						path: "https://catalog.onliner.by/babyswing"
+						path: "/babyswing"
 					},
 					markerAndChalkBoards: {
 						ruName: "Маркерные и меловые доски",
-						path: "https://catalog.onliner.by/officeboard"
+						path: "/officeboard"
 					}
 				}
 			},
@@ -3891,27 +3891,27 @@ module.exports = {
 				subCategories: {
 					babyCotBeds: {
 						ruName: "Кроватки",
-						path: "https://catalog.onliner.by/babycotbed"
+						path: "/babycotbed"
 					},
 					cots: {
 						ruName: "Детские кровати",
-						path: "https://catalog.onliner.by/bed?b_child=1"
+						path: "/bed?b_child=1"
 					},
 					childrenLinen: {
 						ruName: "Детское постельное белье",
-						path: "https://catalog.onliner.by/bedlinen?bed_type%5B0%5D=kids&bed_type%5Boperation%5D=union"
+						path: "/bedlinen?bed_type%5B0%5D=kids&bed_type%5Boperation%5D=union"
 					},
 					childrenPillows: {
 						ruName: "Подушки",
-						path: "https://catalog.onliner.by/pillows?pil_type%5B0%5D=sleep&pil_type%5Boperation%5D=union&pil_size%5B0%5D=48x48&pil_size%5B1%5D=50x50&pil_size%5B2%5D=40x40&pil_size%5B3%5D=38x38&pil_size%5B4%5D=35x45&pil_size%5Boperation%5D=union"
+						path: "/pillows?pil_type%5B0%5D=sleep&pil_type%5Boperation%5D=union&pil_size%5B0%5D=48x48&pil_size%5B1%5D=50x50&pil_size%5B2%5D=40x40&pil_size%5B3%5D=38x38&pil_size%5B4%5D=35x45&pil_size%5Boperation%5D=union"
 					},
 					childrenMattresses: {
 						ruName: "Детские матрасы",
-						path: "https://catalog.onliner.by/mattress?mtr_kid=1"
+						path: "/mattress?mtr_kid=1"
 					},
 					babyMonitors: {
 						ruName: "Радионяни и видеоняни",
-						path: "https://catalog.onliner.by/babymonitor"
+						path: "/babymonitor"
 					}
 				}
 			},
@@ -3920,39 +3920,39 @@ module.exports = {
 				subCategories: {
 					boardGames: {
 						ruName: "Настольные игры",
-						path: "https://catalog.onliner.by/boardgame"
+						path: "/boardgame"
 					},
 					constructors: {
 						ruName: "Конструкторы",
-						path: "https://catalog.onliner.by/buildingkit"
+						path: "/buildingkit"
 					},
 					educationalToys: {
 						ruName: "Развивающие игрушки",
-						path: "https://catalog.onliner.by/edu_toys"
+						path: "/edu_toys"
 					},
 					developmentalMats: {
 						ruName: "Развивающие коврики",
-						path: "https://catalog.onliner.by/playmats"
+						path: "/playmats"
 					},
 					scaleModels: {
 						ruName: "Сборные модели",
-						path: "https://catalog.onliner.by/scale_model"
+						path: "/scale_model"
 					},
 					logicPuzzles: {
 						ruName: "Логические игры, головоломки",
-						path: "https://catalog.onliner.by/logic_puzzles"
+						path: "/logic_puzzles"
 					},
 					pens3d: {
 						ruName: "3D-ручки",
-						path: "https://catalog.onliner.by/3d_pen"
+						path: "/3d_pen"
 					},
 					fidgetSpinners: {
 						ruName: "Фиджет спиннеры",
-						path: "https://catalog.onliner.by/fidget_spinner"
+						path: "/fidget_spinner"
 					},
 					scienceKits: {
 						ruName: "Игры-опыты, эксперименты",
-						path: "https://catalog.onliner.by/science_kits"
+						path: "/science_kits"
 					}
 				}
 			},
@@ -3961,51 +3961,51 @@ module.exports = {
 				subCategories: {
 					actionFigures: {
 						ruName: "Экшен-фигурки",
-						path: "https://catalog.onliner.by/doll?do_type%5B0%5D=actionfigure&do_type%5Boperation%5D=union"
+						path: "/doll?do_type%5B0%5D=actionfigure&do_type%5Boperation%5D=union"
 					},
 					babyDolls: {
 						ruName: "Детские куклы",
-						path: "https://catalog.onliner.by/doll?do_type%5B0%5D=doll&do_type%5Boperation%5D=union"
+						path: "/doll?do_type%5B0%5D=doll&do_type%5Boperation%5D=union"
 					},
 					dollHouses: {
 						ruName: "Кукольные домики",
-						path: "https://catalog.onliner.by/dollhouses"
+						path: "/dollhouses"
 					},
 					raceTracks: {
 						ruName: "Детские автотреки, трассы",
-						path: "https://catalog.onliner.by/race_track"
+						path: "/race_track"
 					},
 					rcCars: {
 						ruName: "Радиоуправляемые машинки",
-						path: "https://catalog.onliner.by/radioautomodel"
+						path: "/radioautomodel"
 					},
 					rcAircraftModels: {
 						ruName: "Радиоуправляемые самолеты и вертолеты",
-						path: "https://catalog.onliner.by/radiocontrolair"
+						path: "/radiocontrolair"
 					},
 					kidsRailRoads: {
 						ruName: "Детские железные дороги",
-						path: "https://catalog.onliner.by/kidsrailroad"
+						path: "/kidsrailroad"
 					},
 					stuffedToys: {
 						ruName: "Мягкие игрушки",
-						path: "https://catalog.onliner.by/stuffedtoys"
+						path: "/stuffedtoys"
 					},
 					interactiveToys: {
 						ruName: "Интерактивные игрушки и роботы",
-						path: "https://catalog.onliner.by/interactive_toys"
+						path: "/interactive_toys"
 					},
 					rcBoats: {
 						ruName: "Радиоуправляемые катера",
-						path: "https://catalog.onliner.by/radiomodelwater"
+						path: "/radiomodelwater"
 					},
 					playHouses: {
 						ruName: "Игровые домики и палатки",
-						path: "https://catalog.onliner.by/playhouse"
+						path: "/playhouse"
 					},
 					airHockeyFoosballMiniMilliards: {
 						ruName: "Аэрохоккей, настольный футбол, мини-бильярд",
-						path: "https://catalog.onliner.by/airhockey"
+						path: "/airhockey"
 					}
 				}
 			},
@@ -4014,55 +4014,55 @@ module.exports = {
 				subCategories: {
 					pools: {
 						ruName: "Бассейны",
-						path: "https://catalog.onliner.by/pool"
+						path: "/pool"
 					},
 					swedishWalls: {
 						ruName: "Шведские стенки",
-						path: "https://catalog.onliner.by/kidwallbars?kwb_wallbars=1"
+						path: "/kidwallbars?kwb_wallbars=1"
 					},
 					childrenStreetComplexesAndHills: {
 						ruName: "Уличные комплексы и горки",
-						path: "https://catalog.onliner.by/kidwallbars?kwb_type[0]=outdoor&kwb_type[operation]=union"
+						path: "/kidwallbars?kwb_type[0]=outdoor&kwb_type[operation]=union"
 					},
 					gardenSwings: {
 						ruName: "Садовые качели",
-						path: "https://catalog.onliner.by/gardenswing"
+						path: "/gardenswing"
 					},
 					trampolines: {
 						ruName: "Батуты",
-						path: "https://catalog.onliner.by/trampoline"
+						path: "/trampoline"
 					},
 					balls: {
 						ruName: "Мячи",
-						path: "https://catalog.onliner.by/ball"
+						path: "/ball"
 					},
 					playhouses: {
 						ruName: "Игровые домики и палатки",
-						path: "https://catalog.onliner.by/playhouse"
+						path: "/playhouse"
 					},
 					childrenSkates: {
 						ruName: "Коньки",
-						path: "https://catalog.onliner.by/skates?type_skates%5B0%5D=child_skates&type_skates%5B1%5D=girls_skates&type_skates%5B2%5D=boy_skates&type_skates%5Boperation%5D=union"
+						path: "/skates?type_skates%5B0%5D=child_skates&type_skates%5B1%5D=girls_skates&type_skates%5B2%5D=boy_skates&type_skates%5Boperation%5D=union"
 					},
 					childrenRollerSkates: {
 						ruName: "Роликовые коньки",
-						path: "https://catalog.onliner.by/rollerskates"
+						path: "/rollerskates"
 					},
 					childrenKickScooters: {
 						ruName: "Самокаты",
-						path: "https://catalog.onliner.by/kickscooter?ks_targetaudienc%5B0%5D=kid&ks_targetaudienc%5Boperation%5D=union"
+						path: "/kickscooter?ks_targetaudienc%5B0%5D=kid&ks_targetaudienc%5Boperation%5D=union"
 					},
 					childrenSki: {
 						ruName: "Лыжи",
-						path: "https://catalog.onliner.by/skis?gender_skis%5B0%5D=child_skis&gender_skis%5Boperation%5D=union"
+						path: "/skis?gender_skis%5B0%5D=child_skis&gender_skis%5Boperation%5D=union"
 					},
 					hockeySticks: {
 						ruName: "Хоккейные клюшки",
-						path: "https://catalog.onliner.by/hockeystick"
+						path: "/hockeystick"
 					},
 					sportsProtection: {
 						ruName: "Спортивная защита",
-						path: "https://catalog.onliner.by/sportsprotection?spp_forwhom%5B0%5D=kids&spp_forwhom%5Boperation%5D=union"
+						path: "/sportsprotection?spp_forwhom%5B0%5D=kids&spp_forwhom%5Boperation%5D=union"
 					}
 				}
 			},
@@ -4071,35 +4071,35 @@ module.exports = {
 				subCategories: {
 					diapers: {
 						ruName: "Подгузники",
-						path: "https://catalog.onliner.by/diapers"
+						path: "/diapers"
 					},
 					babyMonitors: {
 						ruName: "Радионяни и видеоняни",
-						path: "https://catalog.onliner.by/babymonitor"
+						path: "/babymonitor"
 					},
 					babyScales: {
 						ruName: "Весы для новорожденных",
-						path: "https://catalog.onliner.by/babyscales"
+						path: "/babyscales"
 					},
 					babyFoodMakers: {
 						ruName: "Устройства для приготовления детского питания",
-						path: "https://catalog.onliner.by/babyfoodmaker"
+						path: "/babyfoodmaker"
 					},
 					bottleWarmersAndSterilizers: {
 						ruName: "Подогреватели и стерилизаторы бутылочек",
-						path: "https://catalog.onliner.by/bottlesterilizer"
+						path: "/bottlesterilizer"
 					},
 					babyThermometers: {
 						ruName: "Термометры",
-						path: "https://catalog.onliner.by/medthermometer?baby_medtherm=1"
+						path: "/medthermometer?baby_medtherm=1"
 					},
 					babyWashingPowders: {
 						ruName: "Детские стиральные порошки",
-						path: "https://catalog.onliner.by/washingpowder?typeoflinen[0]=washchild&typeoflinen[operation]=union"
+						path: "/washingpowder?typeoflinen[0]=washchild&typeoflinen[operation]=union"
 					},
 					breastPumpsAndAccessories: {
 						ruName: "Молокоотсосы и аксессуары",
-						path: "https://catalog.onliner.by/breast_pump"
+						path: "/breast_pump"
 					}
 				}
 			},
@@ -4108,23 +4108,23 @@ module.exports = {
 				subCategories: {
 					schoolBackpacks: {
 						ruName: "Школьные рюкзаки",
-						path: "https://catalog.onliner.by/backpack?bap_type[0]=school&bap_type[operation]=union"
+						path: "/backpack?bap_type[0]=school&bap_type[operation]=union"
 					},
 					childrenTablesAndSchoolDesks: {
 						ruName: "Детские парты, столы, стулья",
-						path: "https://catalog.onliner.by/kidsdesk"
+						path: "/kidsdesk"
 					},
 					childrenSmartWatches: {
 						ruName: "Умные часы для детей",
-						path: "https://catalog.onliner.by/smartwatch?sw_kid=1"
+						path: "/smartwatch?sw_kid=1"
 					},
 					markerAndChalkBoards: {
 						ruName: "Маркерные и меловые доски",
-						path: "https://catalog.onliner.by/officeboard"
+						path: "/officeboard"
 					},
 					scienceKits: {
 						ruName: "Игры-опыты, эксперименты",
-						path: "https://catalog.onliner.by/science_kits"
+						path: "/science_kits"
 					}
 				}
 			}
@@ -4137,49 +4137,285 @@ module.exports = {
 			officeEquipment: {
 				ruName: "Офисная техника и расходные материалы",
 				subCategories: {
-
+					name: {
+						ruName: "nameru",
+						path: "path"
+					},
+					name: {
+						ruName: "nameru",
+						path: "path"
+					},
+					name: {
+						ruName: "nameru",
+						path: "path"
+					},
+					name: {
+						ruName: "nameru",
+						path: "path"
+					},
+					name: {
+						ruName: "nameru",
+						path: "path"
+					},
+					name: {
+						ruName: "nameru",
+						path: "path"
+					},
+					name: {
+						ruName: "nameru",
+						path: "path"
+					},
+					name: {
+						ruName: "nameru",
+						path: "path"
+					},
+					name: {
+						ruName: "nameru",
+						path: "path"
+					},
+					name: {
+						ruName: "nameru",
+						path: "path"
+					},
+					name: {
+						ruName: "nameru",
+						path: "path"
+					}
 				}
 			},
 			officeFurniture: {
 				ruName: "Офисная мебель",
 				subCategories: {
-
+					name: {
+						ruName: "nameru",
+						path: "path"
+					},
+					name: {
+						ruName: "nameru",
+						path: "path"
+					},
+					name: {
+						ruName: "nameru",
+						path: "path"
+					},
+					name: {
+						ruName: "nameru",
+						path: "path"
+					},
+					name: {
+						ruName: "nameru",
+						path: "path"
+					}
 				}
 			},
 			tradeAndFinance: {
 				ruName: "Торговля и финансы",
 				subCategories: {
-
+					name: {
+						ruName: "nameru",
+						path: "path"
+					},
+					name: {
+						ruName: "nameru",
+						path: "path"
+					},
+					name: {
+						ruName: "nameru",
+						path: "path"
+					},
+					name: {
+						ruName: "nameru",
+						path: "path"
+					},
+					name: {
+						ruName: "nameru",
+						path: "path"
+					},
+					name: {
+						ruName: "nameru",
+						path: "path"
+					},
+					name: {
+						ruName: "nameru",
+						path: "path"
+					},
+					name: {
+						ruName: "nameru",
+						path: "path"
+					},
+					name: {
+						ruName: "nameru",
+						path: "path"
+					},
+					name: {
+						ruName: "nameru",
+						path: "path"
+					}
 				}
 			},
 			publishingAndPrinting: {
 				ruName: "Издательство и печать",
 				subCategories: {
-
+					name: {
+						ruName: "nameru",
+						path: "path"
+					},
+					name: {
+						ruName: "nameru",
+						path: "path"
+					},
+					name: {
+						ruName: "nameru",
+						path: "path"
+					},
+					name: {
+						ruName: "nameru",
+						path: "path"
+					},
+					name: {
+						ruName: "nameru",
+						path: "path"
+					},
+					name: {
+						ruName: "nameru",
+						path: "path"
+					},
+					name: {
+						ruName: "nameru",
+						path: "path"
+					},
+					name: {
+						ruName: "nameru",
+						path: "path"
+					}
 				}
 			},
 			hygieneAndNutrition: {
 				ruName: "Гигиена и питание",
 				subCategories: {
-
+					name: {
+						ruName: "nameru",
+						path: "path"
+					},
+					name: {
+						ruName: "nameru",
+						path: "path"
+					},
+					name: {
+						ruName: "nameru",
+						path: "path"
+					},
+					name: {
+						ruName: "nameru",
+						path: "path"
+					},
+					name: {
+						ruName: "nameru",
+						path: "path"
+					},
+					name: {
+						ruName: "nameru",
+						path: "path"
+					},
+					name: {
+						ruName: "nameru",
+						path: "path"
+					}
 				}
 			},
 			CCTV: {
 				ruName: "Видеонаблюдение",
 				subCategories: {
-
+					name: {
+						ruName: "nameru",
+						path: "path"
+					},
+					name: {
+						ruName: "nameru",
+						path: "path"
+					},
+					name: {
+						ruName: "nameru",
+						path: "path"
+					},
+					name: {
+						ruName: "nameru",
+						path: "path"
+					}
 				}
 			},
 			transportAndTransportation: {
 				ruName: "Транспорт и перевозки",
 				subCategories: {
-
+					name: {
+						ruName: "nameru",
+						path: "path"
+					},
+					name: {
+						ruName: "nameru",
+						path: "path"
+					},
+					name: {
+						ruName: "nameru",
+						path: "path"
+					},
+					name: {
+						ruName: "nameru",
+						path: "path"
+					}
 				}
 			},
 			industryAndConstruction: {
 				ruName: "Промышленность и строительство",
 				subCategories: {
-
+					name: {
+						ruName: "nameru",
+						path: "path"
+					},
+					name: {
+						ruName: "nameru",
+						path: "path"
+					},
+					name: {
+						ruName: "nameru",
+						path: "path"
+					},
+					name: {
+						ruName: "nameru",
+						path: "path"
+					},
+					name: {
+						ruName: "nameru",
+						path: "path"
+					},
+					name: {
+						ruName: "nameru",
+						path: "path"
+					},
+					name: {
+						ruName: "nameru",
+						path: "path"
+					},
+					name: {
+						ruName: "nameru",
+						path: "path"
+					},
+					name: {
+						ruName: "nameru",
+						path: "path"
+					},
+					name: {
+						ruName: "nameru",
+						path: "path"
+					},
+					name: {
+						ruName: "nameru",
+						path: "path"
+					},
+					name: {
+						ruName: "nameru",
+						path: "path"
+					}
 				}
 			}
 		}
