@@ -3786,55 +3786,346 @@ module.exports = {
 			walksAndTrips: {
 				ruName: "Прогулки и поездки",
 				subCategories: {
-
+					babyStrollers: {
+						ruName: "Коляски",
+						path: "https://catalog.onliner.by/pram"
+					},
+					childCarSeats: {
+						ruName: "Автокресла",
+						path: "https://catalog.onliner.by/childcarseat"
+					},
+					babyCarryingBackpacks: {
+						ruName: "Рюкзаки-переноски (кенгуру)",
+						path: "https://catalog.onliner.by/babycarrier"
+					},
+					babyBikeSeats: {
+						ruName: "Велокресла",
+						path: "https://catalog.onliner.by/bikeseat"
+					},
+					childrenTrailers: {
+						ruName: "Детские велоприцепы",
+						path: "https://catalog.onliner.by/pram?pramconstruct%5B0%5D=trailer&pramconstruct%5Boperation%5D=union"
+					}
 				}
 			},
 			childrenTransport: {
 				ruName: "Детский транспорт",
 				subCategories: {
-
+					childrenKickScooters: {
+						ruName: "Самокаты",
+						path: "https://catalog.onliner.by/kickscooter"
+					},
+					childrenPushBicycles: {
+						ruName: "Детские велосипеды-каталки",
+						path: "https://catalog.onliner.by/kidsbike?kb_seat[0]=withbackrest&kb_seat[1]=withadjbackrest&kb_seat[operation]=union"
+					},
+					tricycles: {
+						ruName: "Трехколесные велосипеды",
+						path: "https://catalog.onliner.by/kidsbike?num_wheels[0]=3&num_wheels[operation]=union&kb_seat[0]=simple&kb_seat[operation]=union"
+					},
+					sled: {
+						ruName: "Санки",
+						path: "https://catalog.onliner.by/sled"
+					},
+					balanceBikes: {
+						ruName: "Беговелы",
+						path: "https://catalog.onliner.by/balancebike"
+					},
+					babyWalkers: {
+						ruName: "Ходунки, прыгунки",
+						path: "https://catalog.onliner.by/babywalker"
+					},
+					childrenElectricCars: {
+						ruName: "Электромобили",
+						path: "https://catalog.onliner.by/electricrideon"
+					},
+					pedalCars: {
+						ruName: "Каталки, педальные машинки",
+						path: "https://catalog.onliner.by/rideon"
+					}
 				}
 			},
 			childrenFurniture: {
 				ruName: "Детская мебель",
 				subCategories: {
-
+					babyCotBeds: {
+						ruName: "Кроватки",
+						path: "https://catalog.onliner.by/babycotbed"
+					},
+					highChairs: {
+						ruName: "Стульчики для кормления",
+						path: "https://catalog.onliner.by/highchair"
+					},
+					playpens: {
+						ruName: "Манежи",
+						path: "https://catalog.onliner.by/playpen"
+					},
+					cots: {
+						ruName: "Детские кровати",
+						path: "https://catalog.onliner.by/bed?b_child=1"
+					},
+					childrenTablesAndSchoolDesks: {
+						ruName: "Столы и парты",
+						path: "https://catalog.onliner.by/kidsdesk"
+					},
+					babyDressers: {
+						ruName: "Детские комоды",
+						path: "https://catalog.onliner.by/babydresser"
+					},
+					dressersForToys: {
+						ruName: "Комоды для игрушек",
+						path: "https://catalog.onliner.by/toystorage?ts_const%5B0%5D=chest&ts_const%5Boperation%5D=union&ts_purpos%5B0%5D=chlroom&ts_purpos%5Boperation%5D=union"
+					},
+					childrenChaiseLoungesAndRockingChairs: {
+						ruName: "Детские шезлонги и качалки",
+						path: "https://catalog.onliner.by/babyswing"
+					},
+					markerAndChalkBoards: {
+						ruName: "Маркерные и меловые доски",
+						path: "https://catalog.onliner.by/officeboard"
+					}
 				}
 			},
 			babySleep: {
 				ruName: "Детский сон",
 				subCategories: {
-
+					babyCotBeds: {
+						ruName: "Кроватки",
+						path: "https://catalog.onliner.by/babycotbed"
+					},
+					cots: {
+						ruName: "Детские кровати",
+						path: "https://catalog.onliner.by/bed?b_child=1"
+					},
+					childrenLinen: {
+						ruName: "Детское постельное белье",
+						path: "https://catalog.onliner.by/bedlinen?bed_type%5B0%5D=kids&bed_type%5Boperation%5D=union"
+					},
+					childrenPillows: {
+						ruName: "Подушки",
+						path: "https://catalog.onliner.by/pillows?pil_type%5B0%5D=sleep&pil_type%5Boperation%5D=union&pil_size%5B0%5D=48x48&pil_size%5B1%5D=50x50&pil_size%5B2%5D=40x40&pil_size%5B3%5D=38x38&pil_size%5B4%5D=35x45&pil_size%5Boperation%5D=union"
+					},
+					childrenMattresses: {
+						ruName: "Детские матрасы",
+						path: "https://catalog.onliner.by/mattress?mtr_kid=1"
+					},
+					babyMonitors: {
+						ruName: "Радионяни и видеоняни",
+						path: "https://catalog.onliner.by/babymonitor"
+					}
 				}
 			},
 			boardAndEducationalGames: {
 				ruName: "Настольные игры и развивающие игрушки",
 				subCategories: {
-
+					boardGames: {
+						ruName: "Настольные игры",
+						path: "https://catalog.onliner.by/boardgame"
+					},
+					constructors: {
+						ruName: "Конструкторы",
+						path: "https://catalog.onliner.by/buildingkit"
+					},
+					educationalToys: {
+						ruName: "Развивающие игрушки",
+						path: "https://catalog.onliner.by/edu_toys"
+					},
+					developmentalMats: {
+						ruName: "Развивающие коврики",
+						path: "https://catalog.onliner.by/playmats"
+					},
+					scaleModels: {
+						ruName: "Сборные модели",
+						path: "https://catalog.onliner.by/scale_model"
+					},
+					logicPuzzles: {
+						ruName: "Логические игры, головоломки",
+						path: "https://catalog.onliner.by/logic_puzzles"
+					},
+					pens3d: {
+						ruName: "3D-ручки",
+						path: "https://catalog.onliner.by/3d_pen"
+					},
+					fidgetSpinners: {
+						ruName: "Фиджет спиннеры",
+						path: "https://catalog.onliner.by/fidget_spinner"
+					},
+					scienceKits: {
+						ruName: "Игры-опыты, эксперименты",
+						path: "https://catalog.onliner.by/science_kits"
+					}
 				}
 			},
 			toysAndGames: {
 				ruName: "Игрушки и игры",
 				subCategories: {
-
+					actionFigures: {
+						ruName: "Экшен-фигурки",
+						path: "https://catalog.onliner.by/doll?do_type%5B0%5D=actionfigure&do_type%5Boperation%5D=union"
+					},
+					babyDolls: {
+						ruName: "Детские куклы",
+						path: "https://catalog.onliner.by/doll?do_type%5B0%5D=doll&do_type%5Boperation%5D=union"
+					},
+					dollHouses: {
+						ruName: "Кукольные домики",
+						path: "https://catalog.onliner.by/dollhouses"
+					},
+					raceTracks: {
+						ruName: "Детские автотреки, трассы",
+						path: "https://catalog.onliner.by/race_track"
+					},
+					rcCars: {
+						ruName: "Радиоуправляемые машинки",
+						path: "https://catalog.onliner.by/radioautomodel"
+					},
+					rcAircraftModels: {
+						ruName: "Радиоуправляемые самолеты и вертолеты",
+						path: "https://catalog.onliner.by/radiocontrolair"
+					},
+					kidsRailRoads: {
+						ruName: "Детские железные дороги",
+						path: "https://catalog.onliner.by/kidsrailroad"
+					},
+					stuffedToys: {
+						ruName: "Мягкие игрушки",
+						path: "https://catalog.onliner.by/stuffedtoys"
+					},
+					interactiveToys: {
+						ruName: "Интерактивные игрушки и роботы",
+						path: "https://catalog.onliner.by/interactive_toys"
+					},
+					rcBoats: {
+						ruName: "Радиоуправляемые катера",
+						path: "https://catalog.onliner.by/radiomodelwater"
+					},
+					playHouses: {
+						ruName: "Игровые домики и палатки",
+						path: "https://catalog.onliner.by/playhouse"
+					},
+					airHockeyFoosballMiniMilliards: {
+						ruName: "Аэрохоккей, настольный футбол, мини-бильярд",
+						path: "https://catalog.onliner.by/airhockey"
+					}
 				}
 			},
 			outdoorGamesAndSport: {
 				ruName: "Игры на улице и спорт",
 				subCategories: {
-
+					pools: {
+						ruName: "Бассейны",
+						path: "https://catalog.onliner.by/pool"
+					},
+					swedishWalls: {
+						ruName: "Шведские стенки",
+						path: "https://catalog.onliner.by/kidwallbars?kwb_wallbars=1"
+					},
+					childrenStreetComplexesAndHills: {
+						ruName: "Уличные комплексы и горки",
+						path: "https://catalog.onliner.by/kidwallbars?kwb_type[0]=outdoor&kwb_type[operation]=union"
+					},
+					gardenSwings: {
+						ruName: "Садовые качели",
+						path: "https://catalog.onliner.by/gardenswing"
+					},
+					trampolines: {
+						ruName: "Батуты",
+						path: "https://catalog.onliner.by/trampoline"
+					},
+					balls: {
+						ruName: "Мячи",
+						path: "https://catalog.onliner.by/ball"
+					},
+					playhouses: {
+						ruName: "Игровые домики и палатки",
+						path: "https://catalog.onliner.by/playhouse"
+					},
+					childrenSkates: {
+						ruName: "Коньки",
+						path: "https://catalog.onliner.by/skates?type_skates%5B0%5D=child_skates&type_skates%5B1%5D=girls_skates&type_skates%5B2%5D=boy_skates&type_skates%5Boperation%5D=union"
+					},
+					childrenRollerSkates: {
+						ruName: "Роликовые коньки",
+						path: "https://catalog.onliner.by/rollerskates"
+					},
+					childrenKickScooters: {
+						ruName: "Самокаты",
+						path: "https://catalog.onliner.by/kickscooter?ks_targetaudienc%5B0%5D=kid&ks_targetaudienc%5Boperation%5D=union"
+					},
+					childrenSki: {
+						ruName: "Лыжи",
+						path: "https://catalog.onliner.by/skis?gender_skis%5B0%5D=child_skis&gender_skis%5Boperation%5D=union"
+					},
+					hockeySticks: {
+						ruName: "Хоккейные клюшки",
+						path: "https://catalog.onliner.by/hockeystick"
+					},
+					sportsProtection: {
+						ruName: "Спортивная защита",
+						path: "https://catalog.onliner.by/sportsprotection?spp_forwhom%5B0%5D=kids&spp_forwhom%5Boperation%5D=union"
+					}
 				}
 			},
 			newbornCare: {
 				ruName: "Уход за новорожденными",
 				subCategories: {
-
+					diapers: {
+						ruName: "Подгузники",
+						path: "https://catalog.onliner.by/diapers"
+					},
+					babyMonitors: {
+						ruName: "Радионяни и видеоняни",
+						path: "https://catalog.onliner.by/babymonitor"
+					},
+					babyScales: {
+						ruName: "Весы для новорожденных",
+						path: "https://catalog.onliner.by/babyscales"
+					},
+					babyFoodMakers: {
+						ruName: "Устройства для приготовления детского питания",
+						path: "https://catalog.onliner.by/babyfoodmaker"
+					},
+					bottleWarmersAndSterilizers: {
+						ruName: "Подогреватели и стерилизаторы бутылочек",
+						path: "https://catalog.onliner.by/bottlesterilizer"
+					},
+					babyThermometers: {
+						ruName: "Термометры",
+						path: "https://catalog.onliner.by/medthermometer?baby_medtherm=1"
+					},
+					babyWashingPowders: {
+						ruName: "Детские стиральные порошки",
+						path: "https://catalog.onliner.by/washingpowder?typeoflinen[0]=washchild&typeoflinen[operation]=union"
+					},
+					breastPumpsAndAccessories: {
+						ruName: "Молокоотсосы и аксессуары",
+						path: "https://catalog.onliner.by/breast_pump"
+					}
 				}
 			},
 			goodsForSchool: {
 				ruName: "Товары для школы",
 				subCategories: {
-
+					schoolBackpacks: {
+						ruName: "Школьные рюкзаки",
+						path: "https://catalog.onliner.by/backpack?bap_type[0]=school&bap_type[operation]=union"
+					},
+					childrenTablesAndSchoolDesks: {
+						ruName: "Детские парты, столы, стулья",
+						path: "https://catalog.onliner.by/kidsdesk"
+					},
+					childrenSmartWatches: {
+						ruName: "Умные часы для детей",
+						path: "https://catalog.onliner.by/smartwatch?sw_kid=1"
+					},
+					markerAndChalkBoards: {
+						ruName: "Маркерные и меловые доски",
+						path: "https://catalog.onliner.by/officeboard"
+					},
+					scienceKits: {
+						ruName: "Игры-опыты, эксперименты",
+						path: "https://catalog.onliner.by/science_kits"
+					}
 				}
 			}
 		}
