@@ -2050,87 +2050,87 @@ module.exports = {
 				subCategories: {
 					faucets: {
 						ruName: "Смесители",
-						path: "https://catalog.onliner.by/faucet"
+						path: "/faucet"
 					},
 					bathtubs: {
 						ruName: "Ванны",
-						path: "https://catalog.onliner.by/bathtub"
+						path: "/bathtub"
 					},
 					waterHeaters: {
 						ruName: "Водонагреватели",
-						path: "https://catalog.onliner.by/waterheater"
+						path: "/waterheater"
 					},
 					towelWarmers: {
 						ruName: "Полотенцесушители",
-						path: "https://catalog.onliner.by/towelrail"
+						path: "/towelrail"
 					},
 					showerCabins: {
 						ruName: "Душевые кабины",
-						path: "https://catalog.onliner.by/showerbox"
+						path: "/showerbox"
 					},
 					pans: {
 						ruName: "Унитазы",
-						path: "https://catalog.onliner.by/wcpan"
+						path: "/wcpan"
 					},
 					washbasins: {
 						ruName: "Умывальники",
-						path: "https://catalog.onliner.by/washbasin"
+						path: "/washbasin"
 					},
 					pedestalForWashbasins: {
 						ruName: "Пьедесталы для умывальников",
-						path: "https://catalog.onliner.by/pedestal"
+						path: "/pedestal"
 					},
 					siphons: {
 						ruName: "Сифоны",
-						path: "https://catalog.onliner.by/siphon"
+						path: "/siphon"
 					},
 					tileForBathrooms: {
 						ruName: "Плитка для ванных комнат",
-						path: "https://catalog.onliner.by/tile?t_appointment[0]=bathroom&t_appointment[operation]=union"
+						path: "/tile?t_appointment[0]=bathroom&t_appointment[operation]=union"
 					},
 					furnitureForBathrooms: {
 						ruName: "Мебель для ванных комнат",
-						path: "https://catalog.onliner.by/bath_furniture"
+						path: "/bath_furniture"
 					},
 					bidets: {
 						ruName: "Биде",
-						path: "https://catalog.onliner.by/bidet"
+						path: "/bidet"
 					},
 					installationsForPansSinksBidets: {
 						ruName: "Инсталляции для унитазов, раковин, биде и писсуаров",
-						path: "https://catalog.onliner.by/installations"
+						path: "/installations"
 					},
 					flushingSystems: {
 						ruName: "Клавиши и системы смыва",
-						path: "https://catalog.onliner.by/flushing_system"
+						path: "/flushing_system"
 					},
 					electronicBidetCovers: {
 						ruName: "Электронные крышки-биде",
-						path: "https://catalog.onliner.by/toilet_shower"
+						path: "/toilet_shower"
 					},
 					showerPanels: {
 						ruName: "Душевые панели и гарнитуры",
-						path: "https://catalog.onliner.by/shower"
+						path: "/shower"
 					},
 					showerTrays: {
 						ruName: "Душевые поддоны",
-						path: "https://catalog.onliner.by/shower_trays"
+						path: "/shower_trays"
 					},
 					exhaustFans: {
 						ruName: "Вытяжные вентиляторы",
-						path: "https://catalog.onliner.by/exhaustfan?ef_useage[0]=bathroom&ef_useage[operation]=union"
+						path: "/exhaustfan?ef_useage[0]=bathroom&ef_useage[operation]=union"
 					},
 					accessPanels: {
 						ruName: "Сантехнические ревизионные люки",
-						path: "https://catalog.onliner.by/access_panel"
+						path: "/access_panel"
 					},
 					dryClosets: {
 						ruName: "Биотуалеты",
-						path: "https://catalog.onliner.by/biotoilet"
+						path: "/biotoilet"
 					},
 					laundryBaskets: {
 						ruName: "Корзины для белья",
-						path: "https://catalog.onliner.by/toystorage?ts_const%5B0%5D=basket&ts_const%5Boperation%5D=union&ts_purpos%5B0%5D=underwear&ts_purpos%5Boperation%5D=union"
+						path: "/toystorage?ts_const%5B0%5D=basket&ts_const%5Boperation%5D=union&ts_purpos%5B0%5D=underwear&ts_purpos%5Boperation%5D=union"
 					}
 				}
 			},
@@ -2139,28 +2139,28 @@ module.exports = {
 				subCategories: {
 					kitchenSinks: {
 						ruName: "Мойки",
-						path: "https://catalog.onliner.by/kitchensink"
+						path: "/kitchensink"
 					},
 					faucets: {
 						ruName: "Смесители",
-						path: "https://catalog.onliner.by/faucet"
+						path: "/faucet"
 					},
 					ceramicTile: {
 						ruName: "Керамическая плитка",
-						path: "https://catalog.onliner.by/tile?t_appointment%5B0%5D=kitchen&t_appointment%5Boperation%5D=union"
+						path: "/tile?t_appointment%5B0%5D=kitchen&t_appointment%5Boperation%5D=union"
 					},
 					foodWasteShredders: {
 						ruName: "Измельчители пищевых отходов",
-						path: "https://catalog.onliner.by/disposer"
+						path: "/disposer"
 					},
 
 					filtersAndWaterTreatmentSystems: {
 						ruName: "Фильтры и системы очистки воды",
-						path: "https://catalog.onliner.by/waterfilter"
+						path: "/waterfilter"
 					},
 					exhaustFans: {
 						ruName: "Вытяжные вентиляторы",
-						path: "https://catalog.onliner.by/exhaustfan?ef_useage%5B0%5D=bathroom&ef_useage%5Boperation%5D=union"
+						path: "/exhaustfan?ef_useage%5B0%5D=bathroom&ef_useage%5Boperation%5D=union"
 					}
 				}
 			},
@@ -2169,55 +2169,55 @@ module.exports = {
 				subCategories: {
 					pumps: {
 						ruName: "Насосы",
-						path: "https://catalog.onliner.by/pump"
+						path: "/pump"
 					},
 					waterHeaters: {
 						ruName: "Водонагреватели",
-						path: "https://catalog.onliner.by/waterheater"
+						path: "/waterheater"
 					},
 					boilers: {
 						ruName: "отопительные котлы",
-						path: "https://catalog.onliner.by/boiler"
+						path: "/boiler"
 					},
 					filtersAndWaterTreatmentSystems: {
 						ruName: "Фильтры и системы очистки воды",
-						path: "https://catalog.onliner.by/waterfilter"
+						path: "/waterfilter"
 					},
 					radiators: {
 						ruName: "Радиаторы отопления",
-						path: "https://catalog.onliner.by/radiators"
+						path: "/radiators"
 					},
 					fireplaces: {
 						ruName: "Дровяные камины, печи-камины, порталы",
-						path: "https://catalog.onliner.by/stove"
+						path: "/stove"
 					},
 					heaters: {
 						ruName: "Обогреватели",
-						path: "https://catalog.onliner.by/heater"
+						path: "/heater"
 					},
 					heatGuns: {
 						ruName: "Тепловые пушки",
-						path: "https://catalog.onliner.by/heat_gun"
+						path: "/heat_gun"
 					},
 					electricFireplaces: {
 						ruName: "электрокамины и биокамины",
-						path: "https://catalog.onliner.by/electrofireplace"
+						path: "/electrofireplace"
 					},
 					waterAccumulators: {
 						ruName: "Гидроаккумуляторы и расширительные баки",
-						path: "https://catalog.onliner.by/hydroaccum"
+						path: "/hydroaccum"
 					},
 					motorPumps: {
 						ruName: "Мотопомпы",
-						path: "https://catalog.onliner.by/motopump"
+						path: "/motopump"
 					},
 					pipesAndFittings: {
 						ruName: "Трубы, фитинг",
-						path: "https://catalog.onliner.by/tube_fitting"
+						path: "/tube_fitting"
 					},
 					waterAndGasPipes: {
 						ruName: "Трубы водогазопроводные",
-						path: "https://catalog.onliner.by/metal_pipes?pipe_type_1%5B0%5D=watergas&pipe_type_1%5Boperation%5D=union"
+						path: "/metal_pipes?pipe_type_1%5B0%5D=watergas&pipe_type_1%5Boperation%5D=union"
 					}
 				}
 			},
@@ -2226,68 +2226,68 @@ module.exports = {
 				subCategories: {
 					officeArmchairsAndChairs: {
 						ruName: "Офисные кресла и стулья",
-						path: "https://catalog.onliner.by/office_chair?asgmt%5B0%5D=visitor&asgmt%5B1%5D=staff&asgmt%5B2%5D=boss&asgmt%5Boperation%5D=union"
+						path: "/office_chair?asgmt%5B0%5D=visitor&asgmt%5B1%5D=staff&asgmt%5B2%5D=boss&asgmt%5Boperation%5D=union"
 					},
 					gamingChairs: {
 						ruName: "Геймерские кресла",
-						path: "https://catalog.onliner.by/office_chair?asgmt%5B0%5D=game&asgmt%5Boperation%5D=union"
+						path: "/office_chair?asgmt%5B0%5D=game&asgmt%5Boperation%5D=union"
 					},
 					sofas: {
 						ruName: "Диваны",
-						path: "https://catalog.onliner.by/divan"
+						path: "/divan"
 					},
 					tables: {
 						ruName: "Столы",
-						path: "https://catalog.onliner.by/table"
+						path: "/table"
 					},
 					chairsForKitchenAndBar: {
 						ruName: "Стулья для кухни и бара",
-						path: "https://catalog.onliner.by/chair"
+						path: "/chair"
 					},
 					armchairs: {
 						ruName: "Кресла",
-						path: "https://catalog.onliner.by/interior_chair"
+						path: "/interior_chair"
 					},
 					beds: {
 						ruName: "Кровати",
-						path: "https://catalog.onliner.by/bed"
+						path: "/bed"
 					},
 					furnitureForBathrooms: {
 						ruName: "Мебель ля ванных комнат",
-						path: "https://catalog.onliner.by/bath_furniture"
+						path: "/bath_furniture"
 					},
 					cots: {
 						ruName: "Детские кроватки",
-						path: "https://catalog.onliner.by/babycotbed"
+						path: "/babycotbed"
 					},
 					childrenTablesAndSchoolDesks: {
 						ruName: "Детские столы и парты",
-						path: "https://catalog.onliner.by/kidsdesk"
+						path: "/kidsdesk"
 					},
 					childrenDressers: {
 						ruName: "Детские комоды",
-						path: "https://catalog.onliner.by/babydresser"
+						path: "/babydresser"
 					},
 					boxesBasketsOrganizers: {
 						ruName: "Ящики, корзины, органайзеры",
-						path: "https://catalog.onliner.by/toystorage"
+						path: "/toystorage"
 					},
 					inflatableFurniture: {
 						ruName: "Надувная мебель",
-						path: "https://catalog.onliner.by/airbed"
+						path: "/airbed"
 					},
 
 					framelessFurniture: {
 						ruName: "Бескаркасная мебель",
-						path: "https://catalog.onliner.by/beanbag"
+						path: "/beanbag"
 					},
 					bedBases: {
 						ruName: "Основания для кроватей",
-						path: "https://catalog.onliner.by/orthobase"
+						path: "/orthobase"
 					},
 					massagersAndMassageChairs: {
 						ruName: "Массажеры и массажные кресла",
-						path: "https://catalog.onliner.by/massagechair"
+						path: "/massagechair"
 					}
 				}
 			},
@@ -2296,43 +2296,43 @@ module.exports = {
 				subCategories: {
 					mattresses: {
 						ruName: "Матрасы",
-						path: "https://catalog.onliner.by/mattress"
+						path: "/mattress"
 					},
 					orthopedicPillows: {
 						ruName: "Ортопедические подушки",
-						path: "https://catalog.onliner.by/pillow"
+						path: "/pillow"
 					},
 					classicPillows: {
 						ruName: "Классические подушки для сна",
-						path: "https://catalog.onliner.by/pillows?pil_type%5B0%5D=sleep&pil_type%5Boperation%5D=union&order=price:asc"
+						path: "/pillows?pil_type%5B0%5D=sleep&pil_type%5Boperation%5D=union&order=price:asc"
 					},
 					blankets: {
 						ruName: "Одеяла",
-						path: "https://catalog.onliner.by/pillows?pil_type%5B0%5D=blanket&pil_type%5Boperation%5D=union"
+						path: "/pillows?pil_type%5B0%5D=blanket&pil_type%5Boperation%5D=union"
 					},
 					plaids: {
 						ruName: "Пледы, покрывала",
-						path: "https://catalog.onliner.by/plaid"
+						path: "h/plaid"
 					},
 					bedlinen: {
 						ruName: "Постельное белье",
-						path: "https://catalog.onliner.by/bedlinen"
+						path: "/bedlinen"
 					},
 					mattressPads: {
 						ruName: "Наматрасники",
-						path: "https://catalog.onliner.by/mattresspad"
+						path: "/mattresspad"
 					},
 					electricLinen: {
 						ruName: "Электрогрелки, электроодеяла, электропростыни",
-						path: "https://catalog.onliner.by/mobile_heater"
+						path: "/mobile_heater"
 					},
 					maternityPillows: {
 						ruName: "Подушки для беременных",
-						path: "https://catalog.onliner.by/pillows?pil_type%5B0%5D=forpregnantwom&pil_type%5Boperation%5D=union"
+						path: "/pillows?pil_type%5B0%5D=forpregnantwom&pil_type%5Boperation%5D=union"
 					},
 					decorativePillows: {
 						ruName: "Декоративные подушки",
-						path: "https://catalog.onliner.by/pillows?pil_type%5B0%5D=decor&pil_type%5Boperation%5D=union"
+						path: "/pillows?pil_type%5B0%5D=decor&pil_type%5Boperation%5D=union"
 					}
 				}
 			},
@@ -2341,87 +2341,87 @@ module.exports = {
 				subCategories: {
 					miniTractors: {
 						ruName: "Мини-тракторы",
-						path: "https://catalog.onliner.by/minitractor"
+						path: "/minitractor"
 					},
 					motorBlocks: {
 						ruName: "Мотоблоки и мультикультиваторы",
-						path: "https://catalog.onliner.by/motoblock"
+						path: "/motoblock"
 					},
 					attachmentsForGardenEquipment: {
 						ruName: "Навесное оборудование для садовой техники",
-						path: "https://catalog.onliner.by/attachmentgarden"
+						path: "/attachmentgarden"
 					},
 					engines: {
 						ruName: "Двигатели",
-						path: "https://catalog.onliner.by/engine"
+						path: "/engine"
 					},
 					trimmers: {
 						ruName: "Триммеры",
-						path: "https://catalog.onliner.by/trimmers"
+						path: "/trimmers"
 					},
 					mowers: {
 						ruName: "Газонокосилки",
-						path: "https://catalog.onliner.by/mowers"
+						path: "/mowers"
 					},
 					toolsAccumulators: {
 						ruName: "Аккумуляторы и зарядные устройства для инструмента",
-						path: "https://catalog.onliner.by/tools_accum"
+						path: "/tools_accum"
 					},
 					aerators: {
 						ruName: "Аэраторы, скарификаторы",
-						path: "https://catalog.onliner.by/mowers?type_mowing%5B0%5D=scarifier&type_mowing%5B1%5D=aerator&type_mowing%5B2%5D=scarifieraera&type_mowing%5Boperation%5D=union"
+						path: "/mowers?type_mowing%5B0%5D=scarifier&type_mowing%5B1%5D=aerator&type_mowing%5B2%5D=scarifieraera&type_mowing%5Boperation%5D=union"
 					},
 					chainSaws: {
 						ruName: "Цепные пилы",
-						path: "https://catalog.onliner.by/chainsaw"
+						path: "/chainsaw"
 					},
 					householdVacuumCleaners: {
 						ruName: "Хозяйственные пылесосы",
-						path: "https://catalog.onliner.by/vacuumcleaner?vc_type%5B0%5D=wetdryvc&vc_type%5Boperation%5D=union"
+						path: "/vacuumcleaner?vc_type%5B0%5D=wetdryvc&vc_type%5Boperation%5D=union"
 					},
 					logSplitters: {
 						ruName: "Дровоколы",
-						path: "https://catalog.onliner.by/logsplitter"
+						path: "/logsplitter"
 					},
 					pressureWashers: {
 						ruName: "Мойки высокого давления",
-						path: "https://catalog.onliner.by/washers"
+						path: "/washers"
 					},
 					hedgeTrimmers: {
 						ruName: "Кусторезы и высоторезы",
-						path: "https://catalog.onliner.by/hedgetrimmers"
+						path: "/hedgetrimmers"
 					},
 					gardenShredders: {
 						ruName: "Садовые измельчители",
-						path: "https://catalog.onliner.by/gardenshredder"
+						path: "/gardenshredder"
 					},
 					snowBlowers: {
 						ruName: "Снегоуборщики",
-						path: "https://catalog.onliner.by/snowblower"
+						path: "/snowblower"
 					},
 					leafBlowers: {
 						ruName: "Воздуходувки",
-						path: "https://catalog.onliner.by/leafblower"
+						path: "/leafblower"
 					},
 					gardenTools: {
 						ruName: "Садовый инструмент",
-						path: "https://catalog.onliner.by/gardentool"
+						path: "/gardentool"
 					},
 					wateringHoses: {
 						ruName: "Поливочные шланги",
-						path: "https://catalog.onliner.by/garden_hose"
+						path: "/garden_hose"
 					},
 					automaticWateringSystems: {
 						ruName: "Системы автоматического полива, распылители",
-						path: "https://catalog.onliner.by/watering_system"
+						path: "/watering_system"
 					},
 					gardenBarrows: {
 						ruName: "Садовые тачки",
-						path: "https://catalog.onliner.by/barrow"
+						path: "/barrow"
 					},
 					stairsAndLadders: {
 						ruName: "Лестницы и стремянки",
-						path: "https://catalog.onliner.by/stairandladder"
+						path: "/stairandladder"
 					}
 				}
 			},
@@ -2430,59 +2430,59 @@ module.exports = {
 				subCategories: {
 					baths: {
 						ruName: "Бани, купели",
-						path: "https://catalog.onliner.by/bath"
+						path: "/bath"
 					},
 					gazeboses: {
 						ruName: "Беседки",
-						path: "https://catalog.onliner.by/garden_house"
+						path: "/garden_house"
 					},
 					pools: {
 						ruName: "Бассейны",
-						path: "https://catalog.onliner.by/pool"
+						path: "/pool"
 					},
 					grills: {
 						ruName: "Мангалы, грили, барбекю",
-						path: "https://catalog.onliner.by/grill"
+						path: "/grill"
 					},
 					bbqFacilities: {
 						ruName: "Принадлежности для барбекю, грилей, мангалов",
-						path: "https://catalog.onliner.by/bbq_accessories"
+						path: "/bbq_accessories"
 					},
 					bathStoves: {
 						ruName: "Банные печи",
-						path: "https://catalog.onliner.by/bathstove"
+						path: "/bathstove"
 					},
 					childrenStreetComplexesAndHills: {
 						ruName: "Детские уличные комплексы и горки",
-						path: "https://catalog.onliner.by/kidwallbars?kwb_type[0]=outdoor&kwb_type[operation]=union"
+						path: "/kidwallbars?kwb_type[0]=outdoor&kwb_type[operation]=union"
 					},
 					gardenSwing: {
 						ruName: "Садовые качели",
-						path: "https://catalog.onliner.by/gardenswing"
+						path: "/gardenswing"
 					},
 					trampolines: {
 						ruName: "Батуты",
-						path: "https://catalog.onliner.by/trampoline"
+						path: "/trampoline"
 					},
 					gardenFurniture: {
 						ruName: "Садовая мебель",
-						path: "https://catalog.onliner.by/gardenfurniture"
+						path: "/gardenfurniture"
 					},
 					hammocks: {
 						ruName: "Гамаки",
-						path: "https://catalog.onliner.by/hammock"
+						path: "/hammock"
 					},
 					tents: {
 						ruName: "Шатры, тенты",
-						path: "https://catalog.onliner.by/canopy_tents"
+						path: "/canopy_tents"
 					},
 					loungers: {
 						ruName: "Шезлонги",
-						path: "https://catalog.onliner.by/lounger"
+						path: "/lounger"
 					},
 					streetUmbrellas: {
 						ruName: "Зонты садовые, пляжные",
-						path: "https://catalog.onliner.by/street_umbrella"
+						path: "/street_umbrella"
 					}
 				}
 			},
@@ -2491,59 +2491,59 @@ module.exports = {
 				subCategories: {
 					houses: {
 						ruName: "Дома, коттеджи",
-						path: "https://catalog.onliner.by/house"
+						path: "/house"
 					},
 					gazeboses: {
 						ruName: "Беседки",
-						path: "https://catalog.onliner.by/garden_house"
+						path: "/garden_house"
 					},
 					gardenCabins: {
 						ruName: "Дачные бытовки и хозблоки",
-						path: "https://catalog.onliner.by/garden_cabin"
+						path: "/garden_cabin"
 					},
 					streetLightning: {
 						ruName: "Уличное освещение",
-						path: "https://catalog.onliner.by/luster?lu_arrangement%5B0%5D=street&lu_arrangement%5Boperation%5D=union"
+						path: "/luster?lu_arrangement%5B0%5D=street&lu_arrangement%5Boperation%5D=union"
 					},
 					streetClothesDryers: {
 						ruName: "Уличные сушки для белья",
-						path: "https://catalog.onliner.by/linendryer?dr_mounting[0]=ground&dr_mounting[operation]=union"
+						path: "/linendryer?dr_mounting[0]=ground&dr_mounting[operation]=union"
 					},
 					insectKillers: {
 						ruName: "Уничтожители насекомых",
-						path: "https://catalog.onliner.by/insect_killer"
+						path: "/insect_killer"
 					},
 					summerShowers: {
 						ruName: "Летние души",
-						path: "https://catalog.onliner.by/summer_shower"
+						path: "/summer_shower"
 					},
 					countryToilets: {
 						ruName: "Дачные туалеты",
-						path: "https://catalog.onliner.by/outdoor_toilet"
+						path: "/outdoor_toilet"
 					},
 					dryClosets: {
 						ruName: "Биотуалеты",
-						path: "https://catalog.onliner.by/biotoilet"
+						path: "/biotoilet"
 					},
 					meansForDryClosets: {
 						ruName: "Средства для биотуалетов, выгребных ям",
-						path: "https://catalog.onliner.by/wc_liquid"
+						path: "/wc_liquid"
 					},
 					brickTile: {
 						ruName: "Клинкерная плитка",
-						path: "https://catalog.onliner.by/tile?t_tile%5B0%5D=clinker&t_tile%5Boperation%5D=union"
+						path: "/tile?t_tile%5B0%5D=clinker&t_tile%5Boperation%5D=union"
 					},
 					pavingSlabs: {
 						ruName: "Тротуарная плитка",
-						path: "https://catalog.onliner.by/pavers"
+						path: "/pavers"
 					},
 					plantersAndPotsForPlants: {
 						ruName: "Кашпо, горшки для растений",
-						path: "https://catalog.onliner.by/flowerpot"
+						path: "/flowerpot"
 					},
 					rabitz: {
 						ruName: "Сетка-рабица",
-						path: "https://catalog.onliner.by/rabitz?mfr[0]=setkarabitza"
+						path: "/rabitz?mfr[0]=setkarabitza"
 					}
 				}
 			},
@@ -2552,31 +2552,31 @@ module.exports = {
 				subCategories: {
 					interiorClocks: {
 						ruName: "Интерьерные часы",
-						path: "https://catalog.onliner.by/interior_clock"
+						path: "/interior_clock"
 					},
 					nightLights: {
 						ruName: "Ночники",
-						path: "https://catalog.onliner.by/luster?lu_type%5B0%5D=nightlight&lu_type%5Boperation%5D=union"
+						path: "/luster?lu_type%5B0%5D=nightlight&lu_type%5Boperation%5D=union"
 					},
 					floorLamps: {
 						ruName: "Торшеры",
-						path: "https://catalog.onliner.by/luster?lu_type%5B0%5D=floorlamp&lu_type%5Boperation%5D=union"
+						path: "/luster?lu_type%5B0%5D=floorlamp&lu_type%5Boperation%5D=union"
 					},
 					meteoStations: {
 						ruName: "Метеостанции",
-						path: "https://catalog.onliner.by/meteostations"
+						path: "/meteostations"
 					},
 					electricFireplaces: {
 						ruName: "Электрокамины и биокамины",
-						path: "https://catalog.onliner.by/electrofireplace"
+						path: "/electrofireplace"
 					},
 					decorativePillows: {
 						ruName: "Декоративные подушки",
-						path: "https://catalog.onliner.by/pillows?pil_type%5B0%5D=decor&pil_type%5Boperation%5D=union"
+						path: "/pillows?pil_type%5B0%5D=decor&pil_type%5Boperation%5D=union"
 					},
 					houseplants: {
 						ruName: "Комнатные растения, флорариумы",
-						path: "https://catalog.onliner.by/houseplant"
+						path: "/houseplant"
 					}
 				}
 			},
@@ -2585,39 +2585,39 @@ module.exports = {
 				subCategories: {
 					chandeliersAndLamps: {
 						ruName: "Люстры и светильники",
-						path: "https://catalog.onliner.by/luster"
+						path: "/luster"
 					},
 					tableLamps: {
 						ruName: "Настольные лампы",
-						path: "https://catalog.onliner.by/luster?lu_type%5B0%5D=light&lu_type%5Boperation%5D=union&lu_arrangement%5B0%5D=table&lu_arrangement%5Boperation%5D=union"
+						path: "/luster?lu_type%5B0%5D=light&lu_type%5Boperation%5D=union&lu_arrangement%5B0%5D=table&lu_arrangement%5Boperation%5D=union"
 					},
 					floorLamps: {
 						ruName: "Торшеры",
-						path: "https://catalog.onliner.by/luster?lu_type%5B0%5D=floorlamp&lu_type%5Boperation%5D=union"
+						path: "/luster?lu_type%5B0%5D=floorlamp&lu_type%5Boperation%5D=union"
 					},
 					nightLights: {
 						ruName: "Ночники",
-						path: "https://catalog.onliner.by/luster?lu_type%5B0%5D=nightlight&lu_type%5Boperation%5D=union"
+						path: "/luster?lu_type%5B0%5D=nightlight&lu_type%5Boperation%5D=union"
 					},
 					streetLightning: {
 						ruName: "Уличное освещение",
-						path: "https://catalog.onliner.by/luster?lu_arrangement%5B0%5D=street&lu_arrangement%5Boperation%5D=union"
+						path: "/luster?lu_arrangement%5B0%5D=street&lu_arrangement%5Boperation%5D=union"
 					},
 					bulbs: {
 						ruName: "Лампочки",
-						path: "https://catalog.onliner.by/lightbulb"
+						path: "/lightbulb"
 					},
 					socketsAndSwitches: {
 						ruName: "Розетки, выключатели",
-						path: "https://catalog.onliner.by/wall_socket"
+						path: "/wall_socket"
 					},
 					stabilizersAndSurgeProtectors: {
 						ruName: "Стабилизаторы напряжения и сетевые фильтры",
-						path: "https://catalog.onliner.by/voltageregulator?voltage_type[0]=stabilizer&voltage_type[operation]=union"
+						path: "/voltageregulator?voltage_type[0]=stabilizer&voltage_type[operation]=union"
 					},
 					generators: {
 						ruName: "Генераторы",
-						path: "https://catalog.onliner.by/powerstations"
+						path: "/powerstations"
 					}
 				}
 			},
@@ -2626,47 +2626,47 @@ module.exports = {
 				subCategories: {
 					smartHome: {
 						ruName: "Умный дом",
-						path: "https://catalog.onliner.by/smart_home"
+						path: "/smart_home"
 					},
 					smartThermostats: {
 						ruName: "Умные терморегуляторы",
-						path: "https://catalog.onliner.by/thermostat?smarthome=1"
+						path: "/thermostat?smarthome=1"
 					},
 					smartBulbs: {
 						ruName: "Умные лампочки",
-						path: "https://catalog.onliner.by/lightbulb?lib_smartlight=1"
+						path: "/lightbulb?lib_smartlight=1"
 					},
 					smartSockets: {
 						ruName: "Умные розетки",
-						path: "https://catalog.onliner.by/wall_socket?wallsoc_smart=1"
+						path: "/wall_socket?wallsoc_smart=1"
 					},
 					ipCameras: {
 						ruName: "IP-камеры",
-						path: "https://catalog.onliner.by/ipcamera"
+						path: "/ipcamera"
 					},
 					videoDoorPhones: {
 						ruName: "Видеодомофоны",
-						path: "https://catalog.onliner.by/videodoorphone"
+						path: "/videodoorphone"
 					},
 					CCTV: {
 						ruName: "Камеры CCTV",
-						path: "https://catalog.onliner.by/cctvcamera"
+						path: "/cctvcamera"
 					},
 					DVRs: {
 						ruName: "Видеорегистраторы",
-						path: "https://catalog.onliner.by/dvr"
+						path: "/dvr"
 					},
 					cameraTraps: {
 						ruName: "Фотоловушки",
-						path: "https://catalog.onliner.by/camera_traps"
+						path: "/camera_traps"
 					},
 					metalDoors: {
 						ruName: "Входные двери",
-						path: "https://catalog.onliner.by/steeldoor"
+						path: "/steeldoor"
 					},
 					extinguishers: {
 						ruName: "Огнетушители",
-						path: "https://catalog.onliner.by/extinguisher"
+						path: "/extinguisher"
 					}
 				}
 			},
@@ -2675,19 +2675,19 @@ module.exports = {
 				subCategories: {
 					linenDryers: {
 						ruName: "Сушилки для белья",
-						path: "https://catalog.onliner.by/linendryer"
+						path: "/linendryer"
 					},
 					ironingBoards: {
 						ruName: "Гладильные доски",
-						path: "https://catalog.onliner.by/ironingboard"
+						path: "/ironingboard"
 					},
 					laundryAndCareProducts: {
 						ruName: "Средства для стирки и ухода за бельем",
-						path: "https://catalog.onliner.by/washingpowder"
+						path: "/washingpowder"
 					},
 					dishwasherTools: {
 						ruName: "Средства для посудомоечных машин",
-						path: "https://catalog.onliner.by/dishwashertablet"
+						path: "/dishwashertablet"
 					}
 				}
 			},
@@ -2696,55 +2696,55 @@ module.exports = {
 				subCategories: {
 					pans: {
 						ruName: "Сковороды",
-						path: "https://catalog.onliner.by/pan"
+						path: "/pan"
 					},
 					stewpans: {
 						ruName: "Сотейники",
-						path: "https://catalog.onliner.by/pan?p_type[0]=saucepan&p_type[operation]=union"
+						path: "/pan?p_type[0]=saucepan&p_type[operation]=union"
 					},
 					saucepans: {
 						ruName: "Кастрюли",
-						path: "https://catalog.onliner.by/saucepan"
+						path: "/saucepan"
 					},
 					lids: {
 						ruName: "Крышки для посуды",
-						path: "https://catalog.onliner.by/lids"
+						path: "/lids"
 					},
 					kettles: {
 						ruName: "Чайники",
-						path: "https://catalog.onliner.by/kettles"
+						path: "/kettles"
 					},
 					teapots: {
 						ruName: "Заварочные чайники, кофеварки, френч-прессы",
-						path: "https://catalog.onliner.by/teapot"
+						path: "/teapot"
 					},
 					dishesSets: {
 						ruName: "Сервизы и наборы столовой посуды",
-						path: "https://catalog.onliner.by/dishset"
+						path: "/dishset"
 					},
 					cutlery: {
 						ruName: "Столовые приборы",
-						path: "https://catalog.onliner.by/cutlery"
+						path: "/cutlery"
 					},
 					kitchenKnifesAndScissors: {
 						ruName: "Кухонные ножи и ножницы",
-						path: "https://catalog.onliner.by/kitchen_knife"
+						path: "/kitchen_knife"
 					},
 					bakingDishesAndBakingSheets: {
 						ruName: "Формы для выпечки, противни",
-						path: "https://catalog.onliner.by/breadpan"
+						path: "/breadpan"
 					},
 					barAccessories: {
 						ruName: "Аксессуары для бара",
-						path: "https://catalog.onliner.by/bar_accessories"
+						path: "/bar_accessories"
 					},
 					thermosesAndThermomugs: {
 						ruName: "Термосы, термокружки",
-						path: "https://catalog.onliner.by/thermosbottle"
+						path: "/thermosbottle"
 					},
 					coffee: {
 						ruName: "Кофе",
-						path: "https://catalog.onliner.by/coffeejava"
+						path: "/coffeejava"
 					}
 				}
 			},
@@ -2753,27 +2753,27 @@ module.exports = {
 				subCategories: {
 					flowersBouquets: {
 						ruName: "Цветы, букеты",
-						path: "https://catalog.onliner.by/flowersbouquets"
+						path: "/flowersbouquets"
 					},
 					stuffedToys: {
 						ruName: "Мягкие игрушки",
-						path: "https://catalog.onliner.by/stuffedtoys"
+						path: "/stuffedtoys"
 					},
 					xmasTrees: {
 						ruName: "Елки",
-						path: "https://catalog.onliner.by/tree"
+						path: "/tree"
 					},
 					xmasLights: {
 						ruName: "Электрические гирлянды",
-						path: "https://catalog.onliner.by/xmaslights"
+						path: "/xmaslights"
 					},
 					xmaslightsTreesAndFigures: {
 						ruName: "Световые деревья, фигуры",
-						path: "https://catalog.onliner.by/xmaslights?xl_type[0]=2d&xl_type[1]=tree&xl_type[2]=3d&xl_type[operation]=union"
+						path: "/xmaslights?xl_type[0]=2d&xl_type[1]=tree&xl_type[2]=3d&xl_type[operation]=union"
 					},
 					xmasToysAndDecorations: {
 						ruName: "Елочные игрушки, украшения",
-						path: "https://catalog.onliner.by/christmasdecor"
+						path: "/christmasdecor"
 					}
 				}
 			},
@@ -2782,31 +2782,31 @@ module.exports = {
 				subCategories: {
 					dogFood: {
 						ruName: "Корма для собак",
-						path: "https://catalog.onliner.by/foodfordog"
+						path: "/foodfordog"
 					},
 					catFood: {
 						ruName: "Корма для кошек",
-						path: "https://catalog.onliner.by/catfood"
+						path: "/catfood"
 					},
 					animalPlates: {
 						ruName: "Миски, поилки, кормушки для животных",
-						path: "https://catalog.onliner.by/animal_plate"
+						path: "/animal_plate"
 					},
 					toiletsFillers: {
 						ruName: "Наполнители для туалетов",
-						path: "https://catalog.onliner.by/catlitter?catlit_typ%5B0%5D=type6&catlit_typ%5Boperation%5D=union"
+						path: "/catlitter?catlit_typ%5B0%5D=type6&catlit_typ%5Boperation%5D=union"
 					},
 					toiletsForAnimals: {
 						ruName: "Туалеты",
-						path: "https://catalog.onliner.by/catlitter?catlit_typ%5B0%5D=type1&catlit_typ%5B1%5D=type2&catlit_typ%5Boperation%5D=union"
+						path: "/catlitter?catlit_typ%5B0%5D=type1&catlit_typ%5B1%5D=type2&catlit_typ%5Boperation%5D=union"
 					},
 					bagsForAnimals: {
 						ruName: "Сумки, переноски для животных",
-						path: "https://catalog.onliner.by/pet_carrier"
+						path: "/pet_carrier"
 					},
 					loungersForAnimals: {
 						ruName: "Лежанки, домики, когтеточки для кошек и собак",
-						path: "https://catalog.onliner.by/pet_house"
+						path: "/pet_house"
 					}
 				}
 			},
@@ -2815,71 +2815,71 @@ module.exports = {
 				subCategories: {
 					gardenTools: {
 						ruName: "Садовый инструмент",
-						path: "https://catalog.onliner.by/gardentool"
+						path: "/gardentool"
 					},
 					greenhousesAndHotbeds: {
 						ruName: "Теплицы и парники",
-						path: "https://catalog.onliner.by/greenhouse"
+						path: "/greenhouse"
 					},
 					polycarbonateForGreenhouses: {
 						ruName: "Поликарбонат для теплиц",
-						path: "https://catalog.onliner.by/polycarbonate"
+						path: "/polycarbonate"
 					},
 					coveringMaterials: {
 						ruName: "Укрывной материал",
-						path: "https://catalog.onliner.by/coveringmaterial"
+						path: "/coveringmaterial"
 					},
 					wateringHoses: {
 						ruName: "Поливочные шланги",
-						path: "https://catalog.onliner.by/garden_hose"
+						path: "/garden_hose"
 					},
 					automaticWateringSystems: {
 						ruName: "Системы автоматического полива, распылители",
-						path: "https://catalog.onliner.by/watering_system"
+						path: "/watering_system"
 					},
 					houseplants: {
 						ruName: "Комнатные растения, флорариумы",
-						path: "https://catalog.onliner.by/houseplant"
+						path: "/houseplant"
 					},
 					plantersAndPotsForPlants: {
 						ruName: "Кашпо, горшки для растений",
-						path: "https://catalog.onliner.by/flowerpot"
+						path: "/flowerpot"
 					},
 					grassSeedsAndLawn: {
 						ruName: "Семена трав, газон",
-						path: "https://catalog.onliner.by/lawn"
+						path: "/lawn"
 					},
 					soilForPlants: {
 						ruName: "Грунты для растений",
-						path: "https://catalog.onliner.by/soilforplants"
+						path: "/soilforplants"
 					},
 					fertilizers: {
 						ruName: "Удобрения",
-						path: "https://catalog.onliner.by/fertilizer"
+						path: "/fertilizer"
 					},
 					saplingsOfFruitTreesAndBushes: {
 						ruName: "Саженцы плодовых деревьев и кустарников",
-						path: "https://catalog.onliner.by/shrubtree?fs_vid%5B0%5D=plod&fs_vid%5Boperation%5D=union"
+						path: "/shrubtree?fs_vid%5B0%5D=plod&fs_vid%5Boperation%5D=union"
 					},
 					saplingsOfDecorativeBushes: {
 						ruName: "Саженцы декоративных кустарников",
-						path: "https://catalog.onliner.by/shrubtree?fs_type%5B0%5D=shrub&fs_type%5Boperation%5D=union&fs_vid%5B0%5D=dekor&fs_vid%5Boperation%5D=union"
+						path: "/shrubtree?fs_type%5B0%5D=shrub&fs_type%5Boperation%5D=union&fs_vid%5B0%5D=dekor&fs_vid%5Boperation%5D=union"
 					},
 					saplingsOfConiferousBushes: {
 						ruName: "Саженцы хвойных растений",
-						path: "https://catalog.onliner.by/shrubtree?fs_appearance%5B0%5D=coniferous&fs_appearance%5Boperation%5D=union"
+						path: "/shrubtree?fs_appearance%5B0%5D=coniferous&fs_appearance%5Boperation%5D=union"
 					},
 					flowerSeeds: {
 						ruName: "Семена цветов",
-						path: "https://catalog.onliner.by/flowersseed?vs_reproduction%5B0%5D=seed&vs_reproduction%5Boperation%5D=union"
+						path: "/flowersseed?vs_reproduction%5B0%5D=seed&vs_reproduction%5Boperation%5D=union"
 					},
 					flowerBulbs: {
 						ruName: "Луковицы цветов",
-						path: "https://catalog.onliner.by/flowersseed?vs_reproduction%5B0%5D=bulbs&vs_reproduction%5Boperation%5D=union"
+						path: "/flowersseed?vs_reproduction%5B0%5D=bulbs&vs_reproduction%5Boperation%5D=union"
 					},
 					seedsOfVegetablesHerbsAndBerries: {
 						ruName: "Семена овощей, зелени и ягод",
-						path: "https://catalog.onliner.by/vegetableseed"
+						path: "/vegetableseed"
 					}
 				}
 			}
