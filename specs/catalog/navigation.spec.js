@@ -23,3 +23,8 @@ describe("Onliner.by - Catalog / Navigation", () => {
 		Catalog.openSubcategory(randomSubcategoryItem.ruName)
 	})
 })
+
+// TODO: update locators to search by first word of category / subcategory
+// TODO: - left of undefined -
+// TODO: search sequence object
+// TODO: execution stack: isVisible()
