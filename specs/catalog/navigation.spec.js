@@ -1,7 +1,6 @@
 const HomePage = require("../../page-objects/homepage")
 const Catalog = require("../../page-objects/catalog")
-// const productsTree = require("../../fixtures/products-tree")
-const _ = require("lodash")
+const entities = require("../../helpers/get-entities")
 
 describe("Onliner.by - Catalog / Navigation", () => {
 
@@ -10,11 +9,17 @@ describe("Onliner.by - Catalog / Navigation", () => {
 	})
 
 	it("should find products while navigating through the pages", () => {
+
+		const randomClassifierItem = entities.getRandomClassifierItem()
+		const randomCategoryItem = entities.getRandomCategory(randomClassifierItem)
+		const randomSubcategoryItem = entities.getRandomSubcategory(randomCategoryItem)
+
 		HomePage.goTo("/")
 		HomePage.openCatalog()
-		Catalog.chooseClassifierItem(2)
+		Catalog.chooseClassifierItem(randomClassifierItem.id)
 		Catalog.waitForCategoriesLeftNav()
-		Catalog.focusCategoryItem("Комплектующие")
-		browser.sleep(5000)
+		Catalog.focusCategoryItem(randomCategoryItem.ruName)
+		Catalog.waitForSubcategoriesDropDown()
+		Catalog.openSubcategory(randomSubcategoryItem.ruName)
 	})
 })

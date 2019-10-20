@@ -7,11 +7,13 @@ class Catalog extends BasePage {
 			return element(by.css(`[class="catalog-navigation-classifier__item "][data-id="${itemId}"]`))
 		}
 		this.categoryItem = function(categoryTitle) {
-			return element(by.cssContainingText(".catalog-navigation-list__aside-item", categoryTitle))
+			return element(by.cssContainingText(".catalog-navigation-list__aside-title", categoryTitle))
+		}
+		this.subCategoryItem = function(subcategoryTitle) {
+			return element(by.cssContainingText("span.catalog-navigation-list__dropdown-title", subcategoryTitle))
 		}
 		this.categoriesLeftNav = element(by.css(".catalog-navigation-list__aside-list"))
 		this.subCategoriesDropDown = element(by.css(".catalog-navigation-list__dropdown-list"))
-		this.subCategoryItem = this.subCategoriesDropDown.element(by.css(".catalog-navigation-list__dropdown-item"))
 	}
 
 	chooseClassifierItem(itemId) {
@@ -23,7 +25,20 @@ class Catalog extends BasePage {
 	}
 
 	focusCategoryItem(categoryTitle) {
-		browser.actions().mouseMove(this.categoryItem(categoryTitle)).perform()
+		browser.actions()
+			.mouseMove(this.categoryItem(categoryTitle))
+			.perform()
+	}
+
+	waitForSubcategoriesDropDown() {
+		return this.isVisible(this.subCategoriesDropDown)
+	}
+
+	openSubcategory(subcategoryTitle) {
+		browser.actions()
+			.mouseMove(this.subCategoryItem(subcategoryTitle))
+			.click()
+			.perform()
 	}
 }
 
