@@ -1467,67 +1467,576 @@ module.exports = {
 			tools: {
 				ruName: "Инструмент",
 				subCategories: {
-
+					drills: {
+						ruName: "Электродрели и дрели-шуруповерты",
+						path: "/drills"
+					},
+					rotaryhammers: {
+						ruName: "Перфораторы",
+						path: "/rotaryhammers"
+					},
+					toolKits: {
+						ruName: "Наборы ручных инструментов",
+						path: "/tool_kits"
+					},
+					electricScrewdrivers: {
+						ruName: "Электроотвертки",
+						path: "/screwdriver?typescrewdriver[0]=simplescrewdrive&typescrewdriver[operation]=union"
+					},
+					screwdrivers: {
+						ruName: "Шуруповерты, винтоверты",
+						path: "/screwdriver?typescrewdriver[0]=hardscrewdrive&typescrewdriver[1]=vintovert&typescrewdriver[operation]=union"
+					},
+					toolsAccumulators: {
+						ruName: "Аккумуляторы и зарядные устройства для инструмента",
+						path: "/tools_accum"
+					},
+					drillsMixers: {
+						ruName: "Дрели-миксеры",
+						path: "/drills?type_drill[0]=drill_mixer&type_drill[operation]=union"
+					},
+					angleGrinders: {
+						ruName: "Угловые шлифмашины (болгарки)",
+						path: "/angle_grinder"
+					},
+					grinders: {
+						ruName: "Шлифмашины",
+						path: "/grinder"
+					},
+					polishingMachines: {
+						ruName: "Полировальные машины",
+						path: "/grinder?tupe_grinder[0]=polish&tupe_grinder[operation]=union"
+					},
+					multiTools: {
+						ruName: "Мультитулы",
+						path: "/grinder?tupe_grinder[0]=multi_grinder&tupe_grinder[operation]=union"
+					},
+					circularSaws: {
+						ruName: "Дисковые пилы",
+						path: "/electric_saw?type_saw[0]=disk&type_saw[operation]=union"
+					},
+					reciprocatingSaws: {
+						ruName: "Сабельные пилы",
+						path: "/electric_saw?type_saw[0]=saber&type_saw[operation]=union"
+					},
+					fretSaws: {
+						ruName: "Лобзики",
+						path: "/fretsaw"
+					},
+					planes: {
+						ruName: "Рубанки",
+						path: "/plane"
+					},
+					tools: {
+						ruName: "Строительный, слесарный, монтажный инструмент",
+						path: "/household_tools"
+					},
+					toolBoxes: {
+						ruName: "Ящики для инструментов",
+						path: "/toolbox"
+					},
+					millingCutters: {
+						ruName: "Фрезеры",
+						path: "/woodrouter"
+					},
+					industrialDryers: {
+						ruName: "Промышленные фены",
+						path: "/industrialdryer"
+					},
+					hotGlueGuns: {
+						ruName: "Термоклеевые пистолеты",
+						path: "/hotgluegun"
+					},
+					engravers: {
+						ruName: "Граверы",
+						path: "/engraver"
+					},
+					householdVacuumCleaners: {
+						ruName: "Хозяйственные пылесосы",
+						path: "/vacuumcleaner?vc_type%5B0%5D=wetdryvc&vc_type%5Boperation%5D=union"
+					},
+					sprayGuns: {
+						ruName: "Краскораспылители",
+						path: "/electricspraygun"
+					},
+					wallChasers: {
+						ruName: "Штроборезы",
+						path: "/wallchaser"
+					},
+					tileCutters: {
+						ruName: "Плиткорезы",
+						path: "/tilecutter"
+					},
+					solderingIrons: {
+						ruName: "Паяльники и паяльные лампы",
+						path: "/solderingiron"
+					},
+					pipeWeldingMachines: {
+						ruName: "Аппараты для сварки труб",
+						path: "/pipe_welding"
+					},
+					electricJackhammers: {
+						ruName: "Электрические отбойные молотки",
+						path: "/jackhammer?jh_type[0]=electric&jh_type[operation]=union"
+					},
+					electricMetalCutters: {
+						ruName: "Электрические ножницы по металлу",
+						path: "/metal_cutter"
+					},
+					nailers: {
+						ruName: "Скобозабиватели, гвоздезабиватели, степлеры",
+						path: "/nailer"
+					},
+					thermalImaging: {
+						ruName: "Диагностические тепловизоры и пирометры",
+						path: "/thermal_imaging"
+					}
 				}
 			},
 			buildingEquipment: {
 				ruName: "Строительное оборудование",
 				subCategories: {
-
+					welders: {
+						ruName: "Сварочные аппараты",
+						path: "/weldinginverter"
+					},
+					compressors: {
+						ruName: "Компрессоры",
+						path: "/compressor"
+					},
+					laserLevels: {
+						ruName: "Лазерные нивелиры",
+						path: "/laserlevel"
+					},
+					heatGuns: {
+						ruName: "Тепловые пушки",
+						path: "/heat_gun"
+					},
+					generators: {
+						ruName: "Генераторы",
+						path: "/powerstations"
+					},
+					concreteMixers: {
+						ruName: "Бетономешалки",
+						path: "/concrete"
+					},
+					weldingMasks: {
+						ruName: "Сварочные маски",
+						path: "/weldingmask"
+					},
+					householdVacuumCleaners: {
+						ruName: "Хозяйственные пылесосы",
+						path: "/vacuumcleaner?vc_type%5B0%5D=wetdryvc&vc_type%5Boperation%5D=union"
+					},
+					wheelbarrows: {
+						ruName: "Строительные тачки",
+						path: "/barrow"
+					},
+					stairsAndLadders: {
+						ruName: "Лестницы и стремянки",
+						path: "/stairandladder"
+					},
+					laserRangefinders: {
+						ruName: "Лазерные дальномеры",
+						path: "/laserdistmeter"
+					},
+					vibratingPlates: {
+						ruName: "Виброплиты",
+						path: "/platecompactor"
+					},
+					jackhammers: {
+						ruName: "Отбойные молотки",
+						path: "/jackhammer"
+					},
+					electricAndGasCutters: {
+						ruName: "Электро- и бензорезы",
+						path: "/powercutter"
+					},
+					motorPumps: {
+						ruName: "Мотопомпы",
+						path: "/motopump"
+					}
 				}
 			},
 			floorCoverings: {
 				ruName: "Напольные покрытия",
 				subCategories: {
-
+					laminate: {
+						ruName: "Ламинат",
+						path: "/laminate"
+					},
+					linoleum: {
+						ruName: "Линолеум",
+						path: "/linoleum"
+					},
+					vinylFloor: {
+						ruName: "Виниловые полы",
+						path: "/vinyl_floor"
+					},
+					tile: {
+						ruName: "Плитка",
+						path: "/tile?t_kind%5B0%5D=floor&t_kind%5Boperation%5D=union"
+					},
+					parquetBoard: {
+						ruName: "Паркетная доска",
+						path: "/parquetboard"
+					}
 				}
 			},
 			plumbing: {
 				ruName: "Сантехника",
 				subCategories: {
-
+					kitchenSinks: {
+						ruName: "Кухонные мойки",
+						path: "/kitchensink"
+					},
+					faucets: {
+						ruName: "Смесители",
+						path: "/faucet"
+					},
+					bathtubs: {
+						ruName: "Ванны",
+						path: "/bathtub"
+					},
+					towelWarmers: {
+						ruName: "Полотенцесушители",
+						path: "/towelrail"
+					},
+					showerCabins: {
+						ruName: "Душевые кабины",
+						path: "/showerbox"
+					},
+					washbasins: {
+						ruName: "Умывальники",
+						path: "/washbasin"
+					},
+					pedestalForWashbasins: {
+						ruName: "Пьедесталы для умывальников",
+						path: "/pedestal"
+					},
+					siphons: {
+						ruName: "Сифоны",
+						path: "/siphon"
+					},
+					pans: {
+						ruName: "Унитазы",
+						path: "/wcpan"
+					},
+					bidets: {
+						ruName: "Биде",
+						path: "/bidet"
+					},
+					installationsForPansSinksBidets: {
+						ruName: "Инсталляции для унитазов, раковин, биде и писсуаров",
+						path: "/installations"
+					},
+					flushingSystems: {
+						ruName: "Клавиши и системы смыва",
+						path: "/flushing_system"
+					},
+					electronicBidetCovers: {
+						ruName: "Электронные крышки-биде",
+						path: "/toilet_shower"
+					},
+					dryClosets: {
+						ruName: "Биотуалеты",
+						path: "/biotoilet"
+					},
+					showerPanels: {
+						ruName: "Душевые панели и гарнитуры",
+						path: "/shower"
+					},
+					showerTrays: {
+						ruName: "Душевые поддоны",
+						path: "/shower_trays"
+					},
+					dispensers: {
+						ruName: "Дозаторы, диспенсеры",
+						path: "/dispenser"
+					},
+					handsDryers: {
+						ruName: "Сушилки для рук, волос",
+						path: "/handsdryer"
+					}
 				}
 			},
 			waterSupplySewerageVentilation: {
 				ruName: "Водоснабжение, канализация, вентиляция",
 				subCategories: {
-
+					waterHeaters: {
+						ruName: "Водонагреватели",
+						path: "/waterheater"
+					},
+					pumps: {
+						ruName: "Насосы",
+						path: "/pump"
+					},
+					exhaustFans: {
+						ruName: "Приточные и вытяжные вентиляторы",
+						path: "/exhaustfan"
+					},
+					supplyAirVents: {
+						ruName: "Приточные проветриватели",
+						path: "/exhaustfan?ef_type%5B0%5D=passprov&ef_type%5B1%5D=recuperator&ef_type%5B2%5D=provbeznagr&ef_type%5B3%5D=provnagr&ef_type%5Boperation%5D=union"
+					},
+					waterAccumulators: {
+						ruName: "Гидроаккумуляторы",
+						path: "/hydroaccum?ha_type%5B0%5D=type1&ha_type%5Boperation%5D=union"
+					},
+					pipesAndFittings: {
+						ruName: "Трубы, фитинг",
+						path: "/tube_fitting"
+					},
+					accessPanels: {
+						ruName: "Сантехнические ревизионные люки",
+						path: "/access_panel"
+					},
+					waterAndGasPipes: {
+						ruName: "Трубы водогазопроводные",
+						path: "/metal_pipes?pipe_type_1%5B0%5D=watergas&pipe_type_1%5Boperation%5D=union"
+					},
+					boilers: {
+						ruName: "Отопительные котлы",
+						path: "/boiler"
+					},
+					radiators: {
+						ruName: "Радиаторы отопления",
+						path: "/radiators"
+					}
 				}
 			},
 			powerSupply: {
 				ruName: "Электроснабжение",
 				subCategories: {
-
+					socketsAndSwitches: {
+						ruName: "Розетки, выключатели",
+						path: "/wall_socket"
+					},
+					multimeters: {
+						ruName: "Мультиметры, токовые клещи, индикаторные отвертки",
+						path: "/multimeter"
+					},
+					chandeliersAndLamps: {
+						ruName: "Люстры и светильники",
+						path: "/luster"
+					},
+					bulbs: {
+						ruName: "Лампочки",
+						path: "/lightbulb"
+					},
+					stabilizersAndSurgeProtectors: {
+						ruName: "Стабилизаторы и сетевые фильтры",
+						path: "/voltageregulator?voltage_type[0]=stabilizer&voltage_type[operation]=union"
+					},
+					generators: {
+						ruName: "Генераторы",
+						path: "/powerstations"
+					}
 				}
 			},
 			heating: {
 				ruName: "Отопление, теплоизоляция",
 				subCategories: {
-
+					boilers: {
+						ruName: "Отопительные котлы",
+						path: "/boiler"
+					},
+					pumpForHeatingSystems: {
+						ruName: "Насосы для систем отопления",
+						path: "/pump?pump_purpose%5B0%5D=heating&pump_purpose%5Boperation%5D=union"
+					},
+					radiators: {
+						ruName: "Радиаторы отопления",
+						path: "/radiators"
+					},
+					thermalInsulation: {
+						ruName: "Теплоизоляция",
+						path: "/therminsulation"
+					},
+					soundAndVibrationIsolation: {
+						ruName: "Звуко- и виброизоляция помещений",
+						path: "/soundproofing"
+					},
+					warmFloor: {
+						ruName: "Теплые полы",
+						path: "/heatedfloor"
+					},
+					towelWarmers: {
+						ruName: "Полотенцесушители",
+						path: "/towelrail"
+					},
+					temperatureControllers: {
+						ruName: "Терморегуляторы",
+						path: "/thermostat"
+					},
+					fireplaces: {
+						ruName: "Дровяные камины, печи-камины, порталы",
+						path: "/stove"
+					},
+					expansionTanks: {
+						ruName: "Расширительные баки",
+						path: "/hydroaccum?ha_type%5B0%5D=type2&ha_type%5Boperation%5D=union"
+					},
+					tubesAndFittings: {
+						ruName: "Трубы, фитинг",
+						path: "/tube_fitting?tube_use%5B0%5D=3&tube_use%5Boperation%5D=union"
+					},
+					waterAndGasPipes: {
+						ruName: "Трубы водогазопроводные",
+						path: "/metal_pipes?pipe_type_1%5B0%5D=watergas&pipe_type_1%5Boperation%5D=union"
+					}
 				}
 			},
 			doorsAndWindows: {
 				ruName: "Двери, окна",
 				subCategories: {
-
+					metalDoors: {
+						ruName: "Металлические двери",
+						path: "/steeldoor"
+					},
+					interiorDoors: {
+						ruName: "Межкомнатные двери",
+						path: "/interiordoor"
+					},
+					pvcWindows: {
+						ruName: "Окна ПВХ",
+						path: "/vynilwindows"
+					}
 				}
 			},
 			pneumaticTools: {
 				ruName: "Пневмоинструменты",
 				subCategories: {
-
+					compressors: {
+						ruName: "Компрессоры",
+						path: "/compressor"
+					},
+					sprayGuns: {
+						ruName: "Краскопульты",
+						path: "/spraygun"
+					},
+					wrenches: {
+						ruName: "Гайковерты",
+						path: "/wrench"
+					},
+					nailers: {
+						ruName: "Скобозабиватели, гвоздезабиватели, степлеры",
+						path: "/nailer"
+					},
+					pneumaticGrinders: {
+						ruName: "Пневмошлифмашины",
+						path: "/pneumogrinder"
+					}
 				}
 			},
 			machines: {
 				ruName: "Станки",
 				subCategories: {
-
+					woodworkingMachinery: {
+						ruName: "Деревообрабатывающие станки",
+						path: "/woodworking"
+					},
+					metalworkingMachinery: {
+						ruName: "Металлообрабатывающие станки",
+						path: "/metalworking"
+					},
+					tileCutterMachinery: {
+						ruName: "Плиткорезные станки",
+						path: "/tilecutter?tc_type[0]=tool&tc_type[operation]=union"
+					},
+					sharpeningMachines: {
+						ruName: "Заточные станки (точила)",
+						path: "/benchgrinder"
+					}
 				}
 			},
 			buildingAndFinishingMaterials: {
 				ruName: "Строительные и отделочные материалы",
 				subCategories: {
-
+					buildingMaterials: {
+						ruName: "Общестроительные материалы",
+						path: "/buildingmaterial"
+					},
+					plaster: {
+						ruName: "Штукатурка",
+						path: "/plaster"
+					},
+					adhesiveMixtures: {
+						ruName: "Клеевые смеси",
+						path: "/adhesivemix"
+					},
+					floorMixtures: {
+						ruName: "Смеси для полов",
+						path: "/floormix"
+					},
+					putty: {
+						ruName: "Шпатлевка",
+						path: "/putty"
+					},
+					primer: {
+						ruName: "Грунтовка",
+						path: "/primer"
+					},
+					drywall: {
+						ruName: "Гипсокартон",
+						path: "/drywall"
+					},
+					wallPanels: {
+						ruName: "Стеновые панели",
+						path: "/wall_panels"
+					},
+					ceramicTile: {
+						ruName: "Керамическая плитка, керамогранит",
+						path: "/tile?t_tile%5B0%5D=ceramic&t_tile%5B1%5D=granite&t_tile%5B2%5D=clinker&t_tile%5Boperation%5D=union"
+					},
+					decorativeStone: {
+						ruName: "Декоративный камень и кирпич",
+						path: "/decorative_stone"
+					},
+					flexibleStone: {
+						ruName: "Гибкий камень",
+						path: "/decorative_stone?gibkij-kamen"
+					},
+					paintsAndEnamels: {
+						ruName: "Краски и эмали",
+						path: "/paints"
+					},
+					lacquer: {
+						ruName: "Лаки, пропитки, антисептики",
+						path: "/lacquer"
+					},
+					roofingMaterials: {
+						ruName: "Кровельные материалы",
+						path: "/roof"
+					},
+					bricks: {
+						ruName: "Кирпич",
+						path: "/bricks"
+					},
+					cement: {
+						ruName: "Цемент",
+						path: "/caementum"
+					},
+					pavingSlabs: {
+						ruName: "Тротуарная плитка",
+						path: "/pavers"
+					},
+					pipeMetalRolling: {
+						ruName: "Трубный металлопрокат",
+						path: "/metal_pipes"
+					},
+					sheetMetalRolling: {
+						ruName: "Листовой металлопрокат",
+						path: "/sheetmetal"
+					},
+					fittings: {
+						ruName: "Арматура",
+						path: "/armatura"
+					},
+					constructionNets: {
+						ruName: "Строительные сетки",
+						path: "/rabitz"
+					}
 				}
 			}
 		}
@@ -1539,133 +2048,1110 @@ module.exports = {
 			bathroomAndToilet: {
 				ruName: "Ванная комната и туалет",
 				subCategories: {
-
+					faucets: {
+						ruName: "Смесители",
+						path: "/faucet"
+					},
+					bathtubs: {
+						ruName: "Ванны",
+						path: "/bathtub"
+					},
+					waterHeaters: {
+						ruName: "Водонагреватели",
+						path: "/waterheater"
+					},
+					towelWarmers: {
+						ruName: "Полотенцесушители",
+						path: "/towelrail"
+					},
+					showerCabins: {
+						ruName: "Душевые кабины",
+						path: "/showerbox"
+					},
+					pans: {
+						ruName: "Унитазы",
+						path: "/wcpan"
+					},
+					washbasins: {
+						ruName: "Умывальники",
+						path: "/washbasin"
+					},
+					pedestalForWashbasins: {
+						ruName: "Пьедесталы для умывальников",
+						path: "/pedestal"
+					},
+					siphons: {
+						ruName: "Сифоны",
+						path: "/siphon"
+					},
+					tileForBathrooms: {
+						ruName: "Плитка для ванных комнат",
+						path: "/tile?t_appointment[0]=bathroom&t_appointment[operation]=union"
+					},
+					furnitureForBathrooms: {
+						ruName: "Мебель для ванных комнат",
+						path: "/bath_furniture"
+					},
+					bidets: {
+						ruName: "Биде",
+						path: "/bidet"
+					},
+					installationsForPansSinksBidets: {
+						ruName: "Инсталляции для унитазов, раковин, биде и писсуаров",
+						path: "/installations"
+					},
+					flushingSystems: {
+						ruName: "Клавиши и системы смыва",
+						path: "/flushing_system"
+					},
+					electronicBidetCovers: {
+						ruName: "Электронные крышки-биде",
+						path: "/toilet_shower"
+					},
+					showerPanels: {
+						ruName: "Душевые панели и гарнитуры",
+						path: "/shower"
+					},
+					showerTrays: {
+						ruName: "Душевые поддоны",
+						path: "/shower_trays"
+					},
+					exhaustFans: {
+						ruName: "Вытяжные вентиляторы",
+						path: "/exhaustfan?ef_useage[0]=bathroom&ef_useage[operation]=union"
+					},
+					accessPanels: {
+						ruName: "Сантехнические ревизионные люки",
+						path: "/access_panel"
+					},
+					dryClosets: {
+						ruName: "Биотуалеты",
+						path: "/biotoilet"
+					},
+					laundryBaskets: {
+						ruName: "Корзины для белья",
+						path: "/toystorage?ts_const%5B0%5D=basket&ts_const%5Boperation%5D=union&ts_purpos%5B0%5D=underwear&ts_purpos%5Boperation%5D=union"
+					}
 				}
 			},
 			kitchen: {
 				ruName: "Кухня",
 				subCategories: {
+					kitchenSinks: {
+						ruName: "Мойки",
+						path: "/kitchensink"
+					},
+					faucets: {
+						ruName: "Смесители",
+						path: "/faucet"
+					},
+					ceramicTile: {
+						ruName: "Керамическая плитка",
+						path: "/tile?t_appointment%5B0%5D=kitchen&t_appointment%5Boperation%5D=union"
+					},
+					foodWasteShredders: {
+						ruName: "Измельчители пищевых отходов",
+						path: "/disposer"
+					},
 
+					filtersAndWaterTreatmentSystems: {
+						ruName: "Фильтры и системы очистки воды",
+						path: "/waterfilter"
+					},
+					exhaustFans: {
+						ruName: "Вытяжные вентиляторы",
+						path: "/exhaustfan?ef_useage%5B0%5D=bathroom&ef_useage%5Boperation%5D=union"
+					}
 				}
 			},
 			waterSupplyAndHeating: {
 				ruName: "Водоснабжение, отопление",
 				subCategories: {
-
+					pumps: {
+						ruName: "Насосы",
+						path: "/pump"
+					},
+					waterHeaters: {
+						ruName: "Водонагреватели",
+						path: "/waterheater"
+					},
+					boilers: {
+						ruName: "отопительные котлы",
+						path: "/boiler"
+					},
+					filtersAndWaterTreatmentSystems: {
+						ruName: "Фильтры и системы очистки воды",
+						path: "/waterfilter"
+					},
+					radiators: {
+						ruName: "Радиаторы отопления",
+						path: "/radiators"
+					},
+					fireplaces: {
+						ruName: "Дровяные камины, печи-камины, порталы",
+						path: "/stove"
+					},
+					heaters: {
+						ruName: "Обогреватели",
+						path: "/heater"
+					},
+					heatGuns: {
+						ruName: "Тепловые пушки",
+						path: "/heat_gun"
+					},
+					electricFireplaces: {
+						ruName: "электрокамины и биокамины",
+						path: "/electrofireplace"
+					},
+					waterAccumulators: {
+						ruName: "Гидроаккумуляторы и расширительные баки",
+						path: "/hydroaccum"
+					},
+					motorPumps: {
+						ruName: "Мотопомпы",
+						path: "/motopump"
+					},
+					pipesAndFittings: {
+						ruName: "Трубы, фитинг",
+						path: "/tube_fitting"
+					},
+					waterAndGasPipes: {
+						ruName: "Трубы водогазопроводные",
+						path: "/metal_pipes?pipe_type_1%5B0%5D=watergas&pipe_type_1%5Boperation%5D=union"
+					}
 				}
 			},
 			furniture: {
 				ruName: "Мебель для дома",
 				subCategories: {
+					officeArmchairsAndChairs: {
+						ruName: "Офисные кресла и стулья",
+						path: "/office_chair?asgmt%5B0%5D=visitor&asgmt%5B1%5D=staff&asgmt%5B2%5D=boss&asgmt%5Boperation%5D=union"
+					},
+					gamingChairs: {
+						ruName: "Геймерские кресла",
+						path: "/office_chair?asgmt%5B0%5D=game&asgmt%5Boperation%5D=union"
+					},
+					sofas: {
+						ruName: "Диваны",
+						path: "/divan"
+					},
+					tables: {
+						ruName: "Столы",
+						path: "/table"
+					},
+					chairsForKitchenAndBar: {
+						ruName: "Стулья для кухни и бара",
+						path: "/chair"
+					},
+					armchairs: {
+						ruName: "Кресла",
+						path: "/interior_chair"
+					},
+					beds: {
+						ruName: "Кровати",
+						path: "/bed"
+					},
+					furnitureForBathrooms: {
+						ruName: "Мебель ля ванных комнат",
+						path: "/bath_furniture"
+					},
+					cots: {
+						ruName: "Детские кроватки",
+						path: "/babycotbed"
+					},
+					childrenTablesAndSchoolDesks: {
+						ruName: "Детские столы и парты",
+						path: "/kidsdesk"
+					},
+					childrenDressers: {
+						ruName: "Детские комоды",
+						path: "/babydresser"
+					},
+					boxesBasketsOrganizers: {
+						ruName: "Ящики, корзины, органайзеры",
+						path: "/toystorage"
+					},
+					inflatableFurniture: {
+						ruName: "Надувная мебель",
+						path: "/airbed"
+					},
 
+					framelessFurniture: {
+						ruName: "Бескаркасная мебель",
+						path: "/beanbag"
+					},
+					bedBases: {
+						ruName: "Основания для кроватей",
+						path: "/orthobase"
+					},
+					massagersAndMassageChairs: {
+						ruName: "Массажеры и массажные кресла",
+						path: "/massagechair"
+					}
 				}
 			},
 			bedroom: {
 				ruName: "Товары для спальни и домашний текстиль",
 				subCategories: {
-
+					mattresses: {
+						ruName: "Матрасы",
+						path: "/mattress"
+					},
+					orthopedicPillows: {
+						ruName: "Ортопедические подушки",
+						path: "/pillow"
+					},
+					classicPillows: {
+						ruName: "Классические подушки для сна",
+						path: "/pillows?pil_type%5B0%5D=sleep&pil_type%5Boperation%5D=union&order=price:asc"
+					},
+					blankets: {
+						ruName: "Одеяла",
+						path: "/pillows?pil_type%5B0%5D=blanket&pil_type%5Boperation%5D=union"
+					},
+					plaids: {
+						ruName: "Пледы, покрывала",
+						path: "h/plaid"
+					},
+					bedlinen: {
+						ruName: "Постельное белье",
+						path: "/bedlinen"
+					},
+					mattressPads: {
+						ruName: "Наматрасники",
+						path: "/mattresspad"
+					},
+					electricLinen: {
+						ruName: "Электрогрелки, электроодеяла, электропростыни",
+						path: "/mobile_heater"
+					},
+					maternityPillows: {
+						ruName: "Подушки для беременных",
+						path: "/pillows?pil_type%5B0%5D=forpregnantwom&pil_type%5Boperation%5D=union"
+					},
+					decorativePillows: {
+						ruName: "Декоративные подушки",
+						path: "/pillows?pil_type%5B0%5D=decor&pil_type%5Boperation%5D=union"
+					}
 				}
 			},
 			gardenToolsAndMachines: {
 				ruName: "Садовая техника и инструменты",
 				subCategories: {
-
+					miniTractors: {
+						ruName: "Мини-тракторы",
+						path: "/minitractor"
+					},
+					motorBlocks: {
+						ruName: "Мотоблоки и мультикультиваторы",
+						path: "/motoblock"
+					},
+					attachmentsForGardenEquipment: {
+						ruName: "Навесное оборудование для садовой техники",
+						path: "/attachmentgarden"
+					},
+					engines: {
+						ruName: "Двигатели",
+						path: "/engine"
+					},
+					trimmers: {
+						ruName: "Триммеры",
+						path: "/trimmers"
+					},
+					mowers: {
+						ruName: "Газонокосилки",
+						path: "/mowers"
+					},
+					toolsAccumulators: {
+						ruName: "Аккумуляторы и зарядные устройства для инструмента",
+						path: "/tools_accum"
+					},
+					aerators: {
+						ruName: "Аэраторы, скарификаторы",
+						path: "/mowers?type_mowing%5B0%5D=scarifier&type_mowing%5B1%5D=aerator&type_mowing%5B2%5D=scarifieraera&type_mowing%5Boperation%5D=union"
+					},
+					chainSaws: {
+						ruName: "Цепные пилы",
+						path: "/chainsaw"
+					},
+					householdVacuumCleaners: {
+						ruName: "Хозяйственные пылесосы",
+						path: "/vacuumcleaner?vc_type%5B0%5D=wetdryvc&vc_type%5Boperation%5D=union"
+					},
+					logSplitters: {
+						ruName: "Дровоколы",
+						path: "/logsplitter"
+					},
+					pressureWashers: {
+						ruName: "Мойки высокого давления",
+						path: "/washers"
+					},
+					hedgeTrimmers: {
+						ruName: "Кусторезы и высоторезы",
+						path: "/hedgetrimmers"
+					},
+					gardenShredders: {
+						ruName: "Садовые измельчители",
+						path: "/gardenshredder"
+					},
+					snowBlowers: {
+						ruName: "Снегоуборщики",
+						path: "/snowblower"
+					},
+					leafBlowers: {
+						ruName: "Воздуходувки",
+						path: "/leafblower"
+					},
+					gardenTools: {
+						ruName: "Садовый инструмент",
+						path: "/gardentool"
+					},
+					wateringHoses: {
+						ruName: "Поливочные шланги",
+						path: "/garden_hose"
+					},
+					automaticWateringSystems: {
+						ruName: "Системы автоматического полива, распылители",
+						path: "/watering_system"
+					},
+					gardenBarrows: {
+						ruName: "Садовые тачки",
+						path: "/barrow"
+					},
+					stairsAndLadders: {
+						ruName: "Лестницы и стремянки",
+						path: "/stairandladder"
+					}
 				}
 			},
 			dacha: {
 				ruName: "Отдых на даче",
 				subCategories: {
-
+					baths: {
+						ruName: "Бани, купели",
+						path: "/bath"
+					},
+					gazeboses: {
+						ruName: "Беседки",
+						path: "/garden_house"
+					},
+					pools: {
+						ruName: "Бассейны",
+						path: "/pool"
+					},
+					grills: {
+						ruName: "Мангалы, грили, барбекю",
+						path: "/grill"
+					},
+					bbqFacilities: {
+						ruName: "Принадлежности для барбекю, грилей, мангалов",
+						path: "/bbq_accessories"
+					},
+					bathStoves: {
+						ruName: "Банные печи",
+						path: "/bathstove"
+					},
+					childrenStreetComplexesAndHills: {
+						ruName: "Детские уличные комплексы и горки",
+						path: "/kidwallbars?kwb_type[0]=outdoor&kwb_type[operation]=union"
+					},
+					gardenSwing: {
+						ruName: "Садовые качели",
+						path: "/gardenswing"
+					},
+					trampolines: {
+						ruName: "Батуты",
+						path: "/trampoline"
+					},
+					gardenFurniture: {
+						ruName: "Садовая мебель",
+						path: "/gardenfurniture"
+					},
+					hammocks: {
+						ruName: "Гамаки",
+						path: "/hammock"
+					},
+					tents: {
+						ruName: "Шатры, тенты",
+						path: "/canopy_tents"
+					},
+					loungers: {
+						ruName: "Шезлонги",
+						path: "/lounger"
+					},
+					streetUmbrellas: {
+						ruName: "Зонты садовые, пляжные",
+						path: "/street_umbrella"
+					}
 				}
 			},
 			siteArrangement: {
 				ruName: "Обустройство участка",
 				subCategories: {
-
+					houses: {
+						ruName: "Дома, коттеджи",
+						path: "/house"
+					},
+					gazeboses: {
+						ruName: "Беседки",
+						path: "/garden_house"
+					},
+					gardenCabins: {
+						ruName: "Дачные бытовки и хозблоки",
+						path: "/garden_cabin"
+					},
+					streetLightning: {
+						ruName: "Уличное освещение",
+						path: "/luster?lu_arrangement%5B0%5D=street&lu_arrangement%5Boperation%5D=union"
+					},
+					streetClothesDryers: {
+						ruName: "Уличные сушки для белья",
+						path: "/linendryer?dr_mounting[0]=ground&dr_mounting[operation]=union"
+					},
+					insectKillers: {
+						ruName: "Уничтожители насекомых",
+						path: "/insect_killer"
+					},
+					summerShowers: {
+						ruName: "Летние души",
+						path: "/summer_shower"
+					},
+					countryToilets: {
+						ruName: "Дачные туалеты",
+						path: "/outdoor_toilet"
+					},
+					dryClosets: {
+						ruName: "Биотуалеты",
+						path: "/biotoilet"
+					},
+					meansForDryClosets: {
+						ruName: "Средства для биотуалетов, выгребных ям",
+						path: "/wc_liquid"
+					},
+					brickTile: {
+						ruName: "Клинкерная плитка",
+						path: "/tile?t_tile%5B0%5D=clinker&t_tile%5Boperation%5D=union"
+					},
+					pavingSlabs: {
+						ruName: "Тротуарная плитка",
+						path: "/pavers"
+					},
+					plantersAndPotsForPlants: {
+						ruName: "Кашпо, горшки для растений",
+						path: "/flowerpot"
+					},
+					rabitz: {
+						ruName: "Сетка-рабица",
+						path: "/rabitz?mfr[0]=setkarabitza"
+					}
 				}
 			},
 			decorAndInterior: {
 				ruName: "Декор и интерьер",
 				subCategories: {
-
+					interiorClocks: {
+						ruName: "Интерьерные часы",
+						path: "/interior_clock"
+					},
+					nightLights: {
+						ruName: "Ночники",
+						path: "/luster?lu_type%5B0%5D=nightlight&lu_type%5Boperation%5D=union"
+					},
+					floorLamps: {
+						ruName: "Торшеры",
+						path: "/luster?lu_type%5B0%5D=floorlamp&lu_type%5Boperation%5D=union"
+					},
+					meteoStations: {
+						ruName: "Метеостанции",
+						path: "/meteostations"
+					},
+					electricFireplaces: {
+						ruName: "Электрокамины и биокамины",
+						path: "/electrofireplace"
+					},
+					decorativePillows: {
+						ruName: "Декоративные подушки",
+						path: "/pillows?pil_type%5B0%5D=decor&pil_type%5Boperation%5D=union"
+					},
+					houseplants: {
+						ruName: "Комнатные растения, флорариумы",
+						path: "/houseplant"
+					}
 				}
 			},
 			lightningAndPowerSupply: {
 				ruName: "Освещение и электропитание",
 				subCategories: {
-
+					chandeliersAndLamps: {
+						ruName: "Люстры и светильники",
+						path: "/luster"
+					},
+					tableLamps: {
+						ruName: "Настольные лампы",
+						path: "/luster?lu_type%5B0%5D=light&lu_type%5Boperation%5D=union&lu_arrangement%5B0%5D=table&lu_arrangement%5Boperation%5D=union"
+					},
+					floorLamps: {
+						ruName: "Торшеры",
+						path: "/luster?lu_type%5B0%5D=floorlamp&lu_type%5Boperation%5D=union"
+					},
+					nightLights: {
+						ruName: "Ночники",
+						path: "/luster?lu_type%5B0%5D=nightlight&lu_type%5Boperation%5D=union"
+					},
+					streetLightning: {
+						ruName: "Уличное освещение",
+						path: "/luster?lu_arrangement%5B0%5D=street&lu_arrangement%5Boperation%5D=union"
+					},
+					bulbs: {
+						ruName: "Лампочки",
+						path: "/lightbulb"
+					},
+					socketsAndSwitches: {
+						ruName: "Розетки, выключатели",
+						path: "/wall_socket"
+					},
+					stabilizersAndSurgeProtectors: {
+						ruName: "Стабилизаторы напряжения и сетевые фильтры",
+						path: "/voltageregulator?voltage_type[0]=stabilizer&voltage_type[operation]=union"
+					},
+					generators: {
+						ruName: "Генераторы",
+						path: "/powerstations"
+					}
 				}
 			},
 			smartHouseAndSecurity: {
 				ruName: "Умный дом и безопасность",
 				subCategories: {
-
+					smartHome: {
+						ruName: "Умный дом",
+						path: "/smart_home"
+					},
+					smartThermostats: {
+						ruName: "Умные терморегуляторы",
+						path: "/thermostat?smarthome=1"
+					},
+					smartBulbs: {
+						ruName: "Умные лампочки",
+						path: "/lightbulb?lib_smartlight=1"
+					},
+					smartSockets: {
+						ruName: "Умные розетки",
+						path: "/wall_socket?wallsoc_smart=1"
+					},
+					ipCameras: {
+						ruName: "IP-камеры",
+						path: "/ipcamera"
+					},
+					videoDoorPhones: {
+						ruName: "Видеодомофоны",
+						path: "/videodoorphone"
+					},
+					CCTV: {
+						ruName: "Камеры CCTV",
+						path: "/cctvcamera"
+					},
+					DVRs: {
+						ruName: "Видеорегистраторы",
+						path: "/dvr"
+					},
+					cameraTraps: {
+						ruName: "Фотоловушки",
+						path: "/camera_traps"
+					},
+					metalDoors: {
+						ruName: "Входные двери",
+						path: "/steeldoor"
+					},
+					extinguishers: {
+						ruName: "Огнетушители",
+						path: "/extinguisher"
+					}
 				}
 			},
 			clothingCare: {
 				ruName: "Уход за одеждой, стирка",
 				subCategories: {
-
+					linenDryers: {
+						ruName: "Сушилки для белья",
+						path: "/linendryer"
+					},
+					ironingBoards: {
+						ruName: "Гладильные доски",
+						path: "/ironingboard"
+					},
+					laundryAndCareProducts: {
+						ruName: "Средства для стирки и ухода за бельем",
+						path: "/washingpowder"
+					},
+					dishwasherTools: {
+						ruName: "Средства для посудомоечных машин",
+						path: "/dishwashertablet"
+					}
 				}
 			},
 			dishes: {
 				ruName: "Посуда и продукты питания",
 				subCategories: {
-
+					pans: {
+						ruName: "Сковороды",
+						path: "/pan"
+					},
+					stewpans: {
+						ruName: "Сотейники",
+						path: "/pan?p_type[0]=saucepan&p_type[operation]=union"
+					},
+					saucepans: {
+						ruName: "Кастрюли",
+						path: "/saucepan"
+					},
+					lids: {
+						ruName: "Крышки для посуды",
+						path: "/lids"
+					},
+					kettles: {
+						ruName: "Чайники",
+						path: "/kettles"
+					},
+					teapots: {
+						ruName: "Заварочные чайники, кофеварки, френч-прессы",
+						path: "/teapot"
+					},
+					dishesSets: {
+						ruName: "Сервизы и наборы столовой посуды",
+						path: "/dishset"
+					},
+					cutlery: {
+						ruName: "Столовые приборы",
+						path: "/cutlery"
+					},
+					kitchenKnifesAndScissors: {
+						ruName: "Кухонные ножи и ножницы",
+						path: "/kitchen_knife"
+					},
+					bakingDishesAndBakingSheets: {
+						ruName: "Формы для выпечки, противни",
+						path: "/breadpan"
+					},
+					barAccessories: {
+						ruName: "Аксессуары для бара",
+						path: "/bar_accessories"
+					},
+					thermosesAndThermomugs: {
+						ruName: "Термосы, термокружки",
+						path: "/thermosbottle"
+					},
+					coffee: {
+						ruName: "Кофе",
+						path: "/coffeejava"
+					}
 				}
 			},
 			celebrations: {
 				ruName: "Праздники",
 				subCategories: {
-
+					flowersBouquets: {
+						ruName: "Цветы, букеты",
+						path: "/flowersbouquets"
+					},
+					stuffedToys: {
+						ruName: "Мягкие игрушки",
+						path: "/stuffedtoys"
+					},
+					xmasTrees: {
+						ruName: "Елки",
+						path: "/tree"
+					},
+					xmasLights: {
+						ruName: "Электрические гирлянды",
+						path: "/xmaslights"
+					},
+					xmaslightsTreesAndFigures: {
+						ruName: "Световые деревья, фигуры",
+						path: "/xmaslights?xl_type[0]=2d&xl_type[1]=tree&xl_type[2]=3d&xl_type[operation]=union"
+					},
+					xmasToysAndDecorations: {
+						ruName: "Елочные игрушки, украшения",
+						path: "/christmasdecor"
+					}
 				}
 			},
 			petSupplies: {
 				ruName: "Зоотовары",
 				subCategories: {
-
+					dogFood: {
+						ruName: "Корма для собак",
+						path: "/foodfordog"
+					},
+					catFood: {
+						ruName: "Корма для кошек",
+						path: "/catfood"
+					},
+					animalPlates: {
+						ruName: "Миски, поилки, кормушки для животных",
+						path: "/animal_plate"
+					},
+					toiletsFillers: {
+						ruName: "Наполнители для туалетов",
+						path: "/catlitter?catlit_typ%5B0%5D=type6&catlit_typ%5Boperation%5D=union"
+					},
+					toiletsForAnimals: {
+						ruName: "Туалеты",
+						path: "/catlitter?catlit_typ%5B0%5D=type1&catlit_typ%5B1%5D=type2&catlit_typ%5Boperation%5D=union"
+					},
+					bagsForAnimals: {
+						ruName: "Сумки, переноски для животных",
+						path: "/pet_carrier"
+					},
+					loungersForAnimals: {
+						ruName: "Лежанки, домики, когтеточки для кошек и собак",
+						path: "/pet_house"
+					}
 				}
 			},
 			plantGrowing: {
 				ruName: "Растениеводство",
 				subCategories: {
-
+					gardenTools: {
+						ruName: "Садовый инструмент",
+						path: "/gardentool"
+					},
+					greenhousesAndHotbeds: {
+						ruName: "Теплицы и парники",
+						path: "/greenhouse"
+					},
+					polycarbonateForGreenhouses: {
+						ruName: "Поликарбонат для теплиц",
+						path: "/polycarbonate"
+					},
+					coveringMaterials: {
+						ruName: "Укрывной материал",
+						path: "/coveringmaterial"
+					},
+					wateringHoses: {
+						ruName: "Поливочные шланги",
+						path: "/garden_hose"
+					},
+					automaticWateringSystems: {
+						ruName: "Системы автоматического полива, распылители",
+						path: "/watering_system"
+					},
+					houseplants: {
+						ruName: "Комнатные растения, флорариумы",
+						path: "/houseplant"
+					},
+					plantersAndPotsForPlants: {
+						ruName: "Кашпо, горшки для растений",
+						path: "/flowerpot"
+					},
+					grassSeedsAndLawn: {
+						ruName: "Семена трав, газон",
+						path: "/lawn"
+					},
+					soilForPlants: {
+						ruName: "Грунты для растений",
+						path: "/soilforplants"
+					},
+					fertilizers: {
+						ruName: "Удобрения",
+						path: "/fertilizer"
+					},
+					saplingsOfFruitTreesAndBushes: {
+						ruName: "Саженцы плодовых деревьев и кустарников",
+						path: "/shrubtree?fs_vid%5B0%5D=plod&fs_vid%5Boperation%5D=union"
+					},
+					saplingsOfDecorativeBushes: {
+						ruName: "Саженцы декоративных кустарников",
+						path: "/shrubtree?fs_type%5B0%5D=shrub&fs_type%5Boperation%5D=union&fs_vid%5B0%5D=dekor&fs_vid%5Boperation%5D=union"
+					},
+					saplingsOfConiferousBushes: {
+						ruName: "Саженцы хвойных растений",
+						path: "/shrubtree?fs_appearance%5B0%5D=coniferous&fs_appearance%5Boperation%5D=union"
+					},
+					flowerSeeds: {
+						ruName: "Семена цветов",
+						path: "/flowersseed?vs_reproduction%5B0%5D=seed&vs_reproduction%5Boperation%5D=union"
+					},
+					flowerBulbs: {
+						ruName: "Луковицы цветов",
+						path: "/flowersseed?vs_reproduction%5B0%5D=bulbs&vs_reproduction%5Boperation%5D=union"
+					},
+					seedsOfVegetablesHerbsAndBerries: {
+						ruName: "Семена овощей, зелени и ягод",
+						path: "/vegetableseed"
+					}
 				}
 			}
 		}
 	},
-	carsAndCycles: {
+	carsAndMotorcycles: {
 		id: 6,
 		ruName: "Авто и мото",
 		categories: {
 			sparePartsAndTechnicalFluids: {
 				ruName: "Запчасти и технические жидкости",
 				subCategories: {
-
+					tires: {
+						ruName: "Шины",
+						path: "/tires"
+					},
+					motorOil: {
+						ruName: "Моторные масла",
+						path: "/motor_oil"
+					},
+					carBatteries: {
+						ruName: "Аккумуляторы",
+						path: "/carbattery"
+					},
+					wheels: {
+						ruName: "Диски",
+						path: "/wheel"
+					},
+					gearOil: {
+						ruName: "Трансмиссионные масла",
+						path: "/gearoil"
+					},
+					carBulbs: {
+						ruName: "Лампы",
+						path: "/autolamps"
+					},
+					coolants: {
+						ruName: "Охлаждающие жидкости",
+						path: "/antifreeze"
+					},
+					additives: {
+						ruName: "Присадки",
+						path: "/additive4fuel"
+					},
+					glassWasherFluids: {
+						ruName: "Стеклоомывающие жидкости",
+						path: "/washerfluid"
+					},
+					brakeFluids: {
+						ruName: "Тормозные жидкости",
+						path: "/brakefluid"
+					},
+					xenon: {
+						ruName: "Ксенон",
+						path: "/xenon"
+					},
+					motorBatteries: {
+						ruName: "Мотоциклетные аккумуляторы",
+						path: "/motobatteries"
+					},
+					enginePreheaters: {
+						ruName: "Предпусковые подогреватели двигателя и топливной системы",
+						path: "/dieselfuelheater"
+					}
 				}
 			},
 			carElectronics: {
 				ruName: "Автоэлектроника",
 				subCategories: {
-
+					DVRs: {
+						ruName: "Видеорегистраторы",
+						path: "/videoregistrator"
+					},
+					radioAndHeadSystems: {
+						ruName: "Магнитолы и головные системы",
+						path: "/caraudio"
+					},
+					carSpeakers: {
+						ruName: "Акустика",
+						path: "/carspeakers"
+					},
+					radarDetectors: {
+						ruName: "Радар-детекторы",
+						path: "/radar"
+					},
+					gpsNavigators: {
+						ruName: "GPS-навигаторы",
+						path: "/gps"
+					},
+					carAlarm: {
+						ruName: "Сигнализация",
+						path: "/caralarm"
+					},
+					carAmplifiers: {
+						ruName: "Усилители",
+						path: "/caramps"
+					},
+					cbRadioStations: {
+						ruName: "Радиостанции CB",
+						path: "/car_radio"
+					},
+					speakerphones: {
+						ruName: "Громкая связь",
+						path: "/carkit"
+					},
+					fmModulators: {
+						ruName: "FM-модуляторы",
+						path: "/fmmodulators"
+					},
+					carInverters: {
+						ruName: "Автомобильные инверторы",
+						path: "/car_inverter"
+					},
+					parkingRadar: {
+						ruName: "Парковочные радары",
+						path: "/parkingradar"
+					},
+					gpsTrackers: {
+						ruName: "GPS-трекеры",
+						path: "/gps_tracker"
+					},
+					carAntennas: {
+						ruName: "Автомобильные антенны",
+						path: "/antenforradio"
+					},
+					carVideoPlayers: {
+						ruName: "Автомобильные видеоплееры и DVD",
+						path: "/portabletvdvd"
+					}
 				}
 			},
 			repairAndWashingEquipment: {
 				ruName: "Оборудование для ремонта и мойки",
 				subCategories: {
-
+					welders: {
+						ruName: "Сварочные аппараты",
+						path: "/weldinginverter"
+					},
+					toolKits: {
+						ruName: "Наборы инструментов",
+						path: "/tool_kits"
+					},
+					torqueWrenchesAndScrewdrivers: {
+						ruName: "Динамометрические ключи и отвертки",
+						path: "/torque_wrenches"
+					},
+					multimeters: {
+						ruName: "Мультиметры, токовые клещи, индикаторные отвертки",
+						path: "/multimeter"
+					},
+					compressors: {
+						ruName: "Компрессоры",
+						path: "/compressor"
+					},
+					pressureWashers: {
+						ruName: "Мойки высокого давления",
+						path: "/washers"
+					},
+					pneumaticSprayGuns: {
+						ruName: "Пневматические краскопульты",
+						path: "/spraygun"
+					},
+					carjacks: {
+						ruName: "Домкраты",
+						path: "/carjack"
+					},
+					weldingMasks: {
+						ruName: "Сварочные маски",
+						path: "/weldingmask"
+					},
+					electricSprayGuns: {
+						ruName: "Электрические краскопульты",
+						path: "/electricspraygun"
+					},
+					pneumaticWrenches: {
+						ruName: "Пневматические гайковерты",
+						path: "/wrench"
+					},
+					grinders: {
+						ruName: "Пневматические шлифмашины",
+						path: "/pneumogrinder"
+					},
+					carLifts: {
+						ruName: "Подъемники",
+						path: "/carlift"
+					}
 				}
 			},
 			carAccessories: {
 				ruName: "Аксессуары",
 				subCategories: {
-
+					toolKits: {
+						ruName: "Наборы инструментов",
+						path: "/tool_kits"
+					},
+					startChargers: {
+						ruName: "Пускозарядные устройства",
+						path: "/start_charge"
+					},
+					carRefrigerators: {
+						ruName: "Автохолодильники, термобоксы, термосумки",
+						path: "/arrefrigerator"
+					},
+					carCompressors: {
+						ruName: "Автомобильные компрессоры",
+						path: "/compressor_auto"
+					},
+					carHolders: {
+						ruName: "Держатели для телефонов",
+						path: "/carholder"
+					},
+					breathalyzers: {
+						ruName: "Алкотестеры",
+						path: "/breathalyzer"
+					},
+					bicycleRacks: {
+						ruName: "Велобагажники",
+						path: "/bicyclerack"
+					},
+					carVacuumCleaners: {
+						ruName: "Автомобильные пылесосы",
+						path: "/car_vacuum_clean"
+					},
+					carRoofRacks: {
+						ruName: "Багажники на крышу",
+						path: "/car_racks"
+					},
+					electricChargingStations: {
+						ruName: "Электрические зарядные станции",
+						path: "/charging_station"
+					}
 				}
 			},
 			autoAndMototechnics: {
 				ruName: "Авто и мототехника",
 				subCategories: {
-
+					cars: {
+						ruName: "Легковые автомобили",
+						path: "/car"
+					},
+					miniTractors: {
+						ruName: "Тракторы",
+						path: "/minitractor"
+					},
+					motorcycles: {
+						ruName: "Мотоциклы",
+						path: "/motorcycle"
+					},
+					electricScooters: {
+						ruName: "Электроскутеры",
+						path: "/electric_scooter?ks_type%5B0%5D=scooter&ks_type%5Boperation%5D=union"
+					},
+					scooters: {
+						ruName: "Скутеры и мопеды",
+						path: "/scooter"
+					},
+					ATVs: {
+						ruName: "Квадроциклы",
+						path: "/quad"
+					},
+					motorHelmets: {
+						ruName: "Мотошлемы",
+						path: "/motohelmet"
+					},
+					motorBatteries: {
+						ruName: "Мотоциклетные аккумуляторы",
+						path: "/motobatteries"
+					},
+					motorcycleTires: {
+						ruName: "Мотоциклетные шины",
+						path: "/moto_tires"
+					}
 				}
 			}
 		}
@@ -1677,73 +3163,618 @@ module.exports = {
 			bicycleAndAccessories: {
 				ruName: "Велосипеды и аксессуары",
 				subCategories: {
-
+					bikes: {
+						ruName: "Велосипеды",
+						path: "/bike"
+					},
+					childrenBicycles: {
+						ruName: "Детские велосипеды",
+						path: "/kidsbike"
+					},
+					bicycleTires: {
+						ruName: "Велопокрышки, велокамеры",
+						path: "/bicycle_tires"
+					},
+					bicycleHelmets: {
+						ruName: "Велошлемы",
+						path: "/bikehelmet?bh_sport%5B0%5D=type1&bh_sport%5Boperation%5D=union"
+					},
+					bikeComputers: {
+						ruName: "Велокомпьютеры",
+						path: "/bikecomp"
+					},
+					bikeLocks: {
+						ruName: "Велозамки",
+						path: "/bikelock"
+					},
+					babyBikeSeats: {
+						ruName: "Детские велокресла",
+						path: "/bikeseat"
+					},
+					bicycleRacks: {
+						ruName: "Велобагажники",
+						path: "/bicyclerack"
+					},
+					childrenTrailers: {
+						ruName: "Детские велоприцепы",
+						path: "/pram?pramconstruct%5B0%5D=trailer&pramconstruct%5Boperation%5D=union"
+					},
+					actionCameras: {
+						ruName: "Экшен-камеры",
+						path: "/actioncamera"
+					},
+					actionCamerasAccessories: {
+						ruName: "Аксессуары и крепления для экшен-камер",
+						path: "/actioncamera_acs"
+					}
 				}
 			},
 			rollerSkatesSkateboards: {
 				ruName: "Роликовые коньки, скейтборды, самокаты",
 				subCategories: {
-
+					rollerSkates: {
+						ruName: "Роликовые коньки",
+						path: "/rollerskates"
+					},
+					skateboards: {
+						ruName: "Скейтборды",
+						path: "/skateboard"
+					},
+					kickScooters: {
+						ruName: "Самокаты",
+						path: "/kickscooter"
+					},
+					sportsProtection: {
+						ruName: "Спортивная защита",
+						path: "https://catalog.onliner.by/sportsprotection"
+					},
+					actionCameras: {
+						ruName: "Экшен-камеры",
+						path: "/actioncamera"
+					},
+					actionCameraAccessories: {
+						ruName: "Аксессуары и крепления для экшен-камер",
+						path: "/actioncamera_acs"
+					}
+				}
+			},
+			electricTransport: {
+				ruName: "Роликовые коньки, скейтборды, самокаты",
+				subCategories: {
+					electricScooters: {
+						ruName: "Электросамокаты и электроскутеры",
+						path: "/electric_scooter"
+					},
+					gyrocycles: {
+						ruName: "Гироциклы",
+						path: "/segway"
+					},
+					electricBicycles: {
+						ruName: "Электровелосипеды",
+						path: "/electrobike"
+					}
 				}
 			},
 			watchBagsAccessories: {
 				ruName: "Часы, сумки и прочие аксессуары",
 				subCategories: {
-
+					watches: {
+						ruName: "Наручные часы",
+						path: "/watch"
+					},
+					smartWatches: {
+						ruName: "Умные часы и фитнес-браслеты",
+						path: "/smartwatch"
+					},
+					backpacks: {
+						ruName: "Рюкзаки",
+						path: "/backpack"
+					},
+					suitcases: {
+						ruName: "Чемоданы и дорожные сумки",
+						path: "/suitcase"
+					},
+					wallets: {
+						ruName: "Кошельки",
+						path: "/wallet"
+					},
+					businessCardHolders: {
+						ruName: "Визитницы",
+						path: "/wallet?wallet_type%5B0%5D=card_holder&wallet_type%5Boperation%5D=union"
+					},
+					lighters: {
+						ruName: "Зажигалки",
+						path: "/cigarettelighter"
+					}
 				}
 			},
 			cosmeticPerfumeryAccessories: {
 				ruName: "Косметика, парфюмерия, аксессуары",
 				subCategories: {
-
+					perfumery: {
+						ruName: "Парфюмерия",
+						path: "/parfume"
+					},
+					faceMakeup: {
+						ruName: "Декоративная косметика для лица",
+						path: "/face_makeup"
+					},
+					eyesMakeup: {
+						ruName: "Декоративная косметика для глаз",
+						path: "/eye_makeup"
+					},
+					lipsMakeup: {
+						ruName: "Декоративная косметика для губ",
+						path: "/lip_makeup"
+					},
+					nailsCare: {
+						ruName: "Средства по уходу за ногтями",
+						path: "/nailcare"
+					},
+					faceCare: {
+						ruName: "Уход за лицом",
+						path: "/facial_cosmetics"
+					},
+					hairCare: {
+						ruName: "Уход за волосами",
+						path: "/haircare"
+					},
+					bodyCare: {
+						ruName: "Уход за телом",
+						path: "/body_care"
+					},
+					hairStyling: {
+						ruName: "Средства для укладки волос",
+						path: "/hair_styling"
+					},
+					hairDye: {
+						ruName: "Средства для окрашивания волос",
+						path: "/hair_color"
+					},
+					cosmeticsAccessories: {
+						ruName: "Аксессуары для косметики",
+						path: "/cosmetics_access"
+					},
+					cosmeticMirrors: {
+						ruName: "Косметические зеркала",
+						path: "/cosmetic_mirror"
+					}
 				}
 			},
 			health: {
 				ruName: "Здоровье",
 				subCategories: {
-
+					fitnessBraceletsAndWatches: {
+						ruName: "Фитнес-браслеты и часы",
+						path: "/smartwatch?sw_type[0]=bracelet&sw_type[operation]=union"
+					},
+					toothbrushes: {
+						ruName: "Зубные щетки и ирригаторы",
+						path: "/toothbrush"
+					},
+					massagersAndMassageChairs: {
+						ruName: "Массажеры и массажные кресла",
+						path: "/massagechair"
+					},
+					electricLinen: {
+						ruName: "Электрогрелки, электроодеяла, электропростыни",
+						path: "/mobile_heater"
+					},
+					inhalers: {
+						ruName: "Ингаляторы",
+						path: "/inhaler"
+					},
+					bloodPressureMonitors: {
+						ruName: "Тонометры",
+						path: "/tonometers"
+					},
+					thermometers: {
+						ruName: "Термометры",
+						path: "/medthermometer"
+					},
+					bloodGlucoseMeters: {
+						ruName: "Глюкометры",
+						path: "/glucosemeter"
+					},
+					heartRateMonitors: {
+						ruName: "Пульсометры, пульсоксиметры",
+						path: "/heart_rate"
+					},
+					physicalTherapyDevices: {
+						ruName: "Приборы для физиотерапии",
+						path: "/physical_therapy"
+					},
+					nitratomersDosimeters: {
+						ruName: "Нитратомеры, дозиметры, экотестеры",
+						path: "/nitrate"
+					},
+					contactLenses: {
+						ruName: "Контактные линзы",
+						path: "/contact_lense"
+					},
+					lensSolutions: {
+						ruName: "Растворы для линз",
+						path: "/solutionlenses"
+					},
+					massageBalls: {
+						ruName: "Массажные мячи",
+						path: "/ball?ball_type%5B0%5D=massaging&ball_type%5Boperation%5D=union"
+					}
 				}
 			},
-			healthcareEquipment: {
+			bodyCareEquipment: {
 				ruName: "Приборы по уходу за телом",
 				subCategories: {
-
+					hairClippers: {
+						ruName: "Машинки для стрижки волос",
+						path: "/hairclipper"
+					},
+					curlingIronsStylers: {
+						ruName: "Плойки, стайлеры, щипцы",
+						path: "/styler"
+					},
+					hairdryers: {
+						ruName: "Фены",
+						path: "/hairdryer"
+					},
+					toothbrushes: {
+						ruName: "Зубные щетки и ирригаторы",
+						path: "/toothbrush"
+					},
+					shavers: {
+						ruName: "Мужские электробритвы",
+						path: "/shaver"
+					},
+					ladyShavers: {
+						ruName: "Женские электробритвы и эпиляторы",
+						path: "/ladyshaver"
+					},
+					scales: {
+						ruName: "Напольные весы",
+						path: "/scales"
+					},
+					hydromassageBaths: {
+						ruName: "Гидромассажные ванночки",
+						path: "/footbath"
+					},
+					manicureAndPedicureSets: {
+						ruName: "Маникюрные и педикюрные наборы",
+						path: "/manicure"
+					},
+					skinCareDevices: {
+						ruName: "Приборы для ухода за кожей",
+						path: "/skin_care_app"
+					},
+					cosmeticMirrors: {
+						ruName: "Косметические зеркала",
+						path: "/cosmetic_mirror"
+					},
+					toothBrushesAccessories: {
+						ruName: "Аксессуары для зубных щеток и ирригаторов",
+						path: "/beauty_acs?ba_purpos%5B0%5D=type1&ba_purpos%5B1%5D=type2&ba_purpos%5Boperation%5D=union"
+					},
+					accessoriesForShavers: {
+						ruName: "Аксессуары для электробритв и машинок",
+						path: "/beauty_acs?ba_purpos%5B0%5D=type4&ba_purpos%5B1%5D=type7&ba_purpos%5Boperation%5D=union"
+					},
+					accessoriesForSkinCareProducts: {
+						ruName: "Аксессуары для приборов по уходу за кожей",
+						path: "/beauty_acs?ba_purpos%5B0%5D=type3&ba_purpos%5B1%5D=faceclean&ba_purpos%5B2%5D=manicure&ba_purpos%5Boperation%5D=union"
+					},
+					replaceableRazorBlades: {
+						ruName: "Сменные лезвия для бритвенных станков",
+						path: "/beauty_acs?ba_purpos%5B0%5D=britvstanok&ba_purpos%5Boperation%5D=union"
+					}
 				}
 			},
 			hobby: {
 				ruName: "Хобби",
 				subCategories: {
-
+					electronicSteamGenerators: {
+						ruName: "Электронные парогенераторы",
+						path: "/smoke"
+					},
+					fidgetSpinners: {
+						ruName: "Фиджет спиннеры",
+						path: "/fidget_spinner"
+					},
+					constructors: {
+						ruName: "Конструкторы",
+						path: "/buildingkit"
+					},
+					scaleModels: {
+						ruName: "Сборные модели",
+						path: "/scale_model"
+					},
+					actionFigures: {
+						ruName: "Экшен-фигурки",
+						path: "/doll?do_type%5B0%5D=actionfigure&do_type%5Boperation%5D=union"
+					},
+					boardGames: {
+						ruName: "Настольные игры",
+						path: "/boardgame"
+					},
+					logicPuzzles: {
+						ruName: "Логические игры, головоломки",
+						path: "/logic_puzzles"
+					},
+					rcAircraftModels: {
+						ruName: "Радиоуправляемые авиамодели",
+						path: "/radiocontrolair"
+					},
+					rcCars: {
+						ruName: "Радиоуправляемые автомодели",
+						path: "/radioautomodel"
+					},
+					rcShipModels: {
+						ruName: "Радиоуправляемые судомодели",
+						path: "/radiomodelwater"
+					},
+					sewingMachines: {
+						ruName: "Швейные машины",
+						path: "/sewingmachines"
+					},
+					overlocks: {
+						ruName: "Оверлоки",
+						path: "/overlock"
+					},
+					radios: {
+						ruName: "Радиоприемники",
+						path: "/radio"
+					},
+					telescopes: {
+						ruName: "Телескопы",
+						path: "/telescope"
+					},
+					opticalAppliances: {
+						ruName: "Бинокли и подзорные трубы",
+						path: "/optic"
+					}
 				}
 			},
 			tourismAndCamping: {
 				ruName: "Туризм и кемпинг",
 				subCategories: {
-
+					tents: {
+						ruName: "Палатки",
+						path: "/tents"
+					},
+					travelBackpacks: {
+						ruName: "Туристические рюкзаки",
+						path: "/backpack?bap_type[0]=tourist&bap_type[operation]=union"
+					},
+					inflatableFurniture: {
+						ruName: "Надувная мебель",
+						path: "/airbed"
+					},
+					campFurniture: {
+						ruName: "Кемпинговая мебель",
+						path: "/camp_furniture"
+					},
+					sleepingBags: {
+						ruName: "Спальные мешки",
+						path: "/sleepingbag"
+					},
+					travelMats: {
+						ruName: "Туристические коврики",
+						path: "/travel_mat"
+					},
+					lanterns: {
+						ruName: "Фонари",
+						path: "https://catalog.onliner.by/lights"
+					},
+					touristKnives: {
+						ruName: "Туристические ножи",
+						path: "/foldingknives"
+					},
+					thermosesAndThermomugs: {
+						ruName: "Термосы, термокружки",
+						path: "/thermosbottle"
+					},
+					touristBurnersAndStoves: {
+						ruName: "Туристические горелки и плиты",
+						path: "/gascylinder"
+					},
+					grills: {
+						ruName: "Мангалы, грили, барбекю",
+						path: "/grill"
+					},
+					carRefrigerators: {
+						ruName: "Автохолодильники, термобоксы, термосумки",
+						path: "/arrefrigerator"
+					},
+					grillsAccessories: {
+						ruName: "Принадлежности для барбекю, грилей, мангалов",
+						path: "/bbq_accessories"
+					},
+					portableRadioStations: {
+						ruName: "Портативные радиостанции",
+						path: "/portableradio"
+					},
+					radios: {
+						ruName: "Радиоприемники",
+						path: "/radio?pow_porta%5B0%5D=acc&pow_porta%5B1%5D=bat&pow_porta%5Boperation%5D=union"
+					},
+					travelNavigators: {
+						ruName: "Туристические навигаторы",
+						path: "/travelgps"
+					},
+					opticalAppliances: {
+						ruName: "Бинокли и подзорные трубы",
+						path: "/optic"
+					},
+					telescopes: {
+						ruName: "Телескопы",
+						path: "/telescope"
+					},
+					cameraTraps: {
+						ruName: "Фотоловушки",
+						path: "/camera_traps"
+					}
 				}
 			},
 			fishingAndWaterSport: {
 				ruName: "Рыбалка, водный спорт",
 				subCategories: {
-
+					inflatableBoats: {
+						ruName: "Надувные лодки",
+						path: "/inflatableboat"
+					},
+					outboardMotors: {
+						ruName: "Лодочные моторы",
+						path: "/outboardmotors"
+					},
+					echoSounders: {
+						ruName: "Эхолоты",
+						path: "/sounder"
+					},
+					rods: {
+						ruName: "Удочки, спиннинги",
+						path: "/rod"
+					},
+					reels: {
+						ruName: "Рыболовные катушки",
+						path: "/coil"
+					},
+					iceDrills: {
+						ruName: "Ледобуры",
+						path: "/icescrew"
+					},
+					oilsForOutboardMotors: {
+						ruName: "Масла для лодочных моторов",
+						path: "/twostrokeoil"
+					},
+					huntingAndFishingClothes: {
+						ruName: "Одежда для охоты, рыбалки",
+						path: "/hunter_clothes"
+					}
 				}
 			},
 			fitnessEquipment: {
 				ruName: "Тренажеры, фитнес, единоборства",
 				subCategories: {
-
+					weightTrainingEquipment: {
+						ruName: "Силовые тренажеры",
+						path: "/strengthtrain"
+					},
+					exerciseBikes: {
+						ruName: "Велотренажеры",
+						path: "/velosimulator"
+					},
+					treadmills: {
+						ruName: "Беговые дорожки",
+						path: "/treadmills"
+					},
+					ellipticalTrainers: {
+						ruName: "Эллиптические тренажеры",
+						path: "/ellipsoids"
+					},
+					rowingMachines: {
+						ruName: "Гребные тренажеры",
+						path: "/rowingmachines"
+					},
+					steppers: {
+						ruName: "Степперы",
+						path: "/stepper"
+					},
+					freeWeights: {
+						ruName: "Гантели, штанги, гири",
+						path: "/freeweights"
+					},
+					nordicWalkingSticks: {
+						ruName: "Палки для скандинавской ходьбы",
+						path: "/nordic_walking"
+					},
+					punchingBags: {
+						ruName: "Груши, мешки, манекены для бокса и единоборств",
+						path: "/punching_bags"
+					},
+					boxingAndMartialArtsGloves: {
+						ruName: "Перчатки для бокса и единоборств",
+						path: "/glovesmartialart"
+					},
+					sportsProtection: {
+						ruName: "Спортивная защита",
+						path: "/sportsprotection"
+					},
+					trampolines: {
+						ruName: "Батуты",
+						path: "/trampoline"
+					},
+					swedishWalls: {
+						ruName: "Шведские стенки",
+						path: "/kidwallbars?kwb_wallbars=1"
+					},
+					gymBalls: {
+						ruName: "Гимнастические мячи",
+						path: "/ball?ball_type[0]=gymnastic&ball_type[operation]=union"
+					},
+					yogaMats: {
+						ruName: "Коврики для йоги и фитнеса",
+						path: "/yoga_mat"
+					},
+					protein: {
+						ruName: "Протеин",
+						path: "/protein"
+					}
 				}
 			},
 			gameSports: {
 				ruName: "Игровые виды спорта",
 				subCategories: {
-
+					sportsBalls: {
+						ruName: "Спортивные мячи",
+						path: "/ball"
+					},
+					tennisTables: {
+						ruName: "Теннисные столы",
+						path: "/tabletennis"
+					},
+					tennisRockets: {
+						ruName: "Теннисные ракетки",
+						path: "/racktabletennis"
+					},
+					poolTables: {
+						ruName: "Бильярдные столы",
+						path: "/billiardtable"
+					},
+					airHockeyFoosballMiniMilliards: {
+						ruName: "Аэрохоккей, настольный футбол, мини-бильярд",
+						path: "/airhockey"
+					},
+					chess: {
+						ruName: "Шахматы, шашки, нарды",
+						path: "/chess"
+					},
+					sportShoes: {
+						ruName: "Спортивная обувь",
+						path: "/sneakers?sn_designation[0]=sport&sn_designation[operation]=union"
+					}
 				}
 			},
 			winterSports: {
 				ruName: "Зимние виды спорта",
 				subCategories: {
-
+					sled: {
+						ruName: "Санки",
+						path: "/sled"
+					},
+					skates: {
+						ruName: "Коньки",
+						path: "/skates"
+					},
+					ski: {
+						ruName: "Лыжи",
+						path: "/skis"
+					},
+					hockeySticks: {
+						ruName: "Хоккейные клюшки",
+						path: "/hockeystick"
+					},
+					sportsProtection: {
+						ruName: "Защита",
+						path: "/sportsprotection?spp_useage%5B0%5D=hockey&spp_useage%5B1%5D=skate2&spp_useage%5Boperation%5D=union"
+					}
 				}
 			}
 		}
@@ -1755,55 +3786,346 @@ module.exports = {
 			walksAndTrips: {
 				ruName: "Прогулки и поездки",
 				subCategories: {
-
+					babyStrollers: {
+						ruName: "Коляски",
+						path: "/pram"
+					},
+					childCarSeats: {
+						ruName: "Автокресла",
+						path: "/childcarseat"
+					},
+					babyCarryingBackpacks: {
+						ruName: "Рюкзаки-переноски (кенгуру)",
+						path: "/babycarrier"
+					},
+					babyBikeSeats: {
+						ruName: "Велокресла",
+						path: "/bikeseat"
+					},
+					childrenTrailers: {
+						ruName: "Детские велоприцепы",
+						path: "/pram?pramconstruct%5B0%5D=trailer&pramconstruct%5Boperation%5D=union"
+					}
 				}
 			},
 			childrenTransport: {
 				ruName: "Детский транспорт",
 				subCategories: {
-
+					childrenKickScooters: {
+						ruName: "Самокаты",
+						path: "/kickscooter"
+					},
+					childrenPushBicycles: {
+						ruName: "Детские велосипеды-каталки",
+						path: "/kidsbike?kb_seat[0]=withbackrest&kb_seat[1]=withadjbackrest&kb_seat[operation]=union"
+					},
+					tricycles: {
+						ruName: "Трехколесные велосипеды",
+						path: "/kidsbike?num_wheels[0]=3&num_wheels[operation]=union&kb_seat[0]=simple&kb_seat[operation]=union"
+					},
+					sled: {
+						ruName: "Санки",
+						path: "/sled"
+					},
+					balanceBikes: {
+						ruName: "Беговелы",
+						path: "/balancebike"
+					},
+					babyWalkers: {
+						ruName: "Ходунки, прыгунки",
+						path: "/babywalker"
+					},
+					childrenElectricCars: {
+						ruName: "Электромобили",
+						path: "/electricrideon"
+					},
+					pedalCars: {
+						ruName: "Каталки, педальные машинки",
+						path: "/rideon"
+					}
 				}
 			},
 			childrenFurniture: {
 				ruName: "Детская мебель",
 				subCategories: {
-
+					babyCotBeds: {
+						ruName: "Кроватки",
+						path: "/babycotbed"
+					},
+					highChairs: {
+						ruName: "Стульчики для кормления",
+						path: "/highchair"
+					},
+					playpens: {
+						ruName: "Манежи",
+						path: "/playpen"
+					},
+					cots: {
+						ruName: "Детские кровати",
+						path: "/bed?b_child=1"
+					},
+					childrenTablesAndSchoolDesks: {
+						ruName: "Столы и парты",
+						path: "/kidsdesk"
+					},
+					babyDressers: {
+						ruName: "Детские комоды",
+						path: "/babydresser"
+					},
+					dressersForToys: {
+						ruName: "Комоды для игрушек",
+						path: "/toystorage?ts_const%5B0%5D=chest&ts_const%5Boperation%5D=union&ts_purpos%5B0%5D=chlroom&ts_purpos%5Boperation%5D=union"
+					},
+					childrenChaiseLoungesAndRockingChairs: {
+						ruName: "Детские шезлонги и качалки",
+						path: "/babyswing"
+					},
+					markerAndChalkBoards: {
+						ruName: "Маркерные и меловые доски",
+						path: "/officeboard"
+					}
 				}
 			},
 			babySleep: {
 				ruName: "Детский сон",
 				subCategories: {
-
+					babyCotBeds: {
+						ruName: "Кроватки",
+						path: "/babycotbed"
+					},
+					cots: {
+						ruName: "Детские кровати",
+						path: "/bed?b_child=1"
+					},
+					childrenLinen: {
+						ruName: "Детское постельное белье",
+						path: "/bedlinen?bed_type%5B0%5D=kids&bed_type%5Boperation%5D=union"
+					},
+					childrenPillows: {
+						ruName: "Подушки",
+						path: "/pillows?pil_type%5B0%5D=sleep&pil_type%5Boperation%5D=union&pil_size%5B0%5D=48x48&pil_size%5B1%5D=50x50&pil_size%5B2%5D=40x40&pil_size%5B3%5D=38x38&pil_size%5B4%5D=35x45&pil_size%5Boperation%5D=union"
+					},
+					childrenMattresses: {
+						ruName: "Детские матрасы",
+						path: "/mattress?mtr_kid=1"
+					},
+					babyMonitors: {
+						ruName: "Радионяни и видеоняни",
+						path: "/babymonitor"
+					}
 				}
 			},
 			boardAndEducationalGames: {
 				ruName: "Настольные игры и развивающие игрушки",
 				subCategories: {
-
+					boardGames: {
+						ruName: "Настольные игры",
+						path: "/boardgame"
+					},
+					constructors: {
+						ruName: "Конструкторы",
+						path: "/buildingkit"
+					},
+					educationalToys: {
+						ruName: "Развивающие игрушки",
+						path: "/edu_toys"
+					},
+					developmentalMats: {
+						ruName: "Развивающие коврики",
+						path: "/playmats"
+					},
+					scaleModels: {
+						ruName: "Сборные модели",
+						path: "/scale_model"
+					},
+					logicPuzzles: {
+						ruName: "Логические игры, головоломки",
+						path: "/logic_puzzles"
+					},
+					pens3d: {
+						ruName: "3D-ручки",
+						path: "/3d_pen"
+					},
+					fidgetSpinners: {
+						ruName: "Фиджет спиннеры",
+						path: "/fidget_spinner"
+					},
+					scienceKits: {
+						ruName: "Игры-опыты, эксперименты",
+						path: "/science_kits"
+					}
 				}
 			},
 			toysAndGames: {
 				ruName: "Игрушки и игры",
 				subCategories: {
-
+					actionFigures: {
+						ruName: "Экшен-фигурки",
+						path: "/doll?do_type%5B0%5D=actionfigure&do_type%5Boperation%5D=union"
+					},
+					babyDolls: {
+						ruName: "Детские куклы",
+						path: "/doll?do_type%5B0%5D=doll&do_type%5Boperation%5D=union"
+					},
+					dollHouses: {
+						ruName: "Кукольные домики",
+						path: "/dollhouses"
+					},
+					raceTracks: {
+						ruName: "Детские автотреки, трассы",
+						path: "/race_track"
+					},
+					rcCars: {
+						ruName: "Радиоуправляемые машинки",
+						path: "/radioautomodel"
+					},
+					rcAircraftModels: {
+						ruName: "Радиоуправляемые самолеты и вертолеты",
+						path: "/radiocontrolair"
+					},
+					kidsRailRoads: {
+						ruName: "Детские железные дороги",
+						path: "/kidsrailroad"
+					},
+					stuffedToys: {
+						ruName: "Мягкие игрушки",
+						path: "/stuffedtoys"
+					},
+					interactiveToys: {
+						ruName: "Интерактивные игрушки и роботы",
+						path: "/interactive_toys"
+					},
+					rcBoats: {
+						ruName: "Радиоуправляемые катера",
+						path: "/radiomodelwater"
+					},
+					playHouses: {
+						ruName: "Игровые домики и палатки",
+						path: "/playhouse"
+					},
+					airHockeyFoosballMiniMilliards: {
+						ruName: "Аэрохоккей, настольный футбол, мини-бильярд",
+						path: "/airhockey"
+					}
 				}
 			},
 			outdoorGamesAndSport: {
 				ruName: "Игры на улице и спорт",
 				subCategories: {
-
+					pools: {
+						ruName: "Бассейны",
+						path: "/pool"
+					},
+					swedishWalls: {
+						ruName: "Шведские стенки",
+						path: "/kidwallbars?kwb_wallbars=1"
+					},
+					childrenStreetComplexesAndHills: {
+						ruName: "Уличные комплексы и горки",
+						path: "/kidwallbars?kwb_type[0]=outdoor&kwb_type[operation]=union"
+					},
+					gardenSwings: {
+						ruName: "Садовые качели",
+						path: "/gardenswing"
+					},
+					trampolines: {
+						ruName: "Батуты",
+						path: "/trampoline"
+					},
+					balls: {
+						ruName: "Мячи",
+						path: "/ball"
+					},
+					playhouses: {
+						ruName: "Игровые домики и палатки",
+						path: "/playhouse"
+					},
+					childrenSkates: {
+						ruName: "Коньки",
+						path: "/skates?type_skates%5B0%5D=child_skates&type_skates%5B1%5D=girls_skates&type_skates%5B2%5D=boy_skates&type_skates%5Boperation%5D=union"
+					},
+					childrenRollerSkates: {
+						ruName: "Роликовые коньки",
+						path: "/rollerskates"
+					},
+					childrenKickScooters: {
+						ruName: "Самокаты",
+						path: "/kickscooter?ks_targetaudienc%5B0%5D=kid&ks_targetaudienc%5Boperation%5D=union"
+					},
+					childrenSki: {
+						ruName: "Лыжи",
+						path: "/skis?gender_skis%5B0%5D=child_skis&gender_skis%5Boperation%5D=union"
+					},
+					hockeySticks: {
+						ruName: "Хоккейные клюшки",
+						path: "/hockeystick"
+					},
+					sportsProtection: {
+						ruName: "Спортивная защита",
+						path: "/sportsprotection?spp_forwhom%5B0%5D=kids&spp_forwhom%5Boperation%5D=union"
+					}
 				}
 			},
 			newbornCare: {
 				ruName: "Уход за новорожденными",
 				subCategories: {
-
+					diapers: {
+						ruName: "Подгузники",
+						path: "/diapers"
+					},
+					babyMonitors: {
+						ruName: "Радионяни и видеоняни",
+						path: "/babymonitor"
+					},
+					babyScales: {
+						ruName: "Весы для новорожденных",
+						path: "/babyscales"
+					},
+					babyFoodMakers: {
+						ruName: "Устройства для приготовления детского питания",
+						path: "/babyfoodmaker"
+					},
+					bottleWarmersAndSterilizers: {
+						ruName: "Подогреватели и стерилизаторы бутылочек",
+						path: "/bottlesterilizer"
+					},
+					babyThermometers: {
+						ruName: "Термометры",
+						path: "/medthermometer?baby_medtherm=1"
+					},
+					babyWashingPowders: {
+						ruName: "Детские стиральные порошки",
+						path: "/washingpowder?typeoflinen[0]=washchild&typeoflinen[operation]=union"
+					},
+					breastPumpsAndAccessories: {
+						ruName: "Молокоотсосы и аксессуары",
+						path: "/breast_pump"
+					}
 				}
 			},
 			goodsForSchool: {
 				ruName: "Товары для школы",
 				subCategories: {
-
+					schoolBackpacks: {
+						ruName: "Школьные рюкзаки",
+						path: "/backpack?bap_type[0]=school&bap_type[operation]=union"
+					},
+					childrenTablesAndSchoolDesks: {
+						ruName: "Детские парты, столы, стулья",
+						path: "/kidsdesk"
+					},
+					childrenSmartWatches: {
+						ruName: "Умные часы для детей",
+						path: "/smartwatch?sw_kid=1"
+					},
+					markerAndChalkBoards: {
+						ruName: "Маркерные и меловые доски",
+						path: "/officeboard"
+					},
+					scienceKits: {
+						ruName: "Игры-опыты, эксперименты",
+						path: "/science_kits"
+					}
 				}
 			}
 		}
@@ -1815,49 +4137,285 @@ module.exports = {
 			officeEquipment: {
 				ruName: "Офисная техника и расходные материалы",
 				subCategories: {
-
+					printers: {
+						ruName: "Принтеры и МФУ",
+						path: "/printers"
+					},
+					faxes: {
+						ruName: "Факсы",
+						path: "/fax"
+					},
+					scanners: {
+						ruName: "Сканеры",
+						path: "/scanner"
+					},
+					cartridges: {
+						ruName: "Картриджи для принтеров",
+						path: "/cartridges"
+					},
+					shredders: {
+						ruName: "Уничтожители бумаг (шредеры)",
+						path: "/shredder"
+					},
+					photoPaper: {
+						ruName: "Бумага и материалы для печати",
+						path: "/photopaper"
+					},
+					paperCutters: {
+						ruName: "Резаки для бумаги",
+						path: "/papercutter"
+					},
+					bookletMakers: {
+						ruName: "Брошюровщики",
+						path: "/bindingmachines"
+					},
+					printers3d: {
+						ruName: "3D-принтеры",
+						path: "/3dprinter"
+					},
+					suppliesFor3dPrinting: {
+						ruName: "Расходные материалы для 3D-печати",
+						path: "/3d_filament"
+					},
+					surgeProtectors: {
+						ruName: "Сетевые фильтры-удлинители",
+						path: "/voltageregulator?voltage_type[0]=surge&voltage_type[operation]=union"
+					}
 				}
 			},
 			officeFurniture: {
 				ruName: "Офисная мебель",
 				subCategories: {
-
+					officeChairs: {
+						ruName: "Офисные кресла, стулья",
+						path: "/office_chair"
+					},
+					officeTables: {
+						ruName: "Офисные столы",
+						path: "/table?tbl_type%5B0%5D=executive&tbl_type%5B1%5D=conference&tbl_type%5B2%5D=office&tbl_type%5Boperation%5D=union"
+					},
+					officeSofas: {
+						ruName: "Офисные диваны",
+						path: "/divan?di_office=1"
+					},
+					officeSafes: {
+						ruName: "Сейфы",
+						path: "/furnituresafes"
+					},
+					officeBoards: {
+						ruName: "Офисные доски, флипчарты",
+						path: "/officeboard"
+					}
 				}
 			},
 			tradeAndFinance: {
 				ruName: "Торговля и финансы",
 				subCategories: {
-
+					cashRegisters: {
+						ruName: "Кассовые аппараты",
+						path: "/cashregister"
+					},
+					banknoteAndCoinCounters: {
+						ruName: "Счетчики банкнот и монет",
+						path: "/counters"
+					},
+					barcodeScanners: {
+						ruName: "Сканеры штрих-кодов",
+						path: "/barcode"
+					},
+					currencyDetectors: {
+						ruName: "Детекторы валют",
+						path: "/currencydetector"
+					},
+					matrixPrinters: {
+						ruName: "Матричные принтеры",
+						path: "/matrixprinter"
+					},
+					printersOnLabelsAndReceipts: {
+						ruName: "Принтеры на этикетках и чеках",
+						path: "/thermal"
+					},
+					dashboards: {
+						ruName: "Информационные панели",
+						path: "/digitalsignage"
+					},
+					commercialRefrigerators: {
+						ruName: "Торговые холодильники",
+						path: "/commfrige"
+					},
+					commercialTents: {
+						ruName: "Шатры, тенты для торговли",
+						path: "/canopy_tents?ct_use%5B0%5D=2&ct_use%5Boperation%5D=union"
+					},
+					thermalCurtains: {
+						ruName: "Тепловые завесы",
+						path: "/aircurtain"
+					}
 				}
 			},
 			publishingAndPrinting: {
 				ruName: "Издательство и печать",
 				subCategories: {
-
+					printers: {
+						ruName: "Принтеры и МФУ",
+						path: "/printers"
+					},
+					laminators: {
+						ruName: "Ламинаторы",
+						path: "/laminator"
+					},
+					bookletMakers: {
+						ruName: "Брошюровщики",
+						path: "/bindingmachines"
+					},
+					graphicTablets: {
+						ruName: "Графические планшеты",
+						path: "/tablets"
+					},
+					officePaper: {
+						ruName: "Офисная бумага",
+						path: "/photopaper?pp_type%5B0%5D=officepap&pp_type%5Boperation%5D=union"
+					},
+					selfAdhesivePaper: {
+						ruName: "Самоклеящаяся бумага",
+						path: "/photopaper?pp_type[0]=selfadhesive&pp_type[operation]=union"
+					},
+					thermalTransferPaper: {
+						ruName: "Термотрансферная бумага",
+						path: "/photopaper?pp_type[0]=thermaltransfer&pp_type[operation]=union"
+					},
+					photoPaper: {
+						ruName: "Фотобумага",
+						path: "/photopaper?pp_type%5B0%5D=paper&pp_type%5Boperation%5D=union"
+					}
 				}
 			},
 			hygieneAndNutrition: {
 				ruName: "Гигиена и питание",
 				subCategories: {
-
+					dispensers: {
+						ruName: "Дозаторы, диспенсеры",
+						path: "/dispenser"
+					},
+					handDryers: {
+						ruName: "Сушилки для рук, волос",
+						path: "/handsdryer"
+					},
+					waterCoolers: {
+						ruName: "Кулеры для воды",
+						path: "/water_cooler"
+					},
+					coffeeMachinesAndCoffeeMakers: {
+						ruName: "Кофемашины и кофеварки",
+						path: "/coffee"
+					},
+					coffee: {
+						ruName: "Кофе",
+						path: "/coffeejava"
+					},
+					refrigerators: {
+						ruName: "Холодильники",
+						path: "/refrigerator?type_refrigerato[0]=iceroom&type_refrigerato[operation]=union&type_freezer[0]=none&type_freezer[operation]=union&ref_usefulcap[to]=124"
+					},
+					microwaves: {
+						ruName: "Микроволновые печи",
+						path: "/microvawe"
+					}
 				}
 			},
 			CCTV: {
 				ruName: "Видеонаблюдение",
 				subCategories: {
-
+					ipCameras: {
+						ruName: "IP-камеры",
+						path: "/ipcamera"
+					},
+					CCTV: {
+						ruName: "Камеры CCTV",
+						path: "/cctvcamera"
+					},
+					DVRs: {
+						ruName: "Видеорегистраторы",
+						path: "/dvr"
+					},
+					videoDoorPhones: {
+						ruName: "Видеодомофоны",
+						path: "/videodoorphone"
+					}
 				}
 			},
 			transportAndTransportation: {
 				ruName: "Транспорт и перевозки",
 				subCategories: {
-
+					gpsTrackers: {
+						ruName: "GPS-трекеры",
+						path: "/gps_tracker"
+					},
+					DVRs: {
+						ruName: "Видеорегистраторы",
+						path: "/videoregistrator"
+					},
+					gpsNavigators: {
+						ruName: "GPS-навигаторы",
+						path: "/gps"
+					},
+					breathAnalyzers: {
+						ruName: "Алкотестеры",
+						path: "/breathalyzer"
+					}
 				}
 			},
 			industryAndConstruction: {
 				ruName: "Промышленность и строительство",
 				subCategories: {
-
+					woodworkingMachinery: {
+						ruName: "Деревообрабатывающие станки",
+						path: "/woodworking"
+					},
+					metalworkingMachinery: {
+						ruName: "Металлообрабатывающие станки",
+						path: "/metalworking"
+					},
+					electricMetalCutters: {
+						ruName: "Электрические ножницы по металлу",
+						path: "/metal_cutter"
+					},
+					sharpeningMachines: {
+						ruName: "Заточные станки (точила)",
+						path: "/benchgrinder"
+					},
+					electricAndGasCutters: {
+						ruName: "Электро- и бензорезы",
+						path: "/powercutter"
+					},
+					pipeMetalRolling: {
+						ruName: "Трубный металлопрокат",
+						path: "/metal_pipes"
+					},
+					sheetMetalRolling: {
+						ruName: "Листовой металлопрокат",
+						path: "/sheetmetal"
+					},
+					fittings: {
+						ruName: "Арматура",
+						path: "/armatura"
+					},
+					rabitz: {
+						ruName: "Строительные сетки",
+						path: "/rabitz"
+					},
+					buildingMaterials: {
+						ruName: "Общестроительные материалы",
+						path: "/buildingmaterial"
+					},
+					bricks: {
+						ruName: "Кирпич",
+						path: "/bricks"
+					},
+					pavingSlabs: {
+						ruName: "Тротуарная плитка",
+						path: "/pavers"
+					}
 				}
 			}
 		}
