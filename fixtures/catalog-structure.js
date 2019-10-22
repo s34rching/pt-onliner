@@ -3861,57 +3861,57 @@ module.exports = {
 				subCategories: {
 					bikes: {
 						ruName: "Велосипеды",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Велосипеды",
 						path: "/bike"
 					},
 					childrenBicycles: {
 						ruName: "Детские велосипеды",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Детские велосипеды",
 						path: "/kidsbike"
 					},
 					bicycleTires: {
 						ruName: "Велопокрышки, велокамеры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Велопокрышки, велокамеры",
 						path: "/bicycle_tires"
 					},
 					bicycleHelmets: {
 						ruName: "Велошлемы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Шлем для езды на велосипеде",
 						path: "/bikehelmet?bh_sport%5B0%5D=type1&bh_sport%5Boperation%5D=union"
 					},
 					bikeComputers: {
 						ruName: "Велокомпьютеры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Велокомпьютеры",
 						path: "/bikecomp"
 					},
 					bikeLocks: {
 						ruName: "Велозамки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Велозамки",
 						path: "/bikelock"
 					},
 					babyBikeSeats: {
 						ruName: "Детские велокресла",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Детские велокресла",
 						path: "/bikeseat"
 					},
 					bicycleRacks: {
 						ruName: "Велобагажники",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Автомобильные велобагажники",
 						path: "/bicyclerack"
 					},
 					childrenTrailers: {
 						ruName: "Детские велоприцепы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Детские коляски и аксессуары",
 						path: "/pram?pramconstruct%5B0%5D=trailer&pramconstruct%5Boperation%5D=union"
 					},
 					actionCameras: {
 						ruName: "Экшен-камеры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Экшен-камеры",
 						path: "/actioncamera"
 					},
 					actionCamerasAccessories: {
 						ruName: "Аксессуары и крепления для экшен-камер",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Аксессуары и крепления для экшен-камер",
 						path: "/actioncamera_acs"
 					}
 				}
@@ -3921,32 +3921,32 @@ module.exports = {
 				subCategories: {
 					rollerSkates: {
 						ruName: "Роликовые коньки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Роликовые коньки",
 						path: "/rollerskates"
 					},
 					skateboards: {
 						ruName: "Скейтборды",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Скейтборды, лонгборды",
 						path: "/skateboard"
 					},
 					kickScooters: {
 						ruName: "Самокаты",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Самокаты",
 						path: "/kickscooter"
 					},
 					sportsProtection: {
 						ruName: "Спортивная защита",
-						subcategoryPageRuHeading: "",
-						path: "https://catalog.onliner.by/sportsprotection"
+						subcategoryPageRuHeading: "Спортивная защита",
+						path: "/sportsprotection"
 					},
 					actionCameras: {
 						ruName: "Экшен-камеры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Экшен-камеры",
 						path: "/actioncamera"
 					},
 					actionCameraAccessories: {
 						ruName: "Аксессуары и крепления для экшен-камер",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Аксессуары и крепления для экшен-камер",
 						path: "/actioncamera_acs"
 					}
 				}
@@ -3956,17 +3956,17 @@ module.exports = {
 				subCategories: {
 					electricScooters: {
 						ruName: "Электросамокаты и электроскутеры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Электросамокаты и электроскутеры",
 						path: "/electric_scooter"
 					},
 					gyrocycles: {
 						ruName: "Гироциклы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Гироциклы",
 						path: "/segway"
 					},
 					electricBicycles: {
 						ruName: "Электровелосипеды",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Электровелосипеды",
 						path: "/electrobike"
 					}
 				}
@@ -3976,37 +3976,37 @@ module.exports = {
 				subCategories: {
 					watches: {
 						ruName: "Наручные часы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Наручные часы",
 						path: "/watch"
 					},
 					smartWatches: {
 						ruName: "Умные часы и фитнес-браслеты",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Умные часы и браслеты",
 						path: "/smartwatch"
 					},
 					backpacks: {
 						ruName: "Рюкзаки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Рюкзаки",
 						path: "/backpack"
 					},
 					suitcases: {
 						ruName: "Чемоданы и дорожные сумки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Чемоданы и дорожные сумки",
 						path: "/suitcase"
 					},
 					wallets: {
 						ruName: "Кошельки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Кошельки",
 						path: "/wallet"
 					},
 					businessCardHolders: {
 						ruName: "Визитницы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Визитницы",
 						path: "/wallet?wallet_type%5B0%5D=card_holder&wallet_type%5Boperation%5D=union"
 					},
 					lighters: {
 						ruName: "Зажигалки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Зажигалки",
 						path: "/cigarettelighter"
 					}
 				}
@@ -4016,62 +4016,62 @@ module.exports = {
 				subCategories: {
 					perfumery: {
 						ruName: "Парфюмерия",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Парфюмерия",
 						path: "/parfume"
 					},
 					faceMakeup: {
 						ruName: "Декоративная косметика для лица",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Декоративная косметика для лица",
 						path: "/face_makeup"
 					},
 					eyesMakeup: {
 						ruName: "Декоративная косметика для глаз",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Декоративная косметика для глаз",
 						path: "/eye_makeup"
 					},
 					lipsMakeup: {
 						ruName: "Декоративная косметика для губ",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Декоративная косметика для губ",
 						path: "/lip_makeup"
 					},
 					nailsCare: {
 						ruName: "Средства по уходу за ногтями",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Средства по уходу за ногтями",
 						path: "/nailcare"
 					},
 					faceCare: {
 						ruName: "Уход за лицом",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Косметика по уходу за лицом",
 						path: "/facial_cosmetics"
 					},
 					hairCare: {
 						ruName: "Уход за волосами",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Косметика по уходу за волосами",
 						path: "/haircare"
 					},
 					bodyCare: {
 						ruName: "Уход за телом",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Косметика по уходу за телом",
 						path: "/body_care"
 					},
 					hairStyling: {
 						ruName: "Средства для укладки волос",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Средства для укладки волос",
 						path: "/hair_styling"
 					},
 					hairDye: {
 						ruName: "Средства для окрашивания волос",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Средства для окрашивания волос",
 						path: "/hair_color"
 					},
 					cosmeticsAccessories: {
 						ruName: "Аксессуары для косметики",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Аксессуары для косметики",
 						path: "/cosmetics_access"
 					},
 					cosmeticMirrors: {
 						ruName: "Косметические зеркала",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Косметические зеркала",
 						path: "/cosmetic_mirror"
 					}
 				}
@@ -4081,72 +4081,72 @@ module.exports = {
 				subCategories: {
 					fitnessBraceletsAndWatches: {
 						ruName: "Фитнес-браслеты и часы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Фитнес-браслеты",
 						path: "/smartwatch?sw_type[0]=bracelet&sw_type[operation]=union"
 					},
 					toothbrushes: {
 						ruName: "Зубные щетки и ирригаторы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Зубные щетки и ирригаторы",
 						path: "/toothbrush"
 					},
 					massagersAndMassageChairs: {
 						ruName: "Массажеры и массажные кресла",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Массажеры и массажные кресла",
 						path: "/massagechair"
 					},
 					electricLinen: {
 						ruName: "Электрогрелки, электроодеяла, электропростыни",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Электрогрелки, электроодеяла, электропростыни",
 						path: "/mobile_heater"
 					},
 					inhalers: {
 						ruName: "Ингаляторы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Ингаляторы",
 						path: "/inhaler"
 					},
 					bloodPressureMonitors: {
 						ruName: "Тонометры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Тонометры",
 						path: "/tonometers"
 					},
 					thermometers: {
 						ruName: "Термометры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Медицинские термометры",
 						path: "/medthermometer"
 					},
 					bloodGlucoseMeters: {
 						ruName: "Глюкометры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Глюкометры",
 						path: "/glucosemeter"
 					},
 					heartRateMonitors: {
 						ruName: "Пульсометры, пульсоксиметры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Пульсометры, пульсоксиметры",
 						path: "/heart_rate"
 					},
 					physicalTherapyDevices: {
 						ruName: "Приборы для физиотерапии",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Приборы для физиотерапии",
 						path: "/physical_therapy"
 					},
 					nitratomersDosimeters: {
 						ruName: "Нитратомеры, дозиметры, экотестеры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Нитратомеры, дозиметры, экотестеры",
 						path: "/nitrate"
 					},
 					contactLenses: {
 						ruName: "Контактные линзы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Контактные линзы",
 						path: "/contact_lense"
 					},
 					lensSolutions: {
 						ruName: "Растворы для линз",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Растворы для линз",
 						path: "/solutionlenses"
 					},
 					massageBalls: {
 						ruName: "Массажные мячи",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Массажные мячи",
 						path: "/ball?ball_type%5B0%5D=massaging&ball_type%5Boperation%5D=union"
 					}
 				}
@@ -4156,77 +4156,77 @@ module.exports = {
 				subCategories: {
 					hairClippers: {
 						ruName: "Машинки для стрижки волос",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Машинки для стрижки волос",
 						path: "/hairclipper"
 					},
 					curlingIronsStylers: {
 						ruName: "Плойки, стайлеры, щипцы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Стайлеры",
 						path: "/styler"
 					},
 					hairdryers: {
 						ruName: "Фены",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Фены",
 						path: "/hairdryer"
 					},
 					toothbrushes: {
 						ruName: "Зубные щетки и ирригаторы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Зубные щетки и ирригаторы",
 						path: "/toothbrush"
 					},
 					shavers: {
 						ruName: "Мужские электробритвы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Электробритвы мужские",
 						path: "/shaver"
 					},
 					ladyShavers: {
 						ruName: "Женские электробритвы и эпиляторы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Женские электробритвы и эпиляторы",
 						path: "/ladyshaver"
 					},
 					scales: {
 						ruName: "Напольные весы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Напольные весы",
 						path: "/scales"
 					},
 					hydromassageBaths: {
 						ruName: "Гидромассажные ванночки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Гидромассажные ванночки для ног",
 						path: "/footbath"
 					},
 					manicureAndPedicureSets: {
 						ruName: "Маникюрные и педикюрные наборы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Маникюрные и педикюрные наборы",
 						path: "/manicure"
 					},
 					skinCareDevices: {
 						ruName: "Приборы для ухода за кожей",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Приборы для ухода за кожей",
 						path: "/skin_care_app"
 					},
 					cosmeticMirrors: {
 						ruName: "Косметические зеркала",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Косметические зеркала",
 						path: "/cosmetic_mirror"
 					},
 					toothBrushesAccessories: {
 						ruName: "Аксессуары для зубных щеток и ирригаторов",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Аксессуары к товарам для красоты и здоровья",
 						path: "/beauty_acs?ba_purpos%5B0%5D=type1&ba_purpos%5B1%5D=type2&ba_purpos%5Boperation%5D=union"
 					},
 					accessoriesForShavers: {
 						ruName: "Аксессуары для электробритв и машинок",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Аксессуары к товарам для красоты и здоровья",
 						path: "/beauty_acs?ba_purpos%5B0%5D=type4&ba_purpos%5B1%5D=type7&ba_purpos%5Boperation%5D=union"
 					},
 					accessoriesForSkinCareProducts: {
 						ruName: "Аксессуары для приборов по уходу за кожей",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Аксессуары к товарам для красоты и здоровья",
 						path: "/beauty_acs?ba_purpos%5B0%5D=type3&ba_purpos%5B1%5D=faceclean&ba_purpos%5B2%5D=manicure&ba_purpos%5Boperation%5D=union"
 					},
 					replaceableRazorBlades: {
 						ruName: "Сменные лезвия для бритвенных станков",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Аксессуары к товарам для красоты и здоровья",
 						path: "/beauty_acs?ba_purpos%5B0%5D=britvstanok&ba_purpos%5Boperation%5D=union"
 					}
 				}
@@ -4236,77 +4236,77 @@ module.exports = {
 				subCategories: {
 					electronicSteamGenerators: {
 						ruName: "Электронные парогенераторы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Электронные парогенераторы",
 						path: "/smoke"
 					},
 					fidgetSpinners: {
 						ruName: "Фиджет спиннеры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Фиджет спиннеры",
 						path: "/fidget_spinner"
 					},
 					constructors: {
 						ruName: "Конструкторы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Конструкторы",
 						path: "/buildingkit"
 					},
 					scaleModels: {
 						ruName: "Сборные модели",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Сборные модели",
 						path: "/scale_model"
 					},
 					actionFigures: {
 						ruName: "Экшен-фигурки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Куклы, экшен-фигурки",
 						path: "/doll?do_type%5B0%5D=actionfigure&do_type%5Boperation%5D=union"
 					},
 					boardGames: {
 						ruName: "Настольные игры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Настольные игры",
 						path: "/boardgame"
 					},
 					logicPuzzles: {
 						ruName: "Логические игры, головоломки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Логические игры, головоломки",
 						path: "/logic_puzzles"
 					},
 					rcAircraftModels: {
 						ruName: "Радиоуправляемые авиамодели",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Радиоуправляемые авиамодели",
 						path: "/radiocontrolair"
 					},
 					rcCars: {
 						ruName: "Радиоуправляемые автомодели",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Радиоуправляемые автомодели",
 						path: "/radioautomodel"
 					},
 					rcShipModels: {
 						ruName: "Радиоуправляемые судомодели",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Радиоуправляемые судомодели",
 						path: "/radiomodelwater"
 					},
 					sewingMachines: {
 						ruName: "Швейные машины",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Швейные машины",
 						path: "/sewingmachines"
 					},
 					overlocks: {
 						ruName: "Оверлоки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Оверлоки и распошивальные машины",
 						path: "/overlock"
 					},
 					radios: {
 						ruName: "Радиоприемники",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Радиоприемники",
 						path: "/radio"
 					},
 					telescopes: {
 						ruName: "Телескопы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Телескопы",
 						path: "/telescope"
 					},
 					opticalAppliances: {
 						ruName: "Бинокли и подзорные трубы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Бинокли и подзорные трубы",
 						path: "/optic"
 					}
 				}
@@ -4316,97 +4316,97 @@ module.exports = {
 				subCategories: {
 					tents: {
 						ruName: "Палатки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Палатки",
 						path: "/tents"
 					},
 					travelBackpacks: {
 						ruName: "Туристические рюкзаки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Туристические рюкзаки",
 						path: "/backpack?bap_type[0]=tourist&bap_type[operation]=union"
 					},
 					inflatableFurniture: {
 						ruName: "Надувная мебель",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Надувная мебель",
 						path: "/airbed"
 					},
 					campFurniture: {
 						ruName: "Кемпинговая мебель",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Кемпинговая мебель",
 						path: "/camp_furniture"
 					},
 					sleepingBags: {
 						ruName: "Спальные мешки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Спальные мешки",
 						path: "/sleepingbag"
 					},
 					travelMats: {
 						ruName: "Туристические коврики",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Туристические коврики",
 						path: "/travel_mat"
 					},
 					lanterns: {
 						ruName: "Фонари",
-						subcategoryPageRuHeading: "",
-						path: "https://catalog.onliner.by/lights"
+						subcategoryPageRuHeading: "Фонари",
+						path: "/lights"
 					},
 					touristKnives: {
 						ruName: "Туристические ножи",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Туристические ножи",
 						path: "/foldingknives"
 					},
 					thermosesAndThermomugs: {
 						ruName: "Термосы, термокружки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Термосы, термокружки",
 						path: "/thermosbottle"
 					},
 					touristBurnersAndStoves: {
 						ruName: "Туристические горелки и плиты",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Туристические горелки и плиты",
 						path: "/gascylinder"
 					},
 					grills: {
 						ruName: "Мангалы, грили, барбекю",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Мангалы, грили, барбекю",
 						path: "/grill"
 					},
 					carRefrigerators: {
 						ruName: "Автохолодильники, термобоксы, термосумки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Автохолодильники, термобоксы, термосумки",
 						path: "/arrefrigerator"
 					},
 					grillsAccessories: {
 						ruName: "Принадлежности для барбекю, грилей, мангалов",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Принадлежности для барбекю, грилей, мангалов",
 						path: "/bbq_accessories"
 					},
 					portableRadioStations: {
 						ruName: "Портативные радиостанции",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Портативные радиостанции",
 						path: "/portableradio"
 					},
 					radios: {
 						ruName: "Радиоприемники",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Радиоприемники на батарейках",
 						path: "/radio?pow_porta%5B0%5D=acc&pow_porta%5B1%5D=bat&pow_porta%5Boperation%5D=union"
 					},
 					travelNavigators: {
 						ruName: "Туристические навигаторы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Туристические навигаторы",
 						path: "/travelgps"
 					},
 					opticalAppliances: {
 						ruName: "Бинокли и подзорные трубы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Бинокли и подзорные трубы",
 						path: "/optic"
 					},
 					telescopes: {
 						ruName: "Телескопы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Телескопы",
 						path: "/telescope"
 					},
 					cameraTraps: {
 						ruName: "Фотоловушки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Фотоловушки",
 						path: "/camera_traps"
 					}
 				}
@@ -4416,42 +4416,42 @@ module.exports = {
 				subCategories: {
 					inflatableBoats: {
 						ruName: "Надувные лодки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Надувные лодки",
 						path: "/inflatableboat"
 					},
 					outboardMotors: {
 						ruName: "Лодочные моторы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Лодочные моторы",
 						path: "/outboardmotors"
 					},
 					echoSounders: {
 						ruName: "Эхолоты",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Эхолоты",
 						path: "/sounder"
 					},
 					rods: {
 						ruName: "Удочки, спиннинги",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Удилища",
 						path: "/rod"
 					},
 					reels: {
 						ruName: "Рыболовные катушки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Рыболовные катушки",
 						path: "/coil"
 					},
 					iceDrills: {
 						ruName: "Ледобуры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Ледобуры для рыбалки",
 						path: "/icescrew"
 					},
 					oilsForOutboardMotors: {
 						ruName: "Масла для лодочных моторов",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Масла для лодочных моторов",
 						path: "/twostrokeoil"
 					},
 					huntingAndFishingClothes: {
 						ruName: "Одежда для охоты, рыбалки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Одежда для охоты, рыбалки",
 						path: "/hunter_clothes"
 					}
 				}
@@ -4461,82 +4461,82 @@ module.exports = {
 				subCategories: {
 					weightTrainingEquipment: {
 						ruName: "Силовые тренажеры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Силовые тренажеры",
 						path: "/strengthtrain"
 					},
 					exerciseBikes: {
 						ruName: "Велотренажеры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Велотренажеры",
 						path: "/velosimulator"
 					},
 					treadmills: {
 						ruName: "Беговые дорожки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Беговые дорожки",
 						path: "/treadmills"
 					},
 					ellipticalTrainers: {
 						ruName: "Эллиптические тренажеры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Эллиптические тренажеры",
 						path: "/ellipsoids"
 					},
 					rowingMachines: {
 						ruName: "Гребные тренажеры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Гребные тренажеры",
 						path: "/rowingmachines"
 					},
 					steppers: {
 						ruName: "Степперы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Степперы",
 						path: "/stepper"
 					},
 					freeWeights: {
 						ruName: "Гантели, штанги, гири",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Гантели, гири, штанги",
 						path: "/freeweights"
 					},
 					nordicWalkingSticks: {
 						ruName: "Палки для скандинавской ходьбы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Палки для скандинавской ходьбы",
 						path: "/nordic_walking"
 					},
 					punchingBags: {
 						ruName: "Груши, мешки, манекены для бокса и единоборств",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Груши, мешки, манекены для бокса и единоборств",
 						path: "/punching_bags"
 					},
 					boxingAndMartialArtsGloves: {
 						ruName: "Перчатки для бокса и единоборств",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Перчатки для единоборств",
 						path: "/glovesmartialart"
 					},
 					sportsProtection: {
 						ruName: "Спортивная защита",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Спортивная защита",
 						path: "/sportsprotection"
 					},
 					trampolines: {
 						ruName: "Батуты",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Батуты",
 						path: "/trampoline"
 					},
 					swedishWalls: {
 						ruName: "Шведские стенки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Шведские стенки",
 						path: "/kidwallbars?kwb_wallbars=1"
 					},
 					gymBalls: {
 						ruName: "Гимнастические мячи",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Гимнастические мячи",
 						path: "/ball?ball_type[0]=gymnastic&ball_type[operation]=union"
 					},
 					yogaMats: {
 						ruName: "Коврики для йоги и фитнеса",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Коврики для йоги и фитнеса",
 						path: "/yoga_mat"
 					},
 					protein: {
 						ruName: "Протеин",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Протеин",
 						path: "/protein"
 					}
 				}
@@ -4546,37 +4546,37 @@ module.exports = {
 				subCategories: {
 					sportsBalls: {
 						ruName: "Спортивные мячи",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Мячи",
 						path: "/ball"
 					},
 					tennisTables: {
 						ruName: "Теннисные столы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Теннисные столы",
 						path: "/tabletennis"
 					},
 					tennisRockets: {
 						ruName: "Теннисные ракетки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Ракетки для настольного тенниса",
 						path: "/racktabletennis"
 					},
 					poolTables: {
 						ruName: "Бильярдные столы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Бильярдные столы",
 						path: "/billiardtable"
 					},
 					airHockeyFoosballMiniMilliards: {
 						ruName: "Аэрохоккей, настольный футбол, мини-бильярд",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Аэрохоккей, настольный футбол, мини-бильярд",
 						path: "/airhockey"
 					},
 					chess: {
 						ruName: "Шахматы, шашки, нарды",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Шахматы, шашки, нарды",
 						path: "/chess"
 					},
 					sportShoes: {
 						ruName: "Спортивная обувь",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Спортивная обувь",
 						path: "/sneakers?sn_designation[0]=sport&sn_designation[operation]=union"
 					}
 				}
@@ -4586,27 +4586,27 @@ module.exports = {
 				subCategories: {
 					sled: {
 						ruName: "Санки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Санки",
 						path: "/sled"
 					},
 					skates: {
 						ruName: "Коньки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Коньки",
 						path: "/skates"
 					},
 					ski: {
 						ruName: "Лыжи",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Лыжи",
 						path: "/skis"
 					},
 					hockeySticks: {
 						ruName: "Хоккейные клюшки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Хоккейные клюшки",
 						path: "/hockeystick"
 					},
 					sportsProtection: {
 						ruName: "Защита",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Спортивная защита",
 						path: "/sportsprotection?spp_useage%5B0%5D=hockey&spp_useage%5B1%5D=skate2&spp_useage%5Boperation%5D=union"
 					}
 				}
