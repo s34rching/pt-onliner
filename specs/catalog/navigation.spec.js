@@ -19,7 +19,13 @@ describe("Onliner.by - Catalog / Navigation", () => {
 			.then(() => { Catalog.chooseClassifierItem(randomClassifierItem.id) })
 			.then(() => { Catalog.focusCategoryItem(randomCategoryItem.ruName) })
 			.then(() => { Catalog.openSubcategory(randomSubcategoryItem.ruName) })
+			.then(() => {
+				expect(element(by.css("h1.schema-header__title")).getText()).toBe(randomSubcategoryItem.ruName)
+				expect(element(by.css("#schema-products")).isDisplayed()).toBe(true)
+				expect(element(by.css("#schema-filter")).isDisplayed()).toBe(true)
+			})
 	})
 })
 
 // TODO: search sequence object
+// TODO: add subcategory name to fixture
