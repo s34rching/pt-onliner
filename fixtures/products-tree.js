@@ -8,72 +8,72 @@ module.exports = {
 				subCategories: {
 					mobilePhones: {
 						ruName: "Мобильные телефоны",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Мобильные телефоны",
 						path: "/mobile"
 					},
 					headphones: {
 						ruName: "Наушники",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Наушники и гарнитуры",
 						path: "/headphones"
 					},
 					smartWatch: {
 						ruName: "Умные часы и фитнес-браслеты",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Умные часы и браслеты",
 						path: "/smartwatch"
 					},
 					portableChargers: {
 						ruName: "Портативные зарядные устройства",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Портативные зарядные устройства",
 						path: "/portablecharger"
 					},
 					memoryCards: {
 						ruName: "Карты памяти",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Карты памяти",
 						path: "/memcards?typememcards%5B0%5D=microsd&typememcards%5B1%5D=microsdxc&typememcards%5B2%5D=microsdhc&typememcards%5Boperation%5D=union"
 					},
 					phoneCases: {
 						ruName: "Чехлы для телефонов",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Чехлы для телефонов",
 						path: "/phonecase"
 					},
 					phoneAccumulators: {
 						ruName: "Аккумуляторы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Аккумуляторы для телефонов",
 						path: "/phoneaccum"
 					},
 					bluetoothHeadsets: {
 						ruName: "Bluetooth-гарнитуры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Bluetooth-гарнитуры",
 						path: "/bt"
 					},
 					selfieSticks: {
 						ruName: "Палки для селфи",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Палки для селфи",
 						path: "/selfiestick"
 					},
 					cablesAndAdapters: {
 						ruName: "Кабели, адаптеры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Кабели, адаптеры, разветвители",
 						path: "/cable?cable_usage%5B0%5D=phone&cable_usage%5Boperation%5D=union"
 					},
 					carHolders: {
 						ruName: "Автомобильные держатели",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Автомобильные держатели",
 						path: "/carholder"
 					},
 					carChargers: {
 						ruName: "Зарядные устройства",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Зарядные устройства",
 						path: "/chargersmobile?mc_devicetype%5B0%5D=type&mc_devicetype%5Boperation%5D=union&mc_type%5B0%5D=network&mc_type%5Boperation%5D=union"
 					},
 					wirelessChargers: {
 						ruName: "Беспроводные зарядные устройства",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Зарядные устройства",
 						path: "/chargersmobile?mc_type%5B0%5D=wireless&mc_type%5Boperation%5D=union"
 					},
 					speakerDocks: {
 						ruName: "Док-станции для смартфонов",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Док-станции для смартфонов",
 						path: "/speakerdock"
 					}
 				}
@@ -83,76 +83,77 @@ module.exports = {
 				subCategories: {
 					tvSets: {
 						ruName: "Телевизоры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Телевизоры",
 						path: "/tv"
 					},
 					terrestrials: {
 						ruName: "Приемники цифрового ТВ",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Приемники цифрового ТВ",
 						path: "/terrestrial"
 					},
 					satellites: {
 						ruName: "Спутниковые ресиверы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Спутниковые ресиверы",
 						path: "/satellite"
 					},
 					aerials: {
 						ruName: "ТВ-антенны",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "ТВ-антенны",
 						path: "/aerial"
 					},
 					projectors: {
 						ruName: "Проекторы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Проекторы",
 						path: "/projector"
 					},
 					wallmounts: {
 						ruName: "Кронштейны",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Кронштейны",
 						path: "/wallmount"
 					},
 					mediaPlayers: {
 						ruName: "Медиаплееры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Медиаплееры",
 						path: "/media"
 					},
 					dvdPlayers: {
 						ruName: "Плееры DVD и Blu-ray",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Плееры DVD и Blu-ray",
 						path: "/dvd"
 					},
 					microPCs: {
 						ruName: "Микро-ПК (HDMI-стики)",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Микро-ПК",
 						path: "/desktoppc?desktoppc_type%5B0%5D=micro&desktoppc_type%5Boperation%5D=union"
 					},
 					soundBars: {
 						ruName: "Саундбары и домашние кинотеатры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Саундбары и домашние кинотеатры",
 						path: "/soundbar"
 					},
 					tvAccessories: {
 						ruName: "Аксессуары для ТВ",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Аксессуары для ТВ",
 						path: "/tvaccessory"
 					},
 					smartTvKeyboards: {
 						ruName: "Клавиатуры для Smart TV",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Клавиатуры",
 						path: "/keyboards?mk_designation%5B0%5D=smarttv&mk_designation%5Boperation%5D=union"
 					},
 					avCables: {
 						ruName: "Кабели, адаптеры для AV-аппаратуры",
+						subcategoryPageRuHeading: "Кабели, адаптеры, разветвители",
 						path: "/cable?cable_usage%5B0%5D=av&cable_usage%5Boperation%5D=union"
 					},
 					remoteControls: {
 						ruName: "Универсальные пульты ДУ",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Универсальные пульты ДУ",
 						path: "/remote"
 					},
 					projectorScreens: {
 						ruName: "Проекционные экраны",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Проекционные экраны",
 						path: "/projectorscreen"
 					}
 				}
@@ -162,47 +163,47 @@ module.exports = {
 				subCategories: {
 					tablets: {
 						ruName: "Планшеты",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Планшеты",
 						path: "/tabletpc"
 					},
 					ebooks: {
 						ruName: "Электронные книги",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Электронные книги",
 						path: "/ebook"
 					},
 					tabletCases: {
 						ruName: "Чехлы для планшетов",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Чехлы для планшетов",
 						path: "/tabletcase"
 					},
 					portableChargers: {
 						ruName: "Портативные зарядные устройства",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Портативные зарядные устройства",
 						path: "/portablecharger"
 					},
 					memoryCards: {
 						ruName: "Карты памяти",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Карты памяти",
 						path: "/memcards?typememcards%5B0%5D=microsd&typememcards%5B1%5D=microsdxc&typememcards%5B2%5D=microsdhc&typememcards%5Boperation%5D=union"
 					},
 					cablesAndAdapters: {
 						ruName: "Кабели, адаптеры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Кабели для телефонов и планшетов",
 						path: "/cable?cable_usage%5B0%5D=phone&cable_usage%5Boperation%5D=union"
 					},
 					chargers: {
 						ruName: "Зарядные устройства",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Зарядные устройства",
 						path: "/chargersmobile?mc_devicetype%5B0%5D=type3&mc_devicetype%5Boperation%5D=union"
 					},
 					wireless4gAnd3gModems: {
 						ruName: "4G и 3G-модемы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Беспроводные адаптеры",
 						path: "/wirelessadapter?wa_type%5B0%5D=4g&wa_type%5B1%5D=3g&wa_type%5Boperation%5D=union"
 					},
 					ebookCovers: {
 						ruName: "Обложки для электронных книг",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Обложки для электронных книг",
 						path: "/ebookcover"
 					}
 				}
@@ -212,112 +213,112 @@ module.exports = {
 				subCategories: {
 					headphones: {
 						ruName: "Наушники",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Наушники и гарнитуры",
 						path: "/headphones"
 					},
 					multimediaAcoustics: {
 						ruName: "Мультимедиа акустика",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Мультимедиа акустика",
 						path: "/sound"
 					},
 					wirelessSpeakers: {
 						ruName: "Беспроводные и портативные колонки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Беспроводные и портативные колонки",
 						path: "/wspeaker"
 					},
 					internetRadioStations: {
 						ruName: "Интернет-радиостанции",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Беспроводные и портативные колонки",
 						path: "/wspeaker?netpl_inetradio=1"
 					},
 					mp3players: {
 						ruName: "MP3-плееры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "MP3-плееры",
 						path: "/player"
 					},
 					hifiaudio: {
 						ruName: "Музыкальные центры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Музыкальные центры",
 						path: "/hifiaudio"
 					},
 					microphones: {
 						ruName: "Микрофоны",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Микрофоны",
 						path: "/microphones"
 					},
 					hifisound: {
 						ruName: "Акустика Hi-Fi и Hi-End",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Hi-Fi акустика",
 						path: "/hifisound"
 					},
 					recievers: {
 						ruName: "AV-ресиверы и усилители",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "AV-ресиверы и усилители",
 						path: "/recievers"
 					},
 					vinylRecordPlayers: {
 						ruName: "Виниловые проигрыватели",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Виниловые проигрыватели",
 						path: "/turntable"
 					},
 					phonoStages: {
 						ruName: "Фонокорректоры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Фонокорректоры",
 						path: "/phonopreamps"
 					},
 					networkPlayers: {
 						ruName: "Сетевые проигрыватели",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Сетевые проигрыватели",
 						path: "/network_player"
 					},
 					radio: {
 						ruName: "Радиоприемники",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Радиоприемники",
 						path: "/radio"
 					},
 					portCarAudio: {
 						ruName: "Магнитолы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Магнитолы",
 						path: "/portaudio"
 					},
 					soundBars: {
 						ruName: "Саундбары и домашние кинотеатры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Саундбары и домашние кинотеатры",
 						path: "/soundbar"
 					},
 					clockRadios: {
 						ruName: "Электронные и радиочасы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Электронные и радиочасы",
 						path: "/clockradio"
 					},
 					voiceRecorders: {
 						ruName: "Диктофоны",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Диктофоны",
 						path: "/voicerecorder"
 					},
 					cables: {
 						ruName: "Кабели",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Кабели, адаптеры, разветвители",
 						path: "/cable"
 					},
 					vinylRecordPlayersAccessories: {
 						ruName: "Звукосниматели, тонармы, иглы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Звукосниматели, тонармы, иглы",
 						path: "/turntableaccess"
 					},
 					headphoneAmplifiers: {
 						ruName: "Усилители для наушников",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Усилители для наушников",
 						path: "/portableamp"
 					},
 					speakerDocks: {
 						ruName: "Док-станции для смартфонов",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Док-станции для смартфонов",
 						path: "/speakerdock"
 					},
 					remoteControls: {
 						ruName: "Универсальные пульты ДУ",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Универсальные пульты ДУ",
 						path: "/remote"
 					}
 				}
@@ -327,77 +328,77 @@ module.exports = {
 				subCategories: {
 					cameras: {
 						ruName: "Фотоаппараты",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Фотоаппараты",
 						path: "/photo"
 					},
 					lenses: {
 						ruName: "Объективы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Объективы",
 						path: "/lens"
 					},
 					actionCameras: {
 						ruName: "Экшен-камеры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Экшен-камеры",
 						path: "/actioncamera"
 					},
 					actionCameraAccessories: {
 						ruName: "Аксессуары и крепления для экшен-камер",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Аксессуары и крепления для экшен-камер",
 						path: "/actioncamera_acs"
 					},
 					videocameras: {
 						ruName: "Видеокамеры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Видеокамеры",
 						path: "/video"
 					},
 					photoPrinters: {
 						ruName: "Фотопринтеры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Фотопринтеры",
 						path: "/printers?type_print[0]=photoprinter&type_print[operation]=union"
 					},
 					tripods: {
 						ruName: "Штативы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Штативы",
 						path: "/tripod"
 					},
 					memoryCards: {
 						ruName: "Карты памяти",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Карты памяти",
 						path: "/memcards"
 					},
 					photoFrames: {
 						ruName: "Цифровые фоторамки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Цифровые фоторамки",
 						path: "/photoframe"
 					},
 					flashes: {
 						ruName: "Вспышки и лампы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Вспышки и лампы",
 						path: "/flashes"
 					},
 					batteriesAccumulatorsChargers: {
 						ruName: "Батарейки, аккумуляторы, зарядные",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Батарейки, аккумуляторы, зарядные",
 						path: "/battery"
 					},
 					cases: {
 						ruName: "Сумки и рюкзаки для фото/видео",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Сумки для фото/видеотехники",
 						path: "/case"
 					},
 					cardReaders: {
 						ruName: "Карт-ридеры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Карт-ридеры",
 						path: "/cardreaders"
 					},
 					batteries: {
 						ruName: "Аккумуляторы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Аккумуляторы, ЗУ для фото/видеотехники",
 						path: "/batteries"
 					},
 					photoFilters: {
 						ruName: "Светофильтры и конвертеры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Светофильтры и конвертеры",
 						path: "/photofilter"
 					}
 				}
@@ -407,32 +408,32 @@ module.exports = {
 				subCategories: {
 					consoles: {
 						ruName: "Игровые приставки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Игровые приставки",
 						path: "/console"
 					},
 					consoleGames: {
 						ruName: "Игры для приставок",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Игры для приставок",
 						path: "/games"
 					},
 					pcGames: {
 						ruName: "Игры для ПК",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Игры для ПК",
 						path: "/pcgames"
 					},
 					virtualReality: {
 						ruName: "Очки виртуальной реальности",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Очки виртуальной реальности",
 						path: "/virtualreality"
 					},
 					controllersAndAccessories: {
 						ruName: "Игровые контроллеры и аксессуары",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Игровые контроллеры и аксессуары",
 						path: "/controllers"
 					},
 					paymentCards: {
 						ruName: "Карты оплаты и подписки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Карты оплаты и подписки",
 						path: "/paymentcard"
 					}
 				}
@@ -442,37 +443,37 @@ module.exports = {
 				subCategories: {
 					subcategory: {
 						ruName: "Умные часы и фитнес-браслеты",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Умные часы и браслеты",
 						path: "/smartwatch"
 					},
 					heartRateMonitorsAndPulseOximeters: {
 						ruName: "Пульсометры, пульсоксиметры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Пульсометры, пульсоксиметры",
 						path: "/heart_rate"
 					},
 					strapsAndBracelets: {
 						ruName: "Сменные ремешки и браслеты",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Сменные ремешки и браслеты",
 						path: "/replacementstrap"
 					},
 					virtualReality: {
 						ruName: "Очки виртуальной реальности",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Очки виртуальной реальности",
 						path: "/virtualreality"
 					},
 					smartScales: {
 						ruName: "Умные весы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Умные весы",
 						path: "/scales?sc_synchronize=1"
 					},
 					nitratomersDosimeters: {
 						ruName: "Нитратомеры, дозиметры, экотестеры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Нитратомеры, дозиметры, экотестеры",
 						path: "/nitrate"
 					},
 					electronicSteamGenerators: {
 						ruName: "Электронные парогенераторы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Электронные парогенераторы",
 						path: "/smoke"
 					}
 				}
@@ -482,47 +483,47 @@ module.exports = {
 				subCategories: {
 					smartHome: {
 						ruName: "Умный дом",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Умный дом",
 						path: "/smart_home"
 					},
 					smartThermostats: {
 						ruName: "Умные терморегуляторы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Терморегуляторы",
 						path: "/thermostat?smarthome=1"
 					},
 					smartLightBulbs: {
 						ruName: "Умные лампочки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Лампочки",
 						path: "/lightbulb?lib_smartlight=1"
 					},
 					smartSockets: {
 						ruName: "Умные розетки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Розетки, выключатели",
 						path: "/wall_socket?wallsoc_smart=1"
 					},
 					ipCameras: {
 						ruName: "IP-камеры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "IP-камеры",
 						path: "/ipcamera"
 					},
 					videoDoorPhones: {
 						ruName: "Видеодомофоны",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Видеодомофоны",
 						path: "/videodoorphone"
 					},
 					cctvCameras: {
 						ruName: "Камеры CCTV",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Камеры CCTV",
 						path: "/cctvcamera"
 					},
 					DVRs: {
 						ruName: "Видеорегистраторы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Видеорегистраторы наблюдения",
 						path: "/dvr"
 					},
 					cameraTraps: {
 						ruName: "Фотоловушки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Фотоловушки",
 						path: "/camera_traps"
 					}
 				}
@@ -532,17 +533,17 @@ module.exports = {
 				subCategories: {
 					electricScooters: {
 						ruName: "Электросамокаты и электроскутеры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Электросамокаты и электроскутеры",
 						path: "/electric_scooter"
 					},
 					segways: {
 						ruName: "Гироциклы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Гироциклы",
 						path: "/segway"
 					},
 					electrobikes: {
 						ruName: "Электровелосипеды",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Электровелосипеды",
 						path: "/electrobike"
 					}
 				}
@@ -552,33 +553,33 @@ module.exports = {
 				subCategories: {
 					mobilePhones: {
 						ruName: "Мобильные телефоны",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Мобильные телефоны",
 						path: "/mobile"
 					},
 					dectPhones: {
 						ruName: "Радиотелефоны DECT",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Радиотелефоны DECT",
 						path: "/dect"
 					},
 					phones: {
 						ruName: "Проводные телефоны",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Проводные телефоны",
 						path: "/phone"
 					},
 					wireless3gModems: {
 						ruName: "3G-модемы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Беспроводные адаптеры",
 						path: "/wirelessadapter?wa_type%5B0%5D=3g&wa_type%5B1%5D=4g&wa_type%5Boperation%5D=union"
 					},
 					faxes: {
 						ruName: "Факсы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Факсы",
 						path: "/fax"
 					},
 
 					portableRadioStations: {
 						ruName: "Портативные радиостанции",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Портативные радиостанции",
 						path: "/portableradio"
 					}
 				}
@@ -588,32 +589,32 @@ module.exports = {
 				subCategories: {
 					synthesizersAndWorkstations: {
 						ruName: "Синтезаторы и рабочие станции",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Синтезаторы и рабочие станции",
 						path: "/synthandworkst"
 					},
 					audioInterfaces: {
 						ruName: "Аудиоинтерфейсы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Аудиоинтерфейсы",
 						path: "/audiointerface"
 					},
 					concertAcoustics: {
 						ruName: "Концертная акустика",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Концертная акустика",
 						path: "/concertacoustics"
 					},
 					studioMonitors: {
 						ruName: "Студийные мониторы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Студийные мониторы",
 						path: "/studio_monitor"
 					},
 					guitarAmps: {
 						ruName: "Гитарные комбоусилители",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Гитарные комбоусилители",
 						path: "/guitarcombo"
 					},
 					microphones: {
 						ruName: "Микрофоны",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Микрофоны",
 						path: "/microphones"
 					}
 				}
@@ -623,12 +624,12 @@ module.exports = {
 				subCategories: {
 					binoculars: {
 						ruName: "Бинокли и подзорные трубы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Бинокли и подзорные трубы",
 						path: "/optic"
 					},
 					telescopes: {
 						ruName: "Телескопы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Телескопы",
 						path: "/telescope"
 					}
 				}
