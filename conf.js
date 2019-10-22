@@ -1,9 +1,3 @@
-const _ = require("lodash")
-const Chance = require("chance")
-const moment = require("moment")
-
-const chance = Chance()
-
 exports.config = {
 	baseUrl: "https://catalog.onliner.by",
 	framework: "jasmine",
@@ -11,9 +5,6 @@ exports.config = {
 	specs: ["specs/**/*.js"],
 
 	onPrepare: () => {
-		global._ = _
-		global.chance = chance
-		global.moment = moment
 		browser.driver.manage().window().maximize()
 	}
 }
