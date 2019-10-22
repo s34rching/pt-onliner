@@ -4622,27 +4622,27 @@ module.exports = {
 				subCategories: {
 					babyStrollers: {
 						ruName: "Коляски",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Детские коляски и аксессуары",
 						path: "/pram"
 					},
 					childCarSeats: {
 						ruName: "Автокресла",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Автокресла",
 						path: "/childcarseat"
 					},
 					babyCarryingBackpacks: {
 						ruName: "Рюкзаки-переноски (кенгуру)",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Рюкзаки-переноски (кенгуру)",
 						path: "/babycarrier"
 					},
 					babyBikeSeats: {
 						ruName: "Велокресла",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Детские велокресла",
 						path: "/bikeseat"
 					},
 					childrenTrailers: {
 						ruName: "Детские велоприцепы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Детские коляски и аксессуары",
 						path: "/pram?pramconstruct%5B0%5D=trailer&pramconstruct%5Boperation%5D=union"
 					}
 				}
@@ -4652,42 +4652,42 @@ module.exports = {
 				subCategories: {
 					childrenKickScooters: {
 						ruName: "Самокаты",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Самокаты",
 						path: "/kickscooter"
 					},
 					childrenPushBicycles: {
 						ruName: "Детские велосипеды-каталки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Детские велосипеды-каталки",
 						path: "/kidsbike?kb_seat[0]=withbackrest&kb_seat[1]=withadjbackrest&kb_seat[operation]=union"
 					},
 					tricycles: {
 						ruName: "Трехколесные велосипеды",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Детские велосипеды",
 						path: "/kidsbike?num_wheels[0]=3&num_wheels[operation]=union&kb_seat[0]=simple&kb_seat[operation]=union"
 					},
 					sled: {
 						ruName: "Санки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Санки",
 						path: "/sled"
 					},
 					balanceBikes: {
 						ruName: "Беговелы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Беговелы",
 						path: "/balancebike"
 					},
 					babyWalkers: {
 						ruName: "Ходунки, прыгунки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Ходунки, прыгунки",
 						path: "/babywalker"
 					},
 					childrenElectricCars: {
 						ruName: "Электромобили",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Детские электромобили",
 						path: "/electricrideon"
 					},
 					pedalCars: {
 						ruName: "Каталки, педальные машинки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Каталки, педальные машинки",
 						path: "/rideon"
 					}
 				}
@@ -4697,47 +4697,47 @@ module.exports = {
 				subCategories: {
 					babyCotBeds: {
 						ruName: "Кроватки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Детские кроватки",
 						path: "/babycotbed"
 					},
 					highChairs: {
 						ruName: "Стульчики для кормления",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Стульчики для кормления",
 						path: "/highchair"
 					},
 					playpens: {
 						ruName: "Манежи",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Детские манежи",
 						path: "/playpen"
 					},
 					cots: {
 						ruName: "Детские кровати",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Детские кровати",
 						path: "/bed?b_child=1"
 					},
 					childrenTablesAndSchoolDesks: {
 						ruName: "Столы и парты",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Детские парты, столы, стулья",
 						path: "/kidsdesk"
 					},
 					babyDressers: {
 						ruName: "Детские комоды",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Детские комоды",
 						path: "/babydresser"
 					},
 					dressersForToys: {
 						ruName: "Комоды для игрушек",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Ящики, корзины, органайзеры",
 						path: "/toystorage?ts_const%5B0%5D=chest&ts_const%5Boperation%5D=union&ts_purpos%5B0%5D=chlroom&ts_purpos%5Boperation%5D=union"
 					},
 					childrenChaiseLoungesAndRockingChairs: {
 						ruName: "Детские шезлонги и качалки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Детские шезлонги и качалки",
 						path: "/babyswing"
 					},
 					markerAndChalkBoards: {
 						ruName: "Маркерные и меловые доски",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Офисные доски, флипчарты",
 						path: "/officeboard"
 					}
 				}
@@ -4747,32 +4747,32 @@ module.exports = {
 				subCategories: {
 					babyCotBeds: {
 						ruName: "Кроватки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Детские кроватки",
 						path: "/babycotbed"
 					},
 					cots: {
 						ruName: "Детские кровати",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Детские кровати",
 						path: "/bed?b_child=1"
 					},
 					childrenLinen: {
 						ruName: "Детское постельное белье",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Детское постельное белье",
 						path: "/bedlinen?bed_type%5B0%5D=kids&bed_type%5Boperation%5D=union"
 					},
 					childrenPillows: {
 						ruName: "Подушки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Одеяла и подушки",
 						path: "/pillows?pil_type%5B0%5D=sleep&pil_type%5Boperation%5D=union&pil_size%5B0%5D=48x48&pil_size%5B1%5D=50x50&pil_size%5B2%5D=40x40&pil_size%5B3%5D=38x38&pil_size%5B4%5D=35x45&pil_size%5Boperation%5D=union"
 					},
 					childrenMattresses: {
 						ruName: "Детские матрасы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Детские матрасы",
 						path: "/mattress?mtr_kid=1"
 					},
 					babyMonitors: {
 						ruName: "Радионяни и видеоняни",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Радионяни и видеоняни",
 						path: "/babymonitor"
 					}
 				}
@@ -4782,47 +4782,47 @@ module.exports = {
 				subCategories: {
 					boardGames: {
 						ruName: "Настольные игры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Настольные игры",
 						path: "/boardgame"
 					},
 					constructors: {
 						ruName: "Конструкторы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Конструкторы",
 						path: "/buildingkit"
 					},
 					educationalToys: {
 						ruName: "Развивающие игрушки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Развивающие игрушки",
 						path: "/edu_toys"
 					},
 					developmentalMats: {
 						ruName: "Развивающие коврики",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Развивающие коврики",
 						path: "/playmats"
 					},
 					scaleModels: {
 						ruName: "Сборные модели",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Сборные модели",
 						path: "/scale_model"
 					},
 					logicPuzzles: {
 						ruName: "Логические игры, головоломки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Логические игры, головоломки",
 						path: "/logic_puzzles"
 					},
 					pens3d: {
 						ruName: "3D-ручки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "3D-ручки",
 						path: "/3d_pen"
 					},
 					fidgetSpinners: {
 						ruName: "Фиджет спиннеры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Фиджет спиннеры",
 						path: "/fidget_spinner"
 					},
 					scienceKits: {
 						ruName: "Игры-опыты, эксперименты",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Игры-опыты, эксперименты",
 						path: "/science_kits"
 					}
 				}
@@ -4832,62 +4832,62 @@ module.exports = {
 				subCategories: {
 					actionFigures: {
 						ruName: "Экшен-фигурки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Куклы, экшен-фигурки",
 						path: "/doll?do_type%5B0%5D=actionfigure&do_type%5Boperation%5D=union"
 					},
 					babyDolls: {
 						ruName: "Детские куклы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Куклы, экшен-фигурки",
 						path: "/doll?do_type%5B0%5D=doll&do_type%5Boperation%5D=union"
 					},
 					dollHouses: {
 						ruName: "Кукольные домики",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Кукольные домики",
 						path: "/dollhouses"
 					},
 					raceTracks: {
 						ruName: "Детские автотреки, трассы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Детские автотреки, трассы",
 						path: "/race_track"
 					},
 					rcCars: {
 						ruName: "Радиоуправляемые машинки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Радиоуправляемые автомодели",
 						path: "/radioautomodel"
 					},
 					rcAircraftModels: {
 						ruName: "Радиоуправляемые самолеты и вертолеты",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Радиоуправляемые авиамодели",
 						path: "/radiocontrolair"
 					},
 					kidsRailRoads: {
 						ruName: "Детские железные дороги",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Детские железные дороги",
 						path: "/kidsrailroad"
 					},
 					stuffedToys: {
 						ruName: "Мягкие игрушки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Мягкие игрушки",
 						path: "/stuffedtoys"
 					},
 					interactiveToys: {
 						ruName: "Интерактивные игрушки и роботы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Интерактивные игрушки и роботы",
 						path: "/interactive_toys"
 					},
 					rcBoats: {
 						ruName: "Радиоуправляемые катера",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Радиоуправляемые судомодели",
 						path: "/radiomodelwater"
 					},
 					playHouses: {
 						ruName: "Игровые домики и палатки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Игровые домики и палатки",
 						path: "/playhouse"
 					},
 					airHockeyFoosballMiniMilliards: {
 						ruName: "Аэрохоккей, настольный футбол, мини-бильярд",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Аэрохоккей, настольный футбол, мини-бильярд",
 						path: "/airhockey"
 					}
 				}
@@ -4897,66 +4897,67 @@ module.exports = {
 				subCategories: {
 					pools: {
 						ruName: "Бассейны",
+						subcategoryPageRuHeading: "Бассейны",
 						path: "/pool"
 					},
 					swedishWalls: {
 						ruName: "Шведские стенки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Шведские стенки",
 						path: "/kidwallbars?kwb_wallbars=1"
 					},
 					childrenStreetComplexesAndHills: {
 						ruName: "Уличные комплексы и горки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Детские уличные комплексы и горки",
 						path: "/kidwallbars?kwb_type[0]=outdoor&kwb_type[operation]=union"
 					},
 					gardenSwings: {
 						ruName: "Садовые качели",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Садовые качели",
 						path: "/gardenswing"
 					},
 					trampolines: {
 						ruName: "Батуты",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Батуты",
 						path: "/trampoline"
 					},
 					balls: {
 						ruName: "Мячи",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Мячи",
 						path: "/ball"
 					},
 					playhouses: {
 						ruName: "Игровые домики и палатки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Игровые домики и палатки",
 						path: "/playhouse"
 					},
 					childrenSkates: {
 						ruName: "Коньки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Коньки",
 						path: "/skates?type_skates%5B0%5D=child_skates&type_skates%5B1%5D=girls_skates&type_skates%5B2%5D=boy_skates&type_skates%5Boperation%5D=union"
 					},
 					childrenRollerSkates: {
 						ruName: "Роликовые коньки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Роликовые коньки",
 						path: "/rollerskates"
 					},
 					childrenKickScooters: {
 						ruName: "Самокаты",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Самокаты",
 						path: "/kickscooter?ks_targetaudienc%5B0%5D=kid&ks_targetaudienc%5Boperation%5D=union"
 					},
 					childrenSki: {
 						ruName: "Лыжи",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Детские лыжи",
 						path: "/skis?gender_skis%5B0%5D=child_skis&gender_skis%5Boperation%5D=union"
 					},
 					hockeySticks: {
 						ruName: "Хоккейные клюшки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Хоккейные клюшки",
 						path: "/hockeystick"
 					},
 					sportsProtection: {
 						ruName: "Спортивная защита",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Спортивная защита",
 						path: "/sportsprotection?spp_forwhom%5B0%5D=kids&spp_forwhom%5Boperation%5D=union"
 					}
 				}
@@ -4966,42 +4967,42 @@ module.exports = {
 				subCategories: {
 					diapers: {
 						ruName: "Подгузники",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Детские подгузники",
 						path: "/diapers"
 					},
 					babyMonitors: {
 						ruName: "Радионяни и видеоняни",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Радионяни и видеоняни",
 						path: "/babymonitor"
 					},
 					babyScales: {
 						ruName: "Весы для новорожденных",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Детские весы",
 						path: "/babyscales"
 					},
 					babyFoodMakers: {
 						ruName: "Устройства для приготовления детского питания",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Устройства для приготовления детского питания",
 						path: "/babyfoodmaker"
 					},
 					bottleWarmersAndSterilizers: {
 						ruName: "Подогреватели и стерилизаторы бутылочек",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Подогреватели и стерилизаторы",
 						path: "/bottlesterilizer"
 					},
 					babyThermometers: {
 						ruName: "Термометры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Детские термометры",
 						path: "/medthermometer?baby_medtherm=1"
 					},
 					babyWashingPowders: {
 						ruName: "Детские стиральные порошки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Детские стиральные порошки",
 						path: "/washingpowder?typeoflinen[0]=washchild&typeoflinen[operation]=union"
 					},
 					breastPumpsAndAccessories: {
 						ruName: "Молокоотсосы и аксессуары",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Молокоотсосы и аксессуары",
 						path: "/breast_pump"
 					}
 				}
@@ -5011,27 +5012,27 @@ module.exports = {
 				subCategories: {
 					schoolBackpacks: {
 						ruName: "Школьные рюкзаки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Школьные рюкзаки",
 						path: "/backpack?bap_type[0]=school&bap_type[operation]=union"
 					},
 					childrenTablesAndSchoolDesks: {
 						ruName: "Детские парты, столы, стулья",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Детские парты, столы, стулья",
 						path: "/kidsdesk"
 					},
 					childrenSmartWatches: {
 						ruName: "Умные часы для детей",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Умные часы для детей",
 						path: "/smartwatch?sw_kid=1"
 					},
 					markerAndChalkBoards: {
 						ruName: "Маркерные и меловые доски",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Офисные доски, флипчарты",
 						path: "/officeboard"
 					},
 					scienceKits: {
 						ruName: "Игры-опыты, эксперименты",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Игры-опыты, эксперименты",
 						path: "/science_kits"
 					}
 				}
