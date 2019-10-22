@@ -15,15 +15,11 @@ describe("Onliner.by - Catalog / Navigation", () => {
 		const randomSubcategoryItem = entities.getRandomSubcategory(randomCategoryItem)
 
 		HomePage.goTo("/")
-		HomePage.openCatalog()
-		Catalog.chooseClassifierItem(randomClassifierItem.id)
-		Catalog.waitForCategoriesLeftNav()
-		Catalog.focusCategoryItem(randomCategoryItem.ruName)
-		Catalog.waitForSubcategoriesDropDown()
-		Catalog.openSubcategory(randomSubcategoryItem.ruName)
+			.then(() => { HomePage.openCatalog() })
+			.then(() => { Catalog.chooseClassifierItem(randomClassifierItem.id) })
+			.then(() => { Catalog.focusCategoryItem(randomCategoryItem.ruName) })
+			.then(() => { Catalog.openSubcategory(randomSubcategoryItem.ruName) })
 	})
 })
 
-// TODO: - left of undefined -
 // TODO: search sequence object
-// TODO: execution stack: isVisible()

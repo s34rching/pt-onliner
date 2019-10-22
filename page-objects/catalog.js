@@ -17,26 +17,18 @@ class Catalog extends BasePage {
 	}
 
 	chooseClassifierItem(itemId) {
-		this.sectionItem(itemId).click()
-	}
-
-	waitForCategoriesLeftNav() {
-		return this.isVisible(this.categoriesLeftNav)
+		browser.wait(this.isClickable(this.sectionItem(itemId)))
+		return this.sectionItem(itemId).click()
 	}
 
 	focusCategoryItem(categoryTitle) {
-		browser.actions()
-			.mouseMove(this.categoryItem(categoryTitle))
-			.perform()
-	}
-
-	waitForSubcategoriesDropDown() {
-		return this.isVisible(this.subCategoriesDropDown)
+		browser.wait(this.isClickable(this.categoryItem(categoryTitle)))
+		this.categoryItem(categoryTitle).click()
 	}
 
 	openSubcategory(subcategoryTitle) {
-		return this.subCategoryItem(subcategoryTitle)
-			.click()
+		browser.wait(this.isClickable(this.subCategoryItem(subcategoryTitle)))
+		return this.subCategoryItem(subcategoryTitle).click()
 	}
 }
 
