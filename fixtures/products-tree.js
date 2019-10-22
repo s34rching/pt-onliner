@@ -645,27 +645,27 @@ module.exports = {
 				subCategories: {
 					onePieceComputers: {
 						ruName: "Ноутбуки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Ноутбуки",
 						path: "/notebook"
 					},
 					tablets: {
 						ruName: "Планшетные компьютеры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Планшеты",
 						path: "/tabletpc"
 					},
 					monoblockPcs: {
 						ruName: "Моноблоки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Моноблоки",
 						path: "/monoblock"
 					},
 					desktopPcs: {
 						ruName: "Компьютеры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Компьютеры",
 						path: "/desktoppc"
 					},
 					monitors: {
 						ruName: "Мониторы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Мониторы",
 						path: "/display"
 					}
 				}
@@ -675,67 +675,67 @@ module.exports = {
 				subCategories: {
 					videoCards: {
 						ruName: "Видеокарты",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Видеокарты",
 						path: "/videocard"
 					},
 					CPU: {
 						ruName: "Процессоры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Процессоры",
 						path: "/cpu"
 					},
 					motherboards: {
 						ruName: "Материнские платы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Материнские платы",
 						path: "/motherboard"
 					},
 					RAM: {
 						ruName: "Оперативная память",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Оперативная память",
 						path: "/dram"
 					},
 					fans: {
 						ruName: "Кулеры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Системы охлаждения",
 						path: "/fan"
 					},
 					SSD: {
 						ruName: "SSD",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "SSD",
 						path: "/ssd"
 					},
 					HDD: {
 						ruName: "Жесткие диски",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Жесткие диски",
 						path: "/hdd"
 					},
 					computerCases: {
 						ruName: "Корпуса",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Корпуса",
 						path: "/chassis"
 					},
 					powerSupplies: {
 						ruName: "Блоки питания",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Блоки питания",
 						path: "/powersupply"
 					},
 					soundCards: {
 						ruName: "Звуковые карты",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Звуковые карты",
 						path: "/soundcard?type_soundcard%5B0%5D=internal&type_soundcard%5Boperation%5D=union"
 					},
 					networkAdapters: {
 						ruName: "Сетевые адаптеры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Сетевые адаптеры",
 						path: "/networkadapter"
 					},
 					opticalDrives: {
 						ruName: "Оптические приводы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Оптические приводы",
 						path: "/optical"
 					},
 					tvTuners: {
 						ruName: "ТВ-тюнеры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "ТВ-тюнеры",
 						path: "/tvtuner?execution_tvtune%5B0%5D=in&execution_tvtune%5Boperation%5D=union"
 					}
 				}
@@ -745,62 +745,62 @@ module.exports = {
 				subCategories: {
 					printers: {
 						ruName: "Принтеры и МФУ",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Принтеры и МФУ",
 						path: "/printers"
 					},
 					scanners: {
 						ruName: "Сканеры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Сканеры",
 						path: "/scanner"
 					},
 					accessoriesForOfficeEquipment: {
 						ruName: "Аксессуары для оргтехники",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Аксессуары для оргтехники",
 						path: "/officeequip_acs"
 					},
 					graphicTablets: {
 						ruName: "Графические планшеты",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Графические планшеты",
 						path: "/tablets"
 					},
 					cartridges: {
 						ruName: "Картриджи",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Картриджи для принтеров и МФУ",
 						path: "/cartridges"
 					},
 					photoPaper: {
 						ruName: "Бумага и материалы для печати",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Бумага и материалы для печати",
 						path: "/photopaper"
 					},
 					laminators: {
 						ruName: "Ламинаторы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Ламинаторы",
 						path: "/laminator"
 					},
 					bookletMakers: {
 						ruName: "Брошюровщики",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Брошюровщики",
 						path: "/bindingmachines"
 					},
 					matrixPrinters: {
 						ruName: "Матричные принтеры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Матричные принтеры",
 						path: "/matrixprinter"
 					},
 					printers3d: {
 						ruName: "3D-принтеры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "3D-принтеры",
 						path: "/3dprinter"
 					},
 					pens3d: {
 						ruName: "3D-ручки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "3D-ручки",
 						path: "/3d_pen"
 					},
 					suppliesFor3dPrinting: {
 						ruName: "Расходные материалы для 3D-печати",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Расходные материалы для 3D-печати",
 						path: "/3d_filament"
 					}
 				}
@@ -810,32 +810,32 @@ module.exports = {
 				subCategories: {
 					mouses: {
 						ruName: "Мыши",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Мыши",
 						path: "/mouse"
 					},
 					keyboards: {
 						ruName: "Клавиатуры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Клавиатуры",
 						path: "/keyboards"
 					},
 					controllers: {
 						ruName: "Игровые контроллеры и аксессуары",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Игровые контроллеры и аксессуары",
 						path: "/controllers"
 					},
 					graphicTablets: {
 						ruName: "Графические планшеты",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Графические планшеты",
 						path: "/tablets"
 					},
 					peripheralKits: {
 						ruName: "Наборы периферии (клавиатура + мышь)",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Наборы периферии",
 						path: "/peripheralkits"
 					},
 					mousePads: {
 						ruName: "Коврики для мыши",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Коврики для мыши",
 						path: "/mousepad"
 					}
 				}
@@ -845,52 +845,52 @@ module.exports = {
 				subCategories: {
 					SSD: {
 						ruName: "SSD",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "SSD",
 						path: "/ssd"
 					},
 					HDD: {
 						ruName: "Жесткие диси",
-						subcategoryPageRuHeading: "",
-						path: "/hdd"
+						subcategoryPageRuHeading: "SSD",
+						path: "/SSD"
 					},
 					EXTERNALhDD: {
 						ruName: "Внешние накопители (HDD и SSD)",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Внешние накопители",
 						path: "/externalhdd"
 					},
 					USBfLASH: {
 						ruName: "Флешки USB",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "USB Flash",
 						path: "/usbflash"
 					},
 					memoryCards: {
 						ruName: "Карты памяти",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Карты памяти",
 						path: "/memcards"
 					},
 					casesForHdd: {
 						ruName: "Боксы для накопителей",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Боксы для накопителей",
 						path: "/hddbox"
 					},
 					NAS: {
 						ruName: "Сетевые накопители (NAS)",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Сетевые накопители (NAS)",
 						path: "/nas"
 					},
 					opticalDrives: {
 						ruName: "Оптические приводы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Оптические приводы",
 						path: "/optical"
 					},
 					usbHubs: {
 						ruName: "USB-хабы и док-станции",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "USB-хабы и док-станции",
 						path: "/usbhub"
 					},
 					cardReaders: {
 						ruName: "Карт-ридеры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Карт-ридеры",
 						path: "/cardreaders"
 					}
 				}
@@ -900,27 +900,27 @@ module.exports = {
 				subCategories: {
 					pcAcoustics: {
 						ruName: "Компьютерная акустика",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Мультимедиа акустика",
 						path: "/sound"
 					},
 					headphones: {
 						ruName: "Наушники",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Наушники и гарнитуры",
 						path: "/headphones"
 					},
 					webCameras: {
 						ruName: "Веб-камеры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Web-камеры",
 						path: "/webcams"
 					},
 					ipCameras: {
 						ruName: "IP-камеры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "IP-камеры",
 						path: "/ipcamera"
 					},
 					audioInterfaces: {
 						ruName: "Аудиоинтерфейсы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Аудиоинтерфейсы",
 						path: "/audiointerface"
 					}
 				}
@@ -930,67 +930,67 @@ module.exports = {
 				subCategories: {
 					wirelessRouters: {
 						ruName: "Беспроводные маршрутизаторы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Беспроводные маршрутизаторы",
 						path: "/wrouter"
 					},
 					wirelessAdapters: {
 						ruName: "Беспроводные адаптеры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Беспроводные адаптеры",
 						path: "/wirelessadapter"
 					},
 					switches: {
 						ruName: "Коммутаторы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Коммутаторы",
 						path: "/switch"
 					},
 					dslModemsAndRouters: {
 						ruName: "DSL-модемы и маршрутизаторы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "DSL-модемы и маршрутизаторы",
 						path: "/dslmodem"
 					},
 					ipCameras: {
 						ruName: "IP-камеры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "IP-камеры",
 						path: "/ipcamera"
 					},
 					NAS: {
 						ruName: "NAS",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Сетевые накопители (NAS)",
 						path: "/nas"
 					},
 					wirelessAccessPoints: {
 						ruName: "Беспроводные точки доступа",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Беспроводные точки доступа",
 						path: "/wirelessap"
 					},
 					modemsFor3gAnd4G: {
 						ruName: "4G и 3G-модемы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Беспроводные адаптеры",
 						path: "/wirelessadapter?wa_type%5B0%5D=4g&wa_type%5B1%5D=3g&wa_type%5Boperation%5D=union"
 					},
 					networkCables: {
 						ruName: "Сетевые кабели",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Кабели для сетевого оборудования",
 						path: "/cable?cable_usage%5B0%5D=type4&cable_usage%5Boperation%5D=union"
 					},
 					cableCrimpingTools: {
 						ruName: "Инструмент для обжимки кабелей",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Клещи обжимные",
 						path: "/household_tools?ht_type%5B0%5D=crimpingpliers&ht_type%5Boperation%5D=union&order=date:desc"
 					},
 					networkAdapters: {
 						ruName: "Сетевые адаптеры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Сетевые адаптеры",
 						path: "/networkadapter"
 					},
 					powerlines: {
 						ruName: "Сети по электропроводке (Powerline)",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Сети по электропроводке (Powerline)",
 						path: "/powerline"
 					},
 					wirelessAntennas: {
 						ruName: "Антенны беспроводной связи",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Антенны беспроводной связи",
 						path: "/wantenna"
 					}
 				}
@@ -1000,37 +1000,37 @@ module.exports = {
 				subCategories: {
 					mobilePhones: {
 						laptopBackpacks: "Рюкзаки для ноутбуков",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Рюкзаки",
 						path: "/backpack?bap_internaldep%5B0%5D=laptoptablet&bap_internaldep%5Boperation%5D=union"
 					},
 					laptopBags: {
 						ruName: "Сумки для ноутбуков",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Сумки для ноутбуков",
 						path: "/notebookcase"
 					},
 					coolingCoasters: {
 						ruName: "Охлаждающие подставки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Подставки для ноутбуков",
 						path: "/laptopstand"
 					},
 					cablesAdaptersSplitters: {
 						ruName: "Кабели, адаптеры, разветвители",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Кабели, адаптеры для компьютера",
 						path: "/cable?cable_usage%5B0%5D=pc&cable_usage%5Boperation%5D=union"
 					},
 					mousepads: {
 						ruName: "Коврики для мыши",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Коврики для мыши",
 						path: "/mousepad"
 					},
 					accumulatorsAndChargers: {
 						ruName: "Аккумуляторы и зарядные устройства",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Аккумуляторы, ЗУ для ноутбуков",
 						path: "/nbbatteries?mfr%5B0%5D=for_notebook&mfr%5B1%5D=for_notebook_cha"
 					},
 					universalChargers: {
 						ruName: "Универсальные зарядные устройства",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Зарядные устройства для ноутбуков",
 						path: "/chargersmobile?mc_devicetype%5B0%5D=type2&mc_devicetype%5Boperation%5D=union"
 					}
 				}
@@ -1040,32 +1040,32 @@ module.exports = {
 				subCategories: {
 					ups: {
 						ruName: "Источники бесперебойного питания",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Источники бесперебойного питания",
 						path: "/ups"
 					},
 					stabilizersAndSurgeProtectors: {
 						ruName: "Стабилизаторы и сетевые фильтры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Стабилизаторы и сетевые фильтры",
 						path: "/voltageregulator"
 					},
 					laptopBatteries: {
 						ruName: "Аккумуляторы для ноутбуков",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Аккумуляторы, ЗУ для ноутбуков",
 						path: "/nbbatteries?mfr%5B0%5D=for_notebook"
 					},
 					chargers: {
 						ruName: "Зарядные устройства",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Зарядные устройства для ноутбуков",
 						path: "/chargersmobile?mc_devicetype%5B0%5D=type2&mc_devicetype%5Boperation%5D=union"
 					},
 					cables: {
 						ruName: "Кабели питания",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Кабели, адаптеры IEC 60320",
 						path: "/cable?conn1%5B0%5D=c5&conn1%5Boperation%5D=intersect"
 					},
 					upsBatteries: {
 						ruName: "Аккумуляторы для ИБП",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Аккумуляторы для ИБП",
 						path: "/ups_battery"
 					}
 				}
@@ -1075,22 +1075,22 @@ module.exports = {
 				subCategories: {
 					gamesForPc: {
 						ruName: "Видеоигры для ПК",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Игры для ПК",
 						path: "/pcgames"
 					},
 					gamesForConsole: {
 						ruName: "Видеоигры для консолей",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Игры для приставок",
 						path: "/games"
 					},
 					antiviruses: {
 						ruName: "Антивирусы и безопасность",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Антивирусы и безопасность",
 						path: "/antivirus"
 					},
 					paymentCardsAndSubscriptions: {
 						ruName: "Карты оплаты и подписки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Карты оплаты и подписки",
 						path: "/paymentcard"
 					}
 				}
