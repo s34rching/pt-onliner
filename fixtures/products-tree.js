@@ -1106,47 +1106,47 @@ module.exports = {
 				subCategories: {
 					refrigerators: {
 						ruName: "Холодильники",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Холодильники",
 						path: "/refrigerator"
 					},
 					freezers: {
 						ruName: "Морозильники",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Морозильники",
 						path: "/refrigerator?type_refrigerato%5B0%5D=chestfreezer&type_refrigerato%5B1%5D=freezer&type_refrigerato%5Boperation%5D=union"
 					},
 					washingMachines: {
 						ruName: "Стиральные машины",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Стиральные машины",
 						path: "/washingmachine"
 					},
 					tumbleDryers: {
 						ruName: "Сушильные машины",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Сушильные машины",
 						path: "/washingmachine?type_washm_bi[0]=dry_m&type_washm_bi[1]=dryingcabinet&type_washm_bi[operation]=union"
 					},
 					hoods: {
 						ruName: "Вытяжки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Вытяжки",
 						path: "/hoods"
 					},
 					cookers: {
 						ruName: "Кухонные плиты",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Кухонные плиты",
 						path: "/cooker"
 					},
 					dishwashers: {
 						ruName: "Посудомоечные машины",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Посудомоечные машины",
 						path: "/dishwasher"
 					},
 					wineRacks: {
 						ruName: "Винные шкафы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Винные шкафы",
 						path: "/wine_cabinets"
 					},
 					accessoriesForLargeHouseholdAppliances: {
 						ruName: "Аксессуары для крупной бытовой техники",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Аксессуары для крупной бытовой и встраиваемой техники",
 						path: "/largehomeapp_acs"
 					}
 				}
@@ -1156,52 +1156,52 @@ module.exports = {
 				subCategories: {
 					hobs: {
 						ruName: "Варочные панели",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Варочные панели",
 						path: "/hob_cooker"
 					},
 					ovens: {
 						ruName: "Духовые шкафы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Духовые шкафы",
 						path: "/oven_cooker"
 					},
 					hoods: {
 						ruName: "Вытяжки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Вытяжки",
 						path: "/hoods"
 					},
 					dishwashers: {
 						ruName: "Посудомоечные машины",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Встраиваемые посудомоечные машины",
 						path: "/dishwasher?location[0]=installation&location[operation]=union"
 					},
 					refrigerators: {
 						ruName: "Холодильники",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Встраиваемые холодильники",
 						path: "/refrigerator?location[0]=installation&location[operation]=union"
 					},
 					washingMachines: {
 						ruName: "Стиральные машины",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Встраиваемые стиральные машины",
 						path: "/washingmachine?location[0]=installation&location[operation]=union"
 					},
 					microwave: {
 						ruName: "Микроволновые печи",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Встраиваемые микроволновые печи",
 						path: "/microvawe?location[0]=installation&location[operation]=union"
 					},
 					coffeeMachines: {
 						ruName: "Кофемашины",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Встраиваемые кофеварки",
 						path: "/coffee?location[0]=installation&location[operation]=union"
 					},
 					foodWasteShredders: {
 						ruName: "Измельчители пищевых отходов",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Измельчители пищевых отходов",
 						path: "/disposer"
 					},
 					AccessoriesForBuiltInAppliances: {
 						ruName: "Аксессуары для встраиваемой техники",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Аксессуары для крупной бытовой и встраиваемой техники",
 						path: "/largehomeapp_acs"
 					}
 				}
@@ -1211,37 +1211,37 @@ module.exports = {
 				subCategories: {
 					vacuumCleaners: {
 						ruName: "Пылесосы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Пылесосы",
 						path: "/vacuumcleaner"
 					},
 					robotCleaners: {
 						ruName: "Роботы-пылесосы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Роботы-пылесосы",
 						path: "/robotcleaner"
 					},
 					vacuumCleanersForWindows: {
 						ruName: "Пылесосы для окон",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Пылесосы для окон",
 						path: "/vacuumcleaner?vc_type%5B0%5D=windowvc&vc_type%5Boperation%5D=union"
 					},
 					robotCleanersForWindows: {
 						ruName: "Роботы для мытья окон",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Роботы для мытья окон",
 						path: "/robotcleaner?robot_type%5B0%5D=1&robot_type%5Boperation%5D=union"
 					},
 					steamCleaners: {
 						ruName: "Пароочистители",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Пароочистители",
 						path: "/steamcleaner?steam_type%5B0%5D=purifier&steam_type%5Boperation%5D=union"
 					},
 					sweepers: {
 						ruName: "Электровеники",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Электровеники",
 						path: "/sweeper"
 					},
 					accessoriesForVacuumCleaners: {
 						ruName: "Аксессуары для пылесосов, пароочистителей",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Аксессуары для пылесосов, пароочистителей",
 						path: "/vacuum_acs"
 					}
 				}
@@ -1251,42 +1251,42 @@ module.exports = {
 				subCategories: {
 					irons: {
 						ruName: "Утюги",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Утюги",
 						path: "/iron"
 					},
 					steamers: {
 						ruName: "Отпариватели",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Пароочистители и отпариватели",
 						path: "/steamcleaner?steam_type%5B0%5D=steamer&steam_type%5B1%5D=ironing_station&steam_type%5B2%5D=steampress&steam_type%5Boperation%5D=union"
 					},
 					ironingStationsAndPresses: {
 						ruName: "Гладильные станции и прессы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Пароочистители и отпариватели",
 						path: "/steamcleaner?steam_type%5B0%5D=ironing_station&steam_type%5B1%5D=steampress&steam_type%5Boperation%5D=union"
 					},
 					sewingMachines: {
 						ruName: "Швейные машины",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Швейные машины",
 						path: "/sewingmachines"
 					},
 					overlocks: {
 						ruName: "Оверлоки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Оверлоки и распошивальные машины",
 						path: "/overlock"
 					},
 					embroideryMachines: {
 						ruName: "Вышивальные и швейно-вышивальные машины",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Вышивальные и швейно-вышивальные машины",
 						path: "/sewingmachines?embroideryunit=1"
 					},
 					lintShavers: {
 						ruName: "Машинки для удаления катышков",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Машинки для удаления катышков",
 						path: "/lintshaver"
 					},
 					accessoriesForIrons: {
 						ruName: "Аксессуары для утюгов, гладильных систем",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Аксессуары для утюгов, увлажнителей и очистителей воздуха",
 						path: "/climate_acs?cla_purpos%5B0%5D=iron&cla_purpos%5B1%5D=gladsystem&cla_purpos%5B2%5D=press&cla_purpos%5Boperation%5D=union"
 					}
 				}
@@ -1296,67 +1296,67 @@ module.exports = {
 				subCategories: {
 					conditioners: {
 						ruName: "Кондиционеры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Кондиционеры",
 						path: "/conditioners"
 					},
 					waterHeater: {
 						ruName: "Водонагреватели",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Водонагреватели",
 						path: "/waterheater"
 					},
 					heaters: {
 						ruName: "Обогреватели",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Обогреватели",
 						path: "/heater"
 					},
 					humidifiers: {
 						ruName: "Увлажнители воздуха",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Увлажнители воздуха",
 						path: "/humidifier"
 					},
 					boilers: {
 						ruName: "Отопительные котлы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Отопительные котлы",
 						path: "/boiler"
 					},
 					blowers: {
 						ruName: "Вентиляторы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Вентиляторы",
 						path: "/blower"
 					},
 					airPurifiers: {
 						ruName: "Очистители и мойки воздуха",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Очистители и мойки воздуха",
 						path: "/airpurifier"
 					},
 					supplyAirVents: {
 						ruName: "Приточные проветриватели",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Вытяжная и приточная вентиляция",
 						path: "/exhaustfan?ef_type%5B0%5D=passprov&ef_type%5B1%5D=recuperator&ef_type%5B2%5D=provbeznagr&ef_type%5B3%5D=provnagr&ef_type%5Boperation%5D=union"
 					},
 					meteoStations: {
 						ruName: "Метеостанции",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Метеостанции",
 						path: "/meteostations"
 					},
 					electricFireplaces: {
 						ruName: "Электрокамины",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Электрокамины и биокамины",
 						path: "/electrofireplace"
 					},
 					dehumidifier: {
 						ruName: "Осушители воздуха",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Осушители воздуха",
 						path: "/dehumidifier"
 					},
 					insectKillers: {
 						ruName: "Электронные уничтожители насекомых",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Уничтожители насекомых, отпугиватели, ловушки",
 						path: "/insect_killer"
 					},
 					accessoriesForClimateEquipment: {
 						ruName: "Аксессуары для климатической техники",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Аксессуары для утюгов, увлажнителей и очистителей воздуха",
 						path: "/climate_acs?cla_purpos%5B0%5D=humid&cla_purpos%5B1%5D=aircleaner&cla_purpos%5B2%5D=condic&cla_purpos%5Boperation%5D=union"
 					}
 				}
@@ -1366,87 +1366,87 @@ module.exports = {
 				subCategories: {
 					microwaves: {
 						ruName: "Микроволновые печи",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Микроволновые печи",
 						path: "/microvawe"
 					},
 					multicookers: {
 						ruName: "Мультиварки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Мультиварки",
 						path: "/multicooker"
 					},
 					tabletopCookers: {
 						ruName: "Настольные плиты",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Настольные плиты",
 						path: "/tabletop_cooker"
 					},
 					roasters: {
 						ruName: "Мини-печи",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Мини-печи (ростеры)",
 						path: "/roaster"
 					},
 					toasters: {
 						ruName: "Тостеры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Тостеры",
 						path: "/toaster"
 					},
 					waffleMakers: {
 						ruName: "Вафельницы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Вафельницы",
 						path: "/waffle"
 					},
 					sandwichers: {
 						ruName: "Сэндвичницы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Сэндвичницы",
 						path: "/sandwichers"
 					},
 					aerogrills: {
 						ruName: "Аэрогрили",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Аэрогрили",
 						path: "/aerogrill"
 					},
 					breadMakers: {
 						ruName: "Хлебопечки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Хлебопечки",
 						path: "/breadmaker"
 					},
 					electricGrills: {
 						ruName: "Электрогрили",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Электрогрили",
 						path: "/electricgrill"
 					},
 					electricSkewers: {
 						ruName: "Электрошашлычницы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Электрошашлычницы",
 						path: "/electrobarbecue"
 					},
 					steamers: {
 						ruName: "Пароварки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Пароварки",
 						path: "/steamers"
 					},
 					yogurtMakers: {
 						ruName: "Йогуртницы и мороженицы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Йогуртницы",
 						path: "/yogurtmaker"
 					},
 					deepFryers: {
 						ruName: "Фритюрницы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Фритюрницы",
 						path: "/fryer"
 					},
 					crepeMakers: {
 						ruName: "Блинницы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Блинницы",
 						path: "/crepemaker"
 					},
 					eggMakers: {
 						ruName: "Яйцеварки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Яйцеварки",
 						path: "/eggmaker"
 					},
 					accessoriesForKitchenEquipment: {
 						ruName: "Аксессуары для кухонной техники",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Аксессуары для кухонной техники",
 						path: "/kitchen_acs"
 					}
 				}
@@ -1456,57 +1456,57 @@ module.exports = {
 				subCategories: {
 					coffeeMachines: {
 						ruName: "Кофемашины",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Кофемашины",
 						path: "/coffee?type_coffee[0]=coffee_machine&type_coffee[operation]=union"
 					},
 					coffeeMakers: {
 						ruName: "Кофеварки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Кофеварки",
 						path: "/coffee?type_coffee[0]=espresso_coffee&type_coffee[1]=dropping_coffee&type_coffee[2]=boiler&type_coffee[3]=turkey&type_coffee[4]=pour_over&type_coffee[5]=geyzernaya_coffe&type_coffee[operation]=union"
 					},
 					capsuleCoffeeMakersAndCoffeeMachines: {
 						ruName: "Капсульные кофеварки и кофемашины",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Капсульные кофеварки и кофемашины",
 						path: "/coffee?type_coffee[0]=capsules&type_coffee[1]=capsule_machine&type_coffee[operation]=union"
 					},
 					electricKettles: {
 						ruName: "Электрочайники и термопоты",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Чайники и термопоты",
 						path: "/kettle"
 					},
 					kettles: {
 						ruName: "Чайники",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Чайники",
 						path: "/kettles"
 					},
 					teapots: {
 						ruName: "Заварочные чайники, кофеварки, френч-прессы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Заварочные чайники, кофеварки, френч-прессы",
 						path: "/teapot"
 					},
 					coffeeGrinders: {
 						ruName: "Кофемолки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Кофемолки",
 						path: "/coffeegrinders"
 					},
 					milkFrothers: {
 						ruName: "Вспениватели молока",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Вспениватели молока",
 						path: "/milkfrother"
 					},
 					coffee: {
 						ruName: "Кофе",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Кофе",
 						path: "/coffeejava"
 					},
 					tea: {
 						ruName: "Чай",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Чай (раздел закрыт)",
 						path: "/tea"
 					},
 					accessoriesForCoffeeMachinesAndKettles: {
 						ruName: "Аксессуары для кофемашин, кофеварок, чайников",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Аксессуары для кухонной техники",
 						path: "/kitchen_acs?ka_purpos%5B0%5D=type4&ka_purpos%5B1%5D=kettletermopot&ka_purpos%5Boperation%5D=union"
 					}
 				}
@@ -1516,62 +1516,62 @@ module.exports = {
 				subCategories: {
 					blenders: {
 						ruName: "Блендеры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Блендеры",
 						path: "/blender"
 					},
 					foodProcessors: {
 						ruName: "Кухонные комбайны",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Кухонные комбайны",
 						path: "/foodprocessors"
 					},
 					meatGrinders: {
 						ruName: "Мясорубки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Мясорубки",
 						path: "/meatgrinder"
 					},
 					mixers: {
 						ruName: "Миксеры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Миксеры",
 						path: "/mixer"
 					},
 					juicers: {
 						ruName: "Соковыжималки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Соковыжималки",
 						path: "/juicer"
 					},
 					foodDehydrators: {
 						ruName: "Сушилки для овощей и фруктов",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Сушилки для овощей и фруктов",
 						path: "/food_dehydrator"
 					},
 					kitchenScales: {
 						ruName: "Кухонные весы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Кухонные весы",
 						path: "/kitchenscales"
 					},
 					slicers: {
 						ruName: "Ломтерезки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Ломтерезки",
 						path: "/slicer"
 					},
 					choppers: {
 						ruName: "Измельчители (чопперы)",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Измельчители (чопперы)",
 						path: "/chopper"
 					},
 					vacuumPackers: {
 						ruName: "Вакуумные упаковщики",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Вакуумные упаковщики",
 						path: "/vacuummachine"
 					},
 					marinators: {
 						ruName: "Маринаторы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Маринаторы",
 						path: "/marinator"
 					},
 					accessoriesForFoodProcessingEquipment: {
 						ruName: "Аксессуары для кухонной техники",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Аксессуары для кухонной техники",
 						path: "/kitchen_acs"
 					}
 				}
@@ -1581,52 +1581,52 @@ module.exports = {
 				subCategories: {
 					hairClippers: {
 						ruName: "Машинки для стрижки волос",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Машинки для стрижки волос",
 						path: "/hairclipper"
 					},
 					curlingIronsStylers: {
 						ruName: "Плойки, стайлеры, щипцы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Стайлеры",
 						path: "/styler"
 					},
 					hairDryers: {
 						ruName: "Фены",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Фены",
 						path: "/hairdryer"
 					},
 					toothBrushes: {
 						ruName: "Зубные щетки и ирригаторы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Зубные щетки и ирригаторы",
 						path: "/toothbrush"
 					},
 					shavers: {
 						ruName: "Мужские электробритвы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Электробритвы мужские",
 						path: "/shaver"
 					},
 					ladyShavers: {
 						ruName: "Женские электробритвы и эпиляторы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Женские электробритвы и эпиляторы",
 						path: "/ladyshaver"
 					},
 					scales: {
 						ruName: "Напольные весы",
-						subcategoryPageRuHeading: "",
-						path: "/https://catalog.onliner.by/scales"
+						subcategoryPageRuHeading: "Напольные весы",
+						path: "/scales"
 					},
 					hydromassageBaths: {
 						ruName: "Гидромассажные ванночки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Гидромассажные ванночки для ног",
 						path: "/footbath"
 					},
 					manicureAndPedicureSets: {
 						ruName: "Маникюрные и педикюрные наборы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Маникюрные и педикюрные наборы",
 						path: "/manicure"
 					},
 					accessoriesForBeautyEquipment: {
 						ruName: "Аксессуары к товарам для красоты и здоровья",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Аксессуары к товарам для красоты и здоровья",
 						path: "/beauty_acs"
 					}
 				}
@@ -1636,47 +1636,47 @@ module.exports = {
 				subCategories: {
 					inhalers: {
 						ruName: "Ингаляторы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Ингаляторы",
 						path: "/inhaler"
 					},
 					toothBrushes: {
 						ruName: "Зубные щетки и ирригаторы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Зубные щетки и ирригаторы",
 						path: "/toothbrush"
 					},
 					tonometers: {
 						ruName: "Тонометры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Тонометры",
 						path: "/tonometers"
 					},
 					thermometers: {
 						ruName: "Термометры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Медицинские термометры",
 						path: "/medthermometer"
 					},
 					glucoseMeter: {
 						ruName: "Глюкометры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Глюкометры",
 						path: "/glucosemeter"
 					},
 					heartRateMonitors: {
 						ruName: "Пульсометры, пульсоксиметры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Пульсометры, пульсоксиметры",
 						path: "/heart_rate"
 					},
 					contactLenses: {
 						ruName: "Контактные линзы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Контактные линзы",
 						path: "/contact_lense"
 					},
 					lensSolutions: {
 						ruName: "Растворы для линз",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Растворы для линз",
 						path: "/solutionlenses"
 					},
 					accessoriesForHealthEquipment: {
 						ruName: "Аксессуары к товарам для красоты и здоровья",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Аксессуары к товарам для красоты и здоровья",
 						path: "/beauty_acs"
 					}
 				}
@@ -1686,91 +1686,92 @@ module.exports = {
 				subCategories: {
 					laundryDryers: {
 						ruName: "Сушилки для белья",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Сушилки для белья",
 						path: "/linendryer"
 					},
 					ironinBboards: {
 						ruName: "Гладильные доски",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Гладильные доски",
 						path: "/ironingboard"
 					},
 					washingPowder: {
 						ruName: "Средства для стирки и ухода за бельем",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Стиральные порошки",
 						path: "/washingpowder"
 					},
 					dishwasherTools: {
 						ruName: "Средства для посудомоечных машин",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Таблетки для посудомоечных машин",
 						path: "/dishwashertablet"
 					},
 					accessoriesForCoffeeMachinesAndKettles: {
 						ruName: "Аксессуары для кофемашин, кофеварок, чайников",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Аксессуары для кухонной техники",
 						path: "/kitchen_acs?ka_purpos%5B0%5D=type4&ka_purpos%5B1%5D=kettletermopot&ka_purpos%5Boperation%5D=union"
 					},
 					accessoriesForBlendersGrinders: {
 						ruName: "Аксессуары для блендеров, комбайнов, мясорубок",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Аксессуары для кухонной техники",
 						path: "/kitchen_acs?ka_purpos%5B0%5D=type3&ka_purpos%5B1%5D=type2&ka_purpos%5B2%5D=type1&ka_purpos%5Boperation%5D=union"
 					},
 					accessoriesForVacuumPackers: {
 						ruName: "Аксессуары для вакуумных упаковщиков",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Аксессуары для кухонной техники",
 						path: "/kitchen_acs?ka_purpos%5B0%5D=vacuumupakov&ka_purpos%5Boperation%5D=union"
 					},
 					accessoriesForMultiCookers: {
 						ruName: "Аксессуары для мультиварок, аэрогрилей",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Аксессуары для кухонной техники",
 						path: "/kitchen_acs?ka_purpos%5B0%5D=type6&ka_purpos%5B1%5D=type12&ka_purpos%5Boperation%5D=union"
 					},
 					replaceablePanelsForSandwichMakers: {
 						ruName: "Сменные панели для сэндвичниц",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Аксессуары для кухонной техники",
 						path: "/kitchen_acs?ka_purpos%5B0%5D=type7&ka_purpos%5Boperation%5D=union"
 					},
 					accessoriesForTooyhBrushes: {
 						ruName: "Аксессуары для зубных щеток и ирригаторов",
+						subcategoryPageRuHeading: "Аксессуары к товарам для красоты и здоровья",
 						path: "/beauty_acs?ba_purpos%5B0%5D=type1&ba_purpos%5B1%5D=type2&ba_purpos%5Boperation%5D=union"
 					},
 					accessoriesForShavers: {
 						ruName: "Аксессуары для электробритв и машинок",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Аксессуары к товарам для красоты и здоровья",
 						path: "/beauty_acs?ba_purpos%5B0%5D=type4&ba_purpos%5B1%5D=type7&ba_purpos%5Boperation%5D=union"
 					},
 					accessoriesForSkinCareProducts: {
 						ruName: "Аксессуары для приборов по уходу за кожей",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Аксессуары к товарам для красоты и здоровья",
 						path: "/beauty_acs?ba_purpos%5B0%5D=type3&ba_purpos%5B1%5D=faceclean&ba_purpos%5B2%5D=manicure&ba_purpos%5Boperation%5D=union"
 					},
 					replaceableRazorBlades: {
 						ruName: "Сменные лезвия для бритвенных станков",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Аксессуары к товарам для красоты и здоровья",
 						path: "/beauty_acs?ba_purpos%5B0%5D=britvstanok&ba_purpos%5Boperation%5D=union"
 					},
 					accessoriesForVacuumCleaners: {
 						ruName: "Аксессуары для пылесосов",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Аксессуары для пылесосов, пароочистителей",
 						path: "/vacuum_acs?va_purpos%5B0%5D=vacuumcleaner&va_purpos%5B1%5D=robotcleaner&va_purpos%5B2%5D=floorcleaner&va_purpos%5Boperation%5D=union"
 					},
 					accessoriesForSteamCleaners: {
 						ruName: "Аксессуары для пароочистителей",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Аксессуары для пылесосов, пароочистителей",
 						path: "/vacuum_acs?va_purpos%5B0%5D=steamcleaner&va_purpos%5Boperation%5D=union"
 					},
 					accessoriesForLargeHouseholdAndBuiltInAppliances: {
 						ruName: "Аксессуары для крупной бытовой и встраиваемой техники",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Аксессуары для крупной бытовой и встраиваемой техники",
 						path: "/largehomeapp_acs"
 					},
 					accessoriesForIrons: {
 						ruName: "Аксессуары для утюгов, гладильных систем",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Аксессуары для утюгов, увлажнителей и очистителей воздуха",
 						path: "/climate_acs?cla_purpos%5B0%5D=iron&cla_purpos%5B1%5D=gladsystem&cla_purpos%5B2%5D=press&cla_purpos%5Boperation%5D=union"
 					},
 					accessoriesForClimateEquipment: {
 						ruName: "Аксессуары для климатической техники",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Аксессуары для утюгов, увлажнителей и очистителей воздуха",
 						path: "/climate_acs?cla_purpos%5B0%5D=humid&cla_purpos%5B1%5D=aircleaner&cla_purpos%5B2%5D=condic&cla_purpos%5Boperation%5D=union"
 					}
 				}
