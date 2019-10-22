@@ -18,7 +18,7 @@ class Catalog extends BasePage {
 
 	chooseClassifierItem(itemId) {
 		browser.wait(this.isClickable(this.sectionItem(itemId)))
-		return this.sectionItem(itemId).click()
+		this.sectionItem(itemId).click()
 	}
 
 	focusCategoryItem(categoryTitle) {
@@ -28,7 +28,7 @@ class Catalog extends BasePage {
 
 	openSubcategory(subcategoryTitle) {
 		browser.wait(this.isClickable(this.subCategoryItem(subcategoryTitle)))
-		return this.subCategoryItem(subcategoryTitle).click()
+		this.subCategoryItem(subcategoryTitle).click()
 	}
 }
 
