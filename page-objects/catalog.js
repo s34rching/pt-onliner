@@ -7,10 +7,10 @@ class Catalog extends BasePage {
 			return element(by.css(`[class="catalog-navigation-classifier__item "][data-id="${itemId}"]`))
 		}
 		this.categoryItem = function(categoryTitle) {
-			return element(by.cssContainingText(".catalog-navigation-list__aside-title", categoryTitle))
+			return element(by.cssContainingText(".catalog-navigation-list__aside-title", categoryTitle.match(/^\S+/)[0]))
 		}
 		this.subCategoryItem = function(subcategoryTitle) {
-			return element(by.cssContainingText("span.catalog-navigation-list__dropdown-title", subcategoryTitle))
+			return element(by.cssContainingText("span.catalog-navigation-list__dropdown-title", subcategoryTitle.match(/^\S+/)[0]))
 		}
 		this.categoriesLeftNav = element(by.css(".catalog-navigation-list__aside-list"))
 		this.subCategoriesDropDown = element(by.css(".catalog-navigation-list__dropdown-list"))
@@ -35,10 +35,8 @@ class Catalog extends BasePage {
 	}
 
 	openSubcategory(subcategoryTitle) {
-		browser.actions()
-			.mouseMove(this.subCategoryItem(subcategoryTitle))
+		return this.subCategoryItem(subcategoryTitle)
 			.click()
-			.perform()
 	}
 }
 

@@ -8,7 +8,7 @@ _.forEach(_.keys(catalogTree), key => {
 })
 
 exports.getRandomClassifierItem = function() {
-	return catalogTree[_.head(_.keys(catalogTree))]
+	return catalogTree[_.sample(_.keys(catalogTree))]
 }
 
 exports.getRandomCategory = function(classifierItem) {
