@@ -1787,157 +1787,157 @@ module.exports = {
 				subCategories: {
 					drills: {
 						ruName: "Электродрели и дрели-шуруповерты",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Электродрели и дрели-шуруповерты",
 						path: "/drills"
 					},
 					rotaryhammers: {
 						ruName: "Перфораторы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Перфораторы",
 						path: "/rotaryhammers"
 					},
 					toolKits: {
 						ruName: "Наборы ручных инструментов",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Наборы инструментов",
 						path: "/tool_kits"
 					},
 					electricScrewdrivers: {
 						ruName: "Электроотвертки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Электроотвертки",
 						path: "/screwdriver?typescrewdriver[0]=simplescrewdrive&typescrewdriver[operation]=union"
 					},
 					screwdrivers: {
 						ruName: "Шуруповерты, винтоверты",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Шуруповерты, винтоверты",
 						path: "/screwdriver?typescrewdriver[0]=hardscrewdrive&typescrewdriver[1]=vintovert&typescrewdriver[operation]=union"
 					},
 					toolsAccumulators: {
 						ruName: "Аккумуляторы и зарядные устройства для инструмента",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Аккумуляторы и зарядные устройства для инструмента",
 						path: "/tools_accum"
 					},
 					drillsMixers: {
 						ruName: "Дрели-миксеры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Дрели-миксеры",
 						path: "/drills?type_drill[0]=drill_mixer&type_drill[operation]=union"
 					},
 					angleGrinders: {
 						ruName: "Угловые шлифмашины (болгарки)",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Угловые шлифмашины (болгарки)",
 						path: "/angle_grinder"
 					},
 					grinders: {
 						ruName: "Шлифмашины",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Шлифмашины",
 						path: "/grinder"
 					},
 					polishingMachines: {
 						ruName: "Полировальные машины",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Полировальные шлифмашины",
 						path: "/grinder?tupe_grinder[0]=polish&tupe_grinder[operation]=union"
 					},
 					multiTools: {
 						ruName: "Мультитулы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Мультифункциональные шлифмашины",
 						path: "/grinder?tupe_grinder[0]=multi_grinder&tupe_grinder[operation]=union"
 					},
 					circularSaws: {
 						ruName: "Дисковые пилы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Дисковые пилы",
 						path: "/electric_saw?type_saw[0]=disk&type_saw[operation]=union"
 					},
 					reciprocatingSaws: {
 						ruName: "Сабельные пилы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Сабельные пилы",
 						path: "/electric_saw?type_saw[0]=saber&type_saw[operation]=union"
 					},
 					fretSaws: {
 						ruName: "Лобзики",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Электролобзики",
 						path: "/fretsaw"
 					},
 					planes: {
 						ruName: "Рубанки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Рубанки",
 						path: "/plane"
 					},
 					tools: {
 						ruName: "Строительный, слесарный, монтажный инструмент",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Строительный, слесарный, монтажный инструмент",
 						path: "/household_tools"
 					},
 					toolBoxes: {
 						ruName: "Ящики для инструментов",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Ящики для инструментов",
 						path: "/toolbox"
 					},
 					millingCutters: {
 						ruName: "Фрезеры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Фрезеры",
 						path: "/woodrouter"
 					},
 					industrialDryers: {
 						ruName: "Промышленные фены",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Промышленные фены",
 						path: "/industrialdryer"
 					},
 					hotGlueGuns: {
 						ruName: "Термоклеевые пистолеты",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Термоклеевые пистолеты",
 						path: "/hotgluegun"
 					},
 					engravers: {
 						ruName: "Граверы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Граверы",
 						path: "/engraver"
 					},
 					householdVacuumCleaners: {
 						ruName: "Хозяйственные пылесосы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Хозяйственные пылесосы",
 						path: "/vacuumcleaner?vc_type%5B0%5D=wetdryvc&vc_type%5Boperation%5D=union"
 					},
 					sprayGuns: {
 						ruName: "Краскораспылители",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Электрические краскораспылители",
 						path: "/electricspraygun"
 					},
 					wallChasers: {
 						ruName: "Штроборезы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Штроборезы",
 						path: "/wallchaser"
 					},
 					tileCutters: {
 						ruName: "Плиткорезы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Плиткорезы",
 						path: "/tilecutter"
 					},
 					solderingIrons: {
 						ruName: "Паяльники и паяльные лампы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Паяльники и паяльные лампы",
 						path: "/solderingiron"
 					},
 					pipeWeldingMachines: {
 						ruName: "Аппараты для сварки труб",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Аппараты для сварки труб",
 						path: "/pipe_welding"
 					},
 					electricJackhammers: {
 						ruName: "Электрические отбойные молотки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Электрические отбойные молотки",
 						path: "/jackhammer?jh_type[0]=electric&jh_type[operation]=union"
 					},
 					electricMetalCutters: {
 						ruName: "Электрические ножницы по металлу",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Электрические ножницы по металлу",
 						path: "/metal_cutter"
 					},
 					nailers: {
 						ruName: "Скобозабиватели, гвоздезабиватели, степлеры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Скобозабиватели, гвоздезабиватели, степлеры",
 						path: "/nailer"
 					},
 					thermalImaging: {
 						ruName: "Диагностические тепловизоры и пирометры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Диагностические тепловизоры и пирометры",
 						path: "/thermal_imaging"
 					}
 				}
@@ -1947,77 +1947,77 @@ module.exports = {
 				subCategories: {
 					welders: {
 						ruName: "Сварочные аппараты",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Сварочные инверторы",
 						path: "/weldinginverter"
 					},
 					compressors: {
 						ruName: "Компрессоры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Компрессоры",
 						path: "/compressor"
 					},
 					laserLevels: {
 						ruName: "Лазерные нивелиры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Лазерные нивелиры",
 						path: "/laserlevel"
 					},
 					heatGuns: {
 						ruName: "Тепловые пушки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Тепловые пушки",
 						path: "/heat_gun"
 					},
 					generators: {
 						ruName: "Генераторы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Генераторы",
 						path: "/powerstations"
 					},
 					concreteMixers: {
 						ruName: "Бетономешалки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Бетономешалки",
 						path: "/concrete"
 					},
 					weldingMasks: {
 						ruName: "Сварочные маски",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Сварочные маски",
 						path: "/weldingmask"
 					},
 					householdVacuumCleaners: {
 						ruName: "Хозяйственные пылесосы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Хозяйственные пылесосы",
 						path: "/vacuumcleaner?vc_type%5B0%5D=wetdryvc&vc_type%5Boperation%5D=union"
 					},
 					wheelbarrows: {
 						ruName: "Строительные тачки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Садовые и строительные тачки",
 						path: "/barrow"
 					},
 					stairsAndLadders: {
 						ruName: "Лестницы и стремянки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Лестницы и стремянки",
 						path: "/stairandladder"
 					},
 					laserRangefinders: {
 						ruName: "Лазерные дальномеры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Лазерные дальномеры",
 						path: "/laserdistmeter"
 					},
 					vibratingPlates: {
 						ruName: "Виброплиты",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Виброплиты",
 						path: "/platecompactor"
 					},
 					jackhammers: {
 						ruName: "Отбойные молотки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Отбойные молотки",
 						path: "/jackhammer"
 					},
 					electricAndGasCutters: {
 						ruName: "Электро- и бензорезы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Электро- и бензорезы",
 						path: "/powercutter"
 					},
 					motorPumps: {
 						ruName: "Мотопомпы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Мотопомпы",
 						path: "/motopump"
 					}
 				}
@@ -2027,27 +2027,27 @@ module.exports = {
 				subCategories: {
 					laminate: {
 						ruName: "Ламинат",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Ламинат",
 						path: "/laminate"
 					},
 					linoleum: {
 						ruName: "Линолеум",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Линолеум",
 						path: "/linoleum"
 					},
 					vinylFloor: {
 						ruName: "Виниловые полы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Виниловые полы",
 						path: "/vinyl_floor"
 					},
 					tile: {
 						ruName: "Плитка",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Напольная плитка",
 						path: "/tile?t_kind%5B0%5D=floor&t_kind%5Boperation%5D=union"
 					},
 					parquetBoard: {
 						ruName: "Паркетная доска",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Паркетная доска",
 						path: "/parquetboard"
 					}
 				}
@@ -2057,92 +2057,92 @@ module.exports = {
 				subCategories: {
 					kitchenSinks: {
 						ruName: "Кухонные мойки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Кухонные мойки",
 						path: "/kitchensink"
 					},
 					faucets: {
 						ruName: "Смесители",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Смесители",
 						path: "/faucet"
 					},
 					bathtubs: {
 						ruName: "Ванны",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Ванны",
 						path: "/bathtub"
 					},
 					towelWarmers: {
 						ruName: "Полотенцесушители",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Полотенцесушители",
 						path: "/towelrail"
 					},
 					showerCabins: {
 						ruName: "Душевые кабины",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Душевые кабины",
 						path: "/showerbox"
 					},
 					washbasins: {
 						ruName: "Умывальники",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Умывальники",
 						path: "/washbasin"
 					},
 					pedestalForWashbasins: {
 						ruName: "Пьедесталы для умывальников",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Пьедесталы для умывальников",
 						path: "/pedestal"
 					},
 					siphons: {
 						ruName: "Сифоны",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Сифоны",
 						path: "/siphon"
 					},
 					pans: {
 						ruName: "Унитазы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Унитазы",
 						path: "/wcpan"
 					},
 					bidets: {
 						ruName: "Биде",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Биде",
 						path: "/bidet"
 					},
 					installationsForPansSinksBidets: {
 						ruName: "Инсталляции для унитазов, раковин, биде и писсуаров",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Инсталляции для унитазов, раковин, биде и писсуаров",
 						path: "/installations"
 					},
 					flushingSystems: {
 						ruName: "Клавиши и системы смыва",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Клавиши и системы смыва",
 						path: "/flushing_system"
 					},
 					electronicBidetCovers: {
 						ruName: "Электронные крышки-биде",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Электронные крышки-биде",
 						path: "/toilet_shower"
 					},
 					dryClosets: {
 						ruName: "Биотуалеты",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Биотуалеты",
 						path: "/biotoilet"
 					},
 					showerPanels: {
 						ruName: "Душевые панели и гарнитуры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Душевые панели и гарнитуры",
 						path: "/shower"
 					},
 					showerTrays: {
 						ruName: "Душевые поддоны",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Душевые поддоны",
 						path: "/shower_trays"
 					},
 					dispensers: {
 						ruName: "Дозаторы, диспенсеры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Дозаторы, диспенсеры",
 						path: "/dispenser"
 					},
 					handsDryers: {
 						ruName: "Сушилки для рук, волос",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Сушилки для рук, волос",
 						path: "/handsdryer"
 					}
 				}
@@ -2152,52 +2152,52 @@ module.exports = {
 				subCategories: {
 					waterHeaters: {
 						ruName: "Водонагреватели",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Водонагреватели",
 						path: "/waterheater"
 					},
 					pumps: {
 						ruName: "Насосы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Насосы",
 						path: "/pump"
 					},
 					exhaustFans: {
 						ruName: "Приточные и вытяжные вентиляторы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Вытяжная и приточная вентиляция",
 						path: "/exhaustfan"
 					},
 					supplyAirVents: {
 						ruName: "Приточные проветриватели",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Вытяжная и приточная вентиляция",
 						path: "/exhaustfan?ef_type%5B0%5D=passprov&ef_type%5B1%5D=recuperator&ef_type%5B2%5D=provbeznagr&ef_type%5B3%5D=provnagr&ef_type%5Boperation%5D=union"
 					},
 					waterAccumulators: {
 						ruName: "Гидроаккумуляторы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Гидроаккумуляторы",
 						path: "/hydroaccum?ha_type%5B0%5D=type1&ha_type%5Boperation%5D=union"
 					},
 					pipesAndFittings: {
 						ruName: "Трубы, фитинг",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Трубы, фитинг",
 						path: "/tube_fitting"
 					},
 					accessPanels: {
 						ruName: "Сантехнические ревизионные люки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Сантехнические ревизионные люки",
 						path: "/access_panel"
 					},
 					waterAndGasPipes: {
 						ruName: "Трубы водогазопроводные",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Водогазопроводные трубы",
 						path: "/metal_pipes?pipe_type_1%5B0%5D=watergas&pipe_type_1%5Boperation%5D=union"
 					},
 					boilers: {
 						ruName: "Отопительные котлы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Отопительные котлы",
 						path: "/boiler"
 					},
 					radiators: {
 						ruName: "Радиаторы отопления",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Радиаторы отопления",
 						path: "/radiators"
 					}
 				}
@@ -2207,32 +2207,32 @@ module.exports = {
 				subCategories: {
 					socketsAndSwitches: {
 						ruName: "Розетки, выключатели",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Розетки, выключатели",
 						path: "/wall_socket"
 					},
 					multimeters: {
 						ruName: "Мультиметры, токовые клещи, индикаторные отвертки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Мультиметры, токовые клещи, индикаторные отвертки",
 						path: "/multimeter"
 					},
 					chandeliersAndLamps: {
 						ruName: "Люстры и светильники",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Люстры и светильники",
 						path: "/luster"
 					},
 					bulbs: {
 						ruName: "Лампочки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Лампочки",
 						path: "/lightbulb"
 					},
 					stabilizersAndSurgeProtectors: {
 						ruName: "Стабилизаторы и сетевые фильтры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Стабилизаторы и сетевые фильтры",
 						path: "/voltageregulator?voltage_type[0]=stabilizer&voltage_type[operation]=union"
 					},
 					generators: {
 						ruName: "Генераторы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Генераторы",
 						path: "/powerstations"
 					}
 				}
@@ -2242,62 +2242,62 @@ module.exports = {
 				subCategories: {
 					boilers: {
 						ruName: "Отопительные котлы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Отопительные котлы",
 						path: "/boiler"
 					},
 					pumpForHeatingSystems: {
 						ruName: "Насосы для систем отопления",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Циркуляционные насосы для отопления",
 						path: "/pump?pump_purpose%5B0%5D=heating&pump_purpose%5Boperation%5D=union"
 					},
 					radiators: {
 						ruName: "Радиаторы отопления",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Радиаторы отопления",
 						path: "/radiators"
 					},
 					thermalInsulation: {
 						ruName: "Теплоизоляция",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Теплоизоляция",
 						path: "/therminsulation"
 					},
 					soundAndVibrationIsolation: {
 						ruName: "Звуко- и виброизоляция помещений",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Звуко- и виброизоляция помещений",
 						path: "/soundproofing"
 					},
 					warmFloor: {
 						ruName: "Теплые полы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Теплые полы",
 						path: "/heatedfloor"
 					},
 					towelWarmers: {
 						ruName: "Полотенцесушители",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Полотенцесушители",
 						path: "/towelrail"
 					},
 					temperatureControllers: {
 						ruName: "Терморегуляторы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Терморегуляторы",
 						path: "/thermostat"
 					},
 					fireplaces: {
 						ruName: "Дровяные камины, печи-камины, порталы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Дровяные камины, печи-камины, порталы",
 						path: "/stove"
 					},
 					expansionTanks: {
 						ruName: "Расширительные баки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Расширительные баки",
 						path: "/hydroaccum?ha_type%5B0%5D=type2&ha_type%5Boperation%5D=union"
 					},
 					tubesAndFittings: {
 						ruName: "Трубы, фитинг",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Трубы для отопления",
 						path: "/tube_fitting?tube_use%5B0%5D=3&tube_use%5Boperation%5D=union"
 					},
 					waterAndGasPipes: {
 						ruName: "Трубы водогазопроводные",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Водогазопроводные трубы",
 						path: "/metal_pipes?pipe_type_1%5B0%5D=watergas&pipe_type_1%5Boperation%5D=union"
 					}
 				}
@@ -2307,17 +2307,17 @@ module.exports = {
 				subCategories: {
 					metalDoors: {
 						ruName: "Металлические двери",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Металлические двери",
 						path: "/steeldoor"
 					},
 					interiorDoors: {
 						ruName: "Межкомнатные двери",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Межкомнатные двери",
 						path: "/interiordoor"
 					},
 					pvcWindows: {
 						ruName: "Окна ПВХ",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Окна ПВХ",
 						path: "/vynilwindows"
 					}
 				}
@@ -2327,27 +2327,27 @@ module.exports = {
 				subCategories: {
 					compressors: {
 						ruName: "Компрессоры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Компрессоры",
 						path: "/compressor"
 					},
 					sprayGuns: {
 						ruName: "Краскопульты",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Пневматические краскопульты",
 						path: "/spraygun"
 					},
 					wrenches: {
 						ruName: "Гайковерты",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Пневматические гайковерты",
 						path: "/wrench"
 					},
 					nailers: {
 						ruName: "Скобозабиватели, гвоздезабиватели, степлеры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Скобозабиватели, гвоздезабиватели, степлеры",
 						path: "/nailer"
 					},
 					pneumaticGrinders: {
 						ruName: "Пневмошлифмашины",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Пневмошлифмашины",
 						path: "/pneumogrinder"
 					}
 				}
@@ -2357,22 +2357,22 @@ module.exports = {
 				subCategories: {
 					woodworkingMachinery: {
 						ruName: "Деревообрабатывающие станки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Деревообрабатывающие станки",
 						path: "/woodworking"
 					},
 					metalworkingMachinery: {
 						ruName: "Металлообрабатывающие станки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Металлообрабатывающие станки",
 						path: "/metalworking"
 					},
 					tileCutterMachinery: {
 						ruName: "Плиткорезные станки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Станки для резки плитки",
 						path: "/tilecutter?tc_type[0]=tool&tc_type[operation]=union"
 					},
 					sharpeningMachines: {
 						ruName: "Заточные станки (точила)",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Заточные станки (точила)",
 						path: "/benchgrinder"
 					}
 				}
@@ -2382,107 +2382,107 @@ module.exports = {
 				subCategories: {
 					buildingMaterials: {
 						ruName: "Общестроительные материалы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Общестроительные материалы",
 						path: "/buildingmaterial"
 					},
 					plaster: {
 						ruName: "Штукатурка",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Штукатурка",
 						path: "/plaster"
 					},
 					adhesiveMixtures: {
 						ruName: "Клеевые смеси",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Клеевые смеси",
 						path: "/adhesivemix"
 					},
 					floorMixtures: {
 						ruName: "Смеси для полов",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Смеси для полов",
 						path: "/floormix"
 					},
 					putty: {
 						ruName: "Шпатлевка",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Шпатлевка",
 						path: "/putty"
 					},
 					primer: {
 						ruName: "Грунтовка",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Грунтовки",
 						path: "/primer"
 					},
 					drywall: {
 						ruName: "Гипсокартон",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Гипсокартон",
 						path: "/drywall"
 					},
 					wallPanels: {
 						ruName: "Стеновые панели",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Стеновые панели",
 						path: "/wall_panels"
 					},
 					ceramicTile: {
 						ruName: "Керамическая плитка, керамогранит",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Плитка",
 						path: "/tile?t_tile%5B0%5D=ceramic&t_tile%5B1%5D=granite&t_tile%5B2%5D=clinker&t_tile%5Boperation%5D=union"
 					},
 					decorativeStone: {
 						ruName: "Декоративный камень и кирпич",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Декоративный камень и кирпич",
 						path: "/decorative_stone"
 					},
 					flexibleStone: {
 						ruName: "Гибкий камень",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Гибкий камень",
 						path: "/decorative_stone?gibkij-kamen"
 					},
 					paintsAndEnamels: {
 						ruName: "Краски и эмали",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Краски и эмали",
 						path: "/paints"
 					},
 					lacquer: {
 						ruName: "Лаки, пропитки, антисептики",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Лаки, пропитки, антисептики",
 						path: "/lacquer"
 					},
 					roofingMaterials: {
 						ruName: "Кровельные материалы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Кровельные материалы",
 						path: "/roof"
 					},
 					bricks: {
 						ruName: "Кирпич",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Кирпич, строительные блоки",
 						path: "/bricks"
 					},
 					cement: {
 						ruName: "Цемент",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Цемент",
 						path: "/caementum"
 					},
 					pavingSlabs: {
 						ruName: "Тротуарная плитка",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Тротуарная плитка",
 						path: "/pavers"
 					},
 					pipeMetalRolling: {
 						ruName: "Трубный металлопрокат",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Трубный металлопрокат",
 						path: "/metal_pipes"
 					},
 					sheetMetalRolling: {
 						ruName: "Листовой металлопрокат",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Листовой металлопрокат",
 						path: "/sheetmetal"
 					},
 					fittings: {
 						ruName: "Арматура",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Арматура",
 						path: "/armatura"
 					},
 					constructionNets: {
 						ruName: "Строительные сетки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Строительные сетки",
 						path: "/rabitz"
 					}
 				}
