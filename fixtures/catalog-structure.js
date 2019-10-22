@@ -3530,67 +3530,67 @@ module.exports = {
 				subCategories: {
 					tires: {
 						ruName: "Шины",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Автомобильные шины",
 						path: "/tires"
 					},
 					motorOil: {
 						ruName: "Моторные масла",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Моторные масла",
 						path: "/motor_oil"
 					},
 					carBatteries: {
 						ruName: "Аккумуляторы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Автомобильные аккумуляторы",
 						path: "/carbattery"
 					},
 					wheels: {
 						ruName: "Диски",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Автомобильные диски",
 						path: "/wheel"
 					},
 					gearOil: {
 						ruName: "Трансмиссионные масла",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Трансмиссионные масла",
 						path: "/gearoil"
 					},
 					carBulbs: {
 						ruName: "Лампы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Автомобильные лампы",
 						path: "/autolamps"
 					},
 					coolants: {
 						ruName: "Охлаждающие жидкости",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Охлаждающие жидкости",
 						path: "/antifreeze"
 					},
 					additives: {
 						ruName: "Присадки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Присадки для топлива",
 						path: "/additive4fuel"
 					},
 					glassWasherFluids: {
 						ruName: "Стеклоомывающие жидкости",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Стеклоомывающие жидкости",
 						path: "/washerfluid"
 					},
 					brakeFluids: {
 						ruName: "Тормозные жидкости",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Тормозные жидкости",
 						path: "/brakefluid"
 					},
 					xenon: {
 						ruName: "Ксенон",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Комплекты ксенона",
 						path: "/xenon"
 					},
 					motorBatteries: {
 						ruName: "Мотоциклетные аккумуляторы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Мотоциклетные аккумуляторы",
 						path: "/motobatteries"
 					},
 					enginePreheaters: {
 						ruName: "Предпусковые подогреватели двигателя и топливной системы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Предпусковые подогреватели двигателя и топливной системы",
 						path: "/dieselfuelheater"
 					}
 				}
@@ -3600,77 +3600,77 @@ module.exports = {
 				subCategories: {
 					DVRs: {
 						ruName: "Видеорегистраторы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Автомобильные видеорегистраторы",
 						path: "/videoregistrator"
 					},
 					radioAndHeadSystems: {
 						ruName: "Магнитолы и головные системы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Автомагнитолы",
 						path: "/caraudio"
 					},
 					carSpeakers: {
 						ruName: "Акустика",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Автоакустика",
 						path: "/carspeakers"
 					},
 					radarDetectors: {
 						ruName: "Радар-детекторы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Радар-детекторы",
 						path: "/radar"
 					},
 					gpsNavigators: {
 						ruName: "GPS-навигаторы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "GPS-навигаторы",
 						path: "/gps"
 					},
 					carAlarm: {
 						ruName: "Сигнализация",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Автосигнализации",
 						path: "/caralarm"
 					},
 					carAmplifiers: {
 						ruName: "Усилители",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Автомобильные усилители",
 						path: "/caramps"
 					},
 					cbRadioStations: {
 						ruName: "Радиостанции CB",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Автомобильные радиостанции CB",
 						path: "/car_radio"
 					},
 					speakerphones: {
 						ruName: "Громкая связь",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Громкая связь",
 						path: "/carkit"
 					},
 					fmModulators: {
 						ruName: "FM-модуляторы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "FM-модуляторы",
 						path: "/fmmodulators"
 					},
 					carInverters: {
 						ruName: "Автомобильные инверторы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Автомобильные инверторы",
 						path: "/car_inverter"
 					},
 					parkingRadar: {
 						ruName: "Парковочные радары",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Парковочные радары",
 						path: "/parkingradar"
 					},
 					gpsTrackers: {
 						ruName: "GPS-трекеры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "GPS-трекеры",
 						path: "/gps_tracker"
 					},
 					carAntennas: {
 						ruName: "Автомобильные антенны",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Автомобильные антенны",
 						path: "/antenforradio"
 					},
 					carVideoPlayers: {
 						ruName: "Автомобильные видеоплееры и DVD",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Портативные DVD-плееры и телевизоры",
 						path: "/portabletvdvd"
 					}
 				}
@@ -3680,67 +3680,67 @@ module.exports = {
 				subCategories: {
 					welders: {
 						ruName: "Сварочные аппараты",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Сварочные инверторы",
 						path: "/weldinginverter"
 					},
 					toolKits: {
 						ruName: "Наборы инструментов",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Наборы инструментов",
 						path: "/tool_kits"
 					},
 					torqueWrenchesAndScrewdrivers: {
 						ruName: "Динамометрические ключи и отвертки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Динамометрические ключи и отвертки",
 						path: "/torque_wrenches"
 					},
 					multimeters: {
 						ruName: "Мультиметры, токовые клещи, индикаторные отвертки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Мультиметры, токовые клещи, индикаторные отвертки",
 						path: "/multimeter"
 					},
 					compressors: {
 						ruName: "Компрессоры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Компрессоры",
 						path: "/compressor"
 					},
 					pressureWashers: {
 						ruName: "Мойки высокого давления",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Мойки высокого давления",
 						path: "/washers"
 					},
 					pneumaticSprayGuns: {
 						ruName: "Пневматические краскопульты",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Пневматические краскопульты",
 						path: "/spraygun"
 					},
 					carjacks: {
 						ruName: "Домкраты",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Домкраты",
 						path: "/carjack"
 					},
 					weldingMasks: {
 						ruName: "Сварочные маски",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Сварочные маски",
 						path: "/weldingmask"
 					},
 					electricSprayGuns: {
 						ruName: "Электрические краскопульты",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Электрические краскораспылители",
 						path: "/electricspraygun"
 					},
 					pneumaticWrenches: {
 						ruName: "Пневматические гайковерты",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Пневматические гайковерты",
 						path: "/wrench"
 					},
 					grinders: {
 						ruName: "Пневматические шлифмашины",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Пневмошлифмашины",
 						path: "/pneumogrinder"
 					},
 					carLifts: {
 						ruName: "Подъемники",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Подъемники",
 						path: "/carlift"
 					}
 				}
@@ -3750,52 +3750,52 @@ module.exports = {
 				subCategories: {
 					toolKits: {
 						ruName: "Наборы инструментов",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Наборы инструментов",
 						path: "/tool_kits"
 					},
 					startChargers: {
 						ruName: "Пускозарядные устройства",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Пуско-зарядные устройства",
 						path: "/start_charge"
 					},
 					carRefrigerators: {
 						ruName: "Автохолодильники, термобоксы, термосумки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Автохолодильники, термобоксы, термосумки",
 						path: "/arrefrigerator"
 					},
 					carCompressors: {
 						ruName: "Автомобильные компрессоры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Автомобильные компрессоры",
 						path: "/compressor_auto"
 					},
 					carHolders: {
 						ruName: "Держатели для телефонов",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Автомобильные держатели",
 						path: "/carholder"
 					},
 					breathalyzers: {
 						ruName: "Алкотестеры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Алкотестеры",
 						path: "/breathalyzer"
 					},
 					bicycleRacks: {
 						ruName: "Велобагажники",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Автомобильные велобагажники",
 						path: "/bicyclerack"
 					},
 					carVacuumCleaners: {
 						ruName: "Автомобильные пылесосы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Автомобильные пылесосы",
 						path: "/car_vacuum_clean"
 					},
 					carRoofRacks: {
 						ruName: "Багажники на крышу",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Автомобильные багажники",
 						path: "/car_racks"
 					},
 					electricChargingStations: {
 						ruName: "Электрические зарядные станции",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Электрические зарядные станции",
 						path: "/charging_station"
 					}
 				}
@@ -3805,47 +3805,47 @@ module.exports = {
 				subCategories: {
 					cars: {
 						ruName: "Легковые автомобили",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Автомобили",
 						path: "/car"
 					},
 					miniTractors: {
 						ruName: "Тракторы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Мини-тракторы",
 						path: "/minitractor"
 					},
 					motorcycles: {
 						ruName: "Мотоциклы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Мотоциклы",
 						path: "/motorcycle"
 					},
 					electricScooters: {
 						ruName: "Электроскутеры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Электросамокаты и электроскутеры",
 						path: "/electric_scooter?ks_type%5B0%5D=scooter&ks_type%5Boperation%5D=union"
 					},
 					scooters: {
 						ruName: "Скутеры и мопеды",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Скутеры и мопеды",
 						path: "/scooter"
 					},
 					ATVs: {
 						ruName: "Квадроциклы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Квадроциклы",
 						path: "/quad"
 					},
 					motorHelmets: {
 						ruName: "Мотошлемы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Мотошлемы",
 						path: "/motohelmet"
 					},
 					motorBatteries: {
 						ruName: "Мотоциклетные аккумуляторы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Мотоциклетные аккумуляторы",
 						path: "/motobatteries"
 					},
 					motorcycleTires: {
 						ruName: "Мотоциклетные шины",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Мотоциклетные шины",
 						path: "/moto_tires"
 					}
 				}
