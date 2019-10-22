@@ -5048,57 +5048,57 @@ module.exports = {
 				subCategories: {
 					printers: {
 						ruName: "Принтеры и МФУ",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Принтеры и МФУ",
 						path: "/printers"
 					},
 					faxes: {
 						ruName: "Факсы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Факсы",
 						path: "/fax"
 					},
 					scanners: {
 						ruName: "Сканеры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Сканеры",
 						path: "/scanner"
 					},
 					cartridges: {
 						ruName: "Картриджи для принтеров",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Картриджи для принтеров и МФУ",
 						path: "/cartridges"
 					},
 					shredders: {
 						ruName: "Уничтожители бумаг (шредеры)",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Шредеры",
 						path: "/shredder"
 					},
 					photoPaper: {
 						ruName: "Бумага и материалы для печати",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Бумага и материалы для печати",
 						path: "/photopaper"
 					},
 					paperCutters: {
 						ruName: "Резаки для бумаги",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Резаки для бумаги",
 						path: "/papercutter"
 					},
 					bookletMakers: {
 						ruName: "Брошюровщики",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Брошюровщики",
 						path: "/bindingmachines"
 					},
 					printers3d: {
 						ruName: "3D-принтеры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "3D-принтеры",
 						path: "/3dprinter"
 					},
 					suppliesFor3dPrinting: {
 						ruName: "Расходные материалы для 3D-печати",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Расходные материалы для 3D-печати",
 						path: "/3d_filament"
 					},
 					surgeProtectors: {
 						ruName: "Сетевые фильтры-удлинители",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Сетевые фильтры",
 						path: "/voltageregulator?voltage_type[0]=surge&voltage_type[operation]=union"
 					}
 				}
@@ -5108,27 +5108,27 @@ module.exports = {
 				subCategories: {
 					officeChairs: {
 						ruName: "Офисные кресла, стулья",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Офисные кресла и стулья",
 						path: "/office_chair"
 					},
 					officeTables: {
 						ruName: "Офисные столы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Столы",
 						path: "/table?tbl_type%5B0%5D=executive&tbl_type%5B1%5D=conference&tbl_type%5B2%5D=office&tbl_type%5Boperation%5D=union"
 					},
 					officeSofas: {
 						ruName: "Офисные диваны",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Офисные диваны",
 						path: "/divan?di_office=1"
 					},
 					officeSafes: {
 						ruName: "Сейфы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Сейфы",
 						path: "/furnituresafes"
 					},
 					officeBoards: {
 						ruName: "Офисные доски, флипчарты",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Офисные доски, флипчарты",
 						path: "/officeboard"
 					}
 				}
@@ -5138,52 +5138,52 @@ module.exports = {
 				subCategories: {
 					cashRegisters: {
 						ruName: "Кассовые аппараты",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Кассовые аппараты",
 						path: "/cashregister"
 					},
 					banknoteAndCoinCounters: {
 						ruName: "Счетчики банкнот и монет",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Счетчики банкнот и монет",
 						path: "/counters"
 					},
 					barcodeScanners: {
 						ruName: "Сканеры штрих-кодов",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Сканеры штрих-кодов",
 						path: "/barcode"
 					},
 					currencyDetectors: {
 						ruName: "Детекторы валют",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Детекторы валют",
 						path: "/currencydetector"
 					},
 					matrixPrinters: {
 						ruName: "Матричные принтеры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Матричные принтеры",
 						path: "/matrixprinter"
 					},
 					printersOnLabelsAndReceipts: {
 						ruName: "Принтеры на этикетках и чеках",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Термопринтеры",
 						path: "/thermal"
 					},
 					dashboards: {
 						ruName: "Информационные панели",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Информационные панели",
 						path: "/digitalsignage"
 					},
 					commercialRefrigerators: {
 						ruName: "Торговые холодильники",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Торговые холодильники",
 						path: "/commfrige"
 					},
 					commercialTents: {
 						ruName: "Шатры, тенты для торговли",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Шатры для торговли",
 						path: "/canopy_tents?ct_use%5B0%5D=2&ct_use%5Boperation%5D=union"
 					},
 					thermalCurtains: {
 						ruName: "Тепловые завесы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Тепловые завесы",
 						path: "/aircurtain"
 					}
 				}
@@ -5193,42 +5193,42 @@ module.exports = {
 				subCategories: {
 					printers: {
 						ruName: "Принтеры и МФУ",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Принтеры и МФУ",
 						path: "/printers"
 					},
 					laminators: {
 						ruName: "Ламинаторы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Ламинаторы",
 						path: "/laminator"
 					},
 					bookletMakers: {
 						ruName: "Брошюровщики",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Брошюровщики",
 						path: "/bindingmachines"
 					},
 					graphicTablets: {
 						ruName: "Графические планшеты",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Графические планшеты",
 						path: "/tablets"
 					},
 					officePaper: {
 						ruName: "Офисная бумага",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Бумага и материалы для печати",
 						path: "/photopaper?pp_type%5B0%5D=officepap&pp_type%5Boperation%5D=union"
 					},
 					selfAdhesivePaper: {
 						ruName: "Самоклеящаяся бумага",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Самоклеящаяся бумага",
 						path: "/photopaper?pp_type[0]=selfadhesive&pp_type[operation]=union"
 					},
 					thermalTransferPaper: {
 						ruName: "Термотрансферная бумага",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Термотрансферная бумага",
 						path: "/photopaper?pp_type[0]=thermaltransfer&pp_type[operation]=union"
 					},
 					photoPaper: {
 						ruName: "Фотобумага",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Бумага и материалы для печати",
 						path: "/photopaper?pp_type%5B0%5D=paper&pp_type%5Boperation%5D=union"
 					}
 				}
@@ -5238,37 +5238,37 @@ module.exports = {
 				subCategories: {
 					dispensers: {
 						ruName: "Дозаторы, диспенсеры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Дозаторы, диспенсеры",
 						path: "/dispenser"
 					},
 					handDryers: {
 						ruName: "Сушилки для рук, волос",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Сушилки для рук, волос",
 						path: "/handsdryer"
 					},
 					waterCoolers: {
 						ruName: "Кулеры для воды",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Кулеры для воды",
 						path: "/water_cooler"
 					},
 					coffeeMachinesAndCoffeeMakers: {
 						ruName: "Кофемашины и кофеварки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Кофеварки и кофемашины",
 						path: "/coffee"
 					},
 					coffee: {
 						ruName: "Кофе",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Кофе",
 						path: "/coffeejava"
 					},
 					refrigerators: {
 						ruName: "Холодильники",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Холодильные камеры",
 						path: "/refrigerator?type_refrigerato[0]=iceroom&type_refrigerato[operation]=union&type_freezer[0]=none&type_freezer[operation]=union&ref_usefulcap[to]=124"
 					},
 					microwaves: {
 						ruName: "Микроволновые печи",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Микроволновые печи",
 						path: "/microvawe"
 					}
 				}
@@ -5278,22 +5278,22 @@ module.exports = {
 				subCategories: {
 					ipCameras: {
 						ruName: "IP-камеры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "IP-камеры",
 						path: "/ipcamera"
 					},
 					CCTV: {
 						ruName: "Камеры CCTV",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Камеры CCTV",
 						path: "/cctvcamera"
 					},
 					DVRs: {
 						ruName: "Видеорегистраторы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Видеорегистраторы наблюдения",
 						path: "/dvr"
 					},
 					videoDoorPhones: {
 						ruName: "Видеодомофоны",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Видеодомофоны",
 						path: "/videodoorphone"
 					}
 				}
@@ -5303,22 +5303,22 @@ module.exports = {
 				subCategories: {
 					gpsTrackers: {
 						ruName: "GPS-трекеры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "GPS-трекеры",
 						path: "/gps_tracker"
 					},
 					DVRs: {
 						ruName: "Видеорегистраторы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Автомобильные видеорегистраторы",
 						path: "/videoregistrator"
 					},
 					gpsNavigators: {
 						ruName: "GPS-навигаторы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "GPS-навигаторы",
 						path: "/gps"
 					},
 					breathAnalyzers: {
 						ruName: "Алкотестеры",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Алкотестеры",
 						path: "/breathalyzer"
 					}
 				}
@@ -5328,62 +5328,62 @@ module.exports = {
 				subCategories: {
 					woodworkingMachinery: {
 						ruName: "Деревообрабатывающие станки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Деревообрабатывающие станки",
 						path: "/woodworking"
 					},
 					metalworkingMachinery: {
 						ruName: "Металлообрабатывающие станки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Металлообрабатывающие станки",
 						path: "/metalworking"
 					},
 					electricMetalCutters: {
 						ruName: "Электрические ножницы по металлу",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Электрические ножницы по металлу",
 						path: "/metal_cutter"
 					},
 					sharpeningMachines: {
 						ruName: "Заточные станки (точила)",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Заточные станки (точила)",
 						path: "/benchgrinder"
 					},
 					electricAndGasCutters: {
 						ruName: "Электро- и бензорезы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Электро- и бензорезы",
 						path: "/powercutter"
 					},
 					pipeMetalRolling: {
 						ruName: "Трубный металлопрокат",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Трубный металлопрокат",
 						path: "/metal_pipes"
 					},
 					sheetMetalRolling: {
 						ruName: "Листовой металлопрокат",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Листовой металлопрокат",
 						path: "/sheetmetal"
 					},
 					fittings: {
 						ruName: "Арматура",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Арматура",
 						path: "/armatura"
 					},
 					rabitz: {
 						ruName: "Строительные сетки",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Строительные сетки",
 						path: "/rabitz"
 					},
 					buildingMaterials: {
 						ruName: "Общестроительные материалы",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Общестроительные материалы",
 						path: "/buildingmaterial"
 					},
 					bricks: {
 						ruName: "Кирпич",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Кирпич, строительные блоки",
 						path: "/bricks"
 					},
 					pavingSlabs: {
 						ruName: "Тротуарная плитка",
-						subcategoryPageRuHeading: "",
+						subcategoryPageRuHeading: "Тротуарная плитка",
 						path: "/pavers"
 					}
 				}
