@@ -23,7 +23,7 @@ describe("Onliner.by - Catalog / Navigation", () => {
 				.then(() => { Catalog.focusCategoryItem(randomCategoryItem.ruName) })
 				.then(() => { Catalog.openSubcategory(randomSubcategoryItem) })
 				.then(() => {
-					expect(element(by.css("h1.schema-header__title")).getText()).toBe(randomSubcategoryItem.ruName)
+					expect(element(by.css("h1.schema-header__title")).getText()).toBe(randomSubcategoryItem.subcategoryPageRuHeading)
 					expect(element(by.css("#schema-products")).isDisplayed()).toBe(true)
 					expect(element(by.css("#schema-filter")).isDisplayed()).toBe(true)
 				})
