@@ -5244,7 +5244,7 @@ module.exports = {
 			},
 			autoAndMototechnics: {
 				ruName: "Авто и мототехника",
-				isUnique: true,
+				isUnique: false,
 				subCategories: {
 					cars: {
 						ruName: "Легковые автомобили",
@@ -6952,7 +6952,7 @@ module.exports = {
 		categories: {
 			officeEquipment: {
 				ruName: "Офисная техника и расходные материалы",
-				isUnique: true,
+				isUnique: false,
 				subCategories: {
 					printers: {
 						ruName: "Принтеры и МФУ",
@@ -7035,7 +7035,7 @@ module.exports = {
 			},
 			officeFurniture: {
 				ruName: "Офисная мебель",
-				isUnique: true,
+				isUnique: false,
 				subCategories: {
 					officeChairs: {
 						ruName: "Офисные кресла, стулья",

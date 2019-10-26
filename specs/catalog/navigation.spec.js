@@ -12,8 +12,10 @@ describe("Onliner.by - Catalog / Navigation", () => {
 		it("then they should be able to products on subcategory pages", () => {
 
 			const randomClassifierItem = entities.getRandomClassifierItem()
-			const randomCategoryItem = entities.getRandomCategory(randomClassifierItem)
+			const randomCategoryItem = entities.getRandomUniqueCategory(randomClassifierItem)
 			const randomSubcategoryItem = entities.getRandomUniqueSubcategory(randomCategoryItem)
+
+			console.log(randomSubcategoryItem)
 
 			HomePage.goTo("/")
 				.then(() => { HomePage.openCatalog() })

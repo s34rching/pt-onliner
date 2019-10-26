@@ -5,8 +5,12 @@ exports.getRandomClassifierItem = function() {
 	return _.sample(_.values(catalogTree))
 }
 
-exports.getRandomCategory = function(classifierItem) {
-	return classifierItem.categories[_.sample(_.keys(classifierItem.categories))]
+exports.getRandomUniqueCategory = function(classifierItem) {
+	const uniqueCategories = _.filter(classifierItem.categories, category => {
+		return category.isUnique === true
+	})
+
+	return _.sample(uniqueCategories)
 }
 
 exports.getRandomUniqueSubcategory = function(categoryItem) {
