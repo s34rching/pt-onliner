@@ -33,9 +33,12 @@ class Catalog extends BasePage {
 
 	followRandomCatalogBarLink() {
 		browser.wait(this.isVisible(this.catalogBar))
-		this.catalogBar.all(by.className("catalog-bar__link")).then(links => {
-			_.sample(links).click()
-		})
+		this.catalogBar.all(by.className("catalog-bar__link"))
+			.then(links => { return _.sample(links) })
+			.then(link => {
+				browser.wait(this.isVisible(link))
+				link.click()
+			})
 	}
 }
 
