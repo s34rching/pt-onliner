@@ -9,6 +9,7 @@ describe("Onliner.by - Catalog / Navigation", () => {
 	})
 
 	describe("When user uses pages navigation through the 'Catalog'", () => {
+
 		it("then they should be able to products on subcategory pages", () => {
 
 			const randomClassifierItem = entities.getRandomClassifierItem()
@@ -26,7 +27,17 @@ describe("Onliner.by - Catalog / Navigation", () => {
 					expect(element(by.css("#schema-filter")).isDisplayed()).toBe(true)
 				})
 		})
-	})
 
+		it("then they should be able to open subcategory pages following bar links", () => {
+
+			HomePage.goTo("/")
+				.then(() => { HomePage.openCatalog() })
+				.then(() => { Catalog.followRandomCatalogBarLink() })
+				.then(() => {
+					expect(element.all(by.css(".schema-product__group")).first().isDisplayed()).toBe(true)
+					expect(element(by.css("#schema-filter")).isDisplayed()).toBe(true)
+				})
+		})
+	})
 })
 

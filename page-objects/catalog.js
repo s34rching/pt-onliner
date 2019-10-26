@@ -1,4 +1,5 @@
 const BasePage = require("./base-page")
+const _ = require("lodash")
 
 class Catalog extends BasePage {
 	constructor() {
@@ -12,6 +13,7 @@ class Catalog extends BasePage {
 		this.subCategoryItem = function(subcategoryItem) {
 			return element(by.css(`a[href$="${subcategoryItem.path}"][class="catalog-navigation-list__dropdown-item"]`))
 		}
+		this.catalogBar = element(by.className("catalog-bar"))
 	}
 
 	chooseClassifierItem(itemId) {
@@ -27,6 +29,13 @@ class Catalog extends BasePage {
 	openSubcategory(subcategoryItem) {
 		browser.wait(this.isClickable(this.subCategoryItem(subcategoryItem)))
 		this.subCategoryItem(subcategoryItem).click()
+	}
+
+	followRandomCatalogBarLink() {
+		browser.wait(this.isVisible(this.catalogBar))
+		this.catalogBar.all(by.className("catalog-bar__link")).then(links => {
+			_.sample(links).click()
+		})
 	}
 }
 
