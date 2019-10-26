@@ -32,5 +32,3 @@ describe("Onliner.by - Catalog / Navigation", () => {
 
 })
 
-// TODO: search sequence object
-// TODO: add subcategory name to fixture
