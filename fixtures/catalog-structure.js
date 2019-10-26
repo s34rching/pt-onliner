@@ -5,6 +5,7 @@ module.exports = {
 		categories: {
 			mobilePhonesAndAccessories: {
 				ruName: "Мобильные телефоны и аксессуары",
+				isUnique: true,
 				subCategories: {
 					mobilePhones: {
 						ruName: "Мобильные телефоны",
@@ -108,6 +109,7 @@ module.exports = {
 			},
 			televisionAnDVideo: {
 				ruName: "Телевидение и видео",
+				isUnique: true,
 				subCategories: {
 					tvSets: {
 						ruName: "Телевизоры",
@@ -218,6 +220,7 @@ module.exports = {
 			},
 			tabsAndEbooks: {
 				ruName: "Планшеты, электронные книги",
+				isUnique: true,
 				subCategories: {
 					tablets: {
 						ruName: "Планшеты",
@@ -286,6 +289,7 @@ module.exports = {
 			},
 			audio: {
 				ruName: "Аудиотехника",
+				isUnique: true,
 				subCategories: {
 					headphones: {
 						ruName: "Наушники",
@@ -445,6 +449,7 @@ module.exports = {
 			},
 			photoAndVideo: {
 				ruName: "Фото- и видеотехника",
+				isUnique: true,
 				subCategories: {
 					cameras: {
 						ruName: "Фотоаппараты",
@@ -555,6 +560,7 @@ module.exports = {
 			},
 			videoGames: {
 				ruName: "Видеоигры",
+				isUnique: true,
 				subCategories: {
 					consoles: {
 						ruName: "Игровые приставки",
@@ -602,6 +608,7 @@ module.exports = {
 			},
 			gadgets: {
 				ruName: "Гаджеты",
+				isUnique: true,
 				subCategories: {
 					subcategory: {
 						ruName: "Умные часы и фитнес-браслеты",
@@ -656,6 +663,7 @@ module.exports = {
 			},
 			smarthouseAndSurveillanceVideo: {
 				ruName: "Умный дом и видеонаблюдение",
+				isUnique: false,
 				subCategories: {
 					smartHome: {
 						ruName: "Умный дом",
@@ -724,6 +732,7 @@ module.exports = {
 			},
 			electricTransport: {
 				ruName: "Электрический транспорт",
+				isUnique: true,
 				subCategories: {
 					electricScooters: {
 						ruName: "Электросамокаты и электроскутеры",
@@ -750,6 +759,7 @@ module.exports = {
 			},
 			telephonyAndCommunication: {
 				ruName: "Телефония и связь",
+				isUnique: true,
 				subCategories: {
 					mobilePhones: {
 						ruName: "Мобильные телефоны",
@@ -798,6 +808,7 @@ module.exports = {
 			},
 			musicEquipment: {
 				ruName: "Музыкальное оборудование",
+				isUnique: true,
 				subCategories: {
 					synthesizersAndWorkstations: {
 						ruName: "Синтезаторы и рабочие станции",
@@ -845,6 +856,7 @@ module.exports = {
 			},
 			opticalAppliances: {
 				ruName: "Оптические приборы",
+				isUnique: true,
 				subCategories: {
 					binoculars: {
 						ruName: "Бинокли и подзорные трубы",
@@ -867,6 +879,7 @@ module.exports = {
 	computers: {
 		id: 2,
 		ruName: "Компьютеры и сети",
+		isUnique: true,
 		categories: {
 			laptopsComputersMonitors: {
 				ruName: "Ноутбуки, компьютеры, мониторы",
@@ -910,6 +923,7 @@ module.exports = {
 			},
 			components: {
 				ruName: "Комплектующие",
+				isUnique: true,
 				subCategories: {
 					videoCards: {
 						ruName: "Видеокарты",
@@ -1006,6 +1020,7 @@ module.exports = {
 			},
 			forPrintingAndDesign: {
 				ruName: "Техника для печати и дизайна",
+				isUnique: false,
 				subCategories: {
 					printers: {
 						ruName: "Принтеры и МФУ",
@@ -1095,6 +1110,7 @@ module.exports = {
 			},
 			devicesForInputting: {
 				ruName: "Манипуляторы и устройства ввода",
+				isUnique: true,
 				subCategories: {
 					mouses: {
 						ruName: "Мыши",
@@ -1142,6 +1158,7 @@ module.exports = {
 			},
 			dataStorage: {
 				ruName: "Хранение данных",
+				isUnique: true,
 				subCategories: {
 					SSD: {
 						ruName: "SSD",
@@ -1217,6 +1234,7 @@ module.exports = {
 			},
 			multimediaComponents: {
 				ruName: "Мультимедиа периферия",
+				isUnique: true,
 				subCategories: {
 					pcAcoustics: {
 						ruName: "Компьютерная акустика",
@@ -1257,6 +1275,7 @@ module.exports = {
 			},
 			networkHardware: {
 				ruName: "Сетевое оборудование",
+				isUnique: true,
 				subCategories: {
 					wirelessRouters: {
 						ruName: "Беспроводные маршрутизаторы",
@@ -1353,6 +1372,7 @@ module.exports = {
 			},
 			laptopAccessories: {
 				ruName: "Аксессуары к ноутбукам и компьютерам",
+				isUnique: false,
 				subCategories: {
 					mobilePhones: {
 						laptopBackpacks: "Рюкзаки для ноутбуков",
@@ -1407,6 +1427,7 @@ module.exports = {
 			},
 			chargers: {
 				ruName: "Электропитание",
+				isUnique: true,
 				subCategories: {
 					ups: {
 						ruName: "Источники бесперебойного питания",
@@ -1454,6 +1475,7 @@ module.exports = {
 			},
 			software: {
 				ruName: "Игры и программное обеспечение",
+				isUnique: false,
 				subCategories: {
 					gamesForPc: {
 						ruName: "Видеоигры для ПК",
@@ -1493,6 +1515,7 @@ module.exports = {
 		categories: {
 			bulkyEquipment: {
 				ruName: "Крупногабаритная техника",
+				isUnique: true,
 				subCategories: {
 					refrigerators: {
 						ruName: "Холодильники",
@@ -1561,6 +1584,7 @@ module.exports = {
 			},
 			builtInAppliances: {
 				ruName: "Встраиваемая техника",
+				isUnique: true,
 				subCategories: {
 					hobs: {
 						ruName: "Варочные панели",
@@ -1636,6 +1660,7 @@ module.exports = {
 			},
 			cleaning: {
 				ruName: "Уборка",
+				isUnique: true,
 				subCategories: {
 					vacuumCleaners: {
 						ruName: "Пылесосы",
@@ -1690,6 +1715,7 @@ module.exports = {
 			},
 			clothesCare: {
 				ruName: "Уход за одеждой, пошив",
+				isUnique: false,
 				subCategories: {
 					irons: {
 						ruName: "Утюги",
@@ -1751,6 +1777,7 @@ module.exports = {
 			},
 			airConditioningEquipment: {
 				ruName: "Климатическая техника",
+				isUnique: true,
 				subCategories: {
 					conditioners: {
 						ruName: "Кондиционеры",
@@ -1847,6 +1874,7 @@ module.exports = {
 			},
 			cooking: {
 				ruName: "Приготовление пищи",
+				isUnique: false,
 				subCategories: {
 					microwaves: {
 						ruName: "Микроволновые печи",
@@ -1971,6 +1999,7 @@ module.exports = {
 			},
 			teaAndCoffeePreparation: {
 				ruName: "Приготовление кофе и чая",
+				isUnique: false,
 				subCategories: {
 					coffeeMachines: {
 						ruName: "Кофемашины",
@@ -2053,6 +2082,7 @@ module.exports = {
 			},
 			foodPreparation: {
 				ruName: "Подготовка и обработка продуктов",
+				isUnique: true,
 				subCategories: {
 					blenders: {
 						ruName: "Блендеры",
@@ -2142,6 +2172,7 @@ module.exports = {
 			},
 			bodyAndHairCare: {
 				ruName: "Уход за волосами и телом",
+				isUnique: false,
 				subCategories: {
 					hairClippers: {
 						ruName: "Машинки для стрижки волос",
@@ -2217,6 +2248,7 @@ module.exports = {
 			},
 			healthEquipment: {
 				ruName: "Техника для здоровья",
+				isUnique: false,
 				subCategories: {
 					inhalers: {
 						ruName: "Ингаляторы",
@@ -2285,6 +2317,7 @@ module.exports = {
 			},
 			accessoriesAndPeripheral: {
 				ruName: "Аксессуары и сопутствующие товары",
+				isUnique: false,
 				subCategories: {
 					laundryDryers: {
 						ruName: "Сушилки для белья",
@@ -2422,6 +2455,7 @@ module.exports = {
 		categories: {
 			tools: {
 				ruName: "Инструмент",
+				isUnique: true,
 				subCategories: {
 					drills: {
 						ruName: "Электродрели и дрели-шуруповерты",
@@ -2644,6 +2678,7 @@ module.exports = {
 			},
 			buildingEquipment: {
 				ruName: "Строительное оборудование",
+				isUnique: true,
 				subCategories: {
 					welders: {
 						ruName: "Сварочные аппараты",
@@ -2754,6 +2789,7 @@ module.exports = {
 			},
 			floorCoverings: {
 				ruName: "Напольные покрытия",
+				isUnique: true,
 				subCategories: {
 					laminate: {
 						ruName: "Ламинат",
@@ -2794,6 +2830,7 @@ module.exports = {
 			},
 			plumbing: {
 				ruName: "Сантехника",
+				isUnique: true,
 				subCategories: {
 					kitchenSinks: {
 						ruName: "Кухонные мойки",
@@ -2925,6 +2962,7 @@ module.exports = {
 			},
 			waterSupplySewerageVentilation: {
 				ruName: "Водоснабжение, канализация, вентиляция",
+				isUnique: false,
 				subCategories: {
 					waterHeaters: {
 						ruName: "Водонагреватели",
@@ -3000,6 +3038,7 @@ module.exports = {
 			},
 			powerSupply: {
 				ruName: "Электроснабжение",
+				isUnique: true,
 				subCategories: {
 					socketsAndSwitches: {
 						ruName: "Розетки, выключатели",
@@ -3047,6 +3086,7 @@ module.exports = {
 			},
 			heating: {
 				ruName: "Отопление, теплоизоляция",
+				isUnique: true,
 				subCategories: {
 					boilers: {
 						ruName: "Отопительные котлы",
@@ -3136,6 +3176,7 @@ module.exports = {
 			},
 			doorsAndWindows: {
 				ruName: "Двери, окна",
+				isUnique: true,
 				subCategories: {
 					metalDoors: {
 						ruName: "Металлические двери",
@@ -3162,6 +3203,7 @@ module.exports = {
 			},
 			pneumaticTools: {
 				ruName: "Пневмоинструменты",
+				isUnique: true,
 				subCategories: {
 					compressors: {
 						ruName: "Компрессоры",
@@ -3202,6 +3244,7 @@ module.exports = {
 			},
 			machines: {
 				ruName: "Станки",
+				isUnique: true,
 				subCategories: {
 					woodworkingMachinery: {
 						ruName: "Деревообрабатывающие станки",
@@ -3235,6 +3278,7 @@ module.exports = {
 			},
 			buildingAndFinishingMaterials: {
 				ruName: "Строительные и отделочные материалы",
+				isUnique: true,
 				subCategories: {
 					buildingMaterials: {
 						ruName: "Общестроительные материалы",
@@ -3393,6 +3437,7 @@ module.exports = {
 		categories: {
 			bathroomAndToilet: {
 				ruName: "Ванная комната и туалет",
+				isUnique: true,
 				subCategories: {
 					faucets: {
 						ruName: "Смесители",
@@ -3545,6 +3590,7 @@ module.exports = {
 			},
 			kitchen: {
 				ruName: "Кухня",
+				isUnique: true,
 				subCategories: {
 					kitchenSinks: {
 						ruName: "Мойки",
@@ -3593,6 +3639,7 @@ module.exports = {
 			},
 			waterSupplyAndHeating: {
 				ruName: "Водоснабжение, отопление",
+				isUnique: false,
 				subCategories: {
 					pumps: {
 						ruName: "Насосы",
@@ -3689,6 +3736,7 @@ module.exports = {
 			},
 			furniture: {
 				ruName: "Мебель для дома",
+				isUnique: true,
 				subCategories: {
 					officeArmchairsAndChairs: {
 						ruName: "Офисные кресла и стулья",
@@ -3806,6 +3854,7 @@ module.exports = {
 			},
 			bedroom: {
 				ruName: "Товары для спальни и домашний текстиль",
+				isUnique: false,
 				subCategories: {
 					mattresses: {
 						ruName: "Матрасы",
@@ -3881,6 +3930,7 @@ module.exports = {
 			},
 			gardenToolsAndMachines: {
 				ruName: "Садовая техника и инструменты",
+				isUnique: true,
 				subCategories: {
 					miniTractors: {
 						ruName: "Мини-тракторы",
@@ -4033,6 +4083,7 @@ module.exports = {
 			},
 			dacha: {
 				ruName: "Отдых на даче",
+				isUnique: true,
 				subCategories: {
 					baths: {
 						ruName: "Бани, купели",
@@ -4136,6 +4187,7 @@ module.exports = {
 			},
 			siteArrangement: {
 				ruName: "Обустройство участка",
+				isUnique: true,
 				subCategories: {
 					houses: {
 						ruName: "Дома, коттеджи",
@@ -4239,6 +4291,7 @@ module.exports = {
 			},
 			decorAndInterior: {
 				ruName: "Декор и интерьер",
+				isUnique: true,
 				subCategories: {
 					interiorClocks: {
 						ruName: "Интерьерные часы",
@@ -4293,6 +4346,7 @@ module.exports = {
 			},
 			lightningAndPowerSupply: {
 				ruName: "Освещение и электропитание",
+				isUnique: true,
 				subCategories: {
 					chandeliersAndLamps: {
 						ruName: "Люстры и светильники",
@@ -4361,6 +4415,7 @@ module.exports = {
 			},
 			smartHouseAndSecurity: {
 				ruName: "Умный дом и безопасность",
+				isUnique: false,
 				subCategories: {
 					smartHome: {
 						ruName: "Умный дом",
@@ -4443,6 +4498,7 @@ module.exports = {
 			},
 			clothingCare: {
 				ruName: "Уход за одеждой, стирка",
+				isUnique: false,
 				subCategories: {
 					linenDryers: {
 						ruName: "Сушилки для белья",
@@ -4476,6 +4532,7 @@ module.exports = {
 			},
 			dishes: {
 				ruName: "Посуда и продукты питания",
+				isUnique: true,
 				subCategories: {
 					pans: {
 						ruName: "Сковороды",
@@ -4572,6 +4629,7 @@ module.exports = {
 			},
 			celebrations: {
 				ruName: "Праздники",
+				isUnique: true,
 				subCategories: {
 					flowersBouquets: {
 						ruName: "Цветы, букеты",
@@ -4619,6 +4677,7 @@ module.exports = {
 			},
 			petSupplies: {
 				ruName: "Зоотовары",
+				isUnique: true,
 				subCategories: {
 					dogFood: {
 						ruName: "Корма для собак",
@@ -4673,6 +4732,7 @@ module.exports = {
 			},
 			plantGrowing: {
 				ruName: "Растениеводство",
+				isUnique: true,
 				subCategories: {
 					gardenTools: {
 						ruName: "Садовый инструмент",
@@ -4803,6 +4863,7 @@ module.exports = {
 		categories: {
 			sparePartsAndTechnicalFluids: {
 				ruName: "Запчасти и технические жидкости",
+				isUnique: true,
 				subCategories: {
 					tires: {
 						ruName: "Шины",
@@ -4899,6 +4960,7 @@ module.exports = {
 			},
 			carElectronics: {
 				ruName: "Автоэлектроника",
+				isUnique: true,
 				subCategories: {
 					DVRs: {
 						ruName: "Видеорегистраторы",
@@ -5009,6 +5071,7 @@ module.exports = {
 			},
 			repairAndWashingEquipment: {
 				ruName: "Оборудование для ремонта и мойки",
+				isUnique: true,
 				subCategories: {
 					welders: {
 						ruName: "Сварочные аппараты",
@@ -5105,6 +5168,7 @@ module.exports = {
 			},
 			carAccessories: {
 				ruName: "Аксессуары",
+				isUnique: false,
 				subCategories: {
 					toolKits: {
 						ruName: "Наборы инструментов",
@@ -5180,6 +5244,7 @@ module.exports = {
 			},
 			autoAndMototechnics: {
 				ruName: "Авто и мототехника",
+				isUnique: true,
 				subCategories: {
 					cars: {
 						ruName: "Легковые автомобили",
@@ -5254,6 +5319,7 @@ module.exports = {
 		categories: {
 			bicycleAndAccessories: {
 				ruName: "Велосипеды и аксессуары",
+				isUnique: true,
 				subCategories: {
 					bikes: {
 						ruName: "Велосипеды",
@@ -5336,6 +5402,7 @@ module.exports = {
 			},
 			rollerSkatesSkateboards: {
 				ruName: "Роликовые коньки, скейтборды, самокаты",
+				isUnique: false,
 				subCategories: {
 					rollerSkates: {
 						ruName: "Роликовые коньки",
@@ -5383,6 +5450,7 @@ module.exports = {
 			},
 			electricTransport: {
 				ruName: "Роликовые коньки, скейтборды, самокаты",
+				isUnique: false,
 				subCategories: {
 					electricScooters: {
 						ruName: "Электросамокаты и электроскутеры",
@@ -5409,6 +5477,7 @@ module.exports = {
 			},
 			watchBagsAccessories: {
 				ruName: "Часы, сумки и прочие аксессуары",
+				isUnique: true,
 				subCategories: {
 					watches: {
 						ruName: "Наручные часы",
@@ -5463,6 +5532,7 @@ module.exports = {
 			},
 			cosmeticPerfumeryAccessories: {
 				ruName: "Косметика, парфюмерия, аксессуары",
+				isUnique: true,
 				subCategories: {
 					perfumery: {
 						ruName: "Парфюмерия",
@@ -5552,6 +5622,7 @@ module.exports = {
 			},
 			health: {
 				ruName: "Здоровье",
+				isUnique: true,
 				subCategories: {
 					fitnessBraceletsAndWatches: {
 						ruName: "Фитнес-браслеты и часы",
@@ -5655,6 +5726,7 @@ module.exports = {
 			},
 			bodyCareEquipment: {
 				ruName: "Приборы по уходу за телом",
+				isUnique: true,
 				subCategories: {
 					hairClippers: {
 						ruName: "Машинки для стрижки волос",
@@ -5765,6 +5837,7 @@ module.exports = {
 			},
 			hobby: {
 				ruName: "Хобби",
+				isUnique: true,
 				subCategories: {
 					electronicSteamGenerators: {
 						ruName: "Электронные парогенераторы",
@@ -5875,6 +5948,7 @@ module.exports = {
 			},
 			tourismAndCamping: {
 				ruName: "Туризм и кемпинг",
+				isUnique: true,
 				subCategories: {
 					tents: {
 						ruName: "Палатки",
@@ -6013,6 +6087,7 @@ module.exports = {
 			},
 			fishingAndWaterSport: {
 				ruName: "Рыбалка, водный спорт",
+				isUnique: true,
 				subCategories: {
 					inflatableBoats: {
 						ruName: "Надувные лодки",
@@ -6074,6 +6149,7 @@ module.exports = {
 			},
 			fitnessEquipment: {
 				ruName: "Тренажеры, фитнес, единоборства",
+				isUnique: true,
 				subCategories: {
 					weightTrainingEquipment: {
 						ruName: "Силовые тренажеры",
@@ -6191,6 +6267,7 @@ module.exports = {
 			},
 			gameSports: {
 				ruName: "Игровые виды спорта",
+				isUnique: true,
 				subCategories: {
 					sportsBalls: {
 						ruName: "Спортивные мячи",
@@ -6245,6 +6322,7 @@ module.exports = {
 			},
 			winterSports: {
 				ruName: "Зимние виды спорта",
+				isUnique: true,
 				subCategories: {
 					sled: {
 						ruName: "Санки",
@@ -6291,6 +6369,7 @@ module.exports = {
 		categories: {
 			walksAndTrips: {
 				ruName: "Прогулки и поездки",
+				isUnique: true,
 				subCategories: {
 					babyStrollers: {
 						ruName: "Коляски",
@@ -6331,6 +6410,7 @@ module.exports = {
 			},
 			childrenTransport: {
 				ruName: "Детский транспорт",
+				isUnique: false,
 				subCategories: {
 					childrenKickScooters: {
 						ruName: "Самокаты",
@@ -6392,6 +6472,7 @@ module.exports = {
 			},
 			childrenFurniture: {
 				ruName: "Детская мебель",
+				isUnique: true,
 				subCategories: {
 					babyCotBeds: {
 						ruName: "Кроватки",
@@ -6460,6 +6541,7 @@ module.exports = {
 			},
 			babySleep: {
 				ruName: "Детский сон",
+				isUnique: false,
 				subCategories: {
 					babyCotBeds: {
 						ruName: "Кроватки",
@@ -6507,6 +6589,7 @@ module.exports = {
 			},
 			boardAndEducationalGames: {
 				ruName: "Настольные игры и развивающие игрушки",
+				isUnique: true,
 				subCategories: {
 					boardGames: {
 						ruName: "Настольные игры",
@@ -6575,6 +6658,7 @@ module.exports = {
 			},
 			toysAndGames: {
 				ruName: "Игрушки и игры",
+				isUnique: true,
 				subCategories: {
 					actionFigures: {
 						ruName: "Экшен-фигурки",
@@ -6664,6 +6748,7 @@ module.exports = {
 			},
 			outdoorGamesAndSport: {
 				ruName: "Игры на улице и спорт",
+				isUnique: false,
 				subCategories: {
 					pools: {
 						ruName: "Бассейны",
@@ -6760,6 +6845,7 @@ module.exports = {
 			},
 			newbornCare: {
 				ruName: "Уход за новорожденными",
+				isUnique: false,
 				subCategories: {
 					diapers: {
 						ruName: "Подгузники",
@@ -6819,6 +6905,7 @@ module.exports = {
 			},
 			goodsForSchool: {
 				ruName: "Товары для школы",
+				isUnique: false,
 				subCategories: {
 					schoolBackpacks: {
 						ruName: "Школьные рюкзаки",
@@ -6865,6 +6952,7 @@ module.exports = {
 		categories: {
 			officeEquipment: {
 				ruName: "Офисная техника и расходные материалы",
+				isUnique: true,
 				subCategories: {
 					printers: {
 						ruName: "Принтеры и МФУ",
@@ -6947,6 +7035,7 @@ module.exports = {
 			},
 			officeFurniture: {
 				ruName: "Офисная мебель",
+				isUnique: true,
 				subCategories: {
 					officeChairs: {
 						ruName: "Офисные кресла, стулья",
@@ -6987,6 +7076,7 @@ module.exports = {
 			},
 			tradeAndFinance: {
 				ruName: "Торговля и финансы",
+				isUnique: true,
 				subCategories: {
 					cashRegisters: {
 						ruName: "Кассовые аппараты",
@@ -7062,6 +7152,7 @@ module.exports = {
 			},
 			publishingAndPrinting: {
 				ruName: "Издательство и печать",
+				isUnique: true,
 				subCategories: {
 					printers: {
 						ruName: "Принтеры и МФУ",
@@ -7123,6 +7214,7 @@ module.exports = {
 			},
 			hygieneAndNutrition: {
 				ruName: "Гигиена и питание",
+				isUnique: true,
 				subCategories: {
 					dispensers: {
 						ruName: "Дозаторы, диспенсеры",
@@ -7177,6 +7269,7 @@ module.exports = {
 			},
 			CCTV: {
 				ruName: "Видеонаблюдение",
+				isUnique: true,
 				subCategories: {
 					ipCameras: {
 						ruName: "IP-камеры",
@@ -7210,6 +7303,7 @@ module.exports = {
 			},
 			transportAndTransportation: {
 				ruName: "Транспорт и перевозки",
+				isUnique: true,
 				subCategories: {
 					gpsTrackers: {
 						ruName: "GPS-трекеры",
@@ -7243,6 +7337,7 @@ module.exports = {
 			},
 			industryAndConstruction: {
 				ruName: "Промышленность и строительство",
+				isUnique: true,
 				subCategories: {
 					woodworkingMachinery: {
 						ruName: "Деревообрабатывающие станки",
