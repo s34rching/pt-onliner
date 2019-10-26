@@ -13,13 +13,13 @@ describe("Onliner.by - Catalog / Navigation", () => {
 
 			const randomClassifierItem = entities.getRandomClassifierItem()
 			const randomCategoryItem = entities.getRandomCategory(randomClassifierItem)
-			const randomSubcategoryItem = entities.getRandomSubcategory(randomCategoryItem)
+			const randomSubcategoryItem = entities.getRandomUniqueSubcategory(randomCategoryItem)
 
 			HomePage.goTo("/")
 				.then(() => { HomePage.openCatalog() })
 				.then(() => { Catalog.chooseClassifierItem(randomClassifierItem.id) })
 				.then(() => { Catalog.focusCategoryItem(randomCategoryItem.ruName) })
-				.then(() => { Catalog.openSubcategory(randomSubcategoryItem.ruName) })
+				.then(() => { Catalog.openSubcategory(randomSubcategoryItem) })
 				.then(() => {
 					expect(element(by.css("h1.schema-header__title")).getText()).toBe(randomSubcategoryItem.ruName)
 					expect(element(by.css("#schema-products")).isDisplayed()).toBe(true)
