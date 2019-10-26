@@ -15,8 +15,6 @@ describe("Onliner.by - Catalog / Navigation", () => {
 			const randomCategoryItem = entities.getRandomUniqueCategory(randomClassifierItem)
 			const randomSubcategoryItem = entities.getRandomUniqueSubcategory(randomCategoryItem)
 
-			console.log(randomSubcategoryItem)
-
 			HomePage.goTo("/")
 				.then(() => { HomePage.openCatalog() })
 				.then(() => { Catalog.chooseClassifierItem(randomClassifierItem.id) })
