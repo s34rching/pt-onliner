@@ -16,7 +16,7 @@ describe("Onliner.by - Catalog / Navigation", () => {
 
 	describe("When user uses pages navigation through the 'Catalog'", () => {
 
-		it("then they should be able to products on subcategory pages", () => {
+		it("then they should be able to open subcategory product details page", () => {
 
 			const randomCategoryItem = entities.getRandomUniqueCategory(randomClassifierItem)
 			const randomSubcategoryItem = entities.getRandomUniqueSubcategory(randomCategoryItem)
@@ -26,10 +26,11 @@ describe("Onliner.by - Catalog / Navigation", () => {
 				.then(() => { Catalog.chooseClassifierItem(randomClassifierItem.id) })
 				.then(() => { Catalog.focusCategoryItem(randomCategoryItem.ruName) })
 				.then(() => { Catalog.openSubcategory(randomSubcategoryItem) })
+				.then(() => { Catalog.openCategoryFirstProductDetailsPage() })
 				.then(() => {
-					expect(element(by.css("h1.schema-header__title")).getText()).toBe(randomSubcategoryItem.subcategoryPageRuHeading)
-					expect(element(by.css("#schema-products")).isDisplayed()).toBe(true)
-					expect(element(by.css("#schema-filter")).isDisplayed()).toBe(true)
+					browser.wait(protractor.ExpectedConditions.visibilityOf(element(by.css(".product"))))
+					expect(element(by.css("#product-sub-navigation-container")).isDisplayed()).toBe(true)
+					expect(element(by.css("#specs")).isDisplayed()).toBe(true)
 				})
 		})
 

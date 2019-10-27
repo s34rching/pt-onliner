@@ -8,7 +8,7 @@ class Catalog extends BasePage {
 			return element(by.css(`[class="catalog-navigation-classifier__item "][data-id="${itemId}"]`))
 		}
 		this.categoryItem = function(categoryTitle) {
-			return element(by.cssContainingText(".catalog-navigation-list__aside-title", categoryTitle))
+			return element(by.cssContainingText(".catalog-navigation-list__aside-title", categoryTitle.match(/^\S+/)))
 		}
 		this.subCategoryItem = function(subcategoryItem) {
 			return element(by.css(`a[href$="${subcategoryItem.path}"][class="catalog-navigation-list__dropdown-item"]`))
@@ -17,6 +17,10 @@ class Catalog extends BasePage {
 		this.tile = function(tileTitle) {
 			return element(by.cssContainingText("span.tiles__title", tileTitle))
 		}
+		this.categoryFirstProduct = element.all(by.css(".schema-product__group"))
+			.first()
+			.all(by.css("a"))
+			.first()
 	}
 
 	chooseClassifierItem(itemId) {
@@ -32,6 +36,11 @@ class Catalog extends BasePage {
 	openSubcategory(subcategoryItem) {
 		browser.wait(this.isClickable(this.subCategoryItem(subcategoryItem)))
 		this.subCategoryItem(subcategoryItem).click()
+	}
+
+	openCategoryFirstProductDetailsPage() {
+		browser.wait(this.isVisible(this.categoryFirstProduct))
+		this.categoryFirstProduct.click()
 	}
 
 	followRandomCatalogBarLink() {
