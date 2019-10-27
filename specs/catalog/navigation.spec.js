@@ -4,6 +4,12 @@ const entities = require("../../helpers/get-entities")
 
 describe("Onliner.by - Catalog / Navigation", () => {
 
+	let randomClassifierItem
+
+	beforeAll(() => {
+		randomClassifierItem = entities.getRandomClassifierItem()
+	})
+
 	beforeEach(() => {
 		browser.waitForAngularEnabled(false)
 	})
@@ -12,7 +18,6 @@ describe("Onliner.by - Catalog / Navigation", () => {
 
 		it("then they should be able to products on subcategory pages", () => {
 
-			const randomClassifierItem = entities.getRandomClassifierItem()
 			const randomCategoryItem = entities.getRandomUniqueCategory(randomClassifierItem)
 			const randomSubcategoryItem = entities.getRandomUniqueSubcategory(randomCategoryItem)
 
@@ -55,7 +60,6 @@ describe("Onliner.by - Catalog / Navigation", () => {
 
 		it("then they should be able to open subcategory pages following section tile links", () => {
 
-			const randomClassifierItem = entities.getRandomClassifierItem()
 			const randomSectionTile = entities.getRandomSectionTile(randomClassifierItem)
 
 			HomePage.goTo("/")
