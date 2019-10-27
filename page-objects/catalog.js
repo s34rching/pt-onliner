@@ -8,7 +8,7 @@ class Catalog extends BasePage {
 			return element(by.css(`[class="catalog-navigation-classifier__item "][data-id="${itemId}"]`))
 		}
 		this.categoryItem = function(categoryTitle) {
-			return element(by.cssContainingText(".catalog-navigation-list__aside-title", categoryTitle.match(/^\S+/)[0]))
+			return element(by.cssContainingText(".catalog-navigation-list__aside-title", categoryTitle))
 		}
 		this.subCategoryItem = function(subcategoryItem) {
 			return element(by.css(`a[href$="${subcategoryItem.path}"][class="catalog-navigation-list__dropdown-item"]`))
