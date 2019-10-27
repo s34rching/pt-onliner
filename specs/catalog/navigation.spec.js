@@ -10,7 +10,7 @@ describe("Onliner.by - Catalog / Navigation", () => {
 
 	describe("When user uses pages navigation through the 'Catalog'", () => {
 
-		xit("then they should be able to products on subcategory pages", () => {
+		it("then they should be able to products on subcategory pages", () => {
 
 			const randomClassifierItem = entities.getRandomClassifierItem()
 			const randomCategoryItem = entities.getRandomUniqueCategory(randomClassifierItem)
@@ -28,7 +28,7 @@ describe("Onliner.by - Catalog / Navigation", () => {
 				})
 		})
 
-		xit("then they should be able to open subcategory pages following bar links", () => {
+		it("then they should be able to open subcategory pages following bar links", () => {
 
 			HomePage.goTo("/")
 				.then(() => { HomePage.openCatalog() })
@@ -39,7 +39,7 @@ describe("Onliner.by - Catalog / Navigation", () => {
 				})
 		})
 
-		xit("then they should be able to open subcategory pages following main tile links", () => {
+		it("then they should be able to open subcategory pages following main tile links", () => {
 
 			const randomMainTile = entities.getRandomCatalogMainTile()
 
@@ -49,13 +49,12 @@ describe("Onliner.by - Catalog / Navigation", () => {
 				.then(() => {
 					expect(element.all(by.css(".schema-product__group")).first().isDisplayed()).toBe(true)
 					expect(element(by.css("#schema-filter")).isDisplayed()).toBe(true)
-					expect(browser.getCurrentUrl()).toEqual(randomMainTile.path)
+					expect(browser.getCurrentUrl()).toContain(randomMainTile.path)
 				})
 		})
 
 		it("then they should be able to open subcategory pages following section tile links", () => {
 
-			const randomMainTile = entities.getRandomCatalogMainTile()
 			const randomClassifierItem = entities.getRandomClassifierItem()
 			const randomSectionTile = entities.getRandomSectionTile(randomClassifierItem)
 
@@ -66,7 +65,7 @@ describe("Onliner.by - Catalog / Navigation", () => {
 				.then(() => {
 					expect(element.all(by.css(".schema-product__group")).first().isDisplayed()).toBe(true)
 					expect(element(by.css("#schema-filter")).isDisplayed()).toBe(true)
-					expect(browser.getCurrentUrl()).toEqual(randomMainTile.path)
+					expect(browser.getCurrentUrl()).toContain(randomSectionTile.path)
 				})
 		})
 	})
