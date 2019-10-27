@@ -2,7 +2,7 @@ const catalogTree = require("../fixtures/catalog-structure")
 const _ = require("lodash")
 
 exports.getRandomClassifierItem = function() {
-	return _.sample(_.values(catalogTree))
+	return _.sample(_.values(catalogTree.sections))
 }
 
 exports.getRandomUniqueCategory = function(classifierItem) {
@@ -23,3 +23,10 @@ exports.getRandomUniqueSubcategory = function(categoryItem) {
 	return _.sample(uniqueSubcategories)
 }
 
+exports.getRandomCatalogMainTile = function() {
+	return _.sample(catalogTree.mainTiles)
+}
+
+exports.getRandomSectionTile = function(classifierItem) {
+	return _.sample(classifierItem.tiles)
+}

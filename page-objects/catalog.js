@@ -14,6 +14,9 @@ class Catalog extends BasePage {
 			return element(by.css(`a[href$="${subcategoryItem.path}"][class="catalog-navigation-list__dropdown-item"]`))
 		}
 		this.catalogBar = element(by.className("catalog-bar"))
+		this.tile = function(tileTitle) {
+			return element(by.cssContainingText("span.tiles__title", tileTitle))
+		}
 	}
 
 	chooseClassifierItem(itemId) {
@@ -39,6 +42,10 @@ class Catalog extends BasePage {
 				browser.wait(this.isVisible(link))
 				link.click()
 			})
+	}
+	followTilesLinks(tileTitle) {
+		browser.wait(this.isClickable(this.tile(tileTitle)))
+		this.tile(tileTitle).click()
 	}
 }
 
