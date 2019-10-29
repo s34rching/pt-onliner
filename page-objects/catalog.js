@@ -28,7 +28,7 @@ class Catalog extends BasePage {
 		this.sectionItem(itemId).click()
 	}
 
-	focusCategoryItem(categoryTitle) {
+	hoverCategoryItem(categoryTitle) {
 		browser.wait(this.isClickable(this.categoryItem(categoryTitle)))
 		this.categoryItem(categoryTitle).click()
 	}
