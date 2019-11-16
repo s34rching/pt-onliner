@@ -17,5 +17,5 @@
 + DONE: 17. Git: Labels <<<
 18. Git: Merging requires review <<<
 19. Add readme
-20. Change basic CLI reporter
++ DONE 20. Change basic CLI reporter
 21. Change CommonJS export to ES6
