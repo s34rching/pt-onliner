@@ -1,5 +1,5 @@
 1. 100 tests: Ira - 95, Ivan - 5.
-2. ESLint
++ DONE 2. ESLint
 3. Gitlab CI
 4. Allure Reporter
 5. Screenshots on test failure
@@ -14,7 +14,7 @@
 14. Moment.js
 15. Git: Pull request template <<<
 16. Git: Milestones
-- DONE: 17. Git: Labels <<<
++ DONE: 17. Git: Labels <<<
 18. Git: Merging requires review <<<
 19. Add readme
 20. Change basic CLI reporter

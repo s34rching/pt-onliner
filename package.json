@@ -1,9 +1,8 @@
 {
-  "name": "pt-in-col",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "lint-staged": "npx lint-staged"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ilesak/pt-in-col.git"
@@ -13,13 +12,20 @@
   "bugs": {
     "url": "https://github.com/ilesak/pt-in-col/issues"
   },
+  "lint-staged": {
+    "*.js": "eslint --fix",
+    "*.json": "eslint --fix"
+  },
+  "pre-commit": "lint-staged",
   "homepage": "https://github.com/ilesak/pt-in-col#readme",
   "devDependencies": {
+    "babel-eslint": "^10.0.3",
     "chance": "^1.1.0",
     "eslint": "^6.4.0",
-    "jasmine-jquery": "^2.1.1",
     "lodash": "^4.17.15",
     "moment": "^2.24.0",
+    "eslint-plugin-json": "^2.0.1",
+    "pre-commit": "^1.2.2",
     "protractor": "^5.4.2"
   }
 }
