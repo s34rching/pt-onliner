@@ -7,9 +7,9 @@
 7. Iterate tests using for / forEach
 8. Mocha for fixtures testing
 9. Git: work in collaboration <<<
-10. Git: Pull requests <<<
-11. Git: Conflicts <<<
-12. Git: revert <<<
++ DONE 10. Git: Pull requests <<<
++ DONE 11. Git: Conflicts <<<
++ DONE 12. Git: revert <<<
 + DONE 13. Lodash
 + DONE 14. Moment.js
 15. Git: Pull request template <<<
