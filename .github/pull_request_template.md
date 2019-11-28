@@ -1,4 +1,4 @@
-## [<JIRA_ID>](https://atlassian.net/browse/<JIRA_ID>)
+## [<TASK_ID>](https://domain/browse/<TASK_ID>)
 
 
 ## Description
