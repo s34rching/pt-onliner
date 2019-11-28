@@ -1,4 +1,4 @@
-## [<JIRA_ID>](https://freshly.atlassian.net/browse/<JIRA_ID>)
+## [<JIRA_ID>](https://atlassian.net/browse/<JIRA_ID>)
 
 
 ## Description
