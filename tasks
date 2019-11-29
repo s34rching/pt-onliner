@@ -1,19 +1,22 @@
-1. 100 tests: Ira - 95, Ivan - 5.
-2. ESLint
+1. 25 stable tests to different features
++ DONE 2. ESLint
 3. Gitlab CI
-4. Allure Reporter
++ DONE 4. Allure Reporter
 5. Screenshots on test failure
-6. Fixtures
++ DONE 6. Fixtures
 7. Iterate tests using for / forEach
 8. Mocha for fixtures testing
 9. Git: work in collaboration <<<
-10. Git: Pull requests <<<
-11. Git: Conflicts <<<
-12. Git: revert <<<
-13. Lodash
-14. Moment.js
-15. Git: Pull request template <<<
-16. Git: Milestones
-17. Git: Labels <<<
-18. Git: Merging requires review <<<
++ DONE 10. Git: Pull requests <<<
++ DONE 11. Git: Conflicts <<<
++ DONE 12. Git: revert <<<
++ DONE 13. Lodash
++ DONE 14. Moment.js
++ DONE 15. Git: Pull request template <<<
++ DONE 16. Git: Milestones
++ DONE 17. Git: Labels <<<
++ DONE 18. Git: Merging requires review <<<
 19. Add readme
++ DONE 20. Change basic CLI reporter
+>>> Next PR review 21. Change CommonJS export to ES6
+>>> Next PR review 22. Change to async / await
