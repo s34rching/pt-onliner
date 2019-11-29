@@ -8,6 +8,12 @@ exports.config = {
 	jasmineNodeOpts: {
 		print: function() {}
 	},
+	capabilities: {
+		browserName: "chrome",
+		"goog:chromeOptions": {
+			w3c: false
+		}
+	},
 
 	onPrepare: () => {
 		browser.driver.manage().window().maximize()
