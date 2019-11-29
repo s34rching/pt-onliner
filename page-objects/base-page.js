@@ -12,14 +12,14 @@ class BasePage {
 		this.searchBar.clear()
 	}
 
+	hitEnter() {
+		browser.actions().sendKeys(protractor.Key.ENTER).perform()
+	}
+
 	performSearch(query) {
 		this.clearSearchBar()
 		this.searchBar.sendKeys(query)
 		this.hitEnter()
-	}
-
-	hitEnter() {
-		browser.actions().sendKeys(protractor.Key.ENTER).perform()
 	}
 
 	// Expected Conditions

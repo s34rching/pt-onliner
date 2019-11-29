@@ -7,9 +7,10 @@ describe("Onliner.by Products Search", () => {
 		browser.waitForAngularEnabled(false)
 	})
 
-	xit("should search product by its full product name", () => {
+	it("should search product by its full product name", () => {
 		HomePage.goTo("/")
 		HomePage.performSearch("Samsung")
+		browser.sleep(5000)
 	})
 
 	xit("should search products by category name", () => {
@@ -24,7 +25,7 @@ describe("Onliner.by Products Search", () => {
 
 	})
 
-	it("should find product while navigating through the pages", () => {
+	xit("should find product while navigating through the pages", () => {
 		HomePage.goTo("/")
 		HomePage.openCatalog()
 		Catalog.chooseClassifierItem(1)
