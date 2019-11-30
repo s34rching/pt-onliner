@@ -13,6 +13,8 @@ exports.config = {
 		"goog:chromeOptions": {
 			w3c: false
 		}
+		// browserName: "firefox",
+		// browserName: "internet explorer" // webdriver-manager update --ie
 	},
 
 	onPrepare: () => {
