@@ -1,4 +1,5 @@
 let SpecReporter = require("jasmine-spec-reporter").SpecReporter
+let Jasmine2HtmlReporter = require("protractor-jasmine2-html-reporter")
 
 exports.config = {
 	baseUrl: "https://catalog.onliner.by",
@@ -28,6 +29,15 @@ exports.config = {
 					displaySpecDuration: true
 				}
 		}))
+		jasmine.getEnv().addReporter(new Jasmine2HtmlReporter({
+			filename: "Report_",
+			fileNameDateSuffix: true,
+			savePath: "./reports",
+			screenshotsFolder: "screenshots",
+			takeScreenshots: true,
+			takeScreenshotsOnlyOnFailures: true
+		})
+		)
 	}
 }
 
