@@ -20,7 +20,7 @@ describe("Onliner.by - Catalog / Navigation", () => {
 
 	describe("When user uses pages navigation through the 'Catalog'", () => {
 
-		xit("then they should be able to open subcategory product details page", () => {
+		it("then they should be able to open subcategory product details page", () => {
 
 			HomePage.goTo("/")
 			HomePage.openCatalog()
@@ -33,12 +33,12 @@ describe("Onliner.by - Catalog / Navigation", () => {
 			expect(element(by.css("#specs")).isDisplayed()).toBe(true)
 		})
 
-		xit("then they should be able to open subcategory pages following bar links", () => {
+		it("then they should be able to open subcategory pages following bar links", () => {
 
 			HomePage.goTo("/")
 			HomePage.openCatalog()
 			Catalog.followRandomCatalogBarLink()
-			expect(element(by.css("#schema-filter")).isDisplayed()).toBe(true)
+			browser.wait(protractor.ExpectedConditions.visibilityOf(element(by.css("#schema-filter"))))
 			expect(element.all(by.css(".schema-product__group")).first().isDisplayed()).toBe(true)
 		})
 
