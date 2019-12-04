@@ -23,27 +23,23 @@ describe("Onliner.by - Catalog / Navigation", () => {
 		it("then they should be able to open subcategory product details page", () => {
 
 			HomePage.goTo("/")
-				.then(() => { HomePage.openCatalog() })
-				.then(() => { Catalog.chooseClassifierItem(randomClassifierItem.id) })
-				.then(() => { Catalog.hoverCategoryItem(randomCategoryItem.ruName) })
-				.then(() => { Catalog.openSubcategory(randomSubcategoryItem) })
-				.then(() => { Catalog.openCategoryFirstProductDetailsPage() })
-				.then(() => {
-					browser.wait(protractor.ExpectedConditions.visibilityOf(element(by.css(".product"))))
-					expect(element(by.css("#product-sub-navigation-container")).isDisplayed()).toBe(true)
-					expect(element(by.css("#specs")).isDisplayed()).toBe(true)
-				})
+			HomePage.openCatalog()
+			Catalog.chooseClassifierItem(randomClassifierItem.id)
+			Catalog.hoverCategoryItem(randomCategoryItem.ruName)
+			Catalog.openSubcategory(randomSubcategoryItem)
+			Catalog.openCategoryFirstProductDetailsPage()
+			browser.wait(protractor.ExpectedConditions.visibilityOf(element(by.css(".product"))))
+			expect(element(by.css("#product-sub-navigation-container")).isDisplayed()).toBe(true)
+			expect(element(by.css("#specs")).isDisplayed()).toBe(true)
 		})
 
 		it("then they should be able to open subcategory pages following bar links", () => {
 
 			HomePage.goTo("/")
-				.then(() => { HomePage.openCatalog() })
-				.then(() => { Catalog.followRandomCatalogBarLink() })
-				.then(() => {
-					expect(element.all(by.css(".schema-product__group")).first().isDisplayed()).toBe(true)
-					expect(element(by.css("#schema-filter")).isDisplayed()).toBe(true)
-				})
+			HomePage.openCatalog()
+			Catalog.followRandomCatalogBarLink()
+			expect(element.all(by.css(".schema-product__group")).first().isDisplayed()).toBe(true)
+			expect(element(by.css("#schema-filter")).isDisplayed()).toBe(true)
 		})
 
 		it("then they should be able to open subcategory pages following main tile links", () => {
@@ -51,13 +47,11 @@ describe("Onliner.by - Catalog / Navigation", () => {
 			const randomMainTile = entities.getRandomCatalogMainTile()
 
 			HomePage.goTo("/")
-				.then(() => { HomePage.openCatalog() })
-				.then(() => { Catalog.followTilesLinks(randomMainTile.ruName) })
-				.then(() => {
-					expect(element.all(by.css(".schema-product__group")).first().isDisplayed()).toBe(true)
-					expect(element(by.css("#schema-filter")).isDisplayed()).toBe(true)
-					expect(browser.getCurrentUrl()).toContain(randomMainTile.path)
-				})
+			HomePage.openCatalog()
+			Catalog.followTilesLinks(randomMainTile.ruName)
+			expect(element.all(by.css(".schema-product__group")).first().isDisplayed()).toBe(true)
+			expect(element(by.css("#schema-filter")).isDisplayed()).toBe(true)
+			expect(browser.getCurrentUrl()).toContain(randomMainTile.path)
 		})
 
 		it("then they should be able to open subcategory pages following section tile links", () => {
@@ -65,14 +59,12 @@ describe("Onliner.by - Catalog / Navigation", () => {
 			const randomSectionTile = entities.getRandomSectionTile(randomClassifierItem)
 
 			HomePage.goTo("/")
-				.then(() => { HomePage.openCatalog() })
-				.then(() => { Catalog.chooseClassifierItem(randomClassifierItem.id) })
-				.then(() => { Catalog.followTilesLinks(randomSectionTile.ruName) })
-				.then(() => {
-					expect(element.all(by.css(".schema-product__group")).first().isDisplayed()).toBe(true)
-					expect(element(by.css("#schema-filter")).isDisplayed()).toBe(true)
-					expect(browser.getCurrentUrl()).toContain(randomSectionTile.path)
-				})
+			HomePage.openCatalog()
+			Catalog.chooseClassifierItem(randomClassifierItem.id)
+			Catalog.followTilesLinks(randomSectionTile.ruName)
+			expect(element.all(by.css(".schema-product__group")).first().isDisplayed()).toBe(true)
+			expect(element(by.css("#schema-filter")).isDisplayed()).toBe(true)
+			expect(browser.getCurrentUrl()).toContain(randomSectionTile.path)
 		})
 
 		it("then they should be able to navigate through Catalog again while they are on Categories page", () => {
@@ -82,19 +74,17 @@ describe("Onliner.by - Catalog / Navigation", () => {
 			const secondRandomSubcategoryItem = entities.getRandomUniqueSubcategory(secondRandomCategoryItem)
 
 			HomePage.goTo("/")
-				.then(() => { HomePage.openCatalog() })
-				.then(() => { Catalog.chooseClassifierItem(randomClassifierItem.id) })
-				.then(() => { Catalog.hoverCategoryItem(randomCategoryItem.ruName) })
-				.then(() => { Catalog.openSubcategory(randomSubcategoryItem) })
-				.then(() => { Catalog.chooseClassifierItem(secondRandomClassifierItem.id) })
-				.then(() => { Catalog.hoverCategoryItem(secondRandomCategoryItem.ruName) })
-				.then(() => { Catalog.openSubcategory(secondRandomSubcategoryItem) })
-				.then(() => { Catalog.openCategoryFirstProductDetailsPage() })
-				.then(() => {
-					browser.wait(protractor.ExpectedConditions.visibilityOf(element(by.css(".product"))))
-					expect(element(by.css("#product-sub-navigation-container")).isDisplayed()).toBe(true)
-					expect(element(by.css("#specs")).isDisplayed()).toBe(true)
-				})
+			HomePage.openCatalog()
+			Catalog.chooseClassifierItem(randomClassifierItem.id)
+			Catalog.hoverCategoryItem(randomCategoryItem.ruName)
+			Catalog.openSubcategory(randomSubcategoryItem)
+			Catalog.chooseClassifierItem(secondRandomClassifierItem.id)
+			Catalog.hoverCategoryItem(secondRandomCategoryItem.ruName)
+			Catalog.openSubcategory(secondRandomSubcategoryItem)
+			Catalog.openCategoryFirstProductDetailsPage()
+			browser.wait(protractor.ExpectedConditions.visibilityOf(element(by.css(".product"))))
+			expect(element(by.css("#product-sub-navigation-container")).isDisplayed()).toBe(true)
+			expect(element(by.css("#specs")).isDisplayed()).toBe(true)
 		})
 	})
 })
