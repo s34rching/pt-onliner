@@ -5,7 +5,7 @@
 5. Screenshots on test failure
 + DONE 6. Fixtures
 7. Iterate tests using for / forEach
-8. Mocha for fixtures testing
+- OUT OF SCOPE 8. Mocha for fixtures testing
 9. Git: work in collaboration <<<
 + DONE 10. Git: Pull requests <<<
 + DONE 11. Git: Conflicts <<<
