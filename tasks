@@ -20,3 +20,6 @@
 + DONE 20. Change basic CLI reporter
 >>> Next PR review 21. Change CommonJS export to ES6
 >>> Next PR review 22. Change to async / await
+23. Suites
+24. HTML reporter
+25. Update specs according to Protractor control flow
