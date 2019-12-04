@@ -1,34 +1,34 @@
 module.exports = {
 	mainTiles: [
 		{
-			ruName: "Зимние шины",
+			ruName: "Время делать подарки!",
+			path: "/2019/12/02/rozygrysh-5?utm_source=main_tile&utm_medium=rozygrysh5&_ga=2.126731274.686889813.1575486217-1776173241.1573712126",
+			isUnique: false
+		},
+		{
+			ruName: "Термосы, термокружки",
+			path: "/thermosbottle?utm_source=main_tile&utm_medium=thermosbottle",
+			isUnique: true
+		},
+		{
+			ruName: "Роботы-пылесосы",
+			path: "/robotcleaner?utm_source=main_tile&utm_medium=robotcleaner",
+			isUnique: true
+		},
+		{
+			ruName: "Зимние шины в Каталоге!",
 			path: "/tires?season_tires%5B0%5D=winter&season_tires%5Boperation%5D=union&utm_source=main_tile&utm_medium=tires",
 			isUnique: true
 		},
 		{
-			ruName: "Картриджи и чернила для принтеров",
-			path: "/cartridges?utm_source=main_tile&utm_medium=cartridges",
-			isUnique: true
-		},
-		{
-			ruName: "Неубиваемые смартфоны",
-			path: "/mobile?mp_ruggedcase=1&utm_source=main_tile&utm_medium=mobile2",
-			isUnique: true
-		},
-		{
-			ruName: "Фены",
-			path: "/hairdryer?utm_source=main_tile&utm_medium=hairdryer",
+			ruName: "Смартфон за честный отзыв!",
+			path: "/2019/12/02/rozygrysh-4?utm_source=main_tile&utm_medium=rozygrysh4&_ga=2.127913738.686889813.1575486217-1776173241.1573712126",
 			isUnique: false
 		},
 		{
-			ruName: "Кабели, переходники",
-			path: "/cable?utm_source=main_tile&utm_medium=cable",
-			isUnique: true
-		},
-		{
-			ruName: "Кофеварки и кофемашины",
-			path: "/coffee?utm_source=main_tile&utm_medium=coffee",
-			isUnique: true
+			ruName: "Купляйце тэлевiзары Samsung",
+			path: "/article/131295-poleznye-stati/606699-qled-2019-realnyy-mir-v-razreshenii-8k",
+			isUnique: false
 		}
 	],
 	sections: {
