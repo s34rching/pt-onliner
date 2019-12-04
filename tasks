@@ -1,7 +1,7 @@
 1. 25 stable tests to different features
 + DONE 2. ESLint
-3. Gitlab CI
-+ DONE 4. Allure Reporter
+- OUT OF SCOPE 3. Gitlab CI
+- WRONG DEFINITION 4. Allure Reporter
 5. Screenshots on test failure
 + DONE 6. Fixtures
 7. Iterate tests using for / forEach
