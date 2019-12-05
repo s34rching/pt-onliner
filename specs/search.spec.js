@@ -1,5 +1,4 @@
 const HomePage = require("../page-objects/homepage")
-const Catalog = require("../page-objects/catalog")
 
 describe("Onliner.by Products Search", () => {
 
@@ -25,9 +24,15 @@ describe("Onliner.by Products Search", () => {
 
 	})
 
-	xit("should find product while navigating through the pages", () => {
-		HomePage.goTo("/")
-		HomePage.openCatalog()
-		Catalog.chooseClassifierItem(1)
+	xit("should show 'out of stock' product", () => {
+
+	})
+
+	xit("should allow to open product details page", () => {
+
+	})
+
+	xit("should show initial search query in search bar", () => {
+
 	})
 })
