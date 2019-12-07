@@ -31,7 +31,7 @@ module.exports = {
 			{
 				query: "Apple iPad Air 2019 64GB MUUJ2 (серый космос)",
 				catalogTitle: "Планшет Apple iPad Air 2019 64GB MUUJ2 (серый космос)",
-				relativeUrl: "/ssd/samsung/mz76e250bw",
+				relativeUrl: "/tabletpc/apple/muuj2",
 				status: "active",
 				label: null,
 				price: 1250,
@@ -40,7 +40,7 @@ module.exports = {
 			{
 				query: "SSD Samsung 860 Evo 250GB MZ-76E250",
 				catalogTitle: "SSD Samsung 860 Evo 250GB MZ-76E250",
-				relativeUrl: "/tabletpc/apple/muuj2",
+				relativeUrl: "/ssd/samsung/mz76e250bw",
 				status: "active",
 				label: null,
 				price: 105,

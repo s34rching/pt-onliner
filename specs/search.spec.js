@@ -1,6 +1,10 @@
 const HomePage = require("../page-objects/homepage")
+const Catalog = require("../page-objects/catalog")
 const SearchIframe = require("../page-objects/search-iframe")
-const { getProduct } = require("../helpers/get-entities")
+const ProductDetailsPage = require("../page-objects/product-details-page")
+const { getProduct, getRandomUniqueSubcategory, getRandomUniqueCategory, getRandomClassifierItem } = require("../helpers/get-entities")
+const chai = require("chai")
+const assert = chai.assert
 
 describe("Onliner.by Products Search", () => {
 
@@ -11,25 +15,33 @@ describe("Onliner.by Products Search", () => {
 	})
 
 	activeProducts.forEach(activeProduct => {
-		it("should search product by its full catalog name", () => {
+		it(`should search "${activeProduct.catalogTitle}" by its full name`, () => {
 
 			HomePage.goTo("/")
 			HomePage.performSearch(activeProduct.query)
 			SearchIframe.switchToSearchIframe()
 			SearchIframe.waitForProductAreLoadedOnModal()
 			expect(SearchIframe.resultItemProduct(activeProduct.query).isDisplayed()).toBe(true)
+			SearchIframe.productPrice(activeProduct.query).getText().then(text => {
+				assert.closeTo(activeProduct.price, parseInt(text.match(/\d+/)[0]), activeProduct.accuracy)
+			})
 		})
 	})
 
-	it("should search products by category name", () => {
+	it("should search products by subcategory name", () => {
 
-		const categoryName = "Мобильные телефоны"
+		const randomClassifierItem = getRandomClassifierItem()
+		const randomCategory = getRandomUniqueCategory(randomClassifierItem)
+		const randomSubcategory = getRandomUniqueSubcategory(randomCategory)
 
 		HomePage.goTo("/")
-		HomePage.performSearch(categoryName)
+		HomePage.performSearch(randomSubcategory.ruName)
 		SearchIframe.switchToSearchIframe()
 		SearchIframe.waitForProductAreLoadedOnModal()
-		expect(SearchIframe.resultItemCategory(categoryName).isDisplayed()).toBe(true)
+		expect(SearchIframe.resultItemSubcategory(randomSubcategory.ruName).isDisplayed()).toBe(true)
+		SearchIframe.openSubcategoryPage(randomSubcategory.ruName)
+		expect(browser.getCurrentUrl()).toContain(randomSubcategory.path)
+		expect(Catalog.categoryFirstProduct.isDisplayed()).toBe(true)
 	})
 
 	it("should allow to abort search", () => {
@@ -53,7 +65,8 @@ describe("Onliner.by Products Search", () => {
 		HomePage.performSearch(nonExistentProductTitle)
 		SearchIframe.switchToSearchIframe()
 		expect(SearchIframe.firstResultItemProduct.isPresent()).toBe(false)
-		//expect(element(by.css(".search__suggest-addon")).getText()).toBe("Ничего не найдено")
+		SearchIframe.waitForSearchSuggestionIsVisible()
+		expect(SearchIframe.searchBarSuggestion.getText()).toBe("Ничего не найдено")
 	})
 
 	it("should show 'out of stock' product", () => {
@@ -91,7 +104,14 @@ describe("Onliner.by Products Search", () => {
 		expect(SearchIframe.resultItemProduct(product.query).isDisplayed()).toBe(true)
 		SearchIframe.openProductDetailsPageByTitle(product.query)
 		SearchIframe.switchToDefaultFrame()
+		if (product.status === "active") {
+			ProductDetailsPage.waitForFirstShopOfferVisible()
+			ProductDetailsPage.firstOfferPrice.getText().then(text => {
+				assert.closeTo(product.price, parseInt(text.match(/\d+/)[0]), product.accuracy)
+			})
+		}
 		expect(browser.getCurrentUrl()).toContain(product.relativeUrl)
-		expect(element(by.cssContainingText("h1.catalog-masthead__title", product.catalogTitle)).isDisplayed()).toBe(true)
+		expect(element(by.cssContainingText("h1.catalog-masthead__title", product.catalogTitle))
+			.isDisplayed()).toBe(true)
 	})
 })

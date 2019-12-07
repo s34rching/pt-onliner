@@ -6,11 +6,12 @@ class SearchIframe extends BasePage {
 		this.fastSearchModal = element(by.id("fast-search-modal"))
 		this.searchIframe = element(by.css(".modal-iframe"))
 		this.productTitle = function(productTitle) {
-			return element(by.cssContainingText(".product__title-link", productTitle))
+			return element.all(by.cssContainingText(".product__title-link", productTitle)).first()
 		}
 		this.firstResultItemProduct = element.all(by.css(".result__item_product")).first()
 		this.resultItemProduct = function(productTitle) {
 			return this.productTitle(productTitle)
+				// TODO: THIS
 				.element(by.xpath(".."))
 				.element(by.xpath(".."))
 				.element(by.xpath(".."))
@@ -18,10 +19,11 @@ class SearchIframe extends BasePage {
 		this.productPrice = function(productTitle) {
 			return this.resultItemProduct(productTitle).element(by.css(".product__price"))
 		}
-		this.resultItemCategory = function(categoryTitle) {
-			return element(by.cssContainingText(".category__title", categoryTitle))
+		this.resultItemSubcategory = function(subcategoryTitle) {
+			return element(by.cssContainingText(".category__title", subcategoryTitle))
 		}
 		this.closeSearchBarButton = element(by.css(".search__close"))
+		this.searchBarSuggestion = element(by.css(".search__suggest-addon"))
 	}
 
 	switchToSearchIframe() {
@@ -43,6 +45,15 @@ class SearchIframe extends BasePage {
 
 	openProductDetailsPageByTitle(productTitle) {
 		return this.productTitle(productTitle).click()
+	}
+
+	openSubcategoryPage(subcategoryTitle) {
+		browser.wait(this.isClickable(this.resultItemSubcategory(subcategoryTitle)))
+		return this.resultItemSubcategory(subcategoryTitle).click()
+	}
+
+	waitForSearchSuggestionIsVisible() {
+		browser.wait(this.isVisible(this.searchBarSuggestion))
 	}
 }
 
