@@ -4,7 +4,7 @@ class BasePage {
 	}
 
 	goTo(path) {
-		return browser.get(browser.baseUrl.concat(path))
+		browser.get(browser.baseUrl.concat(path))
 	}
 
 	clearSearchBar() {
