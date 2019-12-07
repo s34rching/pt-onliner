@@ -1,6 +1,9 @@
 const HomePage = require("../page-objects/homepage")
 const SearchIframe = require("../page-objects/search-iframe")
+const ProductDetailsPage = require("../page-objects/product-details-page")
 const { getProduct } = require("../helpers/get-entities")
+const chai = require("chai")
+const assert = chai.assert
 
 describe("Onliner.by Products Search", () => {
 
@@ -11,13 +14,16 @@ describe("Onliner.by Products Search", () => {
 	})
 
 	activeProducts.forEach(activeProduct => {
-		it("should search product by its full catalog name", () => {
+		it(`should search "${activeProduct.catalogTitle}" by its full name`, () => {
 
 			HomePage.goTo("/")
 			HomePage.performSearch(activeProduct.query)
 			SearchIframe.switchToSearchIframe()
 			SearchIframe.waitForProductAreLoadedOnModal()
 			expect(SearchIframe.resultItemProduct(activeProduct.query).isDisplayed()).toBe(true)
+			SearchIframe.productPrice(activeProduct.query).getText().then(text => {
+				assert.closeTo(activeProduct.price, parseInt(text.match(/\d+/)[0]), activeProduct.accuracy)
+			})
 		})
 	})
 
@@ -91,7 +97,14 @@ describe("Onliner.by Products Search", () => {
 		expect(SearchIframe.resultItemProduct(product.query).isDisplayed()).toBe(true)
 		SearchIframe.openProductDetailsPageByTitle(product.query)
 		SearchIframe.switchToDefaultFrame()
+		if (product.status === "active") {
+			ProductDetailsPage.waitForFirstShopOfferVisible()
+			ProductDetailsPage.firstOfferPrice.getText().then(text => {
+				assert.closeTo(product.price, parseInt(text.match(/\d+/)[0]), product.accuracy)
+			})
+		}
 		expect(browser.getCurrentUrl()).toContain(product.relativeUrl)
-		expect(element(by.cssContainingText("h1.catalog-masthead__title", product.catalogTitle)).isDisplayed()).toBe(true)
+		expect(element(by.cssContainingText("h1.catalog-masthead__title", product.catalogTitle))
+			.isDisplayed()).toBe(true)
 	})
 })

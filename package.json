@@ -23,6 +23,7 @@
   "homepage": "https://github.com/ilesak/pt-in-col#readme",
   "devDependencies": {
     "babel-eslint": "^10.0.3",
+    "chai": "^4.2.0",
     "chance": "^1.1.0",
     "eslint": "^6.4.0",
     "eslint-plugin-json": "^2.0.1",
