@@ -65,7 +65,8 @@ describe("Onliner.by Products Search", () => {
 		HomePage.performSearch(nonExistentProductTitle)
 		SearchIframe.switchToSearchIframe()
 		expect(SearchIframe.firstResultItemProduct.isPresent()).toBe(false)
-		//expect(element(by.css(".search__suggest-addon")).getText()).toBe("Ничего не найдено")
+		SearchIframe.waitForSearchSuggestionIsVisible()
+		expect(SearchIframe.searchBarSuggestion.getText()).toBe("Ничего не найдено")
 	})
 
 	it("should show 'out of stock' product", () => {

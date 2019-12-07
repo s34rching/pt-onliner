@@ -23,6 +23,7 @@ class SearchIframe extends BasePage {
 			return element(by.cssContainingText(".category__title", subcategoryTitle))
 		}
 		this.closeSearchBarButton = element(by.css(".search__close"))
+		this.searchBarSuggestion = element(by.css(".search__suggest-addon"))
 	}
 
 	switchToSearchIframe() {
@@ -49,6 +50,10 @@ class SearchIframe extends BasePage {
 	openSubcategoryPage(subcategoryTitle) {
 		browser.wait(this.isClickable(this.resultItemSubcategory(subcategoryTitle)))
 		return this.resultItemSubcategory(subcategoryTitle).click()
+	}
+
+	waitForSearchSuggestionIsVisible() {
+		browser.wait(this.isVisible(this.searchBarSuggestion))
 	}
 }
 
