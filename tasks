@@ -1,11 +1,11 @@
 1. 25 stable tests to different features
 + DONE 2. ESLint
-3. Gitlab CI
-+ DONE 4. Allure Reporter
-5. Screenshots on test failure
+- OUT OF SCOPE 3. Gitlab CI
+- WRONG DEFINITION 4. Allure Reporter
++ DONE 5. Screenshots on test failure
 + DONE 6. Fixtures
-7. Iterate tests using for / forEach
-8. Mocha for fixtures testing
++ DONE 7. Iterate tests using for / forEach
+- OUT OF SCOPE 8. Mocha for fixtures testing
 9. Git: work in collaboration <<<
 + DONE 10. Git: Pull requests <<<
 + DONE 11. Git: Conflicts <<<
@@ -20,3 +20,7 @@
 + DONE 20. Change basic CLI reporter
 >>> Next PR review 21. Change CommonJS export to ES6
 >>> Next PR review 22. Change to async / await
+23. Suites
++ DONE 24. HTML reporter
+25. Update specs according to Protractor control flow
+
