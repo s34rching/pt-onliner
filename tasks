@@ -2,7 +2,7 @@
 + DONE 2. ESLint
 - OUT OF SCOPE 3. Gitlab CI
 - WRONG DEFINITION 4. Allure Reporter
-5. Screenshots on test failure
++ DONE 5. Screenshots on test failure
 + DONE 6. Fixtures
 + DONE 7. Iterate tests using for / forEach
 - OUT OF SCOPE 8. Mocha for fixtures testing
@@ -21,5 +21,5 @@
 >>> Next PR review 21. Change CommonJS export to ES6
 >>> Next PR review 22. Change to async / await
 23. Suites
-24. HTML reporter
++ DONE 24. HTML reporter
 25. Update specs according to Protractor control flow
