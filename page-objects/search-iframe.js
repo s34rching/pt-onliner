@@ -11,6 +11,7 @@ class SearchIframe extends BasePage {
 		this.firstResultItemProduct = element.all(by.css(".result__item_product")).first()
 		this.resultItemProduct = function(productTitle) {
 			return this.productTitle(productTitle)
+				// TODO: THIS
 				.element(by.xpath(".."))
 				.element(by.xpath(".."))
 				.element(by.xpath(".."))
@@ -18,8 +19,8 @@ class SearchIframe extends BasePage {
 		this.productPrice = function(productTitle) {
 			return this.resultItemProduct(productTitle).element(by.css(".product__price"))
 		}
-		this.resultItemCategory = function(categoryTitle) {
-			return element(by.cssContainingText(".category__title", categoryTitle))
+		this.resultItemSubcategory = function(subcategoryTitle) {
+			return element(by.cssContainingText(".category__title", subcategoryTitle))
 		}
 		this.closeSearchBarButton = element(by.css(".search__close"))
 	}
@@ -43,6 +44,11 @@ class SearchIframe extends BasePage {
 
 	openProductDetailsPageByTitle(productTitle) {
 		return this.productTitle(productTitle).click()
+	}
+
+	openSubcategoryPage(subcategoryTitle) {
+		browser.wait(this.isClickable(this.resultItemSubcategory(subcategoryTitle)))
+		return this.resultItemSubcategory(subcategoryTitle).click()
 	}
 }
 

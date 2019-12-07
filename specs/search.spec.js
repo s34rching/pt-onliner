@@ -1,7 +1,8 @@
 const HomePage = require("../page-objects/homepage")
+const Catalog = require("../page-objects/catalog")
 const SearchIframe = require("../page-objects/search-iframe")
 const ProductDetailsPage = require("../page-objects/product-details-page")
-const { getProduct } = require("../helpers/get-entities")
+const { getProduct, getRandomUniqueSubcategory, getRandomUniqueCategory, getRandomClassifierItem } = require("../helpers/get-entities")
 const chai = require("chai")
 const assert = chai.assert
 
@@ -27,15 +28,20 @@ describe("Onliner.by Products Search", () => {
 		})
 	})
 
-	it("should search products by category name", () => {
+	it("should search products by subcategory name", () => {
 
-		const categoryName = "Мобильные телефоны"
+		const randomClassifierItem = getRandomClassifierItem()
+		const randomCategory = getRandomUniqueCategory(randomClassifierItem)
+		const randomSubcategory = getRandomUniqueSubcategory(randomCategory)
 
 		HomePage.goTo("/")
-		HomePage.performSearch(categoryName)
+		HomePage.performSearch(randomSubcategory.ruName)
 		SearchIframe.switchToSearchIframe()
 		SearchIframe.waitForProductAreLoadedOnModal()
-		expect(SearchIframe.resultItemCategory(categoryName).isDisplayed()).toBe(true)
+		expect(SearchIframe.resultItemSubcategory(randomSubcategory.ruName).isDisplayed()).toBe(true)
+		SearchIframe.openSubcategoryPage(randomSubcategory.ruName)
+		expect(browser.getCurrentUrl()).toContain(randomSubcategory.path)
+		expect(Catalog.categoryFirstProduct.isDisplayed()).toBe(true)
 	})
 
 	it("should allow to abort search", () => {
