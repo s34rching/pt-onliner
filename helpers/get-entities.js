@@ -15,6 +15,9 @@ module.exports.getProduct = function (status, amount = 1) {
 	case "off-sale":
 		productsPull = products.offSale
 		break
+	default:
+		productsPull = _.flatten(_.values(products))
+		break
 	}
 
 	if (amount === 1) {
