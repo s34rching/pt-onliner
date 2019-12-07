@@ -2,7 +2,7 @@
   "version": "1.0.0",
   "scripts": {
     "lint-staged": "npx lint-staged",
-    "smoke": "protractor conf.js --suite full",
+    "full": "protractor conf.js --suite full",
     "search": "protractor conf.js --suite search",
     "navigation": "protractor conf.js --suite navigation"
   },
