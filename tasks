@@ -4,7 +4,7 @@
 - WRONG DEFINITION 4. Allure Reporter
 5. Screenshots on test failure
 + DONE 6. Fixtures
-7. Iterate tests using for / forEach
++ DONE 7. Iterate tests using for / forEach
 - OUT OF SCOPE 8. Mocha for fixtures testing
 9. Git: work in collaboration <<<
 + DONE 10. Git: Pull requests <<<
