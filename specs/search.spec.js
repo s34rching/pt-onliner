@@ -6,7 +6,7 @@ const { getProduct, getRandomUniqueSubcategory, getRandomUniqueCategory, getRand
 const chai = require("chai")
 const assert = chai.assert
 
-describe("Onliner.by Products Search", () => {
+describe("Onliner.by - Products / Search", () => {
 
 	const activeProducts = getProduct("active", 5)
 
