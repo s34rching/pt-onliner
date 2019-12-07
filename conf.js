@@ -9,6 +9,11 @@ exports.config = {
 	jasmineNodeOpts: {
 		print: function() {}
 	},
+	suites: {
+		full: "specs/*.js",
+		search: "specs/search.spec.js",
+		navigation: "catalog-navigation.spec."
+	},
 	capabilities: {
 		browserName: "chrome",
 		"goog:chromeOptions": {

@@ -58,14 +58,26 @@ describe("Onliner.by Products Search", () => {
 
 	it("should show 'out of stock' product", () => {
 
-		const outOfStockProductTitle = getProduct("out-of-stock")
+		const outOfStockProduct = getProduct("out-of-stock")
 
 		HomePage.goTo("/")
-		HomePage.performSearch(outOfStockProductTitle.query)
+		HomePage.performSearch(outOfStockProduct.query)
 		SearchIframe.switchToSearchIframe()
 		SearchIframe.waitForProductAreLoadedOnModal()
-		expect(SearchIframe.resultItemProduct(outOfStockProductTitle.query).isDisplayed()).toBe(true)
-		expect(SearchIframe.productPrice(outOfStockProductTitle.query).getText()).toBe("Нет в наличии")
+		expect(SearchIframe.resultItemProduct(outOfStockProduct.query).isDisplayed()).toBe(true)
+		expect(SearchIframe.productPrice(outOfStockProduct.query).getText()).toBe(outOfStockProduct.label)
+	})
+
+	it("should show 'off sale' product", () => {
+
+		const offSaleProduct = getProduct("off-sale")
+
+		HomePage.goTo("/")
+		HomePage.performSearch(offSaleProduct.query)
+		SearchIframe.switchToSearchIframe()
+		SearchIframe.waitForProductAreLoadedOnModal()
+		expect(SearchIframe.resultItemProduct(offSaleProduct.query).isDisplayed()).toBe(true)
+		expect(SearchIframe.productPrice(offSaleProduct.query).getText()).toBe(offSaleProduct.label)
 	})
 
 	it("should allow to open product details page", () => {
