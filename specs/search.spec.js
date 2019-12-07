@@ -1,21 +1,24 @@
 const HomePage = require("../page-objects/homepage")
 const SearchIframe = require("../page-objects/search-iframe")
+const { getProduct } = require("../helpers/get-entities")
 
 describe("Onliner.by Products Search", () => {
+
+	const activeProducts = getProduct("active", 5)
 
 	beforeEach(() => {
 		browser.waitForAngularEnabled(false)
 	})
 
-	it("should search product by its full catalog name", () => {
+	activeProducts.forEach(activeProduct => {
+		it("should search product by its full catalog name", () => {
 
-		const productTitle = "Смартфон Apple iPhone 8 64GB (серый космос)"
-
-		HomePage.goTo("/")
-		HomePage.performSearch(productTitle)
-		SearchIframe.switchToSearchIframe()
-		SearchIframe.waitForProductAreLoadedOnModal()
-		expect(SearchIframe.resultItemProduct(productTitle).isDisplayed()).toBe(true)
+			HomePage.goTo("/")
+			HomePage.performSearch(activeProduct.query)
+			SearchIframe.switchToSearchIframe()
+			SearchIframe.waitForProductAreLoadedOnModal()
+			expect(SearchIframe.resultItemProduct(activeProduct.query).isDisplayed()).toBe(true)
+		})
 	})
 
 	it("should search products by category name", () => {
@@ -31,15 +34,15 @@ describe("Onliner.by Products Search", () => {
 
 	it("should allow to abort search", () => {
 
-		const productTitle = "Смартфон Apple iPhone 8 64GB (серый космос)"
+		const product = getProduct("active")
 
 		HomePage.goTo("/")
-		HomePage.performSearch(productTitle)
+		HomePage.performSearch(product.query)
 		SearchIframe.switchToSearchIframe()
 		SearchIframe.waitForProductAreLoadedOnModal()
-		expect(SearchIframe.resultItemProduct(productTitle).isDisplayed()).toBe(true)
+		expect(SearchIframe.resultItemProduct(product.query).isDisplayed()).toBe(true)
 		SearchIframe.closeSearchModal()
-		SearchIframe.isNotVisible(SearchIframe.resultItemProduct(productTitle))
+		SearchIframe.isNotVisible(SearchIframe.resultItemProduct(product.query))
 	})
 
 	it("should NOT find non-existent product", () => {
@@ -55,32 +58,28 @@ describe("Onliner.by Products Search", () => {
 
 	it("should show 'out of stock' product", () => {
 
-		const outOfStockProductTitle = "Akara Samurai [ASAI-5]"
+		const outOfStockProductTitle = getProduct("out-of-stock")
 
 		HomePage.goTo("/")
-		HomePage.performSearch(outOfStockProductTitle)
+		HomePage.performSearch(outOfStockProductTitle.query)
 		SearchIframe.switchToSearchIframe()
 		SearchIframe.waitForProductAreLoadedOnModal()
-		expect(SearchIframe.resultItemProduct(outOfStockProductTitle).isDisplayed()).toBe(true)
-		expect(SearchIframe.productPrice(outOfStockProductTitle).getText()).toBe("Нет в наличии")
+		expect(SearchIframe.resultItemProduct(outOfStockProductTitle.query).isDisplayed()).toBe(true)
+		expect(SearchIframe.productPrice(outOfStockProductTitle.query).getText()).toBe("Нет в наличии")
 	})
 
 	it("should allow to open product details page", () => {
 
-		const product =
-			{
-				title: "Смартфон Apple iPhone 8 64GB (серый космос)",
-				url: "https://catalog.onliner.by/mobile/apple/iphone8"
-			}
+		const product = getProduct()
 
 		HomePage.goTo("/")
-		HomePage.performSearch(product.title)
+		HomePage.performSearch(product.query)
 		SearchIframe.switchToSearchIframe()
 		SearchIframe.waitForProductAreLoadedOnModal()
-		expect(SearchIframe.resultItemProduct(product.title).isDisplayed()).toBe(true)
-		SearchIframe.openProductDetailsPageByTitle(product.title)
+		expect(SearchIframe.resultItemProduct(product.query).isDisplayed()).toBe(true)
+		SearchIframe.openProductDetailsPageByTitle(product.query)
 		SearchIframe.switchToDefaultFrame()
-		expect(browser.getCurrentUrl()).toBe(product.url)
-		expect(element(by.cssContainingText("h1.catalog-masthead__title", product.title)).isDisplayed()).toBe(true)
+		expect(browser.getCurrentUrl()).toContain(product.relativeUrl)
+		expect(element(by.cssContainingText("h1.catalog-masthead__title", product.catalogTitle)).isDisplayed()).toBe(true)
 	})
 })
