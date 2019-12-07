@@ -1,22 +1,66 @@
 module.exports = {
 	mainTiles: [
-		{ ruName: "Зимние шины", path: "/tires?season_tires%5B0%5D=winter&season_tires%5Boperation%5D=union&utm_source=main_tile&utm_medium=tires" },
-		{ ruName: "Картриджи и чернила для принтеров", path: "/cartridges?utm_source=main_tile&utm_medium=cartridges" },
-		{ ruName: "Неубиваемые смартфоны", path: "/mobile?mp_ruggedcase=1&utm_source=main_tile&utm_medium=mobile2" },
-		{ ruName: "Фены", path: "/hairdryer?utm_source=main_tile&utm_medium=hairdryer" },
-		{ ruName: "Кабели, переходники", path: "/cable?utm_source=main_tile&utm_medium=cable" },
-		{ ruName: "Кофеварки и кофемашины", path: "/coffee?utm_source=main_tile&utm_medium=coffee" }
+		{
+			ruName: "Время делать подарки!",
+			path: "/2019/12/02/rozygrysh-5?utm_source=main_tile&utm_medium=rozygrysh5&_ga=2.126731274.686889813.1575486217-1776173241.1573712126",
+			isUnique: false
+		},
+		{
+			ruName: "Термосы, термокружки",
+			path: "/thermosbottle?utm_source=main_tile&utm_medium=thermosbottle",
+			isUnique: true
+		},
+		{
+			ruName: "Роботы-пылесосы",
+			path: "/robotcleaner?utm_source=main_tile&utm_medium=robotcleaner",
+			isUnique: true
+		},
+		{
+			ruName: "Зимние шины в Каталоге!",
+			path: "/tires?season_tires%5B0%5D=winter&season_tires%5Boperation%5D=union&utm_source=main_tile&utm_medium=tires",
+			isUnique: true
+		},
+		{
+			ruName: "Смартфон за честный отзыв!",
+			path: "/2019/12/02/rozygrysh-4?utm_source=main_tile&utm_medium=rozygrysh4&_ga=2.127913738.686889813.1575486217-1776173241.1573712126",
+			isUnique: false
+		},
+		{
+			ruName: "Купляйце тэлевiзары Samsung",
+			path: "/article/131295-poleznye-stati/606699-qled-2019-realnyy-mir-v-razreshenii-8k",
+			isUnique: false
+		}
 	],
 	sections: {
 		electronics: {
 			id: 1,
 			ruName: "Электроника",
 			tiles: [
-				{ ruName: "Домашние колонки с WiFi", path: "/wspeaker?ws_type%5B0%5D=multiroom&ws_type%5Boperation%5D=union&utm_source=el_title&utm_medium=netpl_inetradio" },
-				{ ruName: "Умные часы и браслеты", path: "/smartwatch?utm_source=el_title&utm_medium=smartwatch" },
-				{ ruName: "Умный дом", path: "/smart_home?utm_source=el_title&utm_medium=smart_home" },
-				{ ruName: "Портативные приставки", path: "/console?console_type%5B0%5D=2&console_type%5B1%5D=universal&console_type%5Boperation%5D=union&utm_source=el_title&utm_medium=console" },
-				{ ruName: "Телевизоры с AirPlay", path: "/tv?airplay=1&utm_source=el_title&utm_medium=tv" }
+				{
+					ruName: "Домашние колонки с WiFi",
+					path: "/wspeaker?ws_type%5B0%5D=multiroom&ws_type%5Boperation%5D=union&utm_source=el_title&utm_medium=netpl_inetradio",
+					isUnique: true
+				},
+				{
+					ruName: "Умные часы и браслеты",
+					path: "/smartwatch?utm_source=el_title&utm_medium=smartwatch",
+					isUnique: true
+				},
+				{
+					ruName: "Умный дом",
+					path: "/smart_home?utm_source=el_title&utm_medium=smart_home",
+					isUnique: true
+				},
+				{
+					ruName: "Портативные приставки",
+					path: "/console?console_type%5B0%5D=2&console_type%5B1%5D=universal&console_type%5Boperation%5D=union&utm_source=el_title&utm_medium=console",
+					isUnique: true
+				},
+				{
+					ruName: "Телевизоры с AirPlay",
+					path: "/tv?airplay=1&utm_source=el_title&utm_medium=tv",
+					isUnique: true
+				}
 			],
 			categories: {
 				mobilePhonesAndAccessories: {
@@ -908,11 +952,31 @@ module.exports = {
 			id: 2,
 			ruName: "Компьютеры и сети",
 			tiles: [
-				{ ruName: "Планшеты", path: "/tabletpc?utm_source=pc_tile&utm_medium=tabletpc" },
-				{ ruName: "Беспроводные точки доступа", path: "/wirelessap?utm_source=pc_tile&utm_medium=wirelessap" },
-				{ ruName: "Компактные и недорогие ноутбуки", path: "/notebook?price%5Bto%5D=1200.00&diagonalnb%5Bfrom%5D=120&diagonalnb%5Bto%5D=141&utm_source=pc_tile&utm_medium=notebook" },
-				{ ruName: "SSD с поддержкой NVMe", path: "/ssd?utm_source=pc_tile&utm_medium=ssd" },
-				{ ruName: "Мониторы с повышенной частотой обновления кадров", path: "/display?disp_refreshrate%5Bfrom%5D=120hz&utm_source=pc_tile&utm_medium=display" }
+				{
+					ruName: "Планшеты",
+					path: "/tabletpc?utm_source=pc_tile&utm_medium=tabletpc",
+					isUnique: true
+				},
+				{
+					ruName: "Беспроводные точки доступа",
+					path: "/wirelessap?utm_source=pc_tile&utm_medium=wirelessap",
+					isUnique: true
+				},
+				{
+					ruName: "Компактные и недорогие ноутбуки",
+					path: "/notebook?price%5Bto%5D=1200.00&diagonalnb%5Bfrom%5D=120&diagonalnb%5Bto%5D=141&utm_source=pc_tile&utm_medium=notebook",
+					isUnique: true
+				},
+				{
+					ruName: "SSD с поддержкой NVMe",
+					path: "/ssd?utm_source=pc_tile&utm_medium=ssd",
+					isUnique: true
+				},
+				{
+					ruName: "Мониторы с повышенной частотой обновления кадров",
+					path: "/display?disp_refreshrate%5Bfrom%5D=120hz&utm_source=pc_tile&utm_medium=display",
+					isUnique: true
+				}
 			],
 			categories: {
 				laptopsComputersMonitors: {
@@ -1558,11 +1622,31 @@ module.exports = {
 			id: 3,
 			ruName: "Бытовая техника",
 			tiles: [
-				{ ruName: "Сушильные машины", path: "/washingmachine?type_washm_bi%5B0%5D=dry_m&type_washm_bi%5Boperation%5D=union&utm_source=bt_tile&utm_medium=drym" },
-				{ ruName: "Электрогрили", path: "/electricgrill?utm_source=bt_tile&utm_medium=electricgrill" },
-				{ ruName: "Пароочистители, отпариватели", path: "/steamcleaner?utm_source=bt_tile&utm_medium=steamcleaner" },
-				{ ruName: "Вспениватели молока", path: "/milkfrother?utm_source=bt_tile&utm_medium=milkfrother" },
-				{ ruName: "Тонометры", path: "/tonometers?utm_source=bt_tile&utm_medium=tonometers" }
+				{
+					ruName: "Сушильные машины",
+					path: "/washingmachine?type_washm_bi%5B0%5D=dry_m&type_washm_bi%5Boperation%5D=union&utm_source=bt_tile&utm_medium=drym",
+					isUnique: true
+				},
+				{
+					ruName: "Электрогрили",
+					path: "/electricgrill?utm_source=bt_tile&utm_medium=electricgrill",
+					isUnique: true
+				},
+				{
+					ruName: "Пароочистители, отпариватели",
+					path: "/steamcleaner?utm_source=bt_tile&utm_medium=steamcleaner",
+					isUnique: true
+				},
+				{
+					ruName: "Заварочные чайники, кофеварки, френч-прессы",
+					path: "/teapot?utm_source=bt_tile&utm_medium=teapot",
+					isUnique: true
+				},
+				{
+					ruName: "Фены",
+					path: "/hairdryer?utm_source=bt_tile&utm_medium=hairdryer",
+					isUnique: false
+				}
 			],
 			categories: {
 				bulkyEquipment: {
@@ -2516,12 +2600,36 @@ module.exports = {
 			id: 4,
 			ruName: "Стройка и ремонт",
 			tiles: [
-				{ ruName: "Полотенцесушители", path: "/towelrail?utm_source=sr_tile&utm_medium=towelrail" },
-				{ ruName: "Радиаторы отопления", path: "/radiators?utm_source=sr_tile&utm_medium=radiators" },
-				{ ruName: "Отопительные котлы", path: "/boiler?utm_source=sr_tile&utm_medium=boiler" },
-				{ ruName: "Терморегуляторы", path: "/thermostat?utm_source=sr_tile&utm_medium=thermostat" },
-				{ ruName: "Циркуляционные насосы для отопления", path: "/pump?pump_type%5B0%5D=circulatory&pump_type%5Boperation%5D=union&pump_purpose%5B0%5D=heating&pump_purpose%5Boperation%5D=union&utm_source=sr_tile&utm_medium=pump" },
-				{ ruName: "Электроотвертки и шуруповерты", path: "/screwdriver?utm_source=sr_tile&utm_medium=screwdriver" }
+				{
+					ruName: "Полотенцесушители",
+					path: "/towelrail?utm_source=sr_tile&utm_medium=towelrail",
+					isUnique: true
+				},
+				{
+					ruName: "Радиаторы отопления",
+					path: "/radiators?utm_source=sr_tile&utm_medium=radiators",
+					isUnique: true
+				},
+				{
+					ruName: "Отопительные котлы",
+					path: "/boiler?utm_source=sr_tile&utm_medium=boiler",
+					isUnique: true
+				},
+				{
+					ruName: "Терморегуляторы",
+					path: "/thermostat?utm_source=sr_tile&utm_medium=thermostat",
+					isUnique: true
+				},
+				{
+					ruName: "Циркуляционные насосы для отопления",
+					path: "/pump?pump_type%5B0%5D=circulatory&pump_type%5Boperation%5D=union&pump_purpose%5B0%5D=heating&pump_purpose%5Boperation%5D=union&utm_source=sr_tile&utm_medium=pump",
+					isUnique: true
+				},
+				{
+					ruName: "Электроотвертки и шуруповерты",
+					path: "/screwdriver?utm_source=sr_tile&utm_medium=screwdriver",
+					isUnique: true
+				}
 			],
 			categories: {
 				tools: {
@@ -3517,11 +3625,31 @@ module.exports = {
 			id: 5,
 			ruName: "Дом и сад",
 			tiles: [
-				{ ruName: "Сушилки для белья", path: "/linendryer?utm_source=ds_tile&utm_medium=linendryer" },
-				{ ruName: "Корма для кошек", path: "/catfood?utm_source=ds_tile&utm_medium=catfood" },
-				{ ruName: "Кастрюли", path: "/saucepan?utm_source=ds_tile&utm_medium=saucepan" },
-				{ ruName: "Матрасы", path: "/mattress?utm_source=ds_tile&utm_medium=mattress" },
-				{ ruName: "Торшеры", path: "/luster?lu_type%5B0%5D=floorlamp&lu_type%5Boperation%5D=union&utm_source=ds_tile&utm_medium=floorlamp" }
+				{
+					ruName: "Сушилки для белья",
+					path: "/linendryer?utm_source=ds_tile&utm_medium=linendryer",
+					isUnique: true
+				},
+				{
+					ruName: "Корма для кошек",
+					path: "/catfood?utm_source=ds_tile&utm_medium=catfood",
+					isUnique: true
+				},
+				{
+					ruName: "Кастрюли",
+					path: "/saucepan?utm_source=ds_tile&utm_medium=saucepan",
+					isUnique: true
+				},
+				{
+					ruName: "Матрасы",
+					path: "/mattress?utm_source=ds_tile&utm_medium=mattress",
+					isUnique: true
+				},
+				{
+					ruName: "Торшеры",
+					path: "/luster?lu_type%5B0%5D=floorlamp&lu_type%5Boperation%5D=union&utm_source=ds_tile&utm_medium=floorlamp",
+					isUnique: true
+				}
 			],
 			categories: {
 				bathroomAndToilet: {
@@ -4966,11 +5094,31 @@ module.exports = {
 			id: 6,
 			ruName: "Авто и мото",
 			tiles: [
-				{ ruName: "Динамометрические ключи и отвертки", path: "/torque_wrenches?utm_source=am_tile&utm_medium=torque_wrenches" },
-				{ ruName: "Автомагнитолы", path: "/caraudio?utm_source=am_tile&utm_medium=caraudio" },
-				{ ruName: "Автоакустика", path: "/carspeakers?utm_source=am_tile&utm_medium=carspeakers" },
-				{ ruName: "Автомобильные аккумуляторы", path: "/carbattery?utm_source=am_tile&utm_medium=carbattery" },
-				{ ruName: "Автомобильные диски", path: "/wheel?utm_source=am_tile&utm_medium=wheel" },
+				{
+					ruName: "Динамометрические ключи и отвертки",
+					path: "/torque_wrenches?utm_source=am_tile&utm_medium=torque_wrenches",
+					isUnique: true
+				},
+				{
+					ruName: "Автомагнитолы",
+					path: "/caraudio?utm_source=am_tile&utm_medium=caraudio",
+					isUnique: true
+				},
+				{
+					ruName: "Автоакустика",
+					path: "/carspeakers?utm_source=am_tile&utm_medium=carspeakers",
+					isUnique: true
+				},
+				{
+					ruName: "Автомобильные аккумуляторы",
+					path: "/carbattery?utm_source=am_tile&utm_medium=carbattery",
+					isUnique: true
+				},
+				{
+					ruName: "Автомобильные диски",
+					path: "/wheel?utm_source=am_tile&utm_medium=wheel",
+					isUnique: true
+				},
 			],
 			categories: {
 				sparePartsAndTechnicalFluids: {
@@ -5434,11 +5582,31 @@ module.exports = {
 			id: 7,
 			ruName: "Красота и спорт",
 			tiles: [
-				{ ruName: "Парфюмерия", path: "/parfume?utm_source=ks_tile&utm_medium=parfume" },
-				{ ruName: "Футзальные мячи", path: "/ball?ball_type%5B0%5D=fotsal&ball_type%5Boperation%5D=intersect&utm_source=ks_tile&utm_medium=ball" },
-				{ ruName: "Сменные лезвия для бритвенных станков", path: "/beauty_acs?ba_purpos%5B0%5D=britvstanok&ba_purpos%5Boperation%5D=union&utm_source=ks_tile&utm_medium=beauty_acs" },
-				{ ruName: "Эллиптические тренажеры", path: "/ellipsoids?utm_source=ks_tile&utm_medium=ellipsoids" },
-				{ ruName: "Наручные часы", path: "/watch?utm_source=ks_tile&utm_medium=watch" }
+				{
+					ruName: "Парфюмерия",
+					path: "/parfume?utm_source=ks_tile&utm_medium=parfume",
+					isUnique: true
+				},
+				{
+					ruName: "Футзальные мячи",
+					path: "/ball?ball_type%5B0%5D=fotsal&ball_type%5Boperation%5D=intersect&utm_source=ks_tile&utm_medium=ball",
+					isUnique: true
+				},
+				{
+					ruName: "Сменные лезвия для бритвенных станков",
+					path: "/beauty_acs?ba_purpos%5B0%5D=britvstanok&ba_purpos%5Boperation%5D=union&utm_source=ks_tile&utm_medium=beauty_acs",
+					isUnique: true
+				},
+				{
+					ruName: "Эллиптические тренажеры",
+					path: "/ellipsoids?utm_source=ks_tile&utm_medium=ellipsoids",
+					isUnique: true
+				},
+				{
+					ruName: "Наручные часы",
+					path: "/watch?utm_source=ks_tile&utm_medium=watch",
+					isUnique: true
+				}
 			],
 			categories: {
 				bicycleAndAccessories: {
@@ -6504,12 +6672,36 @@ module.exports = {
 			id: 8,
 			ruName: "Детям и мамам",
 			tiles: [
-				{ ruName: "Детские коляски", path: "/pram?utm_source=dm_tile&utm_medium=pram" },
-				{ ruName: "Детские кроватки", path: "/babycotbed?utm_source=dm_tile&utm_medium=babycotbed" },
-				{ ruName: "Устройства для приготовления детского питания", path: "/babyfoodmaker?utm_source=dm_tile&utm_medium=babyfoodmaker" },
-				{ ruName: "Детские подгузники", path: "/diapers?utm_source=dm_tile&utm_medium=diapers" },
-				{ ruName: "Развивающие игрушки", path: "/edu_toys?utm_source=dm_tile&utm_medium=edu_toys" },
-				{ ruName: "Развивающие коврики", path: "/playmats?utm_source=dm_tile&utm_medium=playmats" }
+				{
+					ruName: "Детские коляски",
+					path: "/pram?utm_source=dm_tile&utm_medium=pram",
+					isUnique: true
+				},
+				{
+					ruName: "Детские кроватки",
+					path: "/babycotbed?utm_source=dm_tile&utm_medium=babycotbed",
+					isUnique: true
+				},
+				{
+					ruName: "Устройства для приготовления детского питания",
+					path: "/babyfoodmaker?utm_source=dm_tile&utm_medium=babyfoodmaker",
+					isUnique: true
+				},
+				{
+					ruName: "Детские подгузники",
+					path: "/diapers?utm_source=dm_tile&utm_medium=diapers",
+					isUnique: true
+				},
+				{
+					ruName: "Развивающие игрушки",
+					path: "/edu_toys?utm_source=dm_tile&utm_medium=edu_toys",
+					isUnique: true
+				},
+				{
+					ruName: "Развивающие коврики",
+					path: "/playmats?utm_source=dm_tile&utm_medium=playmats",
+					isUnique: true
+				}
 			],
 			categories: {
 				walksAndTrips: {
@@ -7106,12 +7298,36 @@ module.exports = {
 			id: 9,
 			ruName: "Работа и офис",
 			tiles: [
-				{ ruName: "Широкоформатные принтеры", path: "/printers?type_print%5B0%5D=plotter&type_print%5Boperation%5D=union&utm_source=rf_tile&utm_medium=plotter" },
-				{ ruName: "Сканеры штрих-кодов", path: "/barcode?utm_source=rf_tile&utm_medium=barcode" },
-				{ ruName: "Офисные столы", path: "/table?tbl_type%5B0%5D=office&tbl_type%5B1%5D=executive&tbl_type%5B2%5D=conference&tbl_type%5B3%5D=stolstand&tbl_type%5Boperation%5D=union&utm_source=rf_tile&utm_medium=officetable" },
-				{ ruName: "Камеры CCTV", path: "/cctvcamera?utm_source=rf_tile&utm_medium=cctvcamera" },
-				{ ruName: "Ноутбуки для работы", path: "/notebook?notebook_purp%5B0%5D=work&notebook_purp%5Boperation%5D=union&utm_source=rf_tile&utm_medium=laptopforwork" },
-				{ ruName: "Термопринтеры", path: "/thermal?utm_source=rf_tile&utm_medium=thermal" }
+				{
+					ruName: "Широкоформатные принтеры",
+					path: "/printers?type_print%5B0%5D=plotter&type_print%5Boperation%5D=union&utm_source=rf_tile&utm_medium=plotter",
+					isUnique: true
+				},
+				{
+					ruName: "Сканеры штрих-кодов",
+					path: "/barcode?utm_source=rf_tile&utm_medium=barcode",
+					isUnique: true
+				},
+				{
+					ruName: "Офисные столы",
+					path: "/table?tbl_type%5B0%5D=office&tbl_type%5B1%5D=executive&tbl_type%5B2%5D=conference&tbl_type%5B3%5D=stolstand&tbl_type%5Boperation%5D=union&utm_source=rf_tile&utm_medium=officetable",
+					isUnique: true
+				},
+				{
+					ruName: "Камеры CCTV",
+					path: "/cctvcamera?utm_source=rf_tile&utm_medium=cctvcamera",
+					isUnique: true
+				},
+				{
+					ruName: "Ноутбуки для работы",
+					path: "/notebook?notebook_purp%5B0%5D=work&notebook_purp%5Boperation%5D=union&utm_source=rf_tile&utm_medium=laptopforwork",
+					isUnique: true
+				},
+				{
+					ruName: "Термопринтеры",
+					path: "/thermal?utm_source=rf_tile&utm_medium=thermal",
+					isUnique: true
+				}
 			],
 			categories: {
 				officeEquipment: {
