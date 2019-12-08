@@ -4,7 +4,8 @@
     "lint-staged": "npx lint-staged",
     "full": "protractor conf.js --suite full",
     "search": "protractor conf.js --suite search",
-    "navigation": "protractor conf.js --suite navigation"
+    "navigation": "protractor conf.js --suite navigation",
+    "products-list": "protractor conf.js --suite products_list"
   },
   "repository": {
     "type": "git",

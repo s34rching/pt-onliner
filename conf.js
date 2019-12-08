@@ -12,7 +12,8 @@ exports.config = {
 	suites: {
 		full: "specs/*.js",
 		search: "specs/search.spec.js",
-		navigation: "catalog-navigation.spec."
+		navigation: "specs/catalog-navigation.spec.js",
+		products_list: "specs/catalog-products-list.spec.js"
 	},
 	capabilities: {
 		browserName: "chrome",
