@@ -47,6 +47,9 @@ class BasePage {
 	hasText(element, text) {
 		return protractor.ExpectedConditions.textToBePresentInElement(element, text)
 	}
+	urlContains(text) {
+		return protractor.ExpectedConditions.urlContains(text)
+	}
 }
 
 module.exports = BasePage

@@ -1,20 +1,46 @@
 const ProductsList = require("../page-objects/products-list")
+const rp = require("request-promise")
+const chai = require("chai")
+const assert = chai.assert
 
 describe("Onliner.by - Catalog / Products List", () => {
 
+	let products
+
 	beforeEach(() => {
 		browser.waitForAngularEnabled(false)
+
+		rp("https://catalog.onliner.by/sdapi/catalog.api/search/cpu?order=reviews_rating:desc").then(res => {
+			products = JSON.parse(res)
+		})
 	})
 
-	xit("default sort order is set as 'Popular'", () => {
+	it("default sort order is set as 'Popular'", () => {
 		ProductsList.goTo("/cpu")
-		ProductsList.waitForOrderDefaultOptionIsDisplayed()
+		ProductsList.waitForOrderDefaultOptionIsDisplayed("популярные")
 		ProductsList.orderDropdownActiveOrderOption.getText().then(text => {
 			expect(text).toBe("популярные")
 		})
 	})
-	xit("user should be able to order products", () => {
+	it("user should be able to order products", () => {
 
+		let ratingsArray = []
+
+		ProductsList.goTo("/cpu")
+		ProductsList.waitForOrderDefaultOptionIsDisplayed()
+		ProductsList.openOrderListDropDown()
+		ProductsList.waitForOrderDropdownListIsVisible()
+		ProductsList.chooseOrderDropdownOptionByName("С отзывами")
+		ProductsList.waitForUrlContains("?order=reviews_rating:desc")
+		ProductsList.waitForActiveOrderOptionByName("С отзывами")
+		ProductsList.waitForProductListRebuilt(products.products[0].full_name)
+		ProductsList.getProductsRating().each(rating => {
+			rating.getText().then(text => { ratingsArray.push(text) })
+		}).then(() => {
+			for (let i = 0;  i < ratingsArray.length - 1; i++) {
+				assert.isAtLeast(parseInt(ratingsArray[i]), parseInt(ratingsArray[i + 1]))
+			}
+		})
 	})
 	xit("user should be able to filter products", () => {
 
