@@ -22,6 +22,16 @@ class BasePage {
 		this.hitEnter()
 	}
 
+	scrollToWindowPosition(x, y) {
+		browser.executeScript(`window.scrollTo(${x},${y});`)
+	}
+
+	scrollElementIntoView(element) {
+		browser.controlFlow().execute(() => {
+			browser.executeScript("arguments[0].scrollIntoView(true)", element.getWebElement())
+		})
+	}
+
 	// Expected Conditions
 
 	isVisible(element) {
