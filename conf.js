@@ -17,8 +17,9 @@ exports.config = {
 	},
 	capabilities: {
 		browserName: "chrome",
-		"goog:chromeOptions": {
-			w3c: false
+		"chromeOptions": {
+			w3c: false,
+			args: ["--disable-browser-side-navigation"]
 		}
 	},
 
