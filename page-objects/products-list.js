@@ -15,8 +15,19 @@ class ProductsList extends BasePage {
 		}
 		this.productRatings = element.all(by.css("a.schema-product__rating"))
 			.all(by.css("span.schema-product__review-count"))
+		this.productsTitles = element.all(by.css(".schema-product__title"))
+			.all(by.tagName("span"))
 		this.productTitleByProductName = function(productName) {
 			return element.all(by.cssContainingText(".schema-product__title", productName)).first()
+		}
+		this.filters = element(by.id("schema-filter"))
+		this.filterByName = function(filterName) {
+			return element(by.cssContainingText(".schema-filter__label", filterName))
+				.element(by.xpath(".."))
+		}
+		this.productsListTitle = element(by.css(".schema-header__title"))
+		this.searchTagByName = function(tagName) {
+			return element(by.cssContainingText(".schema-tags__text", tagName))
 		}
 	}
 
@@ -38,11 +49,23 @@ class ProductsList extends BasePage {
 	getProductsRating() {
 		return this.productRatings
 	}
+	getProductsTitles() {
+		return this.productsTitles
+	}
 	waitForActiveOrderOptionByName(optionName) {
 		browser.wait(this.isVisible(this.orderDropdownActiveOrderOptionByName(optionName)))
 	}
-	waitForProductListRebuilt(productName) {
-		browser.wait(this.isVisible(this.productTitleByProductName(productName)))
+	waitForProductListRebuilt(productsList) {
+		this.scrollElementIntoView(this.productsListTitle)
+		browser.wait(this.isVisible(this.productTitleByProductName(productsList.products[0].full_name)))
+	}
+	filterProducts(filterName, filterOption) {
+		this.filterByName(filterName)
+			.element(by.cssContainingText(".schema-filter__checkbox-text", filterOption))
+			.click()
+	}
+	waitForSearchTagIsDisplayed(tagName) {
+		browser.wait(this.isVisible(this.searchTagByName(tagName)))
 	}
 }
 
