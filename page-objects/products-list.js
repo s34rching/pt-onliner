@@ -29,6 +29,12 @@ class ProductsList extends BasePage {
 		this.searchTagByName = function(tagName) {
 			return element(by.cssContainingText(".schema-tags__text", tagName))
 		}
+		this.totalFoundButton = function(text) {
+			return element(by.cssContainingText(".schema-filter-button__sub_main", text))
+		}
+		this.initiateFiltersResetButton = element(by.css("span.schema-filter-button__sub_control"))
+		this.confirmFiltersResetButton = element(by.cssContainingText("span.schema-filter-button__sub",
+			"Сбросить фильтр"))
 	}
 
 	waitForOrderDefaultOptionIsDisplayed() {
@@ -66,6 +72,14 @@ class ProductsList extends BasePage {
 	}
 	waitForSearchTagIsDisplayed(tagName) {
 		browser.wait(this.isVisible(this.searchTagByName(tagName)))
+	}
+	waitForProperTotalOfFoundProducts(total) {
+		browser.wait(this.isVisible(this.totalFoundButton(total)))
+	}
+	resetFilters() {
+		this.initiateFiltersResetButton.click()
+		browser.wait(this.isVisible(this.confirmFiltersResetButton))
+		this.confirmFiltersResetButton.click()
 	}
 }
 

@@ -5,13 +5,21 @@ const assert = chai.assert
 
 describe("Onliner.by - Catalog / Products List", () => {
 
-	let products
+	let allCPUs
+	let CPUsFilteredByRating
+	let amdCPUs
 
 	beforeEach(() => {
 		browser.waitForAngularEnabled(false)
 
+		rp("https://catalog.onliner.by/sdapi/catalog.api/search/cpu").then(res => {
+			allCPUs = JSON.parse(res)
+		})
 		rp("https://catalog.onliner.by/sdapi/catalog.api/search/cpu?order=reviews_rating:desc").then(res => {
-			products = JSON.parse(res)
+			CPUsFilteredByRating = JSON.parse(res)
+		})
+		rp("https://catalog.onliner.by/sdapi/catalog.api/search/cpu?mfr[0]=amd").then(res => {
+			amdCPUs = JSON.parse(res)
 		})
 	})
 
@@ -22,68 +30,64 @@ describe("Onliner.by - Catalog / Products List", () => {
 			expect(text).toBe("популярные")
 		})
 	})
-	describe("wrapper", () => {
 
-		beforeEach(() => {
-			rp("https://catalog.onliner.by/sdapi/catalog.api/search/cpu?order=reviews_rating:desc").then(res => {
-				products = JSON.parse(res)
-			})
+	it("user should be able to order products", () => {
+
+		let ratingsArray = []
+
+		ProductsList.goTo("/cpu")
+		ProductsList.waitForOrderDefaultOptionIsDisplayed()
+		ProductsList.openOrderListDropDown()
+		ProductsList.waitForOrderDropdownListIsVisible()
+		ProductsList.chooseOrderDropdownOptionByName("С отзывами")
+		ProductsList.waitForUrlContains("?order=reviews_rating:desc")
+		ProductsList.waitForActiveOrderOptionByName("С отзывами")
+		ProductsList.waitForProductListRebuilt(CPUsFilteredByRating)
+		ProductsList.getProductsRating().each(rating => {
+			rating.getText().then(text => { ratingsArray.push(text) })
+		}).then(() => {
+			for (let i = 0;  i < ratingsArray.length - 1; i++) {
+				assert.isAtLeast(parseInt(ratingsArray[i]), parseInt(ratingsArray[i + 1]))
+			}
 		})
+	})
 
-		it("user should be able to order products", () => {
+	it("user should be able to filter products", () => {
 
-			let ratingsArray = []
+		let productsTitles = []
 
-			ProductsList.goTo("/cpu")
-			ProductsList.waitForOrderDefaultOptionIsDisplayed()
-			ProductsList.openOrderListDropDown()
-			ProductsList.waitForOrderDropdownListIsVisible()
-			ProductsList.chooseOrderDropdownOptionByName("С отзывами")
-			ProductsList.waitForUrlContains("?order=reviews_rating:desc")
-			ProductsList.waitForActiveOrderOptionByName("С отзывами")
-			ProductsList.waitForProductListRebuilt(products)
-			ProductsList.getProductsRating().each(rating => {
-				rating.getText().then(text => { ratingsArray.push(text) })
-			}).then(() => {
-				for (let i = 0;  i < ratingsArray.length - 1; i++) {
-					assert.isAtLeast(parseInt(ratingsArray[i]), parseInt(ratingsArray[i + 1]))
-				}
+		ProductsList.goTo("/cpu")
+		ProductsList.waitForOrderDefaultOptionIsDisplayed()
+		ProductsList.scrollElementIntoView(ProductsList.filterByName("Производитель"))
+		ProductsList.filterProducts("Производитель", "Intel")
+		ProductsList.scrollElementIntoView(ProductsList.productsListTitle)
+		ProductsList.waitForUrlContains("cpu?mfr%5B0%5D=intel")
+		ProductsList.waitForSearchTagIsDisplayed("Intel")
+		ProductsList.getProductsTitles().each(title => {
+			title.getText().then(text => { productsTitles.push(text) })
+		}).then(() => {
+			productsTitles.forEach(title => {
+				expect(title).toContain("Intel")
 			})
 		})
 	})
 
-	describe("wrapper 2", () => {
 
-		beforeEach(() => {
-			rp("https://catalog.onliner.by/sdapi/catalog.api/search/cpu?mfr[0]=intel").then(res => {
-				products = JSON.parse(res)
-			})
-		})
+	it("user should be able to reset filters", () => {
 
-		it("user should be able to filter products", () => {
-
-			let productsTitles = []
-
-			ProductsList.goTo("/cpu")
-			ProductsList.waitForOrderDefaultOptionIsDisplayed()
-			ProductsList.scrollElementIntoView(ProductsList.filterByName("Производитель"))
-			ProductsList.filterProducts("Производитель", "Intel")
-			ProductsList.scrollElementIntoView(ProductsList.productsListTitle)
-			ProductsList.waitForUrlContains("cpu?mfr%5B0%5D=intel")
-			ProductsList.waitForSearchTagIsDisplayed("Intel")
-			ProductsList.getProductsTitles().each(title => {
-				title.getText().then(text => { productsTitles.push(text) })
-			}).then(() => {
-				productsTitles.forEach(title => {
-					expect(title).toContain("Intel")
-				})
-			})
-		})
+		ProductsList.goTo("/cpu")
+		ProductsList.waitForOrderDefaultOptionIsDisplayed()
+		ProductsList.waitForProperTotalOfFoundProducts(allCPUs.total.toString())
+		ProductsList.scrollElementIntoView(ProductsList.filterByName("Производитель"))
+		ProductsList.filterProducts("Производитель", "AMD")
+		ProductsList.scrollElementIntoView(ProductsList.productsListTitle)
+		ProductsList.waitForUrlContains("cpu?mfr%5B0%5D=amd")
+		ProductsList.waitForSearchTagIsDisplayed("AMD")
+		ProductsList.waitForProperTotalOfFoundProducts(amdCPUs.total.toString())
+		ProductsList.resetFilters()
+		ProductsList.waitForProperTotalOfFoundProducts(allCPUs.total.toString())
 	})
 
-	xit("user should be able to reset filters", () => {
-
-	})
 	xit("user should be able to add products for comparison", () => {
 
 	})
