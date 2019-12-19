@@ -1,4 +1,5 @@
 const ProductsList = require("../page-objects/products-list")
+const _ = require("lodash")
 const rp = require("request-promise")
 const chai = require("chai")
 const assert = chai.assert
@@ -31,7 +32,7 @@ describe("Onliner.by - Catalog / Products List", () => {
 		})
 	})
 
-	it("user should be able to order products", () => {
+	xit("user should be able to order products", () => {
 
 		let ratingsArray = []
 
@@ -52,7 +53,7 @@ describe("Onliner.by - Catalog / Products List", () => {
 		})
 	})
 
-	it("user should be able to filter products", () => {
+	xit("user should be able to filter products", () => {
 
 		let productsTitles = []
 
@@ -73,7 +74,7 @@ describe("Onliner.by - Catalog / Products List", () => {
 	})
 
 
-	it("user should be able to reset filters", () => {
+	xit("user should be able to reset filters", () => {
 
 		ProductsList.goTo("/cpu")
 		ProductsList.waitForOrderDefaultOptionIsDisplayed()
@@ -88,8 +89,29 @@ describe("Onliner.by - Catalog / Products List", () => {
 		ProductsList.waitForProperTotalOfFoundProducts(allCPUs.total.toString())
 	})
 
-	xit("user should be able to add products for comparison", () => {
+	it("user should be able to add products for comparison", () => {
 
+		const numberOfProductsToCompare = 2
+		const firstProduct = allCPUs.products[0]
+		const secondProduct = allCPUs.products[1]
+		const firstProductShortName = firstProduct.url.match(/(?<=\/products\/).+$/)[0]
+		const secondProductShortName = secondProduct.url.match(/(?<=\/products\/).+$/)[0]
+
+		ProductsList.goTo("/cpu")
+		ProductsList.waitForOrderDefaultOptionIsDisplayed()
+		ProductsList.waitForProperTotalOfFoundProducts(allCPUs.total.toString())
+		ProductsList.scrollElementIntoView(ProductsList.productCards.first())
+		ProductsList.productCards.then(productCards => {
+			_.take(productCards, numberOfProductsToCompare).forEach(productCard => {
+				productCard
+					.element(by.css(".schema-product__compare"))
+					.click()
+			})
+		})
+		ProductsList.compareProducts(numberOfProductsToCompare)
+		ProductsList.waitForUrlContains(`/compare/${firstProductShortName}+${secondProductShortName}`)
+		expect(ProductsList.productComparisonName(firstProduct.full_name).isDisplayed()).toBe(true)
+		expect(ProductsList.productComparisonName(secondProduct.full_name).isDisplayed()).toBe(true)
 	})
 	xit("user should be able to open offers list page", () => {
 

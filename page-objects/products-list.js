@@ -35,6 +35,13 @@ class ProductsList extends BasePage {
 		this.initiateFiltersResetButton = element(by.css("span.schema-filter-button__sub_control"))
 		this.confirmFiltersResetButton = element(by.cssContainingText("span.schema-filter-button__sub",
 			"Сбросить фильтр"))
+		this.productCards = element.all(by.css(".schema-product__group"))
+		this.compareProductsButton = function(numberOfProductsToCompare) {
+			return element(by.cssContainingText(".compare-button__sub_main", numberOfProductsToCompare.toString()))
+		}
+		this.productComparisonName = function(productName) {
+			return element.all(by.cssContainingText(".product-summary__caption", productName)).first()
+		}
 	}
 
 	waitForOrderDefaultOptionIsDisplayed() {
@@ -80,6 +87,10 @@ class ProductsList extends BasePage {
 		this.initiateFiltersResetButton.click()
 		browser.wait(this.isVisible(this.confirmFiltersResetButton))
 		this.confirmFiltersResetButton.click()
+	}
+	compareProducts(numberOfProductsToCompare) {
+		browser.wait(this.isVisible(this.compareProductsButton(numberOfProductsToCompare)))
+		this.compareProductsButton(numberOfProductsToCompare).click()
 	}
 }
 
