@@ -43,6 +43,10 @@ class ProductsList extends BasePage {
 			return element.all(by.cssContainingText(".product-summary__caption", productName)).first()
 		}
 		this.firstProductOffersButton = element.all(by.css(".schema-product__offers")).first()
+		this.sectionSwitcher = function(sectionName) {
+			return element(by.cssContainingText(".schema-filter-control__switcher-inner", sectionName))
+		}
+		this.createUsedAdButton = element(by.css("a[href='/used/create']"))
 	}
 
 	waitForOrderDefaultOptionIsDisplayed() {
@@ -95,6 +99,9 @@ class ProductsList extends BasePage {
 	}
 	openFirstProductOffersPage() {
 		this.firstProductOffersButton.click()
+	}
+	switchToSection(sectionName) {
+		this.sectionSwitcher(sectionName).click()
 	}
 }
 

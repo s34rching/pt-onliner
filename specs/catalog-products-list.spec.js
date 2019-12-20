@@ -10,6 +10,7 @@ describe("Onliner.by - Catalog / Products List", () => {
 	let allCPUs
 	let CPUsFilteredByRating
 	let amdCPUs
+	let usedCPUs
 
 	beforeEach(() => {
 		browser.waitForAngularEnabled(false)
@@ -22,6 +23,9 @@ describe("Onliner.by - Catalog / Products List", () => {
 		})
 		rp("https://catalog.onliner.by/sdapi/catalog.api/search/cpu?mfr[0]=amd").then(res => {
 			amdCPUs = JSON.parse(res)
+		})
+		rp("https://catalog.onliner.by/sdapi/catalog.api/search/cpu/second-offers?page=2&segment=second").then(res => {
+			usedCPUs = JSON.parse(res)
 		})
 	})
 
@@ -115,7 +119,7 @@ describe("Onliner.by - Catalog / Products List", () => {
 		expect(ProductsList.productComparisonName(secondProduct.full_name).isDisplayed()).toBe(true)
 	})
 
-	it("user should be able to open offers list page", () => {
+	xit("user should be able to open offers list page", () => {
 
 		const firstProduct = allCPUs.products[0]
 
@@ -137,9 +141,17 @@ describe("Onliner.by - Catalog / Products List", () => {
 		browser.sleep(5000)
 	})
 
-	xit("user should be able to observe user's ads", () => {
+	it("user should be able to observe user's ads", () => {
 
+		ProductsList.goTo("/cpu")
+		ProductsList.waitForOrderDefaultOptionIsDisplayed()
+		ProductsList.waitForProperTotalOfFoundProducts(allCPUs.total.toString())
+		ProductsList.switchToSection("Объявления")
+		ProductsList.waitForUrlContains("/cpu?segment=second")
+		expect(ProductsList.createUsedAdButton.isDisplayed()).toBe(true)
+		browser.sleep(5000)
 	})
+
 	xit("user should be able to create ad", () => {
 		ProductsList.goTo("/cpu")
 		ProductsList.switchToUsedAdsList("Объявления")
