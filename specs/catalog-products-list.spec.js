@@ -1,4 +1,5 @@
 const ProductsList = require("../page-objects/products-list")
+const ProductOffers = require("../page-objects/product-offers-page")
 const _ = require("lodash")
 const rp = require("request-promise")
 const chai = require("chai")
@@ -89,7 +90,7 @@ describe("Onliner.by - Catalog / Products List", () => {
 		ProductsList.waitForProperTotalOfFoundProducts(allCPUs.total.toString())
 	})
 
-	it("user should be able to add products for comparison", () => {
+	xit("user should be able to add products for comparison", () => {
 
 		const numberOfProductsToCompare = 2
 		const firstProduct = allCPUs.products[0]
@@ -113,9 +114,29 @@ describe("Onliner.by - Catalog / Products List", () => {
 		expect(ProductsList.productComparisonName(firstProduct.full_name).isDisplayed()).toBe(true)
 		expect(ProductsList.productComparisonName(secondProduct.full_name).isDisplayed()).toBe(true)
 	})
-	xit("user should be able to open offers list page", () => {
 
+	it("user should be able to open offers list page", () => {
+
+		const firstProduct = allCPUs.products[0]
+
+		ProductsList.goTo("/cpu")
+		ProductsList.waitForOrderDefaultOptionIsDisplayed()
+		ProductsList.waitForProperTotalOfFoundProducts(allCPUs.total.toString())
+		ProductsList.openFirstProductOffersPage()
+		ProductsList.waitForUrlContains(`/${firstProduct.url.match(/(?<=\/products\/).+$/)[0]}/prices`)
+		ProductOffers.subNavActiveTab.getText().then(text => { expect(text).toContain("Предложения продавцов") })
+		ProductOffers.scrollElementIntoView(ProductOffers.productPriceHeading)
+		expect(ProductOffers.productPricesOrderGroup.isDisplayed()).toBe(true)
+		expect(ProductOffers.productPricesFilterGroup.isDisplayed()).toBe(true)
+		ProductOffers.firstOfferProductPrice.getText().then(price => {
+			assert(parseInt(price), 250, 50)
+		})
+		expect(ProductOffers.toCartButton.isDisplayed()).toBe(true)
+		expect(ProductOffers.shopContactsButton.isDisplayed()).toBe(true)
+		expect(ProductOffers.shopWorkingHours.getText()).toContain("Магазин сегодня работает с")
+		browser.sleep(5000)
 	})
+
 	xit("user should be able to observe user's ads", () => {
 
 	})

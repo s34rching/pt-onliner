@@ -42,6 +42,7 @@ class ProductsList extends BasePage {
 		this.productComparisonName = function(productName) {
 			return element.all(by.cssContainingText(".product-summary__caption", productName)).first()
 		}
+		this.firstProductOffersButton = element.all(by.css(".schema-product__offers")).first()
 	}
 
 	waitForOrderDefaultOptionIsDisplayed() {
@@ -91,6 +92,9 @@ class ProductsList extends BasePage {
 	compareProducts(numberOfProductsToCompare) {
 		browser.wait(this.isVisible(this.compareProductsButton(numberOfProductsToCompare)))
 		this.compareProductsButton(numberOfProductsToCompare).click()
+	}
+	openFirstProductOffersPage() {
+		this.firstProductOffersButton.click()
 	}
 }
 
