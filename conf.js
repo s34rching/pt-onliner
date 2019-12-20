@@ -1,5 +1,5 @@
-let SpecReporter = require("jasmine-spec-reporter").SpecReporter
-let Jasmine2HtmlReporter = require("protractor-jasmine2-html-reporter")
+const SpecReporter = require("jasmine-spec-reporter").SpecReporter
+const HtmlReporter = require("protractor-beautiful-reporter")
 
 exports.config = {
 	baseUrl: "https://catalog.onliner.by",
@@ -9,13 +9,16 @@ exports.config = {
 	jasmineNodeOpts: {
 		print: function() {}
 	},
+	suites: {
+		full: "specs/*.js",
+		search: "specs/search.spec.js",
+		navigation: "catalog-navigation.spec."
+	},
 	capabilities: {
 		browserName: "chrome",
 		"goog:chromeOptions": {
 			w3c: false
 		}
-		// browserName: "firefox",
-		// browserName: "internet explorer" // webdriver-manager update --ie
 	},
 
 	onPrepare: () => {
@@ -29,15 +32,12 @@ exports.config = {
 					displaySpecDuration: true
 				}
 		}))
-		jasmine.getEnv().addReporter(new Jasmine2HtmlReporter({
-			filename: "Report_",
-			fileNameDateSuffix: true,
-			savePath: "./reports",
-			screenshotsFolder: "screenshots",
-			takeScreenshots: true,
-			takeScreenshotsOnlyOnFailures: true
-		})
-		)
+		jasmine.getEnv().addReporter(new HtmlReporter({
+			baseDirectory: "reports/",
+			screenshotsSubfolder: "screenshots",
+			takeScreenShotsOnlyForFailedSpecs: true,
+			preserveDirectory: false
+		}).getJasmine2Reporter())
 	}
 }
 

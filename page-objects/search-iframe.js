@@ -3,11 +3,57 @@ const BasePage = require("./base-page")
 class SearchIframe extends BasePage {
 	constructor() {
 		super()
-		this.searchIframe = element(by.className("modal-iframe"))
+		this.fastSearchModal = element(by.id("fast-search-modal"))
+		this.searchIframe = element(by.css(".modal-iframe"))
+		this.productTitle = function(productTitle) {
+			return element.all(by.cssContainingText(".product__title-link", productTitle)).first()
+		}
+		this.firstResultItemProduct = element.all(by.css(".result__item_product")).first()
+		this.resultItemProduct = function(productTitle) {
+			return this.productTitle(productTitle)
+				// TODO: THIS
+				.element(by.xpath(".."))
+				.element(by.xpath(".."))
+				.element(by.xpath(".."))
+		}
+		this.productPrice = function(productTitle) {
+			return this.resultItemProduct(productTitle).element(by.css(".product__price"))
+		}
+		this.resultItemSubcategory = function(subcategoryTitle) {
+			return element(by.cssContainingText(".category__title", subcategoryTitle))
+		}
+		this.closeSearchBarButton = element(by.css(".search__close"))
+		this.searchBarSuggestion = element(by.css(".search__suggest-addon"))
 	}
 
 	switchToSearchIframe() {
-		browser.switchTo().frame(this.searchIframe)
+		browser.wait(this.isVisible(this.fastSearchModal))
+		return browser.switchTo().frame(this.searchIframe.getWebElement())
+	}
+
+	switchToDefaultFrame() {
+		return browser.switchTo().defaultContent()
+	}
+
+	waitForProductAreLoadedOnModal() {
+		return browser.wait(this.isVisible(this.firstResultItemProduct))
+	}
+
+	closeSearchModal() {
+		return this.closeSearchBarButton.click()
+	}
+
+	openProductDetailsPageByTitle(productTitle) {
+		return this.productTitle(productTitle).click()
+	}
+
+	openSubcategoryPage(subcategoryTitle) {
+		browser.wait(this.isClickable(this.resultItemSubcategory(subcategoryTitle)))
+		return this.resultItemSubcategory(subcategoryTitle).click()
+	}
+
+	waitForSearchSuggestionIsVisible() {
+		browser.wait(this.isVisible(this.searchBarSuggestion))
 	}
 }
 
