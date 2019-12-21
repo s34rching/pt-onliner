@@ -92,10 +92,6 @@ class ProductsList extends BasePage {
 	waitForActiveOrderOptionByName(optionName) {
 		browser.wait(this.isVisible(this.orderDropdownActiveOrderOptionByName(optionName)))
 	}
-	waitForProductListRebuilt(productsList) {
-		this.scrollElementIntoView(this.productsListTitle)
-		browser.wait(this.isVisible(this.productTitleByProductName(productsList.products[0].full_name)))
-	}
 	filterProducts(filterName, filterOption) {
 		this.filterByName(filterName)
 			.element(by.cssContainingText(".schema-filter__checkbox-text", filterOption))

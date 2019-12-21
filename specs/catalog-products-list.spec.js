@@ -12,6 +12,7 @@ describe("Onliner.by - Catalog / Products List", () => {
 	let allCPUs
 	let CPUsFilteredByRating
 	let amdCPUs
+	let intelCPUs
 	let usedCPUs
 
 	beforeEach(() => {
@@ -26,6 +27,9 @@ describe("Onliner.by - Catalog / Products List", () => {
 		rp("https://catalog.onliner.by/sdapi/catalog.api/search/cpu?mfr[0]=amd").then(res => {
 			amdCPUs = JSON.parse(res)
 		})
+		rp("https://catalog.onliner.by/sdapi/catalog.api/search/cpu?mfr[0]=intel").then(res => {
+			intelCPUs = JSON.parse(res)
+		})
 		rp("https://catalog.onliner.by/sdapi/catalog.api/search/cpu/second-offers?segment=second").then(res => {
 			usedCPUs = JSON.parse(res)
 		})
@@ -39,7 +43,7 @@ describe("Onliner.by - Catalog / Products List", () => {
 		})
 	})
 
-	xit("user should be able to order products", () => {
+	it("user should be able to order products", () => {
 
 		let ratingsArray = []
 
@@ -50,7 +54,7 @@ describe("Onliner.by - Catalog / Products List", () => {
 		ProductsList.chooseOrderDropdownOptionByName("С отзывами")
 		ProductsList.waitForUrlContains("?order=reviews_rating:desc")
 		ProductsList.waitForActiveOrderOptionByName("С отзывами")
-		ProductsList.waitForProductListRebuilt(CPUsFilteredByRating)
+		ProductsList.waitForProperTotalOfFoundProducts(CPUsFilteredByRating.total.toString())
 		ProductsList.getProductsRating().each(rating => {
 			rating.getText().then(text => { ratingsArray.push(text) })
 		}).then(() => {
@@ -60,7 +64,7 @@ describe("Onliner.by - Catalog / Products List", () => {
 		})
 	})
 
-	xit("user should be able to filter products", () => {
+	it("user should be able to filter products", () => {
 
 		let productsTitles = []
 
@@ -71,6 +75,7 @@ describe("Onliner.by - Catalog / Products List", () => {
 		ProductsList.scrollElementIntoView(ProductsList.productsListTitle)
 		ProductsList.waitForUrlContains("cpu?mfr%5B0%5D=intel")
 		ProductsList.waitForSearchTagIsDisplayed("Intel")
+		ProductsList.waitForProperTotalOfFoundProducts(intelCPUs.total.toString())
 		ProductsList.getProductsTitles().each(title => {
 			title.getText().then(text => { productsTitles.push(text) })
 		}).then(() => {
@@ -81,7 +86,7 @@ describe("Onliner.by - Catalog / Products List", () => {
 	})
 
 
-	xit("user should be able to reset filters", () => {
+	it("user should be able to reset filters", () => {
 
 		ProductsList.goTo("/cpu")
 		ProductsList.waitForOrderDefaultOptionIsDisplayed()
@@ -96,7 +101,7 @@ describe("Onliner.by - Catalog / Products List", () => {
 		ProductsList.waitForProperTotalOfFoundProducts(allCPUs.total.toString())
 	})
 
-	xit("user should be able to add products for comparison", () => {
+	it("user should be able to add products for comparison", () => {
 
 		const numberOfProductsToCompare = 2
 		const firstProduct = allCPUs.products[0]
@@ -121,7 +126,7 @@ describe("Onliner.by - Catalog / Products List", () => {
 		expect(ProductsList.productComparisonName(secondProduct.full_name).isDisplayed()).toBe(true)
 	})
 
-	xit("user should be able to open offers list page", () => {
+	it("user should be able to open offers list page", () => {
 
 		const firstProduct = allCPUs.products[0]
 
@@ -143,7 +148,7 @@ describe("Onliner.by - Catalog / Products List", () => {
 		expect(ProductOffers.shopWorkingHours.getText()).toContain("Магазин сегодня работает с")
 	})
 
-	xit("user should be able to observe used user's product offers", () => {
+	it("user should be able to observe used user's product offers", () => {
 
 		const firstUsedOffer = usedCPUs.offers[0]
 
