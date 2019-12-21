@@ -140,7 +140,6 @@ describe("Onliner.by - Catalog / Products List", () => {
 		expect(ProductOffers.toCartButton.isDisplayed()).toBe(true)
 		expect(ProductOffers.shopContactsButton.isDisplayed()).toBe(true)
 		expect(ProductOffers.shopWorkingHours.getText()).toContain("Магазин сегодня работает с")
-		browser.sleep(5000)
 	})
 
 	it("user should be able to observe used user's product offers", () => {
