@@ -1,6 +1,7 @@
 const ProductsList = require("../page-objects/products-list")
 const ProductOffers = require("../page-objects/product-offers-page")
 const ProductDetailsPage = require("../page-objects/product-details-page")
+const LoginPage = require("../page-objects/login-page")
 const _ = require("lodash")
 const rp = require("request-promise")
 const chai = require("chai")
@@ -142,7 +143,7 @@ describe("Onliner.by - Catalog / Products List", () => {
 		expect(ProductOffers.shopWorkingHours.getText()).toContain("Магазин сегодня работает с")
 	})
 
-	it("user should be able to observe used user's product offers", () => {
+	xit("user should be able to observe used user's product offers", () => {
 
 		const firstUsedOffer = usedCPUs.offers[0]
 
@@ -166,10 +167,16 @@ describe("Onliner.by - Catalog / Products List", () => {
 		expect(ProductDetailsPage.usedProductDescription.isDisplayed()).toBe(true)
 	})
 
-	xit("user should be able to create ad", () => {
+	it("creation of user used product offer requires signed in user", () => {
 		ProductsList.goTo("/cpu")
-		ProductsList.switchToUsedAdsList("Объявления")
-		ProductsList.initiateCreationOfUsedAd()
-		browser.sleep(5000)
+		ProductsList.waitForOrderDefaultOptionIsDisplayed()
+		ProductsList.waitForProperTotalOfFoundProducts(allCPUs.total.toString())
+		ProductsList.switchToSection("Объявления")
+		ProductsList.waitForProperTotalOfFoundProducts(usedCPUs.total.toString())
+		ProductsList.createUserUsedProductOffer()
+		ProductsList.waitForUrlContains("/login?redirect")
+		expect(LoginPage.authFormTitle.isDisplayed()).toBe(true)
+		expect(LoginPage.nameInput.isDisplayed()).toBe(true)
+		expect(LoginPage.passwordInput.isDisplayed()).toBe(true)
 	})
 })

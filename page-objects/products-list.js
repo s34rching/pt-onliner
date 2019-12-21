@@ -125,6 +125,9 @@ class ProductsList extends BasePage {
 	openUsedUserProductOfferByProductName(productTitle) {
 		this.productTitle(productTitle).click()
 	}
+	createUserUsedProductOffer() {
+		this.createUsedOfferButton.click()
+	}
 }
 
 module.exports = new ProductsList()
