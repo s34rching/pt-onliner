@@ -46,7 +46,26 @@ class ProductsList extends BasePage {
 		this.sectionSwitcher = function(sectionName) {
 			return element(by.cssContainingText(".schema-filter-control__switcher-inner", sectionName))
 		}
-		this.createUsedAdButton = element(by.css("a[href='/used/create']"))
+		this.createUsedOfferButton = element(by.css("a[href='/used/create']"))
+		this.productByTitle = function(productTitle) {
+			return element(by.xpath(`//div[contains(@class, "schema-product__group") and descendant::span[text()] = "${productTitle}"]`))
+		}
+		this.productTitle = function(productTitle) {
+			return this.productByTitle(productTitle)
+				.element(by.css(".schema-product__title"))
+				.element(by.tagName("span"))
+		}
+		this.usedProductConditionsCircleByProductTitle = function(productTitle) {
+			return this.productByTitle(productTitle).element(by.css(".circle-style__value"))
+		}
+		this.usedProductLocationByProductTitle = function(productTitle) {
+			return this.productByTitle(productTitle).element(by.css(".schema-product__city"))
+		}
+		this.usedProductPriceByProductTitle = function(productTitle) {
+			return this.productByTitle(productTitle)
+				.element(by.css(".schema-product__price-group"))
+				.element(by.tagName("strong"))
+		}
 	}
 
 	waitForOrderDefaultOptionIsDisplayed() {
@@ -102,6 +121,9 @@ class ProductsList extends BasePage {
 	}
 	switchToSection(sectionName) {
 		this.sectionSwitcher(sectionName).click()
+	}
+	openUsedUserProductOfferByProductName(productTitle) {
+		this.productTitle(productTitle).click()
 	}
 }
 

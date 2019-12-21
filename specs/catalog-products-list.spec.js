@@ -1,5 +1,6 @@
 const ProductsList = require("../page-objects/products-list")
 const ProductOffers = require("../page-objects/product-offers-page")
+const ProductDetailsPage = require("../page-objects/product-details-page")
 const _ = require("lodash")
 const rp = require("request-promise")
 const chai = require("chai")
@@ -24,7 +25,7 @@ describe("Onliner.by - Catalog / Products List", () => {
 		rp("https://catalog.onliner.by/sdapi/catalog.api/search/cpu?mfr[0]=amd").then(res => {
 			amdCPUs = JSON.parse(res)
 		})
-		rp("https://catalog.onliner.by/sdapi/catalog.api/search/cpu/second-offers?page=2&segment=second").then(res => {
+		rp("https://catalog.onliner.by/sdapi/catalog.api/search/cpu/second-offers?segment=second").then(res => {
 			usedCPUs = JSON.parse(res)
 		})
 	})
@@ -142,15 +143,28 @@ describe("Onliner.by - Catalog / Products List", () => {
 		browser.sleep(5000)
 	})
 
-	it("user should be able to observe user's ads", () => {
+	it("user should be able to observe used user's product offers", () => {
+
+		const firstUsedOffer = usedCPUs.offers[0]
 
 		ProductsList.goTo("/cpu")
 		ProductsList.waitForOrderDefaultOptionIsDisplayed()
 		ProductsList.waitForProperTotalOfFoundProducts(allCPUs.total.toString())
 		ProductsList.switchToSection("Объявления")
 		ProductsList.waitForUrlContains("/cpu?segment=second")
-		expect(ProductsList.createUsedAdButton.isDisplayed()).toBe(true)
-		browser.sleep(5000)
+		expect(ProductsList.createUsedOfferButton.isDisplayed()).toBe(true)
+		ProductsList.waitForProperTotalOfFoundProducts(usedCPUs.total.toString())
+		expect(ProductsList.productByTitle(firstUsedOffer.product.full_name).isDisplayed()).toBe(true)
+		expect(ProductsList.usedProductConditionsCircleByProductTitle(firstUsedOffer.product.full_name)
+			.isDisplayed()).toBe(true)
+		expect(ProductsList.usedProductLocationByProductTitle(firstUsedOffer.product.full_name)
+			.isDisplayed()).toBe(true)
+		ProductsList.usedProductPriceByProductTitle(firstUsedOffer.product.full_name).getText().then(price => {
+			assert.isNumber(parseFloat(price.replace(",", ".")))
+		})
+		ProductsList.openUsedUserProductOfferByProductName(firstUsedOffer.product.full_name)
+		ProductDetailsPage.scrollElementIntoView(ProductDetailsPage.usedProductNameHeading)
+		expect(ProductDetailsPage.usedProductDescription.isDisplayed()).toBe(true)
 	})
 
 	xit("user should be able to create ad", () => {
