@@ -15,9 +15,7 @@ describe("Onliner.by - Catalog / Products List", () => {
 	let intelCPUs
 	let usedCPUs
 
-	beforeEach(() => {
-		browser.waitForAngularEnabled(false)
-
+	beforeAll(() => {
 		rp("https://catalog.onliner.by/sdapi/catalog.api/search/cpu").then(res => {
 			allCPUs = JSON.parse(res)
 		})
@@ -33,6 +31,10 @@ describe("Onliner.by - Catalog / Products List", () => {
 		rp("https://catalog.onliner.by/sdapi/catalog.api/search/cpu/second-offers?segment=second").then(res => {
 			usedCPUs = JSON.parse(res)
 		})
+	})
+
+	beforeEach(() => {
+		browser.waitForAngularEnabled(false)
 	})
 
 	it("default sort order is set as 'Popular'", () => {
