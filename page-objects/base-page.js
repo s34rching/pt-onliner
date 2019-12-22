@@ -22,6 +22,22 @@ class BasePage {
 		this.hitEnter()
 	}
 
+	scrollToWindowPosition(x, y) {
+		browser.executeScript(`window.scrollTo(${x},${y});`)
+	}
+
+	scrollElementIntoView(element) {
+		browser.controlFlow().execute(() => {
+			browser.executeScript("arguments[0].scrollIntoView(true)", element.getWebElement())
+		})
+	}
+
+	forceClick(element) {
+		browser.controlFlow().execute(() => {
+			browser.executeScript("arguments[0].click();", element.getWebElement())
+		})
+	}
+
 	// Expected Conditions
 
 	isVisible(element) {
@@ -46,6 +62,9 @@ class BasePage {
 
 	hasText(element, text) {
 		return protractor.ExpectedConditions.textToBePresentInElement(element, text)
+	}
+	urlContains(text) {
+		return protractor.ExpectedConditions.urlContains(text)
 	}
 }
 

@@ -12,12 +12,14 @@ exports.config = {
 	suites: {
 		full: "specs/*.js",
 		search: "specs/search.spec.js",
-		navigation: "catalog-navigation.spec."
+		navigation: "specs/catalog-navigation.spec.js",
+		products_list: "specs/catalog-products-list.spec.js"
 	},
 	capabilities: {
 		browserName: "chrome",
-		"goog:chromeOptions": {
-			w3c: false
+		"chromeOptions": {
+			w3c: false,
+			args: ["--disable-browser-side-navigation"]
 		}
 	},
 
