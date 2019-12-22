@@ -16,20 +16,24 @@ describe("Onliner.by - Catalog / Products List", () => {
 	let usedCPUs
 
 	beforeAll(() => {
-		rp("https://catalog.onliner.by/sdapi/catalog.api/search/cpu").then(res => {
-			allCPUs = JSON.parse(res)
-		})
-		rp("https://catalog.onliner.by/sdapi/catalog.api/search/cpu?order=reviews_rating:desc").then(res => {
-			CPUsFilteredByRating = JSON.parse(res)
-		})
-		rp("https://catalog.onliner.by/sdapi/catalog.api/search/cpu?mfr[0]=amd").then(res => {
-			amdCPUs = JSON.parse(res)
-		})
-		rp("https://catalog.onliner.by/sdapi/catalog.api/search/cpu?mfr[0]=intel").then(res => {
-			intelCPUs = JSON.parse(res)
-		})
-		rp("https://catalog.onliner.by/sdapi/catalog.api/search/cpu/second-offers?segment=second").then(res => {
-			usedCPUs = JSON.parse(res)
+		// eslint-disable-next-line no-unused-vars
+		return new Promise((resolve, reject) => {
+			rp("https://catalog.onliner.by/sdapi/catalog.api/search/cpu").then(res => {
+				allCPUs = JSON.parse(res)
+				return rp("https://catalog.onliner.by/sdapi/catalog.api/search/cpu?order=reviews_rating:desc")
+			}).then(res => {
+				CPUsFilteredByRating = JSON.parse(res)
+				return rp("https://catalog.onliner.by/sdapi/catalog.api/search/cpu?mfr[0]=amd")
+			}).then(res => {
+				amdCPUs = JSON.parse(res)
+				return rp("https://catalog.onliner.by/sdapi/catalog.api/search/cpu?mfr[0]=intel")
+			}).then(res => {
+				intelCPUs = JSON.parse(res)
+				return rp("https://catalog.onliner.by/sdapi/catalog.api/search/cpu/second-offers?segment=second")
+			}).then(res => {
+				usedCPUs = JSON.parse(res)
+				resolve()
+			})
 		})
 	})
 
@@ -39,7 +43,7 @@ describe("Onliner.by - Catalog / Products List", () => {
 
 	it("default sort order is set as 'Popular'", () => {
 		ProductsList.goTo("/cpu")
-		ProductsList.waitForOrderDefaultOptionIsDisplayed("популярные")
+		ProductsList.waitForProperTotalOfFoundProducts(allCPUs.total.toString())
 		ProductsList.orderDropdownActiveOrderOption.getText().then(text => {
 			expect(text).toBe("популярные")
 		})
@@ -50,7 +54,7 @@ describe("Onliner.by - Catalog / Products List", () => {
 		let ratingsArray = []
 
 		ProductsList.goTo("/cpu")
-		ProductsList.waitForOrderDefaultOptionIsDisplayed()
+		ProductsList.waitForProperTotalOfFoundProducts(allCPUs.total.toString())
 		ProductsList.openOrderListDropDown()
 		ProductsList.waitForOrderDropdownListIsVisible()
 		ProductsList.chooseOrderDropdownOptionByName("С отзывами")
