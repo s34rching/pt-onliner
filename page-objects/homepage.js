@@ -5,6 +5,8 @@ class HomePage extends BasePage {
 		super()
 		this.topNavBar = element(by.css("ul.b-main-navigation"))
 		this.cataloqueLink = this.topNavBar.element(by.css("a[href='https://catalog.onliner.by/']"))
+		this.currencyInformer = element(by.id("currency-informer"))
+		this.weatherInformer = element(by.id("weather-informer"))
 	}
 
 	openCatalog() {
