@@ -9,6 +9,10 @@ class ProductOffersPage extends BasePage {
 		this.productPricesOrderGroup = element(by.id("product-prices-order"))
 		this.productPricesFilterGroup = element(by.id("product-prices-filter"))
 		this.offersTable = element(by.css(".b-offers-list-line-table__table"))
+		this.shopLogoByShopId = function(shopId) {
+			return element(by.css(`a[class="logo"][href="https://${shopId}.shop.onliner.by"]`))
+				.element(by.tagName("img"))
+		}
 		this.firstOfferRow = this.offersTable.all(by.tagName("tr")).first()
 		this.firstOfferProductPrice = this.firstOfferRow
 			.element(by.css(".b-cell-1"))
@@ -22,6 +26,9 @@ class ProductOffersPage extends BasePage {
 		this.shopWorkingHours = this.firstOfferRow
 			.element(by.css(".b-cell-4"))
 			.element(by.css(".b-cell-4__line-2"))
+	}
+	waitForFirstShopLogoDisplayed(shopId) {
+		browser.wait(this.isVisible(this.shopLogoByShopId(shopId)))
 	}
 }
 

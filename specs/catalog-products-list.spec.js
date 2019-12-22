@@ -14,6 +14,7 @@ describe("Onliner.by - Catalog / Products List", () => {
 	let amdCPUs
 	let intelCPUs
 	let usedCPUs
+	let shopList
 
 	beforeAll(() => {
 		// eslint-disable-next-line no-unused-vars
@@ -32,6 +33,9 @@ describe("Onliner.by - Catalog / Products List", () => {
 				return rp("https://catalog.onliner.by/sdapi/catalog.api/search/cpu/second-offers?segment=second")
 			}).then(res => {
 				usedCPUs = JSON.parse(res)
+				return rp("https://catalog.onliner.by/sdapi/shop.api/products/i59400fb/positions?town=minsk")
+			}).then(res => {
+				shopList = JSON.parse(res)
 				resolve()
 			})
 		})
@@ -91,7 +95,6 @@ describe("Onliner.by - Catalog / Products List", () => {
 		})
 	})
 
-
 	it("user should be able to reset filters", () => {
 
 		ProductsList.goTo("/cpu")
@@ -133,6 +136,7 @@ describe("Onliner.by - Catalog / Products List", () => {
 	it("user should be able to open offers list page", () => {
 
 		const firstProduct = allCPUs.products[0]
+		const firstShop = shopList.positions.primary[0]
 
 		ProductsList.goTo("/cpu")
 		ProductsList.waitForProperTotalOfFoundProducts(allCPUs.total.toString())
@@ -141,6 +145,7 @@ describe("Onliner.by - Catalog / Products List", () => {
 		ProductOffers.subNavActiveTab.getText()
 			.then(text => { expect(text).toContain("Предложения продавцов") })
 		ProductOffers.scrollElementIntoView(ProductOffers.productPriceHeading)
+		ProductOffers.waitForFirstShopLogoDisplayed(firstShop.shop_id)
 		expect(ProductOffers.productPricesOrderGroup.isDisplayed()).toBe(true)
 		expect(ProductOffers.productPricesFilterGroup.isDisplayed()).toBe(true)
 		ProductOffers.firstOfferProductPrice.getText().then(price => {
