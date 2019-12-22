@@ -117,7 +117,6 @@ describe("Onliner.by - Catalog / Products List", () => {
 
 		ProductsList.goTo("/cpu")
 		ProductsList.waitForProperTotalOfFoundProducts(allCPUs.total.toString())
-		ProductsList.scrollElementIntoView(ProductsList.productCards.first())
 		ProductsList.productCards.then(productCards => {
 			_.take(productCards, numberOfProductsToCompare).forEach(productCard => {
 				productCard
