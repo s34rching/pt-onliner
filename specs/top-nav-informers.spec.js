@@ -1,4 +1,5 @@
 const HomePage = require("../page-objects/homepage")
+const ExchangeRatesPage = require("../page-objects/currency-exchange-page")
 const rp = require("request-promise")
 
 describe("Onliner.by - Top Navigation / Informers", () => {
@@ -27,8 +28,20 @@ describe("Onliner.by - Top Navigation / Informers", () => {
 			})
 		})
 
-		it("", () => {
-
+		it("shows exchange services locations on the map", () => {
+			HomePage.goTo("/")
+			HomePage.openCurrencyExchangeRatesPage()
+			ExchangeRatesPage.openBestExchangeRatesLocations()
+			ExchangeRatesPage.waitForMapIsLoaded()
+			ExchangeRatesPage.exchangeServicesMapLocations.getText().then(text => {
+				const locationsAmount = text.match(/^\d+/)[0]
+				ExchangeRatesPage.exchangeServicesMapPointers.then(pointers => {
+					expect(pointers.length).toBe(parseInt(locationsAmount))
+					pointers.forEach(pointer => {
+						expect(pointer.isDisplayed()).toBe(true)
+					})
+				})
+			})
 		})
 
 		it("currency exchange calculator", () => {

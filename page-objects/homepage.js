@@ -12,6 +12,9 @@ class HomePage extends BasePage {
 	openCatalog() {
 		this.cataloqueLink.click()
 	}
+	openCurrencyExchangeRatesPage() {
+		this.currencyInformer.click()
+	}
 }
 
 module.exports = new HomePage()
