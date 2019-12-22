@@ -109,7 +109,7 @@ class ProductsList extends BasePage {
 		this.confirmFiltersResetButton.click()
 	}
 	compareProducts(numberOfProductsToCompare) {
-		browser.wait(this.isVisible(this.compareProductsButton(numberOfProductsToCompare)))
+		browser.wait(this.isClickable(this.compareProductsButton(numberOfProductsToCompare)))
 		this.compareProductsButton(numberOfProductsToCompare).click()
 	}
 	openFirstProductOffersPage() {
