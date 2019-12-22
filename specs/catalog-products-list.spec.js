@@ -75,7 +75,7 @@ describe("Onliner.by - Catalog / Products List", () => {
 		let productsTitles = []
 
 		ProductsList.goTo("/cpu")
-		ProductsList.waitForOrderDefaultOptionIsDisplayed()
+		ProductsList.waitForProperTotalOfFoundProducts(allCPUs.total.toString())
 		ProductsList.scrollElementIntoView(ProductsList.filterByName("Производитель"))
 		ProductsList.filterProducts("Производитель", "Intel")
 		ProductsList.scrollElementIntoView(ProductsList.productsListTitle)
@@ -116,7 +116,6 @@ describe("Onliner.by - Catalog / Products List", () => {
 		const secondProductShortName = secondProduct.url.match(/(?<=\/products\/).+$/)[0]
 
 		ProductsList.goTo("/cpu")
-		ProductsList.waitForOrderDefaultOptionIsDisplayed()
 		ProductsList.waitForProperTotalOfFoundProducts(allCPUs.total.toString())
 		ProductsList.scrollElementIntoView(ProductsList.productCards.first())
 		ProductsList.productCards.then(productCards => {
@@ -137,7 +136,6 @@ describe("Onliner.by - Catalog / Products List", () => {
 		const firstProduct = allCPUs.products[0]
 
 		ProductsList.goTo("/cpu")
-		ProductsList.waitForOrderDefaultOptionIsDisplayed()
 		ProductsList.waitForProperTotalOfFoundProducts(allCPUs.total.toString())
 		ProductsList.openFirstProductOffersPage()
 		ProductsList.waitForUrlContains(`/${firstProduct.url.match(/(?<=\/products\/).+$/)[0]}/prices`)
@@ -159,7 +157,6 @@ describe("Onliner.by - Catalog / Products List", () => {
 		const firstUsedOffer = usedCPUs.offers[0]
 
 		ProductsList.goTo("/cpu")
-		ProductsList.waitForOrderDefaultOptionIsDisplayed()
 		ProductsList.waitForProperTotalOfFoundProducts(allCPUs.total.toString())
 		ProductsList.switchToSection("Объявления")
 		ProductsList.waitForUrlContains("/cpu?segment=second")
@@ -180,7 +177,6 @@ describe("Onliner.by - Catalog / Products List", () => {
 
 	it("creation of user used product offer requires signed in user", () => {
 		ProductsList.goTo("/cpu")
-		ProductsList.waitForOrderDefaultOptionIsDisplayed()
 		ProductsList.waitForProperTotalOfFoundProducts(allCPUs.total.toString())
 		ProductsList.switchToSection("Объявления")
 		ProductsList.waitForProperTotalOfFoundProducts(usedCPUs.total.toString())
