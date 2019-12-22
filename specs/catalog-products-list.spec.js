@@ -171,6 +171,7 @@ describe("Onliner.by - Catalog / Products List", () => {
 			assert.isNumber(parseFloat(price.replace(",", ".")))
 		})
 		ProductsList.openUsedUserProductOfferByProductName(firstUsedOffer.product.full_name)
+		ProductDetailsPage.waitForUsedProductPrice()
 		ProductDetailsPage.scrollElementIntoView(ProductDetailsPage.usedProductNameHeading)
 		expect(ProductDetailsPage.usedProductDescription.isDisplayed()).toBe(true)
 	})
