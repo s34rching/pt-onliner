@@ -32,6 +32,12 @@ class BasePage {
 		})
 	}
 
+	forceClick(element) {
+		browser.controlFlow().execute(() => {
+			browser.executeScript("arguments[0].click();", element.getWebElement())
+		})
+	}
+
 	// Expected Conditions
 
 	isVisible(element) {
