@@ -10,10 +10,11 @@ exports.config = {
 		print: function() {}
 	},
 	suites: {
-		full: "specs/*.js",
-		search: "specs/search.spec.js",
-		navigation: "specs/catalog-navigation.spec.js",
-		products_list: "specs/catalog-products-list.spec.js"
+		"full": "specs/*.js",
+		"search": "specs/search.spec.js",
+		"navigation": "specs/catalog-navigation.spec.js",
+		"products-list": "specs/catalog-products-list.spec.js",
+		"top-informers": "specs/top-nav-informers.spec.js"
 	},
 	capabilities: {
 		browserName: "chrome",
