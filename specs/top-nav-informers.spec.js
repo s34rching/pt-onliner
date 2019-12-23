@@ -1,6 +1,8 @@
 const HomePage = require("../page-objects/homepage")
 const ExchangeRatesPage = require("../page-objects/currency-exchange-page")
+const WeatherForecastPage = require("../page-objects/weather-forecast-page")
 const random = require("../helpers/get-random-testing-data")
+const cities = require("../fixtures/cities")
 const rp = require("request-promise")
 const _ = require("lodash")
 
@@ -8,6 +10,8 @@ describe("Onliner.by - Top Navigation / Informers", () => {
 
 	let bestUsdExchangeRate
 	let forecast
+	const userCity = _.sample(_.without(cities.cities, { name: "Минск" }))
+	let userCityForecast
 
 	beforeAll(() => {
 		// eslint-disable-next-line no-unused-vars
@@ -16,7 +20,10 @@ describe("Onliner.by - Top Navigation / Informers", () => {
 				bestUsdExchangeRate = JSON.parse(res).amount
 				rp("https://www.onliner.by/sdapi/pogoda/api/forecast").then(res => {
 					forecast = JSON.parse(res)
-					resolve()
+					rp(`https://www.onliner.by/sdapi/pogoda/api/forecast/${userCity.id}`).then(res => {
+						userCityForecast = JSON.parse(res)
+						resolve()
+					})
 				})
 			})
 		})
@@ -34,7 +41,7 @@ describe("Onliner.by - Top Navigation / Informers", () => {
 			})
 		})
 
-		xit("shows exchange services locations on the map", () => {
+		it("shows exchange services locations on the map", () => {
 			HomePage.goTo("/")
 			HomePage.openCurrencyExchangeRatesPage()
 			ExchangeRatesPage.openBestExchangeRatesLocations()
@@ -50,7 +57,7 @@ describe("Onliner.by - Top Navigation / Informers", () => {
 			})
 		})
 
-		xit("user should be able to convert currencies", () => {
+		it("user should be able to convert currencies", () => {
 
 			let currencies = []
 			let currenciesIn = []
@@ -96,7 +103,21 @@ describe("Onliner.by - Top Navigation / Informers", () => {
 		})
 
 		it("user is able to change their default city", () => {
-
+			HomePage.goTo("/")
+			HomePage.openWeatherForecastPage()
+			WeatherForecastPage.openCitiesOptionsDropdown()
+			WeatherForecastPage.changeCity(userCity.id)
+			WeatherForecastPage.waitForCityChangedTo(userCityForecast.city)
+			expect(WeatherForecastPage.currentTemperature.getText()).toBe(userCityForecast.now.temperature)
+			expect(WeatherForecastPage.generalWeatherState.getText()).toContain(userCityForecast.now.phenomena)
+			WeatherForecastPage.scrollElementIntoView(WeatherForecastPage.nextDaysBlock)
+			_.values(userCityForecast.forecast).forEach(dayOfWeek => {
+				expect(WeatherForecastPage.nextDateDaytimeTemperatureRange(
+					dayOfWeek.dateTextDayOfWeek, dayOfWeek.dayTemperature.min, dayOfWeek.dayTemperature.max)
+					.isDisplayed())
+					.toBe(true)
+			})
+			browser.sleep(3000)
 		})
 	})
 })

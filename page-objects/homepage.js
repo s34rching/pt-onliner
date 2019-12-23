@@ -16,6 +16,9 @@ class HomePage extends BasePage {
 	openCurrencyExchangeRatesPage() {
 		this.currencyInformer.click()
 	}
+	openWeatherForecastPage() {
+		this.weatherInformer.click()
+	}
 }
 
 module.exports = new HomePage()
