@@ -1,12 +1,13 @@
 {
   "version": "1.0.0",
   "scripts": {
-    "lint-staged": "npx lint-staged",
+    "webdriver": "webdriver-manager update && webdriver-manager start",
     "full": "protractor conf.js --suite full",
     "search": "protractor conf.js --suite search",
     "navigation": "protractor conf.js --suite navigation",
     "products-list": "protractor conf.js --suite products-list",
-    "top-informers": "protractor conf.js --suite top-informers"
+    "top-informers": "protractor conf.js --suite top-informers",
+    "lint-staged": "npx lint-staged"
   },
   "repository": {
     "type": "git",
