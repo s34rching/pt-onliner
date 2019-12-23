@@ -1,8 +1,8 @@
 module.exports = {
 	mainTiles: [
 		{
-			ruName: "Время делать подарки!",
-			path: "/2019/12/02/rozygrysh-5?utm_source=main_tile&utm_medium=rozygrysh5&_ga=2.126731274.686889813.1575486217-1776173241.1573712126",
+			ruName: "Что подарить родителям?",
+			path: "/2019/12/12/parents-gits?utm_source=main_tile&utm_medium=parents-gits",
 			isUnique: false
 		},
 		{
@@ -11,23 +11,23 @@ module.exports = {
 			isUnique: true
 		},
 		{
-			ruName: "Роботы-пылесосы",
-			path: "/robotcleaner?utm_source=main_tile&utm_medium=robotcleaner",
+			ruName: "Новогодние ёлочки",
+			path: "/tree?utm_source=main_tile&utm_medium=tree",
 			isUnique: true
 		},
 		{
-			ruName: "Зимние шины в Каталоге!",
-			path: "/tires?season_tires%5B0%5D=winter&season_tires%5Boperation%5D=union&utm_source=main_tile&utm_medium=tires",
-			isUnique: true
-		},
-		{
-			ruName: "Смартфон за честный отзыв!",
-			path: "/2019/12/02/rozygrysh-4?utm_source=main_tile&utm_medium=rozygrysh4&_ga=2.127913738.686889813.1575486217-1776173241.1573712126",
+			ruName: "Выбираем подарки для детей!",
+			path: "/2019/12/14/children-gifts?utm_source=main_tile&utm_medium=children-gifts",
 			isUnique: false
 		},
 		{
-			ruName: "Купляйце тэлевiзары Samsung",
-			path: "/article/131295-poleznye-stati/606699-qled-2019-realnyy-mir-v-razreshenii-8k",
+			ruName: "Подарки для мужчин",
+			path: "/2019/12/17/vybrat-podarok-na-novyj-god?utm_source=main_tile&utm_medium=men-gifts",
+			isUnique: false
+		},
+		{
+			ruName: "Подарки для женщин",
+			path: "/2019/12/21/podarki-na-novyj-god-2?utm_source=main_tile&utm_medium=women-gifts",
 			isUnique: false
 		}
 	],
