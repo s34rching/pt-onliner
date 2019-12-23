@@ -22,5 +22,7 @@
 >>> Next PR review 22. Change to async / await
 23. Suites
 + DONE 24. HTML reporter
-25. Update specs according to Protractor control flow
++ DONE 25. Update specs according to Protractor control flow
 26. Scripts
+
+
