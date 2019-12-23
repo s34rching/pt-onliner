@@ -11,19 +11,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ilesak/pt-in-col.git"
+    "url": "git+https://github.com/s34rching/pt-onliner.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ilesak/pt-in-col/issues"
+    "url": "https://github.com/s34rching/pt-onliner/issues"
   },
   "lint-staged": {
     "*.js": "eslint --fix",
     "*.json": "eslint --fix"
   },
   "pre-commit": "lint-staged",
-  "homepage": "https://github.com/ilesak/pt-in-col#readme",
+  "homepage": "https://github.com/s34rching/pt-onliner#readme",
   "devDependencies": {
     "babel-eslint": "^10.0.3",
     "chai": "^4.2.0",
