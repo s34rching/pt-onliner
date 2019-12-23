@@ -90,7 +90,6 @@ describe("Onliner.by - Top Navigation / Informers", () => {
 						})
 					})
 			})
-			browser.sleep(3000)
 		})
 	})
 
@@ -117,7 +116,6 @@ describe("Onliner.by - Top Navigation / Informers", () => {
 					.isDisplayed())
 					.toBe(true)
 			})
-			browser.sleep(3000)
 		})
 	})
 })
