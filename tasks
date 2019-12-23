@@ -25,4 +25,13 @@
 + DONE 25. Update specs according to Protractor control flow
 26. Scripts
 
+Code cleanup:
+- waiters
+- request-promise / separate helper
+- fixture
+- flakers
+- wrappers
+- hooks / common steps
+- constructor: elements nesting
+- po files names
 
