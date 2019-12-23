@@ -1,6 +1,8 @@
 const HomePage = require("../page-objects/homepage")
 const ExchangeRatesPage = require("../page-objects/currency-exchange-page")
+const random = require("../helpers/get-random-testing-data")
 const rp = require("request-promise")
+const _ = require("lodash")
 
 describe("Onliner.by - Top Navigation / Informers", () => {
 
@@ -28,7 +30,7 @@ describe("Onliner.by - Top Navigation / Informers", () => {
 			})
 		})
 
-		it("shows exchange services locations on the map", () => {
+		xit("shows exchange services locations on the map", () => {
 			HomePage.goTo("/")
 			HomePage.openCurrencyExchangeRatesPage()
 			ExchangeRatesPage.openBestExchangeRatesLocations()
@@ -44,8 +46,40 @@ describe("Onliner.by - Top Navigation / Informers", () => {
 			})
 		})
 
-		it("currency exchange calculator", () => {
+		it("user should be able to convert currencies", () => {
 
+			let currencies = []
+			let currenciesIn = []
+			let currenciesOut = []
+			let exchangeRateByDirection
+			const randomCurrencyAmount = random.getRandomNumber(20, 10000)
+
+			HomePage.goTo("/")
+			HomePage.openCurrencyExchangeRatesPage()
+			ExchangeRatesPage.waitForConvertOutDataVisible()
+			ExchangeRatesPage.convertInCurrenciesDropdown.all(by.tagName("option")).each(option => {
+				option.getText().then(currencyName => { currencies.push(currencyName)})
+			}).then(() => {
+				currenciesIn = _.without(currencies, "BYN")
+				currenciesOut = _.without(currencies, "EUR")
+				const currencyIn = _.sample(currenciesIn)
+				const currencyOut = _.sample(_.without(currenciesOut, currencyIn))
+				ExchangeRatesPage.bestExchangeRateByCurrencyDirection(currencyIn.toLowerCase(), currencyOut.toLowerCase())
+					.getAttribute("data-title")
+					.then(value => {
+						exchangeRateByDirection = value.match(/\d+,\d+/)[0]
+						ExchangeRatesPage.chooseCurrencyToConvert("in", currencyIn)
+						ExchangeRatesPage.chooseCurrencyToConvert("out", currencyOut)
+						ExchangeRatesPage.enterCurrencyAmountToConvert(randomCurrencyAmount)
+						ExchangeRatesPage.conversionResult.getText().then(conversionResult => {
+							expect(parseFloat(conversionResult
+								.replace(",", ".")
+								.replace(" ", "")))
+								.toBe(parseFloat(exchangeRateByDirection.replace(",", ".")) * randomCurrencyAmount)
+						})
+					})
+			})
+			browser.sleep(3000)
 		})
 	})
 
