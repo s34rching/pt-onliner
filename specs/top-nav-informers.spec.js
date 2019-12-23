@@ -7,13 +7,17 @@ const _ = require("lodash")
 describe("Onliner.by - Top Navigation / Informers", () => {
 
 	let bestUsdExchangeRate
+	let forecast
 
 	beforeAll(() => {
 		// eslint-disable-next-line no-unused-vars
 		return new Promise((resolve, reject) => {
 			rp("https://www.onliner.by/sdapi/kurs/api/bestrate?currency=USD&type=nbrb").then(res => {
 				bestUsdExchangeRate = JSON.parse(res).amount
-				resolve()
+				rp("https://www.onliner.by/sdapi/pogoda/api/forecast").then(res => {
+					forecast = JSON.parse(res)
+					resolve()
+				})
 			})
 		})
 	})
@@ -46,7 +50,7 @@ describe("Onliner.by - Top Navigation / Informers", () => {
 			})
 		})
 
-		it("user should be able to convert currencies", () => {
+		xit("user should be able to convert currencies", () => {
 
 			let currencies = []
 			let currenciesIn = []
@@ -85,7 +89,10 @@ describe("Onliner.by - Top Navigation / Informers", () => {
 
 	describe("Weather forecast", () => {
 		it("shows weather in user's default city on the homepage", () => {
-
+			HomePage.goTo("/")
+			HomePage.currentTemperature.getText().then(currentTemperature => {
+				expect(currentTemperature.match(/\d+/)[0]).toBe(forecast.now.temperature.match(/\d+/)[0])
+			})
 		})
 
 		it("user is able to change their default city", () => {
