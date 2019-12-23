@@ -4,9 +4,9 @@ class LoginPage extends BasePage {
 	constructor() {
 		super()
 		this.authFormTitle = element(by.cssContainingText(".auth-form__title", "Вход"))
-		this.socialMediaLoginButtonsGroup = element(by.css(".auth-input__combo"))
-		this.nameInput = element(by.css("input[placeholder='Ник или e-mail']"))
-		this.passwordInput = element(by.css("input[type='password']"))
+		this.socialMediaLoginButtonsGroup = $(".auth-input__combo")
+		this.nameInput = $("input[placeholder='Ник или e-mail']")
+		this.passwordInput = $("input[type='password']")
 	}
 
 }

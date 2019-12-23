@@ -8,7 +8,7 @@ class ExchangeRatesPage extends BasePage {
 		this.convertInAmount = this.convertInData.element(by.id("amount-in"))
 		this.convertOutData = element(by.id("converter-out"))
 		this.convertOutCurrenciesDropdown = this.convertOutData.element(by.id("currency-out"))
-		this.conversionResult = this.convertOutData.element(by.css("b.js-cur-result"))
+		this.conversionResult = this.convertOutData.$("b.js-cur-result")
 		this.convertCurrenciesDropdownOptionByValue = function(dropdown, value) {
 			if(dropdown === "in") {
 				return this.convertInCurrenciesDropdown.element(by.cssContainingText("option", value))
@@ -19,11 +19,11 @@ class ExchangeRatesPage extends BasePage {
 		this.bestExchangeRatesLocationsLink = this.convertOutData.all(by.tagName("p")).last()
 		this.bestExchangeRateByCurrencyDirection = function(currencyIn, currencyOut) {
 			return this.bestExchangeRatesLocationsLink
-				.all(by.css(`a[data-direction="${currencyIn}-to-${currencyOut}"]`))
+				.$$(`a[data-direction="${currencyIn}-to-${currencyOut}"]`)
 				.first()
 		}
-		this.exchangeServicesMap = element(by.css("div.b-currency-map-i"))
-		this.exchangeServicesMapPointers = this.exchangeServicesMap.all(by.css("ymaps.ymaps-image"))
+		this.exchangeServicesMap = $("div.b-currency-map-i")
+		this.exchangeServicesMapPointers = this.exchangeServicesMap.$$("ymaps.ymaps-image")
 		this.exchangeServicesMapLocations = this.exchangeServicesMap.element(by.tagName("em"))
 	}
 

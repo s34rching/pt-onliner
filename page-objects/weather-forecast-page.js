@@ -3,18 +3,18 @@ const BasePage = require("./base-page")
 class WeatherForecastPage extends BasePage {
 	constructor() {
 		super()
-		this.currentCityButton = element(by.css("a.js-weather-city"))
+		this.currentCityButton = $("a.js-weather-city")
 		this.currentCityButtonByName = function(cityName) {
 			return element(by.cssContainingText("a.js-weather-city", cityName))
 		}
-		this.cityOptionsDropdown = element(by.css("div[class='b-weather__city-select'][class='js-visible']"))
+		this.cityOptionsDropdown = $("div[class='b-weather__city-select'][class='js-visible']")
 		this.cityOption = function(cityId) {
-			return element(by.css(`a[data-wmoid="${cityId}"]`))
+			return $(`a[data-wmoid="${cityId}"]`)
 		}
-		this.currentWeather = element(by.css(".b-weather-today__actual"))
-		this.currentTemperature = this.currentWeather.element(by.css(".grad")).element(by.css("span.value"))
+		this.currentWeather = $(".b-weather-today__actual")
+		this.currentTemperature = this.currentWeather.$(".grad").$("span.value")
 		this.generalWeatherState = this.currentWeather.element(by.tagName("dd"))
-		this.nextDaysBlock = element(by.css(".b-weather-next"))
+		this.nextDaysBlock = $(".b-weather-next")
 		this.nextDateDaytimeTemperatureRange = function(day, temperatureMin, temperatureMax) {
 			if (temperatureMax === null) {
 				return element(by.xpath(`//li[contains(@class, 'b-weather-next__day') and descendant::dt[text()] = '${day}']`))

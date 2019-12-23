@@ -5,20 +5,20 @@ class Catalog extends BasePage {
 	constructor() {
 		super()
 		this.sectionItem = function(itemId) {
-			return element(by.css(`[class="catalog-navigation-classifier__item "][data-id="${itemId}"]`))
+			return $(`[class="catalog-navigation-classifier__item "][data-id="${itemId}"]`)
 		}
 
 		this.categoryItem = function(categoryTitle) {
 			return element(by.cssContainingText(".catalog-navigation-list__aside-title", categoryTitle.match(/^\S+/)))
 		}
 		this.subCategoryItem = function(subcategoryItem) {
-			return element(by.css(`a[href$="${subcategoryItem.path}"][class="catalog-navigation-list__dropdown-item"]`))
+			return $(`a[href$="${subcategoryItem.path}"][class="catalog-navigation-list__dropdown-item"]`)
 		}
 		this.catalogBar = element(by.className("catalog-bar"))
 		this.tile = function(tileTitle) {
 			return element(by.cssContainingText("span.tiles__title", tileTitle))
 		}
-		this.categoryFirstProduct = element.all(by.css(".schema-product__group"))
+		this.categoryFirstProduct = $$(".schema-product__group")
 			.first()
 			.all(by.css("a"))
 			.first()

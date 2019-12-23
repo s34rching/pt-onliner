@@ -1,6 +1,6 @@
 class BasePage {
 	constructor() {
-		this.searchBar = element(by.css("input.fast-search__input"))
+		this.searchBar = $("input.fast-search__input")
 	}
 
 	goTo(path) {

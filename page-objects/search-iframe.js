@@ -4,11 +4,11 @@ class SearchIframe extends BasePage {
 	constructor() {
 		super()
 		this.fastSearchModal = element(by.id("fast-search-modal"))
-		this.searchIframe = element(by.css(".modal-iframe"))
+		this.searchIframe = $(".modal-iframe")
 		this.productTitle = function(productTitle) {
 			return element.all(by.cssContainingText(".product__title-link", productTitle)).first()
 		}
-		this.firstResultItemProduct = element.all(by.css(".result__item_product")).first()
+		this.firstResultItemProduct = $$(".result__item_product").first()
 		this.resultItemProduct = function(productTitle) {
 			return this.productTitle(productTitle)
 				// TODO: THIS
@@ -17,13 +17,13 @@ class SearchIframe extends BasePage {
 				.element(by.xpath(".."))
 		}
 		this.productPrice = function(productTitle) {
-			return this.resultItemProduct(productTitle).element(by.css(".product__price"))
+			return this.resultItemProduct(productTitle).$(".product__price")
 		}
 		this.resultItemSubcategory = function(subcategoryTitle) {
 			return element(by.cssContainingText(".category__title", subcategoryTitle))
 		}
-		this.closeSearchBarButton = element(by.css(".search__close"))
-		this.searchBarSuggestion = element(by.css(".search__suggest-addon"))
+		this.closeSearchBarButton = $(".search__close")
+		this.searchBarSuggestion = $(".search__suggest-addon")
 	}
 
 	switchToSearchIframe() {
