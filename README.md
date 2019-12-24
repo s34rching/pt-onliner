@@ -41,21 +41,21 @@ scenarios to 25. The quality and ideas of test cases are various form case to ca
 ## Installation
 
 Clone repo to local machine with
-`git clone https://github.com/s34rching/pt-onliner.git`
+```git clone https://github.com/s34rching/pt-onliner.git``
 
 `cd` cloned repo and run
-`npm install`
+```npm install``
 
 ## Usage
 
 Update `webdriver-manager` and start server with
-`npm run webdriver`
+```npm run webdriver``
 
 To run all tests
-`npm run full`
+```npm run full``
 
 To run suites jump into package.json to get suite-name and
-`npm run <suite-name>`
+```npm run <suite-name>```
 
 ## Reporting
 HTML report is ready for you after each run in `./reports` as `report.html`
