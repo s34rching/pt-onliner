@@ -16,7 +16,7 @@
 + DONE 16. Git: Milestones
 + DONE 17. Git: Labels <<<
 + DONE 18. Git: Merging requires review <<<
-19. Add readme
++ DONE 19. Add readme
 + DONE 20. Change basic CLI reporter
 >>> Next PR review 21. Change CommonJS export to ES6
 >>> Next PR review 22. Change to async / await
