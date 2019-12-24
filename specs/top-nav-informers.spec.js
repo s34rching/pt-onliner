@@ -74,7 +74,12 @@ describe("Onliner.by - Top Navigation / Informers", () => {
 				currenciesIn = _.without(currencies, "BYN")
 				currenciesOut = _.without(currencies, "EUR")
 				const currencyIn = _.sample(currenciesIn)
-				const currencyOut = _.sample(_.without(currenciesOut, currencyIn))
+				let currencyOut
+				if (currencyIn === "RUB") {
+					currencyOut = _.sample(_.without(currenciesOut, currencyIn, "USD"))
+				} else {
+					currencyOut = _.sample(_.without(currenciesOut, currencyIn))
+				}
 				ExchangeRatesPage.bestExchangeRateByCurrencyDirection(currencyIn.toLowerCase(), currencyOut.toLowerCase())
 					.getAttribute("data-title")
 					.then(value => {
@@ -83,10 +88,19 @@ describe("Onliner.by - Top Navigation / Informers", () => {
 						ExchangeRatesPage.chooseCurrencyToConvert("out", currencyOut)
 						ExchangeRatesPage.enterCurrencyAmountToConvert(randomCurrencyAmount)
 						ExchangeRatesPage.conversionResult.getText().then(conversionResult => {
-							expect(parseFloat(conversionResult
-								.replace(",", ".")
-								.replace(" ", "")))
-								.toBe(parseFloat(exchangeRateByDirection.replace(",", ".")) * randomCurrencyAmount)
+							if (currencyIn === "RUB" && currencyOut === "BYN") {
+								expect(parseFloat(conversionResult
+									.replace(",", ".")
+									.replace(" ", ""))
+									.toFixed(2))
+									.toBe((parseFloat(exchangeRateByDirection.replace(",", ".")) * randomCurrencyAmount / 100).toFixed(2))
+							} else {
+								expect(parseFloat(conversionResult
+									.replace(",", ".")
+									.replace(" ", ""))
+									.toFixed(2))
+									.toBe((parseFloat(exchangeRateByDirection.replace(",", ".")) * randomCurrencyAmount).toFixed(2))
+							}
 						})
 					})
 			})

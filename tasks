@@ -33,5 +33,6 @@ Code cleanup:
 - wrappers
 - hooks / common steps
 - constructor: elements nesting
-- po files names
++ DONE // - $ / $$ // completed
++ DONE // - po files names // good as is
 
