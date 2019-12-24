@@ -25,7 +25,7 @@ exports.getRandomUniqueSubcategory = function(categoryItem) {
 }
 
 exports.getRandomCatalogMainTile = function() {
-	return _.sample(_.filter(catalogTree.mainTiles, mainTile => {return mainTile.isUnique === true}))
+	return _.sample(_.filter(catalogTree.mainTiles, { isUnique: true }))
 }
 
 exports.getRandomSectionTile = function(classifierItem) {

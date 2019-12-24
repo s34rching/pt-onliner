@@ -6,7 +6,7 @@ module.exports = {
 			isUnique: false
 		},
 		{
-			ruName: "Термосы, термокружки",
+			ruName: "Термосы, термокружечки",
 			path: "/thermosbottle?utm_source=main_tile&utm_medium=thermosbottle",
 			isUnique: true
 		},

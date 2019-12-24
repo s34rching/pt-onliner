@@ -16,7 +16,7 @@ class Catalog extends BasePage {
 		}
 		this.catalogBar = element(by.className("catalog-bar"))
 		this.tile = function(tileTitle) {
-			return element(by.cssContainingText("span.tiles__title", tileTitle))
+			return element.all(by.xpath(`//div[contains(@class, tiles__item) and descendant::span[contains(., '${tileTitle}')]]`)).last()
 		}
 		this.categoryFirstProduct = $$(".schema-product__group")
 			.first()
@@ -54,7 +54,7 @@ class Catalog extends BasePage {
 			})
 	}
 	followTilesLinks(tileTitle) {
-		browser.wait(this.isClickable(this.tile(tileTitle)))
+		browser.wait(this.isVisible(this.tile(tileTitle)))
 		this.tile(tileTitle).click()
 	}
 }
