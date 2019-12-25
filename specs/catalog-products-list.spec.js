@@ -16,28 +16,25 @@ describe("Onliner.by - Catalog / Products List", () => {
 	let usedCPUs
 	let shopList
 
-	beforeAll(() => {
-		// eslint-disable-next-line no-unused-vars
-		return new Promise((resolve, reject) => {
-			rp("https://catalog.onliner.by/sdapi/catalog.api/search/cpu").then(res => {
-				allCPUs = JSON.parse(res)
-				return rp("https://catalog.onliner.by/sdapi/catalog.api/search/cpu?order=reviews_rating:desc")
-			}).then(res => {
-				CPUsFilteredByRating = JSON.parse(res)
-				return rp("https://catalog.onliner.by/sdapi/catalog.api/search/cpu?mfr[0]=amd")
-			}).then(res => {
-				amdCPUs = JSON.parse(res)
-				return rp("https://catalog.onliner.by/sdapi/catalog.api/search/cpu?mfr[0]=intel")
-			}).then(res => {
-				intelCPUs = JSON.parse(res)
-				return rp("https://catalog.onliner.by/sdapi/catalog.api/search/cpu/second-offers?segment=second")
-			}).then(res => {
-				usedCPUs = JSON.parse(res)
-				return rp("https://catalog.onliner.by/sdapi/shop.api/products/i59400fb/positions?town=minsk")
-			}).then(res => {
-				shopList = JSON.parse(res)
-				resolve()
-			})
+	beforeAll(done => {
+		rp("https://catalog.onliner.by/sdapi/catalog.api/search/cpu").then(res => {
+			allCPUs = JSON.parse(res)
+			return rp("https://catalog.onliner.by/sdapi/catalog.api/search/cpu?order=reviews_rating:desc")
+		}).then(res => {
+			CPUsFilteredByRating = JSON.parse(res)
+			return rp("https://catalog.onliner.by/sdapi/catalog.api/search/cpu?mfr[0]=amd")
+		}).then(res => {
+			amdCPUs = JSON.parse(res)
+			return rp("https://catalog.onliner.by/sdapi/catalog.api/search/cpu?mfr[0]=intel")
+		}).then(res => {
+			intelCPUs = JSON.parse(res)
+			return rp("https://catalog.onliner.by/sdapi/catalog.api/search/cpu/second-offers?segment=second")
+		}).then(res => {
+			usedCPUs = JSON.parse(res)
+			return rp("https://catalog.onliner.by/sdapi/shop.api/products/i59400fb/positions?town=minsk")
+		}).then(res => {
+			shopList = JSON.parse(res)
+			done()
 		})
 	})
 
@@ -174,7 +171,7 @@ describe("Onliner.by - Catalog / Products List", () => {
 		ProductsList.usedProductPriceByProductTitle(firstUsedOffer.product.full_name).getText().then(price => {
 			assert.isNumber(parseFloat(price.replace(",", ".")))
 		})
-		ProductsList.openUsedUserProductOfferByProductName({ productTitle: firstUsedOffer.product.full_name })
+		ProductsList.openUsedUserProductOfferByProductName(firstUsedOffer.product.full_name)
 		ProductDetailsPage.waitForUsedProductPrice()
 		ProductDetailsPage.scrollElementIntoView(ProductDetailsPage.usedProductNameHeading)
 		expect(ProductDetailsPage.usedProductDescription.isDisplayed()).toBe(true)
