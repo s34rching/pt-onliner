@@ -30,7 +30,7 @@ Code cleanup:
 - request-promise / separate helper
 - fixture
 - flakers
-- wrappers
++ DONE // - wrappers
 - hooks / common steps
 - constructor: elements nesting
 + DONE // - $ / $$ // completed
