@@ -120,7 +120,7 @@ describe("Onliner.by - Catalog / Products List", () => {
 
 		ProductsList.goTo("/cpu")
 		ProductsList.waitForProperTotalOfFoundProducts(allCPUs.total.toString())
-		ProductsList.productCards.then(productCards => {
+		ProductsList.product({ all: true }).then(productCards => {
 			_.take(productCards, numberOfProductsToCompare).forEach(productCard => {
 				productCard
 					.element(by.css(".schema-product__compare"))
@@ -174,7 +174,7 @@ describe("Onliner.by - Catalog / Products List", () => {
 		ProductsList.usedProductPriceByProductTitle(firstUsedOffer.product.full_name).getText().then(price => {
 			assert.isNumber(parseFloat(price.replace(",", ".")))
 		})
-		ProductsList.openUsedUserProductOfferByProductName(firstUsedOffer.product.full_name)
+		ProductsList.openUsedUserProductOfferByProductName({ productTitle: firstUsedOffer.product.full_name })
 		ProductDetailsPage.waitForUsedProductPrice()
 		ProductDetailsPage.scrollElementIntoView(ProductDetailsPage.usedProductNameHeading)
 		expect(ProductDetailsPage.usedProductDescription.isDisplayed()).toBe(true)

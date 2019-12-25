@@ -1,5 +1,6 @@
 const HomePage = require("../page-objects/homepage")
 const Catalog = require("../page-objects/catalog")
+const ProductsList = require("../page-objects/products-list")
 const entities = require("../helpers/get-entities")
 
 describe("Onliner.by - Catalog / Navigation", () => {
@@ -38,8 +39,8 @@ describe("Onliner.by - Catalog / Navigation", () => {
 			HomePage.goTo("/")
 			HomePage.openCatalog()
 			Catalog.followRandomCatalogBarLink()
+			expect(browser.wait(ProductsList.isVisible(ProductsList.product()))).toBe(true)
 			browser.wait(protractor.ExpectedConditions.visibilityOf(element(by.css("#schema-filter"))))
-			expect(element.all(by.css(".schema-product__group")).first().isDisplayed()).toBe(true)
 		})
 
 		it("then they should be able to open subcategory pages following main tile links", () => {
@@ -49,7 +50,7 @@ describe("Onliner.by - Catalog / Navigation", () => {
 			HomePage.goTo("/")
 			HomePage.openCatalog()
 			Catalog.followTilesLinks(randomMainTile.ruName)
-			expect(element.all(by.css(".schema-product__group")).first().isDisplayed()).toBe(true)
+			expect(browser.wait(ProductsList.isVisible(ProductsList.product()))).toBe(true)
 			expect(element(by.css("#schema-filter")).isDisplayed()).toBe(true)
 			expect(browser.getCurrentUrl()).toContain(randomMainTile.path)
 		})
@@ -62,7 +63,7 @@ describe("Onliner.by - Catalog / Navigation", () => {
 			HomePage.openCatalog()
 			Catalog.chooseClassifierItem(randomClassifierItem.id)
 			Catalog.followTilesLinks(randomSectionTile.ruName)
-			expect(element.all(by.css(".schema-product__group")).first().isDisplayed()).toBe(true)
+			expect(browser.wait(ProductsList.isVisible(ProductsList.product()))).toBe(true)
 			expect(element(by.css("#schema-filter")).isDisplayed()).toBe(true)
 			expect(browser.getCurrentUrl()).toContain(randomSectionTile.path)
 		})
@@ -84,7 +85,7 @@ describe("Onliner.by - Catalog / Navigation", () => {
 			Catalog.openCategoryFirstProductDetailsPage()
 			browser.wait(protractor.ExpectedConditions.visibilityOf(element(by.css(".product"))))
 			expect(element(by.css("#product-sub-navigation-container")).isDisplayed()).toBe(true)
-			expect(element(by.css("#specs")).isDisplayed()).toBe(true)
+			expect(browser.wait(Catalog.isVisible(element(by.css("#specs"))))).toBe(true)
 		})
 	})
 })

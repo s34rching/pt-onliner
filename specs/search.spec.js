@@ -41,7 +41,7 @@ describe("Onliner.by - Products / Search", () => {
 		expect(SearchIframe.resultItemSubcategory(randomSubcategory.ruName).isDisplayed()).toBe(true)
 		SearchIframe.openSubcategoryPage(randomSubcategory.ruName)
 		expect(browser.getCurrentUrl()).toContain(randomSubcategory.path)
-		expect(Catalog.categoryFirstProduct.isDisplayed()).toBe(true)
+		expect(Catalog.categoryProduct.isDisplayed()).toBe(true)
 	})
 
 	it("should allow to abort search", () => {

@@ -35,6 +35,7 @@ class Catalog extends BasePage {
 	}
 
 	openSubcategory(subcategoryItem) {
+		this.scrollElementIntoView(this.subCategoryItem(subcategoryItem))
 		browser.wait(this.isClickable(this.subCategoryItem(subcategoryItem)))
 		this.subCategoryItem(subcategoryItem).click()
 	}

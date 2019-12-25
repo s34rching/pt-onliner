@@ -15,9 +15,6 @@ class ProductsList extends BasePage {
 		}
 		this.productRatings = $$("a.schema-product__rating").$$("span.schema-product__review-count")
 		this.productsTitles = $$(".schema-product__title").all(by.tagName("span"))
-		this.productTitleByProductName = function(productName) {
-			return element.all(by.cssContainingText(".schema-product__title", productName)).first()
-		}
 		this.filters = element(by.id("schema-filter"))
 		this.filterByName = function(filterName) {
 			return element(by.cssContainingText(".schema-filter__label", filterName))
@@ -33,7 +30,6 @@ class ProductsList extends BasePage {
 		this.initiateFiltersResetButton = $("span.schema-filter-button__sub_control")
 		this.confirmFiltersResetButton = element(by.cssContainingText("span.schema-filter-button__sub",
 			"Сбросить фильтр"))
-		this.productCards = $$(".schema-product__group")
 		this.compareProductsButton = function(numberOfProductsToCompare) {
 			return element(by.cssContainingText(".compare-button__sub_main", numberOfProductsToCompare.toString()))
 		}
@@ -47,6 +43,17 @@ class ProductsList extends BasePage {
 		this.createUsedOfferButton = $("a[href='/used/create']")
 		this.productByTitle = function(productTitle) {
 			return element(by.xpath(`//div[contains(@class, "schema-product__group") and descendant::span[text()] = "${productTitle}"]`))
+		}
+		this.product = function({ productIndex, productTitle, all } = {}) {
+			if (productIndex) {
+				return $$(".schema-product").get(productIndex)
+			} else if (productTitle) {
+				return element(by.xpath(`//div[contains(@class, "schema-product") and descendant::span[text()] = "${productTitle}"]`))
+			} else if (all) {
+				return $$(".schema-product")
+			} else {
+				return $$(".schema-product").first()
+			}
 		}
 		this.productTitle = function(productTitle) {
 			return this.productByTitle(productTitle)

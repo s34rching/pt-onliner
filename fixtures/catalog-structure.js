@@ -49,7 +49,7 @@ module.exports = {
 				{
 					ruName: "Умный дом",
 					path: "/smart_home?utm_source=el_title&utm_medium=smart_home",
-					isUnique: true
+					isUnique: false
 				},
 				{
 					ruName: "Портативные приставки",
@@ -1072,7 +1072,7 @@ module.exports = {
 							ruName: "Жесткие диски",
 							subcategoryPageRuHeading: "Жесткие диски",
 							path: "/hdd",
-							isUnique: true,
+							isUnique: false,
 							position: 0
 						},
 						computerCases: {
@@ -1275,7 +1275,7 @@ module.exports = {
 							ruName: "Жесткие диски",
 							subcategoryPageRuHeading: "HDD",
 							path: "/hdd",
-							isUnique: true,
+							isUnique: false,
 							position: 0
 						},
 						externalHdd: {
