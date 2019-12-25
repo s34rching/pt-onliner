@@ -20,13 +20,14 @@ describe("Onliner.by - Catalog / Products List", () => {
 
 	beforeEach(() => {
 		browser.waitForAngularEnabled(false)
+
+		ProductsList.goTo("/cpu")
+		ProductsList.waitForProperTotalOfFoundProducts(allCPUs.total.toString())
 	})
 
 	describe("When user opens subcategory products list", () => {
 
 		it("Then products default sort order is set as 'Popular'", () => {
-			ProductsList.goTo("/cpu")
-			ProductsList.waitForProperTotalOfFoundProducts(allCPUs.total.toString())
 			ProductsList.orderDropdownActiveOrderOption.getText().then(text => {
 				expect(text).toBe("популярные")
 			})
@@ -48,8 +49,6 @@ describe("Onliner.by - Catalog / Products List", () => {
 
 			let ratingsArray = []
 
-			ProductsList.goTo("/cpu")
-			ProductsList.waitForProperTotalOfFoundProducts(allCPUs.total.toString())
 			ProductsList.openOrderListDropDown()
 			ProductsList.waitForOrderDropdownListIsVisible()
 			ProductsList.chooseOrderDropdownOptionByName("С отзывами")
@@ -81,8 +80,6 @@ describe("Onliner.by - Catalog / Products List", () => {
 
 			let productsTitles = []
 
-			ProductsList.goTo("/cpu")
-			ProductsList.waitForProperTotalOfFoundProducts(allCPUs.total.toString())
 			ProductsList.scrollElementIntoView(ProductsList.filterByName("Производитель"))
 			ProductsList.filterProducts("Производитель", "Intel")
 			ProductsList.scrollElementIntoView(ProductsList.productsListTitle)
@@ -113,9 +110,6 @@ describe("Onliner.by - Catalog / Products List", () => {
 			})
 
 			it("then products list should be restored to its initial state", () => {
-
-				ProductsList.goTo("/cpu")
-				ProductsList.waitForOrderDefaultOptionIsDisplayed()
 				ProductsList.waitForProperTotalOfFoundProducts(allCPUs.total.toString())
 				ProductsList.scrollElementIntoView(ProductsList.filterByName("Производитель"))
 				ProductsList.filterProducts("Производитель", "AMD")
@@ -142,8 +136,6 @@ describe("Onliner.by - Catalog / Products List", () => {
 				const firstProductShortName = firstProduct.url.match(/(?<=\/products\/).+$/)[0]
 				const secondProductShortName = secondProduct.url.match(/(?<=\/products\/).+$/)[0]
 
-				ProductsList.goTo("/cpu")
-				ProductsList.waitForProperTotalOfFoundProducts(allCPUs.total.toString())
 				ProductsList.product({ all: true }).then(productCards => {
 					_.take(productCards, numberOfProductsToCompare).forEach(productCard => {
 						productCard
@@ -176,8 +168,6 @@ describe("Onliner.by - Catalog / Products List", () => {
 			const firstProduct = allCPUs.products[0]
 			const firstShop = shopList.positions.primary[0]
 
-			ProductsList.goTo("/cpu")
-			ProductsList.waitForProperTotalOfFoundProducts(allCPUs.total.toString())
 			ProductsList.openFirstProductOffersPage()
 			ProductsList.waitForUrlContains(`/${firstProduct.url.match(/(?<=\/products\/).+$/)[0]}/prices`)
 			ProductOffers.subNavActiveTab.getText()
@@ -212,8 +202,6 @@ describe("Onliner.by - Catalog / Products List", () => {
 
 				const firstUsedOffer = usedCPUs.offers[0]
 
-				ProductsList.goTo("/cpu")
-				ProductsList.waitForProperTotalOfFoundProducts(allCPUs.total.toString())
 				ProductsList.switchToSection("Объявления")
 				ProductsList.waitForUrlContains("/cpu?segment=second")
 				expect(ProductsList.createUsedOfferButton.isDisplayed()).toBe(true)
@@ -236,8 +224,6 @@ describe("Onliner.by - Catalog / Products List", () => {
 		describe("And decides to create their own offer", () => {
 
 			it("Then they have to be log in", () => {
-				ProductsList.goTo("/cpu")
-				ProductsList.waitForProperTotalOfFoundProducts(allCPUs.total.toString())
 				ProductsList.switchToSection("Объявления")
 				ProductsList.waitForProperTotalOfFoundProducts(usedCPUs.total.toString())
 				ProductsList.createUserUsedProductOffer()

@@ -19,6 +19,8 @@ describe("Onliner.by - Top Navigation / Informers", () => {
 
 	beforeEach(() => {
 		browser.waitForAngularEnabled(false)
+
+		HomePage.goTo("/")
 	})
 
 	describe("Currency exchange rates", () => {
@@ -37,7 +39,6 @@ describe("Onliner.by - Top Navigation / Informers", () => {
 				describe("And search for the city best rates locations", () => {
 
 					it("Then they should be able to find exchange services location on a map", () => {
-						HomePage.goTo("/")
 						HomePage.openCurrencyExchangeRatesPage()
 						ExchangeRatesPage.openBestExchangeRatesLocations()
 						ExchangeRatesPage.waitForMapIsLoaded()
@@ -63,7 +64,6 @@ describe("Onliner.by - Top Navigation / Informers", () => {
 						let exchangeRateByDirection
 						const randomCurrencyAmount = random.getRandomNumber(20, 10000)
 
-						HomePage.goTo("/")
 						HomePage.openCurrencyExchangeRatesPage()
 						ExchangeRatesPage.waitForConvertOutDataVisible()
 						ExchangeRatesPage.convertInCurrenciesDropdown.all(by.tagName("option")).each(option => {
@@ -122,7 +122,6 @@ describe("Onliner.by - Top Navigation / Informers", () => {
 			})
 
 			it("Then they should be able to see current temperature in user's default city", () => {
-				HomePage.goTo("/")
 				HomePage.currentTemperature.getText().then(currentTemperature => {
 					expect(currentTemperature.match(/\d+/)[0]).toBe(forecast.now.temperature.match(/\d+/)[0])
 				})
@@ -142,7 +141,6 @@ describe("Onliner.by - Top Navigation / Informers", () => {
 				})
 
 				it("Then they should be able to see current weather and 5-days forecast", () => {
-					HomePage.goTo("/")
 					HomePage.openWeatherForecastPage()
 					WeatherForecastPage.openCitiesOptionsDropdown()
 					WeatherForecastPage.changeCity(userCity.id)

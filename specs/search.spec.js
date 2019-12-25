@@ -12,6 +12,8 @@ describe("Onliner.by - Products / Search", () => {
 
 	beforeEach(() => {
 		browser.waitForAngularEnabled(false)
+
+		HomePage.goTo("/")
 	})
 
 	describe("When user triggers search bar", () => {
@@ -23,7 +25,6 @@ describe("Onliner.by - Products / Search", () => {
 
 					it("Then product should be found", () => {
 
-						HomePage.goTo("/")
 						HomePage.performSearch(activeProduct.query)
 						SearchIframe.switchToSearchIframe()
 						SearchIframe.waitForProductAreLoadedOnModal()
@@ -44,7 +45,6 @@ describe("Onliner.by - Products / Search", () => {
 				const randomCategory = getRandomUniqueCategory(randomClassifierItem)
 				const randomSubcategory = getRandomUniqueSubcategory(randomCategory)
 
-				HomePage.goTo("/")
 				HomePage.performSearch(randomSubcategory.ruName)
 				SearchIframe.switchToSearchIframe()
 				SearchIframe.waitForProductAreLoadedOnModal()
@@ -63,7 +63,6 @@ describe("Onliner.by - Products / Search", () => {
 
 					const product = getProduct("active")
 
-					HomePage.goTo("/")
 					HomePage.performSearch(product.query)
 					SearchIframe.switchToSearchIframe()
 					SearchIframe.waitForProductAreLoadedOnModal()
@@ -80,7 +79,6 @@ describe("Onliner.by - Products / Search", () => {
 
 				const nonExistentProductTitle = "Rigth now i have"
 
-				HomePage.goTo("/")
 				HomePage.performSearch(nonExistentProductTitle)
 				SearchIframe.switchToSearchIframe()
 				expect(SearchIframe.firstResultItemProduct.isPresent()).toBe(false)
@@ -95,7 +93,6 @@ describe("Onliner.by - Products / Search", () => {
 
 				const outOfStockProduct = getProduct("out-of-stock")
 
-				HomePage.goTo("/")
 				HomePage.performSearch(outOfStockProduct.query)
 				SearchIframe.switchToSearchIframe()
 				SearchIframe.waitForProductAreLoadedOnModal()
@@ -110,7 +107,6 @@ describe("Onliner.by - Products / Search", () => {
 
 				const offSaleProduct = getProduct("off-sale")
 
-				HomePage.goTo("/")
 				HomePage.performSearch(offSaleProduct.query)
 				SearchIframe.switchToSearchIframe()
 				SearchIframe.waitForProductAreLoadedOnModal()
@@ -127,7 +123,6 @@ describe("Onliner.by - Products / Search", () => {
 
 					const product = getProduct()
 
-					HomePage.goTo("/")
 					HomePage.performSearch(product.query)
 					SearchIframe.switchToSearchIframe()
 					SearchIframe.waitForProductAreLoadedOnModal()

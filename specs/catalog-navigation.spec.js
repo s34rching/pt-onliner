@@ -17,6 +17,9 @@ describe("Onliner.by - Catalog / Navigation", () => {
 
 	beforeEach(() => {
 		browser.waitForAngularEnabled(false)
+
+		HomePage.goTo("/")
+		HomePage.openCatalog()
 	})
 
 	describe("When user navigates through the 'Catalog'", () => {
@@ -25,8 +28,6 @@ describe("Onliner.by - Catalog / Navigation", () => {
 
 			it("Then they should be able to open product details page", () => {
 
-				HomePage.goTo("/")
-				HomePage.openCatalog()
 				Catalog.chooseClassifierItem(randomClassifierItem.id)
 				Catalog.hoverCategoryItem(randomCategoryItem.ruName)
 				Catalog.openSubcategory(randomSubcategoryItem)
@@ -41,8 +42,6 @@ describe("Onliner.by - Catalog / Navigation", () => {
 
 			it("Then they should be navigated to subcategory pages", () => {
 
-				HomePage.goTo("/")
-				HomePage.openCatalog()
 				Catalog.followRandomCatalogBarLink()
 				expect(browser.wait(ProductsList.isVisible(ProductsList.product()))).toBe(true)
 				browser.wait(protractor.ExpectedConditions.visibilityOf(element(by.css("#schema-filter"))))
@@ -55,8 +54,6 @@ describe("Onliner.by - Catalog / Navigation", () => {
 
 				const randomMainTile = entities.getRandomCatalogMainTile()
 
-				HomePage.goTo("/")
-				HomePage.openCatalog()
 				Catalog.followTilesLinks(randomMainTile.ruName)
 				expect(browser.wait(ProductsList.isVisible(ProductsList.product()))).toBe(true)
 				expect(element(by.css("#schema-filter")).isDisplayed()).toBe(true)
@@ -70,8 +67,6 @@ describe("Onliner.by - Catalog / Navigation", () => {
 
 				const randomSectionTile = entities.getRandomSectionTile(randomClassifierItem)
 
-				HomePage.goTo("/")
-				HomePage.openCatalog()
 				Catalog.chooseClassifierItem(randomClassifierItem.id)
 				Catalog.followTilesLinks(randomSectionTile.ruName)
 				expect(browser.wait(ProductsList.isVisible(ProductsList.product()))).toBe(true)
@@ -90,8 +85,6 @@ describe("Onliner.by - Catalog / Navigation", () => {
 					const secondRandomCategoryItem = entities.getRandomUniqueCategory(secondRandomClassifierItem)
 					const secondRandomSubcategoryItem = entities.getRandomUniqueSubcategory(secondRandomCategoryItem)
 
-					HomePage.goTo("/")
-					HomePage.openCatalog()
 					Catalog.chooseClassifierItem(randomClassifierItem.id)
 					Catalog.hoverCategoryItem(randomCategoryItem.ruName)
 					Catalog.openSubcategory(randomSubcategoryItem)

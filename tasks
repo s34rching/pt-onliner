@@ -31,7 +31,7 @@ Code cleanup:
 - fixture
 - flakers
 + DONE // - wrappers
-- hooks / common steps
++ DONE // - hooks / common steps
 - constructor: elements nesting
 + DONE // - $ / $$ // completed
 + DONE // - po files names // good as is
