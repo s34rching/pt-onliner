@@ -20,7 +20,7 @@ exports.config = {
 		browserName: "chrome",
 		"chromeOptions": {
 			w3c: false,
-			args: ["--disable-browser-side-navigation"]
+			args: [ "--disable-browser-side-navigation", "--disable-popup-blocking" ]
 		}
 	},
 
