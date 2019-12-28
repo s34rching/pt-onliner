@@ -1072,7 +1072,7 @@ module.exports = {
 							ruName: "Жесткие диски",
 							subcategoryPageRuHeading: "Жесткие диски",
 							path: "/hdd",
-							isUnique: true,
+							isUnique: false,
 							position: 0
 						},
 						computerCases: {
@@ -1275,7 +1275,7 @@ module.exports = {
 							ruName: "Жесткие диски",
 							subcategoryPageRuHeading: "HDD",
 							path: "/hdd",
-							isUnique: true,
+							isUnique: false,
 							position: 0
 						},
 						externalHdd: {
