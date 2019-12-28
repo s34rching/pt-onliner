@@ -1,33 +1,33 @@
 module.exports = {
 	mainTiles: [
 		{
-			ruName: "Что подарить родителям?",
-			path: "/2019/12/12/parents-gits?utm_source=main_tile&utm_medium=parents-gits",
+			ruName: "Время делать подарки!",
+			path: "/2019/12/02/rozygrysh-5?utm_source=main_tile&utm_medium=rozygrysh5&_ga=2.126731274.686889813.1575486217-1776173241.1573712126",
 			isUnique: false
 		},
 		{
-			ruName: "Термосы, термокружечки",
+			ruName: "Термосы, термокружки",
 			path: "/thermosbottle?utm_source=main_tile&utm_medium=thermosbottle",
 			isUnique: true
 		},
 		{
-			ruName: "Новогодние ёлочки",
-			path: "/tree?utm_source=main_tile&utm_medium=tree",
+			ruName: "Роботы-пылесосы",
+			path: "/robotcleaner?utm_source=main_tile&utm_medium=robotcleaner",
 			isUnique: true
 		},
 		{
-			ruName: "Выбираем подарки для детей!",
-			path: "/2019/12/14/children-gifts?utm_source=main_tile&utm_medium=children-gifts",
+			ruName: "Зимние шины в Каталоге!",
+			path: "/tires?season_tires%5B0%5D=winter&season_tires%5Boperation%5D=union&utm_source=main_tile&utm_medium=tires",
+			isUnique: true
+		},
+		{
+			ruName: "Смартфон за честный отзыв!",
+			path: "/2019/12/02/rozygrysh-4?utm_source=main_tile&utm_medium=rozygrysh4&_ga=2.127913738.686889813.1575486217-1776173241.1573712126",
 			isUnique: false
 		},
 		{
-			ruName: "Подарки для мужчин",
-			path: "/2019/12/17/vybrat-podarok-na-novyj-god?utm_source=main_tile&utm_medium=men-gifts",
-			isUnique: false
-		},
-		{
-			ruName: "Подарки для женщин",
-			path: "/2019/12/21/podarki-na-novyj-god-2?utm_source=main_tile&utm_medium=women-gifts",
+			ruName: "Купляйце тэлевiзары Samsung",
+			path: "/article/131295-poleznye-stati/606699-qled-2019-realnyy-mir-v-razreshenii-8k",
 			isUnique: false
 		}
 	],
@@ -49,7 +49,7 @@ module.exports = {
 				{
 					ruName: "Умный дом",
 					path: "/smart_home?utm_source=el_title&utm_medium=smart_home",
-					isUnique: false
+					isUnique: true
 				},
 				{
 					ruName: "Портативные приставки",
@@ -1072,7 +1072,7 @@ module.exports = {
 							ruName: "Жесткие диски",
 							subcategoryPageRuHeading: "Жесткие диски",
 							path: "/hdd",
-							isUnique: false,
+							isUnique: true,
 							position: 0
 						},
 						computerCases: {
@@ -1275,7 +1275,7 @@ module.exports = {
 							ruName: "Жесткие диски",
 							subcategoryPageRuHeading: "HDD",
 							path: "/hdd",
-							isUnique: false,
+							isUnique: true,
 							position: 0
 						},
 						externalHdd: {
