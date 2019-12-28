@@ -25,6 +25,8 @@ class Catalog extends BasePage {
 	}
 
 	chooseClassifierItem(itemId) {
+		browser.wait(this.isVisible(this.topNavbar))
+		this.scrollElementIntoView(this.topNavbar)
 		browser.wait(this.isClickable(this.sectionItem(itemId)))
 		this.sectionItem(itemId).click()
 	}
@@ -35,7 +37,6 @@ class Catalog extends BasePage {
 	}
 
 	openSubcategory(subcategoryItem) {
-		this.scrollElementIntoView(this.subCategoryItem(subcategoryItem))
 		browser.wait(this.isClickable(this.subCategoryItem(subcategoryItem)))
 		this.subCategoryItem(subcategoryItem).click()
 	}

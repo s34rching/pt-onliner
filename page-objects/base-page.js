@@ -1,6 +1,7 @@
 class BasePage {
 	constructor() {
 		this.searchBar = $("input.fast-search__input")
+		this.topNavbar = $(".b-top-navigation")
 	}
 
 	goTo(path) {
