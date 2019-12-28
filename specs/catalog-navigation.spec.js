@@ -93,6 +93,7 @@ describe("Onliner.by - Catalog / Navigation", () => {
 					Catalog.chooseClassifierItem(randomClassifierItem.id)
 					Catalog.hoverCategoryItem(randomCategoryItem.ruName)
 					Catalog.openSubcategory(randomSubcategoryItem)
+					Catalog.openCategoryFirstProductDetailsPage()
 					Catalog.chooseClassifierItem(secondRandomClassifierItem.id)
 					Catalog.hoverCategoryItem(secondRandomCategoryItem.ruName)
 					Catalog.openSubcategory(secondRandomSubcategoryItem)
