@@ -77,13 +77,13 @@ class ProductsList extends BasePage {
 		return this.orderDropdown.click()
 	}
 	waitForOrderDropdownListIsVisible() {
-		return browser.wait(this.isVisible(this.orderDropdownOptionsList))
+		return this.isVisible(this.orderDropdownOptionsList)
 	}
 	chooseOrderDropdownOptionByName(optionName) {
 		return this.orderDropdownOptionsListOptionByName(optionName).click()
 	}
 	waitForUrlContains(text) {
-		return browser.wait(this.urlContains(text))
+		return this.urlContains(text)
 	}
 	getProductsRating() {
 		return this.productRatings
@@ -92,7 +92,7 @@ class ProductsList extends BasePage {
 		return this.productsTitles
 	}
 	waitForActiveOrderOptionByName(optionName) {
-		browser.wait(this.isVisible(this.orderDropdownActiveOrderOptionByName(optionName)))
+		this.isVisible(this.orderDropdownActiveOrderOptionByName(optionName))
 	}
 	filterProducts(filterName, filterOption) {
 		this.filterByName(filterName)
@@ -100,18 +100,18 @@ class ProductsList extends BasePage {
 			.click()
 	}
 	waitForSearchTagIsDisplayed(tagName) {
-		browser.wait(this.isVisible(this.searchTagByName(tagName)))
+		this.isVisible(this.searchTagByName(tagName))
 	}
 	waitForProperTotalOfFoundProducts(total) {
-		browser.wait(this.isVisible(this.totalFoundButton(total)))
+		this.isVisible(this.totalFoundButton(total))
 	}
 	resetFilters() {
 		this.initiateFiltersResetButton.click()
-		browser.wait(this.isVisible(this.confirmFiltersResetButton))
+		this.isVisible(this.confirmFiltersResetButton)
 		this.confirmFiltersResetButton.click()
 	}
 	compareProducts(numberOfProductsToCompare) {
-		browser.wait(this.isClickable(this.compareProductsButton(numberOfProductsToCompare)))
+		this.isClickable(this.compareProductsButton(numberOfProductsToCompare))
 		this.forceClick(this.compareProductsButton(numberOfProductsToCompare))
 	}
 	openFirstProductOffersPage() {

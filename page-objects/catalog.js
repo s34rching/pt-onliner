@@ -25,38 +25,38 @@ class Catalog extends BasePage {
 	}
 
 	chooseClassifierItem(itemId) {
-		browser.wait(this.isVisible(this.topNavbar))
+		this.isVisible(this.topNavbar)
 		this.scrollElementIntoView(this.topNavbar)
-		browser.wait(this.isClickable(this.sectionItem(itemId)))
+		this.isClickable(this.sectionItem(itemId))
 		this.sectionItem(itemId).click()
 	}
 
 	hoverCategoryItem(categoryTitle) {
-		browser.wait(this.isClickable(this.categoryItem(categoryTitle)))
+		this.isClickable(this.categoryItem(categoryTitle))
 		this.categoryItem(categoryTitle).click()
 	}
 
 	openSubcategory(subcategoryItem) {
-		browser.wait(this.isClickable(this.subCategoryItem(subcategoryItem)))
+		this.isClickable(this.subCategoryItem(subcategoryItem))
 		this.subCategoryItem(subcategoryItem).click()
 	}
 
 	openCategoryFirstProductDetailsPage() {
-		browser.wait(this.isVisible(this.categoryFirstProduct))
+		this.isVisible(this.categoryFirstProduct)
 		this.categoryFirstProduct.click()
 	}
 
 	followRandomCatalogBarLink() {
-		browser.wait(this.isVisible(this.catalogBar))
+		this.isVisible(this.catalogBar)
 		this.catalogBar.all(by.className("catalog-bar__link"))
 			.then(links => { return _.sample(links) })
 			.then(link => {
-				browser.wait(this.isVisible(link))
+				this.isVisible(link)
 				link.click()
 			})
 	}
 	followTilesLinks(tileTitle) {
-		browser.wait(this.isVisible(this.tile(tileTitle)))
+		this.isVisible(this.tile(tileTitle))
 		this.tile(tileTitle).click()
 	}
 }

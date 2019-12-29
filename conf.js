@@ -23,8 +23,13 @@ exports.config = {
 			args: [ "--disable-browser-side-navigation", "--disable-popup-blocking" ]
 		}
 	},
+	params: {
+		EXPLICIT_TIMEOUT: 10000
+	},
 
 	onPrepare: () => {
+		global.EC = protractor.ExpectedConditions
+
 		browser.driver.manage().window().maximize()
 		jasmine.getEnv().addReporter(new SpecReporter({
 			spec:

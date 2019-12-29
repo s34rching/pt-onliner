@@ -14,10 +14,10 @@ class ProductDetailsPage extends BasePage {
 	}
 
 	waitForFirstShopOfferVisible() {
-		browser.wait(this.isVisible(this.firstOffer))
+		this.isVisible(this.firstOffer)
 	}
 	waitForUsedProductPrice() {
-		browser.wait(this.isVisible(this.usedProductPrice))
+		this.isVisible(this.usedProductPrice)
 	}
 }
 

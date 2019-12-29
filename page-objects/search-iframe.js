@@ -23,7 +23,7 @@ class SearchIframe extends BasePage {
 	}
 
 	switchToSearchIframe() {
-		browser.wait(this.isVisible(this.fastSearchModal))
+		this.isVisible(this.fastSearchModal)
 		return browser.switchTo().frame(this.searchIframe.getWebElement())
 	}
 
@@ -32,7 +32,7 @@ class SearchIframe extends BasePage {
 	}
 
 	waitForProductAreLoadedOnModal() {
-		return browser.wait(this.isVisible(this.firstResultItemProduct))
+		return this.isVisible(this.firstResultItemProduct)
 	}
 
 	closeSearchModal() {
@@ -44,12 +44,12 @@ class SearchIframe extends BasePage {
 	}
 
 	openSubcategoryPage(subcategoryTitle) {
-		browser.wait(this.isClickable(this.resultItemSubcategory(subcategoryTitle)))
+		this.isClickable(this.resultItemSubcategory(subcategoryTitle))
 		return this.resultItemSubcategory(subcategoryTitle).click()
 	}
 
 	waitForSearchSuggestionIsVisible() {
-		browser.wait(this.isVisible(this.searchBarSuggestion))
+		this.isVisible(this.searchBarSuggestion)
 	}
 }
 

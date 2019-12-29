@@ -41,31 +41,38 @@ class BasePage {
 
 	// Expected Conditions
 
-	isVisible(element) {
-		return protractor.ExpectedConditions.visibilityOf(element)
+	isVisible(element, timeout = browser.params.EXPLICIT_TIMEOUT) {
+		// eslint-disable-next-line no-undef
+		return browser.wait(EC.visibilityOf(element), timeout)
 	}
 
-	isPresentInDom(element) {
-		return protractor.ExpectedConditions.presenceOf(element)
+	isPresentInDom(element, timeout = browser.params.EXPLICIT_TIMEOUT) {
+		// eslint-disable-next-line no-undef
+		return browser.wait(EC.presenceOf(element), timeout)
 	}
 
-	isNotVisible(element) {
-		return protractor.ExpectedConditions.invisibilityOf(element)
+	isNotVisible(element, timeout = browser.params.EXPLICIT_TIMEOUT) {
+		// eslint-disable-next-line no-undef
+		return browser.wait(EC.invisibilityOf(element), timeout)
 	}
 
-	isNotPresentInDom(element) {
-		return protractor.ExpectedConditions.stalenessOf(element)
+	isNotPresentInDom(element, timeout = browser.params.EXPLICIT_TIMEOUT) {
+		// eslint-disable-next-line no-undef
+		return browser.wait(EC.stalenessOf(element), timeout)
 	}
 
-	isClickable(element) {
-		return protractor.ExpectedConditions.elementToBeClickable(element)
+	isClickable(element, timeout = browser.params.EXPLICIT_TIMEOUT) {
+		// eslint-disable-next-line no-undef
+		return browser.wait(EC.elementToBeClickable(element), timeout)
 	}
 
-	hasText(element, text) {
-		return protractor.ExpectedConditions.textToBePresentInElement(element, text)
+	hasText(element, text, timeout = browser.params.EXPLICIT_TIMEOUT) {
+		// eslint-disable-next-line no-undef
+		return browser.wait(EC.textToBePresentInElement(element, text), timeout)
 	}
-	urlContains(text) {
-		return protractor.ExpectedConditions.urlContains(text)
+	urlContains(text, timeout = browser.params.EXPLICIT_TIMEOUT) {
+		// eslint-disable-next-line no-undef
+		return browser.wait(EC.urlContains(text), timeout)
 	}
 }
 

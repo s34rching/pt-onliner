@@ -33,13 +33,10 @@ describe("Onliner.by - Catalog / Navigation", () => {
 				Catalog.hoverCategoryItem(randomCategoryItem.ruName)
 				Catalog.openSubcategory(randomSubcategoryItem)
 				Catalog.openCategoryFirstProductDetailsPage()
-				expect(browser.wait(ProductDetailsPage
-					.isVisible(ProductDetailsPage.productOfferDescription))).toBe(true)
-				expect(browser.wait(ProductDetailsPage
-					.isVisible(ProductDetailsPage.productOffers))).toBe(true)
+				expect(ProductDetailsPage.isVisible(ProductDetailsPage.productOfferDescription)).toBe(true)
+				expect(ProductDetailsPage.isVisible(ProductDetailsPage.productOffers)).toBe(true)
 				ProductsList.scrollElementIntoView(ProductDetailsPage.productTechDescription)
-				expect(browser.wait(ProductDetailsPage
-					.isVisible(ProductDetailsPage.productTechDescription))).toBe(true)
+				expect(ProductDetailsPage.isVisible(ProductDetailsPage.productTechDescription)).toBe(true)
 			})
 		})
 
@@ -48,8 +45,8 @@ describe("Onliner.by - Catalog / Navigation", () => {
 			it("Then they should be navigated to subcategory pages", () => {
 
 				Catalog.followRandomCatalogBarLink()
-				expect(browser.wait(ProductsList.isVisible(ProductsList.product()))).toBe(true)
-				expect(browser.wait(ProductsList.isVisible(ProductsList.filters))).toBe(true)
+				expect(ProductsList.isVisible(ProductsList.product())).toBe(true)
+				expect(ProductsList.isVisible(ProductsList.filters)).toBe(true)
 			})
 		})
 
@@ -60,8 +57,8 @@ describe("Onliner.by - Catalog / Navigation", () => {
 				const randomMainTile = entities.getRandomCatalogMainTile()
 
 				Catalog.followTilesLinks(randomMainTile.ruName)
-				expect(browser.wait(ProductsList.isVisible(ProductsList.product()))).toBe(true)
-				expect(browser.wait(ProductsList.isVisible(ProductsList.filters))).toBe(true)
+				expect(ProductsList.isVisible(ProductsList.product())).toBe(true)
+				expect(ProductsList.isVisible(ProductsList.filters)).toBe(true)
 				expect(browser.getCurrentUrl()).toContain(randomMainTile.path)
 			})
 		})
@@ -74,8 +71,8 @@ describe("Onliner.by - Catalog / Navigation", () => {
 
 				Catalog.chooseClassifierItem(randomClassifierItem.id)
 				Catalog.followTilesLinks(randomSectionTile.ruName)
-				expect(browser.wait(ProductsList.isVisible(ProductsList.product()))).toBe(true)
-				expect(browser.wait(ProductsList.isVisible(ProductsList.filters))).toBe(true)
+				expect(ProductsList.isVisible(ProductsList.product())).toBe(true)
+				expect(ProductsList.isVisible(ProductsList.filters)).toBe(true)
 				expect(browser.getCurrentUrl()).toContain(randomSectionTile.path)
 			})
 		})
@@ -98,13 +95,10 @@ describe("Onliner.by - Catalog / Navigation", () => {
 					Catalog.hoverCategoryItem(secondRandomCategoryItem.ruName)
 					Catalog.openSubcategory(secondRandomSubcategoryItem)
 					Catalog.openCategoryFirstProductDetailsPage()
-					expect(browser.wait(ProductDetailsPage
-						.isVisible(ProductDetailsPage.productOfferDescription))).toBe(true)
-					expect(browser.wait(ProductDetailsPage
-						.isVisible(ProductDetailsPage.productOffers))).toBe(true)
+					expect(ProductDetailsPage.isVisible(ProductDetailsPage.productOfferDescription)).toBe(true)
+					expect(ProductDetailsPage.isVisible(ProductDetailsPage.productOffers)).toBe(true)
 					ProductsList.scrollElementIntoView(ProductDetailsPage.productTechDescription)
-					expect(browser.wait(ProductDetailsPage
-						.isVisible(ProductDetailsPage.productTechDescription))).toBe(true)
+					expect(ProductDetailsPage.isVisible(ProductDetailsPage.productTechDescription)).toBe(true)
 				})
 			})
 		})

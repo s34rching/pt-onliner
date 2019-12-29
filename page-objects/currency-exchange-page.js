@@ -29,7 +29,7 @@ class ExchangeRatesPage extends BasePage {
 	}
 
 	waitForConvertOutDataVisible() {
-		browser.wait(this.isVisible(this.convertOutData))
+		this.isVisible(this.convertOutData)
 	}
 	openBestExchangeRatesLocations() {
 		this.scrollElementIntoView(this.topNavbar)
@@ -37,7 +37,7 @@ class ExchangeRatesPage extends BasePage {
 		this.bestExchangeRatesLocationsButton.click()
 	}
 	waitForMapIsLoaded() {
-		browser.wait(this.isVisible(this.exchangeServicesMap))
+		this.isVisible(this.exchangeServicesMap)
 	}
 	chooseCurrencyToConvert(dropdown, value) {
 		if (dropdown === "in") {
@@ -45,7 +45,7 @@ class ExchangeRatesPage extends BasePage {
 		} else {
 			this.convertOutCurrenciesDropdown.click()
 		}
-		browser.wait(this.isVisible(this.convertCurrenciesDropdownOptionByValue(dropdown, value)))
+		this.isVisible(this.convertCurrenciesDropdownOptionByValue(dropdown, value))
 		this.convertCurrenciesDropdownOptionByValue(dropdown, value).click()
 	}
 	enterCurrencyAmountToConvert(amount) {

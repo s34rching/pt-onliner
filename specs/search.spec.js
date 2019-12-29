@@ -28,7 +28,7 @@ describe("Onliner.by - Products / Search", () => {
 						HomePage.performSearch(activeProduct.query)
 						SearchIframe.switchToSearchIframe()
 						SearchIframe.waitForProductAreLoadedOnModal()
-						expect(browser.wait(SearchIframe.isVisible(SearchIframe.resultItemProduct(activeProduct.query)))).toBe(true)
+						expect(SearchIframe.isVisible(SearchIframe.resultItemProduct(activeProduct.query))).toBe(true)
 						SearchIframe.productPrice(activeProduct.query).getText().then(text => {
 							assert.closeTo(activeProduct.price, parseInt(text.match(/\d+/)[0]), activeProduct.accuracy)
 						})
@@ -51,7 +51,7 @@ describe("Onliner.by - Products / Search", () => {
 				expect(SearchIframe.resultItemSubcategory(randomSubcategory.ruName).isDisplayed()).toBe(true)
 				SearchIframe.openSubcategoryPage(randomSubcategory.ruName)
 				expect(browser.getCurrentUrl()).toContain(randomSubcategory.path)
-				expect(browser.wait(ProductsList.isVisible(ProductsList.product()))).toBe(true)
+				expect(ProductsList.isVisible(ProductsList.product())).toBe(true)
 			})
 		})
 

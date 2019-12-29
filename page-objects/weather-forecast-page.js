@@ -27,15 +27,15 @@ class WeatherForecastPage extends BasePage {
 		}
 	}
 	openCitiesOptionsDropdown() {
-		browser.wait(this.isVisible(this.currentCityButton))
+		this.isVisible(this.currentCityButton)
 		this.currentCityButton.click()
 	}
 	changeCity(cityId) {
-		browser.wait(this.isClickable(this.cityOption(cityId)))
+		this.isClickable(this.cityOption(cityId))
 		this.cityOption(cityId).click()
 	}
 	waitForCityChangedTo(cityName) {
-		browser.wait(this.isVisible(this.currentCityButtonByName(cityName)))
+		this.isVisible(this.currentCityButtonByName(cityName))
 	}
 }
 

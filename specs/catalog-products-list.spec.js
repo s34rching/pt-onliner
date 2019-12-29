@@ -211,9 +211,10 @@ describe("Onliner.by - Catalog / Products List", () => {
 					.isDisplayed()).toBe(true)
 				expect(ProductsList.usedProductLocationByProductTitle(firstUsedOffer.product.full_name)
 					.isDisplayed()).toBe(true)
-				ProductsList.usedProductPriceByProductTitle(firstUsedOffer.product.full_name).getText().then(price => {
-					assert.isNumber(parseFloat(price.replace(",", ".")))
-				})
+				ProductsList.usedProductPriceByProductTitle(firstUsedOffer.product.full_name).getText()
+					.then(price => {
+						assert.isNumber(parseFloat(price.replace(",", ".")))
+					})
 				ProductsList.openUsedUserProductOfferByProductName(firstUsedOffer.product.full_name)
 				ProductDetailsPage.waitForUsedProductPrice()
 				ProductDetailsPage.scrollElementIntoView(ProductDetailsPage.usedProductNameHeading)

@@ -28,7 +28,7 @@ class ProductOffersPage extends BasePage {
 			.$(".b-cell-4__line-2")
 	}
 	waitForFirstShopLogoDisplayed(shopId) {
-		browser.wait(this.isVisible(this.shopLogoByShopId(shopId)))
+		this.isVisible(this.shopLogoByShopId(shopId))
 	}
 }
 
