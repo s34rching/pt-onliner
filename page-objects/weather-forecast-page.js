@@ -7,7 +7,6 @@ class WeatherForecastPage extends BasePage {
 		this.currentCityButtonByName = function(cityName) {
 			return element(by.cssContainingText("a.js-weather-city", cityName))
 		}
-		this.cityOptionsDropdown = $("div[class='b-weather__city-select'][class='js-visible']")
 		this.cityOption = function(cityId) {
 			return $(`a[data-wmoid="${cityId}"]`)
 		}

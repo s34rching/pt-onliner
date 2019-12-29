@@ -73,9 +73,6 @@ class ProductsList extends BasePage {
 		}
 	}
 
-	waitForOrderDefaultOptionIsDisplayed() {
-		return browser.wait(this.isVisible(this.orderDropdownActiveOrderOption))
-	}
 	openOrderListDropDown() {
 		return this.orderDropdown.click()
 	}
