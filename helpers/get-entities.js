@@ -25,7 +25,7 @@ exports.getRandomCatalogMainTile = function() {
 }
 
 exports.getRandomSectionTile = function(classifierItem) {
-	return _.sample(_.filter(classifierItem.tiles, tile => {return tile.isUnique === true}))
+	return _.sample(_.filter(classifierItem.tiles, { isUnique: true }))
 }
 
 exports.getProduct = function (status, amount = 1) {
