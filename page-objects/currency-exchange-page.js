@@ -17,6 +17,7 @@ class ExchangeRatesPage extends BasePage {
 			}
 		}
 		this.bestExchangeRatesLocationsLink = this.convertOutData.all(by.tagName("p")).last()
+		this.bestExchangeRatesLocationsButton = this.bestExchangeRatesLocationsLink.$$("a").first()
 		this.bestExchangeRateByCurrencyDirection = function(currencyIn, currencyOut) {
 			return this.bestExchangeRatesLocationsLink
 				.$$(`a[data-direction="${currencyIn}-to-${currencyOut}"]`)
@@ -31,8 +32,9 @@ class ExchangeRatesPage extends BasePage {
 		browser.wait(this.isVisible(this.convertOutData))
 	}
 	openBestExchangeRatesLocations() {
+		this.scrollElementIntoView(this.topNavbar)
 		this.waitForConvertOutDataVisible()
-		this.bestExchangeRatesLocationsLink.click()
+		this.bestExchangeRatesLocationsButton.click()
 	}
 	waitForMapIsLoaded() {
 		browser.wait(this.isVisible(this.exchangeServicesMap))

@@ -21,6 +21,7 @@ describe("Onliner.by - Top Navigation / Informers", () => {
 		browser.waitForAngularEnabled(false)
 
 		HomePage.goTo("/")
+		HomePage.scrollElementIntoView(HomePage.topNavbar)
 	})
 
 	describe("Currency exchange rates", () => {
@@ -36,20 +37,37 @@ describe("Onliner.by - Top Navigation / Informers", () => {
 
 			describe("And open currency exchange rates page to see the best rates locations", () => {
 
-				xdescribe("And search for the city best rates locations", () => {
+				describe("And search for the city best rates locations", () => {
 
 					it("Then they should be able to find exchange services location on a map", () => {
 						HomePage.openCurrencyExchangeRatesPage()
-						ExchangeRatesPage.openBestExchangeRatesLocations()
-						ExchangeRatesPage.waitForMapIsLoaded()
-						ExchangeRatesPage.exchangeServicesMapLocations.getText().then(text => {
-							const locationsAmount = text.match(/^\d+/)[0]
-							ExchangeRatesPage.exchangeServicesMapPointers.then(pointers => {
-								expect(pointers.length).toBe(parseInt(locationsAmount))
-								pointers.forEach(pointer => {
-									expect(pointer.isDisplayed()).toBe(true)
+						ExchangeRatesPage.bestExchangeRatesLocationsButton.getText().then(banksAmount => {
+							ExchangeRatesPage.openBestExchangeRatesLocations()
+							ExchangeRatesPage.waitForMapIsLoaded()
+
+							const regex = /\d+/
+
+							if (regex.test(banksAmount)) {
+								ExchangeRatesPage.exchangeServicesMapLocations.getText().then(text => {
+									const locationsAmount = text.match(/^\d+/)[0]
+									ExchangeRatesPage.exchangeServicesMapPointers.then(pointers => {
+										expect(pointers.length).toBe(parseInt(locationsAmount))
+										pointers.forEach(pointer => {
+											expect(pointer.isDisplayed()).toBe(true)
+										})
+									})
 								})
-							})
+							} else {
+								ExchangeRatesPage.exchangeServicesMapLocations.getText().then(text => {
+									expect(text).toContain(banksAmount)
+									ExchangeRatesPage.exchangeServicesMapPointers.then(pointers => {
+										expect(pointers.length).toBe(1)
+										pointers.forEach(pointer => {
+											expect(pointer.isDisplayed()).toBe(true)
+										})
+									})
+								})
+							}
 						})
 					})
 				})
