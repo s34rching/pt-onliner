@@ -1,4 +1,4 @@
-+ DONE 25 stable tests to different features
++ DONE 1. 25 stable tests to different features
 + DONE 2. ESLint
 - OUT OF SCOPE 3. Gitlab CI
 - WRONG DEFINITION 4. Allure Reporter
@@ -29,7 +29,7 @@ Code cleanup:
 - waiters
 - request-promise / separate helper
 + DONE // fixture
-- flakers
++ DONE // flakers
 + DONE // - wrappers
 + DONE // - hooks / common steps
 - constructor: elements nesting
