@@ -3,7 +3,7 @@ const ExchangeRatesPage = require("../page-objects/currency-exchange-page")
 const WeatherForecastPage = require("../page-objects/weather-forecast-page")
 const random = require("../helpers/get-random-testing-data")
 const cities = require("../fixtures/cities")
-const rp = require("request-promise")
+const api = require("../helpers/onliner-api")
 const _ = require("lodash")
 
 describe("Onliner.by - Top Navigation / Informers", () => {
@@ -11,7 +11,7 @@ describe("Onliner.by - Top Navigation / Informers", () => {
 	let bestUsdExchangeRate
 
 	beforeAll(done => {
-		rp("https://www.onliner.by/sdapi/kurs/api/bestrate?currency=USD&type=nbrb").then(res => {
+		api.getCurrencyExchangeRates().then(res => {
 			bestUsdExchangeRate = JSON.parse(res).amount
 			done()
 		})
@@ -136,7 +136,7 @@ describe("Onliner.by - Top Navigation / Informers", () => {
 			let forecast
 
 			beforeEach(done => {
-				rp("https://www.onliner.by/sdapi/pogoda/api/forecast").then(res => {
+				api.getWeather().then(res => {
 					forecast = JSON.parse(res)
 					done()
 				})
@@ -156,7 +156,7 @@ describe("Onliner.by - Top Navigation / Informers", () => {
 				let userCityForecast
 
 				beforeEach(done => {
-					rp(`https://www.onliner.by/sdapi/pogoda/api/forecast/${userCity.id}`).then(res => {
+					api.getWeather(userCity.id).then(res => {
 						userCityForecast = JSON.parse(res)
 						done()
 					})

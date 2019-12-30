@@ -27,7 +27,7 @@
 
 Code cleanup:
 - waiters
-- request-promise / separate helper
++ DONE // request-promise / separate helper
 + DONE // fixture
 + DONE // flakers
 + DONE // - wrappers

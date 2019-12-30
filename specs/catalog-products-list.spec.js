@@ -2,8 +2,8 @@ const ProductsList = require("../page-objects/products-list")
 const ProductOffers = require("../page-objects/product-offers-page")
 const ProductDetailsPage = require("../page-objects/product-details-page")
 const LoginPage = require("../page-objects/login-page")
+const api = require("../helpers/onliner-api")
 const _ = require("lodash")
-const rp = require("request-promise")
 const chai = require("chai")
 const assert = chai.assert
 
@@ -12,7 +12,7 @@ describe("Onliner.by - Catalog / Products List", () => {
 	let allCPUs
 
 	beforeAll(done => {
-		rp("https://catalog.onliner.by/sdapi/catalog.api/search/cpu").then(res => {
+		api.getProducts("cpu").then(res => {
 			allCPUs = JSON.parse(res)
 			done()
 		})
@@ -39,7 +39,7 @@ describe("Onliner.by - Catalog / Products List", () => {
 		let CPUsFilteredByRating
 
 		beforeEach(done => {
-			rp("https://catalog.onliner.by/sdapi/catalog.api/search/cpu?order=reviews_rating:desc").then(res => {
+			api.getProducts("cpu?order=reviews_rating:desc").then(res => {
 				CPUsFilteredByRating = JSON.parse(res)
 				done()
 			})
@@ -70,7 +70,7 @@ describe("Onliner.by - Catalog / Products List", () => {
 		let intelCPUs
 
 		beforeEach(done => {
-			rp("https://catalog.onliner.by/sdapi/catalog.api/search/cpu?mfr[0]=intel").then(res => {
+			api.getProducts("cpu?mfr[0]=intel").then(res => {
 				intelCPUs = JSON.parse(res)
 				done()
 			})
@@ -103,7 +103,7 @@ describe("Onliner.by - Catalog / Products List", () => {
 			let amdCPUs
 
 			beforeEach(done => {
-				rp("https://catalog.onliner.by/sdapi/catalog.api/search/cpu?mfr[0]=amd").then(res => {
+				api.getProducts("cpu?mfr[0]=amd").then(res => {
 					amdCPUs = JSON.parse(res)
 					done()
 				})
@@ -131,7 +131,7 @@ describe("Onliner.by - Catalog / Products List", () => {
 
 		it("Then they should be able to open comparison page", done => {
 
-			rp("https://catalog.onliner.by/sdapi/catalog.api/search/cpu").then(res => {
+			api.getProducts("cpu").then(res => {
 				allCPUs = JSON.parse(res)
 
 				const numberOfProductsToCompare = 2
@@ -161,7 +161,7 @@ describe("Onliner.by - Catalog / Products List", () => {
 		let shopList
 
 		beforeEach(done => {
-			rp("https://catalog.onliner.by/sdapi/shop.api/products/i59400fb/positions?town=minsk").then(res => {
+			api.getOffers("products/i59400fb/positions?town=minsk").then(res => {
 				shopList = JSON.parse(res)
 				done()
 			})
@@ -194,7 +194,7 @@ describe("Onliner.by - Catalog / Products List", () => {
 		let usedCPUs
 
 		beforeEach(done => {
-			rp("https://catalog.onliner.by/sdapi/catalog.api/search/cpu/second-offers?segment=second").then(res => {
+			api.getProducts("cpu/second-offers?segment=second").then(res => {
 				usedCPUs = JSON.parse(res)
 				done()
 			})
