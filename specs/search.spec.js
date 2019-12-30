@@ -2,13 +2,13 @@ const HomePage = require("../page-objects/homepage")
 const ProductsList = require("../page-objects/products-list")
 const SearchIframe = require("../page-objects/search-iframe")
 const ProductDetailsPage = require("../page-objects/product-details-page")
-const { getProduct, getRandomUniqueSubcategory, getRandomUniqueCategory, getRandomClassifierItem } = require("../helpers/get-entities")
+const entities = require("../helpers/get-entities")
 const chai = require("chai")
 const assert = chai.assert
 
 describe("Onliner.by - Products / Search", () => {
 
-	const activeProducts = getProduct("active", 5)
+	const activeProducts = entities.getProduct("active", 5)
 
 	beforeEach(() => {
 		browser.waitForAngularEnabled(false)
@@ -41,9 +41,9 @@ describe("Onliner.by - Products / Search", () => {
 
 			it("Then they should be able to be navigated to subcategory page", () => {
 
-				const randomClassifierItem = getRandomClassifierItem()
-				const randomCategory = getRandomUniqueCategory(randomClassifierItem)
-				const randomSubcategory = getRandomUniqueSubcategory(randomCategory)
+				const randomClassifierItem = entities.getRandomClassifierItem()
+				const randomCategory = entities.getRandomUniqueCategory(randomClassifierItem)
+				const randomSubcategory = entities.getRandomUniqueSubcategory(randomCategory)
 
 				HomePage.performSearch(randomSubcategory.ruName)
 				SearchIframe.switchToSearchIframe()
@@ -61,7 +61,7 @@ describe("Onliner.by - Products / Search", () => {
 
 				it("Then search bar should be closed", () => {
 
-					const product = getProduct("active")
+					const product = entities.getProduct("active")
 
 					HomePage.performSearch(product.query)
 					SearchIframe.switchToSearchIframe()
@@ -91,7 +91,7 @@ describe("Onliner.by - Products / Search", () => {
 
 			it("Then product should be found and marked with appropriate label", () => {
 
-				const outOfStockProduct = getProduct("out-of-stock")
+				const outOfStockProduct = entities.getProduct("out-of-stock")
 
 				HomePage.performSearch(outOfStockProduct.query)
 				SearchIframe.switchToSearchIframe()
@@ -105,7 +105,7 @@ describe("Onliner.by - Products / Search", () => {
 
 			it("Then product should be found and marked with appropriate label", () => {
 
-				const offSaleProduct = getProduct("off-sale")
+				const offSaleProduct = entities.getProduct("off-sale")
 
 				HomePage.performSearch(offSaleProduct.query)
 				SearchIframe.switchToSearchIframe()
@@ -121,7 +121,7 @@ describe("Onliner.by - Products / Search", () => {
 
 				it("Then they should be able to see product details", () => {
 
-					const product = getProduct()
+					const product = entities.getProduct()
 
 					HomePage.performSearch(product.query)
 					SearchIframe.switchToSearchIframe()
