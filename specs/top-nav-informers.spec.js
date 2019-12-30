@@ -45,9 +45,10 @@ describe("Onliner.by - Top Navigation / Informers", () => {
 							ExchangeRatesPage.openBestExchangeRatesLocations()
 							ExchangeRatesPage.waitForMapIsLoaded()
 
-							const regex = /\d+/
+							const banks = banksAmount.split(" ")
+							const numbers = [ "двух", "трех", "четырех", "пяти", "шести", "семи", "восьми", "девяти" ]
 
-							if (regex.test(banksAmount)) {
+							if (_.intersection(banks, numbers).length) {
 								ExchangeRatesPage.exchangeServicesMapLocations.getText().then(text => {
 									const locationsAmount = text.match(/^\d+/)[0]
 									ExchangeRatesPage.exchangeServicesMapPointers.then(pointers => {
