@@ -34,8 +34,9 @@ class ProductsList extends BasePage {
 			return element(by.cssContainingText(".compare-button__sub_main",
 				numberOfProductsToCompare.toString()))
 		}
-		this.resetComparisonListButton = element(by.cssContainingText("a.product-table__clear",
+		this.resetComparisonListButton = element.all(by.cssContainingText("a.product-table__clear",
 			"Очистить сравнение"))
+			.first()
 		this.productComparisonName = function(productName) {
 			return element.all(by.cssContainingText(".product-summary__caption", productName)).first()
 		}
