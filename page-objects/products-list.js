@@ -31,7 +31,8 @@ class ProductsList extends BasePage {
 		this.confirmFiltersResetButton = element(by.cssContainingText("span.schema-filter-button__sub",
 			"Сбросить фильтр"))
 		this.compareProductsButton = function(numberOfProductsToCompare) {
-			return element(by.cssContainingText(".compare-button__sub_main", numberOfProductsToCompare.toString()))
+			return element(by.cssContainingText(".compare-button__sub_main",
+				numberOfProductsToCompare.toString()))
 		}
 		this.resetComparisonListButton = element(by.cssContainingText("a.product-table__clear",
 			"Очистить сравнение"))
@@ -44,13 +45,15 @@ class ProductsList extends BasePage {
 		}
 		this.createUsedOfferButton = $("a[href='/used/create']")
 		this.productByTitle = function(productTitle) {
-			return element(by.xpath(`//div[contains(@class, "schema-product__group") and descendant::span[text()] = "${productTitle}"]`))
+			return element(by.xpath(`//div[contains(@class, "schema-product__group") and descendant::span[text()]
+			 = "${productTitle}"]`))
 		}
 		this.product = function({ productIndex, productTitle, all } = {}) {
 			if (productIndex) {
 				return $$(".schema-product").get(productIndex)
 			} else if (productTitle) {
-				return element(by.xpath(`//div[contains(@class, "schema-product") and descendant::span[text()] = "${productTitle}"]`))
+				return element(by.xpath(`//div[contains(@class, "schema-product") and descendant::span[text()]
+				 = "${productTitle}"]`))
 			} else if (all) {
 				return $$(".schema-product")
 			} else {

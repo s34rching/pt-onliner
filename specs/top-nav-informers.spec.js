@@ -110,13 +110,15 @@ describe("Onliner.by - Top Navigation / Informers", () => {
 												.replace(",", ".")
 												.replace(" ", ""))
 												.toFixed(2))
-												.toBe((parseFloat(exchangeRateByDirection.replace(",", ".")) * randomCurrencyAmount / 100).toFixed(2))
+												.toBe((parseFloat(exchangeRateByDirection.replace(",", "."))
+													* randomCurrencyAmount / 100).toFixed(2))
 										} else {
 											expect(parseFloat(conversionResult
 												.replace(",", ".")
 												.replace(" ", ""))
 												.toFixed(2))
-												.toBe((parseFloat(exchangeRateByDirection.replace(",", ".")) * randomCurrencyAmount).toFixed(2))
+												.toBe((parseFloat(exchangeRateByDirection.replace(",", "."))
+													* randomCurrencyAmount).toFixed(2))
 										}
 									})
 								})

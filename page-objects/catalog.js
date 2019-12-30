@@ -9,14 +9,16 @@ class Catalog extends BasePage {
 		}
 
 		this.categoryItem = function(categoryTitle) {
-			return element(by.cssContainingText(".catalog-navigation-list__aside-title", categoryTitle.match(/^\S+/)))
+			return element(by.cssContainingText(".catalog-navigation-list__aside-title",
+				categoryTitle.match(/^\S+/)))
 		}
 		this.subCategoryItem = function(subcategoryItem) {
 			return $(`a[href$="${subcategoryItem.path}"][class="catalog-navigation-list__dropdown-item"]`)
 		}
 		this.catalogBar = element(by.className("catalog-bar"))
 		this.tile = function(tileTitle) {
-			return element.all(by.xpath(`//div[contains(@class, tiles__item) and descendant::span[contains(., '${tileTitle}')]]`)).last()
+			return element.all(by.xpath(`//div[contains(@class, tiles__item) and descendant::span[contains(.,
+			 '${tileTitle}')]]`)).last()
 		}
 		this.categoryFirstProduct = $$(".schema-product__group")
 			.first()
