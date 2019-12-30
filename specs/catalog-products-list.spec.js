@@ -125,6 +125,10 @@ describe("Onliner.by - Catalog / Products List", () => {
 
 	describe("When user adds product to compare their characteristics", () => {
 
+		afterEach(() => {
+			ProductsList.clearComparisonList()
+		})
+
 		it("Then they should be able to open comparison page", done => {
 
 			rp("https://catalog.onliner.by/sdapi/catalog.api/search/cpu").then(res => {
