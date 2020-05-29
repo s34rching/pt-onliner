@@ -83,9 +83,16 @@ module.exports = {
 							position: 0
 						},
 						smartWatch: {
-							ruName: "Умные часы и фитнес-браслеты",
+							ruName: "Умные часы",
 							subcategoryPageRuHeading: "Умные часы и браслеты",
-							path: "/smartwatch",
+							path: "/smartwatch?sw_type%5B0%5D=smartphonewatch&sw_type%5B1%5D=watch&sw_type%5B2%5D=fitwatch&sw_type%5B3%5D=hybridsmartwatch&sw_type%5Boperation%5D=union",
+							isUnique: false,
+							position: 0
+						},
+						fitnessBracelets: {
+							ruName: "Фитнес-браслеты",
+							subcategoryPageRuHeading: "Фитнес-браслеты",
+							path: "/smartwatch?sw_type%5B0%5D=bracelet&sw_type%5Boperation%5D=union",
 							isUnique: false,
 							position: 0
 						},
@@ -204,7 +211,7 @@ module.exports = {
 						projectors: {
 							ruName: "Проекторы",
 							subcategoryPageRuHeading: "Проекторы",
-							path: "/projector",
+							path: "/projectors",
 							isUnique: true,
 							position: 0
 						},
@@ -776,10 +783,17 @@ module.exports = {
 					isUnique: true,
 					containsUnique: true,
 					subCategories: {
-						subcategory: {
-							ruName: "Умные часы и фитнес-браслеты",
+						smartWatches: {
+							ruName: "Умные часы",
 							subcategoryPageRuHeading: "Умные часы и браслеты",
-							path: "/smartwatch",
+							path: "/smartwatch?sw_type%5B0%5D=smartphonewatch&sw_type%5B1%5D=watch&sw_type%5B2%5D=fitwatch&sw_type%5B3%5D=hybridsmartwatch&sw_type%5Boperation%5D=union",
+							isUnique: false,
+							position: 1
+						},
+						fitnessBracelets: {
+							ruName: "Фитнес-браслеты",
+							subcategoryPageRuHeading: "Фитнес-браслеты",
+							path: "/smartwatch?sw_type%5B0%5D=bracelet&sw_type%5Boperation%5D=union",
 							isUnique: false,
 							position: 1
 						},
@@ -856,7 +870,7 @@ module.exports = {
 						smartSockets: {
 							ruName: "Умные розетки",
 							subcategoryPageRuHeading: "Розетки, выключатели",
-							path: "/wall_socket?wallsoc_smart=1",
+							path: "/smart_home?smh_type%5B0%5D=socket&smh_type%5Boperation%5D=union",
 							isUnique: false,
 							position: 0
 						},
@@ -951,6 +965,20 @@ module.exports = {
 							isUnique: true,
 							position: 0
 						},
+						ipPhones: {
+							ruName: "Проводные IP-телефоны",
+							subcategoryPageRuHeading: "Проводные телефоны",
+							path: "/phone?phone_connect%5B0%5D=2&phone_connect%5Boperation%5D=union",
+							isUnique: true,
+							position: 0
+						},
+						wirelessIpPhones: {
+							ruName: "Беспроводные IP-телефоны",
+							subcategoryPageRuHeading: "Радиотелефоны DECT",
+							path: "/dect?phone_connect%5B0%5D=2&phone_connect%5Boperation%5D=union",
+							isUnique: true,
+							position: 0
+						},
 						wireless3gModems: {
 							ruName: "3G-модемы",
 							subcategoryPageRuHeading: "Беспроводные адаптеры",
@@ -1019,6 +1047,13 @@ module.exports = {
 							ruName: "Микрофоны",
 							subcategoryPageRuHeading: "Микрофоны",
 							path: "/microphones",
+							isUnique: false,
+							position: 1
+						},
+						guitars: {
+							ruName: "Гитары",
+							subcategoryPageRuHeading: "Гитары",
+							path: "/guitar",
 							isUnique: false,
 							position: 1
 						}
@@ -1154,7 +1189,7 @@ module.exports = {
 							position: 0
 						},
 						fans: {
-							ruName: "Кулеры",
+							ruName: "Системы охлаждения",
 							subcategoryPageRuHeading: "Системы охлаждения",
 							path: "/fan",
 							isUnique: true,
@@ -1492,7 +1527,7 @@ module.exports = {
 						wirelessAdapters: {
 							ruName: "Беспроводные адаптеры",
 							subcategoryPageRuHeading: "Беспроводные адаптеры",
-							path: "/wirelessadapter",
+							path: "/wirelessadapter?wa_type%5B0%5D=wifibluetooth&wa_type%5B1%5D=bluetooth&wa_type%5B2%5D=wifi&wa_type%5Boperation%5D=union",
 							isUnique: true,
 							position: 0
 						},
