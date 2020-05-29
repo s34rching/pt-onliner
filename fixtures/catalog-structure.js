@@ -38,27 +38,27 @@ module.exports = {
 			tiles: [
 				{
 					ruName: "Электросамокаты",
-					path: "/electric_scooter/?utm_source=el_title&utm_medium=electric_scooter",
+					path: "/electric_scooter?utm_source=el_title&utm_medium=electric_scooter",
 					isUnique: true
 				},
 				{
 					ruName: "Приставки для цифрового ТВ",
-					path: "/terrestrial/?utm_source=el_title&utm_medium=terrestrial",
+					path: "/terrestrial?utm_source=el_title&utm_medium=terrestrial",
 					isUnique: true
 				},
 				{
 					ruName: "Телескопы",
-					path: "/telescope/?utm_source=el_title&utm_medium=telescope",
+					path: "/telescope?utm_source=el_title&utm_medium=telescope",
 					isUnique: true
 				},
 				{
 					ruName: "Игры для приставок",
-					path: "/games/?utm_source=el_title&utm_medium=games",
+					path: "/games?utm_source=el_title&utm_medium=games",
 					isUnique: true
 				},
 				{
 					ruName: "Пульсометры",
-					path: "/heart_rate/?utm_source=el_title&utm_medium=heart_rate",
+					path: "/heart_rate?utm_source=el_title&utm_medium=heart_rate",
 					isUnique: true
 				},
 			],
