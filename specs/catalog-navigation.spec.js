@@ -50,9 +50,9 @@ describe("Onliner.by - Catalog / Navigation", () => {
 			})
 		})
 
-		describe("And clicks on a random tile on the catalog main page", () => {
+		xdescribe("And clicks on a random tile on the catalog main page", () => {
 
-			it("Then they should be navigated to target page", () => {
+			it("Then they should be navigated to subcategory pages", () => {
 
 				const randomMainTile = entities.getRandomCatalogMainTile()
 
