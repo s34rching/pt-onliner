@@ -37,30 +37,30 @@ module.exports = {
 			ruName: "Электроника",
 			tiles: [
 				{
-					ruName: "Домашние колонки с WiFi",
-					path: "/wspeaker?ws_type%5B0%5D=multiroom&ws_type%5Boperation%5D=union&utm_source=el_title&utm_medium=netpl_inetradio",
+					ruName: "Электросамокаты",
+					path: "/electric_scooter/?utm_source=el_title&utm_medium=electric_scooter",
 					isUnique: true
 				},
 				{
-					ruName: "Умные часы и браслеты",
-					path: "/smartwatch?utm_source=el_title&utm_medium=smartwatch",
+					ruName: "Приставки для цифрового ТВ",
+					path: "/terrestrial/?utm_source=el_title&utm_medium=terrestrial",
 					isUnique: true
 				},
 				{
-					ruName: "Умный дом",
-					path: "/smart_home?utm_source=el_title&utm_medium=smart_home",
+					ruName: "Телескопы",
+					path: "/telescope/?utm_source=el_title&utm_medium=telescope",
 					isUnique: true
 				},
 				{
-					ruName: "Портативные приставки",
-					path: "/console?console_type%5B0%5D=2&console_type%5B1%5D=universal&console_type%5Boperation%5D=union&utm_source=el_title&utm_medium=console",
+					ruName: "Игры для приставок",
+					path: "/games/?utm_source=el_title&utm_medium=games",
 					isUnique: true
 				},
 				{
-					ruName: "Телевизоры с AirPlay",
-					path: "/tv?airplay=1&utm_source=el_title&utm_medium=tv",
+					ruName: "Пульсометры",
+					path: "/heart_rate/?utm_source=el_title&utm_medium=heart_rate",
 					isUnique: true
-				}
+				},
 			],
 			categories: {
 				mobilePhonesAndAccessories: {
@@ -1052,28 +1052,28 @@ module.exports = {
 			ruName: "Компьютеры и сети",
 			tiles: [
 				{
-					ruName: "Планшеты",
-					path: "/tabletpc?utm_source=pc_tile&utm_medium=tabletpc",
+					ruName: "Геймерские наушники",
+					path: "/headphones?hp_destination%5B0%5D=gamer&hp_destination%5Boperation%5D=union&utm_source=pc_tile&utm_medium=headphones",
 					isUnique: true
 				},
 				{
-					ruName: "Беспроводные точки доступа",
-					path: "/wirelessap?utm_source=pc_tile&utm_medium=wirelessap",
+					ruName: "Wi-Fi роутеры",
+					path: "/wrouter?utm_source=pc_title&utm_medium=wrouter",
 					isUnique: true
 				},
 				{
-					ruName: "Компактные и недорогие ноутбуки",
-					path: "/notebook?price%5Bto%5D=1200.00&diagonalnb%5Bfrom%5D=120&diagonalnb%5Bto%5D=141&utm_source=pc_tile&utm_medium=notebook",
+					ruName: "Охлаждающие подставки",
+					path: "/laptopstand?lapst_type%5B0%5D=type1&lapst_type%5Boperation%5D=union&lapst_actcool=1&utm_source=pc_tile&utm_medium=laptopstand",
 					isUnique: true
 				},
 				{
-					ruName: "SSD с поддержкой NVMe",
-					path: "/ssd?utm_source=pc_tile&utm_medium=ssd",
+					ruName: "Мини фотопринтеры",
+					path: "/printers?type_print%5B0%5D=portableprinter&type_print%5Boperation%5D=union&order=price:asc&utm_source=pc_tile&utm_medium=portableprinter",
 					isUnique: true
 				},
 				{
-					ruName: "Мониторы с повышенной частотой обновления кадров",
-					path: "/display?disp_refreshrate%5Bfrom%5D=120hz&utm_source=pc_tile&utm_medium=display",
+					ruName: "Игровые ноутбуки",
+					path: "/notebook?nbusage%5B0%5D=gamer&nbusage%5Boperation%5D=union&utm_source=pc_tile&utm_medium=gamenotebook",
 					isUnique: true
 				}
 			],
