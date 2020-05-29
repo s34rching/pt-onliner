@@ -1,34 +1,34 @@
 module.exports = {
 	mainTiles: [
 		{
-			ruName: "Время делать подарки!",
-			path: "/2019/12/02/rozygrysh-5?utm_source=main_tile&utm_medium=rozygrysh5&_ga=2.126731274.686889813.1575486217-1776173241.1573712126",
-			isUnique: false
-		},
-		{
-			ruName: "Термосы, термокружки",
-			path: "/thermosbottle?utm_source=main_tile&utm_medium=thermosbottle",
+			ruName: "Выигрывайте iPhone 11 Pro!",
+			path: "/2020/05/04/razygryvaem-iphone-11-pro-kazhduyu-pyatnicu",
 			isUnique: true
 		},
 		{
-			ruName: "Роботы-пылесосы",
-			path: "/robotcleaner?utm_source=main_tile&utm_medium=robotcleaner",
+			ruName: "Бургеры, гриль-сеты с ребрышками и овощами",
+			path: "/grillweekmay2020",
 			isUnique: true
 		},
 		{
-			ruName: "Зимние шины в Каталоге!",
-			path: "/tires?season_tires%5B0%5D=winter&season_tires%5Boperation%5D=union&utm_source=main_tile&utm_medium=tires",
+			ruName: "Комбо из 2-ух пицц",
+			path: "/dominos/dominospizza/onlcombcardom36?utm_source=main_tile&utm_medium=onlcombcardom36",
 			isUnique: true
 		},
 		{
-			ruName: "Смартфон за честный отзыв!",
-			path: "/2019/12/02/rozygrysh-4?utm_source=main_tile&utm_medium=rozygrysh4&_ga=2.127913738.686889813.1575486217-1776173241.1573712126",
-			isUnique: false
+			ruName: "Расческа GA.MA с ионизацией",
+			path: "/2020/05/27/tovary-12?utm_source=main_tile&utm_medium=gama",
+			isUnique: true
 		},
 		{
-			ruName: "Купляйце тэлевiзары Samsung",
-			path: "/article/131295-poleznye-stati/606699-qled-2019-realnyy-mir-v-razreshenii-8k",
-			isUnique: false
+			ruName: "Детские велосипеды",
+			path: "/kidsbike?utm_source=main_tile&utm_medium=kidsbike",
+			isUnique: true
+		},
+		{
+			ruName: "Кофе в зернах и капсулах",
+			path: "/coffeejava?utm_source=main_tile&utm_medium=coffeejava",
+			isUnique: true
 		}
 	],
 	sections: {
