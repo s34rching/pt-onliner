@@ -511,6 +511,105 @@ module.exports = {
 						}
 					}
 				},
+				hiFiAudio: {
+					ruName: "Hi-Fi аудио",
+					isUnique: true,
+					containsUnique: true,
+					subCategories: {
+						hifiPlayers: {
+							ruName: "Hi-Fi плеееры",
+							subcategoryPageRuHeading: "Плееры",
+							path: "/player?player_type%5B0%5D=hifiplayer&player_type%5Boperation%5D=union",
+							isUnique: true,
+							position: 0
+						},
+						audiophileHeadphones: {
+							ruName: "Аудиофильские наушники",
+							subcategoryPageRuHeading: "Наушники для аудиофилов",
+							path: "/headphones?hp_destination%5B0%5D=hiend&hp_destination%5Boperation%5D=union",
+							isUnique: true,
+							position: 0
+						},
+						headphoneAmplifiers: {
+							ruName: "Настольные усилители для наушников",
+							subcategoryPageRuHeading: "Усилители для наушников",
+							path: "/portableamp?dac_type1%5B0%5D=desktopamp&dac_type1%5Boperation%5D=union",
+							isUnique: true,
+							position: 0
+						},
+						hiFiSpeakers: {
+							ruName: "Hi-Fi акустика",
+							subcategoryPageRuHeading: "Hi-Fi акустика",
+							path: "/hifisound",
+							isUnique: true,
+							position: 0
+						},
+						avReceiversAndProcessors: {
+							ruName: "AV-ресиверы и процессоры",
+							subcategoryPageRuHeading: "AV-ресиверы и усилители",
+							path: "/recievers?type_reciever%5B0%5D=avprocessor&type_reciever%5B1%5D=avreciever&type_reciever%5Boperation%5D=union",
+							isUnique: true,
+							position: 0
+						},
+						amplifiersAndPreamps: {
+							ruName: "Усилители, предусилители и стереоресиверы",
+							subcategoryPageRuHeading: "Усилители, предусилители и стереоресиверы",
+							path: "/recievers?type_reciever%5B0%5D=amplifier_int&type_reciever%5B1%5D=preamp&type_reciever%5B2%5D=stereoreciever&type_reciever%5B3%5D=poweramplifier&type_reciever%5Boperation%5D=union",
+							isUnique: true,
+							position: 0
+						},
+						tubeAmplifiers: {
+							ruName: "Ламповые усилители",
+							subcategoryPageRuHeading: "AV-ресиверы и усилители",
+							path: "/recievers?amp_lamp=1",
+							isUnique: true,
+							position: 0
+						},
+						cdPlayers: {
+							ruName: "CD-проигрыватели",
+							subcategoryPageRuHeading: "CD-проигрыватели",
+							path: "/cd_player",
+							isUnique: true,
+							position: 0
+						},
+						networkPlayers: {
+							ruName: "Сетевые проигрыватели",
+							subcategoryPageRuHeading: "Сетевые проигрыватели",
+							path: "/network_player",
+							isUnique: true,
+							position: 0
+						},
+
+						vinylRecordPlayers: {
+							ruName: "Виниловые проигрыватели",
+							subcategoryPageRuHeading: "Виниловые проигрыватели",
+							path: "/turntable",
+							isUnique: true,
+							position: 0
+						},
+						phonoStage: {
+							ruName: "Фонокорректоры",
+							subcategoryPageRuHeading: "Фонокорректоры",
+							path: "/phonopreamps",
+							isUnique: true,
+							position: 0
+						},
+						soundRecordersAndTonarms: {
+							ruName: "Звукосниматели и тонармы",
+							subcategoryPageRuHeading: "Звукосниматели, тонармы, иглы",
+							path: "/turntableaccess",
+							isUnique: true,
+							position: 0
+						},
+						speakerCables: {
+							ruName: "Акустические кабели",
+							subcategoryPageRuHeading: "Кабели, адаптеры, разветвители",
+							path: "/cable?cable_usage%5B0%5D=av&cable_usage%5Boperation%5D=union&cable_func%5B0%5D=type3&cable_func%5Boperation%5D=union&conn1%5B0%5D=acoustic&conn1%5Boperation%5D=intersect",
+							isUnique: true,
+							position: 0
+						}
+					}
+				},
 				photoAndVideo: {
 					ruName: "Фото- и видеотехника",
 					isUnique: true,
