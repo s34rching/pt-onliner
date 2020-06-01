@@ -1489,12 +1489,54 @@ module.exports = {
 							isUnique: true,
 							position: 0
 						},
+						routersFor4g: {
+							ruName: "4G маршрутизаторы",
+							subcategoryPageRuHeading: "4G маршрутизаторы",
+							path: "/wrouter?wrouter_type%5B0%5D=ltewifirouter&wrouter_type%5B1%5D=portable&wrouter_type%5Boperation%5D=union",
+							isUnique: true,
+							position: 0
+						},
+						modemsFor4GwWiFi: {
+							ruName: "4G модемы с Wi-Fi",
+							subcategoryPageRuHeading: "4G модемы с Wi-Fi",
+							path: "/wrouter?wrouter_type%5B0%5D=usbmodem&wrouter_type%5Boperation%5D=union",
+							isUnique: true,
+							position: 0
+						},
+						wirelessAccessPoints: {
+							ruName: "Беспроводные точки доступа",
+							subcategoryPageRuHeading: "Беспроводные точки доступа",
+							path: "/wirelessap?wap_type%5B0%5D=wirelessap&wap_type%5Boperation%5D=union",
+							isUnique: true,
+							position: 0
+						},
+						wiFiAmplifiers: {
+							ruName: "Усилители Wi-Fi",
+							subcategoryPageRuHeading: "Усилители Wi-Fi",
+							path: "/wirelessap?wap_type%5B0%5D=repeater&wap_type%5Boperation%5D=union",
+							isUnique: true,
+							position: 0
+						},
+						modemsFor3gAnd4G: {
+							ruName: "4G и 3G-модемы",
+							subcategoryPageRuHeading: "Беспроводные адаптеры",
+							path: "/wirelessadapter?wa_type%5B0%5D=4g&wa_type%5B1%5D=3g&wa_type%5Boperation%5D=union",
+							isUnique: false,
+							position: 1
+						},
 						wirelessAdapters: {
 							ruName: "Беспроводные адаптеры",
 							subcategoryPageRuHeading: "Беспроводные адаптеры",
 							path: "/wirelessadapter?wa_type%5B0%5D=wifibluetooth&wa_type%5B1%5D=bluetooth&wa_type%5B2%5D=wifi&wa_type%5Boperation%5D=union",
 							isUnique: true,
 							position: 0
+						},
+						networkAdapters: {
+							ruName: "Сетевые адаптеры (Ethernet)",
+							subcategoryPageRuHeading: "Сетевые адаптеры",
+							path: "/networkadapter",
+							isUnique: false,
+							position: 1
 						},
 						switches: {
 							ruName: "Коммутаторы",
@@ -1510,33 +1552,19 @@ module.exports = {
 							isUnique: true,
 							position: 0
 						},
+						NAS: {
+							ruName: "Сетевые накопители (NAS)",
+							subcategoryPageRuHeading: "Сетевые накопители (NAS)",
+							path: "/nas",
+							isUnique: false,
+							position: 1
+						},
 						ipCameras: {
 							ruName: "IP-камеры",
 							subcategoryPageRuHeading: "IP-камеры",
 							path: "/ipcamera",
 							isUnique: false,
 							position: 2
-						},
-						NAS: {
-							ruName: "NAS",
-							subcategoryPageRuHeading: "Сетевые накопители (NAS)",
-							path: "/nas",
-							isUnique: false,
-							position: 1
-						},
-						wirelessAccessPoints: {
-							ruName: "Беспроводные точки доступа",
-							subcategoryPageRuHeading: "Беспроводные точки доступа",
-							path: "/wirelessap",
-							isUnique: true,
-							position: 0
-						},
-						modemsFor3gAnd4G: {
-							ruName: "4G и 3G-модемы",
-							subcategoryPageRuHeading: "Беспроводные адаптеры",
-							path: "/wirelessadapter?wa_type%5B0%5D=4g&wa_type%5B1%5D=3g&wa_type%5Boperation%5D=union",
-							isUnique: false,
-							position: 1
 						},
 						networkCables: {
 							ruName: "Сетевые кабели",
@@ -1551,13 +1579,6 @@ module.exports = {
 							path: "/household_tools?ht_type%5B0%5D=crimpingpliers&ht_type%5Boperation%5D=union&order=date:desc",
 							isUnique: true,
 							position: 0
-						},
-						networkAdapters: {
-							ruName: "Сетевые адаптеры",
-							subcategoryPageRuHeading: "Сетевые адаптеры",
-							path: "/networkadapter",
-							isUnique: false,
-							position: 1
 						},
 						powerlines: {
 							ruName: "Сети по электропроводке (Powerline)",
