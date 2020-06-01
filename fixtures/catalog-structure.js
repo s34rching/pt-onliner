@@ -369,24 +369,10 @@ module.exports = {
 							isUnique: false,
 							position: 1
 						},
-						multimediaAcoustics: {
-							ruName: "Мультимедиа акустика",
-							subcategoryPageRuHeading: "Мультимедиа акустика",
-							path: "/sound",
-							isUnique: false,
-							position: 0
-						},
-						wirelessSpeakers: {
-							ruName: "Беспроводные и портативные колонки",
-							subcategoryPageRuHeading: "Беспроводные и портативные колонки",
-							path: "/wspeaker",
-							isUnique: true,
-							position: 0
-						},
-						internetRadioStations: {
-							ruName: "Интернет-радиостанции",
-							subcategoryPageRuHeading: "Беспроводные и портативные колонки",
-							path: "/wspeaker?netpl_inetradio=1",
+						portableHeadphonesAmplifiers: {
+							ruName: "Портативные усилители для наушников",
+							subcategoryPageRuHeading: "Усилители для наушников",
+							path: "/portableamp?dac_type1%5B0%5D=type1&dac_type1%5Boperation%5D=union",
 							isUnique: true,
 							position: 0
 						},
@@ -397,10 +383,24 @@ module.exports = {
 							isUnique: true,
 							position: 0
 						},
-						hifiaudio: {
-							ruName: "Музыкальные центры",
-							subcategoryPageRuHeading: "Музыкальные центры",
-							path: "/hifiaudio",
+						bluetoothSpeakers: {
+							ruName: "Bluetooth колонки",
+							subcategoryPageRuHeading: "Беспроводные и портативные колонки",
+							path: "/wspeaker?ws_type%5B0%5D=portable&ws_type%5Boperation%5D=union",
+							isUnique: true,
+							position: 0
+						},
+						wiFiAndMultiroomAcoustics: {
+							ruName: "Wi-Fi и мультирум акустика",
+							subcategoryPageRuHeading: "Беспроводные и портативные колонки",
+							path: "/wspeaker?ws_type%5B0%5D=multiroom&ws_type%5Boperation%5D=union&ws_sync%5B0%5D=wireless&ws_sync%5Boperation%5D=union",
+							isUnique: true,
+							position: 0
+						},
+						smartSpeakers: {
+							ruName: "Умные колонки",
+							subcategoryPageRuHeading: "Беспроводные и портативные колонки",
+							path: "/wspeaker?wspeaker_voas%5B0%5D=siri&wspeaker_voas%5B1%5D=googleassistant&wspeaker_voas%5B2%5D=alexa&wspeaker_voas%5B3%5D=alisa&wspeaker_voas%5Boperation%5D=union",
 							isUnique: true,
 							position: 0
 						},
@@ -411,53 +411,11 @@ module.exports = {
 							isUnique: false,
 							position: 0
 						},
-						hifisound: {
-							ruName: "Акустика Hi-Fi и Hi-End",
-							subcategoryPageRuHeading: "Hi-Fi акустика",
-							path: "/hifisound",
-							isUnique: true,
-							position: 0
-						},
-						recievers: {
-							ruName: "AV-ресиверы и усилители",
-							subcategoryPageRuHeading: "AV-ресиверы и усилители",
-							path: "/recievers",
-							isUnique: true,
-							position: 0
-						},
-						vinylRecordPlayers: {
-							ruName: "Виниловые проигрыватели",
-							subcategoryPageRuHeading: "Виниловые проигрыватели",
-							path: "/turntable",
-							isUnique: true,
-							position: 0
-						},
-						phonoStages: {
-							ruName: "Фонокорректоры",
-							subcategoryPageRuHeading: "Фонокорректоры",
-							path: "/phonopreamps",
-							isUnique: true,
-							position: 0
-						},
-						networkPlayers: {
-							ruName: "Сетевые проигрыватели",
-							subcategoryPageRuHeading: "Сетевые проигрыватели",
-							path: "/network_player",
-							isUnique: true,
-							position: 0
-						},
-						radio: {
-							ruName: "Радиоприемники",
-							subcategoryPageRuHeading: "Радиоприемники",
-							path: "/radio",
+						multimediaAcoustics: {
+							ruName: "Мультимедиа акустика",
+							subcategoryPageRuHeading: "Мультимедиа акустика",
+							path: "/sound",
 							isUnique: false,
-							position: 0
-						},
-						portCarAudio: {
-							ruName: "Магнитолы",
-							subcategoryPageRuHeading: "Магнитолы",
-							path: "/portaudio",
-							isUnique: true,
 							position: 0
 						},
 						soundBars: {
@@ -467,10 +425,38 @@ module.exports = {
 							isUnique: false,
 							position: 1
 						},
+						radio: {
+							ruName: "Радиоприемники",
+							subcategoryPageRuHeading: "Радиоприемники",
+							path: "/radio",
+							isUnique: false,
+							position: 0
+						},
+						partyBoxes: {
+							ruName: "Колонки для вечеринок (патибоксы)",
+							subcategoryPageRuHeading: "Музыкальные центры, колонки для вечеринок (Partybox)",
+							path: "/hifiaudio?hifi_type%5B0%5D=partybox&hifi_type%5Boperation%5D=union",
+							isUnique: true,
+							position: 0
+						},
+						hifiaudio: {
+							ruName: "Музыкальные центры",
+							subcategoryPageRuHeading: "Музыкальные центры",
+							path: "/hifiaudio",
+							isUnique: true,
+							position: 0
+						},
 						clockRadios: {
 							ruName: "Электронные и радиочасы",
 							subcategoryPageRuHeading: "Электронные и радиочасы",
 							path: "/clockradio",
+							isUnique: true,
+							position: 0
+						},
+						boomboxesAndRadioTapeRecorders: {
+							ruName: "Бумбоксы и магнитолы",
+							subcategoryPageRuHeading: "Магнитолы",
+							path: "/portaudio",
 							isUnique: true,
 							position: 0
 						},
@@ -481,41 +467,20 @@ module.exports = {
 							isUnique: true,
 							position: 0
 						},
-						cables: {
-							ruName: "Кабели",
-							subcategoryPageRuHeading: "Кабели, адаптеры, разветвители",
-							path: "/cable",
-							isUnique: true,
-							position: 0
-						},
-						vinylRecordPlayersAccessories: {
-							ruName: "Звукосниматели, тонармы, иглы",
-							subcategoryPageRuHeading: "Звукосниматели, тонармы, иглы",
-							path: "/turntableaccess",
-							isUnique: true,
-							position: 0
-						},
-						headphoneAmplifiers: {
-							ruName: "Усилители для наушников",
+						btAudioReceivers: {
+							ruName: "Bluetooth аудиоресиверы",
 							subcategoryPageRuHeading: "Усилители для наушников",
-							path: "/portableamp",
+							path: "/portableamp?dac_type1%5B0%5D=btreciever&dac_type1%5Boperation%5D=union",
 							isUnique: true,
 							position: 0
 						},
-						speakerDocks: {
-							ruName: "Док-станции для смартфонов",
-							subcategoryPageRuHeading: "Док-станции для смартфонов",
-							path: "/speakerdock",
-							isUnique: false,
-							position: 1
+						audioCables: {
+							ruName: "Аудиокабели",
+							subcategoryPageRuHeading: "Кабели, адаптеры, разветвители",
+							path: "/cable?cable_usage%5B0%5D=av&cable_usage%5Boperation%5D=union&cable_type%5B0%5D=cable&cable_type%5Boperation%5D=union&cable_func%5B0%5D=type3&cable_func%5Boperation%5D=union",
+							isUnique: true,
+							position: 0
 						},
-						remoteControls: {
-							ruName: "Универсальные пульты ДУ",
-							subcategoryPageRuHeading: "Универсальные пульты ДУ",
-							path: "/remote",
-							isUnique: false,
-							position: 1
-						}
 					}
 				},
 				hiFiAudio: {
