@@ -1,14 +1,26 @@
+const { ALLOWED_PRICE_CHANGE } = require("../service/rates")
+const { getProductBynPrice } = require("../service/product-services")
 const HomePage = require("../page-objects/homepage")
 const ProductsList = require("../page-objects/products-list")
 const SearchIframe = require("../page-objects/search-iframe")
 const ProductDetailsPage = require("../page-objects/product-details-page")
+const api = require("../helpers/onliner-api")
 const entities = require("../helpers/get-entities")
 const chai = require("chai")
 const assert = chai.assert
 
 describe("Onliner.by - Products / Search", () => {
 
+	let exchangeRate
 	const activeProducts = entities.getProduct("active", 5)
+
+	beforeAll(done => {
+		api.getCurrencyExchangeRates().then(res => {
+			const dailyCurrencyChanges = JSON.parse(res)
+			exchangeRate = parseFloat(dailyCurrencyChanges.amount.replace(",", "."))
+			done()
+		})
+	})
 
 	beforeEach(() => {
 		browser.waitForAngularEnabled(false)
@@ -25,12 +37,14 @@ describe("Onliner.by - Products / Search", () => {
 
 					it("Then product should be found", () => {
 
+						const priceByn = getProductBynPrice(activeProduct, exchangeRate)
+
 						HomePage.performSearch(activeProduct.query)
 						SearchIframe.switchToSearchIframe()
 						SearchIframe.waitForProductAreLoadedOnModal()
 						expect(SearchIframe.isVisible(SearchIframe.resultItemProduct(activeProduct.query))).toBe(true)
 						SearchIframe.productPrice(activeProduct.query).getText().then(text => {
-							assert.closeTo(activeProduct.price, parseInt(text.match(/\d+/)[0]), activeProduct.accuracy)
+							assert.closeTo(priceByn, parseInt(text.match(/\d+/)[0]), priceByn * ALLOWED_PRICE_CHANGE)
 						})
 					})
 				})
@@ -122,6 +136,7 @@ describe("Onliner.by - Products / Search", () => {
 				it("Then they should be able to see product details", () => {
 
 					const product = entities.getProduct()
+					const priceByn = getProductBynPrice(product, exchangeRate)
 
 					HomePage.performSearch(product.query)
 					SearchIframe.switchToSearchIframe()
@@ -132,7 +147,7 @@ describe("Onliner.by - Products / Search", () => {
 					if (product.status === "active") {
 						ProductDetailsPage.waitForFirstShopOfferVisible()
 						ProductDetailsPage.firstOfferPrice.getText().then(text => {
-							assert.closeTo(product.price, parseInt(text.match(/\d+/)[0]), product.accuracy)
+							assert.closeTo(priceByn, parseInt(text.match(/\d+/)[0]), priceByn * ALLOWED_PRICE_CHANGE)
 						})
 					}
 					expect(browser.getCurrentUrl()).toContain(product.relativeUrl)

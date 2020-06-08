@@ -7,8 +7,7 @@ module.exports = {
 				relativeUrl: "/mobile/apple/iphone1164b",
 				status: "active",
 				label: null,
-				price: 1890,
-				accuracy: 200
+				priceUsd: 781
 			},
 			{
 				query: "AMD Ryzen 5 3600",
@@ -16,8 +15,7 @@ module.exports = {
 				relativeUrl: "/cpu/amd/rzn53600",
 				status: "active",
 				label: null,
-				price: 415,
-				accuracy: 100
+				priceUsd: 194
 			},
 			{
 				query: "Холодильник side by side Samsung RS552NRUASL",
@@ -25,8 +23,7 @@ module.exports = {
 				relativeUrl: "/refrigerator/samsung/rs552nruasl",
 				status: "active",
 				label: null,
-				price: 3029,
-				accuracy: 200
+				priceUsd: 1134
 			},
 			{
 				query: "Apple iPad Air 2019 64GB MUUJ2 (серый космос)",
@@ -34,8 +31,7 @@ module.exports = {
 				relativeUrl: "/tabletpc/apple/muuj2",
 				status: "active",
 				label: null,
-				price: 1250,
-				accuracy: 100
+				priceUsd: 630
 			},
 			{
 				query: "SSD Samsung 860 Evo 250GB MZ-76E250",
@@ -43,8 +39,7 @@ module.exports = {
 				relativeUrl: "/ssd/samsung/mz76e250bw",
 				status: "active",
 				label: null,
-				price: 105,
-				accuracy: 30
+				priceUsd: 56
 			}],
 	outOfStock:
 		[
@@ -54,8 +49,7 @@ module.exports = {
 				relativeUrl: "/bike/cube/150hparace275pl",
 				status: "out-of-stock",
 				label: "Нет в наличии",
-				price: null,
-				accuracy: null
+				priceUsd: null
 			},
 			{
 				query: "DeWalt D25404K",
@@ -63,8 +57,7 @@ module.exports = {
 				relativeUrl: "/rotaryhammers/dewalt/d25404k",
 				status: "out-of-stock",
 				label: "Нет в наличии",
-				price: null,
-				accuracy: null
+				priceUsd: null
 			},
 			{
 				query: "Душевая кабина Erlit ER NYC100W-2 100x105",
@@ -72,8 +65,7 @@ module.exports = {
 				relativeUrl: "/showerbox/erlit/ernyc100w2",
 				status: "out-of-stock",
 				label: "Нет в наличии",
-				price: null,
-				accuracy: null
+				priceUsd: null
 			},
 			{
 				query: "Thermaltake Versa H26 Tempered Glass Edition CA-1J5-00M1WN-00",
@@ -81,8 +73,7 @@ module.exports = {
 				relativeUrl: "/chassis/thermaltake/ca1j500m1wn00",
 				status: "out-of-stock",
 				label: "Нет в наличии",
-				price: null,
-				accuracy: null
+				priceUsd: null
 			},
 			{
 				query: "МФУ Kyocera Mita ECOSYS M6026cidn",
@@ -90,8 +81,7 @@ module.exports = {
 				relativeUrl: "/printers/kyoceramita/ecosysm6026cidn",
 				status: "out-of-stock",
 				label: "Нет в наличии",
-				price: null,
-				accuracy: null
+				priceUsd: null
 			}],
 	offSale:
 		[
@@ -101,8 +91,7 @@ module.exports = {
 				relativeUrl: "/cpu/intel/intele7500",
 				status: "off-sale",
 				label: "Снят с продажи",
-				price: null,
-				accuracy: null
+				priceUsd: null
 			},
 			{
 				query: "Умные часы Apple Watch Series 1 42mm Rose Gold with Pink Sand Sport Band [MQ112]",
@@ -110,8 +99,7 @@ module.exports = {
 				relativeUrl: "/smartwatch/apple/applemq112",
 				status: "off-sale",
 				label: "Снят с продажи",
-				price: null,
-				accuracy: null
+				priceUsd: null
 			},
 			{
 				query: "Siemens ET875LMP1D",
@@ -119,8 +107,7 @@ module.exports = {
 				relativeUrl: "/hob_cooker/siemens/et875lmp1d",
 				status: "off-sale",
 				label: "Снят с продажи",
-				price: null,
-				accuracy: null
+				priceUsd: null
 			},
 			{
 				query: "Эспрессо кофемашина Philips HD8847/09",
@@ -128,8 +115,7 @@ module.exports = {
 				relativeUrl: "/coffee/philips/hd884709",
 				status: "off-sale",
 				label: "Снят с продажи",
-				price: null,
-				accuracy: null
+				priceUsd: null
 			},
 			{
 				query: "Велосипед GT Aggressor 1.0 Mech (2014)",
@@ -137,7 +123,6 @@ module.exports = {
 				relativeUrl: "/bike/gt/aggressor10mech",
 				status: "off-sale",
 				label: "Снят с продажи",
-				price: null,
-				accuracy: null
+				priceUsd: null
 			}]
 }
