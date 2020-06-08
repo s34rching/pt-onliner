@@ -1,4 +1,4 @@
-const { ALLOWED_PRICE_CHANGE } = require("../service/rates")
+const { EXPECTED_PRICE_CHANGE } = require("../service/rates")
 const { getProductBynPrice } = require("../service/product-services")
 const HomePage = require("../page-objects/homepage")
 const ProductsList = require("../page-objects/products-list")
@@ -44,7 +44,7 @@ describe("Onliner.by - Products / Search", () => {
 						SearchIframe.waitForProductAreLoadedOnModal()
 						expect(SearchIframe.isVisible(SearchIframe.resultItemProduct(activeProduct.query))).toBe(true)
 						SearchIframe.productPrice(activeProduct.query).getText().then(text => {
-							assert.closeTo(priceByn, parseInt(text.match(/\d+/)[0]), priceByn * ALLOWED_PRICE_CHANGE)
+							assert.closeTo(priceByn, parseInt(text.match(/\d+/)[0]), priceByn * EXPECTED_PRICE_CHANGE)
 						})
 					})
 				})
@@ -147,7 +147,7 @@ describe("Onliner.by - Products / Search", () => {
 					if (product.status === "active") {
 						ProductDetailsPage.waitForFirstShopOfferVisible()
 						ProductDetailsPage.firstOfferPrice.getText().then(text => {
-							assert.closeTo(priceByn, parseInt(text.match(/\d+/)[0]), priceByn * ALLOWED_PRICE_CHANGE)
+							assert.closeTo(priceByn, parseInt(text.match(/\d+/)[0]), priceByn * EXPECTED_PRICE_CHANGE)
 						})
 					}
 					expect(browser.getCurrentUrl()).toContain(product.relativeUrl)
