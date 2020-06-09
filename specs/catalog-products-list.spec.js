@@ -155,7 +155,7 @@ describe("Onliner.by - Catalog / Products List", () => {
 		})
 	})
 
-	describe("When user opens offers list page", () => {
+	fdescribe("When user opens offers list page", () => {
 
 		let shopList
 
@@ -168,10 +168,11 @@ describe("Onliner.by - Catalog / Products List", () => {
 
 		it("Then they should be able to find complete shop info to purchase the chosen product", () => {
 
+			const [firstProduct] = allCPUs.products
 			const [firstShop] = shopList.positions.primary
 
 			ProductsList.openFirstProductOffersPage()
-			ProductsList.waitForUrlContains("cpu/amd/rzn53600")
+			ProductsList.waitForUrlContains(`cpu/amd/${firstProduct.key}`)
 			ProductOffers.isPresentInDom(ProductOffers.productPriceHeading)
 			ProductOffers.scrollElementIntoView(ProductOffers.productPriceHeading)
 			ProductOffers.skipPickCityModal()
