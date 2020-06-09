@@ -27,9 +27,7 @@ describe("Onliner.by - Catalog / Products List", () => {
 	describe("When user opens subcategory products list", () => {
 
 		it("Then products default sort order is set as 'Popular'", () => {
-			ProductsList.orderDropdownActiveOrderOption.getText().then(text => {
-				expect(text).toBe("популярные")
-			})
+			expect(ProductsList.orderDropdownActiveOrderOption.getText()).toBe("популярные")
 		})
 	})
 
