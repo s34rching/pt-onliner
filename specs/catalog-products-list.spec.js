@@ -155,7 +155,7 @@ describe("Onliner.by - Catalog / Products List", () => {
 		})
 	})
 
-	fdescribe("When user opens offers list page", () => {
+	describe("When user opens offers list page", () => {
 
 		let shopList
 
