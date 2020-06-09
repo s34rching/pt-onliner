@@ -22,7 +22,6 @@ describe("Onliner.by - Catalog / Products List", () => {
 		browser.waitForAngularEnabled(false)
 
 		ProductsList.goTo("/cpu")
-		ProductsList.waitForProperTotalOfFoundProducts(allCPUs.total.toString())
 	})
 
 	describe("When user opens subcategory products list", () => {
@@ -169,20 +168,17 @@ describe("Onliner.by - Catalog / Products List", () => {
 
 		it("Then they should be able to find complete shop info to purchase the chosen product", () => {
 
-			const firstProduct = allCPUs.products[0]
-			const firstShop = shopList.positions.primary[0]
+			const [firstShop] = shopList.positions.primary
 
 			ProductsList.openFirstProductOffersPage()
-			ProductsList.waitForUrlContains(`/${firstProduct.url.match(/(?<=\/products\/).+$/)[0]}/prices`)
-			ProductOffers.subNavActiveTab.getText()
-				.then(text => { expect(text).toContain("Предложения продавцов") })
+			ProductsList.waitForUrlContains("cpu/amd/rzn53600")
+			ProductOffers.isPresentInDom(ProductOffers.productPriceHeading)
 			ProductOffers.scrollElementIntoView(ProductOffers.productPriceHeading)
-			ProductOffers.waitForFirstShopLogoDisplayed(firstShop.shop_id)
+			ProductOffers.skipPickCityModal()
+			expect(ProductOffers.waitForFirstShopLogoDisplayed(firstShop.shop_id)).toBe(true)
 			expect(ProductOffers.productPricesOrderGroup.isDisplayed()).toBe(true)
 			expect(ProductOffers.productPricesFilterGroup.isDisplayed()).toBe(true)
-			ProductOffers.firstOfferProductPrice.getText().then(price => {
-				assert.closeTo(parseInt(price), 250, 50)
-			})
+			expect(ProductOffers.firstOfferProductPrice.isDisplayed()).toBe(true)
 			expect(ProductOffers.toCartButton.isDisplayed()).toBe(true)
 			expect(ProductOffers.shopContactsButton.isDisplayed()).toBe(true)
 			expect(ProductOffers.shopWorkingHours.getText()).toContain("Магазин сегодня работает с")
