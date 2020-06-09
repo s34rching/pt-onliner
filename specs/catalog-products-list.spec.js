@@ -172,7 +172,7 @@ describe("Onliner.by - Catalog / Products List", () => {
 			const [firstShop] = shopList.positions.primary
 
 			ProductsList.openFirstProductOffersPage()
-			ProductsList.waitForUrlContains(`cpu/amd/${firstProduct.key}`)
+			ProductsList.waitForUrlContains(firstProduct.html_url)
 			ProductOffers.isPresentInDom(ProductOffers.productPriceHeading)
 			ProductOffers.scrollElementIntoView(ProductOffers.productPriceHeading)
 			ProductOffers.skipPickCityModal()
