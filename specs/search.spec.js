@@ -141,8 +141,8 @@ describe("Onliner.by - Products / Search", () => {
 					HomePage.performSearch(product.query)
 					SearchIframe.switchToSearchIframe()
 					SearchIframe.waitForProductAreLoadedOnModal()
-					expect(SearchIframe.resultItemProduct(product.query).isDisplayed()).toBe(true)
-					SearchIframe.openProductDetailsPageByTitle(product.query)
+					expect(SearchIframe.resultItemProduct(product.catalogTitle).isDisplayed()).toBe(true)
+					SearchIframe.openProductDetailsPageByTitle(product.catalogTitle)
 					SearchIframe.switchToDefaultFrame()
 					if (product.status === "active") {
 						ProductDetailsPage.waitForFirstShopOfferVisible()
