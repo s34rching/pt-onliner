@@ -80,7 +80,7 @@ describe("Onliner.by - Products / Search", () => {
 					HomePage.performSearch(product.query)
 					SearchIframe.switchToSearchIframe()
 					SearchIframe.waitForProductAreLoadedOnModal()
-					expect(SearchIframe.resultItemProduct(product.query).isDisplayed()).toBe(true)
+					expect(SearchIframe.resultItemProduct(product.catalogTitle).isDisplayed()).toBe(true)
 					SearchIframe.closeSearchModal()
 					SearchIframe.isNotVisible(SearchIframe.resultItemProduct(product.query))
 				})
