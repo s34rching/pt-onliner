@@ -63,7 +63,7 @@ describe("Onliner.by - Products / Search", () => {
 				SearchIframe.switchToSearchIframe()
 				SearchIframe.waitForProductAreLoadedOnModal()
 				expect(SearchIframe.resultItemSubcategory(randomSubcategory.ruName).isDisplayed()).toBe(true)
-				SearchIframe.openSubcategoryPage(randomSubcategory.ruName)
+				SearchIframe.openSubcategoryPage(randomSubcategory.subcategoryPageRuHeading)
 				expect(browser.getCurrentUrl()).toContain(randomSubcategory.path)
 				expect(ProductsList.isVisible(ProductsList.product())).toBe(true)
 			})
