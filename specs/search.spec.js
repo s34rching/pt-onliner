@@ -28,7 +28,7 @@ describe("Onliner.by - Products / Search", () => {
 		HomePage.goTo("/")
 	})
 
-	describe("When user triggers search bar", () => {
+	fdescribe("When user triggers search bar", () => {
 
 		describe("And search for an active products by their catalog name", () => {
 
@@ -62,9 +62,9 @@ describe("Onliner.by - Products / Search", () => {
 				HomePage.performSearch(randomSubcategory.ruName)
 				SearchIframe.switchToSearchIframe()
 				SearchIframe.waitForProductAreLoadedOnModal()
-				expect(SearchIframe.resultItemSubcategory(randomSubcategory.ruName).isDisplayed()).toBe(true)
+				expect(SearchIframe.resultItemSubcategory(randomSubcategory.subcategoryPageRuHeading).isDisplayed()).toBe(true)
 				SearchIframe.openSubcategoryPage(randomSubcategory.subcategoryPageRuHeading)
-				expect(browser.getCurrentUrl()).toContain(randomSubcategory.path)
+				expect(browser.getCurrentUrl()).toContain(randomSubcategory.path.match(/\/\w+/)[0])
 				expect(ProductsList.isVisible(ProductsList.product())).toBe(true)
 			})
 		})
