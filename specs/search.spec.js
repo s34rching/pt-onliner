@@ -28,7 +28,7 @@ describe("Onliner.by - Products / Search", () => {
 		HomePage.goTo("/")
 	})
 
-	fdescribe("When user triggers search bar", () => {
+	describe("When user triggers search bar", () => {
 
 		describe("And search for an active products by their catalog name", () => {
 
@@ -82,7 +82,8 @@ describe("Onliner.by - Products / Search", () => {
 					SearchIframe.waitForProductAreLoadedOnModal()
 					expect(SearchIframe.resultItemProduct(product.catalogTitle).isDisplayed()).toBe(true)
 					SearchIframe.closeSearchModal()
-					SearchIframe.isNotVisible(SearchIframe.resultItemProduct(product.query))
+					expect(SearchIframe.isVisible(SearchIframe.searchBar)).toBe(true)
+					expect(SearchIframe.isNotVisible(SearchIframe.modalSearchBar)).toBe(true)
 				})
 			})
 		})
