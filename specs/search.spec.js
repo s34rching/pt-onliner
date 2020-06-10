@@ -110,8 +110,8 @@ describe("Onliner.by - Products / Search", () => {
 				HomePage.performSearch(outOfStockProduct.query)
 				SearchIframe.switchToSearchIframe()
 				SearchIframe.waitForProductAreLoadedOnModal()
-				expect(SearchIframe.resultItemProduct(outOfStockProduct.query).isDisplayed()).toBe(true)
-				expect(SearchIframe.productPrice(outOfStockProduct.query).getText()).toBe(outOfStockProduct.label)
+				expect(SearchIframe.resultItemProduct(outOfStockProduct.catalogTitle).isDisplayed()).toBe(true)
+				expect(SearchIframe.productPrice(outOfStockProduct.catalogTitle).getText()).toBe(outOfStockProduct.label)
 			})
 		})
 
@@ -124,8 +124,8 @@ describe("Onliner.by - Products / Search", () => {
 				HomePage.performSearch(offSaleProduct.query)
 				SearchIframe.switchToSearchIframe()
 				SearchIframe.waitForProductAreLoadedOnModal()
-				expect(SearchIframe.resultItemProduct(offSaleProduct.query).isDisplayed()).toBe(true)
-				expect(SearchIframe.productPrice(offSaleProduct.query).getText()).toBe(offSaleProduct.label)
+				expect(SearchIframe.resultItemProduct(offSaleProduct.catalogTitle).isDisplayed()).toBe(true)
+				expect(SearchIframe.productPrice(offSaleProduct.catalogTitle).getText()).toBe(offSaleProduct.label)
 			})
 		})
 
