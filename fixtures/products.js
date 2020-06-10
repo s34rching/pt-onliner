@@ -26,7 +26,7 @@ module.exports = {
 				priceUsd: 1134
 			},
 			{
-				query: "Apple iPad Air 2019 64GB MUUJ2 (серый космос)",
+				query: "iPad Air 2019 64GB MUUJ2 (серый космос)",
 				catalogTitle: "Планшет Apple iPad Air 2019 64GB MUUJ2 (серый космос)",
 				relativeUrl: "/tabletpc/apple/muuj2",
 				status: "active",

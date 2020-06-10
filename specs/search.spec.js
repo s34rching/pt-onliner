@@ -42,8 +42,8 @@ describe("Onliner.by - Products / Search", () => {
 						HomePage.performSearch(activeProduct.query)
 						SearchIframe.switchToSearchIframe()
 						SearchIframe.waitForProductAreLoadedOnModal()
-						expect(SearchIframe.isVisible(SearchIframe.resultItemProduct(activeProduct.query))).toBe(true)
-						SearchIframe.productPrice(activeProduct.query).getText().then(text => {
+						expect(SearchIframe.isVisible(SearchIframe.resultItemProduct(activeProduct.catalogTitle))).toBe(true)
+						SearchIframe.productPrice(activeProduct.catalogTitle).getText().then(text => {
 							assert.closeTo(priceByn, parseInt(text.match(/\d+/)[0]), priceByn * EXPECTED_PRICE_CHANGE)
 						})
 					})
