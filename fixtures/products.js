@@ -26,7 +26,7 @@ module.exports = {
 				priceUsd: 1134
 			},
 			{
-				query: "Apple iPad Air 2019 64GB MUUJ2 (серый космос)",
+				query: "iPad Air 2019 64GB MUUJ2 (серый космос)",
 				catalogTitle: "Планшет Apple iPad Air 2019 64GB MUUJ2 (серый космос)",
 				relativeUrl: "/tabletpc/apple/muuj2",
 				status: "active",
@@ -44,9 +44,9 @@ module.exports = {
 	outOfStock:
 		[
 			{
-				query: "Велосипед Cube Stereo 150 HPA Race 27.5+ (2017)",
-				catalogTitle: "Велосипед Cube Stereo 150 HPA Race 27.5+ (2017)",
-				relativeUrl: "/bike/cube/150hparace275pl",
+				query: "Wortex MX 1415 D",
+				catalogTitle: "Дрель-миксер Wortex MX 1415 D",
+				relativeUrl: "/drills/wortex/mx1415d0304",
 				status: "out-of-stock",
 				label: "Нет в наличии",
 				priceUsd: null
@@ -55,14 +55,6 @@ module.exports = {
 				query: "DeWalt D25404K",
 				catalogTitle: "Перфоратор DeWalt D25404K",
 				relativeUrl: "/rotaryhammers/dewalt/d25404k",
-				status: "out-of-stock",
-				label: "Нет в наличии",
-				priceUsd: null
-			},
-			{
-				query: "Душевая кабина Erlit ER NYC100W-2 100x105",
-				catalogTitle: "Душевая кабина Erlit ER NYC100W-2 100x105",
-				relativeUrl: "/showerbox/erlit/ernyc100w2",
 				status: "out-of-stock",
 				label: "Нет в наличии",
 				priceUsd: null
@@ -86,6 +78,14 @@ module.exports = {
 	offSale:
 		[
 			{
+				query: "Велосипед Cube Stereo 150 HPA Race 27.5+ (2017)",
+				catalogTitle: "Велосипед Cube Stereo 150 HPA Race 27.5+ (2017)",
+				relativeUrl: "/bike/cube/150hparace275pl",
+				status: "out-of-stock",
+				label: "Снят с продажи",
+				priceUsd: null
+			},
+			{
 				query: "Intel Core 2 Duo E7500",
 				catalogTitle: "Процессор Intel Core 2 Duo E7500",
 				relativeUrl: "/cpu/intel/intele7500",
@@ -97,14 +97,6 @@ module.exports = {
 				query: "Умные часы Apple Watch Series 1 42mm Rose Gold with Pink Sand Sport Band [MQ112]",
 				catalogTitle: "Умные часы Apple Watch Series 1 42mm Rose Gold with Pink Sand Sport Band [MQ112]",
 				relativeUrl: "/smartwatch/apple/applemq112",
-				status: "off-sale",
-				label: "Снят с продажи",
-				priceUsd: null
-			},
-			{
-				query: "Siemens ET875LMP1D",
-				catalogTitle: "Варочная панель Siemens ET875LMP1D",
-				relativeUrl: "/hob_cooker/siemens/et875lmp1d",
 				status: "off-sale",
 				label: "Снят с продажи",
 				priceUsd: null
