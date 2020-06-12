@@ -48,13 +48,8 @@ describe("Onliner.by - Top Navigation / Informers", () => {
 							ExchangeRatesPage.openBestExchangeRatesLocations()
 							ExchangeRatesPage.waitForMapIsLoaded()
 							expect(ExchangeRatesPage.exchangeServicesMapLocations.getText()).toMatch(defineLocationsMessageOnPopup(locationsAmount))
-							ExchangeRatesPage.exchangeServicesMapPointers.then(pointers => {
-								expect(pointers.length).toEqual(locationsAmount)
-								pointers.forEach(pointer => {
-									expect(pointer.isDisplayed()).toBe(true)
-								})
-							})
-
+							expect(ExchangeRatesPage.exchangeServicesMapPointers.count()).toEqual(locationsAmount)
+							ExchangeRatesPage.exchangeServicesMapPointers.each(pointer => expect(pointer.isDisplayed()).toBe(true))
 						})
 					})
 				})
