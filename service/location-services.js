@@ -8,7 +8,7 @@ module.exports = {
 		} else if (isOnlyLocation(showMapMessage)) {
 			textValue = 1
 		} else {
-			textValue = getLiteralLocationsAmount(showMapMessage)
+			textValue = getLiteralLocationsAmount(showMapMessage)[0]
 		}
 
 		if (textValue === 1 || parseInt(textValue)) {
@@ -31,7 +31,7 @@ module.exports = {
 
 const isOnlyLocation = message => !message.match(/^\u0412\s/)
 const isMoreThanNineLocations = message => message.match(/\d+/)
-const getLiteralLocationsAmount = message => message.match(/(?<=^\u0412\s).+(?=\s)/)[0]
+const getLiteralLocationsAmount = message => message.match(/(?<=^\u0412\s).+(?=\s)/)
 const hasPluralEnding = amount => {
 	const withSingularEnding = [ 2, 3, 4 ]
 
