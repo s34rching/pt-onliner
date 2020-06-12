@@ -31,7 +31,7 @@ module.exports = {
 
 const isOnlyLocation = message => !message.match(/^\u0412\s/)
 const isMoreThanNineLocations = message => message.match(/\d+/)
-const getLiteralLocationsAmount = message => message.match(/(?<=^\u0412\s).+(?=\s)/)
+const getLiteralLocationsAmount = message => message.match(/(?<=^\u0412\s).+(?=\s)/)[0]
 const hasPluralEnding = amount => {
 	const withSingularEnding = [ 2, 3, 4 ]
 
