@@ -24,7 +24,7 @@ class ExchangeRatesPage extends BasePage {
 				.first()
 		}
 		this.exchangeServicesMap = $("div.b-currency-map-i")
-		this.exchangeServicesMapPointers = this.exchangeServicesMap.$$("ymaps.ymaps-image")
+		this.exchangeServicesMapPointers =  this.exchangeServicesMap.$$("ymaps.ymaps-image")
 		this.exchangeServicesMapLocations = this.exchangeServicesMap.element(by.tagName("em"))
 	}
 

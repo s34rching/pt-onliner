@@ -1,6 +1,7 @@
 const HomePage = require("../page-objects/homepage")
 const ExchangeRatesPage = require("../page-objects/currency-exchange-page")
 const WeatherForecastPage = require("../page-objects/weather-forecast-page")
+const { getLocationsAmount, defineLocationsMessageOnPopup } = require("../service/location-services")
 const random = require("../helpers/get-random-testing-data")
 const cities = require("../fixtures/cities")
 const api = require("../helpers/onliner-api")
@@ -41,34 +42,19 @@ describe("Onliner.by - Top Navigation / Informers", () => {
 
 					it("Then they should be able to find exchange services location on a map", () => {
 						HomePage.openCurrencyExchangeRatesPage()
-						ExchangeRatesPage.bestExchangeRatesLocationsButton.getText().then(banksAmount => {
+						ExchangeRatesPage.bestExchangeRatesLocationsButton.getText().then(showMapMessage => {
+							const locationsAmount = getLocationsAmount(showMapMessage)
+
 							ExchangeRatesPage.openBestExchangeRatesLocations()
 							ExchangeRatesPage.waitForMapIsLoaded()
-
-							const banks = banksAmount.split(" ")
-							const numbers = [ "двух", "трех", "четырех", "пяти", "шести", "семи", "восьми", "девяти" ]
-
-							if (_.intersection(banks, numbers).length) {
-								ExchangeRatesPage.exchangeServicesMapLocations.getText().then(text => {
-									const locationsAmount = text.match(/^\d+/)[0]
-									ExchangeRatesPage.exchangeServicesMapPointers.then(pointers => {
-										expect(pointers.length).toBe(parseInt(locationsAmount))
-										pointers.forEach(pointer => {
-											expect(pointer.isDisplayed()).toBe(true)
-										})
-									})
+							expect(ExchangeRatesPage.exchangeServicesMapLocations.getText()).toMatch(defineLocationsMessageOnPopup(locationsAmount))
+							ExchangeRatesPage.exchangeServicesMapPointers.then(pointers => {
+								expect(pointers.length).toEqual(locationsAmount)
+								pointers.forEach(pointer => {
+									expect(pointer.isDisplayed()).toBe(true)
 								})
-							} else {
-								ExchangeRatesPage.exchangeServicesMapLocations.getText().then(text => {
-									expect(text).toContain(banksAmount)
-									ExchangeRatesPage.exchangeServicesMapPointers.then(pointers => {
-										expect(pointers.length).toBe(1)
-										pointers.forEach(pointer => {
-											expect(pointer.isDisplayed()).toBe(true)
-										})
-									})
-								})
-							}
+							})
+
 						})
 					})
 				})

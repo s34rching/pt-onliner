@@ -1,24 +1,31 @@
 module.exports = {
-	defineLocationsMessageOnPopup: showMapMessage => {
-
-		let amount
+	getLocationsAmount: showMapMessage => {
+		let textValue
+		const matches = { 2: "два", 3: "три", 4: "четыре", 5: "пять", 6: "шесть", 7: "семь", 8: "восемь", 9: "девять" }
 
 		if (isMoreThanNineLocations(showMapMessage)) {
-			amount = isMoreThanNineLocations(showMapMessage)[0]
+			textValue = isMoreThanNineLocations(showMapMessage)[0]
 		} else if (isOnlyLocation(showMapMessage)) {
-			amount = 1
+			textValue = 1
 		} else {
-			amount = getLiteralLocationsAmount(showMapMessage)
+			textValue = getLiteralLocationsAmount(showMapMessage)
 		}
 
-		const singleLocationMessage = "1 обменный пункт на карте"
+		if (textValue === 1 || parseInt(textValue)) {
+			return parseInt(textValue)
+		}
+
+		return parseInt(getKeyByValue(matches, textValue))
+	},
+	defineLocationsMessageOnPopup: locationsAmount => {
+		const singleLocationMessage = /((\w+,\s)|(\w+\s.+,\s))/
 		const multipleLocationsMessage = amount => {
 			const withEnding = (hasPluralEnding(amount)) ? "пунктов" : "пункта"
 
 			return `${amount} обменных ${withEnding} на карте`
 		}
 
-		return (amount === 1) ? singleLocationMessage : multipleLocationsMessage(amount)
+		return (locationsAmount === 1) ? singleLocationMessage : multipleLocationsMessage(locationsAmount)
 	}
 }
 
@@ -26,8 +33,10 @@ const isOnlyLocation = message => !message.match(/^\u0412\s/)
 const isMoreThanNineLocations = message => message.match(/\d+/)
 const getLiteralLocationsAmount = message => message.match(/(?<=^\u0412\s)\w+(?=\s)/)
 const hasPluralEnding = amount => {
-	const withSingularEnding = [ "два", "три", "четыре" ]
+	const withSingularEnding = [ 2, 3, 4 ]
 
-	return !((!parseInt(amount) && withSingularEnding.includes(amount)) ||
-      (amount.length === 2 && [ "1", "2" ].includes(amount[1])))
+	return !((withSingularEnding.includes(amount)) || ([ 1, 2 ].includes(amount % 10) && ![ 11, 12 ].includes(amount)))
+}
+const getKeyByValue = (object, value) => {
+	return Object.keys(object).find(key => object[key] === value)
 }
