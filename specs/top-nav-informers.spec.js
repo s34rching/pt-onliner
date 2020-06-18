@@ -115,9 +115,7 @@ describe("Onliner.by - Top Navigation / Informers", () => {
 					WeatherForecastPage.openCitiesOptionsDropdown()
 					WeatherForecastPage.changeCity(userCity.id)
 					WeatherForecastPage.waitForCityChangedTo(userCityForecast.city)
-					WeatherForecastPage.currentTemperature.getText().then(text => {
-						text.match(/(^–\d+)|(\d+)/)
-					})
+					expect(WeatherForecastPage.currentTemperature.getText()).toMatch(/(^–\d+)|(\d+)/)
 					expect(WeatherForecastPage.generalWeatherState.getText()).toContain(userCityForecast.now.phenomena)
 					WeatherForecastPage.scrollElementIntoView(WeatherForecastPage.nextDaysBlock)
 					_.values(userCityForecast.forecast).forEach(dayOfWeek => {
