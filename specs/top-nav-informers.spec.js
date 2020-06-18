@@ -32,9 +32,7 @@ describe("Onliner.by - Top Navigation / Informers", () => {
 
 			it("Then they should be able to see the best conversion rate of USD", () => {
 				HomePage.goTo("/")
-				HomePage.currencyInformer.getText().then(exchangeRate => {
-					expect(exchangeRate.replace("$ ", "")).toBe(bestUsdExchangeRate)
-				})
+				expect(HomePage.currencyInformer.getText()).toBe(`$ ${bestUsdExchangeRate}`)
 			})
 
 			describe("And open currency exchange rates page to see the best rates locations", () => {
