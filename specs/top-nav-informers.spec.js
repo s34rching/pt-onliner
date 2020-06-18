@@ -6,6 +6,7 @@ const random = require("../helpers/get-random-testing-data")
 const cities = require("../fixtures/cities")
 const api = require("../helpers/onliner-api")
 const _ = require("lodash")
+const { getDirectionWithOrder, getDirectionCurrencies, calculateConversionResult } = require("../service/currency-exchange-services")
 
 describe("Onliner.by - Top Navigation / Informers", () => {
 
@@ -58,52 +59,17 @@ describe("Onliner.by - Top Navigation / Informers", () => {
 
 					it("Then conversion should be successful", () => {
 
-						let currencies = []
-						let currenciesIn = []
-						let currenciesOut = []
-						let exchangeRateByDirection
+						const { direction, order } = getDirectionWithOrder()
+						const { in: currencyIn, out: currencyOut } = getDirectionCurrencies(direction, order)
 						const randomCurrencyAmount = random.getRandomNumber(20, 10000)
 
 						HomePage.openCurrencyExchangeRatesPage()
 						ExchangeRatesPage.waitForConvertOutDataVisible()
-						ExchangeRatesPage.convertInCurrenciesDropdown.all(by.tagName("option")).each(option => {
-							option.getText().then(currencyName => { currencies.push(currencyName)})
-						}).then(() => {
-							currenciesIn = _.without(currencies, "BYN")
-							currenciesOut = _.without(currencies, "EUR")
-							const currencyIn = _.sample(currenciesIn)
-							let currencyOut
-							if (currencyIn === "RUB") {
-								currencyOut = _.sample(_.without(currenciesOut, currencyIn, "USD"))
-							} else {
-								currencyOut = _.sample(_.without(currenciesOut, currencyIn))
-							}
-							ExchangeRatesPage
-								.bestExchangeRateByCurrencyDirection(currencyIn.toLowerCase(), currencyOut.toLowerCase())
-								.getAttribute("data-title")
-								.then(value => {
-									exchangeRateByDirection = value.match(/\d+,\d+/)[0]
-									ExchangeRatesPage.chooseCurrencyToConvert("in", currencyIn)
-									ExchangeRatesPage.chooseCurrencyToConvert("out", currencyOut)
-									ExchangeRatesPage.enterCurrencyAmountToConvert(randomCurrencyAmount)
-									ExchangeRatesPage.conversionResult.getText().then(conversionResult => {
-										if (currencyIn === "RUB" && currencyOut === "BYN") {
-											expect(parseFloat(conversionResult
-												.replace(",", ".")
-												.replace(" ", ""))
-												.toFixed(2))
-												.toBe((parseFloat(exchangeRateByDirection.replace(",", "."))
-													* randomCurrencyAmount / 100).toFixed(2))
-										} else {
-											expect(parseFloat(conversionResult
-												.replace(",", ".")
-												.replace(" ", ""))
-												.toFixed(2))
-												.toBe((parseFloat(exchangeRateByDirection.replace(",", "."))
-													* randomCurrencyAmount).toFixed(2))
-										}
-									})
-								})
+						ExchangeRatesPage.getDirectionBestExchangeRate(direction, order).then(rate => {
+							ExchangeRatesPage.chooseCurrencyToConvert("in", currencyIn)
+							ExchangeRatesPage.chooseCurrencyToConvert("out", currencyOut)
+							ExchangeRatesPage.enterCurrencyAmountToConvert(randomCurrencyAmount)
+							expect(ExchangeRatesPage.getConversionResult()).toBe(calculateConversionResult(currencyIn, currencyOut, randomCurrencyAmount, rate, order))
 						})
 					})
 				})

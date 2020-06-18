@@ -18,10 +18,10 @@ class ExchangeRatesPage extends BasePage {
 		}
 		this.bestExchangeRatesLocationsLink = this.convertOutData.all(by.tagName("p")).last()
 		this.bestExchangeRatesLocationsButton = this.bestExchangeRatesLocationsLink.$$("a").first()
-		this.bestExchangeRateByCurrencyDirection = function(currencyIn, currencyOut) {
-			return this.bestExchangeRatesLocationsLink
-				.$$(`a[data-direction="${currencyIn}-to-${currencyOut}"]`)
-				.first()
+		this.bestExchangeRateByCurrencyDirection = function(direction, order) {
+			return (order === "direct") ?
+				this.bestExchangeRatesLocationsLink.$$(`a[data-direction="${direction}"]`).first() :
+				this.bestExchangeRatesLocationsLink.$$(`a[data-direction="${direction}"]`).last()
 		}
 		this.exchangeServicesMap = $("div.b-currency-map-i")
 		this.exchangeServicesMapPointers =  this.exchangeServicesMap.$$("ymaps.ymaps-image")
@@ -52,6 +52,19 @@ class ExchangeRatesPage extends BasePage {
 		this.convertInAmount
 			.clear()
 			.sendKeys(amount)
+	}
+	getDirectionBestExchangeRate(direction, order) {
+		return this.bestExchangeRateByCurrencyDirection(direction, order)
+			.getAttribute("data-title")
+			.then(value => {
+				return value.match(/\d+,\d+/)[0]
+			})
+	}
+	getConversionResult() {
+		return this.conversionResult.getText().then(result => {
+			return parseFloat(result.replace(",", ".").replace(" ", ""))
+				.toFixed(2)
+		})
 	}
 }
 

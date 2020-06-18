@@ -1,4 +1,4 @@
-const { EXPECTED_PRICE_CHANGE } = require("../service/rates")
+const { EXPECTED_PRICE_CHANGE } = require("../service/constants")
 const { getProductBynPrice } = require("../service/product-services")
 const HomePage = require("../page-objects/homepage")
 const ProductsList = require("../page-objects/products-list")
