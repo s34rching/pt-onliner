@@ -91,12 +91,8 @@ describe("Onliner.by - Top Navigation / Informers", () => {
 			})
 
 			it("Then they should be able to see current temperature in user's default city", () => {
-				HomePage.currentTemperature.getText().then(currentTemperature => {
-					expect(currentTemperature.match(/\d+/)[0])
-						.toBe(forecast.now.temperature.toString().match(/\d+/)[0])
-				})
+				expect(HomePage.currentTemperature.getText()).toBe(`${forecast.now.temperature}°`)
 			})
-
 
 			describe("And opens weather forecast page", () => {
 
