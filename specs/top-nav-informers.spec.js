@@ -3,7 +3,7 @@ const ExchangeRatesPage = require("../page-objects/currency-exchange-page")
 const WeatherForecastPage = require("../page-objects/weather-forecast-page")
 const { getLocationsAmount, defineLocationsMessageOnPopup } = require("../service/location-services")
 const random = require("../helpers/get-random-testing-data")
-const cities = require("../fixtures/cities")
+const { cities } = require("../fixtures/cities")
 const api = require("../helpers/onliner-api")
 const _ = require("lodash")
 const { getDirectionWithOrder, getDirectionCurrencies, calculateConversionResult } = require("../service/currency-exchange-services")
@@ -100,7 +100,7 @@ describe("Onliner.by - Top Navigation / Informers", () => {
 
 			describe("And opens weather forecast page", () => {
 
-				const userCity = _.sample(_.without(cities.cities, { name: "Минск" }))
+				const userCity = _.sample(_.without(cities, { name: "Минск" }))
 				let userCityForecast
 
 				beforeEach(done => {
