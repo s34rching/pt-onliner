@@ -73,11 +73,6 @@ class ProductsList extends BasePage {
 		this.usedProductLocationByProductTitle = function(productTitle) {
 			return this.productByTitle(productTitle).$(".schema-product__city")
 		}
-		this.usedProductPriceByProductTitle = function(productTitle) {
-			return this.productByTitle(productTitle)
-				.$(".schema-product__price-group")
-				.element(by.tagName("strong"))
-		}
 	}
 
 	openOrderListDropDown() {
@@ -143,6 +138,11 @@ class ProductsList extends BasePage {
 					.element(by.css(".schema-product__compare"))
 					.click()
 			})
+		})
+	}
+	getUsedProductPrice(productTitle) {
+		return this.productByTitle(productTitle).getText().then(price => {
+			return parseFloat(price.replace(",", "."))
 		})
 	}
 }
