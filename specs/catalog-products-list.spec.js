@@ -52,7 +52,7 @@ describe("Onliner.by - Catalog / Products List", () => {
 		})
 	})
 
-	fdescribe("When user filters out products by their manufacturer", () => {
+	describe("When user filters out products by their manufacturer", () => {
 
 		let intelCPUs
 
