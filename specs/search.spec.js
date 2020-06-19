@@ -137,7 +137,6 @@ describe("Onliner.by - Products / Search", () => {
 				it("Then they should be able to see product details", () => {
 
 					const product = entities.getProduct()
-					const priceByn = getProductBynPrice(product, exchangeRate)
 
 					HomePage.performSearch(product.query)
 					SearchIframe.switchToSearchIframe()
@@ -145,15 +144,8 @@ describe("Onliner.by - Products / Search", () => {
 					expect(SearchIframe.resultItemProduct(product.catalogTitle).isDisplayed()).toBe(true)
 					SearchIframe.openProductDetailsPageByTitle(product.catalogTitle)
 					SearchIframe.switchToDefaultFrame()
-					if (product.status === "active") {
-						ProductDetailsPage.waitForFirstShopOfferVisible()
-						ProductDetailsPage.firstOfferPrice.getText().then(text => {
-							assert.closeTo(priceByn, parseInt(text.match(/\d+/)[0]), priceByn * EXPECTED_PRICE_CHANGE)
-						})
-					}
 					expect(browser.getCurrentUrl()).toContain(product.relativeUrl)
-					expect(element(by.cssContainingText("h1.catalog-masthead__title", product.catalogTitle))
-						.isDisplayed()).toBe(true)
+					expect(ProductDetailsPage.productTitle(product).isDisplayed()).toBe(true)
 				})
 			})
 		})
