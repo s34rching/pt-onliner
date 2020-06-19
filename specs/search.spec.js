@@ -1,13 +1,12 @@
 const { EXPECTED_PRICE_CHANGE } = require("../service/constants")
 const { getProductBynPrice } = require("../service/product-services")
+const customMatchers = require("../service/custom-matchers")
 const HomePage = require("../page-objects/homepage")
 const ProductsList = require("../page-objects/products-list")
 const SearchIframe = require("../page-objects/search-iframe")
 const ProductDetailsPage = require("../page-objects/product-details-page")
 const api = require("../helpers/onliner-api")
 const entities = require("../helpers/get-entities")
-const chai = require("chai")
-const assert = chai.assert
 
 describe("Onliner.by - Products / Search", () => {
 
@@ -35,6 +34,10 @@ describe("Onliner.by - Products / Search", () => {
 			activeProducts.forEach(activeProduct => {
 				describe(`"${activeProduct.catalogTitle}"`, () => {
 
+					beforeEach(() => {
+						jasmine.addMatchers(customMatchers)
+					})
+
 					it("Then product should be found", () => {
 
 						const priceByn = getProductBynPrice(activeProduct, exchangeRate)
@@ -43,9 +46,7 @@ describe("Onliner.by - Products / Search", () => {
 						SearchIframe.switchToSearchIframe()
 						SearchIframe.waitForProductAreLoadedOnModal()
 						expect(SearchIframe.isVisible(SearchIframe.resultItemProduct(activeProduct.catalogTitle))).toBe(true)
-						SearchIframe.productPrice(activeProduct.catalogTitle).getText().then(text => {
-							assert.closeTo(priceByn, parseInt(text.match(/\d+/)[0]), priceByn * EXPECTED_PRICE_CHANGE)
-						})
+						expect(SearchIframe.productPrice(activeProduct.catalogTitle).getText()).closeTo({ value: priceByn, delta: EXPECTED_PRICE_CHANGE })
 					})
 				})
 			})
