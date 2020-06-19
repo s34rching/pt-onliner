@@ -1,3 +1,4 @@
+const _ = require("lodash")
 const BasePage = require("./base-page")
 
 class ProductsList extends BasePage {
@@ -134,6 +135,15 @@ class ProductsList extends BasePage {
 	}
 	clearComparisonList() {
 		this.resetComparisonListButton.click()
+	}
+	markProductsToCompare(numberOfProductsToCompare) {
+		this.product({ all: true }).then(productCards => {
+			_.take(productCards, numberOfProductsToCompare).forEach(productCard => {
+				productCard
+					.element(by.css(".schema-product__compare"))
+					.click()
+			})
+		})
 	}
 }
 

@@ -3,7 +3,7 @@ const ProductOffers = require("../page-objects/product-offers-page")
 const ProductDetailsPage = require("../page-objects/product-details-page")
 const LoginPage = require("../page-objects/login-page")
 const api = require("../helpers/onliner-api")
-const _ = require("lodash")
+
 const chai = require("chai")
 const assert = chai.assert
 
@@ -137,13 +137,7 @@ describe("Onliner.by - Catalog / Products List", () => {
 				const firstProductShortName = firstProduct.url.match(/(?<=\/products\/).+$/)[0]
 				const secondProductShortName = secondProduct.url.match(/(?<=\/products\/).+$/)[0]
 
-				ProductsList.product({ all: true }).then(productCards => {
-					_.take(productCards, numberOfProductsToCompare).forEach(productCard => {
-						productCard
-							.element(by.css(".schema-product__compare"))
-							.click()
-					})
-				})
+				ProductsList.markProductsToCompare(numberOfProductsToCompare)
 				ProductsList.compareProducts(numberOfProductsToCompare)
 				ProductsList.waitForUrlContains(`/compare/${firstProductShortName}+${secondProductShortName}`)
 				expect(ProductsList.productComparisonName(firstProduct.full_name).isDisplayed()).toBe(true)
@@ -206,10 +200,8 @@ describe("Onliner.by - Catalog / Products List", () => {
 				expect(ProductsList.createUsedOfferButton.isDisplayed()).toBe(true)
 				ProductsList.waitForProperTotalOfFoundProducts(usedCPUs.total.toString())
 				expect(ProductsList.productByTitle(firstUsedOffer.product.full_name).isDisplayed()).toBe(true)
-				expect(ProductsList.usedProductConditionsCircleByProductTitle(firstUsedOffer.product.full_name)
-					.isDisplayed()).toBe(true)
-				expect(ProductsList.usedProductLocationByProductTitle(firstUsedOffer.product.full_name)
-					.isDisplayed()).toBe(true)
+				expect(ProductsList.usedProductConditionsCircleByProductTitle(firstUsedOffer.product.full_name)	.isDisplayed()).toBe(true)
+				expect(ProductsList.usedProductLocationByProductTitle(firstUsedOffer.product.full_name).isDisplayed()).toBe(true)
 				ProductsList.usedProductPriceByProductTitle(firstUsedOffer.product.full_name).getText()
 					.then(price => {
 						assert.isNumber(parseFloat(price.replace(",", ".")))
