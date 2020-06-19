@@ -29,7 +29,7 @@ describe("Onliner.by - Catalog / Products List", () => {
 		})
 	})
 
-	fdescribe("When user orders out products by their reviews", () => {
+	describe("When user orders out products by their reviews", () => {
 
 		let CPUsFilteredByRating, reviews
 
@@ -52,7 +52,7 @@ describe("Onliner.by - Catalog / Products List", () => {
 		})
 	})
 
-	describe("When user filters out products by their manufacturer", () => {
+	fdescribe("When user filters out products by their manufacturer", () => {
 
 		let intelCPUs
 
@@ -64,22 +64,13 @@ describe("Onliner.by - Catalog / Products List", () => {
 		})
 
 		it("then products list should contain products of that manufacturer only", () => {
-
-			let productsTitles = []
-
 			ProductsList.scrollElementIntoView(ProductsList.filterByName("Производитель"))
 			ProductsList.filterProducts("Производитель", "Intel")
 			ProductsList.scrollElementIntoView(ProductsList.productsListTitle)
 			ProductsList.waitForUrlContains("cpu?mfr%5B0%5D=intel")
 			ProductsList.waitForSearchTagIsDisplayed("Intel")
 			ProductsList.waitForProperTotalOfFoundProducts(intelCPUs.total.toString())
-			ProductsList.getProductsTitles().each(title => {
-				title.getText().then(text => { productsTitles.push(text) })
-			}).then(() => {
-				productsTitles.forEach(title => {
-					expect(title).toContain("Intel")
-				})
-			})
+			ProductsList.productsTitles.each(title => expect(title.getText()).toContain("Intel"))
 		})
 	})
 

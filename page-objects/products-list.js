@@ -87,9 +87,6 @@ class ProductsList extends BasePage {
 	waitForUrlContains(text) {
 		return this.urlContains(text)
 	}
-	getProductsTitles() {
-		return this.productsTitles
-	}
 	waitForActiveOrderOptionByName(optionName) {
 		this.isVisible(this.orderDropdownActiveOrderOptionByName(optionName))
 	}
