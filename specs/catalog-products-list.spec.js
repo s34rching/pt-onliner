@@ -3,9 +3,7 @@ const ProductOffers = require("../page-objects/product-offers-page")
 const ProductDetailsPage = require("../page-objects/product-details-page")
 const LoginPage = require("../page-objects/login-page")
 const api = require("../helpers/onliner-api")
-
-const chai = require("chai")
-const assert = chai.assert
+const _ = require("lodash")
 
 describe("Onliner.by - Catalog / Products List", () => {
 
@@ -31,34 +29,26 @@ describe("Onliner.by - Catalog / Products List", () => {
 		})
 	})
 
-	describe("When user orders out products by their reviews", () => {
+	fdescribe("When user orders out products by their reviews", () => {
 
-		let CPUsFilteredByRating
+		let CPUsFilteredByRating, reviews
 
 		beforeEach(done => {
 			api.getProducts("cpu?order=reviews_rating:desc").then(res => {
 				CPUsFilteredByRating = JSON.parse(res)
+				reviews = _.map(CPUsFilteredByRating.products, product => product.reviews.count)
 				done()
 			})
 		})
 
 		it("then products in the list should be ordered by their reviews", () => {
-
-			let ratingsArray = []
-
 			ProductsList.openOrderListDropDown()
 			ProductsList.waitForOrderDropdownListIsVisible()
 			ProductsList.chooseOrderDropdownOptionByName("С отзывами")
 			ProductsList.waitForUrlContains("?order=reviews_rating:desc")
 			ProductsList.waitForActiveOrderOptionByName("С отзывами")
 			ProductsList.waitForProperTotalOfFoundProducts(CPUsFilteredByRating.total.toString())
-			ProductsList.getProductsRating().each(rating => {
-				rating.getText().then(text => { ratingsArray.push(text) })
-			}).then(() => {
-				for (let i = 0;  i < ratingsArray.length - 1; i++) {
-					assert.isAtLeast(parseInt(ratingsArray[i]), parseInt(ratingsArray[i + 1]))
-				}
-			})
+			ProductsList.productRewievs.each((review, index) => expect(review.getText()).toContain(reviews[index]))
 		})
 	})
 

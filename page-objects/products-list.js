@@ -14,7 +14,7 @@ class ProductsList extends BasePage {
 		this.orderDropdownActiveOrderOptionByName = function(optionName) {
 			return this.orderDropdown.element(by.cssContainingText("span.schema-order__text", optionName))
 		}
-		this.productRatings = $$("a.schema-product__rating").$$("span.schema-product__review-count")
+		this.productRewievs = $$("a.schema-product__rating").$$("span.schema-product__review-count")
 		this.productsTitles = $$(".schema-product__title").all(by.tagName("span"))
 		this.filters = element(by.id("schema-filter"))
 		this.filterByName = function(filterName) {
@@ -86,9 +86,6 @@ class ProductsList extends BasePage {
 	}
 	waitForUrlContains(text) {
 		return this.urlContains(text)
-	}
-	getProductsRating() {
-		return this.productRatings
 	}
 	getProductsTitles() {
 		return this.productsTitles
