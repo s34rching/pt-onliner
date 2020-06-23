@@ -22,7 +22,6 @@ class ProductDetailsPage extends BasePage {
 	waitForUsedProductPrice() {
 		this.isVisible(this.usedProductPrice)
 	}
-	get
 }
 
 module.exports = new ProductDetailsPage()
