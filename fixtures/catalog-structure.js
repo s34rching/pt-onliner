@@ -1346,7 +1346,7 @@ module.exports = {
 							ruName: "Наборы периферии (клавиатура + мышь)",
 							subcategoryPageRuHeading: "Наборы периферии",
 							path: "/peripheralkits",
-							isUnique: true,
+							isUnique: false,
 							position: 0
 						},
 						mousePads: {
