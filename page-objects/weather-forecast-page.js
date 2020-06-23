@@ -14,17 +14,14 @@ class WeatherForecastPage extends BasePage {
 		this.currentTemperature = this.currentWeather.$(".grad").$("span.value")
 		this.generalWeatherState = this.currentWeather.element(by.tagName("dd"))
 		this.nextDaysBlock = $(".b-weather-next")
-		this.nextDateDaytimeTemperatureRange = function(day, temperatureMin, temperatureMax) {
-			if (temperatureMax === null) {
-				return element(by.xpath(`//li[contains(@class, 'b-weather-next__day') and descendant::dt[text()] =
-				 '${day}']`))
-					.all(by.cssContainingText("p.b-weather-next__temp",`${temperatureMin}`))
+		this.nextDateDaytimeTemperatureRange = function(day) {
+			if (day.dayTemperature.max === null) {
+				return element(by.xpath(`//li[contains(@class, 'b-weather-next__day') and descendant::dt[text()] = '${day.dateTextDayOfWeek}']`))
+					.all(by.cssContainingText("p.b-weather-next__temp",`${day.dayTemperature.min}`))
 					.first()
 			} else {
-				return element(by.xpath(`//li[contains(@class, 'b-weather-next__day') and descendant::dt[text()] =
-				 '${day}']`))
-					.all(by.cssContainingText("p.b-weather-next__temp",
-						`${temperatureMin}...${temperatureMax}`))
+				return element(by.xpath(`//li[contains(@class, 'b-weather-next__day') and descendant::dt[text()] = '${day.dateTextDayOfWeek}']`))
+					.all(by.cssContainingText("p.b-weather-next__temp", `${day.dayTemperature.min}...${day.dayTemperature.max}`))
 					.first()
 			}
 		}
@@ -39,6 +36,9 @@ class WeatherForecastPage extends BasePage {
 	}
 	waitForCityChangedTo(cityName) {
 		this.isVisible(this.currentCityButtonByName(cityName))
+	}
+	getNextDateDaytimeTemperatureRanges(days) {
+		return Promise.all(days.map(this.nextDateDaytimeTemperatureRange))
 	}
 }
 

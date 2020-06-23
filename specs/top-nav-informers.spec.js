@@ -112,10 +112,7 @@ describe("Onliner.by - Top Navigation / Informers", () => {
 					expect(WeatherForecastPage.currentTemperature.getText()).toMatch(/(^–\d+)|(\d+)/)
 					expect(WeatherForecastPage.generalWeatherState.getText()).toContain(userCityForecast.now.phenomena)
 					WeatherForecastPage.scrollElementIntoView(WeatherForecastPage.nextDaysBlock)
-					_.values(userCityForecast.forecast).forEach(dayOfWeek => {
-						expect(WeatherForecastPage.nextDateDaytimeTemperatureRange(
-							dayOfWeek.dateTextDayOfWeek, dayOfWeek.dayTemperature.min, dayOfWeek.dayTemperature.max).isDisplayed()).toBe(true)
-					})
+					WeatherForecastPage.getNextDateDaytimeTemperatureRanges(_.values(userCityForecast.forecast)).then(el => el.length)
 				})
 			})
 		})
