@@ -1,14 +1,25 @@
+const { EXPECTED_PRICE_CHANGE } = require("../service/constants")
+const { getProductBynPrice } = require("../service/product-services")
+const customMatchers = require("../service/custom-matchers")
 const HomePage = require("../page-objects/homepage")
 const ProductsList = require("../page-objects/products-list")
 const SearchIframe = require("../page-objects/search-iframe")
 const ProductDetailsPage = require("../page-objects/product-details-page")
+const api = require("../helpers/onliner-api")
 const entities = require("../helpers/get-entities")
-const chai = require("chai")
-const assert = chai.assert
 
 describe("Onliner.by - Products / Search", () => {
 
+	let exchangeRate
 	const activeProducts = entities.getProduct("active", 5)
+
+	beforeAll(done => {
+		api.getCurrencyExchangeRates().then(res => {
+			const dailyCurrencyChanges = JSON.parse(res)
+			exchangeRate = parseFloat(dailyCurrencyChanges.amount.replace(",", "."))
+			done()
+		})
+	})
 
 	beforeEach(() => {
 		browser.waitForAngularEnabled(false)
@@ -23,15 +34,19 @@ describe("Onliner.by - Products / Search", () => {
 			activeProducts.forEach(activeProduct => {
 				describe(`"${activeProduct.catalogTitle}"`, () => {
 
+					beforeEach(() => {
+						jasmine.addMatchers(customMatchers)
+					})
+
 					it("Then product should be found", () => {
+
+						const priceByn = getProductBynPrice(activeProduct, exchangeRate)
 
 						HomePage.performSearch(activeProduct.query)
 						SearchIframe.switchToSearchIframe()
 						SearchIframe.waitForProductAreLoadedOnModal()
-						expect(SearchIframe.isVisible(SearchIframe.resultItemProduct(activeProduct.query))).toBe(true)
-						SearchIframe.productPrice(activeProduct.query).getText().then(text => {
-							assert.closeTo(activeProduct.price, parseInt(text.match(/\d+/)[0]), activeProduct.accuracy)
-						})
+						expect(SearchIframe.isVisible(SearchIframe.resultItemProduct(activeProduct.catalogTitle))).toBe(true)
+						expect(SearchIframe.productPrice(activeProduct.catalogTitle).getText()).closeTo({ value: priceByn, delta: EXPECTED_PRICE_CHANGE })
 					})
 				})
 			})
@@ -48,9 +63,9 @@ describe("Onliner.by - Products / Search", () => {
 				HomePage.performSearch(randomSubcategory.ruName)
 				SearchIframe.switchToSearchIframe()
 				SearchIframe.waitForProductAreLoadedOnModal()
-				expect(SearchIframe.resultItemSubcategory(randomSubcategory.ruName).isDisplayed()).toBe(true)
-				SearchIframe.openSubcategoryPage(randomSubcategory.ruName)
-				expect(browser.getCurrentUrl()).toContain(randomSubcategory.path)
+				expect(SearchIframe.resultItemSubcategory(randomSubcategory.subcategoryPageRuHeading).isDisplayed()).toBe(true)
+				SearchIframe.openSubcategoryPage(randomSubcategory.subcategoryPageRuHeading)
+				expect(browser.getCurrentUrl()).toContain(randomSubcategory.path.match(/\/\w+/)[0])
 				expect(ProductsList.isVisible(ProductsList.product())).toBe(true)
 			})
 		})
@@ -66,9 +81,11 @@ describe("Onliner.by - Products / Search", () => {
 					HomePage.performSearch(product.query)
 					SearchIframe.switchToSearchIframe()
 					SearchIframe.waitForProductAreLoadedOnModal()
-					expect(SearchIframe.resultItemProduct(product.query).isDisplayed()).toBe(true)
+					expect(SearchIframe.resultItemProduct(product.catalogTitle).isDisplayed()).toBe(true)
 					SearchIframe.closeSearchModal()
-					SearchIframe.isNotVisible(SearchIframe.resultItemProduct(product.query))
+					expect(SearchIframe.isNotVisible(SearchIframe.fastSearchModal)).toBe(true)
+					SearchIframe.switchToDefaultFrame()
+					expect(SearchIframe.isVisible(SearchIframe.searchBar)).toBe(true)
 				})
 			})
 		})
@@ -96,8 +113,8 @@ describe("Onliner.by - Products / Search", () => {
 				HomePage.performSearch(outOfStockProduct.query)
 				SearchIframe.switchToSearchIframe()
 				SearchIframe.waitForProductAreLoadedOnModal()
-				expect(SearchIframe.resultItemProduct(outOfStockProduct.query).isDisplayed()).toBe(true)
-				expect(SearchIframe.productPrice(outOfStockProduct.query).getText()).toBe(outOfStockProduct.label)
+				expect(SearchIframe.resultItemProduct(outOfStockProduct.catalogTitle).isDisplayed()).toBe(true)
+				expect(SearchIframe.productPrice(outOfStockProduct.catalogTitle).getText()).toBe(outOfStockProduct.label)
 			})
 		})
 
@@ -110,8 +127,8 @@ describe("Onliner.by - Products / Search", () => {
 				HomePage.performSearch(offSaleProduct.query)
 				SearchIframe.switchToSearchIframe()
 				SearchIframe.waitForProductAreLoadedOnModal()
-				expect(SearchIframe.resultItemProduct(offSaleProduct.query).isDisplayed()).toBe(true)
-				expect(SearchIframe.productPrice(offSaleProduct.query).getText()).toBe(offSaleProduct.label)
+				expect(SearchIframe.resultItemProduct(offSaleProduct.catalogTitle).isDisplayed()).toBe(true)
+				expect(SearchIframe.productPrice(offSaleProduct.catalogTitle).getText()).toBe(offSaleProduct.label)
 			})
 		})
 
@@ -126,18 +143,11 @@ describe("Onliner.by - Products / Search", () => {
 					HomePage.performSearch(product.query)
 					SearchIframe.switchToSearchIframe()
 					SearchIframe.waitForProductAreLoadedOnModal()
-					expect(SearchIframe.resultItemProduct(product.query).isDisplayed()).toBe(true)
-					SearchIframe.openProductDetailsPageByTitle(product.query)
+					expect(SearchIframe.resultItemProduct(product.catalogTitle).isDisplayed()).toBe(true)
+					SearchIframe.openProductDetailsPageByTitle(product.catalogTitle)
 					SearchIframe.switchToDefaultFrame()
-					if (product.status === "active") {
-						ProductDetailsPage.waitForFirstShopOfferVisible()
-						ProductDetailsPage.firstOfferPrice.getText().then(text => {
-							assert.closeTo(product.price, parseInt(text.match(/\d+/)[0]), product.accuracy)
-						})
-					}
 					expect(browser.getCurrentUrl()).toContain(product.relativeUrl)
-					expect(element(by.cssContainingText("h1.catalog-masthead__title", product.catalogTitle))
-						.isDisplayed()).toBe(true)
+					expect(ProductDetailsPage.productTitle(product).isDisplayed()).toBe(true)
 				})
 			})
 		})

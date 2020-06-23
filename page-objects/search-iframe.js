@@ -5,6 +5,7 @@ class SearchIframe extends BasePage {
 		super()
 		this.fastSearchModal = element(by.id("fast-search-modal"))
 		this.searchIframe = $(".modal-iframe")
+		this.modalSearchBar = $(".search__bar")
 		this.productTitle = function(productTitle) {
 			return element.all(by.cssContainingText(".product__title-link", productTitle)).first()
 		}

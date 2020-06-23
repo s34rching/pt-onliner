@@ -1,10 +1,12 @@
 const HomePage = require("../page-objects/homepage")
 const ExchangeRatesPage = require("../page-objects/currency-exchange-page")
 const WeatherForecastPage = require("../page-objects/weather-forecast-page")
+const { getLocationsAmount, defineLocationsMessageOnPopup } = require("../service/location-services")
 const random = require("../helpers/get-random-testing-data")
-const cities = require("../fixtures/cities")
+const { cities } = require("../fixtures/cities")
 const api = require("../helpers/onliner-api")
 const _ = require("lodash")
+const { getDirectionWithOrder, getDirectionCurrencies, calculateConversionResult } = require("../service/currency-exchange-services")
 
 describe("Onliner.by - Top Navigation / Informers", () => {
 
@@ -30,9 +32,7 @@ describe("Onliner.by - Top Navigation / Informers", () => {
 
 			it("Then they should be able to see the best conversion rate of USD", () => {
 				HomePage.goTo("/")
-				HomePage.currencyInformer.getText().then(exchangeRate => {
-					expect(exchangeRate.replace("$ ", "")).toBe(bestUsdExchangeRate)
-				})
+				expect(HomePage.currencyInformer.getText()).toBe(`$ ${bestUsdExchangeRate}`)
 			})
 
 			describe("And open currency exchange rates page to see the best rates locations", () => {
@@ -41,34 +41,14 @@ describe("Onliner.by - Top Navigation / Informers", () => {
 
 					it("Then they should be able to find exchange services location on a map", () => {
 						HomePage.openCurrencyExchangeRatesPage()
-						ExchangeRatesPage.bestExchangeRatesLocationsButton.getText().then(banksAmount => {
+						ExchangeRatesPage.bestExchangeRatesLocationsButton.getText().then(showMapMessage => {
+							const locationsAmount = getLocationsAmount(showMapMessage)
+
 							ExchangeRatesPage.openBestExchangeRatesLocations()
 							ExchangeRatesPage.waitForMapIsLoaded()
-
-							const banks = banksAmount.split(" ")
-							const numbers = [ "двух", "трех", "четырех", "пяти", "шести", "семи", "восьми", "девяти" ]
-
-							if (_.intersection(banks, numbers).length) {
-								ExchangeRatesPage.exchangeServicesMapLocations.getText().then(text => {
-									const locationsAmount = text.match(/^\d+/)[0]
-									ExchangeRatesPage.exchangeServicesMapPointers.then(pointers => {
-										expect(pointers.length).toBe(parseInt(locationsAmount))
-										pointers.forEach(pointer => {
-											expect(pointer.isDisplayed()).toBe(true)
-										})
-									})
-								})
-							} else {
-								ExchangeRatesPage.exchangeServicesMapLocations.getText().then(text => {
-									expect(text).toContain(banksAmount)
-									ExchangeRatesPage.exchangeServicesMapPointers.then(pointers => {
-										expect(pointers.length).toBe(1)
-										pointers.forEach(pointer => {
-											expect(pointer.isDisplayed()).toBe(true)
-										})
-									})
-								})
-							}
+							expect(ExchangeRatesPage.exchangeServicesMapLocations.getText()).toMatch(defineLocationsMessageOnPopup(locationsAmount))
+							expect(ExchangeRatesPage.exchangeServicesMapPointers.count()).toEqual(locationsAmount)
+							ExchangeRatesPage.exchangeServicesMapPointers.each(pointer => expect(pointer.isDisplayed()).toBe(true))
 						})
 					})
 				})
@@ -77,52 +57,17 @@ describe("Onliner.by - Top Navigation / Informers", () => {
 
 					it("Then conversion should be successful", () => {
 
-						let currencies = []
-						let currenciesIn = []
-						let currenciesOut = []
-						let exchangeRateByDirection
+						const { direction, order } = getDirectionWithOrder()
+						const { in: currencyIn, out: currencyOut } = getDirectionCurrencies(direction, order)
 						const randomCurrencyAmount = random.getRandomNumber(20, 10000)
 
 						HomePage.openCurrencyExchangeRatesPage()
 						ExchangeRatesPage.waitForConvertOutDataVisible()
-						ExchangeRatesPage.convertInCurrenciesDropdown.all(by.tagName("option")).each(option => {
-							option.getText().then(currencyName => { currencies.push(currencyName)})
-						}).then(() => {
-							currenciesIn = _.without(currencies, "BYN")
-							currenciesOut = _.without(currencies, "EUR")
-							const currencyIn = _.sample(currenciesIn)
-							let currencyOut
-							if (currencyIn === "RUB") {
-								currencyOut = _.sample(_.without(currenciesOut, currencyIn, "USD"))
-							} else {
-								currencyOut = _.sample(_.without(currenciesOut, currencyIn))
-							}
-							ExchangeRatesPage
-								.bestExchangeRateByCurrencyDirection(currencyIn.toLowerCase(), currencyOut.toLowerCase())
-								.getAttribute("data-title")
-								.then(value => {
-									exchangeRateByDirection = value.match(/\d+,\d+/)[0]
-									ExchangeRatesPage.chooseCurrencyToConvert("in", currencyIn)
-									ExchangeRatesPage.chooseCurrencyToConvert("out", currencyOut)
-									ExchangeRatesPage.enterCurrencyAmountToConvert(randomCurrencyAmount)
-									ExchangeRatesPage.conversionResult.getText().then(conversionResult => {
-										if (currencyIn === "RUB" && currencyOut === "BYN") {
-											expect(parseFloat(conversionResult
-												.replace(",", ".")
-												.replace(" ", ""))
-												.toFixed(2))
-												.toBe((parseFloat(exchangeRateByDirection.replace(",", "."))
-													* randomCurrencyAmount / 100).toFixed(2))
-										} else {
-											expect(parseFloat(conversionResult
-												.replace(",", ".")
-												.replace(" ", ""))
-												.toFixed(2))
-												.toBe((parseFloat(exchangeRateByDirection.replace(",", "."))
-													* randomCurrencyAmount).toFixed(2))
-										}
-									})
-								})
+						ExchangeRatesPage.getDirectionBestExchangeRate(direction, order).then(rate => {
+							ExchangeRatesPage.chooseCurrencyToConvert("in", currencyIn)
+							ExchangeRatesPage.chooseCurrencyToConvert("out", currencyOut)
+							ExchangeRatesPage.enterCurrencyAmountToConvert(randomCurrencyAmount)
+							expect(ExchangeRatesPage.getConversionResult()).toBe(calculateConversionResult(currencyIn, currencyOut, randomCurrencyAmount, rate, order))
 						})
 					})
 				})
@@ -144,16 +89,12 @@ describe("Onliner.by - Top Navigation / Informers", () => {
 			})
 
 			it("Then they should be able to see current temperature in user's default city", () => {
-				HomePage.currentTemperature.getText().then(currentTemperature => {
-					expect(currentTemperature.match(/\d+/)[0])
-						.toBe(forecast.now.temperature.toString().match(/\d+/)[0])
-				})
+				expect(HomePage.currentTemperature.getText()).toBe(`${forecast.now.temperature}°`)
 			})
-
 
 			describe("And opens weather forecast page", () => {
 
-				const userCity = _.sample(_.without(cities.cities, { name: "Минск" }))
+				const userCity = _.sample(_.without(cities, { name: "Минск" }))
 				let userCityForecast
 
 				beforeEach(done => {
@@ -168,17 +109,10 @@ describe("Onliner.by - Top Navigation / Informers", () => {
 					WeatherForecastPage.openCitiesOptionsDropdown()
 					WeatherForecastPage.changeCity(userCity.id)
 					WeatherForecastPage.waitForCityChangedTo(userCityForecast.city)
-					WeatherForecastPage.currentTemperature.getText().then(text => {
-						text.match(/(^–\d+)|(\d+)/)
-					})
+					expect(WeatherForecastPage.currentTemperature.getText()).toMatch(/(^–\d+)|(\d+)/)
 					expect(WeatherForecastPage.generalWeatherState.getText()).toContain(userCityForecast.now.phenomena)
 					WeatherForecastPage.scrollElementIntoView(WeatherForecastPage.nextDaysBlock)
-					_.values(userCityForecast.forecast).forEach(dayOfWeek => {
-						expect(WeatherForecastPage.nextDateDaytimeTemperatureRange(
-							dayOfWeek.dateTextDayOfWeek, dayOfWeek.dayTemperature.min, dayOfWeek.dayTemperature.max)
-							.isDisplayed())
-							.toBe(true)
-					})
+					WeatherForecastPage.getNextDateDaytimeTemperatureRanges(_.values(userCityForecast.forecast)).then(el => el.length)
 				})
 			})
 		})

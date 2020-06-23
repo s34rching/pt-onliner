@@ -1,6 +1,8 @@
 const BasePage = require("./base-page")
 const _ = require("lodash")
 
+const LINKS_IN_VISIBLE_LAYOUT = 5
+
 class Catalog extends BasePage {
 	constructor() {
 		super()
@@ -48,12 +50,15 @@ class Catalog extends BasePage {
 		this.categoryFirstProduct.click()
 	}
 
+	// It takes only first 'LINKS_IN_VISIBLE_LAYOUT' items from the bar
+	// b/c there are non-interactable elements in the bar
+	// which are out of the container layout
 	followRandomCatalogBarLink() {
 		this.isVisible(this.catalogBar)
 		this.catalogBar.all(by.className("catalog-bar__link"))
-			.then(links => { return _.sample(links) })
-			.then(link => {
-				this.isVisible(link)
+			.then(links => {
+				const link = _.sample(_.take(links, LINKS_IN_VISIBLE_LAYOUT))
+				this.isClickable(link)
 				link.click()
 			})
 	}

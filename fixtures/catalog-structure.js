@@ -1,34 +1,34 @@
 module.exports = {
 	mainTiles: [
 		{
-			ruName: "Время делать подарки!",
-			path: "/2019/12/02/rozygrysh-5?utm_source=main_tile&utm_medium=rozygrysh5&_ga=2.126731274.686889813.1575486217-1776173241.1573712126",
-			isUnique: false
-		},
-		{
-			ruName: "Термосы, термокружки",
-			path: "/thermosbottle?utm_source=main_tile&utm_medium=thermosbottle",
+			ruName: "Выигрывайте iPhone 11 Pro!",
+			path: "/2020/05/04/razygryvaem-iphone-11-pro-kazhduyu-pyatnicu",
 			isUnique: true
 		},
 		{
-			ruName: "Роботы-пылесосы",
-			path: "/robotcleaner?utm_source=main_tile&utm_medium=robotcleaner",
+			ruName: "Бургеры, гриль-сеты с ребрышками и овощами",
+			path: "/grillweekmay2020",
 			isUnique: true
 		},
 		{
-			ruName: "Зимние шины в Каталоге!",
-			path: "/tires?season_tires%5B0%5D=winter&season_tires%5Boperation%5D=union&utm_source=main_tile&utm_medium=tires",
+			ruName: "Комбо из 2-ух пицц",
+			path: "/dominos/dominospizza/onlcombcardom36?utm_source=main_tile&utm_medium=onlcombcardom36",
 			isUnique: true
 		},
 		{
-			ruName: "Смартфон за честный отзыв!",
-			path: "/2019/12/02/rozygrysh-4?utm_source=main_tile&utm_medium=rozygrysh4&_ga=2.127913738.686889813.1575486217-1776173241.1573712126",
-			isUnique: false
+			ruName: "Расческа GA.MA с ионизацией",
+			path: "/2020/05/27/tovary-12?utm_source=main_tile&utm_medium=gama",
+			isUnique: true
 		},
 		{
-			ruName: "Купляйце тэлевiзары Samsung",
-			path: "/article/131295-poleznye-stati/606699-qled-2019-realnyy-mir-v-razreshenii-8k",
-			isUnique: false
+			ruName: "Детские велосипеды",
+			path: "/kidsbike?utm_source=main_tile&utm_medium=kidsbike",
+			isUnique: true
+		},
+		{
+			ruName: "Кофе в зернах и капсулах",
+			path: "/coffeejava?utm_source=main_tile&utm_medium=coffeejava",
+			isUnique: true
 		}
 	],
 	sections: {
@@ -37,30 +37,30 @@ module.exports = {
 			ruName: "Электроника",
 			tiles: [
 				{
-					ruName: "Домашние колонки с WiFi",
-					path: "/wspeaker?ws_type%5B0%5D=multiroom&ws_type%5Boperation%5D=union&utm_source=el_title&utm_medium=netpl_inetradio",
+					ruName: "Электросамокаты",
+					path: "/electric_scooter?utm_source=el_title&utm_medium=electric_scooter",
 					isUnique: true
 				},
 				{
-					ruName: "Умные часы и браслеты",
-					path: "/smartwatch?utm_source=el_title&utm_medium=smartwatch",
+					ruName: "Приставки для цифрового ТВ",
+					path: "/terrestrial?utm_source=el_title&utm_medium=terrestrial",
 					isUnique: true
 				},
 				{
-					ruName: "Умный дом",
-					path: "/smart_home?utm_source=el_title&utm_medium=smart_home",
+					ruName: "Телескопы",
+					path: "/telescope?utm_source=el_title&utm_medium=telescope",
 					isUnique: true
 				},
 				{
-					ruName: "Портативные приставки",
-					path: "/console?console_type%5B0%5D=2&console_type%5B1%5D=universal&console_type%5Boperation%5D=union&utm_source=el_title&utm_medium=console",
+					ruName: "Игры для приставок",
+					path: "/games?utm_source=el_title&utm_medium=games",
 					isUnique: true
 				},
 				{
-					ruName: "Телевизоры с AirPlay",
-					path: "/tv?airplay=1&utm_source=el_title&utm_medium=tv",
+					ruName: "Пульсометры",
+					path: "/heart_rate?utm_source=el_title&utm_medium=heart_rate",
 					isUnique: true
-				}
+				},
 			],
 			categories: {
 				mobilePhonesAndAccessories: {
@@ -83,9 +83,16 @@ module.exports = {
 							position: 0
 						},
 						smartWatch: {
-							ruName: "Умные часы и фитнес-браслеты",
+							ruName: "Умные часы",
 							subcategoryPageRuHeading: "Умные часы и браслеты",
-							path: "/smartwatch",
+							path: "/smartwatch?sw_type%5B0%5D=smartphonewatch&sw_type%5B1%5D=watch&sw_type%5B2%5D=fitwatch&sw_type%5B3%5D=hybridsmartwatch&sw_type%5Boperation%5D=union",
+							isUnique: false,
+							position: 0
+						},
+						fitnessBracelets: {
+							ruName: "Фитнес-браслеты",
+							subcategoryPageRuHeading: "Фитнес-браслеты",
+							path: "/smartwatch?sw_type%5B0%5D=bracelet&sw_type%5Boperation%5D=union",
 							isUnique: false,
 							position: 0
 						},
@@ -204,7 +211,7 @@ module.exports = {
 						projectors: {
 							ruName: "Проекторы",
 							subcategoryPageRuHeading: "Проекторы",
-							path: "/projector",
+							path: "/projectors",
 							isUnique: true,
 							position: 0
 						},
@@ -362,24 +369,10 @@ module.exports = {
 							isUnique: false,
 							position: 1
 						},
-						multimediaAcoustics: {
-							ruName: "Мультимедиа акустика",
-							subcategoryPageRuHeading: "Мультимедиа акустика",
-							path: "/sound",
-							isUnique: false,
-							position: 0
-						},
-						wirelessSpeakers: {
-							ruName: "Беспроводные и портативные колонки",
-							subcategoryPageRuHeading: "Беспроводные и портативные колонки",
-							path: "/wspeaker",
-							isUnique: true,
-							position: 0
-						},
-						internetRadioStations: {
-							ruName: "Интернет-радиостанции",
-							subcategoryPageRuHeading: "Беспроводные и портативные колонки",
-							path: "/wspeaker?netpl_inetradio=1",
+						portableHeadphonesAmplifiers: {
+							ruName: "Портативные усилители для наушников",
+							subcategoryPageRuHeading: "Усилители для наушников",
+							path: "/portableamp?dac_type1%5B0%5D=type1&dac_type1%5Boperation%5D=union",
 							isUnique: true,
 							position: 0
 						},
@@ -390,10 +383,24 @@ module.exports = {
 							isUnique: true,
 							position: 0
 						},
-						hifiaudio: {
-							ruName: "Музыкальные центры",
-							subcategoryPageRuHeading: "Музыкальные центры",
-							path: "/hifiaudio",
+						bluetoothSpeakers: {
+							ruName: "Bluetooth колонки",
+							subcategoryPageRuHeading: "Беспроводные и портативные колонки",
+							path: "/wspeaker?ws_type%5B0%5D=portable&ws_type%5Boperation%5D=union",
+							isUnique: true,
+							position: 0
+						},
+						wiFiAndMultiroomAcoustics: {
+							ruName: "Wi-Fi и мультирум акустика",
+							subcategoryPageRuHeading: "Беспроводные и портативные колонки",
+							path: "/wspeaker?ws_type%5B0%5D=multiroom&ws_type%5Boperation%5D=union&ws_sync%5B0%5D=wireless&ws_sync%5Boperation%5D=union",
+							isUnique: true,
+							position: 0
+						},
+						smartSpeakers: {
+							ruName: "Умные колонки",
+							subcategoryPageRuHeading: "Беспроводные и портативные колонки",
+							path: "/wspeaker?wspeaker_voas%5B0%5D=siri&wspeaker_voas%5B1%5D=googleassistant&wspeaker_voas%5B2%5D=alexa&wspeaker_voas%5B3%5D=alisa&wspeaker_voas%5Boperation%5D=union",
 							isUnique: true,
 							position: 0
 						},
@@ -404,53 +411,11 @@ module.exports = {
 							isUnique: false,
 							position: 0
 						},
-						hifisound: {
-							ruName: "Акустика Hi-Fi и Hi-End",
-							subcategoryPageRuHeading: "Hi-Fi акустика",
-							path: "/hifisound",
-							isUnique: true,
-							position: 0
-						},
-						recievers: {
-							ruName: "AV-ресиверы и усилители",
-							subcategoryPageRuHeading: "AV-ресиверы и усилители",
-							path: "/recievers",
-							isUnique: true,
-							position: 0
-						},
-						vinylRecordPlayers: {
-							ruName: "Виниловые проигрыватели",
-							subcategoryPageRuHeading: "Виниловые проигрыватели",
-							path: "/turntable",
-							isUnique: true,
-							position: 0
-						},
-						phonoStages: {
-							ruName: "Фонокорректоры",
-							subcategoryPageRuHeading: "Фонокорректоры",
-							path: "/phonopreamps",
-							isUnique: true,
-							position: 0
-						},
-						networkPlayers: {
-							ruName: "Сетевые проигрыватели",
-							subcategoryPageRuHeading: "Сетевые проигрыватели",
-							path: "/network_player",
-							isUnique: true,
-							position: 0
-						},
-						radio: {
-							ruName: "Радиоприемники",
-							subcategoryPageRuHeading: "Радиоприемники",
-							path: "/radio",
+						multimediaAcoustics: {
+							ruName: "Мультимедиа акустика",
+							subcategoryPageRuHeading: "Мультимедиа акустика",
+							path: "/sound",
 							isUnique: false,
-							position: 0
-						},
-						portCarAudio: {
-							ruName: "Магнитолы",
-							subcategoryPageRuHeading: "Магнитолы",
-							path: "/portaudio",
-							isUnique: true,
 							position: 0
 						},
 						soundBars: {
@@ -460,10 +425,38 @@ module.exports = {
 							isUnique: false,
 							position: 1
 						},
+						radio: {
+							ruName: "Радиоприемники",
+							subcategoryPageRuHeading: "Радиоприемники",
+							path: "/radio",
+							isUnique: false,
+							position: 0
+						},
+						partyBoxes: {
+							ruName: "Колонки для вечеринок (патибоксы)",
+							subcategoryPageRuHeading: "Музыкальные центры, колонки для вечеринок (Partybox)",
+							path: "/hifiaudio?hifi_type%5B0%5D=partybox&hifi_type%5Boperation%5D=union",
+							isUnique: true,
+							position: 0
+						},
+						hifiaudio: {
+							ruName: "Музыкальные центры",
+							subcategoryPageRuHeading: "Музыкальные центры",
+							path: "/hifiaudio",
+							isUnique: true,
+							position: 0
+						},
 						clockRadios: {
 							ruName: "Электронные и радиочасы",
 							subcategoryPageRuHeading: "Электронные и радиочасы",
 							path: "/clockradio",
+							isUnique: true,
+							position: 0
+						},
+						boomboxesAndRadioTapeRecorders: {
+							ruName: "Бумбоксы и магнитолы",
+							subcategoryPageRuHeading: "Магнитолы",
+							path: "/portaudio",
 							isUnique: true,
 							position: 0
 						},
@@ -474,40 +467,118 @@ module.exports = {
 							isUnique: true,
 							position: 0
 						},
-						cables: {
-							ruName: "Кабели",
-							subcategoryPageRuHeading: "Кабели, адаптеры, разветвители",
-							path: "/cable",
+						btAudioReceivers: {
+							ruName: "Bluetooth аудиоресиверы",
+							subcategoryPageRuHeading: "Усилители для наушников",
+							path: "/portableamp?dac_type1%5B0%5D=btreciever&dac_type1%5Boperation%5D=union",
 							isUnique: true,
 							position: 0
 						},
-						vinylRecordPlayersAccessories: {
-							ruName: "Звукосниматели, тонармы, иглы",
+						audioCables: {
+							ruName: "Аудиокабели",
+							subcategoryPageRuHeading: "Кабели, адаптеры, разветвители",
+							path: "/cable?cable_usage%5B0%5D=av&cable_usage%5Boperation%5D=union&cable_type%5B0%5D=cable&cable_type%5Boperation%5D=union&cable_func%5B0%5D=type3&cable_func%5Boperation%5D=union",
+							isUnique: true,
+							position: 0
+						},
+					}
+				},
+				hiFiAudio: {
+					ruName: "Hi-Fi аудио",
+					isUnique: true,
+					containsUnique: true,
+					subCategories: {
+						hifiPlayers: {
+							ruName: "Hi-Fi плеееры",
+							subcategoryPageRuHeading: "Плееры",
+							path: "/player?player_type%5B0%5D=hifiplayer&player_type%5Boperation%5D=union",
+							isUnique: true,
+							position: 0
+						},
+						audiophileHeadphones: {
+							ruName: "Аудиофильские наушники",
+							subcategoryPageRuHeading: "Наушники для аудиофилов",
+							path: "/headphones?hp_destination%5B0%5D=hiend&hp_destination%5Boperation%5D=union",
+							isUnique: true,
+							position: 0
+						},
+						headphoneAmplifiers: {
+							ruName: "Настольные усилители для наушников",
+							subcategoryPageRuHeading: "Усилители для наушников",
+							path: "/portableamp?dac_type1%5B0%5D=desktopamp&dac_type1%5Boperation%5D=union",
+							isUnique: true,
+							position: 0
+						},
+						hiFiSpeakers: {
+							ruName: "Hi-Fi акустика",
+							subcategoryPageRuHeading: "Hi-Fi акустика",
+							path: "/hifisound",
+							isUnique: true,
+							position: 0
+						},
+						avReceiversAndProcessors: {
+							ruName: "AV-ресиверы и процессоры",
+							subcategoryPageRuHeading: "AV-ресиверы и усилители",
+							path: "/recievers?type_reciever%5B0%5D=avprocessor&type_reciever%5B1%5D=avreciever&type_reciever%5Boperation%5D=union",
+							isUnique: true,
+							position: 0
+						},
+						amplifiersAndPreamps: {
+							ruName: "Усилители, предусилители и стереоресиверы",
+							subcategoryPageRuHeading: "Усилители, предусилители и стереоресиверы",
+							path: "/recievers?type_reciever%5B0%5D=amplifier_int&type_reciever%5B1%5D=preamp&type_reciever%5B2%5D=stereoreciever&type_reciever%5B3%5D=poweramplifier&type_reciever%5Boperation%5D=union",
+							isUnique: true,
+							position: 0
+						},
+						tubeAmplifiers: {
+							ruName: "Ламповые усилители",
+							subcategoryPageRuHeading: "AV-ресиверы и усилители",
+							path: "/recievers?amp_lamp=1",
+							isUnique: true,
+							position: 0
+						},
+						cdPlayers: {
+							ruName: "CD-проигрыватели",
+							subcategoryPageRuHeading: "CD-проигрыватели",
+							path: "/cd_player",
+							isUnique: true,
+							position: 0
+						},
+						networkPlayers: {
+							ruName: "Сетевые проигрыватели",
+							subcategoryPageRuHeading: "Сетевые проигрыватели",
+							path: "/network_player",
+							isUnique: true,
+							position: 0
+						},
+
+						vinylRecordPlayers: {
+							ruName: "Виниловые проигрыватели",
+							subcategoryPageRuHeading: "Виниловые проигрыватели",
+							path: "/turntable",
+							isUnique: true,
+							position: 0
+						},
+						phonoStage: {
+							ruName: "Фонокорректоры",
+							subcategoryPageRuHeading: "Фонокорректоры",
+							path: "/phonopreamps",
+							isUnique: true,
+							position: 0
+						},
+						soundRecordersAndTonarms: {
+							ruName: "Звукосниматели и тонармы",
 							subcategoryPageRuHeading: "Звукосниматели, тонармы, иглы",
 							path: "/turntableaccess",
 							isUnique: true,
 							position: 0
 						},
-						headphoneAmplifiers: {
-							ruName: "Усилители для наушников",
-							subcategoryPageRuHeading: "Усилители для наушников",
-							path: "/portableamp",
+						speakerCables: {
+							ruName: "Акустические кабели",
+							subcategoryPageRuHeading: "Кабели, адаптеры, разветвители",
+							path: "/cable?cable_usage%5B0%5D=av&cable_usage%5Boperation%5D=union&cable_func%5B0%5D=type3&cable_func%5Boperation%5D=union&conn1%5B0%5D=acoustic&conn1%5Boperation%5D=intersect",
 							isUnique: true,
 							position: 0
-						},
-						speakerDocks: {
-							ruName: "Док-станции для смартфонов",
-							subcategoryPageRuHeading: "Док-станции для смартфонов",
-							path: "/speakerdock",
-							isUnique: false,
-							position: 1
-						},
-						remoteControls: {
-							ruName: "Универсальные пульты ДУ",
-							subcategoryPageRuHeading: "Универсальные пульты ДУ",
-							path: "/remote",
-							isUnique: false,
-							position: 1
 						}
 					}
 				},
@@ -677,10 +748,17 @@ module.exports = {
 					isUnique: true,
 					containsUnique: true,
 					subCategories: {
-						subcategory: {
-							ruName: "Умные часы и фитнес-браслеты",
+						smartWatches: {
+							ruName: "Умные часы",
 							subcategoryPageRuHeading: "Умные часы и браслеты",
-							path: "/smartwatch",
+							path: "/smartwatch?sw_type%5B0%5D=smartphonewatch&sw_type%5B1%5D=watch&sw_type%5B2%5D=fitwatch&sw_type%5B3%5D=hybridsmartwatch&sw_type%5Boperation%5D=union",
+							isUnique: false,
+							position: 1
+						},
+						fitnessBracelets: {
+							ruName: "Фитнес-браслеты",
+							subcategoryPageRuHeading: "Фитнес-браслеты",
+							path: "/smartwatch?sw_type%5B0%5D=bracelet&sw_type%5Boperation%5D=union",
 							isUnique: false,
 							position: 1
 						},
@@ -757,7 +835,7 @@ module.exports = {
 						smartSockets: {
 							ruName: "Умные розетки",
 							subcategoryPageRuHeading: "Розетки, выключатели",
-							path: "/wall_socket?wallsoc_smart=1",
+							path: "/smart_home?smh_type%5B0%5D=socket&smh_type%5Boperation%5D=union",
 							isUnique: false,
 							position: 0
 						},
@@ -852,6 +930,20 @@ module.exports = {
 							isUnique: true,
 							position: 0
 						},
+						ipPhones: {
+							ruName: "Проводные IP-телефоны",
+							subcategoryPageRuHeading: "Проводные телефоны",
+							path: "/phone?phone_connect%5B0%5D=2&phone_connect%5Boperation%5D=union",
+							isUnique: true,
+							position: 0
+						},
+						wirelessIpPhones: {
+							ruName: "Беспроводные IP-телефоны",
+							subcategoryPageRuHeading: "Радиотелефоны DECT",
+							path: "/dect?phone_connect%5B0%5D=2&phone_connect%5Boperation%5D=union",
+							isUnique: true,
+							position: 0
+						},
 						wireless3gModems: {
 							ruName: "3G-модемы",
 							subcategoryPageRuHeading: "Беспроводные адаптеры",
@@ -922,6 +1014,13 @@ module.exports = {
 							path: "/microphones",
 							isUnique: false,
 							position: 1
+						},
+						guitars: {
+							ruName: "Гитары",
+							subcategoryPageRuHeading: "Гитары",
+							path: "/guitar",
+							isUnique: false,
+							position: 1
 						}
 					}
 				},
@@ -953,28 +1052,28 @@ module.exports = {
 			ruName: "Компьютеры и сети",
 			tiles: [
 				{
-					ruName: "Планшеты",
-					path: "/tabletpc?utm_source=pc_tile&utm_medium=tabletpc",
+					ruName: "Геймерские наушники",
+					path: "/headphones?hp_destination%5B0%5D=gamer&hp_destination%5Boperation%5D=union&utm_source=pc_tile&utm_medium=headphones",
 					isUnique: true
 				},
 				{
-					ruName: "Беспроводные точки доступа",
-					path: "/wirelessap?utm_source=pc_tile&utm_medium=wirelessap",
+					ruName: "Wi-Fi роутеры",
+					path: "/wrouter?utm_source=pc_title&utm_medium=wrouter",
 					isUnique: true
 				},
 				{
-					ruName: "Компактные и недорогие ноутбуки",
-					path: "/notebook?price%5Bto%5D=1200.00&diagonalnb%5Bfrom%5D=120&diagonalnb%5Bto%5D=141&utm_source=pc_tile&utm_medium=notebook",
+					ruName: "Охлаждающие подставки",
+					path: "/laptopstand?lapst_type%5B0%5D=type1&lapst_type%5Boperation%5D=union&lapst_actcool=1&utm_source=pc_tile&utm_medium=laptopstand",
 					isUnique: true
 				},
 				{
-					ruName: "SSD с поддержкой NVMe",
-					path: "/ssd?utm_source=pc_tile&utm_medium=ssd",
+					ruName: "Мини фотопринтеры",
+					path: "/printers?type_print%5B0%5D=portableprinter&type_print%5Boperation%5D=union&order=price:asc&utm_source=pc_tile&utm_medium=portableprinter",
 					isUnique: true
 				},
 				{
-					ruName: "Мониторы с повышенной частотой обновления кадров",
-					path: "/display?disp_refreshrate%5Bfrom%5D=120hz&utm_source=pc_tile&utm_medium=display",
+					ruName: "Игровые ноутбуки",
+					path: "/notebook?nbusage%5B0%5D=gamer&nbusage%5Boperation%5D=union&utm_source=pc_tile&utm_medium=gamenotebook",
 					isUnique: true
 				}
 			],
@@ -1055,7 +1154,7 @@ module.exports = {
 							position: 0
 						},
 						fans: {
-							ruName: "Кулеры",
+							ruName: "Системы охлаждения",
 							subcategoryPageRuHeading: "Системы охлаждения",
 							path: "/fan",
 							isUnique: true,
@@ -1247,7 +1346,7 @@ module.exports = {
 							ruName: "Наборы периферии (клавиатура + мышь)",
 							subcategoryPageRuHeading: "Наборы периферии",
 							path: "/peripheralkits",
-							isUnique: true,
+							isUnique: false,
 							position: 0
 						},
 						mousePads: {
@@ -1390,12 +1489,54 @@ module.exports = {
 							isUnique: true,
 							position: 0
 						},
+						routersFor4g: {
+							ruName: "4G маршрутизаторы",
+							subcategoryPageRuHeading: "4G маршрутизаторы",
+							path: "/wrouter?wrouter_type%5B0%5D=ltewifirouter&wrouter_type%5B1%5D=portable&wrouter_type%5Boperation%5D=union",
+							isUnique: true,
+							position: 0
+						},
+						modemsFor4GwWiFi: {
+							ruName: "4G модемы с Wi-Fi",
+							subcategoryPageRuHeading: "4G модемы с Wi-Fi",
+							path: "/wrouter?wrouter_type%5B0%5D=usbmodem&wrouter_type%5Boperation%5D=union",
+							isUnique: true,
+							position: 0
+						},
+						wirelessAccessPoints: {
+							ruName: "Беспроводные точки доступа",
+							subcategoryPageRuHeading: "Беспроводные точки доступа",
+							path: "/wirelessap?wap_type%5B0%5D=wirelessap&wap_type%5Boperation%5D=union",
+							isUnique: true,
+							position: 0
+						},
+						wiFiAmplifiers: {
+							ruName: "Усилители Wi-Fi",
+							subcategoryPageRuHeading: "Усилители Wi-Fi",
+							path: "/wirelessap?wap_type%5B0%5D=repeater&wap_type%5Boperation%5D=union",
+							isUnique: true,
+							position: 0
+						},
+						modemsFor3gAnd4G: {
+							ruName: "4G и 3G-модемы",
+							subcategoryPageRuHeading: "Беспроводные адаптеры",
+							path: "/wirelessadapter?wa_type%5B0%5D=4g&wa_type%5B1%5D=3g&wa_type%5Boperation%5D=union",
+							isUnique: false,
+							position: 1
+						},
 						wirelessAdapters: {
 							ruName: "Беспроводные адаптеры",
 							subcategoryPageRuHeading: "Беспроводные адаптеры",
-							path: "/wirelessadapter",
+							path: "/wirelessadapter?wa_type%5B0%5D=wifibluetooth&wa_type%5B1%5D=bluetooth&wa_type%5B2%5D=wifi&wa_type%5Boperation%5D=union",
 							isUnique: true,
 							position: 0
+						},
+						networkAdapters: {
+							ruName: "Сетевые адаптеры (Ethernet)",
+							subcategoryPageRuHeading: "Сетевые адаптеры",
+							path: "/networkadapter",
+							isUnique: false,
+							position: 1
 						},
 						switches: {
 							ruName: "Коммутаторы",
@@ -1411,33 +1552,19 @@ module.exports = {
 							isUnique: true,
 							position: 0
 						},
+						NAS: {
+							ruName: "Сетевые накопители (NAS)",
+							subcategoryPageRuHeading: "Сетевые накопители (NAS)",
+							path: "/nas",
+							isUnique: false,
+							position: 1
+						},
 						ipCameras: {
 							ruName: "IP-камеры",
 							subcategoryPageRuHeading: "IP-камеры",
 							path: "/ipcamera",
 							isUnique: false,
 							position: 2
-						},
-						NAS: {
-							ruName: "NAS",
-							subcategoryPageRuHeading: "Сетевые накопители (NAS)",
-							path: "/nas",
-							isUnique: false,
-							position: 1
-						},
-						wirelessAccessPoints: {
-							ruName: "Беспроводные точки доступа",
-							subcategoryPageRuHeading: "Беспроводные точки доступа",
-							path: "/wirelessap",
-							isUnique: true,
-							position: 0
-						},
-						modemsFor3gAnd4G: {
-							ruName: "4G и 3G-модемы",
-							subcategoryPageRuHeading: "Беспроводные адаптеры",
-							path: "/wirelessadapter?wa_type%5B0%5D=4g&wa_type%5B1%5D=3g&wa_type%5Boperation%5D=union",
-							isUnique: false,
-							position: 1
 						},
 						networkCables: {
 							ruName: "Сетевые кабели",
@@ -1452,13 +1579,6 @@ module.exports = {
 							path: "/household_tools?ht_type%5B0%5D=crimpingpliers&ht_type%5Boperation%5D=union&order=date:desc",
 							isUnique: true,
 							position: 0
-						},
-						networkAdapters: {
-							ruName: "Сетевые адаптеры",
-							subcategoryPageRuHeading: "Сетевые адаптеры",
-							path: "/networkadapter",
-							isUnique: false,
-							position: 1
 						},
 						powerlines: {
 							ruName: "Сети по электропроводке (Powerline)",
