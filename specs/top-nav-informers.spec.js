@@ -114,9 +114,7 @@ describe("Onliner.by - Top Navigation / Informers", () => {
 					WeatherForecastPage.scrollElementIntoView(WeatherForecastPage.nextDaysBlock)
 					_.values(userCityForecast.forecast).forEach(dayOfWeek => {
 						expect(WeatherForecastPage.nextDateDaytimeTemperatureRange(
-							dayOfWeek.dateTextDayOfWeek, dayOfWeek.dayTemperature.min, dayOfWeek.dayTemperature.max)
-							.isDisplayed())
-							.toBe(true)
+							dayOfWeek.dateTextDayOfWeek, dayOfWeek.dayTemperature.min, dayOfWeek.dayTemperature.max).isDisplayed()).toBe(true)
 					})
 				})
 			})

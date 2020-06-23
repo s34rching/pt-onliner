@@ -4,8 +4,6 @@ const ProductDetailsPage = require("../page-objects/product-details-page")
 const LoginPage = require("../page-objects/login-page")
 const api = require("../helpers/onliner-api")
 const _ = require("lodash")
-const chai = require("chai")
-const assert = chai.assert
 
 describe("Onliner.by - Catalog / Products List", () => {
 
@@ -33,32 +31,24 @@ describe("Onliner.by - Catalog / Products List", () => {
 
 	describe("When user orders out products by their reviews", () => {
 
-		let CPUsFilteredByRating
+		let CPUsFilteredByRating, reviews
 
 		beforeEach(done => {
 			api.getProducts("cpu?order=reviews_rating:desc").then(res => {
 				CPUsFilteredByRating = JSON.parse(res)
+				reviews = _.map(CPUsFilteredByRating.products, product => product.reviews.count)
 				done()
 			})
 		})
 
 		it("then products in the list should be ordered by their reviews", () => {
-
-			let ratingsArray = []
-
 			ProductsList.openOrderListDropDown()
 			ProductsList.waitForOrderDropdownListIsVisible()
 			ProductsList.chooseOrderDropdownOptionByName("С отзывами")
 			ProductsList.waitForUrlContains("?order=reviews_rating:desc")
 			ProductsList.waitForActiveOrderOptionByName("С отзывами")
 			ProductsList.waitForProperTotalOfFoundProducts(CPUsFilteredByRating.total.toString())
-			ProductsList.getProductsRating().each(rating => {
-				rating.getText().then(text => { ratingsArray.push(text) })
-			}).then(() => {
-				for (let i = 0;  i < ratingsArray.length - 1; i++) {
-					assert.isAtLeast(parseInt(ratingsArray[i]), parseInt(ratingsArray[i + 1]))
-				}
-			})
+			ProductsList.productRewievs.each((review, index) => expect(review.getText()).toContain(reviews[index]))
 		})
 	})
 
@@ -74,22 +64,13 @@ describe("Onliner.by - Catalog / Products List", () => {
 		})
 
 		it("then products list should contain products of that manufacturer only", () => {
-
-			let productsTitles = []
-
 			ProductsList.scrollElementIntoView(ProductsList.filterByName("Производитель"))
 			ProductsList.filterProducts("Производитель", "Intel")
 			ProductsList.scrollElementIntoView(ProductsList.productsListTitle)
 			ProductsList.waitForUrlContains("cpu?mfr%5B0%5D=intel")
 			ProductsList.waitForSearchTagIsDisplayed("Intel")
 			ProductsList.waitForProperTotalOfFoundProducts(intelCPUs.total.toString())
-			ProductsList.getProductsTitles().each(title => {
-				title.getText().then(text => { productsTitles.push(text) })
-			}).then(() => {
-				productsTitles.forEach(title => {
-					expect(title).toContain("Intel")
-				})
-			})
+			ProductsList.productsTitles.each(title => expect(title.getText()).toContain("Intel"))
 		})
 	})
 
@@ -137,13 +118,7 @@ describe("Onliner.by - Catalog / Products List", () => {
 				const firstProductShortName = firstProduct.url.match(/(?<=\/products\/).+$/)[0]
 				const secondProductShortName = secondProduct.url.match(/(?<=\/products\/).+$/)[0]
 
-				ProductsList.product({ all: true }).then(productCards => {
-					_.take(productCards, numberOfProductsToCompare).forEach(productCard => {
-						productCard
-							.element(by.css(".schema-product__compare"))
-							.click()
-					})
-				})
+				ProductsList.markProductsToCompare(numberOfProductsToCompare)
 				ProductsList.compareProducts(numberOfProductsToCompare)
 				ProductsList.waitForUrlContains(`/compare/${firstProductShortName}+${secondProductShortName}`)
 				expect(ProductsList.productComparisonName(firstProduct.full_name).isDisplayed()).toBe(true)
@@ -206,14 +181,9 @@ describe("Onliner.by - Catalog / Products List", () => {
 				expect(ProductsList.createUsedOfferButton.isDisplayed()).toBe(true)
 				ProductsList.waitForProperTotalOfFoundProducts(usedCPUs.total.toString())
 				expect(ProductsList.productByTitle(firstUsedOffer.product.full_name).isDisplayed()).toBe(true)
-				expect(ProductsList.usedProductConditionsCircleByProductTitle(firstUsedOffer.product.full_name)
-					.isDisplayed()).toBe(true)
-				expect(ProductsList.usedProductLocationByProductTitle(firstUsedOffer.product.full_name)
-					.isDisplayed()).toBe(true)
-				ProductsList.usedProductPriceByProductTitle(firstUsedOffer.product.full_name).getText()
-					.then(price => {
-						assert.isNumber(parseFloat(price.replace(",", ".")))
-					})
+				expect(ProductsList.usedProductConditionsCircleByProductTitle(firstUsedOffer.product.full_name).isDisplayed()).toBe(true)
+				expect(ProductsList.usedProductLocationByProductTitle(firstUsedOffer.product.full_name).isDisplayed()).toBe(true)
+				expect(ProductsList.getUsedProductPrice(firstUsedOffer.product.full_name)).toEqual(jasmine.any(Number))
 				ProductsList.openUsedUserProductOfferByProductName(firstUsedOffer.product.full_name)
 				ProductDetailsPage.waitForUsedProductPrice()
 				ProductDetailsPage.scrollElementIntoView(ProductDetailsPage.usedProductNameHeading)

@@ -1,3 +1,4 @@
+const _ = require("lodash")
 const BasePage = require("./base-page")
 
 class ProductsList extends BasePage {
@@ -13,7 +14,7 @@ class ProductsList extends BasePage {
 		this.orderDropdownActiveOrderOptionByName = function(optionName) {
 			return this.orderDropdown.element(by.cssContainingText("span.schema-order__text", optionName))
 		}
-		this.productRatings = $$("a.schema-product__rating").$$("span.schema-product__review-count")
+		this.productRewievs = $$("a.schema-product__rating").$$("span.schema-product__review-count")
 		this.productsTitles = $$(".schema-product__title").all(by.tagName("span"))
 		this.filters = element(by.id("schema-filter"))
 		this.filterByName = function(filterName) {
@@ -72,11 +73,6 @@ class ProductsList extends BasePage {
 		this.usedProductLocationByProductTitle = function(productTitle) {
 			return this.productByTitle(productTitle).$(".schema-product__city")
 		}
-		this.usedProductPriceByProductTitle = function(productTitle) {
-			return this.productByTitle(productTitle)
-				.$(".schema-product__price-group")
-				.element(by.tagName("strong"))
-		}
 	}
 
 	openOrderListDropDown() {
@@ -90,12 +86,6 @@ class ProductsList extends BasePage {
 	}
 	waitForUrlContains(text) {
 		return this.urlContains(text)
-	}
-	getProductsRating() {
-		return this.productRatings
-	}
-	getProductsTitles() {
-		return this.productsTitles
 	}
 	waitForActiveOrderOptionByName(optionName) {
 		this.isVisible(this.orderDropdownActiveOrderOptionByName(optionName))
@@ -134,6 +124,20 @@ class ProductsList extends BasePage {
 	}
 	clearComparisonList() {
 		this.resetComparisonListButton.click()
+	}
+	markProductsToCompare(numberOfProductsToCompare) {
+		this.product({ all: true }).then(productCards => {
+			_.take(productCards, numberOfProductsToCompare).forEach(productCard => {
+				productCard
+					.element(by.css(".schema-product__compare"))
+					.click()
+			})
+		})
+	}
+	getUsedProductPrice(productTitle) {
+		return this.productByTitle(productTitle).getText().then(price => {
+			return parseFloat(price.replace(",", "."))
+		})
 	}
 }
 
