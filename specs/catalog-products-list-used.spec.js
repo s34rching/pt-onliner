@@ -2,6 +2,7 @@ const ProductsList = require("../page-objects/products-list")
 const ProductDetailsPage = require("../page-objects/product-details-page")
 const LoginPage = require("../page-objects/login-page")
 const api = require("../helpers/onliner-api")
+const { stringifyToCents } = require("../service/currency-exchange-services")
 
 describe("Onliner.by - Catalog / Products List - Used", () => {
 
@@ -42,7 +43,7 @@ describe("Onliner.by - Catalog / Products List - Used", () => {
 
 	it("Used product price should be displayed", () => {
 		ProductsList.open(firstUsedOffer.html_url)
-		expect(ProductDetailsPage.usedProductPrice.isDisplayed()).toBe(true)
+		expect(ProductDetailsPage.usedProductPrice.getText()).toContain(stringifyToCents(firstUsedOffer.price.amount))
 	})
 
 	it("Used product conditions should be displayed", () => {
