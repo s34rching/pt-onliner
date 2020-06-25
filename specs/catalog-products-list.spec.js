@@ -1,7 +1,5 @@
 const ProductsList = require("../page-objects/products-list")
 const ProductOffers = require("../page-objects/product-offers-page")
-const ProductDetailsPage = require("../page-objects/product-details-page")
-const LoginPage = require("../page-objects/login-page")
 const api = require("../helpers/onliner-api")
 const _ = require("lodash")
 
@@ -156,52 +154,6 @@ describe("Onliner.by - Catalog / Products List", () => {
 			expect(ProductOffers.toCartButton.isDisplayed()).toBe(true)
 			expect(ProductOffers.shopContactsButton.isDisplayed()).toBe(true)
 			expect(ProductOffers.shopWorkingHours.getText()).toContain("Магазин сегодня работает с")
-		})
-	})
-
-	describe("When user observes user's used offers", () => {
-
-		let usedCPUs
-
-		beforeEach(done => {
-			api.getProducts("cpu/second-offers?segment=second").then(res => {
-				usedCPUs = JSON.parse(res)
-				done()
-			})
-		})
-
-		describe("And opens particular offer", () => {
-
-			it("Then they should be able to see offer description data", () => {
-
-				const firstUsedOffer = usedCPUs.offers[0]
-
-				ProductsList.switchToSection("Объявления")
-				ProductsList.waitForUrlContains("/cpu?segment=second")
-				expect(ProductsList.createUsedOfferButton.isDisplayed()).toBe(true)
-				ProductsList.waitForProperTotalOfFoundProducts(usedCPUs.total.toString())
-				expect(ProductsList.productByTitle(firstUsedOffer.product.full_name).isDisplayed()).toBe(true)
-				expect(ProductsList.usedProductConditionsCircleByProductTitle(firstUsedOffer.product.full_name).isDisplayed()).toBe(true)
-				expect(ProductsList.usedProductLocationByProductTitle(firstUsedOffer.product.full_name).isDisplayed()).toBe(true)
-				expect(ProductsList.getUsedProductPrice(firstUsedOffer.product.full_name)).toEqual(jasmine.any(Number))
-				ProductsList.openUsedUserProductOfferByProductName(firstUsedOffer.product.full_name)
-				ProductDetailsPage.waitForUsedProductPrice()
-				ProductDetailsPage.scrollElementIntoView(ProductDetailsPage.usedProductNameHeading)
-				expect(ProductDetailsPage.usedProductDescription.isDisplayed()).toBe(true)
-			})
-		})
-
-		describe("And decides to create their own offer", () => {
-
-			it("Then they have to be log in", () => {
-				ProductsList.switchToSection("Объявления")
-				ProductsList.waitForProperTotalOfFoundProducts(usedCPUs.total.toString())
-				ProductsList.createUserUsedProductOffer()
-				ProductsList.waitForUrlContains("/login?redirect")
-				expect(LoginPage.authFormTitle.isDisplayed()).toBe(true)
-				expect(LoginPage.nameInput.isDisplayed()).toBe(true)
-				expect(LoginPage.passwordInput.isDisplayed()).toBe(true)
-			})
 		})
 	})
 })

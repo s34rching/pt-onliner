@@ -14,6 +14,7 @@ exports.config = {
 		"search": "specs/search.spec.js",
 		"navigation": "specs/catalog-navigation.spec.js",
 		"products-list": "specs/catalog-products-list.spec.js",
+		"used": "specs/catalog-products-list-used.spec.js",
 		"top-informers": "specs/top-nav-informers.spec.js"
 	},
 	capabilities: {

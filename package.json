@@ -6,6 +6,7 @@
     "search": "protractor conf.js --suite search",
     "navigation": "protractor conf.js --suite navigation",
     "products-list": "protractor conf.js --suite products-list",
+    "used": "protractor conf.js --suite used",
     "top-informers": "protractor conf.js --suite top-informers",
     "lint-staged": "npx lint-staged"
   },
