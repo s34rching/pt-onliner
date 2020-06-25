@@ -10,6 +10,9 @@ class ProductDetailsPage extends BasePage {
 		this.firstOffer = $(".product-aside__item--highlighted")
 		this.firstOfferPrice = this.firstOffer.$("span.product-aside__price--primary")
 		this.usedProductNameHeading = $(".catalog-masthead__title")
+		this.usedProductConditions = function(conditions) {
+			return element(by.cssContainingText(".offers-list__circle-mark_primary", conditions.toString()))
+		}
 		this.usedProductDescription = $(".offers-list__description")
 		this.usedProductPrice = $(".offers-list__price_primary")
 		this.productOfferDescription = $("p[itemprop='description']")

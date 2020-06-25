@@ -37,13 +37,27 @@ describe("Onliner.by - Catalog / Products List - Used", () => {
 		ProductsList.waitForProperTotalOfFoundProducts(usedCPUs.total.toString())
 		ProductsList.openUsedUserProductOfferByProductName(firstUsedOffer.product.full_name)
 		ProductDetailsPage.waitForUsedProductPrice()
+		expect(ProductsList.usedProductConditionsCircleByProductTitle(firstUsedOffer.product.full_name).isDisplayed()).toBe(true)
+	})
+
+	it("Used product price should be displayed", () => {
+		ProductsList.open(firstUsedOffer.html_url)
+		expect(ProductDetailsPage.usedProductPrice.isDisplayed()).toBe(true)
+	})
+
+	it("Used product conditions should be displayed", () => {
+		ProductsList.open(firstUsedOffer.html_url)
+		expect(ProductDetailsPage.usedProductConditions(firstUsedOffer.condition).isDisplayed()).toBe(true)
+	})
+
+	it("Used product description should be displayed", () => {
+		ProductsList.open(firstUsedOffer.html_url)
 		ProductDetailsPage.scrollElementIntoView(ProductDetailsPage.usedProductNameHeading)
 		expect(ProductDetailsPage.usedProductDescription.isDisplayed()).toBe(true)
 	})
 
 	it("Creation of new 'used' offer requires user to be logged in", () => {
 		ProductsList.goTo("/cpu?segment=second")
-		ProductsList.switchToSection("Объявления")
 		ProductsList.waitForProperTotalOfFoundProducts(usedCPUs.total.toString())
 		ProductsList.createUserUsedProductOffer()
 		ProductsList.waitForUrlContains("/login?redirect")
