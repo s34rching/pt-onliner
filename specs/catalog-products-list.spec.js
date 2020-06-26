@@ -22,11 +22,11 @@ describe("Onliner.by - Catalog / Products List", () => {
 		ProductsList.goTo("/cpu")
 	})
 
-	fit("Then products default sort order is set as 'Popular'", () => {
+	it("Products default sort order should be set as 'Popular'", () => {
 		expect(ProductsList.orderDropdownActiveOrderOption.getText()).toBe("популярные")
 	})
 
-	it("then products in the list should be ordered by their reviews", () => {
+	it("User should be able to sort out products by their reviews", () => {
 		const reviews = _.map(CPUsFilteredByRating.products, product => product.reviews.count)
 
 		ProductsList.openOrderListDropDown()
@@ -38,7 +38,7 @@ describe("Onliner.by - Catalog / Products List", () => {
 		ProductsList.productRewievs.each((review, index) => expect(review.getText()).toContain(reviews[index]))
 	})
 
-	it("then products list should contain products of that manufacturer only", () => {
+	it("User should be able to filter out products by manufacturer", () => {
 		ProductsList.scrollElementIntoView(ProductsList.filterByName("Производитель"))
 		ProductsList.filterProducts("Производитель", "Intel")
 		ProductsList.scrollElementIntoView(ProductsList.productsListTitle)
@@ -48,7 +48,7 @@ describe("Onliner.by - Catalog / Products List", () => {
 		ProductsList.productsTitles.each(title => expect(title.getText()).toContain("Intel"))
 	})
 
-	it("then products list should be restored to its initial state", () => {
+	it("User should be able to reset applied filters", () => {
 		ProductsList.waitForProperTotalOfFoundProducts(allCPUs.total.toString())
 		ProductsList.scrollElementIntoView(ProductsList.filterByName("Производитель"))
 		ProductsList.filterProducts("Производитель", "Intel")
@@ -60,7 +60,7 @@ describe("Onliner.by - Catalog / Products List", () => {
 		ProductsList.waitForProperTotalOfFoundProducts(allCPUs.total.toString())
 	})
 
-	it("Then they should be able to open comparison page", done => {
+	it("User should be able to add products to comparison", done => {
 		api.getProducts("cpu").then(res => {
 			const allCPUs = JSON.parse(res)
 
@@ -79,7 +79,7 @@ describe("Onliner.by - Catalog / Products List", () => {
 		})
 	})
 
-	it("Then they should be able to find complete shop info to purchase the chosen product", () => {
+	it("User should be able to open shop offer page", () => {
 
 		const [firstProduct] = allCPUs.products
 		const [firstShop] = shopList.positions.primary
