@@ -38,7 +38,7 @@ describe("Onliner.by - Catalog / Products List - Used", () => {
 		ProductsList.waitForProperTotalOfFoundProducts(usedCPUs.total.toString())
 		ProductsList.openUsedUserProductOfferByProductName(firstUsedOffer.product.full_name)
 		ProductDetailsPage.waitForUsedProductPrice()
-		expect(ProductsList.usedProductConditionsCircleByProductTitle(firstUsedOffer.product.full_name).isDisplayed()).toBe(true)
+		expect(ProductDetailsPage.usedProductNameHeading.getText()).toContain(firstUsedOffer.product.full_name)
 	})
 
 	it("Used product price should be displayed", () => {
