@@ -8,7 +8,7 @@ class ProductsList extends BasePage {
 		this.orderDropdown = this.orderOptionsContainer.$("a.schema-order__link")
 		this.orderDropdownOptionsList = $(".schema-order__list")
 		this.orderDropdownOptionsListOptionByName = function(optionName) {
-			return element(by.cssContainingText("span", optionName))
+			return this.orderDropdownOptionsList.element(by.cssContainingText("span", optionName))
 		}
 		this.orderDropdownActiveOrderOption = this.orderDropdown.$("span.schema-order__text")
 		this.orderDropdownActiveOrderOptionByName = function(optionName) {
@@ -82,6 +82,7 @@ class ProductsList extends BasePage {
 		return this.isVisible(this.orderDropdownOptionsList)
 	}
 	chooseOrderDropdownOptionByName(optionName) {
+		this.isClickable(this.orderDropdownOptionsListOptionByName(optionName))
 		return this.orderDropdownOptionsListOptionByName(optionName).click()
 	}
 	waitForUrlContains(text) {
@@ -111,6 +112,7 @@ class ProductsList extends BasePage {
 		this.forceClick(this.compareProductsButton(numberOfProductsToCompare))
 	}
 	openFirstProductOffersPage() {
+		this.isClickable(this.firstProductOffersButton)
 		this.firstProductOffersButton.click()
 	}
 	switchToSection(sectionName) {
