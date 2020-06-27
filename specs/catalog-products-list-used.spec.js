@@ -38,7 +38,7 @@ describe("Onliner.by - Catalog / Products List - Used", () => {
 		ProductsList.waitForProperTotalOfFoundProducts(usedCPUs.total.toString())
 		ProductsList.openUsedUserProductOfferByProductName(firstUsedOffer.product.full_name)
 		ProductDetailsPage.waitForUsedProductPrice()
-		expect(ProductDetailsPage.usedProductNameHeading.getText()).toContain(firstUsedOffer.product.full_name)
+		expect(ProductDetailsPage.productNameHeading.getText()).toContain(firstUsedOffer.product.full_name)
 	})
 
 	it("Used product price should be displayed", () => {
@@ -53,7 +53,7 @@ describe("Onliner.by - Catalog / Products List - Used", () => {
 
 	it("Used product description should be displayed", () => {
 		ProductsList.open(firstUsedOffer.html_url)
-		ProductDetailsPage.scrollElementIntoView(ProductDetailsPage.usedProductNameHeading)
+		ProductDetailsPage.scrollElementIntoView(ProductDetailsPage.productNameHeading)
 		expect(ProductDetailsPage.usedProductDescription.isDisplayed()).toBe(true)
 	})
 

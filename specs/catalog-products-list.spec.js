@@ -1,5 +1,6 @@
 let ProductsList = require("../page-objects/products-list")
 let ProductOffers = require("../page-objects/product-offers-page")
+let ProductDetailsPage = require("../page-objects/product-details-page")
 const api = require("../helpers/onliner-api")
 const _ = require("lodash")
 
@@ -49,18 +50,14 @@ describe("Onliner.by - Catalog / Products List", () => {
 	})
 
 	it("User should be able to reset applied filters", () => {
-		ProductsList.waitForProperTotalOfFoundProducts(allCPUs.total.toString())
-		ProductsList.scrollElementIntoView(ProductsList.filterByName("Производитель"))
-		ProductsList.filterProducts("Производитель", "Intel")
-		ProductsList.scrollElementIntoView(ProductsList.productsListTitle)
-		ProductsList.waitForUrlContains("cpu?mfr%5B0%5D=intel")
+		ProductsList.goTo("/cpu?mfr%5B0%5D=intel")
 		ProductsList.waitForSearchTagIsDisplayed("Intel")
 		ProductsList.waitForProperTotalOfFoundProducts(intelCPUs.total.toString())
 		ProductsList.resetFilters()
 		ProductsList.waitForProperTotalOfFoundProducts(allCPUs.total.toString())
 	})
 
-	it("User should be able to add products to comparison", done => {
+	it("User should be able to add products to comparison", () => {
 		api.getProducts("cpu").then(res => {
 			const allCPUs = JSON.parse(res)
 
@@ -74,27 +71,107 @@ describe("Onliner.by - Catalog / Products List", () => {
 			ProductsList.waitForUrlContains(`/compare/${firstProductShortName}+${secondProductShortName}`)
 			expect(ProductsList.productComparisonName(firstProduct.full_name).isDisplayed()).toBe(true)
 			expect(ProductsList.productComparisonName(secondProduct.full_name).isDisplayed()).toBe(true)
-			ProductsList.clearComparisonList()
-			done()
 		})
 	})
 
-	it("User should be able to open shop offer page", () => {
+	it("User should be able to clean out comparison", () => {
+		const firstProduct = allCPUs.products[0]
+		const secondProduct = allCPUs.products[1]
+		const firstProductShortName = firstProduct.url.match(/(?<=\/products\/).+$/)[0]
+		const secondProductShortName = secondProduct.url.match(/(?<=\/products\/).+$/)[0]
 
+		ProductsList.goTo(`/compare/${firstProductShortName}+${secondProductShortName}`)
+		ProductsList.clearComparisonList()
+		expect(ProductsList.waitForUrlContains(browser.baseUrl)).toBe(true)
+	})
+
+	it("User should be able to open shop offers list page", () => {
+		const [firstProduct] = allCPUs.products
+
+		ProductsList.openFirstProductOffersPage()
+		ProductsList.waitForUrlContains(firstProduct.html_url)
+		expect(ProductOffers.isVisible(ProductOffers.productPriceHeading)).toBe(true)
+	})
+
+	it("Product name should be displayed on offers page", () => {
+		const [firstProduct] = allCPUs.products
+
+		ProductsList.openFirstProductOffersPage()
+		ProductsList.waitForUrlContains(firstProduct.html_url)
+		ProductOffers.isVisible(ProductOffers.productPriceHeading)
+		expect(ProductDetailsPage.productNameHeading.getText()).toContain(firstProduct.name)
+	})
+
+	it("Base order group should be displayed on offers page", () => {
+		const [firstProduct] = allCPUs.products
+
+		ProductsList.openFirstProductOffersPage()
+		ProductsList.waitForUrlContains(firstProduct.html_url)
+		ProductOffers.isVisible(ProductOffers.productPriceHeading)
+		ProductOffers.scrollElementIntoView(ProductOffers.productPriceHeading)
+		ProductOffers.skipPickCityModal()
+		expect(ProductOffers.productPricesOrderGroup.isDisplayed()).toBe(true)
+	})
+
+	it("Shop filters should be displayed on offers page", () => {
+		const [firstProduct] = allCPUs.products
+
+		ProductsList.openFirstProductOffersPage()
+		ProductsList.waitForUrlContains(firstProduct.html_url)
+		ProductOffers.isVisible(ProductOffers.productPriceHeading)
+		ProductOffers.scrollElementIntoView(ProductOffers.productPriceHeading)
+		ProductOffers.skipPickCityModal()
+		expect(ProductOffers.productPricesFilterGroup.isDisplayed()).toBe(true)
+	})
+
+	it("Shop logo should be displayed on offers page", () => {
 		const [firstProduct] = allCPUs.products
 		const [firstShop] = shopList.positions.primary
 
 		ProductsList.openFirstProductOffersPage()
 		ProductsList.waitForUrlContains(firstProduct.html_url)
-		ProductOffers.isPresentInDom(ProductOffers.productPriceHeading)
+		ProductOffers.isVisible(ProductOffers.productPriceHeading)
 		ProductOffers.scrollElementIntoView(ProductOffers.productPriceHeading)
 		ProductOffers.skipPickCityModal()
 		expect(ProductOffers.waitForFirstShopLogoDisplayed(firstShop.shop_id)).toBe(true)
-		expect(ProductOffers.productPricesOrderGroup.isDisplayed()).toBe(true)
-		expect(ProductOffers.productPricesFilterGroup.isDisplayed()).toBe(true)
+	})
+
+	it("Shop offer price should be displayed on offers page", () => {
+		const [firstProduct] = allCPUs.products
+		const [firstShop] = shopList.positions.primary
+
+		ProductsList.openFirstProductOffersPage()
+		ProductsList.waitForUrlContains(firstProduct.html_url)
+		ProductOffers.isVisible(ProductOffers.productPriceHeading)
+		ProductOffers.scrollElementIntoView(ProductOffers.productPriceHeading)
+		ProductOffers.skipPickCityModal()
+		ProductOffers.waitForFirstShopLogoDisplayed(firstShop.shop_id)
 		expect(ProductOffers.firstOfferProductPrice.isDisplayed()).toBe(true)
-		expect(ProductOffers.toCartButton.isDisplayed()).toBe(true)
+	})
+
+	it("'Shop Contacts' button should be displayed on offers page", () => {
+		const [firstProduct] = allCPUs.products
+		const [firstShop] = shopList.positions.primary
+
+		ProductsList.openFirstProductOffersPage()
+		ProductsList.waitForUrlContains(firstProduct.html_url)
+		ProductOffers.isVisible(ProductOffers.productPriceHeading)
+		ProductOffers.scrollElementIntoView(ProductOffers.productPriceHeading)
+		ProductOffers.skipPickCityModal()
+		ProductOffers.waitForFirstShopLogoDisplayed(firstShop.shop_id)
 		expect(ProductOffers.shopContactsButton.isDisplayed()).toBe(true)
+	})
+
+	it("Shop working hours button should be displayed on offers page", () => {
+		const [firstProduct] = allCPUs.products
+		const [firstShop] = shopList.positions.primary
+
+		ProductsList.openFirstProductOffersPage()
+		ProductsList.waitForUrlContains(firstProduct.html_url)
+		ProductOffers.isVisible(ProductOffers.productPriceHeading)
+		ProductOffers.scrollElementIntoView(ProductOffers.productPriceHeading)
+		ProductOffers.skipPickCityModal()
+		ProductOffers.waitForFirstShopLogoDisplayed(firstShop.shop_id)
 		expect(ProductOffers.shopWorkingHours.getText()).toContain("Магазин сегодня работает с")
 	})
 })

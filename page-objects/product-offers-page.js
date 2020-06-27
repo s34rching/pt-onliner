@@ -21,9 +21,11 @@ class ProductOffersPage extends BasePage {
 		return this.isPresentInDom(this.shopLogoByShopId(shopId))
 	}
 	skipPickCityModal() {
-		if (this.isVisible(this.overlay)) {
-			$(".offers-list__target").$(".popover-style__content").$(".button-style_primary").click()
-		}
+		this.isPresentInDom(this.overlay).then(overlay => {
+			if (overlay) {
+				$(".offers-list__target").$(".popover-style__content").$(".button-style_primary").click()
+			}
+		})
 	}
 }
 
