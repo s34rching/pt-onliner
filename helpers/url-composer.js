@@ -24,6 +24,9 @@ module.exports = {
 		case "currency":
 			domain = "https://kurs.onliner.by"
 			break
+		case "weather":
+			domain = "https://pogoda.onliner.by"
+			break
 		default:
 			domain = "https://www.onliner.by"
 			break
