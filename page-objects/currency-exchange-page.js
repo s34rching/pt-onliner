@@ -35,6 +35,7 @@ class ExchangeRatesPage extends BasePage {
 		this.scrollElementIntoView(this.topNavbar)
 		this.waitForConvertOutDataVisible()
 		this.bestExchangeRatesLocationsButton.click()
+		this.waitForMapIsLoaded()
 	}
 	waitForMapIsLoaded() {
 		this.isVisible(this.exchangeServicesMap)

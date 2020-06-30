@@ -4,6 +4,7 @@ const { getLocationsAmount, defineLocationsMessageOnPopup } = require("../servic
 const random = require("../helpers/get-random-testing-data")
 const api = require("../helpers/onliner-api")
 const { getDirectionWithOrder, getDirectionCurrencies, calculateConversionResult } = require("../service/currency-exchange-services")
+const { composeUrl } = require("../helpers/url-composer")
 
 describe("Onliner.by - Top Navigation / Informers - Currency Exchange", () => {
 
@@ -18,56 +19,58 @@ describe("Onliner.by - Top Navigation / Informers - Currency Exchange", () => {
 
 	beforeEach(() => {
 		browser.waitForAngularEnabled(false)
-
-		HomePage.goTo("/")
-		HomePage.scrollElementIntoView(HomePage.topNavbar)
 	})
 
-	describe("Currency exchange rates", () => {
+	it("User should be able to see the best conversion rate of USD on homepage", () => {
+		HomePage.goTo("/")
+		expect(HomePage.currencyInformer.getText()).toBe(`$ ${bestUsdExchangeRate}`)
+	})
 
-		describe("When user opens homepage", () => {
+	it("User should be able to open currency exchange rates page", () => {
+		HomePage.goTo("/")
+		HomePage.openCurrencyExchangeRatesPage()
+		expect(ExchangeRatesPage.bestExchangeRatesLocationsButton.isDisplayed()).toBe(true)
+	})
 
-			it("Then they should be able to see the best conversion rate of USD", () => {
-				expect(HomePage.currencyInformer.getText()).toBe(`$ ${bestUsdExchangeRate}`)
-			})
+	it("User should be able to convert currencies", () => {
 
-			describe("And open currency exchange rates page to see the best rates locations", () => {
+		const { direction, order } = getDirectionWithOrder()
+		const { in: currencyIn, out: currencyOut } = getDirectionCurrencies(direction, order)
+		const randomCurrencyAmount = random.getRandomNumber(20, 10000)
 
-				describe("And search for the city best rates locations", () => {
+		HomePage.open(composeUrl("currency"))
+		ExchangeRatesPage.waitForConvertOutDataVisible()
+		ExchangeRatesPage.getDirectionBestExchangeRate(direction, order).then(rate => {
+			ExchangeRatesPage.chooseCurrencyToConvert("in", currencyIn)
+			ExchangeRatesPage.chooseCurrencyToConvert("out", currencyOut)
+			ExchangeRatesPage.enterCurrencyAmountToConvert(randomCurrencyAmount)
+			expect(ExchangeRatesPage.getConversionResult()).toBe(calculateConversionResult(currencyIn, currencyOut, randomCurrencyAmount, rate, order))
+		})
+	})
 
-					it("Then they should be able to find exchange services location on a map", () => {
-						HomePage.openCurrencyExchangeRatesPage()
-						ExchangeRatesPage.bestExchangeRatesLocationsButton.getText().then(showMapMessage => {
-							const locationsAmount = getLocationsAmount(showMapMessage)
+	it("User should be able to open the best rates locations page", () => {
+		HomePage.open(composeUrl("currency"))
+		ExchangeRatesPage.bestExchangeRatesLocationsButton.getText().then(showMapMessage => {
+			const locationsAmount = getLocationsAmount(showMapMessage)
 
-							ExchangeRatesPage.openBestExchangeRatesLocations()
-							ExchangeRatesPage.waitForMapIsLoaded()
-							expect(ExchangeRatesPage.exchangeServicesMapLocations.getText()).toMatch(defineLocationsMessageOnPopup(locationsAmount))
-							expect(ExchangeRatesPage.exchangeServicesMapPointers.count()).toEqual(locationsAmount)
-							ExchangeRatesPage.exchangeServicesMapPointers.each(pointer => expect(pointer.isDisplayed()).toBe(true))
-						})
-					})
-				})
+			ExchangeRatesPage.openBestExchangeRatesLocations()
+			expect(ExchangeRatesPage.exchangeServicesMapLocations.getText()).toMatch(defineLocationsMessageOnPopup(locationsAmount))
+		})
+	})
 
-				describe("And enter currency amount, picks up currencies conversion direction", () => {
+	it("User should be able to see the best rates locations pointers on the map", () => {
+		HomePage.open(composeUrl("currency"))
+		ExchangeRatesPage.openBestExchangeRatesLocations()
+		ExchangeRatesPage.exchangeServicesMapPointers.each(pointer => expect(pointer.isDisplayed()).toBe(true))
+	})
 
-					it("Then conversion should be successful", () => {
+	it("User should be able to see proper amount of locations pointers on the map", () => {
+		HomePage.open(composeUrl("currency"))
+		ExchangeRatesPage.bestExchangeRatesLocationsButton.getText().then(showMapMessage => {
+			const locationsAmount = getLocationsAmount(showMapMessage)
 
-						const { direction, order } = getDirectionWithOrder()
-						const { in: currencyIn, out: currencyOut } = getDirectionCurrencies(direction, order)
-						const randomCurrencyAmount = random.getRandomNumber(20, 10000)
-
-						HomePage.openCurrencyExchangeRatesPage()
-						ExchangeRatesPage.waitForConvertOutDataVisible()
-						ExchangeRatesPage.getDirectionBestExchangeRate(direction, order).then(rate => {
-							ExchangeRatesPage.chooseCurrencyToConvert("in", currencyIn)
-							ExchangeRatesPage.chooseCurrencyToConvert("out", currencyOut)
-							ExchangeRatesPage.enterCurrencyAmountToConvert(randomCurrencyAmount)
-							expect(ExchangeRatesPage.getConversionResult()).toBe(calculateConversionResult(currencyIn, currencyOut, randomCurrencyAmount, rate, order))
-						})
-					})
-				})
-			})
+			ExchangeRatesPage.openBestExchangeRatesLocations()
+			expect(ExchangeRatesPage.exchangeServicesMapPointers.count()).toEqual(locationsAmount)
 		})
 	})
 })
