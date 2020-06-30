@@ -8,7 +8,7 @@ const api = require("../helpers/onliner-api")
 const _ = require("lodash")
 const { getDirectionWithOrder, getDirectionCurrencies, calculateConversionResult } = require("../service/currency-exchange-services")
 
-describe("Onliner.by - Top Navigation / Informers", () => {
+describe("Onliner.by - Top Navigation / Informers - Weather Forecast", () => {
 
 	let bestUsdExchangeRate
 

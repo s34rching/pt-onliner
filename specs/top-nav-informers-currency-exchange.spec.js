@@ -1,14 +1,11 @@
 const HomePage = require("../page-objects/homepage")
 const ExchangeRatesPage = require("../page-objects/currency-exchange-page")
-const WeatherForecastPage = require("../page-objects/weather-forecast-page")
 const { getLocationsAmount, defineLocationsMessageOnPopup } = require("../service/location-services")
 const random = require("../helpers/get-random-testing-data")
-const { cities } = require("../fixtures/cities")
 const api = require("../helpers/onliner-api")
-const _ = require("lodash")
 const { getDirectionWithOrder, getDirectionCurrencies, calculateConversionResult } = require("../service/currency-exchange-services")
 
-describe("Onliner.by - Top Navigation / Informers", () => {
+describe("Onliner.by - Top Navigation / Informers - Currency Exchange", () => {
 
 	let bestUsdExchangeRate
 
@@ -31,7 +28,6 @@ describe("Onliner.by - Top Navigation / Informers", () => {
 		describe("When user opens homepage", () => {
 
 			it("Then they should be able to see the best conversion rate of USD", () => {
-				HomePage.goTo("/")
 				expect(HomePage.currencyInformer.getText()).toBe(`$ ${bestUsdExchangeRate}`)
 			})
 
@@ -70,49 +66,6 @@ describe("Onliner.by - Top Navigation / Informers", () => {
 							expect(ExchangeRatesPage.getConversionResult()).toBe(calculateConversionResult(currencyIn, currencyOut, randomCurrencyAmount, rate, order))
 						})
 					})
-				})
-			})
-		})
-	})
-
-	describe("Weather forecast", () => {
-
-		describe("When user opens homepage", () => {
-
-			let forecast
-
-			beforeEach(done => {
-				api.getWeather().then(res => {
-					forecast = JSON.parse(res)
-					done()
-				})
-			})
-
-			it("Then they should be able to see current temperature in user's default city", () => {
-				expect(HomePage.currentTemperature.getText()).toBe(`${forecast.now.temperature}°`)
-			})
-
-			describe("And opens weather forecast page", () => {
-
-				const userCity = _.sample(_.without(cities, { name: "Минск" }))
-				let userCityForecast
-
-				beforeEach(done => {
-					api.getWeather(userCity.id).then(res => {
-						userCityForecast = JSON.parse(res)
-						done()
-					})
-				})
-
-				it("Then they should be able to see current weather and 5-days forecast", () => {
-					HomePage.openWeatherForecastPage()
-					WeatherForecastPage.openCitiesOptionsDropdown()
-					WeatherForecastPage.changeCity(userCity.id)
-					WeatherForecastPage.waitForCityChangedTo(userCityForecast.city)
-					expect(WeatherForecastPage.currentTemperature.getText()).toMatch(/(^–\d+)|(\d+)/)
-					expect(WeatherForecastPage.generalWeatherState.getText()).toContain(userCityForecast.now.phenomena)
-					WeatherForecastPage.scrollElementIntoView(WeatherForecastPage.nextDaysBlock)
-					WeatherForecastPage.getNextDateDaytimeTemperatureRanges(_.values(userCityForecast.forecast)).then(el => el.length)
 				})
 			})
 		})
