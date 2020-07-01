@@ -2,7 +2,7 @@
 2. Add airbnb eslint config
 DONE --- 3. Remove service code from tests
 DONE --- 4. Unwrap 'describe' blocks nesting
-5. Get rid of multiple assertions
+DONE --- 5. Get rid of multiple assertions
 DONE --- 6. Make tests granular
 7. Get rid of hard-coded data
 DONE --- 8. Follow the only assertion style => expect
