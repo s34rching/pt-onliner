@@ -57,7 +57,7 @@ describe("Onliner.by - Catalog / Products List", () => {
 		ProductsList.waitForProperTotalOfFoundProducts(allCPUs.total.toString())
 	})
 
-	it("User should be able to add products to comparison", () => {
+	it("User should be able to add products to comparison", done => {
 		api.getProducts("cpu").then(res => {
 			const allCPUs = JSON.parse(res)
 
@@ -71,6 +71,7 @@ describe("Onliner.by - Catalog / Products List", () => {
 			ProductsList.waitForUrlContains(`/compare/${firstProductShortName}+${secondProductShortName}`)
 			expect(ProductsList.productComparisonName(firstProduct.full_name).isDisplayed()).toBe(true)
 			expect(ProductsList.productComparisonName(secondProduct.full_name).isDisplayed()).toBe(true)
+			done()
 		})
 	})
 
