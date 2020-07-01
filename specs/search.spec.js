@@ -74,7 +74,7 @@ describe("Onliner.by - Products / Search", () => {
 		HomePage.performSearch(offSaleProduct.query)
 		SearchIframe.switchToSearchIframe()
 		SearchIframe.waitForProductAreLoadedOnModal()
-		expect(SearchIframe.productPrice(offSaleProduct.catalogTitle).getText()).toBe(outOfStockProduct.label)
+		expect(SearchIframe.productPrice(offSaleProduct.catalogTitle).getText()).toBe(offSaleProduct.label)
 	})
 
 	it("There should NOT be search results if user searches for non-existent product", () => {
