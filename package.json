@@ -7,7 +7,8 @@
     "navigation": "protractor conf.js --suite navigation",
     "products-list": "protractor conf.js --suite products-list",
     "used": "protractor conf.js --suite used",
-    "top-informers": "protractor conf.js --suite top-informers",
+    "informers:currency": "protractor conf.js --suite currency",
+    "informers:weather": "protractor conf.js --suite weather",
     "lint-staged": "npx lint-staged"
   },
   "repository": {

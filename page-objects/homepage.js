@@ -14,6 +14,7 @@ class HomePage extends BasePage {
 		this.cataloqueLink.click()
 	}
 	openCurrencyExchangeRatesPage() {
+		this.scrollElementIntoView(this.topNavBar)
 		this.isClickable(this.currencyInformer)
 		this.currencyInformer.click()
 	}

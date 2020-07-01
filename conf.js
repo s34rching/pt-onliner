@@ -14,7 +14,8 @@ exports.config = {
 		"navigation": "specs/catalog-navigation.spec.js",
 		"products-list": "specs/catalog-products-list.spec.js",
 		"used": "specs/catalog-products-list-used.spec.js",
-		"top-informers": "specs/top-nav-informers.spec.js"
+		"currency": "specs/top-nav-informers-currency-exchange.spec.js",
+		"weather": "specs/top-nav-informers-weather.spec.js"
 	},
 	capabilities: {
 		browserName: "chrome",
