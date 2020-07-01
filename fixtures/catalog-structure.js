@@ -1895,7 +1895,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Кабели, адаптеры IEC 60320",
 							path: "/cable?conn1%5B0%5D=c5&conn1%5Boperation%5D=intersect",
 							isUnique: true,
-							appearsInSearch: true,
+							appearsInSearch: false,
 							position: 0
 						},
 						upsBatteries: {
