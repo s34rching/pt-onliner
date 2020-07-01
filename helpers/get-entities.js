@@ -8,14 +8,14 @@ exports.getRandomClassifierItem = function() {
 
 exports.getRandomUniqueCategory = function(classifierItem) {
 	const uniqueCategoriesContainingUniqueSubCategories = _.filter(_.values(classifierItem.categories),
-		{ isUnique: true, containsUnique: true }
-	)
+		{ isUnique: true, containsUnique: true })
 
 	return _.sample(uniqueCategoriesContainingUniqueSubCategories)
 }
 
 exports.getRandomUniqueSubcategory = function(categoryItem) {
-	const uniqueSubcategories = _.filter(_.values(categoryItem.subCategories), { isUnique: true })
+	const uniqueSubcategories = _.filter(_.values(categoryItem.subCategories),
+		{ isUnique: true, appearsInSearch: true })
 
 	return _.sample(uniqueSubcategories)
 }

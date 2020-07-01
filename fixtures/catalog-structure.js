@@ -73,6 +73,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Мобильные телефоны",
 							path: "/mobile",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						},
 						headphones: {
@@ -80,6 +81,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Наушники и гарнитуры",
 							path: "/headphones",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						},
 						smartWatch: {
@@ -87,6 +89,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Умные часы и браслеты",
 							path: "/smartwatch?sw_type%5B0%5D=smartphonewatch&sw_type%5B1%5D=watch&sw_type%5B2%5D=fitwatch&sw_type%5B3%5D=hybridsmartwatch&sw_type%5Boperation%5D=union",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						},
 						fitnessBracelets: {
@@ -94,6 +97,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Фитнес-браслеты",
 							path: "/smartwatch?sw_type%5B0%5D=bracelet&sw_type%5Boperation%5D=union",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						},
 						portableChargers: {
@@ -101,6 +105,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Портативные зарядные устройства",
 							path: "/portablecharger",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						},
 						memoryCards: {
@@ -108,6 +113,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Карты памяти",
 							path: "/memcards?typememcards%5B0%5D=microsd&typememcards%5B1%5D=microsdxc&typememcards%5B2%5D=microsdhc&typememcards%5Boperation%5D=union",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 1
 						},
 						phoneCases: {
@@ -115,6 +121,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Чехлы для телефонов",
 							path: "/phonecase",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						phoneAccumulators: {
@@ -122,6 +129,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Аккумуляторы для телефонов",
 							path: "/phoneaccum",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						bluetoothHeadsets: {
@@ -129,6 +137,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Bluetooth-гарнитуры",
 							path: "/bt",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						selfieSticks: {
@@ -136,6 +145,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Палки для селфи",
 							path: "/selfiestick",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						cablesAndAdapters: {
@@ -143,6 +153,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Кабели, адаптеры, разветвители",
 							path: "/cable?cable_usage%5B0%5D=phone&cable_usage%5Boperation%5D=union",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						},
 						carHolders: {
@@ -150,6 +161,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Автомобильные держатели",
 							path: "/carholder",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						},
 						carChargers: {
@@ -157,6 +169,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Зарядные устройства",
 							path: "/chargersmobile?mc_devicetype%5B0%5D=type&mc_devicetype%5Boperation%5D=union&mc_type%5B0%5D=network&mc_type%5Boperation%5D=union",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						wirelessChargers: {
@@ -164,6 +177,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Зарядные устройства",
 							path: "/chargersmobile?mc_type%5B0%5D=wireless&mc_type%5Boperation%5D=union",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						speakerDocks: {
@@ -171,6 +185,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Док-станции для смартфонов",
 							path: "/speakerdock",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						}
 					}
@@ -185,6 +200,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Телевизоры",
 							path: "/tv",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						terrestrials: {
@@ -192,6 +208,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Приемники цифрового ТВ",
 							path: "/terrestrial",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						satellites: {
@@ -199,6 +216,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Спутниковые ресиверы",
 							path: "/satellite",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						aerials: {
@@ -206,6 +224,7 @@ module.exports = {
 							subcategoryPageRuHeading: "ТВ-антенны",
 							path: "/aerial",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						projectors: {
@@ -213,6 +232,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Проекторы",
 							path: "/projectors",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						wallmounts: {
@@ -220,6 +240,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Кронштейны",
 							path: "/wallmount",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						mediaPlayers: {
@@ -227,6 +248,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Медиаплееры",
 							path: "/media",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						dvdPlayers: {
@@ -234,6 +256,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Плееры DVD и Blu-ray",
 							path: "/dvd",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						microPCs: {
@@ -241,6 +264,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Микро-ПК",
 							path: "/desktoppc?desktoppc_type%5B0%5D=micro&desktoppc_type%5Boperation%5D=union",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						soundBars: {
@@ -248,6 +272,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Саундбары и домашние кинотеатры",
 							path: "/soundbar",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						},
 						tvAccessories: {
@@ -255,6 +280,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Аксессуары для ТВ",
 							path: "/tvaccessory",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						smartTvKeyboards: {
@@ -262,6 +288,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Клавиатуры",
 							path: "/keyboards?mk_designation%5B0%5D=smarttv&mk_designation%5Boperation%5D=union",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						avCables: {
@@ -269,6 +296,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Кабели, адаптеры, разветвители",
 							path: "/cable?cable_usage%5B0%5D=av&cable_usage%5Boperation%5D=union",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						remoteControls: {
@@ -276,6 +304,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Универсальные пульты ДУ",
 							path: "/remote",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						},
 						projectorScreens: {
@@ -283,6 +312,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Проекционные экраны",
 							path: "/projectorscreen",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						}
 					}
@@ -297,6 +327,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Планшеты",
 							path: "/tabletpc",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						},
 						ebooks: {
@@ -304,6 +335,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Электронные книги",
 							path: "/ebook",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						tabletCases: {
@@ -311,6 +343,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Чехлы для планшетов",
 							path: "/tabletcase",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						portableChargers: {
@@ -318,6 +351,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Портативные зарядные устройства",
 							path: "/portablecharger",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 1
 						},
 						memoryCards: {
@@ -325,6 +359,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Карты памяти",
 							path: "/memcards?typememcards%5B0%5D=microsd&typememcards%5B1%5D=microsdxc&typememcards%5B2%5D=microsdhc&typememcards%5Boperation%5D=union",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						},
 						cablesAndAdapters: {
@@ -332,6 +367,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Кабели для телефонов и планшетов",
 							path: "/cable?cable_usage%5B0%5D=phone&cable_usage%5Boperation%5D=union",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 1
 						},
 						chargers: {
@@ -339,6 +375,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Зарядные устройства",
 							path: "/chargersmobile?mc_devicetype%5B0%5D=type3&mc_devicetype%5Boperation%5D=union",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						wireless4gAnd3gModems: {
@@ -346,6 +383,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Беспроводные адаптеры",
 							path: "/wirelessadapter?wa_type%5B0%5D=4g&wa_type%5B1%5D=3g&wa_type%5Boperation%5D=union",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						},
 						ebookCovers: {
@@ -353,6 +391,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Обложки для электронных книг",
 							path: "/ebookcover",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						}
 					}
@@ -367,6 +406,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Наушники и гарнитуры",
 							path: "/headphones",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 1
 						},
 						portableHeadphonesAmplifiers: {
@@ -374,6 +414,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Усилители для наушников",
 							path: "/portableamp?dac_type1%5B0%5D=type1&dac_type1%5Boperation%5D=union",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						mp3players: {
@@ -381,6 +422,7 @@ module.exports = {
 							subcategoryPageRuHeading: "MP3-плееры",
 							path: "/player",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						bluetoothSpeakers: {
@@ -388,6 +430,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Беспроводные и портативные колонки",
 							path: "/wspeaker?ws_type%5B0%5D=portable&ws_type%5Boperation%5D=union",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						wiFiAndMultiroomAcoustics: {
@@ -395,6 +438,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Беспроводные и портативные колонки",
 							path: "/wspeaker?ws_type%5B0%5D=multiroom&ws_type%5Boperation%5D=union&ws_sync%5B0%5D=wireless&ws_sync%5Boperation%5D=union",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						smartSpeakers: {
@@ -402,6 +446,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Беспроводные и портативные колонки",
 							path: "/wspeaker?wspeaker_voas%5B0%5D=siri&wspeaker_voas%5B1%5D=googleassistant&wspeaker_voas%5B2%5D=alexa&wspeaker_voas%5B3%5D=alisa&wspeaker_voas%5Boperation%5D=union",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						microphones: {
@@ -409,6 +454,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Микрофоны",
 							path: "/microphones",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						},
 						multimediaAcoustics: {
@@ -416,6 +462,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Мультимедиа акустика",
 							path: "/sound",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						},
 						soundBars: {
@@ -423,6 +470,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Саундбары и домашние кинотеатры",
 							path: "/soundbar",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 1
 						},
 						radio: {
@@ -430,6 +478,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Радиоприемники",
 							path: "/radio",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						},
 						partyBoxes: {
@@ -437,6 +486,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Музыкальные центры, колонки для вечеринок (Partybox)",
 							path: "/hifiaudio?hifi_type%5B0%5D=partybox&hifi_type%5Boperation%5D=union",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						hifiaudio: {
@@ -444,6 +494,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Музыкальные центры",
 							path: "/hifiaudio",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						clockRadios: {
@@ -451,6 +502,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Электронные и радиочасы",
 							path: "/clockradio",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						boomboxesAndRadioTapeRecorders: {
@@ -458,6 +510,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Магнитолы",
 							path: "/portaudio",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						voiceRecorders: {
@@ -465,6 +518,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Диктофоны",
 							path: "/voicerecorder",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						btAudioReceivers: {
@@ -472,6 +526,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Усилители для наушников",
 							path: "/portableamp?dac_type1%5B0%5D=btreciever&dac_type1%5Boperation%5D=union",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						audioCables: {
@@ -479,6 +534,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Кабели, адаптеры, разветвители",
 							path: "/cable?cable_usage%5B0%5D=av&cable_usage%5Boperation%5D=union&cable_type%5B0%5D=cable&cable_type%5Boperation%5D=union&cable_func%5B0%5D=type3&cable_func%5Boperation%5D=union",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 					}
@@ -493,6 +549,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Плееры",
 							path: "/player?player_type%5B0%5D=hifiplayer&player_type%5Boperation%5D=union",
 							isUnique: true,
+							appearsInSearch: false,
 							position: 0
 						},
 						audiophileHeadphones: {
@@ -500,6 +557,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Наушники для аудиофилов",
 							path: "/headphones?hp_destination%5B0%5D=hiend&hp_destination%5Boperation%5D=union",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						headphoneAmplifiers: {
@@ -507,6 +565,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Усилители для наушников",
 							path: "/portableamp?dac_type1%5B0%5D=desktopamp&dac_type1%5Boperation%5D=union",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						hiFiSpeakers: {
@@ -514,6 +573,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Hi-Fi акустика",
 							path: "/hifisound",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						avReceiversAndProcessors: {
@@ -521,6 +581,7 @@ module.exports = {
 							subcategoryPageRuHeading: "AV-ресиверы и усилители",
 							path: "/recievers?type_reciever%5B0%5D=avprocessor&type_reciever%5B1%5D=avreciever&type_reciever%5Boperation%5D=union",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						amplifiersAndPreamps: {
@@ -528,6 +589,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Усилители, предусилители и стереоресиверы",
 							path: "/recievers?type_reciever%5B0%5D=amplifier_int&type_reciever%5B1%5D=preamp&type_reciever%5B2%5D=stereoreciever&type_reciever%5B3%5D=poweramplifier&type_reciever%5Boperation%5D=union",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						tubeAmplifiers: {
@@ -535,6 +597,7 @@ module.exports = {
 							subcategoryPageRuHeading: "AV-ресиверы и усилители",
 							path: "/recievers?amp_lamp=1",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						cdPlayers: {
@@ -542,6 +605,7 @@ module.exports = {
 							subcategoryPageRuHeading: "CD-проигрыватели",
 							path: "/cd_player",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						networkPlayers: {
@@ -549,6 +613,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Сетевые проигрыватели",
 							path: "/network_player",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 
@@ -557,6 +622,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Виниловые проигрыватели",
 							path: "/turntable",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						phonoStage: {
@@ -564,6 +630,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Фонокорректоры",
 							path: "/phonopreamps",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						soundRecordersAndTonarms: {
@@ -571,6 +638,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Звукосниматели, тонармы, иглы",
 							path: "/turntableaccess",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						speakerCables: {
@@ -578,6 +646,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Кабели, адаптеры, разветвители",
 							path: "/cable?cable_usage%5B0%5D=av&cable_usage%5Boperation%5D=union&cable_func%5B0%5D=type3&cable_func%5Boperation%5D=union&conn1%5B0%5D=acoustic&conn1%5Boperation%5D=intersect",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						}
 					}
@@ -592,6 +661,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Фотоаппараты",
 							path: "/photo",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						lenses: {
@@ -599,12 +669,14 @@ module.exports = {
 							subcategoryPageRuHeading: "Объективы",
 							path: "/lens",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						actionCameras: {
 							ruName: "Экшен-камеры",
 							subcategoryPageRuHeading: "Экшен-камеры",
 							path: "/actioncamera",
+							appearsInSearch: true,
 							isUnique: false,
 							position: 0
 						},
@@ -612,6 +684,7 @@ module.exports = {
 							ruName: "Аксессуары и крепления для экшен-камер",
 							subcategoryPageRuHeading: "Аксессуары и крепления для экшен-камер",
 							path: "/actioncamera_acs",
+							appearsInSearch: true,
 							isUnique: false,
 							position: 0
 						},
@@ -620,6 +693,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Видеокамеры",
 							path: "/video",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						photoPrinters: {
@@ -627,6 +701,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Фотопринтеры",
 							path: "/printers?type_print[0]=photoprinter&type_print[operation]=union",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						tripods: {
@@ -634,6 +709,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Штативы",
 							path: "/tripod",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						memoryCards: {
@@ -641,6 +717,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Карты памяти",
 							path: "/memcards",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						},
 						photoFrames: {
@@ -648,6 +725,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Цифровые фоторамки",
 							path: "/photoframe",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						flashes: {
@@ -655,6 +733,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Вспышки и лампы",
 							path: "/flashes",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						batteriesAccumulatorsChargers: {
@@ -662,6 +741,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Батарейки, аккумуляторы, зарядные",
 							path: "/battery",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						cases: {
@@ -669,6 +749,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Сумки для фото/видеотехники",
 							path: "/case",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						cardReaders: {
@@ -676,6 +757,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Карт-ридеры",
 							path: "/cardreaders",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						},
 						batteries: {
@@ -683,6 +765,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Аккумуляторы, ЗУ для фото/видеотехники",
 							path: "/batteries",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						photoFilters: {
@@ -690,6 +773,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Светофильтры и конвертеры",
 							path: "/photofilter",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						}
 					}
@@ -704,6 +788,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Игровые приставки",
 							path: "/console",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						consoleGames: {
@@ -711,6 +796,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Игры для приставок",
 							path: "/games",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						},
 						pcGames: {
@@ -718,6 +804,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Игры для ПК",
 							path: "/pcgames",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						},
 						virtualReality: {
@@ -725,6 +812,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Очки виртуальной реальности",
 							path: "/virtualreality",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						},
 						controllersAndAccessories: {
@@ -732,6 +820,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Игровые контроллеры и аксессуары",
 							path: "/controllers",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						},
 						paymentCards: {
@@ -739,6 +828,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Карты оплаты и подписки",
 							path: "/paymentcard",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						}
 					}
@@ -753,6 +843,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Умные часы и браслеты",
 							path: "/smartwatch?sw_type%5B0%5D=smartphonewatch&sw_type%5B1%5D=watch&sw_type%5B2%5D=fitwatch&sw_type%5B3%5D=hybridsmartwatch&sw_type%5Boperation%5D=union",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 1
 						},
 						fitnessBracelets: {
@@ -760,6 +851,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Фитнес-браслеты",
 							path: "/smartwatch?sw_type%5B0%5D=bracelet&sw_type%5Boperation%5D=union",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 1
 						},
 						heartRateMonitorsAndPulseOximeters: {
@@ -767,6 +859,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Пульсометры, пульсоксиметры",
 							path: "/heart_rate",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						},
 						strapsAndBracelets: {
@@ -774,6 +867,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Сменные ремешки и браслеты",
 							path: "/replacementstrap",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						virtualReality: {
@@ -781,6 +875,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Очки виртуальной реальности",
 							path: "/virtualreality",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 1
 						},
 						smartScales: {
@@ -788,6 +883,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Умные весы",
 							path: "/scales?sc_synchronize=1",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						nitratomersDosimeters: {
@@ -795,6 +891,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Нитратомеры, дозиметры, экотестеры",
 							path: "/nitrate",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						},
 						electronicSteamGenerators: {
@@ -802,6 +899,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Электронные парогенераторы",
 							path: "/smoke",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						}
 					}
@@ -816,6 +914,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Умный дом",
 							path: "/smart_home",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						},
 						smartThermostats: {
@@ -823,6 +922,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Терморегуляторы",
 							path: "/thermostat?smarthome=1",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						},
 						smartLightBulbs: {
@@ -830,6 +930,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Лампочки",
 							path: "/lightbulb?lib_smartlight=1",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						},
 						smartSockets: {
@@ -837,6 +938,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Розетки, выключатели",
 							path: "/smart_home?smh_type%5B0%5D=socket&smh_type%5Boperation%5D=union",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						},
 						ipCameras: {
@@ -844,6 +946,7 @@ module.exports = {
 							subcategoryPageRuHeading: "IP-камеры",
 							path: "/ipcamera",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						},
 						videoDoorPhones: {
@@ -851,6 +954,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Видеодомофоны",
 							path: "/videodoorphone",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						},
 						cctvCameras: {
@@ -858,6 +962,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Камеры CCTV",
 							path: "/cctvcamera",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						},
 						DVRs: {
@@ -865,6 +970,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Видеорегистраторы наблюдения",
 							path: "/dvr",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						},
 						cameraTraps: {
@@ -872,6 +978,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Фотоловушки",
 							path: "/camera_traps",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						}
 					}
@@ -886,6 +993,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Электросамокаты и электроскутеры",
 							path: "/electric_scooter",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						},
 						segways: {
@@ -893,6 +1001,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Гироциклы",
 							path: "/segway",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						},
 						electrobikes: {
@@ -900,6 +1009,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Электровелосипеды",
 							path: "/electrobike",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						}
 					}
@@ -914,6 +1024,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Мобильные телефоны",
 							path: "/mobile",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 1
 						},
 						dectPhones: {
@@ -921,6 +1032,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Радиотелефоны DECT",
 							path: "/dect",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						phones: {
@@ -928,6 +1040,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Проводные телефоны",
 							path: "/phone",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						ipPhones: {
@@ -935,6 +1048,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Проводные телефоны",
 							path: "/phone?phone_connect%5B0%5D=2&phone_connect%5Boperation%5D=union",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						wirelessIpPhones: {
@@ -942,6 +1056,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Радиотелефоны DECT",
 							path: "/dect?phone_connect%5B0%5D=2&phone_connect%5Boperation%5D=union",
 							isUnique: true,
+							appearsInSearch: false,
 							position: 0
 						},
 						wireless3gModems: {
@@ -949,6 +1064,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Беспроводные адаптеры",
 							path: "/wirelessadapter?wa_type%5B0%5D=3g&wa_type%5B1%5D=4g&wa_type%5Boperation%5D=union",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						faxes: {
@@ -956,6 +1072,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Факсы",
 							path: "/fax",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						},
 
@@ -964,6 +1081,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Портативные радиостанции",
 							path: "/portableradio",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						}
 					}
@@ -978,6 +1096,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Синтезаторы и рабочие станции",
 							path: "/synthandworkst",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						audioInterfaces: {
@@ -985,6 +1104,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Аудиоинтерфейсы",
 							path: "/audiointerface",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						},
 						concertAcoustics: {
@@ -992,6 +1112,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Концертная акустика",
 							path: "/concertacoustics",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						studioMonitors: {
@@ -999,6 +1120,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Студийные мониторы",
 							path: "/studio_monitor",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						guitarAmps: {
@@ -1006,6 +1128,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Гитарные комбоусилители",
 							path: "/guitarcombo",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						microphones: {
@@ -1013,6 +1136,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Микрофоны",
 							path: "/microphones",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 1
 						},
 						guitars: {
@@ -1020,6 +1144,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Гитары",
 							path: "/guitar",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 1
 						}
 					}
@@ -1034,6 +1159,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Бинокли и подзорные трубы",
 							path: "/optic",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						},
 						telescopes: {
@@ -1041,6 +1167,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Телескопы",
 							path: "/telescope",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						}
 					}
@@ -1088,6 +1215,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Ноутбуки",
 							path: "/notebook",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						tablets: {
@@ -1095,12 +1223,14 @@ module.exports = {
 							subcategoryPageRuHeading: "Планшеты",
 							path: "/tabletpc",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 1
 						},
 						monoblockPcs: {
 							ruName: "Моноблоки",
 							subcategoryPageRuHeading: "Моноблоки",
 							path: "/monoblock",
+							appearsInSearch: true,
 							isUnique: true,
 							position: 0
 						},
@@ -1109,6 +1239,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Компьютеры",
 							path: "/desktoppc",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						monitors: {
@@ -1116,6 +1247,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Мониторы",
 							path: "/display",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						}
 					}
@@ -1130,6 +1262,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Видеокарты",
 							path: "/videocard",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						CPU: {
@@ -1137,6 +1270,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Процессоры",
 							path: "/cpu",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						motherboards: {
@@ -1144,6 +1278,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Материнские платы",
 							path: "/motherboard",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						RAM: {
@@ -1151,6 +1286,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Оперативная память",
 							path: "/dram",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						fans: {
@@ -1158,6 +1294,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Системы охлаждения",
 							path: "/fan",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						SSD: {
@@ -1165,6 +1302,7 @@ module.exports = {
 							subcategoryPageRuHeading: "SSD",
 							path: "/ssd",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						},
 						HDD: {
@@ -1172,6 +1310,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Жесткие диски",
 							path: "/hdd",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						},
 						computerCases: {
@@ -1179,6 +1318,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Корпуса",
 							path: "/chassis",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						powerSupplies: {
@@ -1186,6 +1326,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Блоки питания",
 							path: "/powersupply",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						soundCards: {
@@ -1193,6 +1334,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Звуковые карты",
 							path: "/soundcard?type_soundcard%5B0%5D=internal&type_soundcard%5Boperation%5D=union",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						networkAdapters: {
@@ -1200,6 +1342,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Сетевые адаптеры",
 							path: "/networkadapter",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						},
 						opticalDrives: {
@@ -1207,6 +1350,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Оптические приводы",
 							path: "/optical",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						},
 						tvTuners: {
@@ -1214,6 +1358,7 @@ module.exports = {
 							subcategoryPageRuHeading: "ТВ-тюнеры",
 							path: "/tvtuner?execution_tvtune%5B0%5D=in&execution_tvtune%5Boperation%5D=union",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						}
 					}
@@ -1228,6 +1373,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Принтеры и МФУ",
 							path: "/printers",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						},
 						scanners: {
@@ -1235,6 +1381,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Сканеры",
 							path: "/scanner",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						},
 						accessoriesForOfficeEquipment: {
@@ -1242,6 +1389,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Аксессуары для оргтехники",
 							path: "/officeequip_acs",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						graphicTablets: {
@@ -1249,6 +1397,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Графические планшеты",
 							path: "/tablets",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						},
 						cartridges: {
@@ -1256,6 +1405,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Картриджи для принтеров и МФУ",
 							path: "/cartridges",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						},
 						photoPaper: {
@@ -1263,6 +1413,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Бумага и материалы для печати",
 							path: "/photopaper",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						},
 						laminators: {
@@ -1270,6 +1421,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Ламинаторы",
 							path: "/laminator",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						},
 						bookletMakers: {
@@ -1277,6 +1429,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Брошюровщики",
 							path: "/bindingmachines",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						},
 						matrixPrinters: {
@@ -1284,6 +1437,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Матричные принтеры",
 							path: "/matrixprinter",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						},
 						printers3d: {
@@ -1291,6 +1445,7 @@ module.exports = {
 							subcategoryPageRuHeading: "3D-принтеры",
 							path: "/3dprinter",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						},
 						pens3d: {
@@ -1298,6 +1453,7 @@ module.exports = {
 							subcategoryPageRuHeading: "3D-ручки",
 							path: "/3d_pen",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						},
 						suppliesFor3dPrinting: {
@@ -1305,6 +1461,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Расходные материалы для 3D-печати",
 							path: "/3d_filament",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						}
 					}
@@ -1319,6 +1476,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Мыши",
 							path: "/mouse",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						keyboards: {
@@ -1326,6 +1484,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Клавиатуры",
 							path: "/keyboards",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						controllers: {
@@ -1333,6 +1492,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Игровые контроллеры и аксессуары",
 							path: "/controllers",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 1
 						},
 						graphicTablets: {
@@ -1340,6 +1500,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Графические планшеты",
 							path: "/tablets",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 1
 						},
 						peripheralKits: {
@@ -1347,6 +1508,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Наборы периферии",
 							path: "/peripheralkits",
 							isUnique: false,
+							appearsInSearch: false,
 							position: 0
 						},
 						mousePads: {
@@ -1354,6 +1516,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Коврики для мыши",
 							path: "/mousepad",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						}
 					}
@@ -1368,6 +1531,7 @@ module.exports = {
 							subcategoryPageRuHeading: "SSD",
 							path: "/ssd",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 1
 						},
 						HDD: {
@@ -1375,6 +1539,7 @@ module.exports = {
 							subcategoryPageRuHeading: "HDD",
 							path: "/hdd",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						},
 						externalHdd: {
@@ -1382,6 +1547,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Внешние накопители",
 							path: "/externalhdd",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						usbFlash: {
@@ -1389,6 +1555,7 @@ module.exports = {
 							subcategoryPageRuHeading: "USB Flash",
 							path: "/usbflash",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						memoryCards: {
@@ -1396,6 +1563,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Карты памяти",
 							path: "/memcards",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 1
 						},
 						casesForHdd: {
@@ -1403,6 +1571,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Боксы для накопителей",
 							path: "/hddbox",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						NAS: {
@@ -1410,6 +1579,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Сетевые накопители (NAS)",
 							path: "/nas",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						},
 						opticalDrives: {
@@ -1417,6 +1587,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Оптические приводы",
 							path: "/optical",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 1
 						},
 						usbHubs: {
@@ -1424,6 +1595,7 @@ module.exports = {
 							subcategoryPageRuHeading: "USB-хабы и док-станции",
 							path: "/usbhub",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						cardReaders: {
@@ -1431,6 +1603,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Карт-ридеры",
 							path: "/cardreaders",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 1
 						}
 					}
@@ -1445,6 +1618,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Мультимедиа акустика",
 							path: "/sound",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 1
 						},
 						headphones: {
@@ -1452,6 +1626,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Наушники и гарнитуры",
 							path: "/headphones",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 2
 						},
 						webCameras: {
@@ -1459,6 +1634,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Web-камеры",
 							path: "/webcams",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						ipCameras: {
@@ -1466,6 +1642,7 @@ module.exports = {
 							subcategoryPageRuHeading: "IP-камеры",
 							path: "/ipcamera",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 1
 						},
 						audioInterfaces: {
@@ -1473,6 +1650,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Аудиоинтерфейсы",
 							path: "/audiointerface",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 1
 						}
 					}
@@ -1487,6 +1665,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Беспроводные маршрутизаторы",
 							path: "/wrouter",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						routersFor4g: {
@@ -1494,6 +1673,7 @@ module.exports = {
 							subcategoryPageRuHeading: "4G маршрутизаторы",
 							path: "/wrouter?wrouter_type%5B0%5D=ltewifirouter&wrouter_type%5B1%5D=portable&wrouter_type%5Boperation%5D=union",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						modemsFor4GwWiFi: {
@@ -1501,6 +1681,7 @@ module.exports = {
 							subcategoryPageRuHeading: "4G модемы с Wi-Fi",
 							path: "/wrouter?wrouter_type%5B0%5D=usbmodem&wrouter_type%5Boperation%5D=union",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						wirelessAccessPoints: {
@@ -1508,6 +1689,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Беспроводные точки доступа",
 							path: "/wirelessap?wap_type%5B0%5D=wirelessap&wap_type%5Boperation%5D=union",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						wiFiAmplifiers: {
@@ -1515,6 +1697,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Усилители Wi-Fi",
 							path: "/wirelessap?wap_type%5B0%5D=repeater&wap_type%5Boperation%5D=union",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						modemsFor3gAnd4G: {
@@ -1522,6 +1705,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Беспроводные адаптеры",
 							path: "/wirelessadapter?wa_type%5B0%5D=4g&wa_type%5B1%5D=3g&wa_type%5Boperation%5D=union",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 1
 						},
 						wirelessAdapters: {
@@ -1529,6 +1713,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Беспроводные адаптеры",
 							path: "/wirelessadapter?wa_type%5B0%5D=wifibluetooth&wa_type%5B1%5D=bluetooth&wa_type%5B2%5D=wifi&wa_type%5Boperation%5D=union",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						networkAdapters: {
@@ -1536,6 +1721,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Сетевые адаптеры",
 							path: "/networkadapter",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 1
 						},
 						switches: {
@@ -1543,6 +1729,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Коммутаторы",
 							path: "/switch",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						dslModemsAndRouters: {
@@ -1550,6 +1737,7 @@ module.exports = {
 							subcategoryPageRuHeading: "DSL-модемы и маршрутизаторы",
 							path: "/dslmodem",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						NAS: {
@@ -1557,6 +1745,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Сетевые накопители (NAS)",
 							path: "/nas",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 1
 						},
 						ipCameras: {
@@ -1564,6 +1753,7 @@ module.exports = {
 							subcategoryPageRuHeading: "IP-камеры",
 							path: "/ipcamera",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 2
 						},
 						networkCables: {
@@ -1571,6 +1761,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Кабели для сетевого оборудования",
 							path: "/cable?cable_usage%5B0%5D=type4&cable_usage%5Boperation%5D=union",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						cableCrimpingTools: {
@@ -1578,6 +1769,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Клещи обжимные",
 							path: "/household_tools?ht_type%5B0%5D=crimpingpliers&ht_type%5Boperation%5D=union&order=date:desc",
 							isUnique: true,
+							appearsInSearch: false,
 							position: 0
 						},
 						powerlines: {
@@ -1585,6 +1777,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Сети по электропроводке (Powerline)",
 							path: "/powerline",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						wirelessAntennas: {
@@ -1592,6 +1785,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Антенны беспроводной связи",
 							path: "/wantenna",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						}
 					}
@@ -1606,6 +1800,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Рюкзаки",
 							path: "/backpack?bap_internaldep%5B0%5D=laptoptablet&bap_internaldep%5Boperation%5D=union",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						laptopBags: {
@@ -1613,6 +1808,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Сумки для ноутбуков",
 							path: "/notebookcase",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						coolingCoasters: {
@@ -1620,6 +1816,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Подставки для ноутбуков",
 							path: "/laptopstand",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						cablesAdaptersSplitters: {
@@ -1627,6 +1824,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Кабели, адаптеры для компьютера",
 							path: "/cable?cable_usage%5B0%5D=pc&cable_usage%5Boperation%5D=union",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						mousepads: {
@@ -1634,6 +1832,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Коврики для мыши",
 							path: "/mousepad",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 1
 						},
 						accumulatorsAndChargers: {
@@ -1641,6 +1840,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Аккумуляторы, ЗУ для ноутбуков",
 							path: "/nbbatteries?mfr%5B0%5D=for_notebook&mfr%5B1%5D=for_notebook_cha",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						universalChargers: {
@@ -1648,6 +1848,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Зарядные устройства для ноутбуков",
 							path: "/chargersmobile?mc_devicetype%5B0%5D=type2&mc_devicetype%5Boperation%5D=union",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 0
 						}
 					}
@@ -1662,6 +1863,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Источники бесперебойного питания",
 							path: "/ups",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						stabilizersAndSurgeProtectors: {
@@ -1669,6 +1871,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Стабилизаторы и сетевые фильтры",
 							path: "/voltageregulator",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						laptopBatteries: {
@@ -1676,6 +1879,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Аккумуляторы, ЗУ для ноутбуков",
 							path: "/nbbatteries?mfr%5B0%5D=for_notebook",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						chargers: {
@@ -1683,6 +1887,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Зарядные устройства для ноутбуков",
 							path: "/chargersmobile?mc_devicetype%5B0%5D=type2&mc_devicetype%5Boperation%5D=union",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 1
 						},
 						cables: {
@@ -1690,6 +1895,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Кабели, адаптеры IEC 60320",
 							path: "/cable?conn1%5B0%5D=c5&conn1%5Boperation%5D=intersect",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						upsBatteries: {
@@ -1697,6 +1903,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Аккумуляторы для ИБП",
 							path: "/ups_battery",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						}
 					}
@@ -1711,6 +1918,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Игры для ПК",
 							path: "/pcgames",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 1
 						},
 						gamesForConsole: {
@@ -1718,6 +1926,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Игры для приставок",
 							path: "/games",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 1
 						},
 						antiviruses: {
@@ -1725,6 +1934,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Антивирусы и безопасность",
 							path: "/antivirus",
 							isUnique: true,
+							appearsInSearch: true,
 							position: 0
 						},
 						paymentCardsAndSubscriptions: {
@@ -1732,6 +1942,7 @@ module.exports = {
 							subcategoryPageRuHeading: "Карты оплаты и подписки",
 							path: "/paymentcard",
 							isUnique: false,
+							appearsInSearch: true,
 							position: 1
 						}
 					}
