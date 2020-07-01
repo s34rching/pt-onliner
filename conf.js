@@ -6,7 +6,8 @@ exports.config = {
 	framework: "jasmine",
 	specs: ["specs/**/*.js"],
 	jasmineNodeOpts: {
-		print: function() {}
+		print: function() {},
+		defaultTimeoutInterval: 100000
 	},
 	suites: {
 		"full": "specs/*.js",
