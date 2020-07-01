@@ -1,19 +1,20 @@
-const ProductsList = require("../page-objects/products-list")
-const ProductOffers = require("../page-objects/product-offers-page")
-const ProductDetailsPage = require("../page-objects/product-details-page")
-const LoginPage = require("../page-objects/login-page")
+let ProductsList = require("../page-objects/products-list")
+let ProductOffers = require("../page-objects/product-offers-page")
+let ProductDetailsPage = require("../page-objects/product-details-page")
 const api = require("../helpers/onliner-api")
 const _ = require("lodash")
 
 describe("Onliner.by - Catalog / Products List", () => {
 
-	let allCPUs
+	const numberOfProductsToCompare = 2
+	let allCPUs, CPUsFilteredByRating, intelCPUs, shopList
 
 	beforeAll(done => {
-		api.getProducts("cpu").then(res => {
-			allCPUs = JSON.parse(res)
-			done()
-		})
+		api.getProducts("cpu").then(res => allCPUs = JSON.parse(res))
+		api.getProducts("cpu?order=reviews_rating:desc").then(res => CPUsFilteredByRating = JSON.parse(res))
+		api.getProducts("cpu?mfr[0]=intel").then(res => intelCPUs = JSON.parse(res))
+		api.getOffers("products/i59400fb/positions?town=minsk").then(res => shopList = JSON.parse(res))
+		done()
 	})
 
 	beforeEach(() => {
@@ -22,186 +23,156 @@ describe("Onliner.by - Catalog / Products List", () => {
 		ProductsList.goTo("/cpu")
 	})
 
-	describe("When user opens subcategory products list", () => {
+	it("Products default sort order should be set as 'Popular'", () => {
+		expect(ProductsList.orderDropdownActiveOrderOption.getText()).toBe("популярные")
+	})
 
-		it("Then products default sort order is set as 'Popular'", () => {
-			expect(ProductsList.orderDropdownActiveOrderOption.getText()).toBe("популярные")
+	it("User should be able to sort out products by their reviews", () => {
+		const reviews = _.map(CPUsFilteredByRating.products, product => product.reviews.count)
+
+		ProductsList.openOrderListDropDown()
+		ProductsList.waitForOrderDropdownListIsVisible()
+		ProductsList.chooseOrderDropdownOptionByName("С отзывами")
+		ProductsList.waitForUrlContains("?order=reviews_rating:desc")
+		ProductsList.waitForActiveOrderOptionByName("С отзывами")
+		ProductsList.waitForProperTotalOfFoundProducts(CPUsFilteredByRating.total.toString())
+		ProductsList.productRewievs.each((review, index) => expect(review.getText()).toContain(reviews[index]))
+	})
+
+	it("User should be able to filter out products by manufacturer", () => {
+		ProductsList.scrollElementIntoView(ProductsList.filterByName("Производитель"))
+		ProductsList.filterProducts("Производитель", "Intel")
+		ProductsList.scrollElementIntoView(ProductsList.productsListTitle)
+		ProductsList.waitForUrlContains("cpu?mfr%5B0%5D=intel")
+		ProductsList.waitForSearchTagIsDisplayed("Intel")
+		ProductsList.waitForProperTotalOfFoundProducts(intelCPUs.total.toString())
+		ProductsList.productsTitles.each(title => expect(title.getText()).toContain("Intel"))
+	})
+
+	it("User should be able to reset applied filters", () => {
+		ProductsList.goTo("/cpu?mfr%5B0%5D=intel")
+		ProductsList.waitForSearchTagIsDisplayed("Intel")
+		ProductsList.waitForProperTotalOfFoundProducts(intelCPUs.total.toString())
+		ProductsList.resetFilters()
+		ProductsList.waitForProperTotalOfFoundProducts(allCPUs.total.toString())
+	})
+
+	it("User should be able to add products to comparison", done => {
+		api.getProducts("cpu").then(res => {
+			const allCPUs = JSON.parse(res)
+
+			const firstProduct = allCPUs.products[0]
+			const secondProduct = allCPUs.products[1]
+			const firstProductShortName = firstProduct.url.match(/(?<=\/products\/).+$/)[0]
+			const secondProductShortName = secondProduct.url.match(/(?<=\/products\/).+$/)[0]
+
+			ProductsList.markProductsToCompare(numberOfProductsToCompare)
+			ProductsList.compareProducts(numberOfProductsToCompare)
+			ProductsList.waitForUrlContains(`/compare/${firstProductShortName}+${secondProductShortName}`)
+			expect(ProductsList.productComparisonName(firstProduct.full_name).isDisplayed()).toBe(true)
+			expect(ProductsList.productComparisonName(secondProduct.full_name).isDisplayed()).toBe(true)
+			done()
 		})
 	})
 
-	describe("When user orders out products by their reviews", () => {
+	it("User should be able to clean out comparison", () => {
+		const firstProduct = allCPUs.products[0]
+		const secondProduct = allCPUs.products[1]
+		const firstProductShortName = firstProduct.url.match(/(?<=\/products\/).+$/)[0]
+		const secondProductShortName = secondProduct.url.match(/(?<=\/products\/).+$/)[0]
 
-		let CPUsFilteredByRating, reviews
-
-		beforeEach(done => {
-			api.getProducts("cpu?order=reviews_rating:desc").then(res => {
-				CPUsFilteredByRating = JSON.parse(res)
-				reviews = _.map(CPUsFilteredByRating.products, product => product.reviews.count)
-				done()
-			})
-		})
-
-		it("then products in the list should be ordered by their reviews", () => {
-			ProductsList.openOrderListDropDown()
-			ProductsList.waitForOrderDropdownListIsVisible()
-			ProductsList.chooseOrderDropdownOptionByName("С отзывами")
-			ProductsList.waitForUrlContains("?order=reviews_rating:desc")
-			ProductsList.waitForActiveOrderOptionByName("С отзывами")
-			ProductsList.waitForProperTotalOfFoundProducts(CPUsFilteredByRating.total.toString())
-			ProductsList.productRewievs.each((review, index) => expect(review.getText()).toContain(reviews[index]))
-		})
+		ProductsList.goTo(`/compare/${firstProductShortName}+${secondProductShortName}`)
+		ProductsList.clearComparisonList()
+		expect(ProductsList.waitForUrlContains(browser.baseUrl)).toBe(true)
 	})
 
-	describe("When user filters out products by their manufacturer", () => {
+	it("User should be able to open shop offers list page", () => {
+		const [firstProduct] = allCPUs.products
 
-		let intelCPUs
-
-		beforeEach(done => {
-			api.getProducts("cpu?mfr[0]=intel").then(res => {
-				intelCPUs = JSON.parse(res)
-				done()
-			})
-		})
-
-		it("then products list should contain products of that manufacturer only", () => {
-			ProductsList.scrollElementIntoView(ProductsList.filterByName("Производитель"))
-			ProductsList.filterProducts("Производитель", "Intel")
-			ProductsList.scrollElementIntoView(ProductsList.productsListTitle)
-			ProductsList.waitForUrlContains("cpu?mfr%5B0%5D=intel")
-			ProductsList.waitForSearchTagIsDisplayed("Intel")
-			ProductsList.waitForProperTotalOfFoundProducts(intelCPUs.total.toString())
-			ProductsList.productsTitles.each(title => expect(title.getText()).toContain("Intel"))
-		})
+		ProductsList.openFirstProductOffersPage()
+		ProductsList.waitForUrlContains(firstProduct.html_url)
+		expect(ProductOffers.isVisible(ProductOffers.productPriceHeading)).toBe(true)
 	})
 
-	describe("When user filtered products out", () => {
+	it("Product name should be displayed on offers page", () => {
+		const [firstProduct] = allCPUs.products
 
-		describe("And resets applied filters back", () => {
-
-			let amdCPUs
-
-			beforeEach(done => {
-				api.getProducts("cpu?mfr[0]=amd").then(res => {
-					amdCPUs = JSON.parse(res)
-					done()
-				})
-			})
-
-			it("then products list should be restored to its initial state", () => {
-				ProductsList.waitForProperTotalOfFoundProducts(allCPUs.total.toString())
-				ProductsList.scrollElementIntoView(ProductsList.filterByName("Производитель"))
-				ProductsList.filterProducts("Производитель", "AMD")
-				ProductsList.scrollElementIntoView(ProductsList.productsListTitle)
-				ProductsList.waitForUrlContains("cpu?mfr%5B0%5D=amd")
-				ProductsList.waitForSearchTagIsDisplayed("AMD")
-				ProductsList.waitForProperTotalOfFoundProducts(amdCPUs.total.toString())
-				ProductsList.resetFilters()
-				ProductsList.waitForProperTotalOfFoundProducts(allCPUs.total.toString())
-			})
-		})
+		ProductsList.openFirstProductOffersPage()
+		ProductsList.waitForUrlContains(firstProduct.html_url)
+		ProductOffers.isVisible(ProductOffers.productPriceHeading)
+		expect(ProductDetailsPage.productNameHeading.getText()).toContain(firstProduct.name)
 	})
 
-	describe("When user adds product to compare their characteristics", () => {
+	it("Base order group should be displayed on offers page", () => {
+		const [firstProduct] = allCPUs.products
 
-		afterEach(() => {
-			ProductsList.clearComparisonList()
-		})
-
-		it("Then they should be able to open comparison page", done => {
-
-			api.getProducts("cpu").then(res => {
-				allCPUs = JSON.parse(res)
-
-				const numberOfProductsToCompare = 2
-				const firstProduct = allCPUs.products[0]
-				const secondProduct = allCPUs.products[1]
-				const firstProductShortName = firstProduct.url.match(/(?<=\/products\/).+$/)[0]
-				const secondProductShortName = secondProduct.url.match(/(?<=\/products\/).+$/)[0]
-
-				ProductsList.markProductsToCompare(numberOfProductsToCompare)
-				ProductsList.compareProducts(numberOfProductsToCompare)
-				ProductsList.waitForUrlContains(`/compare/${firstProductShortName}+${secondProductShortName}`)
-				expect(ProductsList.productComparisonName(firstProduct.full_name).isDisplayed()).toBe(true)
-				expect(ProductsList.productComparisonName(secondProduct.full_name).isDisplayed()).toBe(true)
-				done()
-			})
-		})
+		ProductsList.openFirstProductOffersPage()
+		ProductsList.waitForUrlContains(firstProduct.html_url)
+		ProductOffers.isVisible(ProductOffers.productPriceHeading)
+		ProductOffers.scrollElementIntoView(ProductOffers.productPriceHeading)
+		ProductOffers.skipPickCityModal()
+		expect(ProductOffers.productPricesOrderGroup.isDisplayed()).toBe(true)
 	})
 
-	describe("When user opens offers list page", () => {
+	it("Shop filters should be displayed on offers page", () => {
+		const [firstProduct] = allCPUs.products
 
-		let shopList
-
-		beforeEach(done => {
-			api.getOffers("products/i59400fb/positions?town=minsk").then(res => {
-				shopList = JSON.parse(res)
-				done()
-			})
-		})
-
-		it("Then they should be able to find complete shop info to purchase the chosen product", () => {
-
-			const [firstProduct] = allCPUs.products
-			const [firstShop] = shopList.positions.primary
-
-			ProductsList.openFirstProductOffersPage()
-			ProductsList.waitForUrlContains(firstProduct.html_url)
-			ProductOffers.isPresentInDom(ProductOffers.productPriceHeading)
-			ProductOffers.scrollElementIntoView(ProductOffers.productPriceHeading)
-			ProductOffers.skipPickCityModal()
-			expect(ProductOffers.waitForFirstShopLogoDisplayed(firstShop.shop_id)).toBe(true)
-			expect(ProductOffers.productPricesOrderGroup.isDisplayed()).toBe(true)
-			expect(ProductOffers.productPricesFilterGroup.isDisplayed()).toBe(true)
-			expect(ProductOffers.firstOfferProductPrice.isDisplayed()).toBe(true)
-			expect(ProductOffers.toCartButton.isDisplayed()).toBe(true)
-			expect(ProductOffers.shopContactsButton.isDisplayed()).toBe(true)
-			expect(ProductOffers.shopWorkingHours.getText()).toContain("Магазин сегодня работает с")
-		})
+		ProductsList.openFirstProductOffersPage()
+		ProductsList.waitForUrlContains(firstProduct.html_url)
+		ProductOffers.isVisible(ProductOffers.productPriceHeading)
+		ProductOffers.scrollElementIntoView(ProductOffers.productPriceHeading)
+		ProductOffers.skipPickCityModal()
+		expect(ProductOffers.productPricesFilterGroup.isDisplayed()).toBe(true)
 	})
 
-	describe("When user observes user's used offers", () => {
+	it("Shop logo should be displayed on offers page", () => {
+		const [firstProduct] = allCPUs.products
+		const [firstShop] = shopList.positions.primary
 
-		let usedCPUs
+		ProductsList.openFirstProductOffersPage()
+		ProductsList.waitForUrlContains(firstProduct.html_url)
+		ProductOffers.isVisible(ProductOffers.productPriceHeading)
+		ProductOffers.scrollElementIntoView(ProductOffers.productPriceHeading)
+		ProductOffers.skipPickCityModal()
+		expect(ProductOffers.waitForFirstShopLogoDisplayed(firstShop.shop_id)).toBe(true)
+	})
 
-		beforeEach(done => {
-			api.getProducts("cpu/second-offers?segment=second").then(res => {
-				usedCPUs = JSON.parse(res)
-				done()
-			})
-		})
+	it("Shop offer price should be displayed on offers page", () => {
+		const [firstProduct] = allCPUs.products
+		const [firstShop] = shopList.positions.primary
 
-		describe("And opens particular offer", () => {
+		ProductsList.openFirstProductOffersPage()
+		ProductsList.waitForUrlContains(firstProduct.html_url)
+		ProductOffers.isVisible(ProductOffers.productPriceHeading)
+		ProductOffers.scrollElementIntoView(ProductOffers.productPriceHeading)
+		ProductOffers.skipPickCityModal()
+		ProductOffers.waitForFirstShopLogoDisplayed(firstShop.shop_id)
+		expect(ProductOffers.firstOfferProductPrice.isDisplayed()).toBe(true)
+	})
 
-			it("Then they should be able to see offer description data", () => {
+	it("'Shop Contacts' button should be displayed on offers page", () => {
+		const [firstProduct] = allCPUs.products
+		const [firstShop] = shopList.positions.primary
 
-				const firstUsedOffer = usedCPUs.offers[0]
+		ProductsList.openFirstProductOffersPage()
+		ProductsList.waitForUrlContains(firstProduct.html_url)
+		ProductOffers.isVisible(ProductOffers.productPriceHeading)
+		ProductOffers.scrollElementIntoView(ProductOffers.productPriceHeading)
+		ProductOffers.skipPickCityModal()
+		ProductOffers.waitForFirstShopLogoDisplayed(firstShop.shop_id)
+		expect(ProductOffers.shopContactsButton.isDisplayed()).toBe(true)
+	})
 
-				ProductsList.switchToSection("Объявления")
-				ProductsList.waitForUrlContains("/cpu?segment=second")
-				expect(ProductsList.createUsedOfferButton.isDisplayed()).toBe(true)
-				ProductsList.waitForProperTotalOfFoundProducts(usedCPUs.total.toString())
-				expect(ProductsList.productByTitle(firstUsedOffer.product.full_name).isDisplayed()).toBe(true)
-				expect(ProductsList.usedProductConditionsCircleByProductTitle(firstUsedOffer.product.full_name).isDisplayed()).toBe(true)
-				expect(ProductsList.usedProductLocationByProductTitle(firstUsedOffer.product.full_name).isDisplayed()).toBe(true)
-				expect(ProductsList.getUsedProductPrice(firstUsedOffer.product.full_name)).toEqual(jasmine.any(Number))
-				ProductsList.openUsedUserProductOfferByProductName(firstUsedOffer.product.full_name)
-				ProductDetailsPage.waitForUsedProductPrice()
-				ProductDetailsPage.scrollElementIntoView(ProductDetailsPage.usedProductNameHeading)
-				expect(ProductDetailsPage.usedProductDescription.isDisplayed()).toBe(true)
-			})
-		})
+	it("Shop working hours button should be displayed on offers page", () => {
+		const [firstProduct] = allCPUs.products
+		const [firstShop] = shopList.positions.primary
 
-		describe("And decides to create their own offer", () => {
-
-			it("Then they have to be log in", () => {
-				ProductsList.switchToSection("Объявления")
-				ProductsList.waitForProperTotalOfFoundProducts(usedCPUs.total.toString())
-				ProductsList.createUserUsedProductOffer()
-				ProductsList.waitForUrlContains("/login?redirect")
-				expect(LoginPage.authFormTitle.isDisplayed()).toBe(true)
-				expect(LoginPage.nameInput.isDisplayed()).toBe(true)
-				expect(LoginPage.passwordInput.isDisplayed()).toBe(true)
-			})
-		})
+		ProductsList.openFirstProductOffersPage()
+		ProductsList.waitForUrlContains(firstProduct.html_url)
+		ProductOffers.isVisible(ProductOffers.productPriceHeading)
+		ProductOffers.scrollElementIntoView(ProductOffers.productPriceHeading)
+		ProductOffers.skipPickCityModal()
+		ProductOffers.waitForFirstShopLogoDisplayed(firstShop.shop_id)
+		expect(ProductOffers.shopWorkingHours.getText()).toContain("Магазин сегодня работает с")
 	})
 })

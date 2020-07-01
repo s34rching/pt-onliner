@@ -1,7 +1,9 @@
 const _ = require("lodash")
+
 const { CONVERSION_DIRECTIONS } = require("../service/constants")
 
 module.exports = {
+	stringifyToCents: amount => parseFloat(amount).toFixed(2).toString().replace(".", ","),
 	getDirectionWithOrder: () => {
 		return { direction: _.sample(CONVERSION_DIRECTIONS), order: _.sample([ "direct", "reverse" ]) }
 	},

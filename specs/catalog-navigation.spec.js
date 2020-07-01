@@ -6,9 +6,7 @@ const entities = require("../helpers/get-entities")
 
 describe("Onliner.by - Catalog / Navigation", () => {
 
-	let randomClassifierItem
-	let randomCategoryItem
-	let randomSubcategoryItem
+	let randomClassifierItem, randomCategoryItem, randomSubcategoryItem
 
 	beforeAll(() => {
 		randomClassifierItem = entities.getRandomClassifierItem()
@@ -20,87 +18,50 @@ describe("Onliner.by - Catalog / Navigation", () => {
 		browser.waitForAngularEnabled(false)
 
 		HomePage.goTo("/")
-		HomePage.openCatalog()
 	})
 
-	describe("When user navigates through the 'Catalog'", () => {
+	it("User should be able to go through catalog navigation to open product details page", () => {
+		HomePage.openCatalog()
+		Catalog.chooseClassifierItem(randomClassifierItem.id)
+		Catalog.hoverCategoryItem(randomCategoryItem.ruName)
+		Catalog.openSubcategory(randomSubcategoryItem)
+		Catalog.openCategoryFirstProductDetailsPage()
+		expect(ProductDetailsPage.isVisible(ProductDetailsPage.productOfferDescription)).toBe(true)
+	})
 
-		describe("And goes basic navigation path", () => {
+	it("Catalog top bar links should lead to subcategory pages", () => {
+		Catalog.followRandomCatalogBarLink()
+		expect(ProductsList.isVisible(ProductsList.product())).toBe(true)
+	})
 
-			it("Then they should be able to open product details page", () => {
+	xit("Catalog main tiles should lead to subcategory pages", () => {
+		const randomMainTile = entities.getRandomCatalogMainTile()
 
-				Catalog.chooseClassifierItem(randomClassifierItem.id)
-				Catalog.hoverCategoryItem(randomCategoryItem.ruName)
-				Catalog.openSubcategory(randomSubcategoryItem)
-				Catalog.openCategoryFirstProductDetailsPage()
-				expect(ProductDetailsPage.isVisible(ProductDetailsPage.productOfferDescription)).toBe(true)
-				expect(ProductDetailsPage.isVisible(ProductDetailsPage.productOffers)).toBe(true)
-				ProductsList.scrollElementIntoView(ProductDetailsPage.productTechDescription)
-				expect(ProductDetailsPage.isVisible(ProductDetailsPage.productTechDescription)).toBe(true)
-			})
-		})
+		Catalog.followTilesLinks(randomMainTile.ruName)
+		expect(ProductsList.isVisible(ProductsList.product())).toBe(true)
+	})
 
-		describe("And clicks on a random link in the top bar", () => {
+	it("Catalog section tiles should lead to subcategory pages", () => {
+		const randomSectionTile = entities.getRandomSectionTile(randomClassifierItem)
 
-			it("Then they should be navigated to subcategory pages", () => {
+		Catalog.chooseClassifierItem(randomClassifierItem.id)
+		Catalog.followTilesLinks(randomSectionTile.ruName)
+		expect(ProductsList.isVisible(ProductsList.product())).toBe(true)
+	})
 
-				Catalog.followRandomCatalogBarLink()
-				expect(ProductsList.isVisible(ProductsList.product())).toBe(true)
-				expect(ProductsList.isVisible(ProductsList.filters)).toBe(true)
-			})
-		})
+	it("User should be able to repeat navigation through catalog", () => {
+		const secondRandomClassifierItem = entities.getRandomClassifierItem()
+		const secondRandomCategoryItem = entities.getRandomUniqueCategory(secondRandomClassifierItem)
+		const secondRandomSubcategoryItem = entities.getRandomUniqueSubcategory(secondRandomCategoryItem)
 
-		xdescribe("And clicks on a random tile on the catalog main page", () => {
-
-			it("Then they should be navigated to subcategory pages", () => {
-
-				const randomMainTile = entities.getRandomCatalogMainTile()
-
-				Catalog.followTilesLinks(randomMainTile.ruName)
-				expect(ProductsList.isVisible(ProductsList.product())).toBe(true)
-				expect(ProductsList.isVisible(ProductsList.filters)).toBe(true)
-				expect(browser.getCurrentUrl()).toContain(randomMainTile.path)
-			})
-		})
-
-		describe("And clicks on a random tile on the section tiles pane", () => {
-
-			it("Then they should be navigated to subcategory pages", () => {
-
-				const randomSectionTile = entities.getRandomSectionTile(randomClassifierItem)
-
-				Catalog.chooseClassifierItem(randomClassifierItem.id)
-				Catalog.followTilesLinks(randomSectionTile.ruName)
-				expect(ProductsList.isVisible(ProductsList.product())).toBe(true)
-				expect(ProductsList.isVisible(ProductsList.filters)).toBe(true)
-				expect(browser.getCurrentUrl()).toContain(randomSectionTile.path)
-			})
-		})
-
-		describe("And gets navigated to subcategory pages", () => {
-
-			describe("And repeats navigation", () => {
-
-				it("Then they should be navigated to subcategory pages", () => {
-
-					const secondRandomClassifierItem = entities.getRandomClassifierItem()
-					const secondRandomCategoryItem = entities.getRandomUniqueCategory(secondRandomClassifierItem)
-					const secondRandomSubcategoryItem = entities.getRandomUniqueSubcategory(secondRandomCategoryItem)
-
-					Catalog.chooseClassifierItem(randomClassifierItem.id)
-					Catalog.hoverCategoryItem(randomCategoryItem.ruName)
-					Catalog.openSubcategory(randomSubcategoryItem)
-					Catalog.openCategoryFirstProductDetailsPage()
-					Catalog.chooseClassifierItem(secondRandomClassifierItem.id)
-					Catalog.hoverCategoryItem(secondRandomCategoryItem.ruName)
-					Catalog.openSubcategory(secondRandomSubcategoryItem)
-					Catalog.openCategoryFirstProductDetailsPage()
-					expect(ProductDetailsPage.isVisible(ProductDetailsPage.productOfferDescription)).toBe(true)
-					expect(ProductDetailsPage.isVisible(ProductDetailsPage.productOffers)).toBe(true)
-					ProductsList.scrollElementIntoView(ProductDetailsPage.productTechDescription)
-					expect(ProductDetailsPage.isVisible(ProductDetailsPage.productTechDescription)).toBe(true)
-				})
-			})
-		})
+		Catalog.chooseClassifierItem(randomClassifierItem.id)
+		Catalog.hoverCategoryItem(randomCategoryItem.ruName)
+		Catalog.openSubcategory(randomSubcategoryItem)
+		Catalog.openCategoryFirstProductDetailsPage()
+		Catalog.chooseClassifierItem(secondRandomClassifierItem.id)
+		Catalog.hoverCategoryItem(secondRandomCategoryItem.ruName)
+		Catalog.openSubcategory(secondRandomSubcategoryItem)
+		Catalog.openCategoryFirstProductDetailsPage()
+		expect(ProductDetailsPage.isVisible(ProductDetailsPage.productOfferDescription)).toBe(true)
 	})
 })

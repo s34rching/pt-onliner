@@ -4,6 +4,10 @@ class BasePage {
 		this.topNavbar = $(".b-top-navigation")
 	}
 
+	open(url) {
+		return browser.get(url)
+	}
+
 	goTo(path) {
 		return browser.get(browser.baseUrl.concat(path))
 	}
