@@ -1,6 +1,8 @@
 module.exports = {
   env: {
+    amd: true,
     browser: true,
+    node: true,
     commonjs: true,
     es6: true,
     protractor: true,
