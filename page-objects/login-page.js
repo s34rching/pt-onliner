@@ -1,8 +1,5 @@
-const BasePage = require('./base-page');
-
-class LoginPage extends BasePage {
+class LoginPage {
   constructor() {
-    super();
     this.authFormTitle = element(by.cssContainingText('.auth-form__title', 'Вход'));
     this.nameInput = $("input[placeholder='Ник или e-mail']");
     this.passwordInput = $("input[type='password']");
