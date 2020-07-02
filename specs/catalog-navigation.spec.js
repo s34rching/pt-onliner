@@ -5,13 +5,14 @@ const ProductDetailsPage = require('../page-objects/product-details-page');
 const entities = require('../helpers/get-entities');
 
 describe('Onliner.by - Catalog / Navigation', () => {
-  let randomClassifierItem; let randomCategoryItem; let
-    randomSubcategoryItem;
+  let classifierItem;
+  let categoryItem;
+  let subcategoryItem;
 
   beforeAll(() => {
-    randomClassifierItem = entities.getRandomClassifierItem();
-    randomCategoryItem = entities.getRandomUniqueCategory(randomClassifierItem);
-    randomSubcategoryItem = entities.getRandomUniqueSubcategory(randomCategoryItem);
+    classifierItem = entities.getRandomClassifierItem();
+    categoryItem = entities.getRandomUniqueCategory(classifierItem);
+    subcategoryItem = entities.getRandomUniqueSubcategory(categoryItem);
   });
 
   beforeEach(() => {
@@ -22,9 +23,9 @@ describe('Onliner.by - Catalog / Navigation', () => {
 
   it('User should be able to go through catalog navigation to open product details page', () => {
     HomePage.openCatalog();
-    Catalog.chooseClassifierItem(randomClassifierItem.id);
-    Catalog.hoverCategoryItem(randomCategoryItem.ruName);
-    Catalog.openSubcategory(randomSubcategoryItem);
+    Catalog.chooseClassifierItem(classifierItem.id);
+    Catalog.hoverCategoryItem(categoryItem.ruName);
+    Catalog.openSubcategory(subcategoryItem);
     Catalog.openCategoryFirstProductDetailsPage();
     expect(ProductDetailsPage.isVisible(ProductDetailsPage.productOfferDescription)).toBe(true);
   });
@@ -42,25 +43,25 @@ describe('Onliner.by - Catalog / Navigation', () => {
   });
 
   it('Catalog section tiles should lead to subcategory pages', () => {
-    const randomSectionTile = entities.getRandomSectionTile(randomClassifierItem);
+    const randomSectionTile = entities.getRandomSectionTile(classifierItem);
 
-    Catalog.chooseClassifierItem(randomClassifierItem.id);
+    Catalog.chooseClassifierItem(classifierItem.id);
     Catalog.followTilesLinks(randomSectionTile.ruName);
     expect(ProductsList.isVisible(ProductsList.product())).toBe(true);
   });
 
   it('User should be able to repeat navigation through catalog', () => {
-    const secondRandomClassifierItem = entities.getRandomClassifierItem();
-    const secondRandomCategoryItem = entities.getRandomUniqueCategory(secondRandomClassifierItem);
-    const secondRandomSubcategoryItem = entities.getRandomUniqueSubcategory(secondRandomCategoryItem);
+    const secondClassifierItem = entities.getRandomClassifierItem();
+    const secondCategoryItem = entities.getRandomUniqueCategory(secondClassifierItem);
+    const secondSubcategoryItem = entities.getRandomUniqueSubcategory(secondCategoryItem);
 
-    Catalog.chooseClassifierItem(randomClassifierItem.id);
-    Catalog.hoverCategoryItem(randomCategoryItem.ruName);
-    Catalog.openSubcategory(randomSubcategoryItem);
+    Catalog.chooseClassifierItem(classifierItem.id);
+    Catalog.hoverCategoryItem(categoryItem.ruName);
+    Catalog.openSubcategory(subcategoryItem);
     Catalog.openCategoryFirstProductDetailsPage();
-    Catalog.chooseClassifierItem(secondRandomClassifierItem.id);
-    Catalog.hoverCategoryItem(secondRandomCategoryItem.ruName);
-    Catalog.openSubcategory(secondRandomSubcategoryItem);
+    Catalog.chooseClassifierItem(secondClassifierItem.id);
+    Catalog.hoverCategoryItem(secondCategoryItem.ruName);
+    Catalog.openSubcategory(secondSubcategoryItem);
     Catalog.openCategoryFirstProductDetailsPage();
     expect(ProductDetailsPage.isVisible(ProductDetailsPage.productOfferDescription)).toBe(true);
   });

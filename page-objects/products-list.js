@@ -152,7 +152,8 @@ class ProductsList extends BasePage {
   }
 
   getUsedProductPrice(productTitle) {
-    return this.productByTitle(productTitle).getText().then((price) => parseFloat(price.replace(',', '.')));
+    return this.productByTitle(productTitle).getText()
+      .then((price) => parseFloat(price.replace(',', '.')));
   }
 }
 

@@ -7,10 +7,10 @@ exports.getRandomClassifierItem = function () {
 };
 
 exports.getRandomUniqueCategory = function (classifierItem) {
-  const uniqueCategoriesContainingUniqueSubCategories = _.filter(_.values(classifierItem.categories),
+  const uniqueCategoriesWithUniqueSubCategories = _.filter(_.values(classifierItem.categories),
     { isUnique: true, containsUnique: true });
 
-  return _.sample(uniqueCategoriesContainingUniqueSubCategories);
+  return _.sample(uniqueCategoriesWithUniqueSubCategories);
 };
 
 exports.getRandomUniqueSubcategory = function (categoryItem) {

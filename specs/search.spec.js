@@ -36,7 +36,7 @@ describe('Onliner.by - Products / Search', () => {
     HomePage.performSearch(activeProduct.query);
     SearchIframe.switchToSearchIframe();
     SearchIframe.waitForProductAreLoadedOnModal();
-    expect(SearchIframe.isVisible(SearchIframe.resultItemProduct(activeProduct.catalogTitle))).toBe(true);
+    expect(SearchIframe.resultItemProduct(activeProduct.catalogTitle).isDisplayed()).toBe(true);
   });
 
   it("User should be able to see an 'active' product price", () => {
@@ -45,7 +45,8 @@ describe('Onliner.by - Products / Search', () => {
     HomePage.performSearch(activeProduct.query);
     SearchIframe.switchToSearchIframe();
     SearchIframe.waitForProductAreLoadedOnModal();
-    expect(SearchIframe.productPrice(activeProduct.catalogTitle).getText()).closeTo({ value: priceByn, delta: EXPECTED_PRICE_CHANGE });
+    expect(SearchIframe.productPrice(activeProduct.catalogTitle).getText())
+      .closeTo({ value: priceByn, delta: EXPECTED_PRICE_CHANGE });
   });
 
   it("User should be able to find an 'out of stock' product in catalog", () => {
@@ -59,7 +60,8 @@ describe('Onliner.by - Products / Search', () => {
     HomePage.performSearch(outOfStockProduct.query);
     SearchIframe.switchToSearchIframe();
     SearchIframe.waitForProductAreLoadedOnModal();
-    expect(SearchIframe.productPrice(outOfStockProduct.catalogTitle).getText()).toBe(outOfStockProduct.label);
+    expect(SearchIframe.productPrice(outOfStockProduct.catalogTitle).getText())
+      .toBe(outOfStockProduct.label);
   });
 
   it("User should be able to find an 'off-sale' product in catalog", () => {
@@ -73,7 +75,8 @@ describe('Onliner.by - Products / Search', () => {
     HomePage.performSearch(offSaleProduct.query);
     SearchIframe.switchToSearchIframe();
     SearchIframe.waitForProductAreLoadedOnModal();
-    expect(SearchIframe.productPrice(offSaleProduct.catalogTitle).getText()).toBe(offSaleProduct.label);
+    expect(SearchIframe.productPrice(offSaleProduct.catalogTitle).getText())
+      .toBe(offSaleProduct.label);
   });
 
   it('There should NOT be search results if user searches for non-existent product', () => {
@@ -97,11 +100,12 @@ describe('Onliner.by - Products / Search', () => {
     const randomClassifierItem = entities.getRandomClassifierItem();
     const randomCategory = entities.getRandomUniqueCategory(randomClassifierItem);
     const randomSubcategory = entities.getRandomUniqueSubcategory(randomCategory);
+    const { name, subcategoryPageRuHeading } = randomSubcategory;
 
-    HomePage.performSearch(randomSubcategory.ruName);
+    HomePage.performSearch(name);
     SearchIframe.switchToSearchIframe();
     SearchIframe.waitForProductAreLoadedOnModal();
-    expect(SearchIframe.resultItemSubcategory(randomSubcategory.subcategoryPageRuHeading).isDisplayed()).toBe(true);
+    expect(SearchIframe.resultItemSubcategory(subcategoryPageRuHeading).isDisplayed()).toBe(true);
   });
 
   it('User should be able to open subcategory page while searching by subcategory', () => {

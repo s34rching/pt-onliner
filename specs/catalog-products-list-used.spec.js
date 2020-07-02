@@ -6,12 +6,12 @@ const { stringifyToCents } = require('../service/currency-exchange-services');
 
 describe('Onliner.by - Catalog / Products List - Used', () => {
   let usedCPUs; let
-    firstUsedOffer;
+    usedOffer;
 
   beforeAll((done) => {
     api.getProducts('cpu/second-offers?segment=second').then((res) => {
       usedCPUs = JSON.parse(res);
-      firstUsedOffer = usedCPUs.offers[0];
+      usedOffer = usedCPUs.offers[0];
       done();
     });
   });
@@ -30,29 +30,31 @@ describe('Onliner.by - Catalog / Products List - Used', () => {
   it('List of offers should be displayed', () => {
     ProductsList.goTo('/cpu?segment=second');
     ProductsList.waitForProperTotalOfFoundProducts(usedCPUs.total.toString());
-    expect(ProductsList.productByTitle(firstUsedOffer.product.full_name).isDisplayed()).toBe(true);
+    expect(ProductsList.productByTitle(usedOffer.product.full_name).isDisplayed()).toBe(true);
   });
 
   it('User should be able to open offer', () => {
     ProductsList.goTo('/cpu?segment=second');
     ProductsList.waitForProperTotalOfFoundProducts(usedCPUs.total.toString());
-    ProductsList.openUsedUserProductOfferByProductName(firstUsedOffer.product.full_name);
+    ProductsList.openUsedUserProductOfferByProductName(usedOffer.product.full_name);
     ProductDetailsPage.waitForUsedProductPrice();
-    expect(ProductDetailsPage.productNameHeading.getText()).toContain(firstUsedOffer.product.full_name);
+    expect(ProductDetailsPage.productNameHeading.getText()).toContain(usedOffer.product.full_name);
   });
 
   it('Used product price should be displayed', () => {
-    ProductsList.open(firstUsedOffer.html_url);
-    expect(ProductDetailsPage.usedProductPrice.getText()).toContain(stringifyToCents(firstUsedOffer.price.amount));
+    const usedProductPrice = stringifyToCents(usedOffer.price.amount);
+
+    ProductsList.open(usedOffer.html_url);
+    expect(ProductDetailsPage.usedProductPrice.getText()).toContain(usedProductPrice);
   });
 
   it('Used product conditions should be displayed', () => {
-    ProductsList.open(firstUsedOffer.html_url);
-    expect(ProductDetailsPage.usedProductConditions(firstUsedOffer.condition).isDisplayed()).toBe(true);
+    ProductsList.open(usedOffer.html_url);
+    expect(ProductDetailsPage.usedProductConditions(usedOffer.condition).isDisplayed()).toBe(true);
   });
 
   it('Used product description should be displayed', () => {
-    ProductsList.open(firstUsedOffer.html_url);
+    ProductsList.open(usedOffer.html_url);
     ProductDetailsPage.scrollElementIntoView(ProductDetailsPage.productNameHeading);
     expect(ProductDetailsPage.usedProductDescription.isDisplayed()).toBe(true);
   });

@@ -36,7 +36,9 @@ describe('Onliner.by - Catalog / Products List', () => {
     ProductsList.waitForUrlContains('?order=reviews_rating:desc');
     ProductsList.waitForActiveOrderOptionByName('С отзывами');
     ProductsList.waitForProperTotalOfFoundProducts(CPUsFilteredByRating.total.toString());
-    ProductsList.productRewievs.each((review, index) => expect(review.getText()).toContain(reviews[index]));
+    ProductsList.productRewievs.each((review, index) => {
+      expect(review.getText()).toContain(reviews[index]);
+    });
   });
 
   it('User should be able to filter out products by manufacturer', () => {

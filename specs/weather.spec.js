@@ -15,6 +15,7 @@ describe('Onliner.by - Top Navigation / Informers - Weather Forecast', () => {
       forecast = JSON.parse(res);
       api.getWeather(userCity.id).then((res) => {
         userCityForecast = JSON.parse(res);
+
         done();
       });
     });
@@ -38,7 +39,8 @@ describe('Onliner.by - Top Navigation / Informers - Weather Forecast', () => {
   it('User should be able to see 5-days forecast', () => {
     HomePage.open(composeUrl('weather'));
     WeatherForecastPage.scrollElementIntoView(WeatherForecastPage.nextDaysBlock);
-    WeatherForecastPage.getNextDateDaytimeTemperatureRanges(_.values(forecast.forecast)).then((el) => el.length);
+    WeatherForecastPage.getNextDateDaytimeTemperatureRanges(_.values(forecast.forecast))
+      .then((el) => el.length);
   });
 
   it('User should be able to change their city to see other city weather', () => {
@@ -46,6 +48,7 @@ describe('Onliner.by - Top Navigation / Informers - Weather Forecast', () => {
     WeatherForecastPage.openCitiesOptionsDropdown();
     WeatherForecastPage.changeCity(userCity.id);
     WeatherForecastPage.waitForCityChangedTo(userCityForecast.city);
-    expect(WeatherForecastPage.generalWeatherState.getText()).toContain(userCityForecast.now.phenomena);
+    expect(WeatherForecastPage.generalWeatherState.getText())
+      .toContain(userCityForecast.now.phenomena);
   });
 });
