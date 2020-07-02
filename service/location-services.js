@@ -2,11 +2,11 @@ module.exports = {
   getLocationsAmount: (showMapMessage) => {
     let textValue;
     const matches = {
-      2: 'двух', 3: 'трех', 4: 'четырех', 5: 'пяти', 6: 'шести', 7: 'семи', 8: 'восьми', 9: 'девяти',
+      2: 'двух', 3: 'трех', 4: 'четырех', 5: 'пяти', 6: 'шести', 7: 'семи', 8: 'восьми', 9: 'девяти', 10: "десяти",
     };
 
-    if (isMoreThanNineLocations(showMapMessage)) {
-      textValue = isMoreThanNineLocations(showMapMessage)[0];
+    if (isMoreThanTenLocations(showMapMessage)) {
+      textValue = isMoreThanTenLocations(showMapMessage)[0];
     } else if (isOnlyLocation(showMapMessage)) {
       textValue = 1;
     } else {
@@ -32,7 +32,7 @@ module.exports = {
 };
 
 const isOnlyLocation = (message) => !message.match(/^\u0412\s/);
-const isMoreThanNineLocations = (message) => message.match(/\d+/);
+const isMoreThanTenLocations = (message) => message.match(/\d+/);
 const getLiteralLocationsAmount = (message) => message.match(/(?<=^\u0412\s).+(?=\s)/);
 const hasPluralEnding = (amount) => {
   const withSingularEnding = [2, 3, 4];
