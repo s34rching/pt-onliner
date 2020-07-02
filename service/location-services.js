@@ -23,11 +23,11 @@ const getLocationsAmount = (showMapMessage) => {
     textValue = getLiteralLocationsAmount(showMapMessage)[0];
   }
 
-  if (textValue === 1 || parseInt(textValue)) {
-    return parseInt(textValue);
+  if (textValue === 1 || parseInt(textValue, 10)) {
+    return parseInt(textValue, 10);
   }
 
-  return parseInt(getKeyByValue(matches, textValue));
+  return parseInt(getKeyByValue(matches, textValue), 10);
 };
 
 const defineLocationsMessageOnPopup = (locationsAmount) => {
