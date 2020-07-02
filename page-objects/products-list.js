@@ -47,15 +47,13 @@ class ProductsList extends BasePage {
     };
     this.createUsedOfferButton = $("a[href='/used/create']");
     this.productByTitle = function (productTitle) {
-      return element(by.xpath(`//div[contains(@class, "schema-product__group") and descendant::span[text()]
-			 = "${productTitle}"]`));
+      return element(by.xpath(`//div[contains(@class, "schema-product__group") and descendant::span[text()] = "${productTitle}"]`));
     };
     this.product = function ({ productIndex, productTitle, all } = {}) {
       if (productIndex) {
         return $$('.schema-product').get(productIndex);
       } if (productTitle) {
-        return element(by.xpath(`//div[contains(@class, "schema-product") and descendant::span[text()]
-				 = "${productTitle}"]`));
+        return element(by.xpath(`//div[contains(@class, "schema-product") and descendant::span[text()] = "${productTitle}"]`));
       } if (all) {
         return $$('.schema-product');
       }

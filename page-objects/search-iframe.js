@@ -11,8 +11,7 @@ class SearchIframe extends BasePage {
     };
     this.firstResultItemProduct = $$('.result__item_product').first();
     this.resultItemProduct = function (productTitle) {
-      return element(by.xpath(`//div[contains(@class, 'result__item_product') and descendant::a[text()] =
-			 '${productTitle}']`));
+      return element(by.xpath(`//div[contains(@class, 'result__item_product') and descendant::a[text()] = '${productTitle}']`));
     };
     this.productPrice = function (productTitle) {
       return this.resultItemProduct(productTitle).$('.product__price');
