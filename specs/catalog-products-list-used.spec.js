@@ -11,7 +11,7 @@ describe('Onliner.by - Catalog / Products List - Used', () => {
   beforeAll((done) => {
     api.getProducts('cpu/second-offers?segment=second').then((res) => {
       usedCPUs = JSON.parse(res);
-      usedOffer = usedCPUs.offers[0];
+      [usedOffer] = usedCPUs.offers;
       done();
     });
   });
