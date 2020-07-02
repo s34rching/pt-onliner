@@ -38,7 +38,9 @@ const defineLocationsMessageOnPopup = (locationsAmount) => {
     return `${amount} обменных ${withEnding} на карте`;
   };
 
-  return (locationsAmount === 1) ? singleLocationMessage : multipleLocationsMessage(locationsAmount);
+  return (locationsAmount === 1)
+    ? singleLocationMessage
+    : multipleLocationsMessage(locationsAmount);
 };
 
 module.exports = { getLocationsAmount, defineLocationsMessageOnPopup };
