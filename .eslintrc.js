@@ -14,6 +14,7 @@ module.exports = {
   ],
   extends: 'airbnb-base',
   globals: {
+    EC: 'readonly',
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
   },
