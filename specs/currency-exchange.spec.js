@@ -33,16 +33,17 @@ describe('Onliner.by - Top Navigation / Informers - Currency Exchange', () => {
 
   it('User should be able to convert currencies', () => {
     const { direction, order } = getDirectionWithOrder();
-    const { in: currencyIn, out: currencyOut } = getDirectionCurrencies(direction, order);
+    const { in: input, out: output } = getDirectionCurrencies(direction, order);
     const randomCurrencyAmount = random.getRandomNumber(20, 10000);
 
     HomePage.open(composeUrl('currency'));
     ExchangeRatesPage.waitForConvertOutDataVisible();
     ExchangeRatesPage.getDirectionBestExchangeRate(direction, order).then((rate) => {
-      ExchangeRatesPage.chooseCurrencyToConvert('in', currencyIn);
-      ExchangeRatesPage.chooseCurrencyToConvert('out', currencyOut);
+      ExchangeRatesPage.chooseCurrencyToConvert('in', input);
+      ExchangeRatesPage.chooseCurrencyToConvert('out', output);
       ExchangeRatesPage.enterCurrencyAmountToConvert(randomCurrencyAmount);
-      expect(ExchangeRatesPage.getConversionResult()).toBe(calculateConversionResult(currencyIn, currencyOut, randomCurrencyAmount, rate, order));
+      expect(ExchangeRatesPage.getConversionResult())
+        .toBe(calculateConversionResult(input, output, randomCurrencyAmount, rate, order));
     });
   });
 
