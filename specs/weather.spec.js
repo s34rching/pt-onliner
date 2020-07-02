@@ -27,25 +27,25 @@ describe('Onliner.by - Top Navigation / Informers - Weather Forecast', () => {
   });
 
   it("User should be able to see current temperature in user's default city on homepage", () => {
-    HomePage.goTo('/');
+    HomePage.constructor.goTo('/');
     expect(HomePage.currentTemperature.getText()).toBe(`${forecast.now.temperature}°`);
   });
 
   it('User should be able open weather forecast page', () => {
-    HomePage.goTo('/');
+    HomePage.constructor.goTo('/');
     HomePage.openWeatherForecastPage();
     expect(WeatherForecastPage.currentTemperature.getText()).toBe(forecast.now.temperature);
   });
 
   it('User should be able to see 5-days forecast', () => {
-    HomePage.open(composeUrl('weather'));
-    WeatherForecastPage.scrollElementIntoView(WeatherForecastPage.nextDaysBlock);
+    HomePage.constructor.open(composeUrl('weather'));
+    WeatherForecastPage.constructor.scrollElementIntoView(WeatherForecastPage.nextDaysBlock);
     WeatherForecastPage.getNextDateDaytimeTemperatureRanges(_.values(forecast.forecast))
       .then((el) => el.length);
   });
 
   it('User should be able to change their city to see other city weather', () => {
-    HomePage.open(composeUrl('weather'));
+    HomePage.constructor.open(composeUrl('weather'));
     WeatherForecastPage.openCitiesOptionsDropdown();
     WeatherForecastPage.changeCity(userCity.id);
     WeatherForecastPage.waitForCityChangedTo(userCityForecast.city);

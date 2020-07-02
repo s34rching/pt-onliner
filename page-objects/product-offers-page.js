@@ -19,7 +19,7 @@ class ProductOffersPage extends BasePage {
   }
 
   waitForFirstShopLogoDisplayed(shopId) {
-    return this.isPresentInDom(this.shopLogoByShopId(shopId));
+    return this.constructor.isPresentInDom(this.shopLogoByShopId(shopId));
   }
 
   skipPickCityModal() {

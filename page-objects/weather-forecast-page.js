@@ -23,17 +23,17 @@ class WeatherForecastPage extends BasePage {
   }
 
   openCitiesOptionsDropdown() {
-    this.isVisible(this.currentCityButton);
+    this.constructor.isVisible(this.currentCityButton);
     this.currentCityButton.click();
   }
 
   changeCity(cityId) {
-    this.isClickable(this.cityOption(cityId));
+    this.constructor.isClickable(this.cityOption(cityId));
     this.cityOption(cityId).click();
   }
 
   waitForCityChangedTo(cityName) {
-    this.isVisible(this.currentCityButtonByName(cityName));
+    this.constructor.isVisible(this.currentCityButtonByName(cityName));
   }
 
   getNextDateDaytimeTemperatureRanges(days) {

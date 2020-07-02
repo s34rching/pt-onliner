@@ -15,13 +15,13 @@ class HomePage extends BasePage {
   }
 
   openCurrencyExchangeRatesPage() {
-    this.scrollElementIntoView(this.topNavBar);
-    this.isClickable(this.currencyInformer);
+    this.constructor.scrollElementIntoView(this.topNavBar);
+    this.constructor.isClickable(this.currencyInformer);
     this.currencyInformer.click();
   }
 
   openWeatherForecastPage() {
-    this.isClickable(this.weatherInformer);
+    this.constructor.isClickable(this.weatherInformer);
     this.weatherInformer.click();
   }
 }

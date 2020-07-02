@@ -16,11 +16,11 @@ class ProductDetailsPage extends BasePage {
   }
 
   waitForFirstShopOfferVisible() {
-    this.isVisible(this.firstOffer);
+    this.constructor.isVisible(this.firstOffer);
   }
 
   waitForUsedProductPrice() {
-    this.isVisible(this.usedProductPrice);
+    this.constructor.isVisible(this.usedProductPrice);
   }
 }
 

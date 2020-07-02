@@ -29,7 +29,7 @@ describe('Onliner.by - Products / Search', () => {
     browser.waitForAngularEnabled(false);
     jasmine.addMatchers(customMatchers);
 
-    HomePage.goTo('/');
+    HomePage.constructor.goTo('/');
   });
 
   it("User should be able to find an 'active' product in catalog", () => {
@@ -118,7 +118,7 @@ describe('Onliner.by - Products / Search', () => {
     SearchIframe.waitForProductAreLoadedOnModal();
     SearchIframe.openSubcategoryPage(randomSubcategory.subcategoryPageRuHeading);
     SearchIframe.switchToDefaultFrame();
-    expect(ProductsList.isVisible(ProductsList.product())).toBe(true);
+    expect(ProductsList.constructor.isVisible(ProductsList.product())).toBe(true);
   });
 
   it('User should be able to close search modal', () => {
@@ -126,7 +126,7 @@ describe('Onliner.by - Products / Search', () => {
     SearchIframe.switchToSearchIframe();
     SearchIframe.waitForProductAreLoadedOnModal();
     SearchIframe.closeSearchModal();
-    expect(SearchIframe.isNotVisible(SearchIframe.fastSearchModal)).toBe(true);
+    expect(SearchIframe.constructor.isNotVisible(SearchIframe.fastSearchModal)).toBe(true);
   });
 
   it('User should be able to open product details page while following search results', () => {

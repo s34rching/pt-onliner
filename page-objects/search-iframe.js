@@ -16,7 +16,7 @@ class SearchIframe extends BasePage {
   }
 
   switchToSearchIframe() {
-    this.isVisible(this.fastSearchModal);
+    this.constructor.isVisible(this.fastSearchModal);
     return browser.switchTo().frame(this.searchIframe.getWebElement());
   }
 
@@ -25,7 +25,7 @@ class SearchIframe extends BasePage {
   }
 
   waitForProductAreLoadedOnModal() {
-    return this.isVisible(this.firstResultItemProduct);
+    return this.constructor.isVisible(this.firstResultItemProduct);
   }
 
   closeSearchModal() {
@@ -37,12 +37,12 @@ class SearchIframe extends BasePage {
   }
 
   openSubcategoryPage(subcategoryTitle) {
-    this.isClickable(this.resultItemSubcategory(subcategoryTitle));
+    this.constructor.isClickable(this.resultItemSubcategory(subcategoryTitle));
     return this.resultItemSubcategory(subcategoryTitle).click();
   }
 
   waitForSearchSuggestionIsVisible() {
-    this.isVisible(this.searchBarSuggestion);
+    this.constructor.isVisible(this.searchBarSuggestion);
   }
 }
 

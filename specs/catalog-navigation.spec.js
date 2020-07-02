@@ -18,7 +18,7 @@ describe('Onliner.by - Catalog / Navigation', () => {
   beforeEach(() => {
     browser.waitForAngularEnabled(false);
 
-    HomePage.goTo('/');
+    HomePage.constructor.goTo('/');
   });
 
   it('User should be able to go through catalog navigation to open product details page', () => {
@@ -27,19 +27,19 @@ describe('Onliner.by - Catalog / Navigation', () => {
     Catalog.hoverCategoryItem(categoryItem.ruName);
     Catalog.openSubcategory(subcategoryItem);
     Catalog.openCategoryFirstProductDetailsPage();
-    expect(ProductDetailsPage.isVisible(ProductDetailsPage.productOfferDescription)).toBe(true);
+    expect(ProductDetailsPage.constructor.isVisible(ProductDetailsPage.productOfferDescription)).toBe(true);
   });
 
   it('Catalog top bar links should lead to subcategory pages', () => {
     Catalog.followRandomCatalogBarLink();
-    expect(ProductsList.isVisible(ProductsList.product())).toBe(true);
+    expect(ProductsList.constructor.isVisible(ProductsList.product())).toBe(true);
   });
 
   xit('Catalog main tiles should lead to subcategory pages', () => {
     const randomMainTile = entities.getRandomCatalogMainTile();
 
     Catalog.followTilesLinks(randomMainTile.ruName);
-    expect(ProductsList.isVisible(ProductsList.product())).toBe(true);
+    expect(ProductsList.constructor.isVisible(ProductsList.product())).toBe(true);
   });
 
   it('Catalog section tiles should lead to subcategory pages', () => {
@@ -47,7 +47,7 @@ describe('Onliner.by - Catalog / Navigation', () => {
 
     Catalog.chooseClassifierItem(classifierItem.id);
     Catalog.followTilesLinks(randomSectionTile.ruName);
-    expect(ProductsList.isVisible(ProductsList.product())).toBe(true);
+    expect(ProductsList.constructor.isVisible(ProductsList.product())).toBe(true);
   });
 
   it('User should be able to repeat navigation through catalog', () => {
@@ -63,6 +63,6 @@ describe('Onliner.by - Catalog / Navigation', () => {
     Catalog.hoverCategoryItem(secondCategoryItem.ruName);
     Catalog.openSubcategory(secondSubcategoryItem);
     Catalog.openCategoryFirstProductDetailsPage();
-    expect(ProductDetailsPage.isVisible(ProductDetailsPage.productOfferDescription)).toBe(true);
+    expect(ProductDetailsPage.constructor.isVisible(ProductDetailsPage.productOfferDescription)).toBe(true);
   });
 });

@@ -49,20 +49,20 @@ class ProductsList extends BasePage {
   }
 
   waitForOrderDropdownListIsVisible() {
-    return this.isVisible(this.orderDropdownOptionsList);
+    return this.constructor.isVisible(this.orderDropdownOptionsList);
   }
 
   chooseOrderDropdownOptionByName(optionName) {
-    this.isClickable(this.orderDropdownOptionsListOptionByName(optionName));
+    this.constructor.isClickable(this.orderDropdownOptionsListOptionByName(optionName));
     return this.orderDropdownOptionsListOptionByName(optionName).click();
   }
 
   waitForUrlContains(text) {
-    return this.urlContains(text);
+    return this.constructor.urlContains(text);
   }
 
   waitForActiveOrderOptionByName(optionName) {
-    this.isVisible(this.orderDropdownActiveOrderOptionByName(optionName));
+    this.constructor.isVisible(this.orderDropdownActiveOrderOptionByName(optionName));
   }
 
   filterProducts(filterName, filterOption) {
@@ -72,26 +72,26 @@ class ProductsList extends BasePage {
   }
 
   waitForSearchTagIsDisplayed(tagName) {
-    this.isVisible(this.searchTagByName(tagName));
+    this.constructor.isVisible(this.searchTagByName(tagName));
   }
 
   waitForProperTotalOfFoundProducts(total) {
-    this.isVisible(this.totalFoundButton(total));
+    this.constructor.isVisible(this.totalFoundButton(total));
   }
 
   resetFilters() {
     this.initiateFiltersResetButton.click();
-    this.isVisible(this.confirmFiltersResetButton);
+    this.constructor.isVisible(this.confirmFiltersResetButton);
     this.confirmFiltersResetButton.click();
   }
 
   compareProducts(numberOfProductsToCompare) {
-    this.isClickable(this.compareProductsButton(numberOfProductsToCompare));
-    this.forceClick(this.compareProductsButton(numberOfProductsToCompare));
+    this.constructor.isClickable(this.compareProductsButton(numberOfProductsToCompare));
+    this.constructor.forceClick(this.compareProductsButton(numberOfProductsToCompare));
   }
 
   openFirstProductOffersPage() {
-    this.isClickable(this.firstProductOffersButton);
+    this.constructor.isClickable(this.firstProductOffersButton);
     this.firstProductOffersButton.click();
   }
 

@@ -27,18 +27,18 @@ class ExchangeRatesPage extends BasePage {
   }
 
   waitForConvertOutDataVisible() {
-    this.isVisible(this.convertOutData);
+    this.constructor.isVisible(this.convertOutData);
   }
 
   openBestExchangeRatesLocations() {
-    this.scrollElementIntoView(this.topNavbar);
+    this.constructor.scrollElementIntoView(this.topNavbar);
     this.waitForConvertOutDataVisible();
     this.bestExchangeRatesLocationsButton.click();
     this.waitForMapIsLoaded();
   }
 
   waitForMapIsLoaded() {
-    this.isVisible(this.exchangeServicesMap);
+    this.constructor.isVisible(this.exchangeServicesMap);
   }
 
   chooseCurrencyToConvert(dropdown, value) {
@@ -47,7 +47,7 @@ class ExchangeRatesPage extends BasePage {
     } else {
       this.convertOutCurrenciesDropdown.click();
     }
-    this.isVisible(this.convertCurrenciesDropdownOptionByValue(dropdown, value));
+    this.constructor.isVisible(this.convertCurrenciesDropdownOptionByValue(dropdown, value));
     this.convertCurrenciesDropdownOptionByValue(dropdown, value).click();
   }
 

@@ -21,20 +21,20 @@ describe('Onliner.by - Catalog / Products List - Used', () => {
   });
 
   it("User should be able to switch to 'used' offers", () => {
-    ProductsList.goTo('/cpu');
+    ProductsList.constructor.goTo('/cpu');
     ProductsList.switchToSection('Объявления');
     ProductsList.waitForUrlContains('/cpu?segment=second');
     expect(ProductsList.createUsedOfferButton.isDisplayed()).toBe(true);
   });
 
   it('List of offers should be displayed', () => {
-    ProductsList.goTo('/cpu?segment=second');
+    ProductsList.constructor.goTo('/cpu?segment=second');
     ProductsList.waitForProperTotalOfFoundProducts(usedCPUs.total.toString());
     expect(ProductsList.productByTitle(usedOffer.product.full_name).isDisplayed()).toBe(true);
   });
 
   it('User should be able to open offer', () => {
-    ProductsList.goTo('/cpu?segment=second');
+    ProductsList.constructor.goTo('/cpu?segment=second');
     ProductsList.waitForProperTotalOfFoundProducts(usedCPUs.total.toString());
     ProductsList.openUsedUserProductOfferByProductName(usedOffer.product.full_name);
     ProductDetailsPage.waitForUsedProductPrice();
@@ -44,23 +44,23 @@ describe('Onliner.by - Catalog / Products List - Used', () => {
   it('Used product price should be displayed', () => {
     const usedProductPrice = stringifyToCents(usedOffer.price.amount);
 
-    ProductsList.open(usedOffer.html_url);
+    ProductsList.constructor.open(usedOffer.html_url);
     expect(ProductDetailsPage.usedProductPrice.getText()).toContain(usedProductPrice);
   });
 
   it('Used product conditions should be displayed', () => {
-    ProductsList.open(usedOffer.html_url);
+    ProductsList.constructor.open(usedOffer.html_url);
     expect(ProductDetailsPage.usedProductConditions(usedOffer.condition).isDisplayed()).toBe(true);
   });
 
   it('Used product description should be displayed', () => {
-    ProductsList.open(usedOffer.html_url);
-    ProductDetailsPage.scrollElementIntoView(ProductDetailsPage.productNameHeading);
+    ProductsList.constructor.open(usedOffer.html_url);
+    ProductDetailsPage.constructor.scrollElementIntoView(ProductDetailsPage.productNameHeading);
     expect(ProductDetailsPage.usedProductDescription.isDisplayed()).toBe(true);
   });
 
   it("Creation of new 'used' offer requires user to be logged in", () => {
-    ProductsList.goTo('/cpu?segment=second');
+    ProductsList.constructor.goTo('/cpu?segment=second');
     ProductsList.waitForProperTotalOfFoundProducts(usedCPUs.total.toString());
     ProductsList.createUserUsedProductOffer();
     ProductsList.waitForUrlContains('/login?redirect');

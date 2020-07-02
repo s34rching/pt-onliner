@@ -21,12 +21,12 @@ describe('Onliner.by - Top Navigation / Informers - Currency Exchange', () => {
   });
 
   it('User should be able to see the best conversion rate of USD on homepage', () => {
-    HomePage.goTo('/');
+    HomePage.constructor.goTo('/');
     expect(HomePage.currencyInformer.getText()).toBe(`$ ${bestUsdExchangeRate}`);
   });
 
   it('User should be able to open currency exchange rates page', () => {
-    HomePage.goTo('/');
+    HomePage.constructor.goTo('/');
     HomePage.openCurrencyExchangeRatesPage();
     expect(ExchangeRatesPage.bestExchangeRatesLocationsButton.isDisplayed()).toBe(true);
   });
@@ -36,7 +36,7 @@ describe('Onliner.by - Top Navigation / Informers - Currency Exchange', () => {
     const { in: input, out: output } = getDirectionCurrencies(direction, order);
     const randomCurrencyAmount = random.getRandomNumber(20, 10000);
 
-    HomePage.open(composeUrl('currency'));
+    HomePage.constructor.open(composeUrl('currency'));
     ExchangeRatesPage.waitForConvertOutDataVisible();
     ExchangeRatesPage.getDirectionBestExchangeRate(direction, order).then((rate) => {
       ExchangeRatesPage.chooseCurrencyToConvert('in', input);
@@ -48,7 +48,7 @@ describe('Onliner.by - Top Navigation / Informers - Currency Exchange', () => {
   });
 
   it('User should be able to open the best rates locations page', () => {
-    HomePage.open(composeUrl('currency'));
+    HomePage.constructor.open(composeUrl('currency'));
     ExchangeRatesPage.bestExchangeRatesLocationsButton.getText().then((showMapMessage) => {
       const popupMessage = defineLocationsMessageOnPopup(getLocationsAmount(showMapMessage));
 
@@ -58,7 +58,7 @@ describe('Onliner.by - Top Navigation / Informers - Currency Exchange', () => {
   });
 
   it('User should be able to see the best rates locations pointers on the map', () => {
-    HomePage.open(composeUrl('currency'));
+    HomePage.constructor.open(composeUrl('currency'));
     ExchangeRatesPage.openBestExchangeRatesLocations();
     ExchangeRatesPage.exchangeServicesMapPointers.each((pointer) => {
       expect(pointer.isDisplayed()).toBe(true);
@@ -66,7 +66,7 @@ describe('Onliner.by - Top Navigation / Informers - Currency Exchange', () => {
   });
 
   it('User should be able to see proper amount of locations pointers on the map', () => {
-    HomePage.open(composeUrl('currency'));
+    HomePage.constructor.open(composeUrl('currency'));
     ExchangeRatesPage.bestExchangeRatesLocationsButton.getText().then((showMapMessage) => {
       const locationsAmount = getLocationsAmount(showMapMessage);
 

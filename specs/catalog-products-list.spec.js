@@ -32,7 +32,7 @@ describe('Onliner.by - Catalog / Products List', () => {
   beforeEach(() => {
     browser.waitForAngularEnabled(false);
 
-    ProductsList.goTo('/cpu');
+    ProductsList.constructor.goTo('/cpu');
   });
 
   it("Products default sort order should be set as 'Popular'", () => {
@@ -54,9 +54,9 @@ describe('Onliner.by - Catalog / Products List', () => {
   });
 
   it('User should be able to filter out products by manufacturer', () => {
-    ProductsList.scrollElementIntoView(ProductsList.filterByName('Производитель'));
+    ProductsList.constructor.scrollElementIntoView(ProductsList.filterByName('Производитель'));
     ProductsList.filterProducts('Производитель', 'Intel');
-    ProductsList.scrollElementIntoView(ProductsList.productsListTitle);
+    ProductsList.constructor.scrollElementIntoView(ProductsList.productsListTitle);
     ProductsList.waitForUrlContains('cpu?mfr%5B0%5D=intel');
     ProductsList.waitForSearchTagIsDisplayed('Intel');
     ProductsList.waitForProperTotalOfFoundProducts(intelCPUs.total.toString());
@@ -64,7 +64,7 @@ describe('Onliner.by - Catalog / Products List', () => {
   });
 
   it('User should be able to reset applied filters', () => {
-    ProductsList.goTo('/cpu?mfr%5B0%5D=intel');
+    ProductsList.constructor.goTo('/cpu?mfr%5B0%5D=intel');
     ProductsList.waitForSearchTagIsDisplayed('Intel');
     ProductsList.waitForProperTotalOfFoundProducts(intelCPUs.total.toString());
     ProductsList.resetFilters();
@@ -95,7 +95,7 @@ describe('Onliner.by - Catalog / Products List', () => {
     const firstProductShortName = firstProduct.url.match(/(?<=\/products\/).+$/)[0];
     const secondProductShortName = secondProduct.url.match(/(?<=\/products\/).+$/)[0];
 
-    ProductsList.goTo(`/compare/${firstProductShortName}+${secondProductShortName}`);
+    ProductsList.constructor.goTo(`/compare/${firstProductShortName}+${secondProductShortName}`);
     ProductsList.clearComparisonList();
     expect(ProductsList.waitForUrlContains(browser.baseUrl)).toBe(true);
   });
@@ -105,7 +105,7 @@ describe('Onliner.by - Catalog / Products List', () => {
 
     ProductsList.openFirstProductOffersPage();
     ProductsList.waitForUrlContains(firstProduct.html_url);
-    expect(ProductOffers.isVisible(ProductOffers.productPriceHeading)).toBe(true);
+    expect(ProductOffers.constructor.isVisible(ProductOffers.productPriceHeading)).toBe(true);
   });
 
   it('Product name should be displayed on offers page', () => {
@@ -113,7 +113,7 @@ describe('Onliner.by - Catalog / Products List', () => {
 
     ProductsList.openFirstProductOffersPage();
     ProductsList.waitForUrlContains(firstProduct.html_url);
-    ProductOffers.isVisible(ProductOffers.productPriceHeading);
+    ProductOffers.constructor.isVisible(ProductOffers.productPriceHeading);
     expect(ProductDetailsPage.productNameHeading.getText()).toContain(firstProduct.name);
   });
 
@@ -122,8 +122,8 @@ describe('Onliner.by - Catalog / Products List', () => {
 
     ProductsList.openFirstProductOffersPage();
     ProductsList.waitForUrlContains(firstProduct.html_url);
-    ProductOffers.isVisible(ProductOffers.productPriceHeading);
-    ProductOffers.scrollElementIntoView(ProductOffers.productPriceHeading);
+    ProductOffers.constructor.isVisible(ProductOffers.productPriceHeading);
+    ProductOffers.constructor.scrollElementIntoView(ProductOffers.productPriceHeading);
     ProductOffers.skipPickCityModal();
     expect(ProductOffers.productPricesOrderGroup.isDisplayed()).toBe(true);
   });
@@ -133,8 +133,8 @@ describe('Onliner.by - Catalog / Products List', () => {
 
     ProductsList.openFirstProductOffersPage();
     ProductsList.waitForUrlContains(firstProduct.html_url);
-    ProductOffers.isVisible(ProductOffers.productPriceHeading);
-    ProductOffers.scrollElementIntoView(ProductOffers.productPriceHeading);
+    ProductOffers.constructor.isVisible(ProductOffers.productPriceHeading);
+    ProductOffers.constructor.scrollElementIntoView(ProductOffers.productPriceHeading);
     ProductOffers.skipPickCityModal();
     expect(ProductOffers.productPricesFilterGroup.isDisplayed()).toBe(true);
   });
@@ -145,8 +145,8 @@ describe('Onliner.by - Catalog / Products List', () => {
 
     ProductsList.openFirstProductOffersPage();
     ProductsList.waitForUrlContains(firstProduct.html_url);
-    ProductOffers.isVisible(ProductOffers.productPriceHeading);
-    ProductOffers.scrollElementIntoView(ProductOffers.productPriceHeading);
+    ProductOffers.constructor.isVisible(ProductOffers.productPriceHeading);
+    ProductOffers.constructor.scrollElementIntoView(ProductOffers.productPriceHeading);
     ProductOffers.skipPickCityModal();
     expect(ProductOffers.waitForFirstShopLogoDisplayed(firstShop.shop_id)).toBe(true);
   });
@@ -157,8 +157,8 @@ describe('Onliner.by - Catalog / Products List', () => {
 
     ProductsList.openFirstProductOffersPage();
     ProductsList.waitForUrlContains(firstProduct.html_url);
-    ProductOffers.isVisible(ProductOffers.productPriceHeading);
-    ProductOffers.scrollElementIntoView(ProductOffers.productPriceHeading);
+    ProductOffers.constructor.isVisible(ProductOffers.productPriceHeading);
+    ProductOffers.constructor.scrollElementIntoView(ProductOffers.productPriceHeading);
     ProductOffers.skipPickCityModal();
     ProductOffers.waitForFirstShopLogoDisplayed(firstShop.shop_id);
     expect(ProductOffers.firstOfferProductPrice.isDisplayed()).toBe(true);
@@ -170,8 +170,8 @@ describe('Onliner.by - Catalog / Products List', () => {
 
     ProductsList.openFirstProductOffersPage();
     ProductsList.waitForUrlContains(firstProduct.html_url);
-    ProductOffers.isVisible(ProductOffers.productPriceHeading);
-    ProductOffers.scrollElementIntoView(ProductOffers.productPriceHeading);
+    ProductOffers.constructor.isVisible(ProductOffers.productPriceHeading);
+    ProductOffers.constructor.scrollElementIntoView(ProductOffers.productPriceHeading);
     ProductOffers.skipPickCityModal();
     ProductOffers.waitForFirstShopLogoDisplayed(firstShop.shop_id);
     expect(ProductOffers.shopContactsButton.isDisplayed()).toBe(true);
@@ -183,8 +183,8 @@ describe('Onliner.by - Catalog / Products List', () => {
 
     ProductsList.openFirstProductOffersPage();
     ProductsList.waitForUrlContains(firstProduct.html_url);
-    ProductOffers.isVisible(ProductOffers.productPriceHeading);
-    ProductOffers.scrollElementIntoView(ProductOffers.productPriceHeading);
+    ProductOffers.constructor.isVisible(ProductOffers.productPriceHeading);
+    ProductOffers.constructor.scrollElementIntoView(ProductOffers.productPriceHeading);
     ProductOffers.skipPickCityModal();
     ProductOffers.waitForFirstShopLogoDisplayed(firstShop.shop_id);
     expect(ProductOffers.shopWorkingHours.getText()).toContain('Магазин сегодня работает с');
