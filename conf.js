@@ -35,12 +35,12 @@ exports.config = {
     browser.driver.manage().window().maximize();
     jasmine.getEnv().addReporter(new SpecReporter({
       spec:
-				{
-				  displayFailuresSummary: true,
-				  displayFailuredSpec: true,
-				  displaySuiteNumber: true,
-				  displaySpecDuration: true,
-				},
+        {
+          displayFailuresSummary: true,
+          displayFailuredSpec: true,
+          displaySuiteNumber: true,
+          displaySpecDuration: true,
+        },
     }));
     jasmine.getEnv().addReporter(new HtmlReporter({
       baseDirectory: 'reports/',
