@@ -13,7 +13,7 @@ module.exports = {
   calculateConversionResult: (currencyIn, currencyOut, amount, rate, order) => {
     if (order === 'direct') {
       if (currencyIn === 'RUB' && currencyOut === 'BYN') {
-        return (parseFloat(rate.replace(',', '.')) * amount / 100).toFixed(2);
+        return ((parseFloat(rate.replace(',', '.')) * amount) / 100).toFixed(2);
       }
       return (parseFloat(rate.replace(',', '.')) * amount).toFixed(2);
     }
