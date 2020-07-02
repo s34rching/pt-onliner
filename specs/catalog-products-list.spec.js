@@ -10,11 +10,23 @@ describe('Onliner.by - Catalog / Products List', () => {
     shopList;
 
   beforeAll((done) => {
-    api.getProducts('cpu').then((res) => allCPUs = JSON.parse(res));
-    api.getProducts('cpu?order=reviews_rating:desc').then((res) => CPUsFilteredByRating = JSON.parse(res));
-    api.getProducts('cpu?mfr[0]=intel').then((res) => intelCPUs = JSON.parse(res));
-    api.getOffers('products/i59400fb/positions?town=minsk').then((res) => shopList = JSON.parse(res));
-    done();
+    api.getProducts('cpu')
+      .then((res) => {
+        allCPUs = JSON.parse(res);
+        return api.getProducts('cpu?order=reviews_rating:desc');
+      })
+      .then((res) => {
+        CPUsFilteredByRating = JSON.parse(res);
+        return api.getProducts('cpu?mfr[0]=intel');
+      })
+      .then((res) => {
+        intelCPUs = JSON.parse(res);
+        return api.getOffers('products/i59400fb/positions?town=minsk');
+      })
+      .then((res) => {
+        shopList = JSON.parse(res);
+        done();
+      });
   });
 
   beforeEach(() => {

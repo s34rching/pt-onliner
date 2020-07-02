@@ -11,14 +11,15 @@ describe('Onliner.by - Top Navigation / Informers - Weather Forecast', () => {
     userCityForecast;
 
   beforeAll((done) => {
-    api.getWeather().then((res) => {
-      forecast = JSON.parse(res);
-      api.getWeather(userCity.id).then((resp) => {
-        userCityForecast = JSON.parse(resp);
-
+    api.getWeather()
+      .then((res) => {
+        forecast = JSON.parse(res);
+        return api.getWeather(userCity.id);
+      })
+      .then((res) => {
+        userCityForecast = JSON.parse(res);
         done();
       });
-    });
   });
 
   beforeEach(() => {
