@@ -16,11 +16,11 @@ const getLocationsAmount = (showMapMessage) => {
   };
 
   if (isMoreThanTenLocations(showMapMessage)) {
-    textValue = isMoreThanTenLocations(showMapMessage)[0];
+    [textValue] = isMoreThanTenLocations(showMapMessage);
   } else if (isOnlyLocation(showMapMessage)) {
     textValue = 1;
   } else {
-    textValue = getLiteralLocationsAmount(showMapMessage)[0];
+    [textValue] = getLiteralLocationsAmount(showMapMessage);
   }
 
   if (textValue === 1 || parseInt(textValue, 10)) {
