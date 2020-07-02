@@ -61,10 +61,10 @@ describe('Onliner.by - Catalog / Products List', () => {
 
   it('User should be able to add products to comparison', (done) => {
     api.getProducts('cpu').then((res) => {
-      const allCPUs = JSON.parse(res);
+      const CPUs = JSON.parse(res);
 
-      const firstProduct = allCPUs.products[0];
-      const secondProduct = allCPUs.products[1];
+      const firstProduct = CPUs.products[0];
+      const secondProduct = CPUs.products[1];
       const firstProductShortName = firstProduct.url.match(/(?<=\/products\/).+$/)[0];
       const secondProductShortName = secondProduct.url.match(/(?<=\/products\/).+$/)[0];
 

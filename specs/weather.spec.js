@@ -13,8 +13,8 @@ describe('Onliner.by - Top Navigation / Informers - Weather Forecast', () => {
   beforeAll((done) => {
     api.getWeather().then((res) => {
       forecast = JSON.parse(res);
-      api.getWeather(userCity.id).then((res) => {
-        userCityForecast = JSON.parse(res);
+      api.getWeather(userCity.id).then((resp) => {
+        userCityForecast = JSON.parse(resp);
 
         done();
       });
