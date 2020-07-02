@@ -100,9 +100,9 @@ describe('Onliner.by - Products / Search', () => {
     const randomClassifierItem = entities.getRandomClassifierItem();
     const randomCategory = entities.getRandomUniqueCategory(randomClassifierItem);
     const randomSubcategory = entities.getRandomUniqueSubcategory(randomCategory);
-    const { name, subcategoryPageRuHeading } = randomSubcategory;
+    const { ruName, subcategoryPageRuHeading } = randomSubcategory;
 
-    HomePage.performSearch(name);
+    HomePage.performSearch(ruName);
     SearchIframe.switchToSearchIframe();
     SearchIframe.waitForProductAreLoadedOnModal();
     expect(SearchIframe.resultItemSubcategory(subcategoryPageRuHeading).isDisplayed()).toBe(true);

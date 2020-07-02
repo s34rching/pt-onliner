@@ -4,17 +4,13 @@ class WeatherForecastPage extends BasePage {
   constructor() {
     super();
     this.currentCityButton = $('a.js-weather-city');
-    this.currentCityButtonByName = function (cityName) {
-      return element(by.cssContainingText('a.js-weather-city', cityName));
-    };
-    this.cityOption = function (cityId) {
-      return $(`a[data-wmoid="${cityId}"]`);
-    };
+    this.currentCityButtonByName = (cityName) => element(by.cssContainingText('a.js-weather-city', cityName));
+    this.cityOption = (cityId) => $(`a[data-wmoid="${cityId}"]`);
     this.currentWeather = $('.b-weather-today__actual');
     this.currentTemperature = this.currentWeather.$('.grad').$('span.value');
     this.generalWeatherState = this.currentWeather.element(by.tagName('dd'));
     this.nextDaysBlock = $('.b-weather-next');
-    this.nextDateDaytimeTemperatureRange = function (day) {
+    this.nextDateDaytimeTemperatureRange = (day) => {
       if (day.dayTemperature.max === null) {
         return element(by.xpath(`//li[contains(@class, 'b-weather-next__day') and descendant::dt[text()] = '${day.dateTextDayOfWeek}']`))
           .all(by.cssContainingText('p.b-weather-next__temp', `${day.dayTemperature.min}`))

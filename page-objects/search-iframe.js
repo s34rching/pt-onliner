@@ -6,19 +6,11 @@ class SearchIframe extends BasePage {
     this.fastSearchModal = element(by.id('fast-search-modal'));
     this.searchIframe = $('.modal-iframe');
     this.modalSearchBar = $('.search__bar');
-    this.productTitle = function (productTitle) {
-      return element.all(by.cssContainingText('.product__title-link', productTitle)).first();
-    };
+    this.productTitle = (productTitle) => element.all(by.cssContainingText('.product__title-link', productTitle)).first();
     this.firstResultItemProduct = $$('.result__item_product').first();
-    this.resultItemProduct = function (productTitle) {
-      return element(by.xpath(`//div[contains(@class, 'result__item_product') and descendant::a[text()] = '${productTitle}']`));
-    };
-    this.productPrice = function (productTitle) {
-      return this.resultItemProduct(productTitle).$('.product__price');
-    };
-    this.resultItemSubcategory = function (subcategoryTitle) {
-      return element(by.cssContainingText('.category__title', subcategoryTitle));
-    };
+    this.resultItemProduct = (productTitle) => element(by.xpath(`//div[contains(@class, 'result__item_product') and descendant::a[text()] = '${productTitle}']`));
+    this.productPrice = (productTitle) => this.resultItemProduct(productTitle).$('.product__price');
+    this.resultItemSubcategory = (subcategoryTitle) => element(by.cssContainingText('.category__title', subcategoryTitle));
     this.closeSearchBarButton = $('.search__close');
     this.searchBarSuggestion = $('.search__suggest-addon');
   }

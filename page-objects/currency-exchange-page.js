@@ -9,19 +9,18 @@ class ExchangeRatesPage extends BasePage {
     this.convertOutData = element(by.id('converter-out'));
     this.convertOutCurrenciesDropdown = this.convertOutData.element(by.id('currency-out'));
     this.conversionResult = this.convertOutData.$('b.js-cur-result');
-    this.convertCurrenciesDropdownOptionByValue = function (dropdown, value) {
+    this.convertCurrenciesDropdownOptionByValue = (dropdown, value) => {
       if (dropdown === 'in') {
         return this.convertInCurrenciesDropdown.element(by.cssContainingText('option', value));
       }
       return this.convertOutCurrenciesDropdown.element(by.cssContainingText('option', value));
     };
     this.bestExchangeRatesLocationsLink = this.convertOutData.all(by.tagName('p')).last();
+    this.bestExchangeRateDirection = (direction) => this.bestExchangeRatesLocationsLink.$$(`a[data-direction="${direction}"]`);
     this.bestExchangeRatesLocationsButton = this.bestExchangeRatesLocationsLink.$$('a').first();
-    this.bestExchangeRateByCurrencyDirection = function (direction, order) {
-      return (order === 'direct')
-        ? this.bestExchangeRatesLocationsLink.$$(`a[data-direction="${direction}"]`).first()
-        : this.bestExchangeRatesLocationsLink.$$(`a[data-direction="${direction}"]`).last();
-    };
+    this.bestExchangeRateByCurrencyDirection = (direction, order) => ((order === 'direct')
+      ? this.bestExchangeRateDirection(direction).first()
+      : this.bestExchangeRateDirection(direction).last());
     this.exchangeServicesMap = $('div.b-currency-map-i');
     this.exchangeServicesMapPointers = this.exchangeServicesMap.$$('ymaps.ymaps-image');
     this.exchangeServicesMapLocations = this.exchangeServicesMap.element(by.tagName('em'));

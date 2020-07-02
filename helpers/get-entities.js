@@ -36,9 +36,6 @@ module.exports = {
         break;
     }
 
-    if (amount === 1) {
-      return _.sample(productsPull);
-    }
-    return _.take(productsPull, amount);
+    return (amount === 1) ? _.sample(productsPull) : _.take(productsPull, amount);
   },
 };

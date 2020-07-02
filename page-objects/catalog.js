@@ -6,25 +6,12 @@ const LINKS_IN_VISIBLE_LAYOUT = 5;
 class Catalog extends BasePage {
   constructor() {
     super();
-    this.sectionItem = function (itemId) {
-      return $(`[class="catalog-navigation-classifier__item "][data-id="${itemId}"]`);
-    };
-
-    this.categoryItem = function (categoryTitle) {
-      return element(by.cssContainingText('.catalog-navigation-list__aside-title',
-        categoryTitle.match(/^\S+/)));
-    };
-    this.subCategoryItem = function (subcategoryItem) {
-      return $(`a[href$="${subcategoryItem.path}"][class="catalog-navigation-list__dropdown-item"]`);
-    };
+    this.sectionItem = (itemId) => $(`[class="catalog-navigation-classifier__item "][data-id="${itemId}"]`);
+    this.categoryItem = (categoryTitle) => element(by.cssContainingText('.catalog-navigation-list__aside-title', categoryTitle.match(/^\S+/)));
+    this.subCategoryItem = (subcategoryItem) => $(`a[href$="${subcategoryItem.path}"][class="catalog-navigation-list__dropdown-item"]`);
     this.catalogBar = element(by.className('catalog-bar'));
-    this.tile = function (tileTitle) {
-      return element.all(by.xpath(`//div[contains(@class, tiles__item) and descendant::span[contains(., '${tileTitle}')]]`)).last();
-    };
-    this.categoryFirstProduct = $$('.schema-product__group')
-      .first()
-      .all(by.css('a'))
-      .first();
+    this.tile = (tileTitle) => element.all(by.xpath(`//div[contains(@class, tiles__item) and descendant::span[contains(., '${tileTitle}')]]`)).last();
+    this.categoryFirstProduct = $$('.schema-product__group').first().all(by.css('a')).first();
   }
 
   chooseClassifierItem(itemId) {
