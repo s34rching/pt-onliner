@@ -1,5 +1,5 @@
-1. Fix inheritance
-2. Add airbnb eslint config
+DONE --- 1. Fix inheritance
+DONE --- 2. Add airbnb eslint config
 DONE --- 3. Remove service code from tests
 DONE --- 4. Unwrap 'describe' blocks nesting
 DONE --- 5. Get rid of multiple assertions
@@ -10,6 +10,8 @@ DONE --- 8. Follow the only assertion style => expect
 EXTRAS:
 9. Optimize locators and get rid of redundant ones
 10. Update hooks / api calls / variables initialization
+11. Optimize tests steps
+12. Change assertions
 
 1. Page objects:
 Все хорошо. Единственное, мне показалось странным наследование login page от base page из-за searchBar и topNavbar, которых вроде как нет на логине. Возможно, это отностится и к другим page object-там

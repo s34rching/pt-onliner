@@ -1,83 +1,88 @@
 class BasePage {
-	constructor() {
-		this.searchBar = $("input.fast-search__input")
-		this.topNavbar = $(".b-top-navigation")
-	}
+  constructor() {
+    this.searchBar = $('input.fast-search__input');
+    this.topNavbar = $('.b-top-navigation');
+  }
 
-	open(url) {
-		return browser.get(url)
-	}
+  clearSearchBar() {
+    this.searchBar.click();
+    this.searchBar.clear();
+  }
 
-	goTo(path) {
-		return browser.get(browser.baseUrl.concat(path))
-	}
+  performSearch(query) {
+    this.clearSearchBar();
+    this.searchBar.sendKeys(query);
+    this.constructor.hitEnter();
+  }
 
-	clearSearchBar() {
-		this.searchBar.click()
-		this.searchBar.clear()
-	}
+  static open(url) {
+    return browser.get(url);
+  }
 
-	hitEnter() {
-		browser.actions().sendKeys(protractor.Key.ENTER).perform()
-	}
+  static goTo(path) {
+    return browser.get(browser.baseUrl.concat(path));
+  }
 
-	performSearch(query) {
-		this.clearSearchBar()
-		this.searchBar.sendKeys(query)
-		this.hitEnter()
-	}
+  static hitEnter() {
+    browser.actions().sendKeys(protractor.Key.ENTER).perform();
+  }
 
-	scrollToWindowPosition(x, y) {
-		browser.executeScript(`window.scrollTo(${x},${y});`)
-	}
+  static scrollToWindowPosition(x, y) {
+    browser.executeScript(`window.scrollTo(${x},${y});`);
+  }
 
-	scrollElementIntoView(element) {
-		browser.controlFlow().execute(() => {
-			browser.executeScript("arguments[0].scrollIntoView(true)", element.getWebElement())
-		})
-	}
+  static scrollElementIntoView(element) {
+    browser.controlFlow().execute(() => {
+      browser.executeScript('arguments[0].scrollIntoView(true)', element.getWebElement());
+    });
+  }
 
-	forceClick(element) {
-		browser.controlFlow().execute(() => {
-			browser.executeScript("arguments[0].click();", element.getWebElement())
-		})
-	}
+  static forceClick(element) {
+    browser.controlFlow().execute(() => {
+      browser.executeScript('arguments[0].click();', element.getWebElement());
+    });
+  }
 
-	// Expected Conditions
+  // Expected Conditions
 
-	isVisible(element, timeout = browser.params.EXPLICIT_TIMEOUT) {
-		// eslint-disable-next-line no-undef
-		return browser.wait(EC.visibilityOf(element), timeout)
-	}
+  static isVisible(element, timeout = browser.params.EXPLICIT_TIMEOUT) {
+    return browser.wait(EC.visibilityOf(element), timeout);
+  }
 
-	isPresentInDom(element, timeout = browser.params.EXPLICIT_TIMEOUT) {
-		// eslint-disable-next-line no-undef
-		return browser.wait(EC.presenceOf(element), timeout)
-	}
+  static isPresentInDom(element, timeout = browser.params.EXPLICIT_TIMEOUT) {
+    return browser.wait(EC.presenceOf(element), timeout);
+  }
 
-	isNotVisible(element, timeout = browser.params.EXPLICIT_TIMEOUT) {
-		// eslint-disable-next-line no-undef
-		return browser.wait(EC.invisibilityOf(element), timeout)
-	}
+  static isNotVisible(element, timeout = browser.params.EXPLICIT_TIMEOUT) {
+    return browser.wait(EC.invisibilityOf(element), timeout);
+  }
 
-	isNotPresentInDom(element, timeout = browser.params.EXPLICIT_TIMEOUT) {
-		// eslint-disable-next-line no-undef
-		return browser.wait(EC.stalenessOf(element), timeout)
-	}
+  static isNotPresentInDom(element, timeout = browser.params.EXPLICIT_TIMEOUT) {
+    return browser.wait(EC.stalenessOf(element), timeout);
+  }
 
-	isClickable(element, timeout = browser.params.EXPLICIT_TIMEOUT) {
-		// eslint-disable-next-line no-undef
-		return browser.wait(EC.elementToBeClickable(element), timeout)
-	}
+  static isClickable(element, timeout = browser.params.EXPLICIT_TIMEOUT) {
+    return browser.wait(EC.elementToBeClickable(element), timeout);
+  }
 
-	hasText(element, text, timeout = browser.params.EXPLICIT_TIMEOUT) {
-		// eslint-disable-next-line no-undef
-		return browser.wait(EC.textToBePresentInElement(element, text), timeout)
-	}
-	urlContains(text, timeout = browser.params.EXPLICIT_TIMEOUT) {
-		// eslint-disable-next-line no-undef
-		return browser.wait(EC.urlContains(text), timeout)
-	}
+  static hasText(element, text, timeout = browser.params.EXPLICIT_TIMEOUT) {
+    return browser.wait(EC.textToBePresentInElement(element, text), timeout);
+  }
+
+  static urlContains(text, timeout = browser.params.EXPLICIT_TIMEOUT) {
+    return browser.wait(EC.urlContains(text), timeout);
+  }
+
+  static switchToIframe(container, iframe) {
+    this.isVisible(container);
+    // this.constructor.isVisible(this.fastSearchModal);
+    return browser.switchTo().frame(iframe.getWebElement());
+    // return browser.switchTo().frame(this.searchIframe.getWebElement());
+  }
+
+  static switchToDefaultFrame() {
+    return browser.switchTo().defaultContent();
+  }
 }
 
-module.exports = BasePage
+module.exports = BasePage;
