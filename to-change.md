@@ -1,5 +1,5 @@
 DONE --- 1. Fix inheritance
-2. Add airbnb eslint config
+DONE --- 2. Add airbnb eslint config
 DONE --- 3. Remove service code from tests
 DONE --- 4. Unwrap 'describe' blocks nesting
 DONE --- 5. Get rid of multiple assertions
