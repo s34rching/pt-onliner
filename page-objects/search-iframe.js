@@ -35,6 +35,10 @@ class SearchIframe extends BasePage {
   waitForSearchSuggestionIsVisible() {
     this.constructor.isVisible(this.searchBarSuggestion);
   }
+
+  switchToSearchIframe() {
+    return this.constructor.switchToIframe(this.fastSearchModal, this.searchIframe);
+  }
 }
 
 module.exports = new SearchIframe();

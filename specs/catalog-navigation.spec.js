@@ -27,7 +27,8 @@ describe('Onliner.by - Catalog / Navigation', () => {
     Catalog.hoverCategoryItem(categoryItem.ruName);
     Catalog.openSubcategory(subcategoryItem);
     Catalog.openCategoryFirstProductDetailsPage();
-    expect(ProductDetailsPage.constructor.isVisible(ProductDetailsPage.productOfferDescription)).toBe(true);
+    expect(ProductDetailsPage.constructor.isVisible(ProductDetailsPage.productOfferDescription))
+      .toBe(true);
   });
 
   it('Catalog top bar links should lead to subcategory pages', () => {
@@ -63,6 +64,7 @@ describe('Onliner.by - Catalog / Navigation', () => {
     Catalog.hoverCategoryItem(secondCategoryItem.ruName);
     Catalog.openSubcategory(secondSubcategoryItem);
     Catalog.openCategoryFirstProductDetailsPage();
-    expect(ProductDetailsPage.constructor.isVisible(ProductDetailsPage.productOfferDescription)).toBe(true);
+    expect(ProductDetailsPage.constructor.isVisible(ProductDetailsPage.productOfferDescription))
+      .toBe(true);
   });
 });

@@ -73,7 +73,7 @@ class BasePage {
     return browser.wait(EC.urlContains(text), timeout);
   }
 
-  static switchToSearchIframe(container, iframe) {
+  static switchToIframe(container, iframe) {
     this.isVisible(container);
     // this.constructor.isVisible(this.fastSearchModal);
     return browser.switchTo().frame(iframe.getWebElement());
