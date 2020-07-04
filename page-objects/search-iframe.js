@@ -15,15 +15,6 @@ class SearchIframe extends BasePage {
     this.searchBarSuggestion = $('.search__suggest-addon');
   }
 
-  switchToSearchIframe() {
-    this.constructor.isVisible(this.fastSearchModal);
-    return browser.switchTo().frame(this.searchIframe.getWebElement());
-  }
-
-  switchToDefaultFrame() {
-    return browser.switchTo().defaultContent();
-  }
-
   waitForProductAreLoadedOnModal() {
     return this.constructor.isVisible(this.firstResultItemProduct);
   }

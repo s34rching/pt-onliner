@@ -34,7 +34,7 @@ describe('Onliner.by - Products / Search', () => {
 
   it("User should be able to find an 'active' product in catalog", () => {
     HomePage.performSearch(activeProduct.query);
-    SearchIframe.switchToSearchIframe();
+    SearchIframe.constructor.switchToSearchIframe(SearchIframe.fastSearchModal, SearchIframe.searchIframe);
     SearchIframe.waitForProductAreLoadedOnModal();
     expect(SearchIframe.resultItemProduct(activeProduct.catalogTitle).isDisplayed()).toBe(true);
   });
@@ -43,7 +43,7 @@ describe('Onliner.by - Products / Search', () => {
     const priceByn = getProductBynPrice(activeProduct, exchangeRate);
 
     HomePage.performSearch(activeProduct.query);
-    SearchIframe.switchToSearchIframe();
+    SearchIframe.constructor.switchToSearchIframe(SearchIframe.fastSearchModal, SearchIframe.searchIframe);
     SearchIframe.waitForProductAreLoadedOnModal();
     expect(SearchIframe.productPrice(activeProduct.catalogTitle).getText())
       .closeTo({ value: priceByn, delta: EXPECTED_PRICE_CHANGE });
@@ -51,14 +51,14 @@ describe('Onliner.by - Products / Search', () => {
 
   it("User should be able to find an 'out of stock' product in catalog", () => {
     HomePage.performSearch(outOfStockProduct.query);
-    SearchIframe.switchToSearchIframe();
+    SearchIframe.constructor.switchToSearchIframe(SearchIframe.fastSearchModal, SearchIframe.searchIframe);
     SearchIframe.waitForProductAreLoadedOnModal();
     expect(SearchIframe.resultItemProduct(outOfStockProduct.catalogTitle).isDisplayed()).toBe(true);
   });
 
   it("'out of stock' product should have appropriate label on modal", () => {
     HomePage.performSearch(outOfStockProduct.query);
-    SearchIframe.switchToSearchIframe();
+    SearchIframe.constructor.switchToSearchIframe(SearchIframe.fastSearchModal, SearchIframe.searchIframe);
     SearchIframe.waitForProductAreLoadedOnModal();
     expect(SearchIframe.productPrice(outOfStockProduct.catalogTitle).getText())
       .toBe(outOfStockProduct.label);
@@ -66,14 +66,14 @@ describe('Onliner.by - Products / Search', () => {
 
   it("User should be able to find an 'off-sale' product in catalog", () => {
     HomePage.performSearch(offSaleProduct.query);
-    SearchIframe.switchToSearchIframe();
+    SearchIframe.constructor.switchToSearchIframe(SearchIframe.fastSearchModal, SearchIframe.searchIframe);
     SearchIframe.waitForProductAreLoadedOnModal();
     expect(SearchIframe.resultItemProduct(offSaleProduct.catalogTitle).isDisplayed()).toBe(true);
   });
 
   it("'off sale' product should have appropriate label on modal", () => {
     HomePage.performSearch(offSaleProduct.query);
-    SearchIframe.switchToSearchIframe();
+    SearchIframe.constructor.switchToSearchIframe(SearchIframe.fastSearchModal, SearchIframe.searchIframe);
     SearchIframe.waitForProductAreLoadedOnModal();
     expect(SearchIframe.productPrice(offSaleProduct.catalogTitle).getText())
       .toBe(offSaleProduct.label);
@@ -83,7 +83,7 @@ describe('Onliner.by - Products / Search', () => {
     const nonExistentProductTitle = 'Rigth now i have';
 
     HomePage.performSearch(nonExistentProductTitle);
-    SearchIframe.switchToSearchIframe();
+    SearchIframe.constructor.switchToSearchIframe(SearchIframe.fastSearchModal, SearchIframe.searchIframe);
     expect(SearchIframe.firstResultItemProduct.isPresent()).toBe(false);
   });
 
@@ -91,7 +91,7 @@ describe('Onliner.by - Products / Search', () => {
     const nonExistentProductTitle = 'Rigth now i have';
 
     HomePage.performSearch(nonExistentProductTitle);
-    SearchIframe.switchToSearchIframe();
+    SearchIframe.constructor.switchToSearchIframe(SearchIframe.fastSearchModal, SearchIframe.searchIframe);
     SearchIframe.waitForSearchSuggestionIsVisible();
     expect(SearchIframe.searchBarSuggestion.getText()).toBe(nothingFoundSuggestion);
   });
@@ -103,7 +103,7 @@ describe('Onliner.by - Products / Search', () => {
     const { ruName, subcategoryPageRuHeading } = randomSubcategory;
 
     HomePage.performSearch(ruName);
-    SearchIframe.switchToSearchIframe();
+    SearchIframe.constructor.switchToSearchIframe(SearchIframe.fastSearchModal, SearchIframe.searchIframe);
     SearchIframe.waitForProductAreLoadedOnModal();
     expect(SearchIframe.resultItemSubcategory(subcategoryPageRuHeading).isDisplayed()).toBe(true);
   });
@@ -114,16 +114,16 @@ describe('Onliner.by - Products / Search', () => {
     const randomSubcategory = entities.getRandomUniqueSubcategory(randomCategory);
 
     HomePage.performSearch(randomSubcategory.ruName);
-    SearchIframe.switchToSearchIframe();
+    SearchIframe.constructor.switchToSearchIframe(SearchIframe.fastSearchModal, SearchIframe.searchIframe);
     SearchIframe.waitForProductAreLoadedOnModal();
     SearchIframe.openSubcategoryPage(randomSubcategory.subcategoryPageRuHeading);
-    SearchIframe.switchToDefaultFrame();
+    SearchIframe.constructor.switchToDefaultFrame();
     expect(ProductsList.constructor.isVisible(ProductsList.product())).toBe(true);
   });
 
   it('User should be able to close search modal', () => {
     HomePage.performSearch(activeProduct.query);
-    SearchIframe.switchToSearchIframe();
+    SearchIframe.constructor.switchToSearchIframe(SearchIframe.fastSearchModal, SearchIframe.searchIframe);
     SearchIframe.waitForProductAreLoadedOnModal();
     SearchIframe.closeSearchModal();
     expect(SearchIframe.constructor.isNotVisible(SearchIframe.fastSearchModal)).toBe(true);
@@ -131,10 +131,10 @@ describe('Onliner.by - Products / Search', () => {
 
   it('User should be able to open product details page while following search results', () => {
     HomePage.performSearch(product.query);
-    SearchIframe.switchToSearchIframe();
+    SearchIframe.constructor.switchToSearchIframe(SearchIframe.fastSearchModal, SearchIframe.searchIframe);
     SearchIframe.waitForProductAreLoadedOnModal();
     SearchIframe.openProductDetailsPageByTitle(product.catalogTitle);
-    SearchIframe.switchToDefaultFrame();
+    SearchIframe.constructor.switchToDefaultFrame();
     expect(ProductDetailsPage.productTitle(product).isDisplayed()).toBe(true);
   });
 });

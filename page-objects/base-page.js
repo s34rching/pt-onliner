@@ -72,6 +72,17 @@ class BasePage {
   static urlContains(text, timeout = browser.params.EXPLICIT_TIMEOUT) {
     return browser.wait(EC.urlContains(text), timeout);
   }
+
+  static switchToSearchIframe(container, iframe) {
+    this.isVisible(container);
+    // this.constructor.isVisible(this.fastSearchModal);
+    return browser.switchTo().frame(iframe.getWebElement());
+    // return browser.switchTo().frame(this.searchIframe.getWebElement());
+  }
+
+  static switchToDefaultFrame() {
+    return browser.switchTo().defaultContent();
+  }
 }
 
 module.exports = BasePage;
