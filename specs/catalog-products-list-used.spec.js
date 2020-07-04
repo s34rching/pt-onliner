@@ -3,10 +3,11 @@ const ProductDetailsPage = require('../page-objects/product-details-page');
 const LoginPage = require('../page-objects/login-page');
 const api = require('../helpers/onliner-api');
 const { stringifyToCents } = require('../service/currency-exchange-services');
+const { global, catalog } = require('../service/relative-urls');
 
 describe('Onliner.by - Catalog / Products List - Used', () => {
-  let usedCPUs; let
-    usedOffer;
+  let usedCPUs;
+  let usedOffer;
 
   beforeAll((done) => {
     api.getProducts('cpu/second-offers?segment=second').then((res) => {
@@ -21,20 +22,20 @@ describe('Onliner.by - Catalog / Products List - Used', () => {
   });
 
   it("User should be able to switch to 'used' offers", () => {
-    ProductsList.constructor.goTo('/cpu');
+    ProductsList.constructor.goTo(catalog.cpu);
     ProductsList.switchToSection('Объявления');
-    ProductsList.waitForUrlContains('/cpu?segment=second');
+    ProductsList.waitForUrlContains(catalog.used(catalog.cpu));
     expect(ProductsList.createUsedOfferButton.isDisplayed()).toBe(true);
   });
 
   it('List of offers should be displayed', () => {
-    ProductsList.constructor.goTo('/cpu?segment=second');
+    ProductsList.constructor.goTo(catalog.used(catalog.cpu));
     ProductsList.waitForProperTotalOfFoundProducts(usedCPUs.total.toString());
     expect(ProductsList.productByTitle(usedOffer.product.full_name).isDisplayed()).toBe(true);
   });
 
   it('User should be able to open offer', () => {
-    ProductsList.constructor.goTo('/cpu?segment=second');
+    ProductsList.constructor.goTo(catalog.used(catalog.cpu));
     ProductsList.waitForProperTotalOfFoundProducts(usedCPUs.total.toString());
     ProductsList.openUsedUserProductOfferByProductName(usedOffer.product.full_name);
     ProductDetailsPage.waitForUsedProductPrice();
@@ -60,10 +61,10 @@ describe('Onliner.by - Catalog / Products List - Used', () => {
   });
 
   it("Creation of new 'used' offer requires user to be logged in", () => {
-    ProductsList.constructor.goTo('/cpu?segment=second');
+    ProductsList.constructor.goTo(catalog.used(catalog.cpu));
     ProductsList.waitForProperTotalOfFoundProducts(usedCPUs.total.toString());
     ProductsList.createUserUsedProductOffer();
-    ProductsList.waitForUrlContains('/login?redirect');
+    ProductsList.waitForUrlContains(global.login);
     expect(LoginPage.authFormTitle.isDisplayed()).toBe(true);
   });
 });

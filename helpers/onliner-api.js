@@ -8,7 +8,7 @@ module.exports = {
     return rp(`https://www.onliner.by/sdapi/kurs/api/${query}`);
   },
   getProducts(query) {
-    return rp(`https://catalog.onliner.by/sdapi/catalog.api/search/${query}`);
+    return rp(`https://catalog.onliner.by/sdapi/catalog.api/search${query}`);
   },
   getOffers(query) {
     return rp(`https://catalog.onliner.by/sdapi/shop.api/${query}`);

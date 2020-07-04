@@ -3,21 +3,26 @@ const ProductsList = require('../page-objects/products-list');
 const ProductOffers = require('../page-objects/product-offers-page');
 const ProductDetailsPage = require('../page-objects/product-details-page');
 const api = require('../helpers/onliner-api');
+const { catalog } = require('../service/relative-urls');
 
 describe('Onliner.by - Catalog / Products List', () => {
   const numberOfProductsToCompare = 2;
-  let allCPUs; let CPUsFilteredByRating; let intelCPUs; let
-    shopList;
+  const filteredByIntel = catalog.filtered(catalog.cpu, 'manufacturer', 'Intel');
+  const orderedByRating = catalog.ordered(catalog.cpu, 'rating', 'desc');
+  let allCPUs;
+  let CPUsFilteredByRating;
+  let intelCPUs;
+  let shopList;
 
   beforeAll((done) => {
-    api.getProducts('cpu')
+    api.getProducts(catalog.cpu)
       .then((res) => {
         allCPUs = JSON.parse(res);
-        return api.getProducts('cpu?order=reviews_rating:desc');
+        return api.getProducts(orderedByRating);
       })
       .then((res) => {
         CPUsFilteredByRating = JSON.parse(res);
-        return api.getProducts('cpu?mfr[0]=intel');
+        return api.getProducts(decodeURIComponent(filteredByIntel));
       })
       .then((res) => {
         intelCPUs = JSON.parse(res);
@@ -32,7 +37,7 @@ describe('Onliner.by - Catalog / Products List', () => {
   beforeEach(() => {
     browser.waitForAngularEnabled(false);
 
-    ProductsList.constructor.goTo('/cpu');
+    ProductsList.constructor.goTo(catalog.cpu);
   });
 
   it("Products default sort order should be set as 'Popular'", () => {
@@ -45,7 +50,7 @@ describe('Onliner.by - Catalog / Products List', () => {
     ProductsList.openOrderListDropDown();
     ProductsList.waitForOrderDropdownListIsVisible();
     ProductsList.chooseOrderDropdownOptionByName('С отзывами');
-    ProductsList.waitForUrlContains('?order=reviews_rating:desc');
+    ProductsList.waitForUrlContains(orderedByRating);
     ProductsList.waitForActiveOrderOptionByName('С отзывами');
     ProductsList.waitForProperTotalOfFoundProducts(CPUsFilteredByRating.total.toString());
     ProductsList.productRewievs.each((review, index) => {
@@ -57,22 +62,20 @@ describe('Onliner.by - Catalog / Products List', () => {
     ProductsList.constructor.scrollElementIntoView(ProductsList.filterByName('Производитель'));
     ProductsList.filterProducts('Производитель', 'Intel');
     ProductsList.constructor.scrollElementIntoView(ProductsList.productsListTitle);
-    ProductsList.waitForUrlContains('cpu?mfr%5B0%5D=intel');
+    ProductsList.waitForUrlContains(filteredByIntel);
     ProductsList.waitForSearchTagIsDisplayed('Intel');
     ProductsList.waitForProperTotalOfFoundProducts(intelCPUs.total.toString());
     ProductsList.productsTitles.each((title) => expect(title.getText()).toContain('Intel'));
   });
 
   it('User should be able to reset applied filters', () => {
-    ProductsList.constructor.goTo('/cpu?mfr%5B0%5D=intel');
-    ProductsList.waitForSearchTagIsDisplayed('Intel');
-    ProductsList.waitForProperTotalOfFoundProducts(intelCPUs.total.toString());
+    ProductsList.constructor.goTo(filteredByIntel);
     ProductsList.resetFilters();
     ProductsList.waitForProperTotalOfFoundProducts(allCPUs.total.toString());
   });
 
   it('User should be able to add products to comparison', (done) => {
-    api.getProducts('cpu').then((res) => {
+    api.getProducts('/cpu').then((res) => {
       const CPUs = JSON.parse(res);
 
       const firstProduct = CPUs.products[0];
@@ -82,7 +85,7 @@ describe('Onliner.by - Catalog / Products List', () => {
 
       ProductsList.markProductsToCompare(numberOfProductsToCompare);
       ProductsList.compareProducts(numberOfProductsToCompare);
-      ProductsList.waitForUrlContains(`/compare/${firstProductShortName}+${secondProductShortName}`);
+      ProductsList.constructor.goTo(catalog.compare(firstProductShortName, secondProductShortName));
       expect(ProductsList.productComparisonName(firstProduct.full_name).isDisplayed()).toBe(true);
       expect(ProductsList.productComparisonName(secondProduct.full_name).isDisplayed()).toBe(true);
       done();
@@ -95,7 +98,7 @@ describe('Onliner.by - Catalog / Products List', () => {
     const firstProductShortName = firstProduct.url.match(/(?<=\/products\/).+$/)[0];
     const secondProductShortName = secondProduct.url.match(/(?<=\/products\/).+$/)[0];
 
-    ProductsList.constructor.goTo(`/compare/${firstProductShortName}+${secondProductShortName}`);
+    ProductsList.constructor.goTo(catalog.compare(firstProductShortName, secondProductShortName));
     ProductsList.clearComparisonList();
     expect(ProductsList.waitForUrlContains(browser.baseUrl)).toBe(true);
   });
