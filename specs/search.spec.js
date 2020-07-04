@@ -8,14 +8,15 @@ const SearchIframe = require('../page-objects/search-iframe');
 const ProductDetailsPage = require('../page-objects/product-details-page');
 const api = require('../helpers/onliner-api');
 const entities = require('../helpers/get-entities');
+const { product: { status }, search: { nothingFound } } = require('../service/component-properties');
 
 describe('Onliner.by - Products / Search', () => {
-  let exchangeRate;
+  const nonExistentProductTitle = 'Rigth now i have';
   const product = entities.getProduct();
-  const activeProduct = _.sample(entities.getProduct('active', 5));
-  const outOfStockProduct = entities.getProduct('out-of-stock');
-  const offSaleProduct = entities.getProduct('off-sale');
-  const nothingFoundSuggestion = 'Ничего не найдено';
+  const activeProduct = _.sample(entities.getProduct(status.active.serviceName, 5));
+  const outOfStockProduct = entities.getProduct(status.outOfStock.serviceName);
+  const offSaleProduct = entities.getProduct(status.offSale.serviceName);
+  let exchangeRate;
 
   beforeAll((done) => {
     api.getCurrencyExchangeRates().then((res) => {
@@ -61,7 +62,7 @@ describe('Onliner.by - Products / Search', () => {
     SearchIframe.switchToSearchIframe();
     SearchIframe.waitForProductAreLoadedOnModal();
     expect(SearchIframe.productPrice(outOfStockProduct.catalogTitle).getText())
-      .toBe(outOfStockProduct.label);
+      .toBe(status.outOfStock.label);
   });
 
   it("User should be able to find an 'off-sale' product in catalog", () => {
@@ -76,24 +77,20 @@ describe('Onliner.by - Products / Search', () => {
     SearchIframe.switchToSearchIframe();
     SearchIframe.waitForProductAreLoadedOnModal();
     expect(SearchIframe.productPrice(offSaleProduct.catalogTitle).getText())
-      .toBe(offSaleProduct.label);
+      .toBe(status.offSale.label);
   });
 
   it('There should NOT be search results if user searches for non-existent product', () => {
-    const nonExistentProductTitle = 'Rigth now i have';
-
     HomePage.performSearch(nonExistentProductTitle);
     SearchIframe.switchToSearchIframe();
     expect(SearchIframe.firstResultItemProduct.isPresent()).toBe(false);
   });
 
-  it(`Search bar should contain ${nothingFoundSuggestion} suggestion if user searches for non-existent product`, () => {
-    const nonExistentProductTitle = 'Rigth now i have';
-
+  it(`Search bar should contain "${nothingFound}" suggestion if user searches for non-existent product`, () => {
     HomePage.performSearch(nonExistentProductTitle);
     SearchIframe.switchToSearchIframe();
     SearchIframe.waitForSearchSuggestionIsVisible();
-    expect(SearchIframe.searchBarSuggestion.getText()).toBe(nothingFoundSuggestion);
+    expect(SearchIframe.searchBarSuggestion.getText()).toBe(nothingFound);
   });
 
   it('User should be able to search by product subcategory', () => {
