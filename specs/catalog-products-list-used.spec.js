@@ -4,13 +4,14 @@ const LoginPage = require('../page-objects/login-page');
 const api = require('../helpers/onliner-api');
 const { stringifyToCents } = require('../service/currency-exchange-services');
 const { global, catalog } = require('../service/relative-urls');
+const { list: { sections } } = require('../service/component-properties');
 
 describe('Onliner.by - Catalog / Products List - Used', () => {
   let usedCPUs;
   let usedOffer;
 
   beforeAll((done) => {
-    api.getProducts('cpu/second-offers?segment=second').then((res) => {
+    api.getProducts('/cpu/second-offers?segment=second').then((res) => {
       usedCPUs = JSON.parse(res);
       [usedOffer] = usedCPUs.offers;
       done();
@@ -23,7 +24,7 @@ describe('Onliner.by - Catalog / Products List - Used', () => {
 
   it("User should be able to switch to 'used' offers", () => {
     ProductsList.constructor.goTo(catalog.cpu);
-    ProductsList.switchToSection('Объявления');
+    ProductsList.switchToSection(sections.offers.title);
     ProductsList.waitForUrlContains(catalog.used(catalog.cpu));
     expect(ProductsList.createUsedOfferButton.isDisplayed()).toBe(true);
   });
