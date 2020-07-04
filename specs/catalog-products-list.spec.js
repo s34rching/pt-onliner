@@ -4,6 +4,7 @@ const ProductOffers = require('../page-objects/product-offers-page');
 const ProductDetailsPage = require('../page-objects/product-details-page');
 const api = require('../helpers/onliner-api');
 const { catalog, offers } = require('../service/relative-urls');
+const { list: { order, filters }, shop } = require('../service/component-properties');
 
 describe('Onliner.by - Catalog / Products List', () => {
   const numberOfProductsToCompare = 2;
@@ -47,17 +48,18 @@ describe('Onliner.by - Catalog / Products List', () => {
   });
 
   it("Products default sort order should be set as 'Popular'", () => {
-    expect(ProductsList.orderDropdownActiveOrderOption.getText()).toBe('популярные');
+    expect(ProductsList.orderDropdownActiveOrderOption.getText()).toBe(order.popular.label);
   });
 
   it('User should be able to sort out products by their reviews', () => {
     const reviews = _.map(CPUsFilteredByRating.products, (product) => product.reviews.count);
+    const reviewed = _.capitalize(order.reviewed.label);
 
     ProductsList.openOrderListDropDown();
     ProductsList.waitForOrderDropdownListIsVisible();
-    ProductsList.chooseOrderDropdownOptionByName('С отзывами');
+    ProductsList.chooseOrderDropdownOptionByName(reviewed);
     ProductsList.waitForUrlContains(orderedByRating);
-    ProductsList.waitForActiveOrderOptionByName('С отзывами');
+    ProductsList.waitForActiveOrderOptionByName(reviewed);
     ProductsList.waitForProperTotalOfFoundProducts(CPUsFilteredByRating.total.toString());
     ProductsList.productRewievs.each((review, index) => {
       expect(review.getText()).toContain(reviews[index]);
@@ -65,13 +67,16 @@ describe('Onliner.by - Catalog / Products List', () => {
   });
 
   it('User should be able to filter out products by manufacturer', () => {
-    ProductsList.constructor.scrollElementIntoView(ProductsList.filterByName('Производитель'));
-    ProductsList.filterProducts('Производитель', 'Intel');
+    const filterName = _.capitalize(filters.manufacturer.name);
+    const optionName = _.capitalize(filters.manufacturer.options.intel.name);
+
+    ProductsList.constructor.scrollElementIntoView(ProductsList.filterByName(filterName));
+    ProductsList.filterProducts(filterName, optionName);
     ProductsList.constructor.scrollElementIntoView(ProductsList.productsListTitle);
     ProductsList.waitForUrlContains(filteredByIntel);
-    ProductsList.waitForSearchTagIsDisplayed('Intel');
+    ProductsList.waitForSearchTagIsDisplayed(optionName);
     ProductsList.waitForProperTotalOfFoundProducts(intelCPUs.total.toString());
-    ProductsList.productsTitles.each((title) => expect(title.getText()).toContain('Intel'));
+    ProductsList.productsTitles.each((title) => expect(title.getText()).toContain(optionName));
   });
 
   it('User should be able to reset applied filters', () => {
@@ -161,6 +166,6 @@ describe('Onliner.by - Catalog / Products List', () => {
     ProductOffers.constructor.scrollElementIntoView(ProductOffers.productPriceHeading);
     ProductOffers.skipPickCityModal();
     ProductOffers.waitForFirstShopLogoDisplayed(firstShop.shop_id);
-    expect(ProductOffers.shopWorkingHours.getText()).toContain('Магазин сегодня работает с');
+    expect(ProductOffers.shopWorkingHours.getText()).toContain(shop.workingHours.label);
   });
 });

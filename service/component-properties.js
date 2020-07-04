@@ -4,6 +4,22 @@ module.exports = {
       catalog: { title: 'Каталог' },
       offers: { title: 'Объявления' },
     },
+    order: {
+      popular: { label: 'популярные' },
+      cheap: { label: 'дешевые' },
+      expensive: { label: 'дорогие' },
+      new: { label: 'новые' },
+      reviewed: { label: 'с отзывами' },
+    },
+    filters: {
+      manufacturer: {
+        name: 'Производитель',
+        options: {
+          intel: { name: 'Intel' },
+          amd: { name: 'AMD' },
+        },
+      },
+    },
   },
   product: {
     status: {
@@ -18,6 +34,9 @@ module.exports = {
       addUsedOffer: { title: 'Разместить объявление' },
       topics: { title: 'Обсуждение на форуме' },
     },
+  },
+  shop: {
+    workingHours: { label: 'Магазин сегодня работает с' },
   },
   search: {
     nothingFound: 'Ничего не найдено',
