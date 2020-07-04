@@ -24,7 +24,9 @@ const catalog = {
 
 const products = {};
 
-const offers = {};
+const offers = {
+  all: (productKey, town = 'all') => `/products/${productKey}/positions?town=${town}`,
+};
 
 module.exports = {
   catalog, products, offers, global,

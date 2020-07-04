@@ -3,41 +3,47 @@ const ProductsList = require('../page-objects/products-list');
 const ProductOffers = require('../page-objects/product-offers-page');
 const ProductDetailsPage = require('../page-objects/product-details-page');
 const api = require('../helpers/onliner-api');
-const { catalog } = require('../service/relative-urls');
+const { catalog, offers } = require('../service/relative-urls');
 
 describe('Onliner.by - Catalog / Products List', () => {
   const numberOfProductsToCompare = 2;
   const filteredByIntel = catalog.filtered(catalog.cpu, 'manufacturer', 'Intel');
   const orderedByRating = catalog.ordered(catalog.cpu, 'rating', 'desc');
   let allCPUs;
+  let firstProduct;
+  let secondProduct;
   let CPUsFilteredByRating;
   let intelCPUs;
-  let shopList;
+  let firstShop;
 
   beforeAll((done) => {
-    api.getProducts(catalog.cpu)
-      .then((res) => {
-        allCPUs = JSON.parse(res);
-        return api.getProducts(orderedByRating);
-      })
+    api.getProducts(orderedByRating)
       .then((res) => {
         CPUsFilteredByRating = JSON.parse(res);
         return api.getProducts(decodeURIComponent(filteredByIntel));
       })
       .then((res) => {
         intelCPUs = JSON.parse(res);
-        return api.getOffers('products/i59400fb/positions?town=minsk');
-      })
-      .then((res) => {
-        shopList = JSON.parse(res);
         done();
       });
   });
 
-  beforeEach(() => {
+  beforeEach((done) => {
+    api.getProducts(catalog.cpu)
+      .then((res) => {
+        allCPUs = JSON.parse(res);
+        ([firstProduct, secondProduct] = allCPUs.products);
+        return api.getOffers(offers.all(firstProduct.key));
+      })
+      .then((res) => {
+        const shopList = JSON.parse(res);
+        ([firstShop] = shopList.positions.primary);
+      });
+
     browser.waitForAngularEnabled(false);
 
     ProductsList.constructor.goTo(catalog.cpu);
+    done();
   });
 
   it("Products default sort order should be set as 'Popular'", () => {
@@ -74,46 +80,27 @@ describe('Onliner.by - Catalog / Products List', () => {
     ProductsList.waitForProperTotalOfFoundProducts(allCPUs.total.toString());
   });
 
-  it('User should be able to add products to comparison', (done) => {
-    api.getProducts('/cpu').then((res) => {
-      const CPUs = JSON.parse(res);
-
-      const firstProduct = CPUs.products[0];
-      const secondProduct = CPUs.products[1];
-      const firstProductShortName = firstProduct.url.match(/(?<=\/products\/).+$/)[0];
-      const secondProductShortName = secondProduct.url.match(/(?<=\/products\/).+$/)[0];
-
-      ProductsList.markProductsToCompare(numberOfProductsToCompare);
-      ProductsList.compareProducts(numberOfProductsToCompare);
-      ProductsList.constructor.goTo(catalog.compare(firstProductShortName, secondProductShortName));
-      expect(ProductsList.productComparisonName(firstProduct.full_name).isDisplayed()).toBe(true);
-      expect(ProductsList.productComparisonName(secondProduct.full_name).isDisplayed()).toBe(true);
-      done();
-    });
+  it('User should be able to add products to comparison', () => {
+    ProductsList.markProductsToCompare(numberOfProductsToCompare);
+    ProductsList.compareProducts(numberOfProductsToCompare);
+    ProductsList.constructor.urlContains(catalog.compare(firstProduct.key, secondProduct.key));
+    expect(ProductsList.productComparisonName(firstProduct.full_name).isDisplayed()).toBe(true);
+    expect(ProductsList.productComparisonName(secondProduct.full_name).isDisplayed()).toBe(true);
   });
 
   it('User should be able to clean out comparison', () => {
-    const firstProduct = allCPUs.products[0];
-    const secondProduct = allCPUs.products[1];
-    const firstProductShortName = firstProduct.url.match(/(?<=\/products\/).+$/)[0];
-    const secondProductShortName = secondProduct.url.match(/(?<=\/products\/).+$/)[0];
-
-    ProductsList.constructor.goTo(catalog.compare(firstProductShortName, secondProductShortName));
+    ProductsList.constructor.goTo(catalog.compare(firstProduct.key, secondProduct.key));
     ProductsList.clearComparisonList();
     expect(ProductsList.waitForUrlContains(browser.baseUrl)).toBe(true);
   });
 
   it('User should be able to open shop offers list page', () => {
-    const [firstProduct] = allCPUs.products;
-
     ProductsList.openFirstProductOffersPage();
     ProductsList.waitForUrlContains(firstProduct.html_url);
     expect(ProductOffers.constructor.isVisible(ProductOffers.productPriceHeading)).toBe(true);
   });
 
   it('Product name should be displayed on offers page', () => {
-    const [firstProduct] = allCPUs.products;
-
     ProductsList.openFirstProductOffersPage();
     ProductsList.waitForUrlContains(firstProduct.html_url);
     ProductOffers.constructor.isVisible(ProductOffers.productPriceHeading);
@@ -121,8 +108,6 @@ describe('Onliner.by - Catalog / Products List', () => {
   });
 
   it('Base order group should be displayed on offers page', () => {
-    const [firstProduct] = allCPUs.products;
-
     ProductsList.openFirstProductOffersPage();
     ProductsList.waitForUrlContains(firstProduct.html_url);
     ProductOffers.constructor.isVisible(ProductOffers.productPriceHeading);
@@ -132,8 +117,6 @@ describe('Onliner.by - Catalog / Products List', () => {
   });
 
   it('Shop filters should be displayed on offers page', () => {
-    const [firstProduct] = allCPUs.products;
-
     ProductsList.openFirstProductOffersPage();
     ProductsList.waitForUrlContains(firstProduct.html_url);
     ProductOffers.constructor.isVisible(ProductOffers.productPriceHeading);
@@ -143,9 +126,6 @@ describe('Onliner.by - Catalog / Products List', () => {
   });
 
   it('Shop logo should be displayed on offers page', () => {
-    const [firstProduct] = allCPUs.products;
-    const [firstShop] = shopList.positions.primary;
-
     ProductsList.openFirstProductOffersPage();
     ProductsList.waitForUrlContains(firstProduct.html_url);
     ProductOffers.constructor.isVisible(ProductOffers.productPriceHeading);
@@ -155,9 +135,6 @@ describe('Onliner.by - Catalog / Products List', () => {
   });
 
   it('Shop offer price should be displayed on offers page', () => {
-    const [firstProduct] = allCPUs.products;
-    const [firstShop] = shopList.positions.primary;
-
     ProductsList.openFirstProductOffersPage();
     ProductsList.waitForUrlContains(firstProduct.html_url);
     ProductOffers.constructor.isVisible(ProductOffers.productPriceHeading);
@@ -168,9 +145,6 @@ describe('Onliner.by - Catalog / Products List', () => {
   });
 
   it("'Shop Contacts' button should be displayed on offers page", () => {
-    const [firstProduct] = allCPUs.products;
-    const [firstShop] = shopList.positions.primary;
-
     ProductsList.openFirstProductOffersPage();
     ProductsList.waitForUrlContains(firstProduct.html_url);
     ProductOffers.constructor.isVisible(ProductOffers.productPriceHeading);
@@ -181,9 +155,6 @@ describe('Onliner.by - Catalog / Products List', () => {
   });
 
   it('Shop working hours button should be displayed on offers page', () => {
-    const [firstProduct] = allCPUs.products;
-    const [firstShop] = shopList.positions.primary;
-
     ProductsList.openFirstProductOffersPage();
     ProductsList.waitForUrlContains(firstProduct.html_url);
     ProductOffers.constructor.isVisible(ProductOffers.productPriceHeading);
