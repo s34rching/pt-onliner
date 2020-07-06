@@ -2,13 +2,13 @@
   "version": "1.0.0",
   "scripts": {
     "webdriver": "webdriver-manager update && webdriver-manager start",
-    "full": "protractor conf.js --suite full",
-    "search": "protractor conf.js --suite search",
-    "navigation": "protractor conf.js --suite navigation",
-    "products-list": "protractor conf.js --suite products-list",
-    "used": "protractor conf.js --suite used",
-    "informers:currency": "protractor conf.js --suite currency",
-    "informers:weather": "protractor conf.js --suite weather",
+    "full": "protractor config/conf.js --suite full",
+    "search": "protractor config/conf.js --suite search",
+    "navigation": "protractor config/conf.js --suite navigation",
+    "products-list": "protractor config/conf.js --suite products-list",
+    "used": "protractor config/conf.js --suite used",
+    "informers:currency": "protractor config/conf.js --suite currency",
+    "informers:weather": "protractor config/conf.js --suite weather",
     "lint-staged": "npx lint-staged"
   },
   "repository": {
