@@ -1,5 +1,5 @@
 const _ = require('lodash');
-const { EXPECTED_PRICE_CHANGE } = require('../config/scenarios');
+const { EXPECTED_PRICE_CHANGE, PRODUCTS_PULL, NON_EXISTENT_PRODUCT_TITLE } = require('../config/scenarios');
 const { getProductBynPrice } = require('../service/product-services');
 const customMatchers = require('../service/custom-matchers');
 const HomePage = require('../page-objects/homepage');
@@ -11,9 +11,8 @@ const entities = require('../helpers/get-entities');
 const { product: { status }, search: { nothingFound } } = require('../service/component-properties');
 
 describe('Onliner.by - Products / Search', () => {
-  const nonExistentProductTitle = 'Rigth now i have';
   const product = entities.getProduct();
-  const activeProduct = _.sample(entities.getProduct(status.active.serviceName, 5));
+  const activeProduct = _.sample(entities.getProduct(status.active.serviceName, PRODUCTS_PULL));
   const outOfStockProduct = entities.getProduct(status.outOfStock.serviceName);
   const offSaleProduct = entities.getProduct(status.offSale.serviceName);
   let exchangeRate;
@@ -81,13 +80,13 @@ describe('Onliner.by - Products / Search', () => {
   });
 
   it('There should NOT be search results if user searches for non-existent product', () => {
-    HomePage.performSearch(nonExistentProductTitle);
+    HomePage.performSearch(NON_EXISTENT_PRODUCT_TITLE);
     SearchIframe.switchToSearchIframe();
     expect(SearchIframe.firstResultItemProduct.isPresent()).toBe(false);
   });
 
   it(`Search bar should contain "${nothingFound}" suggestion if user searches for non-existent product`, () => {
-    HomePage.performSearch(nonExistentProductTitle);
+    HomePage.performSearch(NON_EXISTENT_PRODUCT_TITLE);
     SearchIframe.switchToSearchIframe();
     SearchIframe.waitForSearchSuggestionIsVisible();
     expect(SearchIframe.searchBarSuggestion.getText()).toBe(nothingFound);
