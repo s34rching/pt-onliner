@@ -5,6 +5,7 @@ const random = require('../helpers/get-random-testing-data');
 const api = require('../helpers/onliner-api');
 const { getDirectionWithOrder, getDirectionCurrencies, calculateConversionResult } = require('../service/currency-exchange-services');
 const { composeUrl } = require('../helpers/url-composer');
+const { CURRENCY_AMOUNT: { min, max } } = require('../config/scenarios');
 
 describe('Onliner.by - Top Navigation / Informers - Currency Exchange', () => {
   let bestUsdExchangeRate;
@@ -34,7 +35,7 @@ describe('Onliner.by - Top Navigation / Informers - Currency Exchange', () => {
   it('User should be able to convert currencies', () => {
     const { direction, order } = getDirectionWithOrder();
     const { in: input, out: output } = getDirectionCurrencies(direction, order);
-    const randomCurrencyAmount = random.getRandomNumber(20, 10000);
+    const randomCurrencyAmount = random.getRandomNumber(min, max);
 
     HomePage.constructor.open(composeUrl('currency'));
     ExchangeRatesPage.waitForConvertOutDataVisible();
