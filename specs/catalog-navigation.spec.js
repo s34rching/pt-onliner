@@ -22,7 +22,6 @@ describe('Onliner.by - Catalog / Navigation', () => {
   });
 
   it('User should be able to go through catalog navigation to open product details page', () => {
-    HomePage.openCatalog();
     Catalog.chooseClassifierItem(classifierItem.id);
     Catalog.hoverCategoryItem(categoryItem.ruName);
     Catalog.openSubcategory(subcategoryItem);
