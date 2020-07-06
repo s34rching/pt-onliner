@@ -16,7 +16,7 @@ describe('Onliner.by - Top Navigation / Informers - Weather Forecast', () => {
     api.getWeather()
       .then((res) => {
         forecast = JSON.parse(res);
-        currentTemperature = forecast.now.temperature;
+        currentTemperature = getFormattedTemperature(forecast.now.temperature);
         return api.getWeather(userCity.id);
       })
       .then((res) => {
@@ -31,7 +31,7 @@ describe('Onliner.by - Top Navigation / Informers - Weather Forecast', () => {
 
   it("User should be able to see current temperature in user's default city on homepage", () => {
     HomePage.constructor.goTo('/');
-    expect(HomePage.currentTemperature.getText()).toBe(getFormattedTemperature(currentTemperature));
+    expect(HomePage.currentTemperature.getText()).toBe(currentTemperature);
   });
 
   it('User should be able open weather forecast page', () => {
