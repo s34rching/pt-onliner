@@ -39,9 +39,7 @@ describe('Onliner.by - Top Navigation / Informers - Currency Exchange', () => {
     HomePage.constructor.open(composeUrl('currency'));
     ExchangeRatesPage.waitForConvertOutDataVisible();
     ExchangeRatesPage.getDirectionBestExchangeRate(direction, order).then((rate) => {
-      ExchangeRatesPage.chooseCurrencyToConvert('in', input);
-      ExchangeRatesPage.chooseCurrencyToConvert('out', output);
-      ExchangeRatesPage.enterCurrencyAmountToConvert(randomCurrencyAmount);
+      ExchangeRatesPage.convertCurrency(input, output, randomCurrencyAmount);
       expect(ExchangeRatesPage.getConversionResult())
         .toBe(calculateConversionResult(input, output, randomCurrencyAmount, rate, order));
     });
