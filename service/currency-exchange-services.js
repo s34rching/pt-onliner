@@ -3,6 +3,7 @@ const _ = require('lodash');
 const { CONVERSION_DIRECTIONS } = require('../config/scenarios');
 
 module.exports = {
+  changeDecimalSeparator: (number, separator) => parseFloat(number.toString().replace(/\D/, separator)),
   getFormattedRate: (rate) => `$ ${rate}`,
   stringifyToCents: (amount) => parseFloat(amount).toFixed(2).toString().replace('.', ','),
   getDirectionWithOrder: () => ({ direction: _.sample(CONVERSION_DIRECTIONS), order: _.sample(['direct', 'reverse']) }),

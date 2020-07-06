@@ -9,6 +9,7 @@ const ProductDetailsPage = require('../page-objects/product-details-page');
 const api = require('../helpers/onliner-api');
 const entities = require('../helpers/get-entities');
 const { product: { status }, search: { nothingFound } } = require('../service/component-properties');
+const { changeDecimalSeparator } = require('../service/currency-exchange-services');
 
 describe('Onliner.by - Products / Search', () => {
   const product = entities.getProduct();
@@ -20,7 +21,7 @@ describe('Onliner.by - Products / Search', () => {
   beforeAll((done) => {
     api.getCurrencyExchangeRates().then((res) => {
       const dailyCurrencyChanges = JSON.parse(res);
-      exchangeRate = parseFloat(dailyCurrencyChanges.amount.replace(',', '.'));
+      exchangeRate = changeDecimalSeparator(dailyCurrencyChanges.amount, '.');
       done();
     });
   });
