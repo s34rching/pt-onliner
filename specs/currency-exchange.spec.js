@@ -3,7 +3,9 @@ const ExchangeRatesPage = require('../page-objects/currency-exchange-page');
 const { getLocationsAmount, defineLocationsMessageOnPopup } = require('../service/location-services');
 const random = require('../helpers/get-random-testing-data');
 const api = require('../helpers/onliner-api');
-const { getDirectionWithOrder, getDirectionCurrencies, calculateConversionResult } = require('../service/currency-exchange-services');
+const {
+  getDirectionWithOrder, getDirectionCurrencies, calculateConversionResult, getFormattedRate,
+} = require('../service/currency-exchange-services');
 const { composeUrl } = require('../helpers/url-composer');
 const { CURRENCY_AMOUNT: { min, max } } = require('../config/scenarios');
 
@@ -12,7 +14,7 @@ describe('Onliner.by - Top Navigation / Informers - Currency Exchange', () => {
 
   beforeAll((done) => {
     api.getCurrencyExchangeRates().then((res) => {
-      bestUsdExchangeRate = JSON.parse(res).amount;
+      bestUsdExchangeRate = getFormattedRate(JSON.parse(res).amount);
       done();
     });
   });
@@ -23,7 +25,7 @@ describe('Onliner.by - Top Navigation / Informers - Currency Exchange', () => {
 
   it('User should be able to see the best conversion rate of USD on homepage', () => {
     HomePage.constructor.goTo('/');
-    expect(HomePage.currencyInformer.getText()).toBe(`$ ${bestUsdExchangeRate}`);
+    expect(HomePage.currencyInformer.getText()).toBe(bestUsdExchangeRate);
   });
 
   it('User should be able to open currency exchange rates page', () => {
