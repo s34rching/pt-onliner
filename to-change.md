@@ -4,7 +4,7 @@ DONE --- 3. Remove service code from tests
 DONE --- 4. Unwrap 'describe' blocks nesting
 DONE --- 5. Get rid of multiple assertions
 DONE --- 6. Make tests granular
-7. Get rid of hard-coded data
+DONE --- 7. Get rid of hard-coded data
 DONE --- 8. Follow the only assertion style => expect
 
 EXTRAS:
@@ -13,6 +13,7 @@ EXTRAS:
 11. Optimize tests steps
 12. Change assertions
 13. Add jsdoc description
+14. To async / await
 
 1. Page objects:
 Все хорошо. Единственное, мне показалось странным наследование login page от base page из-за searchBar и topNavbar, которых вроде как нет на логине. Возможно, это отностится и к другим page object-там
