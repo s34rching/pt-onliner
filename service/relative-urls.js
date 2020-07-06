@@ -28,6 +28,10 @@ const offers = {
   all: (productKey, town = 'all') => `/products/${productKey}/positions?town=${town}`,
 };
 
+const api = {
+  used: (base) => `${base}/second-offers?segment=second`,
+};
+
 module.exports = {
-  catalog, products, offers, global,
+  catalog, products, offers, global, api,
 };

@@ -3,7 +3,7 @@ const ProductDetailsPage = require('../page-objects/product-details-page');
 const LoginPage = require('../page-objects/login-page');
 const api = require('../helpers/onliner-api');
 const { stringifyToCents } = require('../service/currency-exchange-services');
-const { global, catalog } = require('../service/relative-urls');
+const { global, catalog, api: apiLinks } = require('../service/relative-urls');
 const { list: { sections } } = require('../service/component-properties');
 
 describe('Onliner.by - Catalog / Products List - Used', () => {
@@ -11,7 +11,7 @@ describe('Onliner.by - Catalog / Products List - Used', () => {
   let usedOffer;
 
   beforeAll((done) => {
-    api.getProducts('/cpu/second-offers?segment=second').then((res) => {
+    api.getProducts(apiLinks.used(catalog.cpu)).then((res) => {
       usedCPUs = JSON.parse(res);
       [usedOffer] = usedCPUs.offers;
       done();
