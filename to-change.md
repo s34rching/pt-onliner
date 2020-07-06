@@ -9,7 +9,7 @@ DONE --- 8. Follow the only assertion style => expect
 
 EXTRAS:
 9. Optimize locators and get rid of redundant ones
-10. Update hooks / api calls / variables initialization
+10. DONE --- Update hooks / api calls / variables initialization
 11. Optimize tests steps
 12. Change assertions
 13. Add jsdoc description
