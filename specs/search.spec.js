@@ -1,5 +1,5 @@
 const _ = require('lodash');
-const { EXPECTED_PRICE_CHANGE } = require('../service/constants');
+const { EXPECTED_PRICE_CHANGE } = require('../config/scenarios');
 const { getProductBynPrice } = require('../service/product-services');
 const customMatchers = require('../service/custom-matchers');
 const HomePage = require('../page-objects/homepage');

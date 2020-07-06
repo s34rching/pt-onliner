@@ -1,6 +1,6 @@
 const _ = require('lodash');
 
-const { CONVERSION_DIRECTIONS } = require('./constants');
+const { CONVERSION_DIRECTIONS } = require('../config/scenarios');
 
 module.exports = {
   stringifyToCents: (amount) => parseFloat(amount).toFixed(2).toString().replace('.', ','),

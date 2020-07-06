@@ -5,9 +5,9 @@ const ProductDetailsPage = require('../page-objects/product-details-page');
 const api = require('../helpers/onliner-api');
 const { catalog, offers } = require('../service/relative-urls');
 const { list: { order, filters }, shop } = require('../service/component-properties');
+const { COMPARE_PRODUCTS_NUMBER } = require('../config/scenarios');
 
 describe('Onliner.by - Catalog / Products List', () => {
-  const numberOfProductsToCompare = 2;
   const filteredByIntel = catalog.filtered(catalog.cpu, 'manufacturer', 'Intel');
   const orderedByRating = catalog.ordered(catalog.cpu, 'rating', 'desc');
   let allCPUs;
@@ -86,8 +86,8 @@ describe('Onliner.by - Catalog / Products List', () => {
   });
 
   it('User should be able to add products to comparison', () => {
-    ProductsList.markProductsToCompare(numberOfProductsToCompare);
-    ProductsList.compareProducts(numberOfProductsToCompare);
+    ProductsList.markProductsToCompare(COMPARE_PRODUCTS_NUMBER);
+    ProductsList.compareProducts(COMPARE_PRODUCTS_NUMBER);
     ProductsList.constructor.urlContains(catalog.compare(firstProduct.key, secondProduct.key));
     expect(ProductsList.productComparisonName(firstProduct.full_name).isDisplayed()).toBe(true);
     expect(ProductsList.productComparisonName(secondProduct.full_name).isDisplayed()).toBe(true);
