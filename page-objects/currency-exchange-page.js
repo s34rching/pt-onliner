@@ -57,6 +57,12 @@ class ExchangeRatesPage extends BasePage {
       .sendKeys(amount);
   }
 
+  convertCurrency(currencyIn, currencyOut, amount) {
+    this.chooseCurrencyToConvert('in', currencyIn);
+    this.chooseCurrencyToConvert('out', currencyOut);
+    this.enterCurrencyAmountToConvert(amount);
+  }
+
   getDirectionBestExchangeRate(direction, order) {
     return this.bestExchangeRateByCurrencyDirection(direction, order)
       .getAttribute('data-title')

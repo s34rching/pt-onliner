@@ -23,12 +23,12 @@ module.exports = {
 
     switch (status) {
       case 'active':
-        productsPull = products.available;
+        productsPull = products.active;
         break;
-      case 'out-of-stock':
+      case 'outOfStock':
         productsPull = products.outOfStock;
         break;
-      case 'off-sale':
+      case 'offSale':
         productsPull = products.offSale;
         break;
       default:

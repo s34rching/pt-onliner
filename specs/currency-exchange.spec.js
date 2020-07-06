@@ -3,15 +3,18 @@ const ExchangeRatesPage = require('../page-objects/currency-exchange-page');
 const { getLocationsAmount, defineLocationsMessageOnPopup } = require('../service/location-services');
 const random = require('../helpers/get-random-testing-data');
 const api = require('../helpers/onliner-api');
-const { getDirectionWithOrder, getDirectionCurrencies, calculateConversionResult } = require('../service/currency-exchange-services');
+const {
+  getDirectionWithOrder, getDirectionCurrencies, calculateConversionResult, getFormattedRate,
+} = require('../service/currency-exchange-services');
 const { composeUrl } = require('../helpers/url-composer');
+const { CURRENCY_AMOUNT: { min, max } } = require('../config/scenarios');
 
 describe('Onliner.by - Top Navigation / Informers - Currency Exchange', () => {
   let bestUsdExchangeRate;
 
   beforeAll((done) => {
     api.getCurrencyExchangeRates().then((res) => {
-      bestUsdExchangeRate = JSON.parse(res).amount;
+      bestUsdExchangeRate = getFormattedRate(JSON.parse(res).amount);
       done();
     });
   });
@@ -22,7 +25,7 @@ describe('Onliner.by - Top Navigation / Informers - Currency Exchange', () => {
 
   it('User should be able to see the best conversion rate of USD on homepage', () => {
     HomePage.constructor.goTo('/');
-    expect(HomePage.currencyInformer.getText()).toBe(`$ ${bestUsdExchangeRate}`);
+    expect(HomePage.currencyInformer.getText()).toBe(bestUsdExchangeRate);
   });
 
   it('User should be able to open currency exchange rates page', () => {
@@ -34,14 +37,12 @@ describe('Onliner.by - Top Navigation / Informers - Currency Exchange', () => {
   it('User should be able to convert currencies', () => {
     const { direction, order } = getDirectionWithOrder();
     const { in: input, out: output } = getDirectionCurrencies(direction, order);
-    const randomCurrencyAmount = random.getRandomNumber(20, 10000);
+    const randomCurrencyAmount = random.getRandomNumber(min, max);
 
     HomePage.constructor.open(composeUrl('currency'));
     ExchangeRatesPage.waitForConvertOutDataVisible();
     ExchangeRatesPage.getDirectionBestExchangeRate(direction, order).then((rate) => {
-      ExchangeRatesPage.chooseCurrencyToConvert('in', input);
-      ExchangeRatesPage.chooseCurrencyToConvert('out', output);
-      ExchangeRatesPage.enterCurrencyAmountToConvert(randomCurrencyAmount);
+      ExchangeRatesPage.convertCurrency(input, output, randomCurrencyAmount);
       expect(ExchangeRatesPage.getConversionResult())
         .toBe(calculateConversionResult(input, output, randomCurrencyAmount, rate, order));
     });

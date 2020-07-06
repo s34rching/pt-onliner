@@ -3,50 +3,63 @@ const ProductsList = require('../page-objects/products-list');
 const ProductOffers = require('../page-objects/product-offers-page');
 const ProductDetailsPage = require('../page-objects/product-details-page');
 const api = require('../helpers/onliner-api');
+const { catalog, offers } = require('../service/relative-urls');
+const { list: { order, filters }, shop } = require('../service/component-properties');
+const { COMPARE_PRODUCTS_NUMBER } = require('../config/scenarios');
 
 describe('Onliner.by - Catalog / Products List', () => {
-  const numberOfProductsToCompare = 2;
-  let allCPUs; let CPUsFilteredByRating; let intelCPUs; let
-    shopList;
+  const filteredByIntel = catalog.filtered(catalog.cpu, 'manufacturer', 'Intel');
+  const orderedByRating = catalog.ordered(catalog.cpu, 'rating', 'desc');
+  let allCPUs;
+  let firstProduct;
+  let secondProduct;
+  let CPUsFilteredByRating;
+  let intelCPUs;
+  let firstShop;
 
   beforeAll((done) => {
-    api.getProducts('cpu')
-      .then((res) => {
-        allCPUs = JSON.parse(res);
-        return api.getProducts('cpu?order=reviews_rating:desc');
-      })
+    api.getProducts(orderedByRating)
       .then((res) => {
         CPUsFilteredByRating = JSON.parse(res);
-        return api.getProducts('cpu?mfr[0]=intel');
+        return api.getProducts(decodeURIComponent(filteredByIntel));
       })
       .then((res) => {
         intelCPUs = JSON.parse(res);
-        return api.getOffers('products/i59400fb/positions?town=minsk');
-      })
-      .then((res) => {
-        shopList = JSON.parse(res);
         done();
       });
   });
 
-  beforeEach(() => {
+  beforeEach((done) => {
+    api.getProducts(catalog.cpu)
+      .then((res) => {
+        allCPUs = JSON.parse(res);
+        ([firstProduct, secondProduct] = allCPUs.products);
+        return api.getOffers(offers.all(firstProduct.key));
+      })
+      .then((res) => {
+        const shopList = JSON.parse(res);
+        ([firstShop] = shopList.positions.primary);
+      });
+
     browser.waitForAngularEnabled(false);
 
-    ProductsList.constructor.goTo('/cpu');
+    ProductsList.constructor.goTo(catalog.cpu);
+    done();
   });
 
   it("Products default sort order should be set as 'Popular'", () => {
-    expect(ProductsList.orderDropdownActiveOrderOption.getText()).toBe('популярные');
+    expect(ProductsList.orderDropdownActiveOrderOption.getText()).toBe(order.popular.label);
   });
 
   it('User should be able to sort out products by their reviews', () => {
     const reviews = _.map(CPUsFilteredByRating.products, (product) => product.reviews.count);
+    const reviewed = _.capitalize(order.reviewed.label);
 
     ProductsList.openOrderListDropDown();
     ProductsList.waitForOrderDropdownListIsVisible();
-    ProductsList.chooseOrderDropdownOptionByName('С отзывами');
-    ProductsList.waitForUrlContains('?order=reviews_rating:desc');
-    ProductsList.waitForActiveOrderOptionByName('С отзывами');
+    ProductsList.chooseOrderDropdownOptionByName(reviewed);
+    ProductsList.waitForUrlContains(orderedByRating);
+    ProductsList.waitForActiveOrderOptionByName(reviewed);
     ProductsList.waitForProperTotalOfFoundProducts(CPUsFilteredByRating.total.toString());
     ProductsList.productRewievs.each((review, index) => {
       expect(review.getText()).toContain(reviews[index]);
@@ -54,63 +67,45 @@ describe('Onliner.by - Catalog / Products List', () => {
   });
 
   it('User should be able to filter out products by manufacturer', () => {
-    ProductsList.constructor.scrollElementIntoView(ProductsList.filterByName('Производитель'));
-    ProductsList.filterProducts('Производитель', 'Intel');
+    const filterName = _.capitalize(filters.manufacturer.name);
+    const optionName = _.capitalize(filters.manufacturer.options.intel.name);
+
+    ProductsList.constructor.scrollElementIntoView(ProductsList.filterByName(filterName));
+    ProductsList.filterProducts(filterName, optionName);
     ProductsList.constructor.scrollElementIntoView(ProductsList.productsListTitle);
-    ProductsList.waitForUrlContains('cpu?mfr%5B0%5D=intel');
-    ProductsList.waitForSearchTagIsDisplayed('Intel');
+    ProductsList.waitForUrlContains(filteredByIntel);
+    ProductsList.waitForSearchTagIsDisplayed(optionName);
     ProductsList.waitForProperTotalOfFoundProducts(intelCPUs.total.toString());
-    ProductsList.productsTitles.each((title) => expect(title.getText()).toContain('Intel'));
+    ProductsList.productsTitles.each((title) => expect(title.getText()).toContain(optionName));
   });
 
   it('User should be able to reset applied filters', () => {
-    ProductsList.constructor.goTo('/cpu?mfr%5B0%5D=intel');
-    ProductsList.waitForSearchTagIsDisplayed('Intel');
-    ProductsList.waitForProperTotalOfFoundProducts(intelCPUs.total.toString());
+    ProductsList.constructor.goTo(filteredByIntel);
     ProductsList.resetFilters();
     ProductsList.waitForProperTotalOfFoundProducts(allCPUs.total.toString());
   });
 
-  it('User should be able to add products to comparison', (done) => {
-    api.getProducts('cpu').then((res) => {
-      const CPUs = JSON.parse(res);
-
-      const firstProduct = CPUs.products[0];
-      const secondProduct = CPUs.products[1];
-      const firstProductShortName = firstProduct.url.match(/(?<=\/products\/).+$/)[0];
-      const secondProductShortName = secondProduct.url.match(/(?<=\/products\/).+$/)[0];
-
-      ProductsList.markProductsToCompare(numberOfProductsToCompare);
-      ProductsList.compareProducts(numberOfProductsToCompare);
-      ProductsList.waitForUrlContains(`/compare/${firstProductShortName}+${secondProductShortName}`);
-      expect(ProductsList.productComparisonName(firstProduct.full_name).isDisplayed()).toBe(true);
-      expect(ProductsList.productComparisonName(secondProduct.full_name).isDisplayed()).toBe(true);
-      done();
-    });
+  it('User should be able to add products to comparison', () => {
+    ProductsList.markProductsToCompare(COMPARE_PRODUCTS_NUMBER);
+    ProductsList.compareProducts(COMPARE_PRODUCTS_NUMBER);
+    ProductsList.constructor.urlContains(catalog.compare(firstProduct.key, secondProduct.key));
+    expect(ProductsList.productComparisonName(firstProduct.full_name).isDisplayed()).toBe(true);
+    expect(ProductsList.productComparisonName(secondProduct.full_name).isDisplayed()).toBe(true);
   });
 
   it('User should be able to clean out comparison', () => {
-    const firstProduct = allCPUs.products[0];
-    const secondProduct = allCPUs.products[1];
-    const firstProductShortName = firstProduct.url.match(/(?<=\/products\/).+$/)[0];
-    const secondProductShortName = secondProduct.url.match(/(?<=\/products\/).+$/)[0];
-
-    ProductsList.constructor.goTo(`/compare/${firstProductShortName}+${secondProductShortName}`);
+    ProductsList.constructor.goTo(catalog.compare(firstProduct.key, secondProduct.key));
     ProductsList.clearComparisonList();
     expect(ProductsList.waitForUrlContains(browser.baseUrl)).toBe(true);
   });
 
   it('User should be able to open shop offers list page', () => {
-    const [firstProduct] = allCPUs.products;
-
     ProductsList.openFirstProductOffersPage();
     ProductsList.waitForUrlContains(firstProduct.html_url);
     expect(ProductOffers.constructor.isVisible(ProductOffers.productPriceHeading)).toBe(true);
   });
 
   it('Product name should be displayed on offers page', () => {
-    const [firstProduct] = allCPUs.products;
-
     ProductsList.openFirstProductOffersPage();
     ProductsList.waitForUrlContains(firstProduct.html_url);
     ProductOffers.constructor.isVisible(ProductOffers.productPriceHeading);
@@ -118,8 +113,6 @@ describe('Onliner.by - Catalog / Products List', () => {
   });
 
   it('Base order group should be displayed on offers page', () => {
-    const [firstProduct] = allCPUs.products;
-
     ProductsList.openFirstProductOffersPage();
     ProductsList.waitForUrlContains(firstProduct.html_url);
     ProductOffers.constructor.isVisible(ProductOffers.productPriceHeading);
@@ -129,8 +122,6 @@ describe('Onliner.by - Catalog / Products List', () => {
   });
 
   it('Shop filters should be displayed on offers page', () => {
-    const [firstProduct] = allCPUs.products;
-
     ProductsList.openFirstProductOffersPage();
     ProductsList.waitForUrlContains(firstProduct.html_url);
     ProductOffers.constructor.isVisible(ProductOffers.productPriceHeading);
@@ -140,9 +131,6 @@ describe('Onliner.by - Catalog / Products List', () => {
   });
 
   it('Shop logo should be displayed on offers page', () => {
-    const [firstProduct] = allCPUs.products;
-    const [firstShop] = shopList.positions.primary;
-
     ProductsList.openFirstProductOffersPage();
     ProductsList.waitForUrlContains(firstProduct.html_url);
     ProductOffers.constructor.isVisible(ProductOffers.productPriceHeading);
@@ -152,9 +140,6 @@ describe('Onliner.by - Catalog / Products List', () => {
   });
 
   it('Shop offer price should be displayed on offers page', () => {
-    const [firstProduct] = allCPUs.products;
-    const [firstShop] = shopList.positions.primary;
-
     ProductsList.openFirstProductOffersPage();
     ProductsList.waitForUrlContains(firstProduct.html_url);
     ProductOffers.constructor.isVisible(ProductOffers.productPriceHeading);
@@ -165,9 +150,6 @@ describe('Onliner.by - Catalog / Products List', () => {
   });
 
   it("'Shop Contacts' button should be displayed on offers page", () => {
-    const [firstProduct] = allCPUs.products;
-    const [firstShop] = shopList.positions.primary;
-
     ProductsList.openFirstProductOffersPage();
     ProductsList.waitForUrlContains(firstProduct.html_url);
     ProductOffers.constructor.isVisible(ProductOffers.productPriceHeading);
@@ -178,15 +160,12 @@ describe('Onliner.by - Catalog / Products List', () => {
   });
 
   it('Shop working hours button should be displayed on offers page', () => {
-    const [firstProduct] = allCPUs.products;
-    const [firstShop] = shopList.positions.primary;
-
     ProductsList.openFirstProductOffersPage();
     ProductsList.waitForUrlContains(firstProduct.html_url);
     ProductOffers.constructor.isVisible(ProductOffers.productPriceHeading);
     ProductOffers.constructor.scrollElementIntoView(ProductOffers.productPriceHeading);
     ProductOffers.skipPickCityModal();
     ProductOffers.waitForFirstShopLogoDisplayed(firstShop.shop_id);
-    expect(ProductOffers.shopWorkingHours.getText()).toContain('Магазин сегодня работает с');
+    expect(ProductOffers.shopWorkingHours.getText()).toContain(shop.workingHours.label);
   });
 });

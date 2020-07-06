@@ -2,13 +2,13 @@
   "version": "1.0.0",
   "scripts": {
     "webdriver": "webdriver-manager update && webdriver-manager start",
-    "full": "protractor conf.js --suite full",
-    "search": "protractor conf.js --suite search",
-    "navigation": "protractor conf.js --suite navigation",
-    "products-list": "protractor conf.js --suite products-list",
-    "used": "protractor conf.js --suite used",
-    "informers:currency": "protractor conf.js --suite currency",
-    "informers:weather": "protractor conf.js --suite weather",
+    "full": "protractor config/protractor.js --suite full",
+    "search": "protractor config/protractor.js --suite search",
+    "navigation": "protractor config/protractor.js --suite navigation",
+    "products-list": "protractor config/protractor.js --suite products-list",
+    "used": "protractor config/protractor.js --suite used",
+    "informers:currency": "protractor config/protractor.js --suite currency",
+    "informers:weather": "protractor config/protractor.js --suite weather",
     "lint-staged": "npx lint-staged"
   },
   "repository": {
@@ -34,15 +34,15 @@
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-json": "^2.0.1",
-    "jasmine-spec-reporter": "^4.2.1",
     "moment": "^2.24.0",
     "pre-commit": "^1.2.2",
     "protractor": "^5.4.2",
-    "protractor-beautiful-reporter": "^1.3.6",
     "request": "^2.88.0"
   },
   "dependencies": {
+    "jasmine-spec-reporter": "^4.2.1",
     "lodash": "^4.17.15",
+    "protractor-beautiful-reporter": "^1.3.6",
     "request-promise": "^4.2.5"
   }
 }
