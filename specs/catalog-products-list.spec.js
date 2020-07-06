@@ -43,7 +43,6 @@ describe('Onliner.by - Catalog / Products List', () => {
 
     browser.waitForAngularEnabled(false);
 
-    ProductsList.constructor.goTo(catalog.cpu);
     done();
   });
 
@@ -55,6 +54,7 @@ describe('Onliner.by - Catalog / Products List', () => {
     const reviews = _.map(CPUsFilteredByRating.products, (product) => product.reviews.count);
     const reviewed = _.capitalize(order.reviewed.label);
 
+    ProductsList.constructor.goTo(catalog.cpu);
     ProductsList.openOrderListDropDown();
     ProductsList.waitForOrderDropdownListIsVisible();
     ProductsList.chooseOrderDropdownOptionByName(reviewed);
@@ -70,6 +70,7 @@ describe('Onliner.by - Catalog / Products List', () => {
     const filterName = _.capitalize(filters.manufacturer.name);
     const optionName = _.capitalize(filters.manufacturer.options.intel.name);
 
+    ProductsList.constructor.goTo(catalog.cpu);
     ProductsList.constructor.scrollElementIntoView(ProductsList.filterByName(filterName));
     ProductsList.filterProducts(filterName, optionName);
     ProductsList.constructor.scrollElementIntoView(ProductsList.productsListTitle);
@@ -86,6 +87,7 @@ describe('Onliner.by - Catalog / Products List', () => {
   });
 
   it('User should be able to add products to comparison', () => {
+    ProductsList.constructor.goTo(catalog.cpu);
     ProductsList.markProductsToCompare(COMPARE_PRODUCTS_NUMBER);
     ProductsList.compareProducts(COMPARE_PRODUCTS_NUMBER);
     ProductsList.constructor.urlContains(catalog.compare(firstProduct.key, secondProduct.key));
@@ -100,21 +102,20 @@ describe('Onliner.by - Catalog / Products List', () => {
   });
 
   it('User should be able to open shop offers list page', () => {
+    ProductsList.constructor.goTo(catalog.cpu);
     ProductsList.openFirstProductOffersPage();
     ProductsList.waitForUrlContains(firstProduct.html_url);
     expect(ProductOffers.constructor.isVisible(ProductOffers.productPriceHeading)).toBe(true);
   });
 
   it('Product name should be displayed on offers page', () => {
-    ProductsList.openFirstProductOffersPage();
-    ProductsList.waitForUrlContains(firstProduct.html_url);
+    ProductsList.constructor.open(firstProduct.prices.html_url);
     ProductOffers.constructor.isVisible(ProductOffers.productPriceHeading);
     expect(ProductDetailsPage.productNameHeading.getText()).toContain(firstProduct.name);
   });
 
   it('Base order group should be displayed on offers page', () => {
-    ProductsList.openFirstProductOffersPage();
-    ProductsList.waitForUrlContains(firstProduct.html_url);
+    ProductsList.constructor.open(firstProduct.prices.html_url);
     ProductOffers.constructor.isVisible(ProductOffers.productPriceHeading);
     ProductOffers.constructor.scrollElementIntoView(ProductOffers.productPriceHeading);
     ProductOffers.skipPickCityModal();
@@ -122,8 +123,7 @@ describe('Onliner.by - Catalog / Products List', () => {
   });
 
   it('Shop filters should be displayed on offers page', () => {
-    ProductsList.openFirstProductOffersPage();
-    ProductsList.waitForUrlContains(firstProduct.html_url);
+    ProductsList.constructor.open(firstProduct.prices.html_url);
     ProductOffers.constructor.isVisible(ProductOffers.productPriceHeading);
     ProductOffers.constructor.scrollElementIntoView(ProductOffers.productPriceHeading);
     ProductOffers.skipPickCityModal();
@@ -131,8 +131,7 @@ describe('Onliner.by - Catalog / Products List', () => {
   });
 
   it('Shop logo should be displayed on offers page', () => {
-    ProductsList.openFirstProductOffersPage();
-    ProductsList.waitForUrlContains(firstProduct.html_url);
+    ProductsList.constructor.open(firstProduct.prices.html_url);
     ProductOffers.constructor.isVisible(ProductOffers.productPriceHeading);
     ProductOffers.constructor.scrollElementIntoView(ProductOffers.productPriceHeading);
     ProductOffers.skipPickCityModal();
@@ -140,8 +139,7 @@ describe('Onliner.by - Catalog / Products List', () => {
   });
 
   it('Shop offer price should be displayed on offers page', () => {
-    ProductsList.openFirstProductOffersPage();
-    ProductsList.waitForUrlContains(firstProduct.html_url);
+    ProductsList.constructor.open(firstProduct.prices.html_url);
     ProductOffers.constructor.isVisible(ProductOffers.productPriceHeading);
     ProductOffers.constructor.scrollElementIntoView(ProductOffers.productPriceHeading);
     ProductOffers.skipPickCityModal();
@@ -150,8 +148,7 @@ describe('Onliner.by - Catalog / Products List', () => {
   });
 
   it("'Shop Contacts' button should be displayed on offers page", () => {
-    ProductsList.openFirstProductOffersPage();
-    ProductsList.waitForUrlContains(firstProduct.html_url);
+    ProductsList.constructor.open(firstProduct.prices.html_url);
     ProductOffers.constructor.isVisible(ProductOffers.productPriceHeading);
     ProductOffers.constructor.scrollElementIntoView(ProductOffers.productPriceHeading);
     ProductOffers.skipPickCityModal();
@@ -160,8 +157,7 @@ describe('Onliner.by - Catalog / Products List', () => {
   });
 
   it('Shop working hours button should be displayed on offers page', () => {
-    ProductsList.openFirstProductOffersPage();
-    ProductsList.waitForUrlContains(firstProduct.html_url);
+    ProductsList.constructor.open(firstProduct.prices.html_url);
     ProductOffers.constructor.isVisible(ProductOffers.productPriceHeading);
     ProductOffers.constructor.scrollElementIntoView(ProductOffers.productPriceHeading);
     ProductOffers.skipPickCityModal();
