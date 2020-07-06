@@ -9,12 +9,9 @@ class ExchangeRatesPage extends BasePage {
     this.convertOutData = element(by.id('converter-out'));
     this.convertOutCurrenciesDropdown = this.convertOutData.element(by.id('currency-out'));
     this.conversionResult = this.convertOutData.$('b.js-cur-result');
-    this.convertCurrenciesDropdownOptionByValue = (dropdown, value) => {
-      if (dropdown === 'in') {
-        return this.convertInCurrenciesDropdown.element(by.cssContainingText('option', value));
-      }
-      return this.convertOutCurrenciesDropdown.element(by.cssContainingText('option', value));
-    };
+    this.convertCurrenciesDropdownOptionByValue = (dropdown, value) => ((dropdown === 'in')
+      ? this.convertInCurrenciesDropdown.element(by.cssContainingText('option', value))
+      : this.convertOutCurrenciesDropdown.element(by.cssContainingText('option', value)));
     this.bestExchangeRatesLocationsLink = this.convertOutData.all(by.tagName('p')).last();
     this.bestExchangeRateDirection = (direction) => this.bestExchangeRatesLocationsLink.$$(`a[data-direction="${direction}"]`);
     this.bestExchangeRatesLocationsButton = this.bestExchangeRatesLocationsLink.$$('a').first();
