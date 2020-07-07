@@ -40,5 +40,7 @@ module.exports = {
   },
   search: {
     nothingFound: 'Ничего не найдено',
+    resetFilter: 'Сбросить фильтр',
+    clearComparisonList: 'Очистить сравнение',
   },
 };
