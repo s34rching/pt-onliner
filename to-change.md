@@ -14,6 +14,7 @@ DONE --- 10. DONE Update hooks / api calls / variables initialization
 DONE --- 12. Change assertions
 DONE --- 13. Add jsdoc description
 14. To async / await
+15. Resolve flakers
 
 1. Page objects:
 Все хорошо. Единственное, мне показалось странным наследование login page от base page из-за searchBar и topNavbar, которых вроде как нет на логине. Возможно, это отностится и к другим page object-там
