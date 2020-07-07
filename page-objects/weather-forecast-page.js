@@ -1,3 +1,4 @@
+const _ = require('lodash');
 const BasePage = require('./base-page');
 
 class WeatherForecastPage extends BasePage {
@@ -10,14 +11,14 @@ class WeatherForecastPage extends BasePage {
     this.currentTemperature = this.currentWeather.$('.grad').$('span.value');
     this.generalWeatherState = this.currentWeather.element(by.tagName('dd'));
     this.nextDaysBlock = $('.b-weather-next');
+    this.nextDayWeatherCard = (day) => element(by.xpath(`//li[contains(@class, 'b-weather-next__day') and descendant::dt[text()] = '${day.dateTextDayOfWeek}']`));
     this.nextDateDaytimeTemperatureRange = (day) => {
-      if (day.dayTemperature.max === null) {
-        return element(by.xpath(`//li[contains(@class, 'b-weather-next__day') and descendant::dt[text()] = '${day.dateTextDayOfWeek}']`))
-          .all(by.cssContainingText('p.b-weather-next__temp', `${day.dayTemperature.min}`))
-          .first();
-      }
-      return element(by.xpath(`//li[contains(@class, 'b-weather-next__day') and descendant::dt[text()] = '${day.dateTextDayOfWeek}']`))
-        .all(by.cssContainingText('p.b-weather-next__temp', `${day.dayTemperature.min}...${day.dayTemperature.max}`))
+      const searchText = (_.isNull(day.dayTemperature.max))
+        ? `${day.dayTemperature.min}`
+        : `${day.dayTemperature.min}...${day.dayTemperature.max}`;
+
+      return this.nextDayWeatherCard(day)
+        .all(by.cssContainingText('p.b-weather-next__temp', searchText))
         .first();
     };
   }
