@@ -12,7 +12,7 @@ DONE --- 9. Optimize locators and get rid of redundant ones
 DONE --- 10. DONE Update hooks / api calls / variables initialization
 11. Optimize tests steps
 DONE --- 12. Change assertions
-13. Add jsdoc description
+DONE --- 13. Add jsdoc description
 14. To async / await
 
 1. Page objects:
