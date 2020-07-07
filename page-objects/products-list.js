@@ -1,4 +1,5 @@
 const _ = require('lodash');
+const { search: { resetFilter, clearComparisonList } } = require('../service/component-properties');
 const BasePage = require('./base-page');
 
 class ProductsList extends BasePage {
@@ -18,12 +19,9 @@ class ProductsList extends BasePage {
     this.searchTagByName = (tagName) => element(by.cssContainingText('.schema-tags__text', tagName));
     this.totalFoundButton = (text) => element(by.cssContainingText('.schema-filter-button__sub_main', text));
     this.initiateFiltersResetButton = $('span.schema-filter-button__sub_control');
-    this.confirmFiltersResetButton = element(by.cssContainingText('span.schema-filter-button__sub',
-      'Сбросить фильтр'));
+    this.confirmFiltersResetButton = element(by.cssContainingText('span.schema-filter-button__sub', resetFilter));
     this.compareProductsButton = (numberOfProductsToCompare) => element(by.cssContainingText('.compare-button__sub_main', numberOfProductsToCompare.toString()));
-    this.resetComparisonListButton = element.all(by.cssContainingText('a.product-table__clear',
-      'Очистить сравнение'))
-      .first();
+    this.resetComparisonListButton = element.all(by.cssContainingText('a.product-table__clear', clearComparisonList)).first();
     this.productComparisonName = (productName) => element.all(by.cssContainingText('.product-summary__caption', productName)).first();
     this.firstProductOffersButton = element.all(by.css('.schema-product__offers')).first();
     this.sectionSwitcher = (sectionName) => element(by.cssContainingText('.schema-filter-control__switcher-inner', sectionName));
@@ -40,8 +38,6 @@ class ProductsList extends BasePage {
       return $$('.schema-product').first();
     };
     this.productTitle = (productTitle) => this.productByTitle(productTitle).$('.schema-product__title').element(by.tagName('span'));
-    this.usedProductConditionsCircleByProductTitle = (productTitle) => this.productByTitle(productTitle).$('.circle-style__value');
-    this.usedProductLocationByProductTitle = (productTitle) => this.productByTitle(productTitle).$('.schema-product__city');
   }
 
   openOrderListDropDown() {
@@ -119,11 +115,6 @@ class ProductsList extends BasePage {
           .click();
       });
     });
-  }
-
-  getUsedProductPrice(productTitle) {
-    return this.productByTitle(productTitle).getText()
-      .then((price) => parseFloat(price.replace(',', '.')));
   }
 }
 

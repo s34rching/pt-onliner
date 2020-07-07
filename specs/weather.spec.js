@@ -31,7 +31,7 @@ describe('Onliner.by - Top Navigation / Informers - Weather Forecast', () => {
 
   it("User should be able to see current temperature in user's default city on homepage", () => {
     HomePage.constructor.goTo('/');
-    expect(HomePage.currentTemperature.getText()).toBe(currentTemperature);
+    expect(HomePage.weatherInformer.getText()).toBe(currentTemperature);
   });
 
   it('User should be able open weather forecast page', () => {
