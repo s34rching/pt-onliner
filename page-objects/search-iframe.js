@@ -14,28 +14,28 @@ class SearchIframe extends BasePage {
     this.searchBarSuggestion = $('.search__suggest-addon');
   }
 
-  waitForProductAreLoadedOnModal() {
+  async waitForProductAreLoadedOnModal() {
     return this.constructor.isVisible(this.firstResultItemProduct);
   }
 
-  closeSearchModal() {
+  async closeSearchModal() {
     return this.closeSearchBarButton.click();
   }
 
-  openProductDetailsPageByTitle(productTitle) {
+  async openProductDetailsPageByTitle(productTitle) {
     return this.productTitle(productTitle).click();
   }
 
-  openSubcategoryPage(subcategoryTitle) {
-    this.constructor.isClickable(this.resultItemSubcategory(subcategoryTitle));
+  async openSubcategoryPage(subcategoryTitle) {
+    await this.constructor.isClickable(this.resultItemSubcategory(subcategoryTitle));
     return this.resultItemSubcategory(subcategoryTitle).click();
   }
 
-  waitForSearchSuggestionIsVisible() {
-    this.constructor.isVisible(this.searchBarSuggestion);
+  async waitForSearchSuggestionIsVisible() {
+    await this.constructor.isVisible(this.searchBarSuggestion);
   }
 
-  switchToSearchIframe() {
+  async switchToSearchIframe() {
     return this.constructor.switchToIframe(this.fastSearchModal, this.searchIframe);
   }
 }
