@@ -14,44 +14,42 @@ class Catalog extends BasePage {
     this.categoryFirstProduct = $$('.schema-product__group').first().all(by.css('a')).first();
   }
 
-  chooseClassifierItem(itemId) {
-    this.constructor.isVisible(this.topNavbar);
-    this.constructor.scrollElementIntoView(this.topNavbar);
-    this.constructor.isClickable(this.sectionItem(itemId));
-    this.sectionItem(itemId).click();
+  async chooseClassifierItem(itemId) {
+    await this.constructor.isVisible(this.topNavbar);
+    await this.constructor.scrollElementIntoView(this.topNavbar);
+    await this.constructor.isClickable(this.sectionItem(itemId));
+    await this.sectionItem(itemId).click();
   }
 
-  hoverCategoryItem(categoryTitle) {
-    this.constructor.isClickable(this.categoryItem(categoryTitle));
-    this.categoryItem(categoryTitle).click();
+  async hoverCategoryItem(categoryTitle) {
+    await this.constructor.isClickable(this.categoryItem(categoryTitle));
+    await this.categoryItem(categoryTitle).click();
   }
 
-  openSubcategory(subcategoryItem) {
-    this.constructor.isClickable(this.subCategoryItem(subcategoryItem));
-    this.subCategoryItem(subcategoryItem).click();
+  async openSubcategory(subcategoryItem) {
+    await this.constructor.isClickable(this.subCategoryItem(subcategoryItem));
+    await this.subCategoryItem(subcategoryItem).click();
   }
 
-  openCategoryFirstProductDetailsPage() {
-    this.constructor.isVisible(this.categoryFirstProduct);
-    this.categoryFirstProduct.click();
+  async openCategoryFirstProductDetailsPage() {
+    await this.constructor.isVisible(this.categoryFirstProduct);
+    await this.categoryFirstProduct.click();
   }
 
   // It takes only first 'LINKS_IN_VISIBLE_LAYOUT' items from the bar
   // b/c there are non-interactable elements in the bar
   // which are out of the container layout
-  followRandomCatalogBarLink() {
-    this.constructor.isVisible(this.catalogBar);
-    this.catalogBar.all(by.className('catalog-bar__link'))
-      .then((links) => {
-        const link = _.sample(_.take(links, LINKS_IN_VISIBLE_LAYOUT));
-        this.constructor.isClickable(link);
-        link.click();
-      });
+  async followRandomCatalogBarLink() {
+    await this.constructor.isVisible(this.catalogBar);
+    const links = await this.catalogBar.all(by.className('catalog-bar__link'));
+    const link = _.sample(_.take(links, LINKS_IN_VISIBLE_LAYOUT));
+    await this.constructor.isClickable(link);
+    await link.click();
   }
 
-  followTilesLinks(tileTitle) {
-    this.constructor.isVisible(this.tile(tileTitle));
-    this.tile(tileTitle).click();
+  async followTilesLinks(tileTitle) {
+    await this.constructor.isVisible(this.tile(tileTitle));
+    await this.tile(tileTitle).click();
   }
 }
 

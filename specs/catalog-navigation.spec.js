@@ -15,55 +15,57 @@ describe('Onliner.by - Catalog / Navigation', () => {
     subcategoryItem = entities.getRandomUniqueSubcategory(categoryItem);
   });
 
-  beforeEach(() => {
+  beforeEach(async () => {
     browser.waitForAngularEnabled(false);
 
-    HomePage.constructor.goTo('/');
+    await HomePage.constructor.goTo('/');
   });
 
-  it('User should be able to go through catalog navigation to open product details page', () => {
-    Catalog.chooseClassifierItem(classifierItem.id);
-    Catalog.hoverCategoryItem(categoryItem.ruName);
-    Catalog.openSubcategory(subcategoryItem);
-    Catalog.openCategoryFirstProductDetailsPage();
-    expect(ProductDetailsPage.constructor.isVisible(ProductDetailsPage.productOfferDescription))
+  it('User should be able to go through catalog navigation to open product details page', async () => {
+    await Catalog.chooseClassifierItem(classifierItem.id);
+    await Catalog.hoverCategoryItem(categoryItem.ruName);
+    await Catalog.openSubcategory(subcategoryItem);
+    await Catalog.openCategoryFirstProductDetailsPage();
+    // eslint-disable-next-line max-len
+    expect(await ProductDetailsPage.constructor.isVisible(ProductDetailsPage.productOfferDescription))
       .toBe(true);
   });
 
-  it('Catalog top bar links should lead to subcategory pages', () => {
-    Catalog.followRandomCatalogBarLink();
-    expect(ProductsList.constructor.isVisible(ProductsList.product())).toBe(true);
+  it('Catalog top bar links should lead to subcategory pages', async () => {
+    await Catalog.followRandomCatalogBarLink();
+    expect(await ProductsList.constructor.isVisible(ProductsList.product())).toBe(true);
   });
 
-  xit('Catalog main tiles should lead to subcategory pages', () => {
+  xit('Catalog main tiles should lead to subcategory pages', async () => {
     const randomMainTile = entities.getRandomCatalogMainTile();
 
-    Catalog.followTilesLinks(randomMainTile.ruName);
-    expect(ProductsList.constructor.isVisible(ProductsList.product())).toBe(true);
+    await Catalog.followTilesLinks(randomMainTile.ruName);
+    expect(await ProductsList.constructor.isVisible(ProductsList.product())).toBe(true);
   });
 
-  it('Catalog section tiles should lead to subcategory pages', () => {
+  it('Catalog section tiles should lead to subcategory pages', async () => {
     const randomSectionTile = entities.getRandomSectionTile(classifierItem);
 
-    Catalog.chooseClassifierItem(classifierItem.id);
-    Catalog.followTilesLinks(randomSectionTile.ruName);
-    expect(ProductsList.constructor.isVisible(ProductsList.product())).toBe(true);
+    await Catalog.chooseClassifierItem(classifierItem.id);
+    await Catalog.followTilesLinks(randomSectionTile.ruName);
+    expect(await ProductsList.constructor.isVisible(ProductsList.product())).toBe(true);
   });
 
-  it('User should be able to repeat navigation through catalog', () => {
+  it('User should be able to repeat navigation through catalog', async () => {
     const secondClassifierItem = entities.getRandomClassifierItem();
     const secondCategoryItem = entities.getRandomUniqueCategory(secondClassifierItem);
     const secondSubcategoryItem = entities.getRandomUniqueSubcategory(secondCategoryItem);
 
-    Catalog.chooseClassifierItem(classifierItem.id);
-    Catalog.hoverCategoryItem(categoryItem.ruName);
-    Catalog.openSubcategory(subcategoryItem);
-    Catalog.openCategoryFirstProductDetailsPage();
-    Catalog.chooseClassifierItem(secondClassifierItem.id);
-    Catalog.hoverCategoryItem(secondCategoryItem.ruName);
-    Catalog.openSubcategory(secondSubcategoryItem);
-    Catalog.openCategoryFirstProductDetailsPage();
-    expect(ProductDetailsPage.constructor.isVisible(ProductDetailsPage.productOfferDescription))
+    await Catalog.chooseClassifierItem(classifierItem.id);
+    await Catalog.hoverCategoryItem(categoryItem.ruName);
+    await Catalog.openSubcategory(subcategoryItem);
+    await Catalog.openCategoryFirstProductDetailsPage();
+    await Catalog.chooseClassifierItem(secondClassifierItem.id);
+    await Catalog.hoverCategoryItem(secondCategoryItem.ruName);
+    await Catalog.openSubcategory(secondSubcategoryItem);
+    await Catalog.openCategoryFirstProductDetailsPage();
+    // eslint-disable-next-line max-len
+    expect(await ProductDetailsPage.constructor.isVisible(ProductDetailsPage.productOfferDescription))
       .toBe(true);
   });
 });
