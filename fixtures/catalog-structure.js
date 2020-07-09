@@ -764,8 +764,8 @@ module.exports = {
               ruName: 'Аккумуляторы',
               subcategoryPageRuHeading: 'Аккумуляторы, ЗУ для фото/видеотехники',
               path: '/batteries',
-              isUnique: true,
-              appearsInSearch: true,
+              isUnique: false,
+              appearsInSearch: false,
               position: 0,
             },
             photoFilters: {
