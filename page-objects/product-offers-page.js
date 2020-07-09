@@ -15,16 +15,15 @@ class ProductOffersPage extends BasePage {
     this.shopWorkingHours = this.firstOfferRow.$('.b-cell-4').$('.b-cell-4__line-2');
   }
 
-  waitForFirstShopLogoDisplayed(shopId) {
+  async waitForFirstShopLogoDisplayed(shopId) {
     return this.constructor.isPresentInDom(this.shopLogoByShopId(shopId));
   }
 
-  skipPickCityModal() {
-    this.popover.isDisplayed().then((visible) => {
-      if (visible) {
-        this.popover.$('.button-style_primary').click();
-      }
-    });
+  async skipPickCityModal() {
+    const isVisible = await this.popover.isDisplayed();
+    if (isVisible) {
+      await this.popover.$('.button-style_primary').click();
+    }
   }
 }
 
