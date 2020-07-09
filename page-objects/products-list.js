@@ -40,80 +40,77 @@ class ProductsList extends BasePage {
     this.productTitle = (productTitle) => this.productByTitle(productTitle).$('.schema-product__title').element(by.tagName('span'));
   }
 
-  openOrderListDropDown() {
+  async openOrderListDropDown() {
     return this.orderDropdown.click();
   }
 
-  waitForOrderDropdownListIsVisible() {
+  async waitForOrderDropdownListIsVisible() {
     return this.constructor.isVisible(this.orderDropdownOptionsList);
   }
 
-  chooseOrderDropdownOptionByName(optionName) {
-    this.constructor.isClickable(this.orderDropdownOptionsListOptionByName(optionName));
-    return this.orderDropdownOptionsListOptionByName(optionName).click();
+  async chooseOrderDropdownOptionByName(optionName) {
+    await this.constructor.isClickable(this.orderDropdownOptionsListOptionByName(optionName));
+    await this.orderDropdownOptionsListOptionByName(optionName).click();
   }
 
-  waitForUrlContains(text) {
+  async waitForUrlContains(text) {
     return this.constructor.urlContains(text);
   }
 
-  waitForActiveOrderOptionByName(optionName) {
-    this.constructor.isVisible(this.orderDropdownActiveOrderOptionByName(optionName));
+  async waitForActiveOrderOptionByName(optionName) {
+    await this.constructor.isVisible(this.orderDropdownActiveOrderOptionByName(optionName));
   }
 
-  filterProducts(filterName, filterOption) {
-    this.filterByName(filterName)
+  async filterProducts(filterName, filterOption) {
+    await this.filterByName(filterName)
       .element(by.cssContainingText('.schema-filter__checkbox-text', filterOption))
       .click();
   }
 
-  waitForSearchTagIsDisplayed(tagName) {
-    this.constructor.isVisible(this.searchTagByName(tagName));
+  async waitForSearchTagIsDisplayed(tagName) {
+    await this.constructor.isVisible(this.searchTagByName(tagName));
   }
 
-  waitForProperTotalOfFoundProducts(total) {
-    this.constructor.isVisible(this.totalFoundButton(total));
+  async waitForProperTotalOfFoundProducts(total) {
+    await this.constructor.isVisible(this.totalFoundButton(total));
   }
 
-  resetFilters() {
-    this.initiateFiltersResetButton.click();
-    this.constructor.isVisible(this.confirmFiltersResetButton);
-    this.confirmFiltersResetButton.click();
+  async resetFilters() {
+    await this.initiateFiltersResetButton.click();
+    await this.constructor.isVisible(this.confirmFiltersResetButton);
+    await this.confirmFiltersResetButton.click();
   }
 
-  compareProducts(numberOfProductsToCompare) {
-    this.constructor.isClickable(this.compareProductsButton(numberOfProductsToCompare));
-    this.constructor.forceClick(this.compareProductsButton(numberOfProductsToCompare));
+  async compareProducts(numberOfProductsToCompare) {
+    await this.constructor.isClickable(this.compareProductsButton(numberOfProductsToCompare));
+    await this.constructor.forceClick(this.compareProductsButton(numberOfProductsToCompare));
   }
 
-  openFirstProductOffersPage() {
-    this.constructor.isClickable(this.firstProductOffersButton);
-    this.firstProductOffersButton.click();
+  async openFirstProductOffersPage() {
+    await this.constructor.isClickable(this.firstProductOffersButton);
+    await this.firstProductOffersButton.click();
   }
 
-  switchToSection(sectionName) {
-    this.sectionSwitcher(sectionName).click();
+  async switchToSection(sectionName) {
+    await this.sectionSwitcher(sectionName).click();
   }
 
-  openUsedUserProductOfferByProductName(productTitle) {
-    this.productTitle(productTitle).click();
+  async openUsedUserProductOfferByProductName(productTitle) {
+    await this.productTitle(productTitle).click();
   }
 
-  createUserUsedProductOffer() {
-    this.createUsedOfferButton.click();
+  async createUserUsedProductOffer() {
+    await this.createUsedOfferButton.click();
   }
 
-  clearComparisonList() {
-    this.resetComparisonListButton.click();
+  async clearComparisonList() {
+    await this.resetComparisonListButton.click();
   }
 
-  markProductsToCompare(numberOfProductsToCompare) {
-    this.product({ all: true }).then((productCards) => {
-      _.take(productCards, numberOfProductsToCompare).forEach((productCard) => {
-        productCard
-          .element(by.css('.schema-product__compare'))
-          .click();
-      });
+  async markProductsToCompare(numberOfProductsToCompare) {
+    const productCards = await this.product({ all: true });
+    await _.take(productCards, numberOfProductsToCompare).forEach((productCard) => {
+      productCard.element(by.css('.schema-product__compare')).click();
     });
   }
 }
