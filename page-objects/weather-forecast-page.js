@@ -23,21 +23,21 @@ class WeatherForecastPage extends BasePage {
     };
   }
 
-  openCitiesOptionsDropdown() {
-    this.constructor.isVisible(this.currentCityButton);
-    this.currentCityButton.click();
+  async openCitiesOptionsDropdown() {
+    await this.constructor.isVisible(this.currentCityButton);
+    await this.currentCityButton.click();
   }
 
-  changeCity(cityId) {
-    this.constructor.isClickable(this.cityOption(cityId));
-    this.cityOption(cityId).click();
+  async changeCity(cityId) {
+    await this.constructor.isClickable(this.cityOption(cityId));
+    await this.cityOption(cityId).click();
   }
 
-  waitForCityChangedTo(cityName) {
-    this.constructor.isVisible(this.currentCityButtonByName(cityName));
+  async waitForCityChangedTo(cityName) {
+    await this.constructor.isVisible(this.currentCityButtonByName(cityName));
   }
 
-  getNextDateDaytimeTemperatureRanges(days) {
+  async getNextDateDaytimeTemperatureRanges(days) {
     return Promise.all(days.map(this.nextDateDaytimeTemperatureRange));
   }
 }
