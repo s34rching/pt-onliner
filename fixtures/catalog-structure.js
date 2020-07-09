@@ -701,7 +701,7 @@ module.exports = {
               subcategoryPageRuHeading: 'Фотопринтеры',
               path: '/printers?type_print[0]=photoprinter&type_print[operation]=union',
               isUnique: true,
-              appearsInSearch: true,
+              appearsInSearch: false,
               position: 0,
             },
             tripods: {
