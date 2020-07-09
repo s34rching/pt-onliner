@@ -8,15 +8,15 @@ class HomePage extends BasePage {
     this.weatherInformer = element(by.id('weather-informer'));
   }
 
-  openCurrencyExchangeRatesPage() {
-    this.constructor.scrollElementIntoView(this.topNavBar);
-    this.constructor.isClickable(this.currencyInformer);
-    this.currencyInformer.click();
+  async openCurrencyExchangeRatesPage() {
+    await this.constructor.scrollElementIntoView(this.topNavBar);
+    await this.constructor.isClickable(this.currencyInformer);
+    await this.currencyInformer.click();
   }
 
-  openWeatherForecastPage() {
-    this.constructor.isClickable(this.weatherInformer);
-    this.weatherInformer.click();
+  async openWeatherForecastPage() {
+    await this.constructor.isClickable(this.weatherInformer);
+    await this.weatherInformer.click();
   }
 }
 

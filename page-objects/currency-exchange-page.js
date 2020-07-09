@@ -23,52 +23,52 @@ class ExchangeRatesPage extends BasePage {
     this.exchangeServicesMapLocations = this.exchangeServicesMap.element(by.tagName('em'));
   }
 
-  waitForConvertOutDataVisible() {
-    this.constructor.isVisible(this.convertOutData);
+  async waitForConvertOutDataVisible() {
+    await this.constructor.isVisible(this.convertOutData);
   }
 
-  openBestExchangeRatesLocations() {
-    this.constructor.scrollElementIntoView(this.topNavbar);
-    this.waitForConvertOutDataVisible();
-    this.bestExchangeRatesLocationsButton.click();
-    this.waitForMapIsLoaded();
+  async openBestExchangeRatesLocations() {
+    await this.constructor.scrollElementIntoView(this.topNavbar);
+    await this.waitForConvertOutDataVisible();
+    await this.bestExchangeRatesLocationsButton.click();
+    await this.waitForMapIsLoaded();
   }
 
-  waitForMapIsLoaded() {
-    this.constructor.isVisible(this.exchangeServicesMap);
+  async waitForMapIsLoaded() {
+    await this.constructor.isVisible(this.exchangeServicesMap);
   }
 
-  chooseCurrencyToConvert(dropdown, value) {
+  async chooseCurrencyToConvert(dropdown, value) {
     if (dropdown === 'in') {
-      this.convertInCurrenciesDropdown.click();
+      await this.convertInCurrenciesDropdown.click();
     } else {
-      this.convertOutCurrenciesDropdown.click();
+      await this.convertOutCurrenciesDropdown.click();
     }
-    this.constructor.isVisible(this.convertCurrenciesDropdownOptionByValue(dropdown, value));
-    this.convertCurrenciesDropdownOptionByValue(dropdown, value).click();
+    await this.constructor.isVisible(this.convertCurrenciesDropdownOptionByValue(dropdown, value));
+    await this.convertCurrenciesDropdownOptionByValue(dropdown, value).click();
   }
 
-  enterCurrencyAmountToConvert(amount) {
-    this.convertInAmount
-      .clear()
-      .sendKeys(amount);
+  async enterCurrencyAmountToConvert(amount) {
+    await this.convertInAmount.clear().sendKeys(amount);
   }
 
-  convertCurrency(currencyIn, currencyOut, amount) {
-    this.chooseCurrencyToConvert('in', currencyIn);
-    this.chooseCurrencyToConvert('out', currencyOut);
-    this.enterCurrencyAmountToConvert(amount);
+  async convertCurrency(currencyIn, currencyOut, amount) {
+    await this.chooseCurrencyToConvert('in', currencyIn);
+    await this.chooseCurrencyToConvert('out', currencyOut);
+    await this.enterCurrencyAmountToConvert(amount);
   }
 
-  getDirectionBestExchangeRate(direction, order) {
+  async getDirectionBestExchangeRate(direction, order) {
     return this.bestExchangeRateByCurrencyDirection(direction, order)
       .getAttribute('data-title')
       .then((value) => value.match(/\d+,\d+/)[0]);
   }
 
-  getConversionResult() {
-    return this.conversionResult.getText().then((result) => parseFloat(result.replace(',', '.').replace(' ', ''))
-      .toFixed(2));
+  async getConversionResult() {
+    const conversionResult = await this.conversionResult.getText();
+
+    return parseFloat(conversionResult.replace(',', '.').replace(' ', ''))
+      .toFixed(2);
   }
 }
 
