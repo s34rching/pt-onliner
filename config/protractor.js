@@ -5,6 +5,7 @@ exports.config = {
   baseUrl: 'https://catalog.onliner.by',
   framework: 'jasmine',
   specs: ['specs/**/*.js'],
+  SELENIUM_PROMISE_MANAGER: false,
   jasmineNodeOpts: {
     print() {},
     defaultTimeoutInterval: 100000,
