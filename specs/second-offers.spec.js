@@ -10,62 +10,62 @@ describe('Onliner.by - Catalog / Products List - Used', () => {
   let usedCPUs;
   let usedOffer;
 
-  beforeAll((done) => {
-    api.getProducts(apiLinks.used(catalog.cpu)).then((res) => {
-      usedCPUs = JSON.parse(res);
-      [usedOffer] = usedCPUs.offers;
-      done();
-    });
+  beforeAll(async () => {
+    const res = await api.getProducts(apiLinks.used(catalog.cpu));
+    usedCPUs = JSON.parse(res);
+    [usedOffer] = usedCPUs.offers;
   });
 
   beforeEach(() => {
     browser.waitForAngularEnabled(false);
   });
 
-  it("User should be able to switch to 'used' offers", () => {
-    ProductsList.constructor.goTo(catalog.cpu);
-    ProductsList.switchToSection(sections.offers.title);
-    ProductsList.waitForUrlContains(catalog.used(catalog.cpu));
-    expect(ProductsList.createUsedOfferButton.isDisplayed()).toBe(true);
+  it("User should be able to switch to 'used' offers", async () => {
+    await ProductsList.constructor.goTo(catalog.cpu);
+    await ProductsList.switchToSection(sections.offers.title);
+    await ProductsList.waitForUrlContains(catalog.used(catalog.cpu));
+    expect(await ProductsList.createUsedOfferButton.isDisplayed()).toBe(true);
   });
 
-  it('List of offers should be displayed', () => {
-    ProductsList.constructor.goTo(catalog.used(catalog.cpu));
-    ProductsList.waitForProperTotalOfFoundProducts(usedCPUs.total.toString());
-    expect(ProductsList.productByTitle(usedOffer.product.full_name).isDisplayed()).toBe(true);
+  it('List of offers should be displayed', async () => {
+    await ProductsList.constructor.goTo(catalog.used(catalog.cpu));
+    await ProductsList.waitForProperTotalOfFoundProducts(usedCPUs.total.toString());
+    expect(await ProductsList.productByTitle(usedOffer.product.full_name).isDisplayed()).toBe(true);
   });
 
-  it('User should be able to open offer', () => {
-    ProductsList.constructor.goTo(catalog.used(catalog.cpu));
-    ProductsList.waitForProperTotalOfFoundProducts(usedCPUs.total.toString());
-    ProductsList.openUsedUserProductOfferByProductName(usedOffer.product.full_name);
-    ProductDetailsPage.waitForUsedProductPrice();
-    expect(ProductDetailsPage.productNameHeading.getText()).toContain(usedOffer.product.full_name);
+  it('User should be able to open offer', async () => {
+    await ProductsList.constructor.goTo(catalog.used(catalog.cpu));
+    await ProductsList.waitForProperTotalOfFoundProducts(usedCPUs.total.toString());
+    await ProductsList.openUsedUserProductOfferByProductName(usedOffer.product.full_name);
+    await ProductDetailsPage.waitForUsedProductPrice();
+    expect(await ProductDetailsPage.productNameHeading.getText())
+      .toContain(usedOffer.product.full_name);
   });
 
-  it('Used product price should be displayed', () => {
+  it('Used product price should be displayed', async () => {
     const usedProductPrice = stringifyToCents(usedOffer.price.amount);
 
-    ProductsList.constructor.open(usedOffer.html_url);
-    expect(ProductDetailsPage.usedProductPrice.getText()).toContain(usedProductPrice);
+    await ProductsList.constructor.open(usedOffer.html_url);
+    expect(await ProductDetailsPage.usedProductPrice.getText()).toContain(usedProductPrice);
   });
 
-  it('Used product conditions should be displayed', () => {
-    ProductsList.constructor.open(usedOffer.html_url);
-    expect(ProductDetailsPage.usedProductConditions(usedOffer.condition).isDisplayed()).toBe(true);
+  it('Used product conditions should be displayed', async () => {
+    await ProductsList.constructor.open(usedOffer.html_url);
+    expect(await ProductDetailsPage.usedProductConditions(usedOffer.condition).isDisplayed())
+      .toBe(true);
   });
 
-  it('Used product description should be displayed', () => {
-    ProductsList.constructor.open(usedOffer.html_url);
-    ProductDetailsPage.constructor.scrollElementIntoView(ProductDetailsPage.productNameHeading);
-    expect(ProductDetailsPage.usedProductDescription.isDisplayed()).toBe(true);
+  it('Used product description should be displayed', async () => {
+    await ProductsList.constructor.open(usedOffer.html_url);
+    await ProductDetailsPage.constructor.scrollElementIntoView(ProductDetailsPage.productNameHeading);
+    expect(await ProductDetailsPage.usedProductDescription.isDisplayed()).toBe(true);
   });
 
-  it("Creation of new 'used' offer requires user to be logged in", () => {
-    ProductsList.constructor.goTo(catalog.used(catalog.cpu));
-    ProductsList.waitForProperTotalOfFoundProducts(usedCPUs.total.toString());
-    ProductsList.createUserUsedProductOffer();
-    ProductsList.waitForUrlContains(global.login);
-    expect(LoginPage.authFormTitle.isDisplayed()).toBe(true);
+  it("Creation of new 'used' offer requires user to be logged in", async () => {
+    await ProductsList.constructor.goTo(catalog.used(catalog.cpu));
+    await ProductsList.waitForProperTotalOfFoundProducts(usedCPUs.total.toString());
+    await ProductsList.createUserUsedProductOffer();
+    await ProductsList.waitForUrlContains(global.login);
+    expect(await LoginPage.authFormTitle.isDisplayed()).toBe(true);
   });
 });
