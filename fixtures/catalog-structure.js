@@ -565,7 +565,7 @@ module.exports = {
               subcategoryPageRuHeading: 'Усилители для наушников',
               path: '/portableamp?dac_type1%5B0%5D=desktopamp&dac_type1%5Boperation%5D=union',
               isUnique: true,
-              appearsInSearch: true,
+              appearsInSearch: false,
               position: 0,
             },
             hiFiSpeakers: {
@@ -1048,7 +1048,7 @@ module.exports = {
               subcategoryPageRuHeading: 'Проводные телефоны',
               path: '/phone?phone_connect%5B0%5D=2&phone_connect%5Boperation%5D=union',
               isUnique: true,
-              appearsInSearch: true,
+              appearsInSearch: false,
               position: 0,
             },
             wirelessIpPhones: {
@@ -1064,7 +1064,7 @@ module.exports = {
               subcategoryPageRuHeading: 'Беспроводные адаптеры',
               path: '/wirelessadapter?wa_type%5B0%5D=3g&wa_type%5B1%5D=4g&wa_type%5Boperation%5D=union',
               isUnique: true,
-              appearsInSearch: true,
+              appearsInSearch: false,
               position: 0,
             },
             faxes: {
