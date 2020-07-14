@@ -12,7 +12,7 @@ module.exports = {
   },
   getRandomUniqueSubcategory: (categoryItem) => {
     const uniqueSubcategories = _.filter(_.values(categoryItem.subCategories),
-      { isUnique: true, appearsInSearch: true });
+      { isUnique: true, appearsInSearch: true, hasTaggedProducts: true });
 
     return _.sample(uniqueSubcategories);
   },
