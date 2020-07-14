@@ -438,7 +438,7 @@ module.exports = {
               subcategoryPageRuHeading: 'Беспроводные и портативные колонки',
               path: '/wspeaker?ws_type%5B0%5D=multiroom&ws_type%5Boperation%5D=union&ws_sync%5B0%5D=wireless&ws_sync%5Boperation%5D=union',
               isUnique: true,
-              appearsInSearch: true,
+              appearsInSearch: false,
               position: 0,
             },
             smartSpeakers: {
@@ -581,7 +581,7 @@ module.exports = {
               subcategoryPageRuHeading: 'AV-ресиверы и усилители',
               path: '/recievers?type_reciever%5B0%5D=avprocessor&type_reciever%5B1%5D=avreciever&type_reciever%5Boperation%5D=union',
               isUnique: true,
-              appearsInSearch: true,
+              appearsInSearch: false,
               position: 0,
             },
             amplifiersAndPreamps: {
