@@ -1555,7 +1555,7 @@ module.exports = {
               subcategoryPageRuHeading: 'USB Flash',
               path: '/usbflash',
               isUnique: true,
-              appearsInSearch: true,
+              appearsInSearch: false,
               position: 0,
             },
             memoryCards: {
