@@ -104,8 +104,7 @@ describe('Onliner.by - Products / Search', () => {
 
     await HomePage.performSearch(ruName);
     await SearchIframe.switchToSearchIframe();
-    await SearchIframe.waitForProductAreLoadedOnModal();
-    expect(await SearchIframe.resultItemSubcategory(subcategoryPageRuHeading).isDisplayed())
+    expect(await SearchIframe.waitForSubcategoryAreLoadedOnModal(subcategoryPageRuHeading))
       .toBe(true);
   });
 
