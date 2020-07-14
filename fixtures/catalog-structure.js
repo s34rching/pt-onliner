@@ -1712,7 +1712,7 @@ module.exports = {
               subcategoryPageRuHeading: 'Внешние накопители',
               path: '/externalhdd',
               isUnique: true,
-              appearsInSearch: true,
+              appearsInSearch: false,
               hasTaggedProducts: true,
               position: 0,
             },
