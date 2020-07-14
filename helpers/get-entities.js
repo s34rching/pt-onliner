@@ -6,7 +6,7 @@ module.exports = {
   getRandomClassifierItem: () => _.sample(_.take(_.values(catalogTree.sections), 2)),
   getRandomUniqueCategory: (classifierItem) => {
     const uniqueCategoriesWithUniqueSubCategories = _.filter(_.values(classifierItem.categories),
-      { isUnique: true, containsUnique: true });
+      { isUnique: true, containsUnique: true, hasSubcategoryWithTaggedProducts: true });
 
     return _.sample(uniqueCategoriesWithUniqueSubCategories);
   },

@@ -67,6 +67,7 @@ module.exports = {
           ruName: 'Мобильные телефоны и аксессуары',
           isUnique: true,
           containsUnique: true,
+          hasSubcategoryWithTaggedProducts: true,
           subCategories: {
             mobilePhones: {
               ruName: 'Мобильные телефоны',
@@ -209,6 +210,7 @@ module.exports = {
           ruName: 'Телевидение и видео',
           isUnique: true,
           containsUnique: true,
+          hasSubcategoryWithTaggedProducts: true,
           subCategories: {
             tvSets: {
               ruName: 'Телевизоры',
@@ -351,6 +353,7 @@ module.exports = {
           ruName: 'Планшеты, электронные книги',
           isUnique: true,
           containsUnique: true,
+          hasSubcategoryWithTaggedProducts: true,
           subCategories: {
             tablets: {
               ruName: 'Планшеты',
@@ -439,6 +442,7 @@ module.exports = {
           ruName: 'Аудиотехника',
           isUnique: true,
           containsUnique: true,
+          hasSubcategoryWithTaggedProducts: true,
           subCategories: {
             headphones: {
               ruName: 'Наушники',
@@ -599,6 +603,7 @@ module.exports = {
           ruName: 'Hi-Fi аудио',
           isUnique: true,
           containsUnique: true,
+          hasSubcategoryWithTaggedProducts: true,
           subCategories: {
             hifiPlayers: {
               ruName: 'Hi-Fi плеееры',
@@ -724,6 +729,7 @@ module.exports = {
           ruName: 'Фото- и видеотехника',
           isUnique: true,
           containsUnique: true,
+          hasSubcategoryWithTaggedProducts: true,
           subCategories: {
             cameras: {
               ruName: 'Фотоаппараты',
@@ -866,6 +872,7 @@ module.exports = {
           ruName: 'Видеоигры',
           isUnique: true,
           containsUnique: true,
+          hasSubcategoryWithTaggedProducts: true,
           subCategories: {
             consoles: {
               ruName: 'Игровые приставки',
@@ -927,6 +934,7 @@ module.exports = {
           ruName: 'Гаджеты',
           isUnique: true,
           containsUnique: true,
+          hasSubcategoryWithTaggedProducts: true,
           subCategories: {
             smartWatches: {
               ruName: 'Умные часы',
@@ -1006,6 +1014,7 @@ module.exports = {
           ruName: 'Умный дом и видеонаблюдение',
           isUnique: false,
           containsUnique: false,
+          hasSubcategoryWithTaggedProducts: true,
           subCategories: {
             smartHome: {
               ruName: 'Умный дом',
@@ -1094,6 +1103,7 @@ module.exports = {
           ruName: 'Электрический транспорт',
           isUnique: true,
           containsUnique: false,
+          hasSubcategoryWithTaggedProducts: true,
           subCategories: {
             electricScooters: {
               ruName: 'Электросамокаты и электроскутеры',
@@ -1128,6 +1138,7 @@ module.exports = {
           ruName: 'Телефония и связь',
           isUnique: true,
           containsUnique: true,
+          hasSubcategoryWithTaggedProducts: true,
           subCategories: {
             mobilePhones: {
               ruName: 'Мобильные телефоны',
@@ -1208,6 +1219,7 @@ module.exports = {
           ruName: 'Музыкальное оборудование',
           isUnique: true,
           containsUnique: true,
+          hasSubcategoryWithTaggedProducts: true,
           subCategories: {
             synthesizersAndWorkstations: {
               ruName: 'Синтезаторы и рабочие станции',
@@ -1278,6 +1290,7 @@ module.exports = {
           ruName: 'Оптические приборы',
           isUnique: true,
           containsUnique: false,
+          hasSubcategoryWithTaggedProducts: true,
           subCategories: {
             binoculars: {
               ruName: 'Бинокли и подзорные трубы',
@@ -1336,6 +1349,7 @@ module.exports = {
           ruName: 'Ноутбуки, компьютеры, мониторы',
           isUnique: true,
           containsUnique: true,
+          hasSubcategoryWithTaggedProducts: true,
           subCategories: {
             onePieceComputers: {
               ruName: 'Ноутбуки',
@@ -1388,6 +1402,7 @@ module.exports = {
           ruName: 'Комплектующие',
           isUnique: true,
           containsUnique: true,
+          hasSubcategoryWithTaggedProducts: true,
           subCategories: {
             videoCards: {
               ruName: 'Видеокарты',
@@ -1512,6 +1527,7 @@ module.exports = {
           ruName: 'Техника для печати и дизайна',
           isUnique: false,
           containsUnique: true,
+          hasSubcategoryWithTaggedProducts: true,
           subCategories: {
             printers: {
               ruName: 'Принтеры и МФУ',
@@ -1627,6 +1643,7 @@ module.exports = {
           ruName: 'Манипуляторы и устройства ввода',
           isUnique: true,
           containsUnique: true,
+          hasSubcategoryWithTaggedProducts: true,
           subCategories: {
             mouses: {
               ruName: 'Мыши',
@@ -1688,6 +1705,7 @@ module.exports = {
           ruName: 'Хранение данных',
           isUnique: true,
           containsUnique: true,
+          hasSubcategoryWithTaggedProducts: false,
           subCategories: {
             SSD: {
               ruName: 'SSD',
@@ -1785,6 +1803,7 @@ module.exports = {
           ruName: 'Мультимедиа периферия',
           isUnique: true,
           containsUnique: true,
+          hasSubcategoryWithTaggedProducts: true,
           subCategories: {
             pcAcoustics: {
               ruName: 'Компьютерная акустика',
@@ -1837,6 +1856,7 @@ module.exports = {
           ruName: 'Сетевое оборудование',
           isUnique: true,
           containsUnique: true,
+          hasSubcategoryWithTaggedProducts: true,
           subCategories: {
             wirelessRouters: {
               ruName: 'Беспроводные маршрутизаторы',
@@ -1988,6 +2008,7 @@ module.exports = {
           ruName: 'Аксессуары к ноутбукам и компьютерам',
           isUnique: false,
           containsUnique: true,
+          hasSubcategoryWithTaggedProducts: true,
           subCategories: {
             mobilePhones: {
               laptopBackpacks: 'Рюкзаки для ноутбуков',
@@ -2058,6 +2079,7 @@ module.exports = {
           ruName: 'Электропитание',
           isUnique: true,
           containsUnique: true,
+          hasSubcategoryWithTaggedProducts: true,
           subCategories: {
             ups: {
               ruName: 'Источники бесперебойного питания',
@@ -2119,6 +2141,7 @@ module.exports = {
           ruName: 'Игры и программное обеспечение',
           isUnique: false,
           containsUnique: true,
+          hasSubcategoryWithTaggedProducts: true,
           subCategories: {
             gamesForPc: {
               ruName: 'Видеоигры для ПК',
