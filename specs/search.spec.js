@@ -111,7 +111,7 @@ describe('Onliner.by - Products / Search', () => {
   it('User should be able to open subcategory page while searching by subcategory', async () => {
     const randomClassifierItem = entities.getRandomClassifierItem();
     const randomCategory = entities.getRandomUniqueCategory(randomClassifierItem);
-    const randomSubcategory = entities.getRandomUniqueSubcategory(randomCategory);
+    const randomSubcategory = entities.getRandomUniqueSubcategory(randomCategory, true);
 
     await HomePage.performSearch(randomSubcategory.ruName);
     await SearchIframe.switchToSearchIframe();

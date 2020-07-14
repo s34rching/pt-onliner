@@ -10,9 +10,11 @@ module.exports = {
 
     return _.sample(uniqueCategoriesWithUniqueSubCategories);
   },
-  getRandomUniqueSubcategory: (categoryItem) => {
+  getRandomUniqueSubcategory: (categoryItem, withProducts = false) => {
     const uniqueSubcategories = _.filter(_.values(categoryItem.subCategories),
-      { isUnique: true, appearsInSearch: true, hasTaggedProducts: true });
+      (subcategory) => ((withProducts)
+        ? subcategory.isUnique && subcategory.appearsInSearch && subcategory.hasTaggedProducts
+        : subcategory.isUnique && subcategory.appearsInSearch));
 
     return _.sample(uniqueSubcategories);
   },
