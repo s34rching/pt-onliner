@@ -44,7 +44,7 @@ module.exports = {
         {
           ruName: 'Apple AirPods',
           path: '/headphones/apple/airpods2019wht2?utm_source=el_title&utm_medium=airpods',
-          isUnique: true,
+          isUnique: false,
         },
         {
           ruName: 'Bluetooth колонки',
