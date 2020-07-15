@@ -30,6 +30,7 @@ describe('Onliner.by - Catalog / Products List', () => {
   });
 
   it("Products default sort order should be set as 'Popular'", async () => {
+    await ProductsList.constructor.goTo(catalog.cpu);
     expect(await ProductsList.orderDropdownActiveOrderOption.getText()).toBe(order.popular.label);
   });
 
