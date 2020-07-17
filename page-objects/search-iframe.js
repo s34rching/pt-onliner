@@ -18,6 +18,10 @@ class SearchIframe extends BasePage {
     return this.constructor.isVisible(this.firstResultItemProduct);
   }
 
+  async waitForSubcategoryAreLoadedOnModal(subcategoryTitle) {
+    return this.constructor.isVisible(this.resultItemSubcategory(subcategoryTitle));
+  }
+
   async closeSearchModal() {
     return this.closeSearchBarButton.click();
   }

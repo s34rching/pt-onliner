@@ -37,28 +37,33 @@ module.exports = {
       ruName: 'Электроника',
       tiles: [
         {
-          ruName: 'Электросамокаты',
-          path: '/electric_scooter?utm_source=el_title&utm_medium=electric_scooter',
+          ruName: 'Пульсоксиметры',
+          path: '/heart_rate?hr_type%5B0%5D=pulseoximeter&hr_type%5Boperation%5D=union&utm_source=el_title&utm_medium=pulseoximeter',
           isUnique: true,
         },
         {
-          ruName: 'Приставки для цифрового ТВ',
-          path: '/terrestrial?utm_source=el_title&utm_medium=terrestrial',
+          ruName: 'Apple AirPods',
+          path: '/headphones/apple/airpods2019wht2?utm_source=el_title&utm_medium=airpods',
+          isUnique: false,
+        },
+        {
+          ruName: 'Bluetooth колонки',
+          path: '/wspeaker?ws_type%5B0%5D=portable&ws_type%5Boperation%5D=union&utm_source=el_title&utm_medium=wspeaker',
           isUnique: true,
         },
         {
-          ruName: 'Телескопы',
-          path: '/telescope?utm_source=el_title&utm_medium=telescope',
+          ruName: 'Экшен-камеры',
+          path: '/actioncamera?utm_source=el_title&utm_medium=actioncamera',
           isUnique: true,
         },
         {
-          ruName: 'Игры для приставок',
-          path: '/games?utm_source=el_title&utm_medium=games',
+          ruName: 'Портативные зарядные',
+          path: '/portablecharger?utm_source=el_title&utm_medium=portablecharger',
           isUnique: true,
         },
         {
-          ruName: 'Пульсометры',
-          path: '/heart_rate?utm_source=el_title&utm_medium=heart_rate',
+          ruName: 'Фитнес-часы',
+          path: '/smartwatch?sw_type%5B0%5D=fitwatch&sw_type%5Boperation%5D=union&utm_source=el_title&utm_medium=fitwatch',
           isUnique: true,
         },
       ],
@@ -67,6 +72,7 @@ module.exports = {
           ruName: 'Мобильные телефоны и аксессуары',
           isUnique: true,
           containsUnique: true,
+          hasSubcategoryWithTaggedProducts: true,
           subCategories: {
             mobilePhones: {
               ruName: 'Мобильные телефоны',
@@ -74,6 +80,7 @@ module.exports = {
               path: '/mobile',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             headphones: {
@@ -82,6 +89,7 @@ module.exports = {
               path: '/headphones',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             smartWatch: {
@@ -90,6 +98,7 @@ module.exports = {
               path: '/smartwatch?sw_type%5B0%5D=smartphonewatch&sw_type%5B1%5D=watch&sw_type%5B2%5D=fitwatch&sw_type%5B3%5D=hybridsmartwatch&sw_type%5Boperation%5D=union',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             fitnessBracelets: {
@@ -98,6 +107,7 @@ module.exports = {
               path: '/smartwatch?sw_type%5B0%5D=bracelet&sw_type%5Boperation%5D=union',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             portableChargers: {
@@ -106,6 +116,7 @@ module.exports = {
               path: '/portablecharger',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             memoryCards: {
@@ -114,6 +125,7 @@ module.exports = {
               path: '/memcards?typememcards%5B0%5D=microsd&typememcards%5B1%5D=microsdxc&typememcards%5B2%5D=microsdhc&typememcards%5Boperation%5D=union',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 1,
             },
             phoneCases: {
@@ -122,14 +134,16 @@ module.exports = {
               path: '/phonecase',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: false,
               position: 0,
             },
             phoneAccumulators: {
               ruName: 'Аккумуляторы',
               subcategoryPageRuHeading: 'Аккумуляторы для телефонов',
               path: '/phoneaccum',
-              isUnique: true,
+              isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             bluetoothHeadsets: {
@@ -138,6 +152,7 @@ module.exports = {
               path: '/bt',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: false,
               position: 0,
             },
             selfieSticks: {
@@ -146,6 +161,7 @@ module.exports = {
               path: '/selfiestick',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             cablesAndAdapters: {
@@ -154,6 +170,7 @@ module.exports = {
               path: '/cable?cable_usage%5B0%5D=phone&cable_usage%5Boperation%5D=union',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             carHolders: {
@@ -162,6 +179,7 @@ module.exports = {
               path: '/carholder',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             carChargers: {
@@ -170,6 +188,7 @@ module.exports = {
               path: '/chargersmobile?mc_devicetype%5B0%5D=type&mc_devicetype%5Boperation%5D=union&mc_type%5B0%5D=network&mc_type%5Boperation%5D=union',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             wirelessChargers: {
@@ -177,7 +196,8 @@ module.exports = {
               subcategoryPageRuHeading: 'Зарядные устройства',
               path: '/chargersmobile?mc_type%5B0%5D=wireless&mc_type%5Boperation%5D=union',
               isUnique: true,
-              appearsInSearch: true,
+              appearsInSearch: false,
+              hasTaggedProducts: true,
               position: 0,
             },
             speakerDocks: {
@@ -186,6 +206,7 @@ module.exports = {
               path: '/speakerdock',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
           },
@@ -194,6 +215,7 @@ module.exports = {
           ruName: 'Телевидение и видео',
           isUnique: true,
           containsUnique: true,
+          hasSubcategoryWithTaggedProducts: true,
           subCategories: {
             tvSets: {
               ruName: 'Телевизоры',
@@ -201,6 +223,7 @@ module.exports = {
               path: '/tv',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             terrestrials: {
@@ -209,6 +232,7 @@ module.exports = {
               path: '/terrestrial',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             satellites: {
@@ -217,6 +241,7 @@ module.exports = {
               path: '/satellite',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             aerials: {
@@ -225,6 +250,7 @@ module.exports = {
               path: '/aerial',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             projectors: {
@@ -233,6 +259,7 @@ module.exports = {
               path: '/projectors',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             wallmounts: {
@@ -241,6 +268,7 @@ module.exports = {
               path: '/wallmount',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             mediaPlayers: {
@@ -249,6 +277,7 @@ module.exports = {
               path: '/media',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             dvdPlayers: {
@@ -257,6 +286,7 @@ module.exports = {
               path: '/dvd',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             microPCs: {
@@ -264,7 +294,8 @@ module.exports = {
               subcategoryPageRuHeading: 'Микро-ПК',
               path: '/desktoppc?desktoppc_type%5B0%5D=micro&desktoppc_type%5Boperation%5D=union',
               isUnique: true,
-              appearsInSearch: true,
+              appearsInSearch: false,
+              hasTaggedProducts: true,
               position: 0,
             },
             soundBars: {
@@ -273,6 +304,7 @@ module.exports = {
               path: '/soundbar',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             tvAccessories: {
@@ -281,6 +313,7 @@ module.exports = {
               path: '/tvaccessory',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             smartTvKeyboards: {
@@ -288,7 +321,8 @@ module.exports = {
               subcategoryPageRuHeading: 'Клавиатуры',
               path: '/keyboards?mk_designation%5B0%5D=smarttv&mk_designation%5Boperation%5D=union',
               isUnique: true,
-              appearsInSearch: true,
+              appearsInSearch: false,
+              hasTaggedProducts: true,
               position: 0,
             },
             avCables: {
@@ -297,6 +331,7 @@ module.exports = {
               path: '/cable?cable_usage%5B0%5D=av&cable_usage%5Boperation%5D=union',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             remoteControls: {
@@ -305,6 +340,7 @@ module.exports = {
               path: '/remote',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             projectorScreens: {
@@ -313,6 +349,7 @@ module.exports = {
               path: '/projectorscreen',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
           },
@@ -321,6 +358,7 @@ module.exports = {
           ruName: 'Планшеты, электронные книги',
           isUnique: true,
           containsUnique: true,
+          hasSubcategoryWithTaggedProducts: true,
           subCategories: {
             tablets: {
               ruName: 'Планшеты',
@@ -328,6 +366,7 @@ module.exports = {
               path: '/tabletpc',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             ebooks: {
@@ -336,6 +375,7 @@ module.exports = {
               path: '/ebook',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             tabletCases: {
@@ -344,6 +384,7 @@ module.exports = {
               path: '/tabletcase',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             portableChargers: {
@@ -352,6 +393,7 @@ module.exports = {
               path: '/portablecharger',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 1,
             },
             memoryCards: {
@@ -360,6 +402,7 @@ module.exports = {
               path: '/memcards?typememcards%5B0%5D=microsd&typememcards%5B1%5D=microsdxc&typememcards%5B2%5D=microsdhc&typememcards%5Boperation%5D=union',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             cablesAndAdapters: {
@@ -368,6 +411,7 @@ module.exports = {
               path: '/cable?cable_usage%5B0%5D=phone&cable_usage%5Boperation%5D=union',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 1,
             },
             chargers: {
@@ -376,6 +420,7 @@ module.exports = {
               path: '/chargersmobile?mc_devicetype%5B0%5D=type3&mc_devicetype%5Boperation%5D=union',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             wireless4gAnd3gModems: {
@@ -384,6 +429,7 @@ module.exports = {
               path: '/wirelessadapter?wa_type%5B0%5D=4g&wa_type%5B1%5D=3g&wa_type%5Boperation%5D=union',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             ebookCovers: {
@@ -392,6 +438,7 @@ module.exports = {
               path: '/ebookcover',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
           },
@@ -400,6 +447,7 @@ module.exports = {
           ruName: 'Аудиотехника',
           isUnique: true,
           containsUnique: true,
+          hasSubcategoryWithTaggedProducts: true,
           subCategories: {
             headphones: {
               ruName: 'Наушники',
@@ -407,6 +455,7 @@ module.exports = {
               path: '/headphones',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 1,
             },
             portableHeadphonesAmplifiers: {
@@ -414,7 +463,8 @@ module.exports = {
               subcategoryPageRuHeading: 'Усилители для наушников',
               path: '/portableamp?dac_type1%5B0%5D=type1&dac_type1%5Boperation%5D=union',
               isUnique: true,
-              appearsInSearch: true,
+              appearsInSearch: false,
+              hasTaggedProducts: true,
               position: 0,
             },
             mp3players: {
@@ -422,7 +472,8 @@ module.exports = {
               subcategoryPageRuHeading: 'MP3-плееры',
               path: '/player',
               isUnique: true,
-              appearsInSearch: true,
+              appearsInSearch: false,
+              hasTaggedProducts: true,
               position: 0,
             },
             bluetoothSpeakers: {
@@ -430,7 +481,8 @@ module.exports = {
               subcategoryPageRuHeading: 'Беспроводные и портативные колонки',
               path: '/wspeaker?ws_type%5B0%5D=portable&ws_type%5Boperation%5D=union',
               isUnique: true,
-              appearsInSearch: true,
+              appearsInSearch: false,
+              hasTaggedProducts: true,
               position: 0,
             },
             wiFiAndMultiroomAcoustics: {
@@ -438,7 +490,8 @@ module.exports = {
               subcategoryPageRuHeading: 'Беспроводные и портативные колонки',
               path: '/wspeaker?ws_type%5B0%5D=multiroom&ws_type%5Boperation%5D=union&ws_sync%5B0%5D=wireless&ws_sync%5Boperation%5D=union',
               isUnique: true,
-              appearsInSearch: true,
+              appearsInSearch: false,
+              hasTaggedProducts: true,
               position: 0,
             },
             smartSpeakers: {
@@ -447,6 +500,7 @@ module.exports = {
               path: '/wspeaker?wspeaker_voas%5B0%5D=siri&wspeaker_voas%5B1%5D=googleassistant&wspeaker_voas%5B2%5D=alexa&wspeaker_voas%5B3%5D=alisa&wspeaker_voas%5Boperation%5D=union',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             microphones: {
@@ -455,6 +509,7 @@ module.exports = {
               path: '/microphones',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             multimediaAcoustics: {
@@ -463,6 +518,7 @@ module.exports = {
               path: '/sound',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             soundBars: {
@@ -471,6 +527,7 @@ module.exports = {
               path: '/soundbar',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 1,
             },
             radio: {
@@ -479,6 +536,7 @@ module.exports = {
               path: '/radio',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             partyBoxes: {
@@ -486,7 +544,8 @@ module.exports = {
               subcategoryPageRuHeading: 'Музыкальные центры, колонки для вечеринок (Partybox)',
               path: '/hifiaudio?hifi_type%5B0%5D=partybox&hifi_type%5Boperation%5D=union',
               isUnique: true,
-              appearsInSearch: true,
+              appearsInSearch: false,
+              hasTaggedProducts: true,
               position: 0,
             },
             hifiaudio: {
@@ -495,6 +554,7 @@ module.exports = {
               path: '/hifiaudio',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             clockRadios: {
@@ -503,6 +563,7 @@ module.exports = {
               path: '/clockradio',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             boomboxesAndRadioTapeRecorders: {
@@ -510,7 +571,8 @@ module.exports = {
               subcategoryPageRuHeading: 'Магнитолы',
               path: '/portaudio',
               isUnique: true,
-              appearsInSearch: true,
+              appearsInSearch: false,
+              hasTaggedProducts: true,
               position: 0,
             },
             voiceRecorders: {
@@ -519,6 +581,7 @@ module.exports = {
               path: '/voicerecorder',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             btAudioReceivers: {
@@ -527,6 +590,7 @@ module.exports = {
               path: '/portableamp?dac_type1%5B0%5D=btreciever&dac_type1%5Boperation%5D=union',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             audioCables: {
@@ -535,6 +599,7 @@ module.exports = {
               path: '/cable?cable_usage%5B0%5D=av&cable_usage%5Boperation%5D=union&cable_type%5B0%5D=cable&cable_type%5Boperation%5D=union&cable_func%5B0%5D=type3&cable_func%5Boperation%5D=union',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
           },
@@ -543,6 +608,7 @@ module.exports = {
           ruName: 'Hi-Fi аудио',
           isUnique: true,
           containsUnique: true,
+          hasSubcategoryWithTaggedProducts: true,
           subCategories: {
             hifiPlayers: {
               ruName: 'Hi-Fi плеееры',
@@ -550,6 +616,7 @@ module.exports = {
               path: '/player?player_type%5B0%5D=hifiplayer&player_type%5Boperation%5D=union',
               isUnique: true,
               appearsInSearch: false,
+              hasTaggedProducts: true,
               position: 0,
             },
             audiophileHeadphones: {
@@ -557,7 +624,8 @@ module.exports = {
               subcategoryPageRuHeading: 'Наушники для аудиофилов',
               path: '/headphones?hp_destination%5B0%5D=hiend&hp_destination%5Boperation%5D=union',
               isUnique: true,
-              appearsInSearch: true,
+              appearsInSearch: false,
+              hasTaggedProducts: true,
               position: 0,
             },
             headphoneAmplifiers: {
@@ -565,7 +633,8 @@ module.exports = {
               subcategoryPageRuHeading: 'Усилители для наушников',
               path: '/portableamp?dac_type1%5B0%5D=desktopamp&dac_type1%5Boperation%5D=union',
               isUnique: true,
-              appearsInSearch: true,
+              appearsInSearch: false,
+              hasTaggedProducts: true,
               position: 0,
             },
             hiFiSpeakers: {
@@ -574,6 +643,7 @@ module.exports = {
               path: '/hifisound',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: false,
               position: 0,
             },
             avReceiversAndProcessors: {
@@ -581,7 +651,8 @@ module.exports = {
               subcategoryPageRuHeading: 'AV-ресиверы и усилители',
               path: '/recievers?type_reciever%5B0%5D=avprocessor&type_reciever%5B1%5D=avreciever&type_reciever%5Boperation%5D=union',
               isUnique: true,
-              appearsInSearch: true,
+              appearsInSearch: false,
+              hasTaggedProducts: true,
               position: 0,
             },
             amplifiersAndPreamps: {
@@ -589,7 +660,8 @@ module.exports = {
               subcategoryPageRuHeading: 'Усилители, предусилители и стереоресиверы',
               path: '/recievers?type_reciever%5B0%5D=amplifier_int&type_reciever%5B1%5D=preamp&type_reciever%5B2%5D=stereoreciever&type_reciever%5B3%5D=poweramplifier&type_reciever%5Boperation%5D=union',
               isUnique: true,
-              appearsInSearch: true,
+              appearsInSearch: false,
+              hasTaggedProducts: true,
               position: 0,
             },
             tubeAmplifiers: {
@@ -597,7 +669,8 @@ module.exports = {
               subcategoryPageRuHeading: 'AV-ресиверы и усилители',
               path: '/recievers?amp_lamp=1',
               isUnique: true,
-              appearsInSearch: true,
+              appearsInSearch: false,
+              hasTaggedProducts: true,
               position: 0,
             },
             cdPlayers: {
@@ -606,6 +679,7 @@ module.exports = {
               path: '/cd_player',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             networkPlayers: {
@@ -614,6 +688,7 @@ module.exports = {
               path: '/network_player',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
 
@@ -623,6 +698,7 @@ module.exports = {
               path: '/turntable',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             phonoStage: {
@@ -631,6 +707,7 @@ module.exports = {
               path: '/phonopreamps',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             soundRecordersAndTonarms: {
@@ -638,7 +715,8 @@ module.exports = {
               subcategoryPageRuHeading: 'Звукосниматели, тонармы, иглы',
               path: '/turntableaccess',
               isUnique: true,
-              appearsInSearch: true,
+              appearsInSearch: false,
+              hasTaggedProducts: true,
               position: 0,
             },
             speakerCables: {
@@ -646,7 +724,8 @@ module.exports = {
               subcategoryPageRuHeading: 'Кабели, адаптеры, разветвители',
               path: '/cable?cable_usage%5B0%5D=av&cable_usage%5Boperation%5D=union&cable_func%5B0%5D=type3&cable_func%5Boperation%5D=union&conn1%5B0%5D=acoustic&conn1%5Boperation%5D=intersect',
               isUnique: true,
-              appearsInSearch: true,
+              appearsInSearch: false,
+              hasTaggedProducts: true,
               position: 0,
             },
           },
@@ -655,6 +734,7 @@ module.exports = {
           ruName: 'Фото- и видеотехника',
           isUnique: true,
           containsUnique: true,
+          hasSubcategoryWithTaggedProducts: true,
           subCategories: {
             cameras: {
               ruName: 'Фотоаппараты',
@@ -662,6 +742,7 @@ module.exports = {
               path: '/photo',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             lenses: {
@@ -670,22 +751,25 @@ module.exports = {
               path: '/lens',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             actionCameras: {
               ruName: 'Экшен-камеры',
               subcategoryPageRuHeading: 'Экшен-камеры',
               path: '/actioncamera',
-              appearsInSearch: true,
               isUnique: false,
+              appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             actionCameraAccessories: {
               ruName: 'Аксессуары и крепления для экшен-камер',
               subcategoryPageRuHeading: 'Аксессуары и крепления для экшен-камер',
               path: '/actioncamera_acs',
-              appearsInSearch: true,
               isUnique: false,
+              appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             videocameras: {
@@ -694,6 +778,7 @@ module.exports = {
               path: '/video',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             photoPrinters: {
@@ -701,7 +786,8 @@ module.exports = {
               subcategoryPageRuHeading: 'Фотопринтеры',
               path: '/printers?type_print[0]=photoprinter&type_print[operation]=union',
               isUnique: true,
-              appearsInSearch: false,
+              appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             tripods: {
@@ -710,6 +796,7 @@ module.exports = {
               path: '/tripod',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             memoryCards: {
@@ -718,6 +805,7 @@ module.exports = {
               path: '/memcards',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             photoFrames: {
@@ -726,6 +814,7 @@ module.exports = {
               path: '/photoframe',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             flashes: {
@@ -734,6 +823,7 @@ module.exports = {
               path: '/flashes',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             batteriesAccumulatorsChargers: {
@@ -742,6 +832,7 @@ module.exports = {
               path: '/battery',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: false,
               position: 0,
             },
             cases: {
@@ -749,7 +840,8 @@ module.exports = {
               subcategoryPageRuHeading: 'Сумки для фото/видеотехники',
               path: '/case',
               isUnique: true,
-              appearsInSearch: true,
+              appearsInSearch: false,
+              hasTaggedProducts: true,
               position: 0,
             },
             cardReaders: {
@@ -758,14 +850,16 @@ module.exports = {
               path: '/cardreaders',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             batteries: {
               ruName: 'Аккумуляторы',
               subcategoryPageRuHeading: 'Аккумуляторы, ЗУ для фото/видеотехники',
               path: '/batteries',
-              isUnique: false,
-              appearsInSearch: false,
+              isUnique: true,
+              appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             photoFilters: {
@@ -774,6 +868,7 @@ module.exports = {
               path: '/photofilter',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: false,
               position: 0,
             },
           },
@@ -782,6 +877,7 @@ module.exports = {
           ruName: 'Видеоигры',
           isUnique: true,
           containsUnique: true,
+          hasSubcategoryWithTaggedProducts: true,
           subCategories: {
             consoles: {
               ruName: 'Игровые приставки',
@@ -789,6 +885,7 @@ module.exports = {
               path: '/console',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             consoleGames: {
@@ -797,6 +894,7 @@ module.exports = {
               path: '/games',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             pcGames: {
@@ -805,6 +903,7 @@ module.exports = {
               path: '/pcgames',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             virtualReality: {
@@ -813,6 +912,7 @@ module.exports = {
               path: '/virtualreality',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             controllersAndAccessories: {
@@ -821,6 +921,7 @@ module.exports = {
               path: '/controllers',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             paymentCards: {
@@ -829,6 +930,7 @@ module.exports = {
               path: '/paymentcard',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
           },
@@ -837,6 +939,7 @@ module.exports = {
           ruName: 'Гаджеты',
           isUnique: true,
           containsUnique: true,
+          hasSubcategoryWithTaggedProducts: true,
           subCategories: {
             smartWatches: {
               ruName: 'Умные часы',
@@ -844,6 +947,7 @@ module.exports = {
               path: '/smartwatch?sw_type%5B0%5D=smartphonewatch&sw_type%5B1%5D=watch&sw_type%5B2%5D=fitwatch&sw_type%5B3%5D=hybridsmartwatch&sw_type%5Boperation%5D=union',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 1,
             },
             fitnessBracelets: {
@@ -852,6 +956,7 @@ module.exports = {
               path: '/smartwatch?sw_type%5B0%5D=bracelet&sw_type%5Boperation%5D=union',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 1,
             },
             heartRateMonitorsAndPulseOximeters: {
@@ -860,6 +965,7 @@ module.exports = {
               path: '/heart_rate',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             strapsAndBracelets: {
@@ -868,6 +974,7 @@ module.exports = {
               path: '/replacementstrap',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             virtualReality: {
@@ -876,6 +983,7 @@ module.exports = {
               path: '/virtualreality',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 1,
             },
             smartScales: {
@@ -883,7 +991,8 @@ module.exports = {
               subcategoryPageRuHeading: 'Умные весы',
               path: '/scales?sc_synchronize=1',
               isUnique: true,
-              appearsInSearch: true,
+              appearsInSearch: false,
+              hasTaggedProducts: true,
               position: 0,
             },
             nitratomersDosimeters: {
@@ -892,6 +1001,7 @@ module.exports = {
               path: '/nitrate',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             electronicSteamGenerators: {
@@ -900,6 +1010,7 @@ module.exports = {
               path: '/smoke',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
           },
@@ -908,6 +1019,7 @@ module.exports = {
           ruName: 'Умный дом и видеонаблюдение',
           isUnique: false,
           containsUnique: false,
+          hasSubcategoryWithTaggedProducts: true,
           subCategories: {
             smartHome: {
               ruName: 'Умный дом',
@@ -915,6 +1027,7 @@ module.exports = {
               path: '/smart_home',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             smartThermostats: {
@@ -923,6 +1036,7 @@ module.exports = {
               path: '/thermostat?smarthome=1',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             smartLightBulbs: {
@@ -931,6 +1045,7 @@ module.exports = {
               path: '/lightbulb?lib_smartlight=1',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             smartSockets: {
@@ -939,6 +1054,7 @@ module.exports = {
               path: '/smart_home?smh_type%5B0%5D=socket&smh_type%5Boperation%5D=union',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             ipCameras: {
@@ -947,6 +1063,7 @@ module.exports = {
               path: '/ipcamera',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             videoDoorPhones: {
@@ -955,6 +1072,7 @@ module.exports = {
               path: '/videodoorphone',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             cctvCameras: {
@@ -963,6 +1081,7 @@ module.exports = {
               path: '/cctvcamera',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             DVRs: {
@@ -971,6 +1090,7 @@ module.exports = {
               path: '/dvr',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             cameraTraps: {
@@ -979,6 +1099,7 @@ module.exports = {
               path: '/camera_traps',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
           },
@@ -987,6 +1108,7 @@ module.exports = {
           ruName: 'Электрический транспорт',
           isUnique: true,
           containsUnique: false,
+          hasSubcategoryWithTaggedProducts: true,
           subCategories: {
             electricScooters: {
               ruName: 'Электросамокаты и электроскутеры',
@@ -994,6 +1116,7 @@ module.exports = {
               path: '/electric_scooter',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             segways: {
@@ -1002,6 +1125,7 @@ module.exports = {
               path: '/segway',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             electrobikes: {
@@ -1010,6 +1134,7 @@ module.exports = {
               path: '/electrobike',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
           },
@@ -1018,6 +1143,7 @@ module.exports = {
           ruName: 'Телефония и связь',
           isUnique: true,
           containsUnique: true,
+          hasSubcategoryWithTaggedProducts: true,
           subCategories: {
             mobilePhones: {
               ruName: 'Мобильные телефоны',
@@ -1025,6 +1151,7 @@ module.exports = {
               path: '/mobile',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 1,
             },
             dectPhones: {
@@ -1033,6 +1160,7 @@ module.exports = {
               path: '/dect',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: false,
               position: 0,
             },
             phones: {
@@ -1041,6 +1169,7 @@ module.exports = {
               path: '/phone',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             ipPhones: {
@@ -1048,7 +1177,8 @@ module.exports = {
               subcategoryPageRuHeading: 'Проводные телефоны',
               path: '/phone?phone_connect%5B0%5D=2&phone_connect%5Boperation%5D=union',
               isUnique: true,
-              appearsInSearch: true,
+              appearsInSearch: false,
+              hasTaggedProducts: true,
               position: 0,
             },
             wirelessIpPhones: {
@@ -1057,6 +1187,7 @@ module.exports = {
               path: '/dect?phone_connect%5B0%5D=2&phone_connect%5Boperation%5D=union',
               isUnique: true,
               appearsInSearch: false,
+              hasTaggedProducts: true,
               position: 0,
             },
             wireless3gModems: {
@@ -1064,7 +1195,8 @@ module.exports = {
               subcategoryPageRuHeading: 'Беспроводные адаптеры',
               path: '/wirelessadapter?wa_type%5B0%5D=3g&wa_type%5B1%5D=4g&wa_type%5Boperation%5D=union',
               isUnique: true,
-              appearsInSearch: true,
+              appearsInSearch: false,
+              hasTaggedProducts: true,
               position: 0,
             },
             faxes: {
@@ -1073,6 +1205,7 @@ module.exports = {
               path: '/fax',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
 
@@ -1082,6 +1215,7 @@ module.exports = {
               path: '/portableradio',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
           },
@@ -1090,6 +1224,7 @@ module.exports = {
           ruName: 'Музыкальное оборудование',
           isUnique: true,
           containsUnique: true,
+          hasSubcategoryWithTaggedProducts: true,
           subCategories: {
             synthesizersAndWorkstations: {
               ruName: 'Синтезаторы и рабочие станции',
@@ -1097,6 +1232,7 @@ module.exports = {
               path: '/synthandworkst',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: false,
               position: 0,
             },
             audioInterfaces: {
@@ -1105,6 +1241,7 @@ module.exports = {
               path: '/audiointerface',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             concertAcoustics: {
@@ -1113,6 +1250,7 @@ module.exports = {
               path: '/concertacoustics',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: false,
               position: 0,
             },
             studioMonitors: {
@@ -1121,6 +1259,7 @@ module.exports = {
               path: '/studio_monitor',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: false,
               position: 0,
             },
             guitarAmps: {
@@ -1129,6 +1268,7 @@ module.exports = {
               path: '/guitarcombo',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             microphones: {
@@ -1137,6 +1277,7 @@ module.exports = {
               path: '/microphones',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 1,
             },
             guitars: {
@@ -1145,6 +1286,7 @@ module.exports = {
               path: '/guitar',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 1,
             },
           },
@@ -1153,6 +1295,7 @@ module.exports = {
           ruName: 'Оптические приборы',
           isUnique: true,
           containsUnique: false,
+          hasSubcategoryWithTaggedProducts: true,
           subCategories: {
             binoculars: {
               ruName: 'Бинокли и подзорные трубы',
@@ -1160,6 +1303,7 @@ module.exports = {
               path: '/optic',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             telescopes: {
@@ -1168,6 +1312,7 @@ module.exports = {
               path: '/telescope',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
           },
@@ -1179,28 +1324,28 @@ module.exports = {
       ruName: 'Компьютеры и сети',
       tiles: [
         {
-          ruName: 'Геймерские наушники',
-          path: '/headphones?hp_destination%5B0%5D=gamer&hp_destination%5Boperation%5D=union&utm_source=pc_tile&utm_medium=headphones',
+          ruName: 'Планшеты 2020 года',
+          path: '/tabletpc?common_date%5Bfrom%5D=2020&common_date%5Bto%5D=2020&utm_source=pc_title&utm_medium=tabletpc',
           isUnique: true,
         },
         {
-          ruName: 'Wi-Fi роутеры',
-          path: '/wrouter?utm_source=pc_title&utm_medium=wrouter',
+          ruName: '4G роутеры',
+          path: '/wrouter?wrouter_type%5B0%5D=ltewifirouter&wrouter_type%5B1%5D=portable&wrouter_type%5Boperation%5D=union&utm_source=pc_title&utm_medium=4grouter',
           isUnique: true,
         },
         {
-          ruName: 'Охлаждающие подставки',
-          path: '/laptopstand?lapst_type%5B0%5D=type1&lapst_type%5Boperation%5D=union&lapst_actcool=1&utm_source=pc_tile&utm_medium=laptopstand',
+          ruName: 'Рюкзаки для ноутбуков',
+          path: '/backpack?bap_internaldep%5B0%5D=laptoptablet&bap_internaldep%5Boperation%5D=union&utm_source=pc_title&utm_medium=backpack',
           isUnique: true,
         },
         {
-          ruName: 'Мини фотопринтеры',
-          path: '/printers?type_print%5B0%5D=portableprinter&type_print%5Boperation%5D=union&order=price:asc&utm_source=pc_tile&utm_medium=portableprinter',
+          ruName: 'Игровые мышки',
+          path: '/mouse?type_mk%5B0%5D=mouse_games&type_mk%5Boperation%5D=union&utm_source=pc_title&utm_medium=mouse',
           isUnique: true,
         },
         {
-          ruName: 'Игровые ноутбуки',
-          path: '/notebook?nbusage%5B0%5D=gamer&nbusage%5Boperation%5D=union&utm_source=pc_tile&utm_medium=gamenotebook',
+          ruName: 'Усилители Wi-Fi',
+          path: '/wirelessap?wap_type%5B0%5D=repeater&wap_type%5Boperation%5D=union&utm_source=pc_title&utm_medium=repeater',
           isUnique: true,
         },
       ],
@@ -1209,6 +1354,7 @@ module.exports = {
           ruName: 'Ноутбуки, компьютеры, мониторы',
           isUnique: true,
           containsUnique: true,
+          hasSubcategoryWithTaggedProducts: true,
           subCategories: {
             onePieceComputers: {
               ruName: 'Ноутбуки',
@@ -1216,6 +1362,7 @@ module.exports = {
               path: '/notebook',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             tablets: {
@@ -1224,14 +1371,16 @@ module.exports = {
               path: '/tabletpc',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 1,
             },
             monoblockPcs: {
               ruName: 'Моноблоки',
               subcategoryPageRuHeading: 'Моноблоки',
               path: '/monoblock',
-              appearsInSearch: true,
               isUnique: true,
+              appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             desktopPcs: {
@@ -1240,6 +1389,7 @@ module.exports = {
               path: '/desktoppc',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             monitors: {
@@ -1248,6 +1398,7 @@ module.exports = {
               path: '/display',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
           },
@@ -1256,6 +1407,7 @@ module.exports = {
           ruName: 'Комплектующие',
           isUnique: true,
           containsUnique: true,
+          hasSubcategoryWithTaggedProducts: true,
           subCategories: {
             videoCards: {
               ruName: 'Видеокарты',
@@ -1263,6 +1415,7 @@ module.exports = {
               path: '/videocard',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             CPU: {
@@ -1271,6 +1424,7 @@ module.exports = {
               path: '/cpu',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             motherboards: {
@@ -1279,6 +1433,7 @@ module.exports = {
               path: '/motherboard',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             RAM: {
@@ -1287,6 +1442,7 @@ module.exports = {
               path: '/dram',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             fans: {
@@ -1295,6 +1451,7 @@ module.exports = {
               path: '/fan',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             SSD: {
@@ -1303,6 +1460,7 @@ module.exports = {
               path: '/ssd',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             HDD: {
@@ -1311,6 +1469,7 @@ module.exports = {
               path: '/hdd',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             computerCases: {
@@ -1319,6 +1478,7 @@ module.exports = {
               path: '/chassis',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             powerSupplies: {
@@ -1327,6 +1487,7 @@ module.exports = {
               path: '/powersupply',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             soundCards: {
@@ -1335,6 +1496,7 @@ module.exports = {
               path: '/soundcard?type_soundcard%5B0%5D=internal&type_soundcard%5Boperation%5D=union',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             networkAdapters: {
@@ -1343,6 +1505,7 @@ module.exports = {
               path: '/networkadapter',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             opticalDrives: {
@@ -1351,6 +1514,7 @@ module.exports = {
               path: '/optical',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             tvTuners: {
@@ -1359,6 +1523,7 @@ module.exports = {
               path: '/tvtuner?execution_tvtune%5B0%5D=in&execution_tvtune%5Boperation%5D=union',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
           },
@@ -1367,6 +1532,7 @@ module.exports = {
           ruName: 'Техника для печати и дизайна',
           isUnique: false,
           containsUnique: true,
+          hasSubcategoryWithTaggedProducts: true,
           subCategories: {
             printers: {
               ruName: 'Принтеры и МФУ',
@@ -1374,6 +1540,7 @@ module.exports = {
               path: '/printers',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             scanners: {
@@ -1382,6 +1549,7 @@ module.exports = {
               path: '/scanner',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             accessoriesForOfficeEquipment: {
@@ -1390,6 +1558,7 @@ module.exports = {
               path: '/officeequip_acs',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             graphicTablets: {
@@ -1398,6 +1567,7 @@ module.exports = {
               path: '/tablets',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             cartridges: {
@@ -1406,6 +1576,7 @@ module.exports = {
               path: '/cartridges',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             photoPaper: {
@@ -1414,6 +1585,7 @@ module.exports = {
               path: '/photopaper',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             laminators: {
@@ -1422,6 +1594,7 @@ module.exports = {
               path: '/laminator',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             bookletMakers: {
@@ -1430,6 +1603,7 @@ module.exports = {
               path: '/bindingmachines',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             matrixPrinters: {
@@ -1438,6 +1612,7 @@ module.exports = {
               path: '/matrixprinter',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             printers3d: {
@@ -1446,6 +1621,7 @@ module.exports = {
               path: '/3dprinter',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             pens3d: {
@@ -1454,6 +1630,7 @@ module.exports = {
               path: '/3d_pen',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             suppliesFor3dPrinting: {
@@ -1462,6 +1639,7 @@ module.exports = {
               path: '/3d_filament',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
           },
@@ -1470,6 +1648,7 @@ module.exports = {
           ruName: 'Манипуляторы и устройства ввода',
           isUnique: true,
           containsUnique: true,
+          hasSubcategoryWithTaggedProducts: true,
           subCategories: {
             mouses: {
               ruName: 'Мыши',
@@ -1477,6 +1656,7 @@ module.exports = {
               path: '/mouse',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             keyboards: {
@@ -1485,6 +1665,7 @@ module.exports = {
               path: '/keyboards',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             controllers: {
@@ -1493,6 +1674,7 @@ module.exports = {
               path: '/controllers',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 1,
             },
             graphicTablets: {
@@ -1501,6 +1683,7 @@ module.exports = {
               path: '/tablets',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 1,
             },
             peripheralKits: {
@@ -1509,6 +1692,7 @@ module.exports = {
               path: '/peripheralkits',
               isUnique: false,
               appearsInSearch: false,
+              hasTaggedProducts: true,
               position: 0,
             },
             mousePads: {
@@ -1517,6 +1701,7 @@ module.exports = {
               path: '/mousepad',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
           },
@@ -1525,6 +1710,7 @@ module.exports = {
           ruName: 'Хранение данных',
           isUnique: true,
           containsUnique: true,
+          hasSubcategoryWithTaggedProducts: false,
           subCategories: {
             SSD: {
               ruName: 'SSD',
@@ -1532,6 +1718,7 @@ module.exports = {
               path: '/ssd',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 1,
             },
             HDD: {
@@ -1540,6 +1727,7 @@ module.exports = {
               path: '/hdd',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             externalHdd: {
@@ -1547,7 +1735,8 @@ module.exports = {
               subcategoryPageRuHeading: 'Внешние накопители',
               path: '/externalhdd',
               isUnique: true,
-              appearsInSearch: true,
+              appearsInSearch: false,
+              hasTaggedProducts: true,
               position: 0,
             },
             usbFlash: {
@@ -1555,7 +1744,8 @@ module.exports = {
               subcategoryPageRuHeading: 'USB Flash',
               path: '/usbflash',
               isUnique: true,
-              appearsInSearch: true,
+              appearsInSearch: false,
+              hasTaggedProducts: true,
               position: 0,
             },
             memoryCards: {
@@ -1564,6 +1754,7 @@ module.exports = {
               path: '/memcards',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 1,
             },
             casesForHdd: {
@@ -1572,6 +1763,7 @@ module.exports = {
               path: '/hddbox',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: false,
               position: 0,
             },
             NAS: {
@@ -1580,6 +1772,7 @@ module.exports = {
               path: '/nas',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             opticalDrives: {
@@ -1588,6 +1781,7 @@ module.exports = {
               path: '/optical',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 1,
             },
             usbHubs: {
@@ -1596,6 +1790,7 @@ module.exports = {
               path: '/usbhub',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: false,
               position: 0,
             },
             cardReaders: {
@@ -1604,6 +1799,7 @@ module.exports = {
               path: '/cardreaders',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 1,
             },
           },
@@ -1612,6 +1808,7 @@ module.exports = {
           ruName: 'Мультимедиа периферия',
           isUnique: true,
           containsUnique: true,
+          hasSubcategoryWithTaggedProducts: true,
           subCategories: {
             pcAcoustics: {
               ruName: 'Компьютерная акустика',
@@ -1619,6 +1816,7 @@ module.exports = {
               path: '/sound',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 1,
             },
             headphones: {
@@ -1627,6 +1825,7 @@ module.exports = {
               path: '/headphones',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 2,
             },
             webCameras: {
@@ -1635,6 +1834,7 @@ module.exports = {
               path: '/webcams',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             ipCameras: {
@@ -1643,6 +1843,7 @@ module.exports = {
               path: '/ipcamera',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 1,
             },
             audioInterfaces: {
@@ -1651,6 +1852,7 @@ module.exports = {
               path: '/audiointerface',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 1,
             },
           },
@@ -1659,6 +1861,7 @@ module.exports = {
           ruName: 'Сетевое оборудование',
           isUnique: true,
           containsUnique: true,
+          hasSubcategoryWithTaggedProducts: true,
           subCategories: {
             wirelessRouters: {
               ruName: 'Беспроводные маршрутизаторы',
@@ -1666,6 +1869,7 @@ module.exports = {
               path: '/wrouter',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             routersFor4g: {
@@ -1673,7 +1877,8 @@ module.exports = {
               subcategoryPageRuHeading: '4G маршрутизаторы',
               path: '/wrouter?wrouter_type%5B0%5D=ltewifirouter&wrouter_type%5B1%5D=portable&wrouter_type%5Boperation%5D=union',
               isUnique: true,
-              appearsInSearch: true,
+              appearsInSearch: false,
+              hasTaggedProducts: true,
               position: 0,
             },
             modemsFor4GwWiFi: {
@@ -1681,7 +1886,8 @@ module.exports = {
               subcategoryPageRuHeading: '4G модемы с Wi-Fi',
               path: '/wrouter?wrouter_type%5B0%5D=usbmodem&wrouter_type%5Boperation%5D=union',
               isUnique: true,
-              appearsInSearch: true,
+              appearsInSearch: false,
+              hasTaggedProducts: true,
               position: 0,
             },
             wirelessAccessPoints: {
@@ -1690,6 +1896,7 @@ module.exports = {
               path: '/wirelessap?wap_type%5B0%5D=wirelessap&wap_type%5Boperation%5D=union',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             wiFiAmplifiers: {
@@ -1697,7 +1904,8 @@ module.exports = {
               subcategoryPageRuHeading: 'Усилители Wi-Fi',
               path: '/wirelessap?wap_type%5B0%5D=repeater&wap_type%5Boperation%5D=union',
               isUnique: true,
-              appearsInSearch: true,
+              appearsInSearch: false,
+              hasTaggedProducts: true,
               position: 0,
             },
             modemsFor3gAnd4G: {
@@ -1706,6 +1914,7 @@ module.exports = {
               path: '/wirelessadapter?wa_type%5B0%5D=4g&wa_type%5B1%5D=3g&wa_type%5Boperation%5D=union',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 1,
             },
             wirelessAdapters: {
@@ -1714,6 +1923,7 @@ module.exports = {
               path: '/wirelessadapter?wa_type%5B0%5D=wifibluetooth&wa_type%5B1%5D=bluetooth&wa_type%5B2%5D=wifi&wa_type%5Boperation%5D=union',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             networkAdapters: {
@@ -1722,6 +1932,7 @@ module.exports = {
               path: '/networkadapter',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 1,
             },
             switches: {
@@ -1730,6 +1941,7 @@ module.exports = {
               path: '/switch',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             dslModemsAndRouters: {
@@ -1738,6 +1950,7 @@ module.exports = {
               path: '/dslmodem',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: false,
               position: 0,
             },
             NAS: {
@@ -1746,6 +1959,7 @@ module.exports = {
               path: '/nas',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 1,
             },
             ipCameras: {
@@ -1754,6 +1968,7 @@ module.exports = {
               path: '/ipcamera',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 2,
             },
             networkCables: {
@@ -1761,7 +1976,8 @@ module.exports = {
               subcategoryPageRuHeading: 'Кабели для сетевого оборудования',
               path: '/cable?cable_usage%5B0%5D=type4&cable_usage%5Boperation%5D=union',
               isUnique: true,
-              appearsInSearch: true,
+              appearsInSearch: false,
+              hasTaggedProducts: true,
               position: 0,
             },
             cableCrimpingTools: {
@@ -1770,6 +1986,7 @@ module.exports = {
               path: '/household_tools?ht_type%5B0%5D=crimpingpliers&ht_type%5Boperation%5D=union&order=date:desc',
               isUnique: true,
               appearsInSearch: false,
+              hasTaggedProducts: true,
               position: 0,
             },
             powerlines: {
@@ -1778,6 +1995,7 @@ module.exports = {
               path: '/powerline',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             wirelessAntennas: {
@@ -1786,6 +2004,7 @@ module.exports = {
               path: '/wantenna',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
           },
@@ -1794,6 +2013,7 @@ module.exports = {
           ruName: 'Аксессуары к ноутбукам и компьютерам',
           isUnique: false,
           containsUnique: true,
+          hasSubcategoryWithTaggedProducts: true,
           subCategories: {
             mobilePhones: {
               laptopBackpacks: 'Рюкзаки для ноутбуков',
@@ -1801,6 +2021,7 @@ module.exports = {
               path: '/backpack?bap_internaldep%5B0%5D=laptoptablet&bap_internaldep%5Boperation%5D=union',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             laptopBags: {
@@ -1809,6 +2030,7 @@ module.exports = {
               path: '/notebookcase',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             coolingCoasters: {
@@ -1817,6 +2039,7 @@ module.exports = {
               path: '/laptopstand',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             cablesAdaptersSplitters: {
@@ -1825,6 +2048,7 @@ module.exports = {
               path: '/cable?cable_usage%5B0%5D=pc&cable_usage%5Boperation%5D=union',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             mousepads: {
@@ -1833,6 +2057,7 @@ module.exports = {
               path: '/mousepad',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 1,
             },
             accumulatorsAndChargers: {
@@ -1841,6 +2066,7 @@ module.exports = {
               path: '/nbbatteries?mfr%5B0%5D=for_notebook&mfr%5B1%5D=for_notebook_cha',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             universalChargers: {
@@ -1849,6 +2075,7 @@ module.exports = {
               path: '/chargersmobile?mc_devicetype%5B0%5D=type2&mc_devicetype%5Boperation%5D=union',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
           },
@@ -1857,6 +2084,7 @@ module.exports = {
           ruName: 'Электропитание',
           isUnique: true,
           containsUnique: true,
+          hasSubcategoryWithTaggedProducts: true,
           subCategories: {
             ups: {
               ruName: 'Источники бесперебойного питания',
@@ -1864,6 +2092,7 @@ module.exports = {
               path: '/ups',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             stabilizersAndSurgeProtectors: {
@@ -1871,7 +2100,8 @@ module.exports = {
               subcategoryPageRuHeading: 'Стабилизаторы и сетевые фильтры',
               path: '/voltageregulator',
               isUnique: true,
-              appearsInSearch: true,
+              appearsInSearch: false,
+              hasTaggedProducts: true,
               position: 0,
             },
             laptopBatteries: {
@@ -1879,7 +2109,8 @@ module.exports = {
               subcategoryPageRuHeading: 'Аккумуляторы, ЗУ для ноутбуков',
               path: '/nbbatteries?mfr%5B0%5D=for_notebook',
               isUnique: true,
-              appearsInSearch: true,
+              appearsInSearch: false,
+              hasTaggedProducts: true,
               position: 0,
             },
             chargers: {
@@ -1888,6 +2119,7 @@ module.exports = {
               path: '/chargersmobile?mc_devicetype%5B0%5D=type2&mc_devicetype%5Boperation%5D=union',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 1,
             },
             cables: {
@@ -1896,6 +2128,7 @@ module.exports = {
               path: '/cable?conn1%5B0%5D=c5&conn1%5Boperation%5D=intersect',
               isUnique: true,
               appearsInSearch: false,
+              hasTaggedProducts: true,
               position: 0,
             },
             upsBatteries: {
@@ -1904,6 +2137,7 @@ module.exports = {
               path: '/ups_battery',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
           },
@@ -1912,6 +2146,7 @@ module.exports = {
           ruName: 'Игры и программное обеспечение',
           isUnique: false,
           containsUnique: true,
+          hasSubcategoryWithTaggedProducts: true,
           subCategories: {
             gamesForPc: {
               ruName: 'Видеоигры для ПК',
@@ -1919,6 +2154,7 @@ module.exports = {
               path: '/pcgames',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 1,
             },
             gamesForConsole: {
@@ -1927,6 +2163,7 @@ module.exports = {
               path: '/games',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 1,
             },
             antiviruses: {
@@ -1935,6 +2172,7 @@ module.exports = {
               path: '/antivirus',
               isUnique: true,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 0,
             },
             paymentCardsAndSubscriptions: {
@@ -1943,6 +2181,7 @@ module.exports = {
               path: '/paymentcard',
               isUnique: false,
               appearsInSearch: true,
+              hasTaggedProducts: true,
               position: 1,
             },
           },
