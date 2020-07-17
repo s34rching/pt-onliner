@@ -36,6 +36,7 @@ class ProductsList extends BasePage {
     };
     this.productTitle = (productTitle) => this.productByTitle(productTitle).$('.schema-product__title').element(by.tagName('span'));
     this.compareCheckbox = (productTitle) => this.productByTitle(productTitle).$('.schema-product__compare');
+    this.productReviewsCount = (productTitle) => this.productByTitle(productTitle).$('span.schema-product__review-count');
   }
 
   async openOrderListDropDown() {
@@ -118,6 +119,37 @@ class ProductsList extends BasePage {
     }
 
     return Promise.all(result);
+  }
+
+  async getProductReviewsCount(product) {
+    await this.constructor.isVisible(this.productReviewsCount(product.extended_name));
+    const rating = await this.productReviewsCount(product.extended_name).getText();
+    return parseInt(rating, 10);
+  }
+
+  async getProductsRatings(products) {
+    const ratings = [];
+    // eslint-disable-next-line no-restricted-syntax
+    for (const product of products) {
+      ratings.push(this.getProductReviewsCount(product));
+    }
+
+    return Promise.all(ratings);
+  }
+
+  async getProductTitle(product) {
+    await this.constructor.isVisible(this.productTitle(product.extended_name));
+    return this.productTitle(product.extended_name).getText();
+  }
+
+  async getProductsTitles(products) {
+    const titles = [];
+    // eslint-disable-next-line no-restricted-syntax
+    for (const product of products) {
+      titles.push(this.getProductTitle(product));
+    }
+
+    return Promise.all(titles);
   }
 }
 

@@ -3,7 +3,7 @@ const ProductsList = require('../page-objects/products-list');
 const api = require('../helpers/onliner-api');
 const { catalog } = require('../service/relative-urls');
 const { list: { order, filters } } = require('../service/component-properties');
-const { COMPARE_PRODUCTS_NUMBER } = require('../config/scenarios');
+const { COMPARE_PRODUCTS_NUMBER, PRODUCTS_PER_PAGE } = require('../config/scenarios');
 const { getRandomProducts } = require('../service/product-services');
 
 describe('Onliner.by - Catalog / Products List', () => {
@@ -46,9 +46,8 @@ describe('Onliner.by - Catalog / Products List', () => {
     await ProductsList.waitForUrlContains(orderedByRating);
     await ProductsList.waitForActiveOrderOptionByName(reviewed);
     await ProductsList.waitForProperTotalOfFoundProducts(CPUsFilteredByRating.total.toString());
-    ProductsList.productRewievs.each(async (review, index) => {
-      expect(await review.getText()).toContain(reviews[index]);
-    });
+    const renderedRatings = await ProductsList.getProductsRatings(CPUsFilteredByRating.products);
+    expect(renderedRatings).toEqual(reviews);
   });
 
   it('User should be able to filter out products by manufacturer', async () => {
@@ -62,9 +61,8 @@ describe('Onliner.by - Catalog / Products List', () => {
     await ProductsList.waitForUrlContains(filteredByIntel);
     await ProductsList.waitForSearchTagIsDisplayed(optionName);
     await ProductsList.waitForProperTotalOfFoundProducts(intelCPUs.total.toString());
-    ProductsList.productsTitles.each(async (title) => {
-      expect(await title.getText()).toContain(optionName);
-    });
+    const renderedTitles = await ProductsList.getProductsTitles(intelCPUs.products);
+    expect(renderedTitles.length).toEqual(PRODUCTS_PER_PAGE);
   });
 
   it('User should be able to reset applied filters', async () => {
