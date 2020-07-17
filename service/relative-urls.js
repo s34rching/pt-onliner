@@ -17,6 +17,7 @@ const global = {
 const catalog = {
   cpu: '/cpu',
   used: (base) => `${base}?segment=second`,
+  compareBase: () => '/compare/',
   compare: (firstProductShortName, secondProductShortName) => `/compare/${firstProductShortName}+${secondProductShortName}`,
   ordered: (base, option, direction) => `${base}?order=${getOrderOption(option)}:${direction}`,
   filtered: (base, filter, option) => `${base}?${getFilterCode(filter)}=${option.toLowerCase()}`,

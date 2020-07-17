@@ -4,6 +4,7 @@ const api = require('../helpers/onliner-api');
 const { catalog } = require('../service/relative-urls');
 const { list: { order, filters } } = require('../service/component-properties');
 const { COMPARE_PRODUCTS_NUMBER } = require('../config/scenarios');
+const { getRandomProducts } = require('../service/product-services');
 
 describe('Onliner.by - Catalog / Products List', () => {
   const filteredByIntel = catalog.filtered(catalog.cpu, 'manufacturer', 'Intel');
@@ -24,7 +25,7 @@ describe('Onliner.by - Catalog / Products List', () => {
   beforeEach(async () => {
     const res = await api.getProducts(catalog.cpu);
     allCPUs = JSON.parse(res);
-    ([firstProduct, secondProduct] = allCPUs.products);
+    ([firstProduct, secondProduct] = getRandomProducts(allCPUs.products, COMPARE_PRODUCTS_NUMBER));
 
     browser.waitForAngularEnabled(false);
   });
@@ -74,11 +75,14 @@ describe('Onliner.by - Catalog / Products List', () => {
 
   it('User should be able to add products to comparison', async () => {
     await ProductsList.constructor.goTo(catalog.cpu);
-    await ProductsList.markProductsToCompare(COMPARE_PRODUCTS_NUMBER);
+    await ProductsList.markProductsToCompare([firstProduct, secondProduct]);
     await ProductsList.compareProducts(COMPARE_PRODUCTS_NUMBER);
-    await ProductsList.constructor.urlContains(catalog.compare(firstProduct.key, secondProduct.key));
-    expect(await ProductsList.productComparisonName(firstProduct.full_name).isDisplayed()).toBe(true);
-    expect(await ProductsList.productComparisonName(secondProduct.full_name).isDisplayed()).toBe(true);
+    await ProductsList.constructor.isNotVisible(ProductsList.filters);
+    await ProductsList.constructor.urlContains(catalog.compareBase());
+    expect(await ProductsList.constructor
+      .isVisible(ProductsList.productComparisonName(firstProduct.extended_name))).toBe(true);
+    expect(await ProductsList.constructor
+      .isVisible(ProductsList.productComparisonName(secondProduct.extended_name))).toBe(true);
   });
 
   it('User should be able to clean out comparison', async () => {

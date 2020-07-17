@@ -1,4 +1,3 @@
-const _ = require('lodash');
 const { search: { resetFilter, clearComparisonList } } = require('../service/component-properties');
 const BasePage = require('./base-page');
 
@@ -27,17 +26,16 @@ class ProductsList extends BasePage {
     this.sectionSwitcher = (sectionName) => element(by.cssContainingText('.schema-filter-control__switcher-inner', sectionName));
     this.createUsedOfferButton = $("a[href='/used/create']");
     this.productByTitle = (productTitle) => element(by.xpath(`//div[contains(@class, "schema-product__group") and descendant::span[text()] = "${productTitle}"]`));
-    this.product = ({ productIndex, productTitle, all } = {}) => {
+    this.product = ({ productIndex, all } = {}) => {
       if (productIndex) {
         return $$('.schema-product').get(productIndex);
-      } if (productTitle) {
-        return element(by.xpath(`//div[contains(@class, "schema-product") and descendant::span[text()] = "${productTitle}"]`));
       } if (all) {
         return $$('.schema-product');
       }
       return $$('.schema-product').first();
     };
     this.productTitle = (productTitle) => this.productByTitle(productTitle).$('.schema-product__title').element(by.tagName('span'));
+    this.compareCheckbox = (productTitle) => this.productByTitle(productTitle).$('.schema-product__compare');
   }
 
   async openOrderListDropDown() {
@@ -107,11 +105,19 @@ class ProductsList extends BasePage {
     await this.resetComparisonListButton.click();
   }
 
-  async markProductsToCompare(numberOfProductsToCompare) {
-    const productCards = await this.product({ all: true });
-    await _.take(productCards, numberOfProductsToCompare).forEach((productCard) => {
-      productCard.element(by.css('.schema-product__compare')).click();
-    });
+  async pickProductToCompare(product) {
+    await this.constructor.isVisible(this.productByTitle(product.extended_name));
+    await this.compareCheckbox(product.extended_name).click();
+  }
+
+  async markProductsToCompare(productsToCompare) {
+    const result = [];
+    // eslint-disable-next-line no-restricted-syntax
+    for (const product of productsToCompare) {
+      result.push(this.pickProductToCompare(product));
+    }
+
+    return Promise.all(result);
   }
 }
 
