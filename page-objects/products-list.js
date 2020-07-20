@@ -10,8 +10,6 @@ class ProductsList extends BasePage {
     this.orderDropdownOptionsListOptionByName = (optionName) => this.orderDropdownOptionsList.element(by.cssContainingText('span', optionName));
     this.orderDropdownActiveOrderOption = this.orderDropdown.$('span.schema-order__text');
     this.orderDropdownActiveOrderOptionByName = (optionName) => this.orderDropdown.element(by.cssContainingText('span.schema-order__text', optionName));
-    this.productRewievs = $$('a.schema-product__rating').$$('span.schema-product__review-count');
-    this.productsTitles = $$('.schema-product__title').all(by.tagName('span'));
     this.filters = element(by.id('schema-filter'));
     this.filterByName = (filterName) => element(by.cssContainingText('.schema-filter__label', filterName)).element(by.xpath('..'));
     this.productsListTitle = $('.schema-header__title');
