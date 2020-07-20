@@ -66,6 +66,6 @@ describe('Onliner.by - Catalog / Products List - Used', () => {
     await ProductsList.waitForProperTotalOfFoundProducts(usedCPUs.total.toString());
     await ProductsList.createUserUsedProductOffer();
     await ProductsList.waitForUrlContains(global.login);
-    expect(await LoginPage.authFormTitle.isDisplayed()).toBe(true);
+    expect(await LoginPage.constructor.isVisible(LoginPage.authFormTitle)).toBe(true);
   });
 });
