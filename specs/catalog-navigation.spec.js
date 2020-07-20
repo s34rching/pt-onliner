@@ -43,11 +43,12 @@ describe('Onliner.by - Catalog / Navigation', () => {
     expect(await ProductsList.constructor.isVisible(ProductsList.product())).toBe(true);
   });
 
-  it('Catalog section tiles should lead to subcategory pages', async () => {
+  fit('Catalog section tiles should lead to subcategory pages', async () => {
     const randomSectionTile = entities.getRandomSectionTile(classifierItem);
+    console.log(randomSectionTile);
 
     await Catalog.chooseClassifierItem(classifierItem.id);
-    await Catalog.followTilesLinks(randomSectionTile.ruName);
+    await Catalog.followTilesLinks(randomSectionTile);
     expect(await ProductsList.constructor.isVisible(ProductsList.product())).toBe(true);
   });
 

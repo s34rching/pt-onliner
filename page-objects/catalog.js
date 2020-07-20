@@ -1,5 +1,6 @@
 const _ = require('lodash');
 const BasePage = require('./base-page');
+const { composeUrl } = require('../helpers/url-composer');
 
 const LINKS_IN_VISIBLE_LAYOUT = 5;
 
@@ -10,7 +11,7 @@ class Catalog extends BasePage {
     this.categoryItem = (categoryTitle) => element(by.cssContainingText('.catalog-navigation-list__aside-title', categoryTitle.match(/^\S+/)[0]));
     this.subCategoryItem = (subcategoryItem) => $(`a[href$="${subcategoryItem.path}"][class="catalog-navigation-list__dropdown-item"]`);
     this.catalogBar = element(by.className('catalog-bar'));
-    this.tile = (tileTitle) => element.all(by.xpath(`//div[contains(@class, tiles__item) and descendant::span[contains(., '${tileTitle}')]]`)).last();
+    this.tile = (tile) => $(`a[href="${composeUrl('catalog', tile.path)}"]`);
     this.categoryFirstProduct = $$('.schema-product__group').first().all(by.css('a')).first();
   }
 
@@ -47,9 +48,9 @@ class Catalog extends BasePage {
     await link.click();
   }
 
-  async followTilesLinks(tileTitle) {
-    await this.constructor.isVisible(this.tile(tileTitle));
-    await this.tile(tileTitle).click();
+  async followTilesLinks(tile) {
+    await this.constructor.isClickable(this.tile(tile));
+    await this.tile(tile).click();
   }
 }
 
