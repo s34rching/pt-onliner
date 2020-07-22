@@ -18,6 +18,16 @@ class HomePage extends BasePage {
     await this.constructor.isClickable(this.weatherInformer);
     await this.weatherInformer.click();
   }
+
+  async getCurrentExchangeRate() {
+    await this.constructor.isClickable(this.currencyInformer);
+    return this.currencyInformer.getText();
+  }
+
+  async getCurrentWeather() {
+    await this.constructor.isClickable(this.weatherInformer);
+    return this.weatherInformer.getText();
+  }
 }
 
 module.exports = new HomePage();

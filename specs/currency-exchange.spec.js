@@ -23,7 +23,7 @@ describe('Onliner.by - Top Navigation / Informers - Currency Exchange', () => {
 
   it('User should be able to see the best conversion rate of USD on homepage', async () => {
     await HomePage.constructor.goTo('/');
-    expect(await HomePage.currencyInformer.getText()).toBe(bestUsdExchangeRate);
+    expect(await HomePage.getCurrentExchangeRate()).toBe(bestUsdExchangeRate);
   });
 
   it('User should be able to open currency exchange rates page', async () => {
