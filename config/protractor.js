@@ -6,6 +6,7 @@ exports.config = {
   framework: 'jasmine',
   specs: ['specs/**/*.js'],
   SELENIUM_PROMISE_MANAGER: false,
+  getPageTimeout: 30000,
   jasmineNodeOpts: {
     print() {},
     defaultTimeoutInterval: 100000,
@@ -27,6 +28,7 @@ exports.config = {
       args: ['--disable-browser-side-navigation', '--disable-popup-blocking'],
     },
   },
+  chromeDriver: '../node_modules/protractor/node_modules/webdriver-manager/selenium/chromedriver_84.0.4147.89-1',
   params: {
     EXPLICIT_TIMEOUT: 10000,
   },
