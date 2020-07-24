@@ -70,7 +70,7 @@ module.exports = {
       categories: {
         mobilePhonesAndAccessories: {
           ruName: 'Мобильные телефоны и аксессуары',
-          isUnique: true,
+          isUnique: false,
           containsUnique: true,
           hasSubcategoryWithTaggedProducts: true,
           subCategories: {
