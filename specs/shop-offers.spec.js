@@ -35,51 +35,39 @@ describe('Onliner.by - Catalog / Products List', () => {
 
   it('Base order group should be displayed on offers page', async () => {
     await ProductsList.constructor.open(firstProduct.prices.html_url);
-    await ProductOffers.constructor.isVisible(ProductOffers.productPriceHeading);
-    await ProductOffers.constructor.scrollElementIntoView(ProductOffers.productPriceHeading);
-    await ProductOffers.skipPickCityModal();
+    await ProductOffers.reachShopOfferInfo();
     expect(await ProductOffers.productPricesOrderGroup.isDisplayed()).toBe(true);
   });
 
   it('Shop filters should be displayed on offers page', async () => {
     await ProductsList.constructor.open(firstProduct.prices.html_url);
-    await ProductOffers.constructor.isVisible(ProductOffers.productPriceHeading);
-    await ProductOffers.constructor.scrollElementIntoView(ProductOffers.productPriceHeading);
-    await ProductOffers.skipPickCityModal();
+    await ProductOffers.reachShopOfferInfo();
     expect(await ProductOffers.productPricesFilterGroup.isDisplayed()).toBe(true);
   });
 
   it('Shop logo should be displayed on offers page', async () => {
     await ProductsList.constructor.open(firstProduct.prices.html_url);
-    await ProductOffers.constructor.isVisible(ProductOffers.productPriceHeading);
-    await ProductOffers.constructor.scrollElementIntoView(ProductOffers.productPriceHeading);
-    await ProductOffers.skipPickCityModal();
+    await ProductOffers.reachShopOfferInfo();
     expect(await ProductOffers.waitForFirstShopLogoDisplayed(firstShop.shop_id)).toBe(true);
   });
 
   it('Shop offer price should be displayed on offers page', async () => {
     await ProductsList.constructor.open(firstProduct.prices.html_url);
-    await ProductOffers.constructor.isVisible(ProductOffers.productPriceHeading);
-    await ProductOffers.constructor.scrollElementIntoView(ProductOffers.productPriceHeading);
-    await ProductOffers.skipPickCityModal();
+    await ProductOffers.reachShopOfferInfo();
     await ProductOffers.waitForFirstShopLogoDisplayed(firstShop.shop_id);
     expect(await ProductOffers.firstOfferProductPrice.isDisplayed()).toBe(true);
   });
 
   it("'Shop Contacts' button should be displayed on offers page", async () => {
     await ProductsList.constructor.open(firstProduct.prices.html_url);
-    await ProductOffers.constructor.isVisible(ProductOffers.productPriceHeading);
-    await ProductOffers.constructor.scrollElementIntoView(ProductOffers.productPriceHeading);
-    await ProductOffers.skipPickCityModal();
+    await ProductOffers.reachShopOfferInfo();
     await ProductOffers.waitForFirstShopLogoDisplayed(firstShop.shop_id);
     expect(await ProductOffers.shopContactsButton.isDisplayed()).toBe(true);
   });
 
   it('Shop working hours button should be displayed on offers page', async () => {
     await ProductsList.constructor.open(firstProduct.prices.html_url);
-    await ProductOffers.constructor.isVisible(ProductOffers.productPriceHeading);
-    await ProductOffers.constructor.scrollElementIntoView(ProductOffers.productPriceHeading);
-    await ProductOffers.skipPickCityModal();
+    await ProductOffers.reachShopOfferInfo();
     await ProductOffers.waitForFirstShopLogoDisplayed(firstShop.shop_id);
     expect(await ProductOffers.shopWorkingHours.getText()).toContain(shop.workingHours.label);
   });

@@ -25,6 +25,12 @@ class ProductOffersPage extends BasePage {
       await this.popover.$('.button-style_primary').click();
     }
   }
+
+  async reachShopOfferInfo() {
+    await this.constructor.isVisible(this.productPriceHeading);
+    await this.constructor.scrollElementIntoView(this.productPriceHeading);
+    await this.skipPickCityModal();
+  }
 }
 
 module.exports = new ProductOffersPage();
