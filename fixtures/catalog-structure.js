@@ -498,7 +498,7 @@ module.exports = {
               ruName: 'Умные колонки',
               subcategoryPageRuHeading: 'Беспроводные и портативные колонки',
               path: '/wspeaker?wspeaker_voas%5B0%5D=siri&wspeaker_voas%5B1%5D=googleassistant&wspeaker_voas%5B2%5D=alexa&wspeaker_voas%5B3%5D=alisa&wspeaker_voas%5Boperation%5D=union',
-              isUnique: true,
+              isUnique: false,
               appearsInSearch: true,
               hasTaggedProducts: true,
               position: 0,
