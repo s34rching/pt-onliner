@@ -57,7 +57,8 @@ describe('Onliner.by - Catalog / Products List - Used', () => {
 
   it('Used product description should be displayed', async () => {
     await ProductsList.constructor.open(usedOffer.html_url);
-    await ProductDetailsPage.constructor.scrollElementIntoView(ProductDetailsPage.productNameHeading);
+    await ProductDetailsPage.constructor
+      .scrollElementIntoView(ProductDetailsPage.productNameHeading);
     expect(await ProductDetailsPage.usedProductDescription.isDisplayed()).toBe(true);
   });
 

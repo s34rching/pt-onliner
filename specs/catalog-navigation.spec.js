@@ -26,9 +26,8 @@ describe('Onliner.by - Catalog / Navigation', () => {
     await Catalog.hoverCategoryItem(categoryItem.ruName);
     await Catalog.openSubcategory(subcategoryItem);
     await Catalog.openCategoryFirstProductDetailsPage();
-    // eslint-disable-next-line max-len
-    expect(await ProductDetailsPage.constructor.isVisible(ProductDetailsPage.productOfferDescription))
-      .toBe(true);
+    expect(await ProductDetailsPage.constructor
+      .isVisible(ProductDetailsPage.productOfferDescription)).toBe(true);
   });
 
   it('Catalog top bar links should lead to subcategory pages', async () => {
@@ -64,8 +63,7 @@ describe('Onliner.by - Catalog / Navigation', () => {
     await Catalog.hoverCategoryItem(secondCategoryItem.ruName);
     await Catalog.openSubcategory(secondSubcategoryItem);
     await Catalog.openCategoryFirstProductDetailsPage();
-    // eslint-disable-next-line max-len
-    expect(await ProductDetailsPage.constructor.isVisible(ProductDetailsPage.productOfferDescription))
-      .toBe(true);
+    expect(await ProductDetailsPage.constructor
+      .isVisible(ProductDetailsPage.productOfferDescription)).toBe(true);
   });
 });
