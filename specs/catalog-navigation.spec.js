@@ -44,7 +44,6 @@ describe('Onliner.by - Catalog / Navigation', () => {
 
   it('Catalog section tiles should lead to subcategory pages', async () => {
     const randomSectionTile = entities.getRandomSectionTile(classifierItem);
-    console.log(randomSectionTile.ruName);
 
     await Catalog.chooseClassifierItem(classifierItem.id);
     await Catalog.followTilesLinks(randomSectionTile);
