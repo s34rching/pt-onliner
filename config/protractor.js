@@ -27,7 +27,7 @@ exports.config = {
       w3c: false,
       args: [
         '--disable-browser-side-navigation',
-        '--disable-popup-blocking',
+        '--block-new-web-contents',
         '--headless',
         '--disable-gpu',
         '--window-size=1920,1080',
@@ -42,7 +42,6 @@ exports.config = {
   onPrepare: () => {
     global.EC = protractor.ExpectedConditions;
 
-    browser.driver.manage().window().maximize();
     jasmine.getEnv().addReporter(new SpecReporter({
       spec:
         {
