@@ -10,7 +10,6 @@ class WeatherForecastPage extends BasePage {
     this.currentWeather = $('.b-weather-today__actual');
     this.currentTemperature = this.currentWeather.$('.grad').$('span.value');
     this.generalWeatherState = this.currentWeather.element(by.tagName('dd'));
-    this.nextDaysBlock = $('.b-weather-next');
     this.nextDayWeatherCard = (day) => element(by.xpath(`//li[contains(@class, 'b-weather-next__day') and descendant::dt[text()] = '${day.dateTextDayOfWeek}']`));
     this.nextDateDaytimeTemperatureRange = (day) => {
       const searchText = (_.isNull(day.dayTemperature.max))

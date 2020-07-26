@@ -37,7 +37,6 @@ describe('Onliner.by - Top Navigation / Informers - Weather Forecast', () => {
 
   it('User should be able to see 5-days forecast', async () => {
     await HomePage.constructor.open(composeUrl('weather'));
-    await WeatherForecastPage.constructor.scrollElementIntoView(WeatherForecastPage.nextDaysBlock);
     WeatherForecastPage.getNextDateDaytimeTemperatureRanges(_.values(forecast.forecast))
       .then((el) => el.length);
   });
