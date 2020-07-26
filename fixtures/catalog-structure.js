@@ -1341,7 +1341,7 @@ module.exports = {
         {
           ruName: 'Игровые мышки',
           path: '/mouse?type_mk%5B0%5D=mouse_games&type_mk%5Boperation%5D=union&utm_source=pc_title&utm_medium=mouse',
-          isUnique: true,
+          isUnique: false,
         },
         {
           ruName: 'Усилители Wi-Fi',
