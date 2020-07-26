@@ -26,12 +26,12 @@ describe('Onliner.by - Top Navigation / Informers - Weather Forecast', () => {
 
   it("User should be able to see current temperature in user's default city on homepage", async () => {
     await HomePage.constructor.goTo('/');
-    expect(await HomePage.getCurrentWeather()).toBe(currentTemperature);
+    expect(await HomePage.waitForCurrentWeather(currentTemperature)).toBe(true);
   });
 
   it('User should be able open weather forecast page', async () => {
     await HomePage.constructor.goTo('/');
-    await HomePage.openWeatherForecastPage();
+    await HomePage.openWeatherForecastPage(currentTemperature);
     expect(await WeatherForecastPage.getCurrentTemperature()).toBe(forecast.now.temperature);
   });
 

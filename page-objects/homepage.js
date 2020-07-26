@@ -8,25 +8,24 @@ class HomePage extends BasePage {
     this.weatherInformer = element(by.id('weather-informer'));
   }
 
-  async openCurrencyExchangeRatesPage() {
-    await this.constructor.scrollElementIntoView(this.topNavBar);
-    await this.constructor.isClickable(this.currencyInformer);
+  async waitForCurrentExchangeRate(rate) {
+    await this.constructor.hasText(this.currencyInformer, rate);
+    return this.constructor.isClickable(this.currencyInformer);
+  }
+
+  async openCurrencyExchangeRatesPage(rate) {
+    await this.waitForCurrentExchangeRate(rate);
     await this.currencyInformer.click();
   }
 
-  async openWeatherForecastPage() {
-    await this.constructor.isClickable(this.weatherInformer);
+  async waitForCurrentWeather(temperature) {
+    await this.constructor.hasText(this.weatherInformer, temperature);
+    return this.constructor.isClickable(this.weatherInformer);
+  }
+
+  async openWeatherForecastPage(temperature) {
+    await this.waitForCurrentWeather(temperature);
     await this.weatherInformer.click();
-  }
-
-  async getCurrentExchangeRate() {
-    await this.constructor.isClickable(this.currencyInformer);
-    return this.currencyInformer.getText();
-  }
-
-  async getCurrentWeather() {
-    await this.constructor.isClickable(this.weatherInformer);
-    return this.weatherInformer.getText();
   }
 }
 
