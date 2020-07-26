@@ -6,7 +6,7 @@ const api = require('../helpers/onliner-api');
 const { composeUrl } = require('../helpers/url-composer');
 const { getFormattedTemperature } = require('../service/weather-services');
 
-fdescribe('Onliner.by - Top Navigation / Informers - Weather Forecast', () => {
+describe('Onliner.by - Top Navigation / Informers - Weather Forecast', () => {
   const userCity = _.sample(_.without(cities, { name: 'Минск' }));
   let forecast;
   let userCityForecast;
