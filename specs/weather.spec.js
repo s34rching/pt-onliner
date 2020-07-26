@@ -6,7 +6,7 @@ const api = require('../helpers/onliner-api');
 const { composeUrl } = require('../helpers/url-composer');
 const { getFormattedTemperature } = require('../service/weather-services');
 
-describe('Onliner.by - Top Navigation / Informers - Weather Forecast', () => {
+fdescribe('Onliner.by - Top Navigation / Informers - Weather Forecast', () => {
   const userCity = _.sample(_.without(cities, { name: 'Минск' }));
   let forecast;
   let userCityForecast;
@@ -32,7 +32,7 @@ describe('Onliner.by - Top Navigation / Informers - Weather Forecast', () => {
   it('User should be able open weather forecast page', async () => {
     await HomePage.constructor.goTo('/');
     await HomePage.openWeatherForecastPage();
-    expect(await WeatherForecastPage.currentTemperature.getText()).toBe(forecast.now.temperature);
+    expect(await WeatherForecastPage.getCurrentTemperature()).toBe(forecast.now.temperature);
   });
 
   it('User should be able to see 5-days forecast', async () => {
@@ -47,7 +47,7 @@ describe('Onliner.by - Top Navigation / Informers - Weather Forecast', () => {
     await WeatherForecastPage.openCitiesOptionsDropdown();
     await WeatherForecastPage.changeCity(userCity.id);
     await WeatherForecastPage.waitForCityChangedTo(userCityForecast.city);
-    expect(await WeatherForecastPage.generalWeatherState.getText())
-      .toContain(userCityForecast.now.phenomena);
+    expect(await WeatherForecastPage.waitGeneralWeatherState(userCityForecast.now.phenomena))
+      .toBe(true);
   });
 });

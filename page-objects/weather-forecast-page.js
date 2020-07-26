@@ -40,6 +40,16 @@ class WeatherForecastPage extends BasePage {
   async getNextDateDaytimeTemperatureRanges(days) {
     return Promise.all(days.map(this.nextDateDaytimeTemperatureRange));
   }
+
+  async getCurrentTemperature() {
+    await this.constructor.isVisible(this.currentTemperature);
+    return this.currentTemperature.getText();
+  }
+
+  async waitGeneralWeatherState(state) {
+    await this.constructor.hasText(this.generalWeatherState, state);
+    return this.constructor.isVisible(this.generalWeatherState);
+  }
 }
 
 module.exports = new WeatherForecastPage();
