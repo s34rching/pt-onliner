@@ -70,6 +70,10 @@ class ExchangeRatesPage extends BasePage {
     return parseFloat(conversionResult.replace(',', '.').replace(' ', ''))
       .toFixed(2);
   }
+
+  async getExchangeServicesMapPointers() {
+    return this.exchangeServicesMapPointers;
+  }
 }
 
 module.exports = new ExchangeRatesPage();
