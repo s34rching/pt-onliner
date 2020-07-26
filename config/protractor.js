@@ -25,7 +25,13 @@ exports.config = {
     browserName: 'chrome',
     chromeOptions: {
       w3c: false,
-      args: ['--disable-browser-side-navigation', '--disable-popup-blocking'],
+      args: [
+        '--disable-browser-side-navigation',
+        '--disable-popup-blocking',
+        '--headless',
+        '--disable-gpu',
+        '--window-size=1920,1080',
+      ],
     },
   },
   chromeDriver: '../node_modules/protractor/node_modules/webdriver-manager/selenium/chromedriver_84.0.4147.89-1',
