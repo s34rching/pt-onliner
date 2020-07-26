@@ -16,6 +16,7 @@ class ProductsList extends BasePage {
     this.searchTagByName = (tagName) => element(by.cssContainingText('.schema-tags__text', tagName));
     this.totalFoundButton = (text) => element(by.cssContainingText('.schema-filter-button__sub_main', text));
     this.initiateFiltersResetButton = $('span.schema-filter-button__sub_control');
+    this.animatedFiltersResetButton = $('.schema-filter-button__state_animated');
     this.confirmFiltersResetButton = element(by.cssContainingText('span.schema-filter-button__sub', resetFilter));
     this.compareProductsButton = (numberOfProductsToCompare) => element(by.cssContainingText('.compare-button__sub_main', numberOfProductsToCompare.toString()));
     this.resetComparisonListButton = element.all(by.cssContainingText('a.product-table__clear', clearComparisonList)).first();
@@ -23,7 +24,7 @@ class ProductsList extends BasePage {
     this.firstProductOffersButton = element.all(by.css('.schema-product__offers')).first();
     this.sectionSwitcher = (sectionName) => element(by.cssContainingText('.schema-filter-control__switcher-inner', sectionName));
     this.createUsedOfferButton = $("a[href='/used/create']");
-    this.productByTitle = (productTitle) => element(by.xpath(`//div[contains(@class, "schema-product__group") and descendant::span[text()] = "${productTitle}"]`));
+    this.productByTitle = (productTitle) => element.all(by.xpath(`//div[contains(@class, "schema-product__group") and descendant::span[text()] = "${productTitle}"]`)).first();
     this.product = ({ productIndex, all } = {}) => {
       if (productIndex) {
         return $$('.schema-product').get(productIndex);
@@ -59,6 +60,7 @@ class ProductsList extends BasePage {
   }
 
   async filterProducts(filterName, filterOption) {
+    await this.constructor.isClickable(this.filterByName(filterName));
     await this.filterByName(filterName)
       .element(by.cssContainingText('.schema-filter__checkbox-text', filterOption))
       .click();
@@ -73,8 +75,11 @@ class ProductsList extends BasePage {
   }
 
   async resetFilters() {
+    await this.constructor.isNotVisible(this.animatedFiltersResetButton);
+    await this.constructor.isClickable(this.initiateFiltersResetButton);
     await this.initiateFiltersResetButton.click();
-    await this.constructor.isVisible(this.confirmFiltersResetButton);
+    await this.constructor.isNotVisible(this.animatedFiltersResetButton);
+    await this.constructor.isClickable(this.confirmFiltersResetButton);
     await this.confirmFiltersResetButton.click();
   }
 
