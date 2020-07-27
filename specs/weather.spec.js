@@ -37,8 +37,12 @@ describe('Onliner.by - Top Navigation / Informers - Weather Forecast', () => {
 
   it('User should be able to see 5-days forecast', async () => {
     await HomePage.constructor.open(composeUrl('weather'));
-    WeatherForecastPage.getNextDateDaytimeTemperatureRanges(_.values(forecast.forecast))
-      .then((el) => el.length);
+    const nextDaysTemperatureRanges = await WeatherForecastPage
+      .getNextDateDaytimeTemperatureRanges(_.values(forecast.forecast));
+
+    await Promise.all(nextDaysTemperatureRanges.map(async (range) => {
+      expect(await HomePage.constructor.isVisible(range)).toBe(true);
+    }));
   });
 
   it('User should be able to change their city to see other city weather', async () => {
