@@ -1,7 +1,7 @@
-const HomePage = require('../page-objects/homepage');
 const Catalog = require('../page-objects/catalog');
-const ProductsList = require('../page-objects/products-list');
+const HomePage = require('../page-objects/homepage');
 const ProductDetailsPage = require('../page-objects/product-details-page');
+const ProductsList = require('../page-objects/products-list');
 const entities = require('../helpers/get-entities');
 
 describe('Onliner.by - Catalog / Navigation', () => {

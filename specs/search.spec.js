@@ -1,15 +1,15 @@
 const _ = require('lodash');
 const { EXPECTED_PRICE_CHANGE, PRODUCTS_PULL, NON_EXISTENT_PRODUCT_TITLE } = require('../config/scenarios');
-const { getProductBynPrice } = require('../service/product-services');
-const customMatchers = require('../service/custom-matchers');
+const { product: { status }, search: { nothingFound } } = require('../service/component-properties');
 const HomePage = require('../page-objects/homepage');
+const ProductDetailsPage = require('../page-objects/product-details-page');
 const ProductsList = require('../page-objects/products-list');
 const SearchIframe = require('../page-objects/search-iframe');
-const ProductDetailsPage = require('../page-objects/product-details-page');
 const api = require('../helpers/onliner-api');
-const entities = require('../helpers/get-entities');
-const { product: { status }, search: { nothingFound } } = require('../service/component-properties');
 const { changeDecimalSeparator } = require('../service/currency-exchange-services');
+const customMatchers = require('../service/custom-matchers');
+const entities = require('../helpers/get-entities');
+const { getProductBynPrice } = require('../service/product-services');
 
 describe('Onliner.by - Products / Search', () => {
   const product = entities.getProduct();

@@ -1,10 +1,10 @@
+const { global, catalog, api: apiLinks } = require('../service/relative-urls');
 const ProductsList = require('../page-objects/products-list');
 const ProductDetailsPage = require('../page-objects/product-details-page');
 const LoginPage = require('../page-objects/login-page');
 const api = require('../helpers/onliner-api');
-const { stringifyToCents } = require('../service/currency-exchange-services');
-const { global, catalog, api: apiLinks } = require('../service/relative-urls');
 const { list: { sections } } = require('../service/component-properties');
+const { stringifyToCents } = require('../service/currency-exchange-services');
 
 describe('Onliner.by - Catalog / Products List - Used', () => {
   let usedCPUs;

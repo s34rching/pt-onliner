@@ -1,8 +1,8 @@
+const { catalog, offers } = require('../service/relative-urls');
 const ProductsList = require('../page-objects/products-list');
 const ProductOffers = require('../page-objects/product-offers-page');
 const ProductDetailsPage = require('../page-objects/product-details-page');
 const api = require('../helpers/onliner-api');
-const { catalog, offers } = require('../service/relative-urls');
 const { shop } = require('../service/component-properties');
 
 describe('Onliner.by - Catalog / Products List', () => {

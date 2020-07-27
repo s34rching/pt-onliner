@@ -1,5 +1,4 @@
 const _ = require('lodash');
-
 const { CONVERSION_DIRECTIONS } = require('../config/scenarios');
 
 const changeDecimalSeparator = (number, separator) => parseFloat(number.toString().replace(/\D/, separator));

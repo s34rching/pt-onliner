@@ -1,9 +1,9 @@
 const _ = require('lodash');
+const { COMPARE_PRODUCTS_NUMBER, PRODUCTS_PER_PAGE } = require('../config/scenarios');
+const { list: { order, filters } } = require('../service/component-properties');
 const ProductsList = require('../page-objects/products-list');
 const api = require('../helpers/onliner-api');
 const { catalog } = require('../service/relative-urls');
-const { list: { order, filters } } = require('../service/component-properties');
-const { COMPARE_PRODUCTS_NUMBER, PRODUCTS_PER_PAGE } = require('../config/scenarios');
 const { getRandomProducts } = require('../service/product-services');
 
 describe('Onliner.by - Catalog / Products List', () => {

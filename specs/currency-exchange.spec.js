@@ -1,13 +1,13 @@
-const HomePage = require('../page-objects/homepage');
-const ExchangeRatesPage = require('../page-objects/currency-exchange-page');
-const { getLocationsAmount, defineLocationsMessageOnPopup } = require('../service/location-services');
-const random = require('../helpers/get-random-testing-data');
-const api = require('../helpers/onliner-api');
+const { CURRENCY_AMOUNT: { min, max } } = require('../config/scenarios');
 const {
   getDirectionWithOrder, getDirectionCurrencies, calculateConversionResult, getFormattedRate,
 } = require('../service/currency-exchange-services');
+const { getLocationsAmount, defineLocationsMessageOnPopup } = require('../service/location-services');
+const ExchangeRatesPage = require('../page-objects/currency-exchange-page');
+const HomePage = require('../page-objects/homepage');
+const api = require('../helpers/onliner-api');
 const { composeUrl } = require('../helpers/url-composer');
-const { CURRENCY_AMOUNT: { min, max } } = require('../config/scenarios');
+const random = require('../helpers/get-random-testing-data');
 
 describe('Onliner.by - Top Navigation / Informers - Currency Exchange', () => {
   let bestUsdExchangeRate;

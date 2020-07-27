@@ -1,8 +1,8 @@
 const _ = require('lodash');
 const HomePage = require('../page-objects/homepage');
 const WeatherForecastPage = require('../page-objects/weather-forecast-page');
-const { cities } = require('../fixtures/cities');
 const api = require('../helpers/onliner-api');
+const { cities } = require('../fixtures/cities');
 const { composeUrl } = require('../helpers/url-composer');
 const { getFormattedTemperature } = require('../service/weather-services');
 

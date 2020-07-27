@@ -1,5 +1,5 @@
-const { SpecReporter } = require('jasmine-spec-reporter');
 const HtmlReporter = require('protractor-beautiful-reporter');
+const { SpecReporter } = require('jasmine-spec-reporter');
 
 exports.config = {
   baseUrl: 'https://catalog.onliner.by',
