@@ -10,11 +10,12 @@ DONE --- 8. Follow the only assertion style => expect
 EXTRAS:
 DONE --- 9. Optimize locators and get rid of redundant ones
 DONE --- 10. DONE Update hooks / api calls / variables initialization
-11. Optimize tests steps
+DONE --- 11. Optimize tests steps
 DONE --- 12. Change assertions
 DONE --- 13. Add jsdoc description
-14. To async / await
-15. Resolve flakers
+DONE --- 14. To async / await
+DONE --- 15. Resolve flakers
+16. Cleanup
 
 1. Page objects:
 Все хорошо. Единственное, мне показалось странным наследование login page от base page из-за searchBar и topNavbar, которых вроде как нет на логине. Возможно, это отностится и к другим page object-там
