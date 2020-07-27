@@ -1,6 +1,6 @@
 const _ = require('lodash');
 
-module.exports = {
-  getRandomProducts: (products, amount) => _.sampleSize(products, amount),
-  getProductBynPrice: (product, exchangeRate) => product.priceUsd * exchangeRate,
-};
+const getRandomProducts = (products, amount) => _.sampleSize(products, amount);
+const getProductBynPrice = (product, exchangeRate) => product.priceUsd * exchangeRate;
+
+module.exports = { getRandomProducts, getProductBynPrice };

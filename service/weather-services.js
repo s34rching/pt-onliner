@@ -1,6 +1,6 @@
-module.exports = {
-  getFormattedTemperature: (temperature) => {
-    const degSymbol = '°';
-    return `${temperature}${degSymbol}`;
-  },
+const getFormattedTemperature = (temperature) => {
+  const degSymbol = '°';
+  return `${temperature}${degSymbol}`;
 };
+
+module.exports = { getFormattedTemperature };
