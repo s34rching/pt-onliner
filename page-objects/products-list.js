@@ -115,13 +115,7 @@ class ProductsList extends BasePage {
   }
 
   async markProductsToCompare(productsToCompare) {
-    const result = [];
-    // eslint-disable-next-line no-restricted-syntax
-    for (const product of productsToCompare) {
-      result.push(this.pickProductToCompare(product));
-    }
-
-    return Promise.all(result);
+    return Promise.all(productsToCompare.map((product) => this.pickProductToCompare(product)));
   }
 
   async getProductReviewsCount(product) {
@@ -131,13 +125,7 @@ class ProductsList extends BasePage {
   }
 
   async getProductsRatings(products) {
-    const ratings = [];
-    // eslint-disable-next-line no-restricted-syntax
-    for (const product of products) {
-      ratings.push(this.getProductReviewsCount(product));
-    }
-
-    return Promise.all(ratings);
+    return Promise.all(products.map((product) => this.getProductReviewsCount(product)));
   }
 
   async getProductTitle(product) {
@@ -146,13 +134,7 @@ class ProductsList extends BasePage {
   }
 
   async getProductsTitles(products) {
-    const titles = [];
-    // eslint-disable-next-line no-restricted-syntax
-    for (const product of products) {
-      titles.push(this.getProductTitle(product));
-    }
-
-    return Promise.all(titles);
+    return Promise.all(products.map((product) => this.getProductTitle(product)));
   }
 }
 
