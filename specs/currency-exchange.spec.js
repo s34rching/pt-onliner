@@ -60,9 +60,9 @@ describe('Onliner.by - Top Navigation / Informers - Currency Exchange', () => {
     await ExchangeRatesPage.openBestExchangeRatesLocations();
     const exchangeServicesMapPointers = await ExchangeRatesPage.getExchangeServicesMapPointers();
 
-    await Promise.all(exchangeServicesMapPointers.map(async (pointer) => {
-      expect(await ExchangeRatesPage.constructor.isVisible(pointer)).toBe(true);
-    }));
+    exchangeServicesMapPointers.forEach((pointer) => {
+      expect(ExchangeRatesPage.constructor.isVisible(pointer)).toBe(true);
+    });
   });
 
   it('User should be able to see proper amount of locations pointers on the map', async () => {
